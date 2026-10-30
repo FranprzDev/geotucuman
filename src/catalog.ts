@@ -57,10 +57,18 @@ export function searchLayers(query: string, limit = 10): CatalogEntry[] {
     };
     let score = 0;
     for (const term of q) {
-      if (hay.title.includes(term)) score += 3;
-      if (hay.typeName.includes(term)) score += 2;
-      if (hay.keywords.includes(term)) score += 2;
-      if (hay.abstract.includes(term)) score += 1;
+      const variants = [term];
+      if (term.endsWith('s') && term.length - 1 >= 3) {
+        variants.push(term.slice(0, -1));
+      }
+      if (term.endsWith('es') && term.length - 2 >= 3) {
+        variants.push(term.slice(0, -2));
+      }
+      const hit = (field: string) => variants.some((v) => field.includes(v));
+      if (hit(hay.title)) score += 3;
+      if (hit(hay.typeName)) score += 2;
+      if (hit(hay.keywords)) score += 2;
+      if (hit(hay.abstract)) score += 1;
     }
     if (score > 0) scored.push({ e, score });
   }

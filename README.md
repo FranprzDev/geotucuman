@@ -28,7 +28,7 @@ Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/to
 
 ## Web pública
 
-Miniweb + catálogo de capas publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
+Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
 
 Config de cliente MCP (ej. Claude Code):
 

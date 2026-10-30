@@ -94,7 +94,7 @@ function downloadLine(l: CatalogEntry): string {
 const cards = catalog.layers.map((l) => {
   const vintage = vintageLine(l);
   return `
-  <article class="card" data-src="${l.source}" data-search="${esc(`${l.typeName} ${l.title} ${l.abstract} ${l.keywords.join(' ')}`.toLowerCase())}">
+  <article class="card" data-src="${l.source}" data-t="${esc(`${l.title} ${l.typeName}`.toLowerCase())}" data-d="${esc(l.abstract.toLowerCase())}" data-k="${esc(l.keywords.join(' ').toLowerCase())}">
     <h3>${esc(l.title)}</h3>
     <code>${esc(l.typeName)}</code>
     ${l.abstract ? `<p>${esc(l.abstract)}</p>` : '<p class="dim">Sin descripcion publicada.</p>'}
@@ -192,6 +192,7 @@ const catalogHtml = `<!DOCTYPE html>
     </div>
     <div class="hint">Probá por intención: &quot;quiero hacer un mapa sobre agua&quot; tambien funciona (sin las comillas).</div>
     <div class="hint">La descarga trae la capa completa; algunas capas son grandes.</div>
+    <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
     <p class="scope">GeoTucumán descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo descargarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
     <div id="count"></div>
   </div>
@@ -231,19 +232,45 @@ const q = document.getElementById('q');
 const initialQ = new URLSearchParams(location.search).get('q');
 if (initialQ) q.value = initialQ;
 const cards = [...document.querySelectorAll('.card')];
+const grid = document.getElementById('grid');
+const countEl = document.getElementById('count');
 let filter = '';
+function tierScore(card, term) {
+  const tiers = [norm(card.dataset.t), norm(card.dataset.d), norm(card.dataset.k)];
+  const bases = [term];
+  if (term.endsWith('es') && term.length - 2 >= 3) bases.push(term.slice(0, -2));
+  if (term.endsWith('s') && term.length - 1 >= 3) bases.push(term.slice(0, -1));
+  for (let i = 0; i < tiers.length; i++) {
+    if (bases.some(b => tiers[i].includes(b))) return i;
+  }
+  const generic = variantsFor(term);
+  for (let i = 0; i < tiers.length; i++) {
+    if (generic.some(v => tiers[i].includes(v))) return 2;
+  }
+  return -1;
+}
 function apply() {
   const raw = norm(q.value).split(/\\s+/).filter(Boolean);
   const terms = raw.filter(t => !STOPWORDS.has(t));
-  let n = 0;
+  const shown = [];
   for (const c of cards) {
-    const hay = norm(c.dataset.search);
-    const okQ = terms.every(t => variantsFor(t).some(v => hay.includes(v)));
-    const okF = !filter || c.dataset.src === filter;
-    c.style.display = okQ && okF ? '' : 'none';
-    if (okQ && okF) n++;
+    let okQ = !filter || c.dataset.src === filter;
+    let score = 0;
+    if (okQ) {
+      for (const t of terms) {
+        const tier = tierScore(c, t);
+        if (tier < 0) { okQ = false; break; }
+        score += tier;
+      }
+    }
+    c.style.display = okQ ? '' : 'none';
+    if (okQ) shown.push({ c, score });
   }
-  document.getElementById('count').textContent = n + ' capas';
+  shown.sort((a, b) => a.score - b.score);
+  for (const s of shown) grid.appendChild(s.c);
+  countEl.textContent = shown.length === 0
+    ? '0 capas para esta búsqueda. El catálogo cubre 3 servicios WFS + Georef; la capa que buscás puede no estar publicada en estas fuentes (ver portada, sección Fuentes).'
+    : shown.length + ' capas';
 }
 q.addEventListener('input', apply);
 document.querySelectorAll('.filters button').forEach(b => b.addEventListener('click', () => {

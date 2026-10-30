@@ -21,8 +21,10 @@ npm install
 npm run catalog   # genera data/catalog.json desde los GetCapabilities en vivo
 npm run smoke     # prueba end-to-end contra los servicios reales
 npm run portal    # genera docs/index.html (miniweb) y docs/capas.html (catalogo)
-npm run build && npm start   # servidor MCP por stdio
+npm run build && npm start   # build con xmcp (genera dist/stdio.js + dist/http.js) y servidor MCP por stdio (npm run start:http para http)
 ```
+
+Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/tools/, transportes stdio y http (http disponible para hosting futuro, sin hosting configurado hoy).
 
 ## Web pública
 
@@ -31,7 +33,7 @@ Miniweb + catálogo de capas publicados con GitHub Pages desde `docs/`: https://
 Config de cliente MCP (ej. Claude Code):
 
 ```json
-{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/server.js"] } } }
+{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }
 ```
 
 ## Fuentes (verificadas 29/10/2026)

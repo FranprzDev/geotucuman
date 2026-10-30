@@ -5,21 +5,24 @@
   "type": "module",
   "private": true,
   "scripts": {
-    "build": "tsc -p tsconfig.json",
-    "typecheck": "tsc -p tsconfig.json && tsc -p tsconfig.scripts.json",
+    "build": "xmcp build",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json",
     "catalog": "tsx scripts/build-catalog.ts",
     "portal": "tsx scripts/build-portal.ts",
     "smoke": "tsx scripts/smoke.ts",
     "mcp-smoke": "npm run build && tsx scripts/mcp-smoke.ts",
-    "start": "node dist/server.js"
+    "start": "node dist/stdio.js",
+    "start:http": "node dist/http.js"
   },
   "license": "MIT",
   "dependencies": {
     "@modelcontextprotocol/sdk": "^1.32.2",
+    "xmcp": "^1.9.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {
     "@types/node": "^26.6.6",
+    "@xmcp-dev/compiler": "^1.9.0",
     "tsx": "^4.23.15",
     "typescript": "^7.0.2"
   }

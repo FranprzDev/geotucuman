@@ -1,4 +1,4 @@
-/** Prueba end-to-end del servidor MCP real (dist/server.js) hablando por stdio. PASS/FAIL por check. */
+/** Prueba end-to-end del servidor MCP real (dist/stdio.js) hablando por stdio. PASS/FAIL por check. */
 import { Client } from '@modelcontextprotocol/sdk/client/index.js';
 import { StdioClientTransport } from '@modelcontextprotocol/sdk/client/stdio.js';
 
@@ -24,7 +24,7 @@ function textOf(result: unknown): string {
 }
 
 const client = new Client({ name: 'mcp-smoke', version: '0.1.0' });
-const transport = new StdioClientTransport({ command: 'node', args: ['dist/server.js'] });
+const transport = new StdioClientTransport({ command: 'node', args: ['dist/stdio.js'] });
 
 await client.connect(transport);
 

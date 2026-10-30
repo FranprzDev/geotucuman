@@ -60,7 +60,7 @@ const html = `<!DOCTYPE html>
 <body>
 <header>
   <h1>GeoTucuman</h1>
-  <p>Catalogo de capas geográficas públicas: Tucumán primero. Datos vivos de los servicios WFS oficiales.</p>
+  <p>Catalogo de capas geográficas públicas: Tucumán primero. Snapshot generado desde los GetCapabilities oficiales (se regenera con npm run catalog).</p>
 </header>
 <div class="wrap">
   <div class="controls">

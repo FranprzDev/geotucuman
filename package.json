@@ -9,6 +9,7 @@
     "catalog": "tsx scripts/build-catalog.ts",
     "portal": "tsx scripts/build-portal.ts",
     "smoke": "tsx scripts/smoke.ts",
+    "mcp-smoke": "npm run build && tsx scripts/mcp-smoke.ts",
     "start": "node dist/server.js"
   },
   "license": "MIT",

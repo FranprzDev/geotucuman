@@ -1,0 +1,24 @@
+{
+  "name": "geotucuman",
+  "version": "0.1.0",
+  "description": "MCP de descubrimiento y consulta de geodatos publicos de Tucuman, Argentina",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "catalog": "tsx scripts/build-catalog.ts",
+    "portal": "tsx scripts/build-portal.ts",
+    "smoke": "tsx scripts/smoke.ts",
+    "start": "node dist/server.js"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^1.32.2",
+    "zod": "^4.6.7"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "tsx": "^4.23.15",
+    "typescript": "^7.0.2"
+  }
+}

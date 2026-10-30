@@ -10,11 +10,15 @@ const SOURCE_LABEL: Record<string, string> = {
   ign: 'Instituto Geografico Nacional - Argentina',
 };
 
-const LICENSE_NOTE: Record<string, string> = {
-  geosplan: 'CC BY-NC-SA: citar fuente y fecha, sin uso comercial de la obra original',
-  dgct: 'Sin licencia explicita publicada (servicio experimental): confirmar reuso antes de redistribuir',
-  ign: 'Terminos IGN: atribucion obligatoria, compartir libre y gratuito; uso comercial solo en obras derivadas',
-};
+const freshness = Object.entries(catalog.sources)
+  .map(([id, s]) => {
+    const label = SOURCE_LABEL[id] ?? id;
+    return s.status === 'live'
+      ? `${label}: actualizado ${s.fetchedAt.slice(0, 10)}`
+      : `${label}: sin actualizar (endpoint caido); capas del snapshot del ${s.fetchedAt.slice(0, 10)}`;
+  })
+  .map(esc)
+  .join('<br>');
 
 const cards = catalog.layers.map((l) => `
   <article class="card" data-src="${l.source}" data-search="${esc(`${l.typeName} ${l.title} ${l.abstract} ${l.keywords.join(' ')}`.toLowerCase())}">
@@ -72,7 +76,7 @@ const html = `<!DOCTYPE html>
 <body>
 <header>
   <h1>GeoTucuman</h1>
-  <p>Catalogo de capas geográficas públicas: Tucumán primero. Snapshot generado desde los GetCapabilities oficiales (se regenera con npm run catalog). · Actualizado el ${catalog.generatedAt.slice(0, 10)}</p>
+  <p>Catalogo de capas geográficas públicas: Tucumán primero. Se regenera con npm run catalog.<br>${freshness}</p>
 </header>
 <div class="wrap">
   <div class="controls">
@@ -89,15 +93,16 @@ const html = `<!DOCTYPE html>
   </div>
   <section class="licenses">
     <h2>Licencias y atribución por fuente</h2>
-    <p>Que un servicio sea público no garantiza licencia de reutilización. Esto es lo que publica cada organismo (verificado el 2026-10-30); revisá el enlace antes de redistribuir:</p>
+    <p>Que un servicio sea público no garantiza reutilización. Lo siguiente son los términos publicados por cada organismo a nivel sitio/servicio, no licencias por capa; revisá el enlace antes de redistribuir:</p>
     <ul>
-      <li><span class="src src-geosplan">${esc(SOURCE_LABEL.geosplan)}</span> ${esc(LICENSE_NOTE.geosplan)} — <a href="http://geosplan.tucuman.gov.ar/index.php/institucional/terminos-de-uso/">términos de uso</a></li>
-      <li><span class="src src-dgct">${esc(SOURCE_LABEL.dgct)}</span> ${esc(LICENSE_NOTE.dgct)} — <a href="https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/">servicio WMS/WFS</a></li>
-      <li><span class="src src-ign">${esc(SOURCE_LABEL.ign)}</span> ${esc(LICENSE_NOTE.ign)} — <a href="https://www.ign.gob.ar/descargas/tyc1.html">términos y condiciones</a></li>
+      <li><span class="src src-geosplan">${esc(SOURCE_LABEL.geosplan)}</span> Términos publicados del sitio: <a href="http://geosplan.tucuman.gov.ar/index.php/institucional/terminos-de-uso/">"La Secretaría de Estado de Gestión Pública y Planeamiento promueve el acceso y reutilización de la información publicada en este sitio web. Comparte la información en los términos que establece las licencias Creative Commons: Reconocimiento-No comercial-Compartir Igual"</a>, con criterios: "Que el contenido de la información no sea alterado", "Que no se desnaturalice el sentido de la información", "Que se cite la fuente", "Que se mencione la fecha de la última actualización", "Que no se persigan fines comerciales con la obra original o la utilización de la información publicada".</li>
+      <li><span class="src src-ign">${esc(SOURCE_LABEL.ign)}</span> Términos publicados del organismo para "información descargada del sitio web del IGN": <a href="https://www.ign.gob.ar/descargas/tyc1.html">"Debe reconocerse la autoría del Instituto Geográfico Nacional de la República Argentina. Se debe compartir de manera libre y gratuita. Se permite su uso comercial únicamente en el caso de obras derivadas en que la información sea utilizada como insumo para generar un nuevo producto. El IGN no se responsabiliza por las consecuencias de la utilización de la información descargada."</a></li>
+      <li><span class="src src-dgct">${esc(SOURCE_LABEL.dgct)}</span> Términos publicados del organismo: <a href="https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/">no se publica licencia ni términos de uso; el servicio está documentado como experimental desde 2012</a>.</li>
     </ul>
-    <p>Geocodificación: <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a> (atribución obligatoria: "Servicio Georef – argentina.gob.ar/georef").</p>
+    <p>Geocodificación: términos publicados del <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a>: "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."</p>
+    <p>El GetCapabilities de cada servicio no publica licencia por capa: la licencia de cada capa concreta queda sin verificar.</p>
   </section>
-  <p class="meta">Catalogo generado el ${esc(catalog.generatedAt.slice(0, 10))} desde GetCapabilities en vivo. ${catalog.layers.length} capas.</p>
+  <p class="meta">Catalogo generado el ${esc(catalog.generatedAt.slice(0, 10))}. ${catalog.layers.length} capas.</p>
 </div>
 <script>
 const q = document.getElementById('q');

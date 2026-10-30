@@ -21,6 +21,7 @@ const previous: Catalog | null = existsSync('data/catalog.json')
   ? (JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog)
   : null;
 let preserved = 0;
+const sources: Catalog['sources'] = {};
 
 for (const ep of ENDPOINTS) {
   try {
@@ -38,6 +39,7 @@ for (const ep of ENDPOINTS) {
         verifiedAt: today,
       });
     }
+    sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString() };
     console.log(`${ep.id}: ${caps.length} capas`);
   } catch (err) {
     const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
@@ -46,11 +48,15 @@ for (const ep of ENDPOINTS) {
     }
     layers.push(...stale);
     preserved += stale.length;
+    sources[ep.id] = {
+      status: 'preserved',
+      fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
+    };
     console.error(`${ep.id}: FALLO GetCapabilities — se conservan ${stale.length} capas del snapshot anterior (${err})`);
   }
 }
 
 mkdirSync('data', { recursive: true });
-const catalog: Catalog = { generatedAt: new Date().toISOString(), layers };
+const catalog: Catalog = { generatedAt: new Date().toISOString(), sources, layers };
 writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2));
 console.log(`data/catalog.json: ${layers.length} capas totales${preserved ? ` (${preserved} conservadas de snapshot anterior)` : ''}`);

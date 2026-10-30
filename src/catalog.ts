@@ -17,6 +17,7 @@ export interface CatalogEntry {
 
 export interface Catalog {
   generatedAt: string;
+  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string }>;
   layers: CatalogEntry[];
 }
 

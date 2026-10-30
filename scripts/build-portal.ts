@@ -4,6 +4,8 @@ import type { Catalog, CatalogEntry } from '../src/catalog.js';
 
 const catalog = JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog;
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+/** El IGN a veces publica abstracts envueltos en CDATA; se limpian para mostrar texto plano. */
+const cleanText = (s: string) => s.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 
 const REPO = 'https://github.com/FranprzDev/geotucuman';
 const CAPTURE_DATE = '2026-10-30';
@@ -88,8 +90,8 @@ function crsShort(l: CatalogEntry): string {
 /** Card HTML del catalogo: mismo diseno que los resultados del buscador de la portada. */
 function cardHtml(l: CatalogEntry): string {
   const label = SOURCE_LABEL[l.source] ?? l.source;
-  const abs = l.abstract
-    ? `<p class="card-abs">${esc(l.abstract)}</p>`
+  const abs = cleanText(l.abstract)
+    ? `<p class="card-abs">${esc(cleanText(l.abstract))}</p>`
     : '<p class="card-abs dim">Sin descripción publicada.</p>';
   const geojson = esc(downloadUrl(l, 'application%2Fjson'));
   const shapefile = esc(downloadUrl(l, 'shape-zip'));
@@ -114,7 +116,7 @@ const indexData = catalog.layers.map((l) => {
     typeName: l.typeName,
     source: l.source,
     vintage: years.length > 0 ? years.join(', ') : null,
-    abstract: l.abstract,
+    abstract: cleanText(l.abstract),
     endpoint: l.endpoint,
     keywords: l.keywords,
     verifiedAt: l.verifiedAt,
@@ -327,12 +329,12 @@ const catalogHtml = `<!DOCTYPE html>
       <button data-f="dgct">Catastro</button>
       <button data-f="ign">IGN</button>
     </div>
-    <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
-    <p class="hint">La descarga trae la capa completa; algunas capas son grandes. Geosplan y Catastro (DGCT) sirven por HTTP plano, así que el navegador bloquea consultas en vivo desde esta página HTTPS (contenido mixto); acá se ofrecen como descarga directa.</p>
-    <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
-    <p class="scope">GeoTucumán descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo descargarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
     <div id="count"></div>
   </div>
+  <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
+  <p class="hint">La descarga trae la capa completa; algunas capas son grandes. Geosplan y Catastro (DGCT) sirven por HTTP plano, así que el navegador bloquea consultas en vivo desde esta página HTTPS (contenido mixto); acá se ofrecen como descarga directa.</p>
+  <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
+  <p class="scope">GeoTucumán descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo descargarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid">${cards}
   </div>
   ${licensesDetails}

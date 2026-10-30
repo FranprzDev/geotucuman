@@ -32,7 +32,7 @@ for (const ep of ENDPOINTS) {
         source: ep.id,
         typeName: c.typeName,
         title: c.title || c.typeName,
-        abstract: c.abstract || '',
+        abstract: (c.abstract || '').replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim(),
         endpoint: ep.url,
         defaultCrs: c.defaultCrs || 'desconocido',
         keywords: keywordsOf(c.typeName, c.title),

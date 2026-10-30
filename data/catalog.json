@@ -1,5 +1,19 @@
 {
-  "generatedAt": "2026-10-30T03:33:36.400Z",
+  "generatedAt": "2026-10-30T03:38:46.349Z",
+  "sources": {
+    "geosplan": {
+      "status": "live",
+      "fetchedAt": "2026-10-30T03:38:43.970Z"
+    },
+    "dgct": {
+      "status": "live",
+      "fetchedAt": "2026-10-30T03:38:44.440Z"
+    },
+    "ign": {
+      "status": "live",
+      "fetchedAt": "2026-10-30T03:38:46.349Z"
+    }
+  },
   "layers": [
     {
       "id": "geosplan:WFS_GEOSPLAN:aeropuerto",

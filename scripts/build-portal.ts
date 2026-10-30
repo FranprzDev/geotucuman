@@ -10,6 +10,12 @@ const SOURCE_LABEL: Record<string, string> = {
   ign: 'Instituto Geografico Nacional - Argentina',
 };
 
+const LICENSE_NOTE: Record<string, string> = {
+  geosplan: 'CC BY-NC-SA: citar fuente y fecha, sin uso comercial de la obra original',
+  dgct: 'Sin licencia explicita publicada (servicio experimental): confirmar reuso antes de redistribuir',
+  ign: 'Terminos IGN: atribucion obligatoria, compartir libre y gratuito; uso comercial solo en obras derivadas',
+};
+
 const cards = catalog.layers.map((l) => `
   <article class="card" data-src="${l.source}" data-search="${esc(`${l.typeName} ${l.title} ${l.abstract} ${l.keywords.join(' ')}`.toLowerCase())}">
     <h3>${esc(l.title)}</h3>
@@ -55,6 +61,12 @@ const html = `<!DOCTYPE html>
   .crs { font-size: 11.5px; color: #7c8a96; }
   .endpoint { font-size: 11px; color: #94a3ad; margin-top: 6px; word-break: break-all; }
   .meta { font-size: 12.5px; color: #5a6a76; margin: 18px 0 0; }
+  .licenses { margin-top: 28px; background: #fff; border: 1px solid #dbe4ea; border-radius: 12px; padding: 16px 18px; }
+  .licenses h2 { font-size: 16px; margin: 0 0 8px; }
+  .licenses p, .licenses li { font-size: 13px; color: #40505c; line-height: 1.5; }
+  .licenses ul { margin: 8px 0; padding-left: 18px; }
+  .licenses li { margin: 6px 0; }
+  .licenses a { color: #0d6e8c; }
 </style>
 </head>
 <body>
@@ -75,7 +87,17 @@ const html = `<!DOCTYPE html>
   </div>
   <div class="grid" id="grid">${cards}
   </div>
-  <p class="meta">Catalogo generado el ${esc(catalog.generatedAt.slice(0, 10))} desde GetCapabilities en vivo. Que un servicio sea público no garantiza licencia de reutilización: citá la fuente y revisá capa por capa. ${catalog.layers.length} capas.</p>
+  <section class="licenses">
+    <h2>Licencias y atribución por fuente</h2>
+    <p>Que un servicio sea público no garantiza licencia de reutilización. Esto es lo que publica cada organismo (verificado el 2026-10-30); revisá el enlace antes de redistribuir:</p>
+    <ul>
+      <li><span class="src src-geosplan">${esc(SOURCE_LABEL.geosplan)}</span> ${esc(LICENSE_NOTE.geosplan)} — <a href="http://geosplan.tucuman.gov.ar/index.php/institucional/terminos-de-uso/">términos de uso</a></li>
+      <li><span class="src src-dgct">${esc(SOURCE_LABEL.dgct)}</span> ${esc(LICENSE_NOTE.dgct)} — <a href="https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/">servicio WMS/WFS</a></li>
+      <li><span class="src src-ign">${esc(SOURCE_LABEL.ign)}</span> ${esc(LICENSE_NOTE.ign)} — <a href="https://www.ign.gob.ar/descargas/tyc1.html">términos y condiciones</a></li>
+    </ul>
+    <p>Geocodificación: <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a> (atribución obligatoria: "Servicio Georef – argentina.gob.ar/georef").</p>
+  </section>
+  <p class="meta">Catalogo generado el ${esc(catalog.generatedAt.slice(0, 10))} desde GetCapabilities en vivo. ${catalog.layers.length} capas.</p>
 </div>
 <script>
 const q = document.getElementById('q');

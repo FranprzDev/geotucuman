@@ -48,6 +48,27 @@ await check("consultar_capa sin describir antes devuelve error describe-antes-de
   }
 });
 
+await check("describir_capa + consultar_capa con bbox 4326 sobre capa proyectada (EPSG:22183) devuelve features", async () => {
+  await client.callTool({ name: 'describir_capa', arguments: { typeName: 'WFS_GEOSPLAN:jurisdicciones' } });
+  const result = await client.callTool({
+    name: 'consultar_capa',
+    arguments: {
+      typeName: 'WFS_GEOSPLAN:jurisdicciones',
+      maxFeatures: 5,
+      bbox: [-65.35, -26.95, -65.05, -26.65],
+    },
+  });
+  const parsed = JSON.parse(textOf(result)) as { devueltos?: number; error?: string };
+  if (parsed.error) throw new Error(parsed.error);
+  if (!parsed.devueltos || parsed.devueltos < 1) throw new Error('bbox 4326 reproyectado devolvio 0 features');
+  console.log(`  (devueltos=${parsed.devueltos})`);
+});
+
+await check("consultar_capa expone licencia de la fuente en describir_capa", async () => {
+  const result = await client.callTool({ name: 'describir_capa', arguments: { typeName: 'WFS_GEOSPLAN:jurisdicciones' } });
+  if (!textOf(result).includes('licencia')) throw new Error('describir_capa no informa licencia');
+});
+
 await client.close();
 
 console.log(failures === 0 ? 'MCP SMOKE OK' : `MCP SMOKE: ${failures} fallas`);

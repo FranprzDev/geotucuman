@@ -98,7 +98,11 @@ export async function getFeature(
   }
   const text = await fetchText(`${ep.url}?${params.toString()}`);
   try {
-    return JSON.parse(text) as GeoJsonFeatureCollection;
+    const fc = JSON.parse(text) as GeoJsonFeatureCollection & { numberMatched?: number };
+    if (fc.totalFeatures === undefined && typeof fc.numberMatched === 'number') {
+      fc.totalFeatures = fc.numberMatched;
+    }
+    return fc;
   } catch {
     throw new Error(`GetFeature ${typeName}: respuesta no-JSON (${text.slice(0, 200)})`);
   }

@@ -1,5 +1,5 @@
 /** Genera data/catalog.json desde los GetCapabilities en vivo de los endpoints oficiales. */
-import { writeFileSync, mkdirSync } from 'node:fs';
+import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { ENDPOINTS } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
@@ -17,6 +17,10 @@ function keywordsOf(typeName: string, title: string): string[] {
 
 const today = new Date().toISOString().slice(0, 10);
 const layers: CatalogEntry[] = [];
+const previous: Catalog | null = existsSync('data/catalog.json')
+  ? (JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog)
+  : null;
+let preserved = 0;
 
 for (const ep of ENDPOINTS) {
   try {
@@ -36,11 +40,17 @@ for (const ep of ENDPOINTS) {
     }
     console.log(`${ep.id}: ${caps.length} capas`);
   } catch (err) {
-    console.error(`${ep.id}: FALLO GetCapabilities — ${err}`);
+    const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
+    if (stale.length === 0) {
+      throw new Error(`${ep.id}: FALLO GetCapabilities y no hay snapshot previo para conservar — ${err}`);
+    }
+    layers.push(...stale);
+    preserved += stale.length;
+    console.error(`${ep.id}: FALLO GetCapabilities — se conservan ${stale.length} capas del snapshot anterior (${err})`);
   }
 }
 
 mkdirSync('data', { recursive: true });
 const catalog: Catalog = { generatedAt: new Date().toISOString(), layers };
 writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2));
-console.log(`data/catalog.json: ${layers.length} capas totales`);
+console.log(`data/catalog.json: ${layers.length} capas totales${preserved ? ` (${preserved} conservadas de snapshot anterior)` : ''}`);

@@ -20,9 +20,13 @@ MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos público
 npm install
 npm run catalog   # genera data/catalog.json desde los GetCapabilities en vivo
 npm run smoke     # prueba end-to-end contra los servicios reales
-npm run portal    # genera docs/index.html (portal de capas)
+npm run portal    # genera docs/index.html (miniweb) y docs/capas.html (catalogo)
 npm run build && npm start   # servidor MCP por stdio
 ```
+
+## Web pública
+
+Miniweb + catálogo de capas publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
 
 Config de cliente MCP (ej. Claude Code):
 
@@ -67,5 +71,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 1. Enriquecimiento de catálogo con metadatos IDERA (licencia por capa, fecha, organismo).
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
+4. Incorporar fuentes públicas faltantes: RIDES (Producción, Tucumán) y el portal de Datos Abiertos de Tucumán.
+5. HTTP/hosting del MCP si se migra a un framework con transporte HTTP.
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

@@ -95,13 +95,12 @@ function cardHtml(l: CatalogEntry): string {
   const shapefile = esc(downloadUrl(l, 'shape-zip'));
   return `<article class="card" data-src="${l.source}" data-t="${esc(`${l.title} ${l.typeName}`.toLowerCase())}" data-d="${esc((l.abstract || '').toLowerCase())}" data-k="${esc(l.keywords.join(' ').toLowerCase())}">
     <h3 class="card-title">${esc(l.title)}</h3>
-    <code class="typename">${esc(l.typeName)}</code>
     ${abs}
     <div class="card-meta"><span class="src src-${l.source}">${esc(label)}</span><span class="vig">${esc(vintageLine(l))}</span></div>
     <p class="meta-line">Publica: ${esc(SOURCE_ORG[l.source] ?? label)}</p>
     <p class="meta-line">Catálogo verificado: ${esc(l.verifiedAt)}</p>
     <p class="downloads">Descargar: <a class="dbtn" href="${geojson}" target="_blank" rel="noopener">GeoJSON</a> <a class="dbtn alt" href="${shapefile}" target="_blank" rel="noopener">Shapefile (.zip)</a></p>
-    <div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span></div>
+    <details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><code class="typename">${esc(l.typeName)}</code><div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span></div></div></details>
   </article>`;
 }
 
@@ -224,14 +223,28 @@ const BASE_CSS = `
   details.licenses ul { margin: 8px 0; padding-left: 18px; }
   details.licenses li { margin: 6px 0; }
   details.licenses a { color: var(--brand); }
-  footer.site { font-size: 12.5px; color: var(--muted); margin: 24px 0 48px; }`;
+  footer.site { font-size: 12.5px; color: var(--muted); margin: 24px 0 48px; }
+  .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
+  details.tech { margin-top: 10px; }
+  details.tech > summary { cursor: pointer; font-size: 12.5px; color: var(--muted); font-weight: 600; list-style: none; }
+  details.tech > summary::-webkit-details-marker { display: none; }
+  details.tech > summary::before { content: "> "; color: var(--brand); }
+  details.tech[open] > summary::before { content: "v "; }
+  details.tech .tech-body { margin-top: 8px; }`;
 
 /** Estilos de la portada (buscador como producto). */
 const LANDING_CSS = `
-  .hero { background: linear-gradient(135deg, #0d3b4f 0%, #0d6e8c 100%); color: #fff; padding: 52px 16px 46px; }
-  .hero h1 { font-size: clamp(30px, 7vw, 44px); margin: 0 0 10px; letter-spacing: -.01em; }
-  .hero .promise { font-size: clamp(15px, 2.4vw, 17px); max-width: 700px; margin: 0 0 24px; opacity: .94; }
+  .hero { background: linear-gradient(135deg, #0d3b4f 0%, #0d6e8c 100%); color: #fff; padding: 52px 16px 46px; position: relative; overflow: hidden; }
+  .hero-grid { display: grid; grid-template-columns: 1fr; gap: 26px; align-items: center; }
+  @media (min-width: 900px) { .hero-grid { grid-template-columns: minmax(0, 3fr) minmax(0, 2fr); gap: 40px; } }
+  .kicker { font-size: 12px; letter-spacing: .16em; text-transform: uppercase; opacity: .82; margin: 0 0 12px; font-weight: 600; }
+  .hero h1 { font-size: clamp(32px, 7vw, 46px); margin: 0 0 12px; letter-spacing: -.01em; line-height: 1.08; }
+  .hero .promise { font-size: clamp(15px, 2.4vw, 17.5px); max-width: 640px; margin: 0 0 26px; opacity: .94; }
+  .hero-map { display: block; width: 100%; max-width: 330px; margin: 0 auto; }
+  @media (max-width: 899px) { .hero-map { max-width: 210px; } }
   .searchbox { max-width: 760px; }
+  .example { margin: 12px 0 0; font-size: 13.5px; opacity: .92; }
+  .example button { background: none; border: 0; color: #fff; text-decoration: underline; text-underline-offset: 3px; font-size: 13.5px; cursor: pointer; padding: 8px 0; min-height: 44px; }
   .search { width: 100%; min-height: 60px; font-size: 19px; padding: 16px 22px; border-radius: 999px; border: 0; box-shadow: 0 8px 24px rgba(13,59,79,.30); color: var(--ink); }
   .search::placeholder { color: #8b98a3; }
   .chips { display: flex; flex-wrap: wrap; gap: 8px; margin: 16px 0 0; padding: 0; list-style: none; }
@@ -379,11 +392,14 @@ const landingHtml = `<!DOCTYPE html>
 </head>
 <body>
 <header class="hero">
-  <div class="wrap">
+  <div class="wrap hero-grid">
+   <div>
+    <p class="kicker">Datasets públicos · Tucumán, Argentina</p>
     <h1>GeoTucumán</h1>
     <p class="promise">Encontrá datasets públicos de Tucumán para tu mapa, tu tesis o tu trabajo. Te decimos quién los publica, de cuándo son y cómo descargarlos.</p>
     <div class="searchbox">
       <input id="q" class="search" type="search" autocomplete="off" spellcheck="false" placeholder='Ej: "quiero hacer un mapa sobre agua"' aria-label="Buscar datasets">
+      <p class="example">Probá con un ejemplo: <button type="button" data-example="quiero hacer un mapa de cultivos de soja">quiero hacer un mapa de cultivos de soja</button></p>
     </div>
     <ul class="chips" id="chips">
       <li><button type="button" class="chip" data-topic="agua">agua</button></li>
@@ -394,6 +410,24 @@ const landingHtml = `<!DOCTYPE html>
       <li><button type="button" class="chip" data-topic="transporte">transporte</button></li>
       <li><button type="button" class="chip" data-topic="parcelas">parcelas</button></li>
     </ul>
+   </div>
+   <div>
+    <svg class="hero-map" viewBox="0 0 220 260" aria-hidden="true" focusable="false">
+      <g fill="none" stroke="rgba(255,255,255,.16)" stroke-width="1.4">
+        <ellipse cx="62" cy="206" rx="56" ry="36"/>
+        <ellipse cx="62" cy="206" rx="38" ry="24"/>
+        <ellipse cx="62" cy="206" rx="21" ry="13"/>
+        <ellipse cx="186" cy="42" rx="46" ry="30"/>
+        <ellipse cx="186" cy="42" rx="29" ry="18"/>
+      </g>
+      <path d="M72 12 L118 8 L150 22 L158 58 L138 96 L132 140 L116 200 L104 244 L88 226 L74 178 L58 130 L52 78 L60 36 Z" fill="rgba(255,255,255,.10)" stroke="#fff" stroke-width="2.2" stroke-dasharray="0.5 7" stroke-linecap="round"/>
+      <circle cx="112" cy="140" r="4.5" fill="#ffd166"/>
+      <circle cx="112" cy="140" r="9" fill="none" stroke="#ffd166" stroke-width="1.4" opacity=".7"/>
+      <text x="124" y="144" fill="#fff" font-size="10.5" font-family="system-ui, sans-serif" opacity=".92">S. M. de Tucumán</text>
+      <text x="110" y="254" fill="rgba(255,255,255,.6)" font-size="9" font-family="system-ui, sans-serif" text-anchor="middle">ilustración, no un dato</text>
+    </svg>
+    <span class="sr-only">Mapa esquemático decorativo de la provincia de Tucumán; es una ilustración, no un resultado de datos.</span>
+   </div>
   </div>
 </header>
 <div class="wrap">
@@ -513,13 +547,12 @@ ${SEARCH_CORE}
       : '<p class="card-abs dim">Sin descripción publicada.</p>';
     const geojson = wfs(l, 'application%2Fjson');
     const shapefile = wfs(l, 'shape-zip');
-    return '<h3 class="card-title">' + escHtml(l.title) + '</h3>' +
-      '<code class="typename">' + escHtml(l.typeName) + '</code>' + abs +
+    return '<h3 class="card-title">' + escHtml(l.title) + '</h3>' + abs +
       '<div class="card-meta"><span class="src src-' + l.source + '">' + escHtml(label) + '</span><span class="vig">' + escHtml(vig) + '</span></div>' +
       '<p class="meta-line">Publica: ' + escHtml(org) + '</p>' +
       '<p class="meta-line">Catálogo verificado: ' + escHtml(l.verifiedAt) + '</p>' +
       '<p class="downloads">Descargar: <a class="dbtn" href="' + escHtml(geojson) + '" target="_blank" rel="noopener">GeoJSON</a> <a class="dbtn alt" href="' + escHtml(shapefile) + '" target="_blank" rel="noopener">Shapefile (.zip)</a></p>' +
-      '<div class="card-foot"><span class="crs">' + escHtml(l.crs) + '</span><span class="endpoint">' + escHtml(l.endpoint) + '</span></div>';
+      '<details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><code class="typename">' + escHtml(l.typeName) + '</code><div class="card-foot"><span class="crs">' + escHtml(l.crs) + '</span><span class="endpoint">' + escHtml(l.endpoint) + '</span></div></div></details>';
   }
   const cardEls = data.map(function (l) {
     const el = document.createElement('article');
@@ -568,6 +601,9 @@ ${SEARCH_CORE}
   q.addEventListener('input', apply);
   document.querySelectorAll('.chip').forEach(function (b) {
     b.addEventListener('click', function () { q.value = b.dataset.topic; apply(); q.focus(); });
+  });
+  document.querySelectorAll('[data-example]').forEach(function (b) {
+    b.addEventListener('click', function () { q.value = b.dataset.example; apply(); q.focus(); });
   });
   apply();
 })();

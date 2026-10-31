@@ -143,6 +143,7 @@
   .steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
   .steps li { display: flex; gap: 12px; align-items: flex-start; margin: 18px 0; font-size: 14.5px; color: #a6b4c0; }
   .steps li::before { counter-increment: s; content: counter(s); flex: 0 0 30px; height: 30px; width: 30px; border-radius: 50%; background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; box-shadow: 0 0 18px rgba(31,182,212,.3); }
+  .steps li > span { min-width: 0; flex: 1; }
   .step-title { font-weight: 650; color: var(--ink); }
   pre.code { background: #070910; color: #d8f7fc; border: 1px solid var(--line); padding: 13px 15px; border-radius: 10px; overflow: auto; font-size: 12.5px; line-height: 1.55; margin: 8px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   .source-card { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 15px 17px; margin: 10px 0; background: rgba(255,255,255,.025); }
@@ -247,7 +248,7 @@ npm install</pre></span></li>
 
   <section class="tagline-section" aria-labelledby="tagline-title">
     <h2 id="tagline-title" class="sr-only">En una frase</h2>
-    <p class="tagline" data-tagline>No es un SIG. No aloja ni redistribuye datos. Solo te dice qué capa existe, quién la publica y dónde se consulta.</p>
+    <p class="tagline" data-tagline>No dibuja mapas ni aloja datos: descubre las capas, dice quién las publica y de cuándo son, y las consulta en la fuente oficial.</p>
   </section>
 
   <section class="panel reveal" aria-labelledby="limites">
@@ -279,7 +280,7 @@ npm install</pre></span></li>
       <div class="status"><span class="dot live"></span><span>actualizado 2026-10-30</span></div>
       <p class="org"><span class="src src-ign">IGN</span> Instituto Geográfico Nacional (IGN), Argentina</p>
       <code>https://wms.ign.gob.ar/geoserver/ows</code>
-      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (falla del lado del organismo, ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnosticos/2026-10-31-ign-dns.md">diagnosticos/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
+      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnosticos/2026-10-31-ign-dns.md">diagnosticos/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
@@ -323,7 +324,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 const tagline = document.querySelector('[data-tagline]');
 if (tagline && !reduceMotion) {
   const words = tagline.textContent.trim().split(/\s+/);
-  const accentWords = new Set(['sig', 'datos', 'existe', 'consulta']);
+  const accentWords = new Set(['dibuja', 'mapas', 'fuente', 'oficial']);
   tagline.textContent = '';
   const wordEls = words.map((word, index) => {
     const span = document.createElement('span');

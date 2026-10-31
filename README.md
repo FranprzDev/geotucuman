@@ -46,7 +46,7 @@ Config de cliente MCP (ej. Claude Code):
 
 ## Estado verificado (30/10/2026)
 
-- GetFeature real funciona en los 3 endpoints (GeoJSON). Paginación (`startIndex`/`nextStartIndex`) verificada en Geosplan.
+- GetFeature real verificado el 30/10/2026 en los 3 endpoints (GeoJSON). El 31/10/2026 el smoke (npm run smoke) fallo en las consultas al IGN (wms.ign.gob.ar) por timeout desde el entorno de pruebas, mientras Geosplan, DGCT y Georef respondieron; causa externa probable, no verificada. Paginacion (startIndex/nextStartIndex) verificada en Geosplan.
 - El bbox se pasa en EPSG:4326 y el cliente lo reproyecta al CRS nativo de la capa antes de filtrar (verificado: bbox 4326 sobre capa proyectada devuelve 0 si se manda directo). Reproyección Gauss-Krüger/TM propia para EPSG:22183 y EPSG:5345, contrastada contra proj4 con error <0.001 m. Para otro CRS nativo, el MCP devuelve un error claro en vez de 0 silencioso.
 - CRS por defecto varía por capa (observados EPSG:22183, 5345, 4326). Las geometrías se piden siempre con `srsName=EPSG:4326`.
 - El endpoint de Catastro (DGCT) es intermitente: el 30/10/2026 a la madrugada no respondió (timeout de conexión) y volvió el mismo día; el catálogo registra por fuente si las capas son fetch en vivo o snapshot conservado.
@@ -64,7 +64,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 ## Límites (sin maquillar)
 
 - Vigencia variable: varias capas de Geosplan son 2008-2017 según sus nombres; frecuencia de actualización no verificada.
-- Disponibilidad: algunos endpoints usan HTTP plano o IP y son intermitentes (DGCT cayó y volvió el 30/10/2026); el cliente contempla timeouts y errores.
+- Disponibilidad: algunos endpoints usan HTTP plano o IP y son intermitentes (DGCT cayó y volvió el 30/10/2026); el cliente contempla timeouts y errores. El IGN tambien fallo por timeout en una prueba el 31/10/2026 desde el entorno de pruebas.
 - Contenido por capa no inspeccionado en profundidad: regla de diseño = lista blanca y exclusión de datos personales.
 - Enriquecimiento con metadatos IDERA: pendiente (su catálogo no respondió el 29/10/2026).
 

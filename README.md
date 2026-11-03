@@ -9,10 +9,10 @@ MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos público
 
 | Tool | Qué hace |
 | --- | --- |
-| `buscar_capas` | Busca capas por palabra clave en el catálogo embebido |
-| `describir_capa` | Campos reales de una capa (obligatorio antes de consultar) |
-| `consultar_capa` | GetFeature con filtros, paginación y bbox en EPSG:4326 (se reproyecta al CRS nativo de la capa en el cliente) |
-| `geocodificar` | Texto libre a coordenadas vía API Georef (gratis, sin key) |
+| `search_layers` | Busca capas por palabra clave en el catálogo embebido |
+| `describe_layer` | Campos reales de una capa (obligatorio antes de consultar) |
+| `query_layer` | GetFeature con filtros, paginación y bbox en EPSG:4326 (se reproyecta al CRS nativo de la capa en el cliente) |
+| `geocode` | Texto libre a coordenadas vía API Georef (gratis, sin key) |
 
 ## Quickstart
 

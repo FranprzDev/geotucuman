@@ -225,10 +225,10 @@
     <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-10-30.</p>
     <h3 class="card-title">Cuatro herramientas</h3>
     <div class="toolgrid">
-      <div class="tool reveal"><code>buscar_capas</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
-      <div class="tool reveal"><code>describir_capa</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
-      <div class="tool reveal"><code>consultar_capa</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
-      <div class="tool reveal"><code>geocodificar</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
+      <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
+      <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
+      <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
+      <div class="tool reveal"><code>geocode</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
     </div>
   </section>
 
@@ -280,7 +280,7 @@ npm install</pre></span></li>
       <div class="status"><span class="dot live"></span><span>actualizado 2026-10-30</span></div>
       <p class="org"><span class="src src-ign">IGN</span> Instituto Geográfico Nacional (IGN), Argentina</p>
       <code>https://wms.ign.gob.ar/geoserver/ows</code>
-      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnosticos/2026-10-31-ign-dns.md">diagnosticos/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
+      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
@@ -292,7 +292,7 @@ npm install</pre></span></li>
 
   <section class="panel reveal" aria-labelledby="catalogo-cta">
     <p class="eyebrow">Catálogo</p>
-    <h2 id="catalogo-cta">Son las capas que buscar_capas puede encontrar hoy.</h2>
+    <h2 id="catalogo-cta">Son las capas que search_layers puede encontrar hoy.</h2>
     <p><a class="btn primary" href="./capas.html">Ver las 234 capas <span aria-hidden="true">→</span></a></p>
   </section>
 

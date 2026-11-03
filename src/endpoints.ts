@@ -6,12 +6,13 @@ export interface SourceLicense {
 }
 
 export interface EndpointConfig {
-  id: 'geosplan' | 'dgct' | 'ign';
+  id: 'geosplan' | 'dgct' | 'ign' | 'rides';
   label: string;
   url: string;
   wfsVersion: '1.1.0' | '2.0.0';
   /** 1.1.0 uses maxFeatures, 2.0.0 uses count */
   countParam: 'maxFeatures' | 'count';
+  wmsServices?: string[];
   license: SourceLicense;
 }
 
@@ -50,6 +51,29 @@ export const ENDPOINTS: EndpointConfig[] = [
       status: 'Terminos IGN para informacion descargada de su sitio: atribucion, compartir libre y gratuito, uso comercial solo en obras derivadas',
       attribution: 'Reconocer la autoria del Instituto Geografico Nacional de la Republica Argentina. El servicio WFS no publica licencia por capa.',
       url: 'https://www.ign.gob.ar/descargas/tyc1.html',
+    },
+  },
+  {
+    id: 'rides',
+    label: 'Ministerio de Produccion (RIDES), Tucuman',
+    url: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsServices: [
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer',
+      'https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer',
+    ],
+    license: {
+      status: 'Organismo publico provincial (Ministerio de Produccion); terminos de licencia por capa no verificados',
+      attribution: 'Citar al Ministerio de Produccion de Tucuman (RIDES); condiciones de reuso por capa no publicadas.',
+      url: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
     },
   },
 ];

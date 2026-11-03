@@ -4,6 +4,7 @@ import { findLayer } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { describeFeatureType } from '../wfs.js';
 import { asText, described } from '../lib/shared.js';
+import { ServiceType } from '../service-type.js';
 
 export const schema = {
   typeName: z.string().describe('E.g. dgct:parcelas'),
@@ -20,8 +21,16 @@ export async function describeLayerHandler({ typeName }: InferSchema<typeof sche
   if (!entry) {
     return { error: `Layer not found in catalog: ${typeName}. Use search_layers first.` };
   }
+  const services = entry.services ?? [{ type: ServiceType.Wfs, endpoint: entry.endpoint, typeName: entry.typeName }];
+  const wfs = services.find((svc) => svc.type === ServiceType.Wfs);
+  if (!wfs) {
+    return {
+      error: `Layer ${typeName} is WMS-only (display imagery, no vector GetFeature). It cannot be described or queried via WFS.`,
+      services,
+    };
+  }
   const ep = endpointById(entry.source);
-  const fields = await describeFeatureType(ep, entry.typeName);
+  const fields = await describeFeatureType(ep, wfs.typeName);
   described.add(entry.typeName.toLowerCase());
   return {
     typeName: entry.typeName,
@@ -31,6 +40,7 @@ export async function describeLayerHandler({ typeName }: InferSchema<typeof sche
     endpoint: entry.endpoint,
     defaultCrs: entry.defaultCrs,
     fields,
+    services,
     license: ep.license,
     sources: [entry.endpoint],
   };

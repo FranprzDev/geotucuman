@@ -1,17 +1,18 @@
 {
-  "generatedAt": "2026-10-30T03:38:46.349Z",
+  "generatedAt": "2026-11-03T15:03:21.942Z",
   "sources": {
     "geosplan": {
       "status": "live",
-      "fetchedAt": "2026-10-30T03:38:43.970Z"
+      "fetchedAt": "2026-11-03T15:03:10.279Z",
+      "wmsStatus": "live"
     },
     "dgct": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-10-30T03:38:44.440Z"
     },
     "ign": {
       "status": "live",
-      "fetchedAt": "2026-10-30T03:38:46.349Z"
+      "fetchedAt": "2026-11-03T15:03:21.942Z"
     }
   },
   "layers": [
@@ -30,7 +31,19 @@
         "benjamín",
         "matienzo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:aeropuerto"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "aeropuerto"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:circuitos_turisticos",
@@ -47,7 +60,19 @@
         "turisticos",
         "turísticos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:circuitos_turisticos"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "circuitos_turisticos"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_Citricos_2014",
@@ -65,7 +90,19 @@
         "2014",
         "citrus"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_Citricos_2014"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_Citricos_2014"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:comisasrias_2014",
@@ -83,7 +120,19 @@
         "comisarías",
         "gmst"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:comisasrias_2014"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "comisasrias_2014"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:organismos_2016",
@@ -101,7 +150,19 @@
         "entidades",
         "gubernamentales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:organismos_2016"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "organismos_2016"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_garbanzo_2012",
@@ -118,7 +179,19 @@
         "garbanzo",
         "2012"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_garbanzo_2012"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_garbanzo_2012"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_Ingenios",
@@ -134,7 +207,19 @@
         "rides",
         "ingenios"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_Ingenios"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_Ingenios"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:jurisdicciones",
@@ -150,7 +235,19 @@
         "jurisdicciones",
         "policiales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:jurisdicciones"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "jurisdicciones"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_maiz_2012",
@@ -168,7 +265,19 @@
         "2012",
         "maíz"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_maiz_2012"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_maiz_2012"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:microrregiones_2017",
@@ -184,7 +293,19 @@
         "microrregiones",
         "2017"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:microrregiones_2017"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "microrregiones_2017"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_papa_2012",
@@ -201,7 +322,19 @@
         "papa",
         "2012"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_papa_2012"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_papa_2012"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:GeoSPlan-PAD",
@@ -219,7 +352,19 @@
         "acceso",
         "digital"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:GeoSPlan-PAD"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "GeoSPlan-PAD"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:IEG_radios_censales",
@@ -238,7 +383,19 @@
         "comuna",
         "mollar"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:IEG_radios_censales"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "IEG_radios_censales"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:fibra_optica_pcial",
@@ -260,7 +417,19 @@
         "objetivo",
         "2014"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:fibra_optica_pcial"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "fibra_optica_pcial"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:fibra_optica_nacional_2014",
@@ -282,7 +451,19 @@
         "troncal",
         "objetivo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:fibra_optica_nacional_2014"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "fibra_optica_nacional_2014"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_soja_2012_2013",
@@ -300,7 +481,19 @@
         "2012",
         "2013"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_soja_2012_2013"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_soja_2012_2013"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_tabaco_2008_2009",
@@ -318,7 +511,19 @@
         "2008",
         "2009"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_tabaco_2008_2009"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_tabaco_2008_2009"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:terminal_omnibus",
@@ -338,7 +543,19 @@
         "miguel",
         "tucumán"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:terminal_omnibus"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "terminal_omnibus"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_trigo_2012",
@@ -355,7 +572,19 @@
         "trigo",
         "2012"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_trigo_2012"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_trigo_2012"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:unidades_reg_policiales",
@@ -373,7 +602,19 @@
         "policiales",
         "regionales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:unidades_reg_policiales"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "unidades_reg_policiales"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_zafra_2014",
@@ -392,7 +633,19 @@
         "área",
         "cañera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_zafra_2014"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_zafra_2014"
+        }
+      ]
     },
     {
       "id": "geosplan:WFS_GEOSPLAN:RIDES_area_granera_2001_2011",
@@ -412,7 +665,19 @@
         "2011",
         "área"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs",
+          "typeName": "WFS_GEOSPLAN:RIDES_area_granera_2001_2011"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
+          "typeName": "RIDES_area_granera_2001_2011"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:FOLIO_PARC",
@@ -723,7 +988,14 @@
         "costa",
         "antártico"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:doscientas_millas_sector_antartico"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_geomorfologia_DB120",
@@ -743,7 +1015,14 @@
         "portillo",
         "portezuelo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_geomorfologia_DB120"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_zona_costera_BA040",
@@ -762,7 +1041,14 @@
         "accidente",
         "costero"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_zona_costera_BA040"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_mareas_y_corrientes_040601",
@@ -781,7 +1067,14 @@
         "accidente",
         "submarino"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_mareas_y_corrientes_040601"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_BH030",
@@ -801,7 +1094,14 @@
         "zanja",
         "zanjón"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_BH030"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_BH010",
@@ -819,7 +1119,14 @@
         "bh010",
         "acueducto"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_BH010"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_transporte_aereo_GB005",
@@ -837,7 +1144,14 @@
         "gb005",
         "aeropuerto"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_transporte_aereo_GB005"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_transporte_aereo_GB001",
@@ -855,7 +1169,14 @@
         "gb001",
         "aeródromo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_transporte_aereo_GB001"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_afloramiento_rocoso",
@@ -871,7 +1192,14 @@
         "afloramiento",
         "rocoso"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_afloramiento_rocoso"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_cruces_y_enlaces_AQ065",
@@ -889,7 +1217,14 @@
         "aq065",
         "alcantarilla"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_cruces_y_enlaces_AQ065"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_comunicacion_AT010",
@@ -906,7 +1241,14 @@
         "at010",
         "antena"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_comunicacion_AT010"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_arenal",
@@ -921,7 +1263,14 @@
         "edafologia",
         "arenal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_arenal"
+        }
+      ]
     },
     {
       "id": "ign:ign:ayuda_a_la_navegacion_BC101",
@@ -938,14 +1287,21 @@
         "bc101",
         "baliza"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:ayuda_a_la_navegacion_BC101"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_barranca",
       "source": "ign",
       "typeName": "ign:lineas_de_geomorfologia_barranca",
       "title": "Barranca",
-      "abstract": "<![CDATA[Desnivel pronunciado del terreno con pendiente variable y de origen diverso. En el caso de costa marina se denomina acantilado. En el caso de origen fluvial se denomina barranca. Si se encuentra en terreno no anexo a una corriente de agua o mar se denomina escarpa o barda. ]]>",
+      "abstract": "Desnivel pronunciado del terreno con pendiente variable y de origen diverso. En el caso de costa marina se denomina acantilado. En el caso de origen fluvial se denomina barranca. Si se encuentra en terreno no anexo a una corriente de agua o mar se denomina escarpa o barda.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -954,7 +1310,14 @@
         "geomorfologia",
         "barranca"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_barranca"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_glaciologia_050705",
@@ -972,7 +1335,14 @@
         "barrera",
         "hielo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_glaciologia_050705"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_barrial_barrizal",
@@ -988,7 +1358,14 @@
         "barrial",
         "barrizal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_barrial_barrizal"
+        }
+      ]
     },
     {
       "id": "ign:ign:bahra_base_antartica",
@@ -1005,7 +1382,14 @@
         "antartica",
         "antártica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:bahra_base_antartica"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_arborea_060301",
@@ -1023,7 +1407,14 @@
         "bosque",
         "artificial"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_arborea_060301"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_arborea_EC015",
@@ -1041,7 +1432,14 @@
         "bosque",
         "selva"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_arborea_EC015"
+        }
+      ]
     },
     {
       "id": "ign:ign:ayuda_a_la_navegacion_BC020",
@@ -1058,7 +1456,14 @@
         "bc020",
         "boya"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:ayuda_a_la_navegacion_BC020"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_BH020",
@@ -1076,7 +1481,14 @@
         "bh020",
         "canal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_BH020"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_BH020",
@@ -1094,7 +1506,14 @@
         "bh020",
         "canal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_BH020"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_extraccion_AA012",
@@ -1111,7 +1530,14 @@
         "aa012",
         "cantera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_extraccion_AA012"
+        }
+      ]
     },
     {
       "id": "ign:ign:cartas_100000",
@@ -1128,7 +1554,14 @@
         "100",
         "000"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:cartas_100000"
+        }
+      ]
     },
     {
       "id": "ign:ign:cartas_50000",
@@ -1144,7 +1577,14 @@
         "50000",
         "000"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:cartas_50000"
+        }
+      ]
     },
     {
       "id": "ign:ign:cartas_500000",
@@ -1161,14 +1601,21 @@
         "500",
         "000"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:cartas_500000"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_aguas_continentales_BH180",
       "source": "ign",
       "typeName": "ign:puntos_de_aguas_continentales_BH180",
       "title": "Catarata, cascada, salto",
-      "abstract": "<![CDATA[Caída vertical de una corriente de agua, producida por brusco desnivel del cauce. ]]>",
+      "abstract": "Caída vertical de una corriente de agua, producida por brusco desnivel del cauce.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1181,7 +1628,14 @@
         "cascada",
         "salto"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_aguas_continentales_BH180"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_equipamiento_AL030",
@@ -1198,7 +1652,14 @@
         "al030",
         "cementerio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_equipamiento_AL030"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_equipamiento_AL030",
@@ -1215,14 +1676,21 @@
         "al030",
         "cementerio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_equipamiento_AL030"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_energia_AD010",
       "source": "ign",
       "typeName": "ign:puntos_de_energia_AD010",
       "title": "Central eléctrica",
-      "abstract": "<![CDATA[Edificio y equipamiento necesario para la generación de energía eléctrica. ]]>",
+      "abstract": "Edificio y equipamiento necesario para la generación de energía eléctrica.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1233,7 +1701,14 @@
         "central",
         "eléctrica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_energia_AD010"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_ciencia_y_educacion_AL295",
@@ -1252,7 +1727,14 @@
         "centro",
         "científico"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_ciencia_y_educacion_AL295"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_recreacion_020401",
@@ -1270,7 +1752,14 @@
         "centro",
         "esquí"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_recreacion_020401"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_geomorfologia_NA100",
@@ -1287,14 +1776,21 @@
         "na100",
         "cerro"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_geomorfologia_NA100"
+        }
+      ]
     },
     {
       "id": "ign:ign:complejos_fronterizos",
       "source": "ign",
       "typeName": "ign:complejos_fronterizos",
       "title": "Complejos Fronterizos",
-      "abstract": "<![CDATA[El Complejo Fronterizo (CF) hace referencia al predio en el que se emplazan uno o varios recintos y equipamientos, tanto organizativos como de procedimientos, públicos y privados, destinados a la vigilancia y control de personas, bienes transportados y medios de transporte, para cruzar los límites de dos países, previo al cumplimiento de los requisitos impuestos por las autoridades nacionales de cada uno de ellos. ]]>",
+      "abstract": "El Complejo Fronterizo (CF) hace referencia al predio en el que se emplazan uno o varios recintos y equipamientos, tanto organizativos como de procedimientos, públicos y privados, destinados a la vigilancia y control de personas, bienes transportados y medios de transporte, para cruzar los límites de dos países, previo al cumplimiento de los requisitos impuestos por las autoridades nacionales de cada uno de ellos.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1302,7 +1798,14 @@
         "complejos",
         "fronterizos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:complejos_fronterizos"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_050205",
@@ -1319,14 +1822,21 @@
         "050205",
         "cordillera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_050205"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_050206",
       "source": "ign",
       "typeName": "ign:lineas_de_geomorfologia_050206",
       "title": "Cordón",
-      "abstract": "<![CDATA[Grupo de elevaciones con disposición orográfica similar e igual orogenia, que forman parte de una cordillera o sistema montañoso. ]]>",
+      "abstract": "Grupo de elevaciones con disposición orográfica similar e igual orogenia, que forman parte de una cordillera o sistema montañoso.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1336,7 +1846,14 @@
         "050206",
         "cordón"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_050206"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_BH140",
@@ -1355,7 +1872,14 @@
         "corriente",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_BH140"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_intermitentes",
@@ -1375,7 +1899,14 @@
         "agua",
         "intermitente"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_intermitentes"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_perenne",
@@ -1394,7 +1925,14 @@
         "corriente",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_perenne"
+        }
+      ]
     },
     {
       "id": "ign:ign:estructuras_operativas_y_defensivas_090102",
@@ -1413,7 +1951,14 @@
         "cuartel",
         "bomberos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:estructuras_operativas_y_defensivas_090102"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_050207",
@@ -1430,7 +1975,14 @@
         "050207",
         "cuchilla"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_050207"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_050208",
@@ -1447,7 +1999,14 @@
         "050208",
         "cuesta"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_050208"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_cumbre_rocosa",
@@ -1463,7 +2022,14 @@
         "cumbre",
         "rocosa"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_cumbre_rocosa"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_estructura_asociada_AA051",
@@ -1482,7 +2048,14 @@
         "cámara",
         "válvulas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_estructura_asociada_AA051"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_terrestres_070401",
@@ -1500,7 +2073,14 @@
         "círculo",
         "polar"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_terrestres_070401"
+        }
+      ]
     },
     {
       "id": "ign:ign:departamento",
@@ -1514,7 +2094,14 @@
         "ign",
         "departamento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:departamento"
+        }
+      ]
     },
     {
       "id": "ign:ign:sin_vegetacion_061001",
@@ -1531,7 +2118,14 @@
         "061001",
         "desmonte"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:sin_vegetacion_061001"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_aguas_continentales_BH051",
@@ -1549,7 +2143,14 @@
         "bh051",
         "dique"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_aguas_continentales_BH051"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_estructura_asociada_ducto_subterraneo",
@@ -1567,7 +2168,14 @@
         "ducto",
         "subterraneo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_estructura_asociada_ducto_subterraneo"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_terrestres_070403",
@@ -1584,7 +2192,14 @@
         "070403",
         "ecuador"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_terrestres_070403"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_AL015",
@@ -1602,7 +2217,14 @@
         "al015",
         "edificación"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_AL015"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_020101",
@@ -1621,7 +2243,14 @@
         "edificio",
         "gubernamental"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_020101"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_020102",
@@ -1640,7 +2269,14 @@
         "edificio",
         "comunicaciones"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_020102"
+        }
+      ]
     },
     {
       "id": "ign:ign:cultura_y_religion_AL021",
@@ -1657,14 +2293,21 @@
         "al021",
         "edificio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:cultura_y_religion_AL021"
+        }
+      ]
     },
     {
       "id": "ign:ign:salud_020801",
       "source": "ign",
       "typeName": "ign:salud_020801",
       "title": "Edificio de salud",
-      "abstract": "<![CDATA[Conjunto de instalaciones, establecimientos e instituciones en las cuales se brindan los servicios y la atención de salud para la población. ]]>",
+      "abstract": "Conjunto de instalaciones, establecimientos e instituciones en las cuales se brindan los servicios y la atención de salud para la población.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1673,7 +2316,14 @@
         "020801",
         "edificio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:salud_020801"
+        }
+      ]
     },
     {
       "id": "ign:ign:estructuras_operativas_y_defensivas_FA517",
@@ -1692,7 +2342,14 @@
         "edificio",
         "seguridad"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:estructuras_operativas_y_defensivas_FA517"
+        }
+      ]
     },
     {
       "id": "ign:ign:cultura_y_religion_AL330",
@@ -1710,7 +2367,14 @@
         "edificio",
         "religioso"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:cultura_y_religion_AL330"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_BH130",
@@ -1728,14 +2392,21 @@
         "bh130",
         "embalse"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_BH130"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_041101",
       "source": "ign",
       "typeName": "ign:areas_de_aguas_continentales_041101",
       "title": "Embalse rural",
-      "abstract": "<![CDATA[Excavación descubierta destinada al depósito de agua en zonas rurales. ]]>",
+      "abstract": "Excavación descubierta destinada al depósito de agua en zonas rurales.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1747,14 +2418,21 @@
         "embalse",
         "rural"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_041101"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_aguas_continentales_041101",
       "source": "ign",
       "typeName": "ign:puntos_de_aguas_continentales_041101",
       "title": "Embalse rural",
-      "abstract": "<![CDATA[Excavación descubierta destinada al depósito de agua en zonas rurales. ]]>",
+      "abstract": "Excavación descubierta destinada al depósito de agua en zonas rurales.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1766,7 +2444,14 @@
         "embalse",
         "rural"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_aguas_continentales_041101"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_equipamiento_AL170",
@@ -1784,7 +2469,14 @@
         "espacio",
         "verde"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_equipamiento_AL170"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_intermitente",
@@ -1803,7 +2495,14 @@
         "espejo",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_intermitente"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_aguas_continentales_perenne",
@@ -1822,7 +2521,14 @@
         "espejo",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_aguas_continentales_perenne"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_actividad_agropecuaria_AL270",
@@ -1841,7 +2547,14 @@
         "establecimiento",
         "agropecuario"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_actividad_agropecuaria_AL270"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_ciencia_y_educacion_020601",
@@ -1860,7 +2573,14 @@
         "establecimiento",
         "educativo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_ciencia_y_educacion_020601"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_transporte_ferroviario_AN070",
@@ -1879,7 +2599,14 @@
         "estación",
         "ferrocarril"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_transporte_ferroviario_AN070"
+        }
+      ]
     },
     {
       "id": "ign:ign:infraestructura_de_transporte_030801",
@@ -1897,7 +2624,14 @@
         "estación",
         "peaje"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:infraestructura_de_transporte_030801"
+        }
+      ]
     },
     {
       "id": "ign:ign:infraestructura_de_transporte_AQ180",
@@ -1915,7 +2649,14 @@
         "estación",
         "pesaje"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:infraestructura_de_transporte_AQ180"
+        }
+      ]
     },
     {
       "id": "ign:ign:infraestructura_de_transporte_AQ170",
@@ -1933,7 +2674,14 @@
         "estación",
         "servicio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:infraestructura_de_transporte_AQ170"
+        }
+      ]
     },
     {
       "id": "ign:ign:infraestructura_de_transporte_AQ125",
@@ -1951,14 +2699,21 @@
         "estación",
         "ómnibus"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:infraestructura_de_transporte_AQ125"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_arbustiva_EB015",
       "source": "ign",
       "typeName": "ign:vegetacion_arbustiva_EB015",
       "title": "Estepa arbustiva",
-      "abstract": "<![CDATA[Área con asociación de arbustos bajos, de tallos finos y con baja densidad de cobertura que puede dejar claros. Se encuentran ejemplos en Patagonia. ]]>",
+      "abstract": "Área con asociación de arbustos bajos, de tallos finos y con baja densidad de cobertura que puede dejar claros. Se encuentran ejemplos en Patagonia.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -1968,7 +2723,14 @@
         "eb015",
         "estepa"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_arbustiva_EB015"
+        }
+      ]
     },
     {
       "id": "ign:ign:ayuda_a_la_navegacion_BC050",
@@ -1985,7 +2747,14 @@
         "bc050",
         "faro"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:ayuda_a_la_navegacion_BC050"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_transporte_ferroviario_AN010",
@@ -2003,7 +2772,14 @@
         "an010",
         "ferrocarril"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_transporte_ferroviario_AN010"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_CA020",
@@ -2020,14 +2796,21 @@
         "ca020",
         "filo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_CA020"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_aguas_continentales_BH170",
       "source": "ign",
       "typeName": "ign:puntos_de_aguas_continentales_BH170",
       "title": "Fuente natural",
-      "abstract": "<![CDATA[Flujo natural de agua formado por drenaje en la superficie o por afloramiento de la freática subterránea. ]]>",
+      "abstract": "Flujo natural de agua formado por drenaje en la superficie o por afloramiento de la freática subterránea.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2039,7 +2822,14 @@
         "fuente",
         "natural"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_aguas_continentales_BH170"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_fabricacion_y_procesamiento_AC000",
@@ -2057,7 +2847,14 @@
         "ac000",
         "fábrica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_fabricacion_y_procesamiento_AC000"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_estructura_asociada_AJ080",
@@ -2076,7 +2873,14 @@
         "galpón",
         "tinglado"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_estructura_asociada_AJ080"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_glaciologia_BJ030",
@@ -2093,7 +2897,14 @@
         "bj030",
         "glaciar"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_glaciologia_BJ030"
+        }
+      ]
     },
     {
       "id": "ign:ign:gobiernoslocales_2022",
@@ -2110,7 +2921,14 @@
         "gobierno",
         "local"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gobiernoslocales_2022"
+        }
+      ]
     },
     {
       "id": "ign:ign:municipio",
@@ -2126,7 +2944,14 @@
         "gobierno",
         "local"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:municipio"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_transporte_aereo_GB035",
@@ -2144,14 +2969,21 @@
         "gb035",
         "helipuerto"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_transporte_aereo_GB035"
+        }
+      ]
     },
     {
       "id": "ign:ign:hitos_internacionales",
       "source": "ign",
       "typeName": "ign:hitos_internacionales",
       "title": "Hitos internacionales",
-      "abstract": "<![CDATA[Obra destinada a marcar o señalar la posición de un punto que constituya el deslinde del territorio internacional ]]>",
+      "abstract": "Obra destinada a marcar o señalar la posición de un punto que constituya el deslinde del territorio internacional",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2159,7 +2991,14 @@
         "hitos",
         "internacionales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:hitos_internacionales"
+        }
+      ]
     },
     {
       "id": "ign:ign:hitos_interprovinciales",
@@ -2174,7 +3013,14 @@
         "hitos",
         "interprovinciales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:hitos_interprovinciales"
+        }
+      ]
     },
     {
       "id": "ign:ign:vial_AP010",
@@ -2190,14 +3036,21 @@
         "ap010",
         "huella"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vial_AP010"
+        }
+      ]
     },
     {
       "id": "ign:ign:infraestructura_de_transporte_030803",
       "source": "ign",
       "typeName": "ign:infraestructura_de_transporte_030803",
       "title": "Indicador de kilómetros",
-      "abstract": "<![CDATA[Mojón de madera, metal o cemento que indica la distancia en kilómetros desde ese punto al origen. Se sitúan alternativamente a un lado y otro en vías de transporte y ferrocarril. ]]>",
+      "abstract": "Mojón de madera, metal o cemento que indica la distancia en kilómetros desde ese punto al origen. Se sitúan alternativamente a un lado y otro en vías de transporte y ferrocarril.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2208,14 +3061,21 @@
         "indicador",
         "kilómetros"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:infraestructura_de_transporte_030803"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_recreacion_AK040",
       "source": "ign",
       "typeName": "ign:puntos_de_recreacion_AK040",
       "title": "Instalación deportiva y de esparcimiento",
-      "abstract": "<![CDATA[Conjunto de instalaciones destinadas al desarrollo de actividades sociales, recreativas y deportivas. Hace referencia a club, balneario, polígono de tiro, conjunto de canchas, campo de golf, campo de polo, pista de carreras, estadio, entre otros. ]]>",
+      "abstract": "Conjunto de instalaciones destinadas al desarrollo de actividades sociales, recreativas y deportivas. Hace referencia a club, balneario, polígono de tiro, conjunto de canchas, campo de golf, campo de polo, pista de carreras, estadio, entre otros.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2227,7 +3087,14 @@
         "deportiva",
         "esparcimiento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_recreacion_AK040"
+        }
+      ]
     },
     {
       "id": "ign:ign:instalacion_militar_SU001",
@@ -2244,7 +3111,14 @@
         "su001",
         "instalación"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:instalacion_militar_SU001"
+        }
+      ]
     },
     {
       "id": "ign:ign:estructuras_operativas_y_defensivas_090101",
@@ -2263,7 +3137,14 @@
         "institución",
         "penitenciaria"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:estructuras_operativas_y_defensivas_090101"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_actividad_agropecuaria_AJ110",
@@ -2283,7 +3164,14 @@
         "vivero",
         "huerta"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_actividad_agropecuaria_AJ110"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_actividad_agropecuaria_AJ110",
@@ -2303,7 +3191,14 @@
         "vivero",
         "huerta"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_actividad_agropecuaria_AJ110"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_zona_costera_BA030",
@@ -2321,7 +3216,14 @@
         "ba030",
         "isla"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_zona_costera_BA030"
+        }
+      ]
     },
     {
       "id": "ign:ign:localidad_bahra",
@@ -2336,14 +3238,21 @@
         "localidad",
         "bahra"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:localidad_bahra"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_DB001",
       "source": "ign",
       "typeName": "ign:lineas_de_geomorfologia_DB001",
       "title": "Lugar geomorfológico",
-      "abstract": "<![CDATA[Geoforma caracterizada por la acción de algún agente geomorfológico. ]]>",
+      "abstract": "Geoforma caracterizada por la acción de algún agente geomorfológico.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2354,7 +3263,14 @@
         "lugar",
         "geomorfológico"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_DB001"
+        }
+      ]
     },
     {
       "id": "ign:ign:linea_de_limite_070114",
@@ -2373,7 +3289,14 @@
         "área",
         "protegida"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:linea_de_limite_070114"
+        }
+      ]
     },
     {
       "id": "ign:ign:linea_de_limite_070110",
@@ -2392,7 +3315,14 @@
         "interdepartamental",
         "partido"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:linea_de_limite_070110"
+        }
+      ]
     },
     {
       "id": "ign:ign:linea_de_limite_FA004",
@@ -2410,7 +3340,14 @@
         "límite",
         "internacional"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:linea_de_limite_FA004"
+        }
+      ]
     },
     {
       "id": "ign:ign:linea_de_limite_070111",
@@ -2428,7 +3365,14 @@
         "límite",
         "interprovincial"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:linea_de_limite_070111"
+        }
+      ]
     },
     {
       "id": "ign:ign:linea_limite_maritimos",
@@ -2447,14 +3391,21 @@
         "espacios",
         "marítimos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:linea_limite_maritimos"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_energia_AT030",
       "source": "ign",
       "typeName": "ign:lineas_de_energia_AT030",
       "title": "Línea de transmisión eléctrica",
-      "abstract": "<![CDATA[ Sistema de cableado compuesto por torres y cables que transmite o distribuye energía eléctrica.]]>",
+      "abstract": "Sistema de cableado compuesto por torres y cables que transmite o distribuye energía eléctrica.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2466,7 +3417,14 @@
         "transmisión",
         "eléctrica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_energia_AT030"
+        }
+      ]
     },
     {
       "id": "ign:ign:mar_territorial_argentino",
@@ -2482,14 +3440,21 @@
         "territorial",
         "argentino"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:mar_territorial_argentino"
+        }
+      ]
     },
     {
       "id": "ign:ign:mareas_y_corrientes_BG020",
       "source": "ign",
       "typeName": "ign:mareas_y_corrientes_BG020",
       "title": "Mareógrafo",
-      "abstract": "<![CDATA[Dispositivo construido en el mar, cerca de la costa, para registrar las variaciones del nivel del agua en el tiempo. ]]>",
+      "abstract": "Dispositivo construido en el mar, cerca de la costa, para registrar las variaciones del nivel del agua en el tiempo.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2499,7 +3464,14 @@
         "bg020",
         "mareógrafo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:mareas_y_corrientes_BG020"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_geomorfologia_050202",
@@ -2516,14 +3488,21 @@
         "050202",
         "meseta"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_geomorfologia_050202"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_extraccion_AA010",
       "source": "ign",
       "typeName": "ign:puntos_de_extraccion_AA010",
       "title": "Mina",
-      "abstract": "<![CDATA[Sitio destinado a la extracción de minerales metalíferos y no metalíferos por galerías subterráneas o a cielo abierto. ]]>",
+      "abstract": "Sitio destinado a la extracción de minerales metalíferos y no metalíferos por galerías subterráneas o a cielo abierto.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2533,7 +3512,14 @@
         "aa010",
         "mina"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_extraccion_AA010"
+        }
+      ]
     },
     {
       "id": "ign:ign:mde",
@@ -2550,7 +3536,14 @@
         "digital",
         "elevaciones"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:mde"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_geomorfologia_050203",
@@ -2567,7 +3560,14 @@
         "050203",
         "mogote"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_geomorfologia_050203"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_actividad_agropecuaria_AJ050",
@@ -2586,7 +3586,14 @@
         "molino",
         "viento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_actividad_agropecuaria_AJ050"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_arborea_060302",
@@ -2603,7 +3610,14 @@
         "060302",
         "monte"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_arborea_060302"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_equipamiento_AL130",
@@ -2620,14 +3634,21 @@
         "al130",
         "monumento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_equipamiento_AL130"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_glaciologia_BJ020",
       "source": "ign",
       "typeName": "ign:areas_de_glaciologia_BJ020",
       "title": "Morena, morrena",
-      "abstract": "<![CDATA[Acumulación heterogénea de detritos en cuanto a tamaño y composición que, llevada por el glaciar, es acumulada por éste. ]]>",
+      "abstract": "Acumulación heterogénea de detritos en cuanto a tamaño y composición que, llevada por el glaciar, es acumulada por éste.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2638,7 +3659,14 @@
         "morena",
         "morrena"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_glaciologia_BJ020"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_puertos_y_muelles_BB190",
@@ -2656,7 +3684,14 @@
         "bb190",
         "muelle"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_puertos_y_muelles_BB190"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_aguas_continentales_BI020",
@@ -2675,7 +3710,14 @@
         "muro",
         "embalse"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_aguas_continentales_BI020"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_geomorfologia_DB560",
@@ -2693,14 +3735,21 @@
         "médano",
         "duna"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_geomorfologia_DB560"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_hidrofila_ED020",
       "source": "ign",
       "typeName": "ign:vegetacion_hidrofila_ED020",
       "title": "Pajonal, juncal, totoral",
-      "abstract": "<![CDATA[Área con vegetación que crece en terrenos saturados de humedad o inundados, bajos y anegadizos. Algunas especies son flotantes. ]]>",
+      "abstract": "Área con vegetación que crece en terrenos saturados de humedad o inundados, bajos y anegadizos. Algunas especies son flotantes.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -2712,7 +3761,14 @@
         "juncal",
         "totoral"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_hidrofila_ED020"
+        }
+      ]
     },
     {
       "id": "ign:ign:bahra_paraje",
@@ -2727,7 +3783,14 @@
         "bahra",
         "paraje"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:bahra_paraje"
+        }
+      ]
     },
     {
       "id": "ign:ign:vegetacion_arborea_AK120",
@@ -2745,7 +3808,14 @@
         "parque",
         "artificial"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vegetacion_arborea_AK120"
+        }
+      ]
     },
     {
       "id": "ign:ign:pasos_de_fronteras_internacionales",
@@ -2761,7 +3831,14 @@
         "fronteras",
         "internacionales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:pasos_de_fronteras_internacionales"
+        }
+      ]
     },
     {
       "id": "ign:ign:pais",
@@ -2776,7 +3853,14 @@
         "pais",
         "país"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:pais"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_pedregal",
@@ -2791,7 +3875,14 @@
         "edafologia",
         "pedregal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_pedregal"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_transporte_aereo_GB055",
@@ -2809,7 +3900,14 @@
         "gb055",
         "pista"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_transporte_aereo_GB055"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_estructura_asociada_AQ116",
@@ -2829,7 +3927,14 @@
         "bombeo",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_estructura_asociada_AQ116"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_fabricacion_y_procesamiento_AC507",
@@ -2850,7 +3955,14 @@
         "efluentes",
         "cloacales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_fabricacion_y_procesamiento_AC507"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_fabricacion_y_procesamiento_AC507",
@@ -2871,7 +3983,14 @@
         "efluentes",
         "cloacales"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_fabricacion_y_procesamiento_AC507"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_gestion_de_residuos_AB030",
@@ -2890,7 +4009,14 @@
         "planta",
         "tratamiento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_gestion_de_residuos_AB030"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_gestion_de_residuos_AB030",
@@ -2909,7 +4035,14 @@
         "planta",
         "tratamiento"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_gestion_de_residuos_AB030"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_fabricacion_y_procesamiento_BH220",
@@ -2929,7 +4062,14 @@
         "potabilizadora",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_fabricacion_y_procesamiento_BH220"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_fabricacion_y_procesamiento_BH220",
@@ -2949,7 +4089,14 @@
         "potabilizadora",
         "agua"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_fabricacion_y_procesamiento_BH220"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_energia_AD030",
@@ -2967,7 +4114,14 @@
         "planta",
         "transformadora"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_energia_AD030"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_asentamientos_y_edificios_020105",
@@ -2986,7 +4140,14 @@
         "planta",
         "urbana"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_asentamientos_y_edificios_020105"
+        }
+      ]
     },
     {
       "id": "ign:ign:plantacion_permanente_KB025",
@@ -3003,7 +4164,14 @@
         "kb025",
         "plantación"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:plantacion_permanente_KB025"
+        }
+      ]
     },
     {
       "id": "ign:ign:plataforma_continental",
@@ -3018,7 +4186,14 @@
         "plataforma",
         "continental"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:plataforma_continental"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_zona_costera_playa_areana",
@@ -3037,7 +4212,14 @@
         "areana",
         "arena"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_zona_costera_playa_areana"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_zona_costera_playa_grava",
@@ -3055,7 +4237,14 @@
         "playa",
         "grava"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_zona_costera_playa_grava"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_zona_costera_playa_restinga",
@@ -3073,7 +4262,14 @@
         "playa",
         "restinga"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_zona_costera_playa_restinga"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_extraccion_AA050",
@@ -3091,7 +4287,14 @@
         "pozo",
         "hidrocarburos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_extraccion_AA050"
+        }
+      ]
     },
     {
       "id": "ign:ign:provincia",
@@ -3105,14 +4308,21 @@
         "ign",
         "provincia"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:provincia"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_cruces_y_enlaces_AQ040",
       "source": "ign",
       "typeName": "ign:lineas_de_cruces_y_enlaces_AQ040",
       "title": "Puente",
-      "abstract": "<![CDATA[Estructura que asegura la continuidad de una vía de transporte (ejemplo: red vial, calle, ferrocarril) por sobre un obstáculo natural o artificial del terreno (ejemplo: corriente de agua, canal, entre otros). ]]>",
+      "abstract": "Estructura que asegura la continuidad de una vía de transporte (ejemplo: red vial, calle, ferrocarril) por sobre un obstáculo natural o artificial del terreno (ejemplo: corriente de agua, canal, entre otros).",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -3123,14 +4333,21 @@
         "aq040",
         "puente"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_cruces_y_enlaces_AQ040"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_cruces_y_enlaces_AQ040",
       "source": "ign",
       "typeName": "ign:puntos_de_cruces_y_enlaces_AQ040",
       "title": "Puente",
-      "abstract": "<![CDATA[Estructura que asegura la continuidad de una vía de transporte (ejemplo: red vial, calle, ferrocarril) por sobre un obstáculo natural o artificial del terreno (ejemplo: corriente de agua, canal, entre otros). ]]>",
+      "abstract": "Estructura que asegura la continuidad de una vía de transporte (ejemplo: red vial, calle, ferrocarril) por sobre un obstáculo natural o artificial del terreno (ejemplo: corriente de agua, canal, entre otros).",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -3141,14 +4358,21 @@
         "aq040",
         "puente"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_cruces_y_enlaces_AQ040"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_puertos_y_muelles_BB005",
       "source": "ign",
       "typeName": "ign:puntos_de_puertos_y_muelles_BB005",
       "title": "Puerto",
-      "abstract": "<![CDATA[Conjunto de obras, instalaciones y servicios que proporciona el espacio necesario para la estancia de embarcaciones mientras se realizan operaciones de carga, descarga, almacenamiento de productos o materias primas y tránsito de pasajeros. ]]>",
+      "abstract": "Conjunto de obras, instalaciones y servicios que proporciona el espacio necesario para la estancia de embarcaciones mientras se realizan operaciones de carga, descarga, almacenamiento de productos o materias primas y tránsito de pasajeros.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -3159,7 +4383,14 @@
         "bb005",
         "puerto"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_puertos_y_muelles_BB005"
+        }
+      ]
     },
     {
       "id": "ign:ign:controles_AH070",
@@ -3176,7 +4407,14 @@
         "puesto",
         "control"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:controles_AH070"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_geomorfologia_CA030",
@@ -3194,7 +4432,14 @@
         "punto",
         "acotado"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_geomorfologia_CA030"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_DB200",
@@ -3213,7 +4458,14 @@
         "cañadón",
         "garganta"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_DB200"
+        }
+      ]
     },
     {
       "id": "ign:ign:ramsac_ntrip",
@@ -3229,7 +4481,14 @@
         "ntrip",
         "red"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:ramsac_ntrip"
+        }
+      ]
     },
     {
       "id": "ign:ign:ramsac",
@@ -3247,7 +4506,14 @@
         "gps",
         "gnss"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:ramsac"
+        }
+      ]
     },
     {
       "id": "ign:ign:nivelacion_topografica",
@@ -3265,7 +4531,14 @@
         "nivelación",
         "topográfica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:nivelacion_topografica"
+        }
+      ]
     },
     {
       "id": "ign:ign:nivelacion_alta_precision",
@@ -3284,7 +4557,14 @@
         "nivelación",
         "precisión"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:nivelacion_alta_precision"
+        }
+      ]
     },
     {
       "id": "ign:ign:nivelacion_precision",
@@ -3302,7 +4582,14 @@
         "nivelación",
         "precisión"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:nivelacion_precision"
+        }
+      ]
     },
     {
       "id": "ign:ign:red_densificacion_posgar",
@@ -3321,7 +4608,14 @@
         "densificación",
         "posgar07"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:red_densificacion_posgar"
+        }
+      ]
     },
     {
       "id": "ign:ign:red_pasma",
@@ -3337,7 +4631,14 @@
         "pasma",
         "geodésica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:red_pasma"
+        }
+      ]
     },
     {
       "id": "ign:ign:red_posgar",
@@ -3354,7 +4655,14 @@
         "geodésica",
         "posgar07"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:red_posgar"
+        }
+      ]
     },
     {
       "id": "ign:ign:red_provincial",
@@ -3370,7 +4678,14 @@
         "provincial",
         "geodésica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:red_provincial"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_bacara",
@@ -3387,7 +4702,14 @@
         "red",
         "gravimétrica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_bacara"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_igsn71",
@@ -3405,7 +4727,14 @@
         "gravimétrica",
         "igsn"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_igsn71"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_raga",
@@ -3422,7 +4751,14 @@
         "red",
         "gravimétrica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_raga"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_rpo",
@@ -3441,7 +4777,14 @@
         "primer",
         "orden"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_rpo"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_rso",
@@ -3460,7 +4803,14 @@
         "segundo",
         "orden"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_rso"
+        }
+      ]
     },
     {
       "id": "ign:ign:gravimetria_rto",
@@ -3479,7 +4829,14 @@
         "tercer",
         "orden"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:gravimetria_rto"
+        }
+      ]
     },
     {
       "id": "ign:ign:vial_nacional",
@@ -3495,7 +4852,14 @@
         "nacional",
         "red"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vial_nacional"
+        }
+      ]
     },
     {
       "id": "ign:ign:vial_provincial",
@@ -3511,7 +4875,14 @@
         "provincial",
         "red"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vial_provincial"
+        }
+      ]
     },
     {
       "id": "ign:ign:vial_terciaria",
@@ -3527,7 +4898,14 @@
         "terciaria",
         "red"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vial_terciaria"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_equipamiento_AH030",
@@ -3544,7 +4922,14 @@
         "ah030",
         "refugio"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_equipamiento_AH030"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_gestion_de_residuos_relleno_sanitario",
@@ -3562,7 +4947,14 @@
         "relleno",
         "sanitario"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_gestion_de_residuos_relleno_sanitario"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_obstrucciones_BD130",
@@ -3579,7 +4971,14 @@
         "bd130",
         "roca"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_obstrucciones_BD130"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_puertos_y_muelles_BB041",
@@ -3597,7 +4996,14 @@
         "bb041",
         "rompeolas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_puertos_y_muelles_BB041"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_puertos_y_muelles_BB041",
@@ -3615,7 +5021,14 @@
         "bb041",
         "rompeolas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_puertos_y_muelles_BB041"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_ruina",
@@ -3633,7 +5046,14 @@
         "ruina",
         "ruinas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_ruina"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_salina",
@@ -3651,7 +5071,14 @@
         "salitral",
         "boratera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_salina"
+        }
+      ]
     },
     {
       "id": "ign:ign:edafologia_sedimento_fluvial",
@@ -3667,7 +5094,14 @@
         "sedimento",
         "fluvial"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:edafologia_sedimento_fluvial"
+        }
+      ]
     },
     {
       "id": "ign:ign:vial_AP050",
@@ -3684,7 +5118,14 @@
         "senda",
         "rural"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:vial_AP050"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_050204",
@@ -3701,7 +5142,14 @@
         "050204",
         "sierra"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_050204"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_AL201",
@@ -3720,7 +5168,14 @@
         "sitio",
         "interés"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_AL201"
+        }
+      ]
     },
     {
       "id": "ign:ign:sublocalidad_entidad_bahra",
@@ -3736,7 +5191,14 @@
         "entidad",
         "bahra"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:sublocalidad_entidad_bahra"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_almacenamiento_y_logistica_AM080",
@@ -3756,7 +5218,14 @@
         "agua",
         "elevado"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_almacenamiento_y_logistica_AM080"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_almacenamiento_y_logistica_AM070",
@@ -3775,7 +5244,14 @@
         "tanque",
         "combustible"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_almacenamiento_y_logistica_AM070"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_asentamientos_y_edificios_020108",
@@ -3793,7 +5269,14 @@
         "020108",
         "tapera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_asentamientos_y_edificios_020108"
+        }
+      ]
     },
     {
       "id": "ign:ign:terreno_para_cultivo_EA010",
@@ -3809,14 +5292,21 @@
         "cultivo",
         "ea010"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:terreno_para_cultivo_EA010"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_comunicacion_AT080",
       "source": "ign",
       "typeName": "ign:puntos_de_comunicacion_AT080",
       "title": "Torre de telecomunicaciones",
-      "abstract": "<![CDATA[Estructura metálica de gran altura que se utiliza para sostener antenas con fines de transmisión o recepción de ondas electromagnéticas. ]]>",
+      "abstract": "Estructura metálica de gran altura que se utiliza para sostener antenas con fines de transmisión o recepción de ondas electromagnéticas.",
       "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
       "defaultCrs": "urn:ogc:def:crs:EPSG::4326",
       "keywords": [
@@ -3827,7 +5317,14 @@
         "torre",
         "telecomunicaciones"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_comunicacion_AT080"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_terrestres_070402",
@@ -3844,7 +5341,14 @@
         "070402",
         "trópico"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_terrestres_070402"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_cruces_y_enlaces_AQ130",
@@ -3862,7 +5366,14 @@
         "aq130",
         "tunel"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_cruces_y_enlaces_AQ130"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_ciencia_y_educacion_020602",
@@ -3880,7 +5391,14 @@
         "020602",
         "universidad"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_ciencia_y_educacion_020602"
+        }
+      ]
     },
     {
       "id": "ign:ign:puntos_de_cruces_y_enlaces_BH070",
@@ -3898,7 +5416,14 @@
         "bh070",
         "vado"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:puntos_de_cruces_y_enlaces_BH070"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_CA025",
@@ -3915,7 +5440,14 @@
         "ca025",
         "valle"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_CA025"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_gestion_de_residuos_AB000",
@@ -3934,7 +5466,14 @@
         "vertedero",
         "basurero"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_gestion_de_residuos_AB000"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_extraccion_AA052",
@@ -3952,7 +5491,14 @@
         "yacimiento",
         "hidrocarburo"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_extraccion_AA052"
+        }
+      ]
     },
     {
       "id": "ign:ign:zona_contigua_argentina",
@@ -3968,7 +5514,14 @@
         "contigua",
         "argentina"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:zona_contigua_argentina"
+        }
+      ]
     },
     {
       "id": "ign:ign:zona_economica_exclusiva_argentina",
@@ -3986,7 +5539,14 @@
         "argentina",
         "económica"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:zona_economica_exclusiva_argentina"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_estructura_asociada_010601",
@@ -4006,7 +5566,14 @@
         "extracción",
         "minera"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_estructura_asociada_010601"
+        }
+      ]
     },
     {
       "id": "ign:ign:lineas_de_geomorfologia_CA010",
@@ -4023,7 +5590,14 @@
         "ca010",
         "hipsometricas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:lineas_de_geomorfologia_CA010"
+        }
+      ]
     },
     {
       "id": "ign:ign:areas_de_fabricacion_y_procesamiento_AC070",
@@ -4042,7 +5616,14 @@
         "área",
         "fabricación"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:areas_de_fabricacion_y_procesamiento_AC070"
+        }
+      ]
     },
     {
       "id": "ign:ign:area_de_montana",
@@ -4059,7 +5640,14 @@
         "área",
         "montaña"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:area_de_montana"
+        }
+      ]
     },
     {
       "id": "ign:ign:area_vuelos_dsr_sig",
@@ -4077,7 +5665,14 @@
         "sig",
         "área"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:area_vuelos_dsr_sig"
+        }
+      ]
     },
     {
       "id": "ign:ign:area_vuelos_vant_sig",
@@ -4095,7 +5690,14 @@
         "sig",
         "área"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:area_vuelos_vant_sig"
+        }
+      ]
     },
     {
       "id": "ign:ign:area_protegida",
@@ -4111,7 +5713,14 @@
         "protegida",
         "área"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
+          "typeName": "ign:area_protegida"
+        }
+      ]
     }
   ]
 }

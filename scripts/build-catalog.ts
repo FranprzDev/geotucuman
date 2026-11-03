@@ -1,4 +1,4 @@
-/** Genera data/catalog.json desde los GetCapabilities en vivo de los endpoints oficiales. */
+/** Generates data/catalog.json from the live GetCapabilities of the official endpoints. */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { ENDPOINTS } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
@@ -34,17 +34,17 @@ for (const ep of ENDPOINTS) {
         title: c.title || c.typeName,
         abstract: (c.abstract || '').replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim(),
         endpoint: ep.url,
-        defaultCrs: c.defaultCrs || 'desconocido',
+        defaultCrs: c.defaultCrs || 'unknown',
         keywords: keywordsOf(c.typeName, c.title),
         verifiedAt: today,
       });
     }
     sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString() };
-    console.log(`${ep.id}: ${caps.length} capas`);
+    console.log(`${ep.id}: ${caps.length} layers`);
   } catch (err) {
     const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
     if (stale.length === 0) {
-      throw new Error(`${ep.id}: FALLO GetCapabilities y no hay snapshot previo para conservar — ${err}`);
+      throw new Error(`${ep.id}: GetCapabilities FAILED and there is no previous snapshot to preserve — ${err}`);
     }
     layers.push(...stale);
     preserved += stale.length;
@@ -52,11 +52,11 @@ for (const ep of ENDPOINTS) {
       status: 'preserved',
       fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
     };
-    console.error(`${ep.id}: FALLO GetCapabilities — se conservan ${stale.length} capas del snapshot anterior (${err})`);
+    console.error(`${ep.id}: GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${err})`);
   }
 }
 
 mkdirSync('data', { recursive: true });
 const catalog: Catalog = { generatedAt: new Date().toISOString(), sources, layers };
 writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2));
-console.log(`data/catalog.json: ${layers.length} capas totales${preserved ? ` (${preserved} conservadas de snapshot anterior)` : ''}`);
+console.log(`data/catalog.json: ${layers.length} total layers${preserved ? ` (${preserved} preserved from previous snapshot)` : ''}`);

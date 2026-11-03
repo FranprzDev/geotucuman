@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-11-03T15:03:21.942Z",
+  "generatedAt": "2026-11-03T15:10:36.130Z",
   "sources": {
     "geosplan": {
       "status": "live",
-      "fetchedAt": "2026-11-03T15:03:10.279Z",
+      "fetchedAt": "2026-11-03T15:10:18.759Z",
       "wmsStatus": "live"
     },
     "dgct": {
@@ -12,7 +12,12 @@
     },
     "ign": {
       "status": "live",
-      "fetchedAt": "2026-11-03T15:03:21.942Z"
+      "fetchedAt": "2026-11-03T15:10:30.132Z"
+    },
+    "rides": {
+      "status": "live",
+      "fetchedAt": "2026-11-03T15:10:36.130Z",
+      "wmsStatus": "live"
     }
   },
   "layers": [
@@ -692,7 +697,14 @@
         "folio",
         "parc"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:FOLIO_PARC"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:FOLIO_PARC1",
@@ -707,7 +719,14 @@
         "folio",
         "parc1"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:FOLIO_PARC1"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:FOLIO_PARC1_ENT",
@@ -723,7 +742,14 @@
         "parc1",
         "ent"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:FOLIO_PARC1_ENT"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:MEJ_OVI",
@@ -738,7 +764,14 @@
         "mej",
         "ovi"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:MEJ_OVI"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:PARCELASR1",
@@ -752,7 +785,14 @@
         "dgct",
         "parcelasr1"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:PARCELASR1"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:PARCELASRUBE",
@@ -766,7 +806,14 @@
         "dgct",
         "parcelasrube"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:PARCELASRUBE"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:PARCELASRUBEP",
@@ -780,7 +827,14 @@
         "dgct",
         "parcelasrubep"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:PARCELASRUBEP"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:SECCIONES",
@@ -794,7 +848,14 @@
         "dgct",
         "secciones"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:SECCIONES"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:SERVIDUMBRE_PASO",
@@ -809,7 +870,14 @@
         "servidumbre",
         "paso"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:SERVIDUMBRE_PASO"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:calles",
@@ -823,7 +891,14 @@
         "dgct",
         "calles"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:calles"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:comunasymunicipios",
@@ -837,7 +912,14 @@
         "dgct",
         "comunasymunicipios"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:comunasymunicipios"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:departamentos",
@@ -851,7 +933,14 @@
         "dgct",
         "departamentos"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:departamentos"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:departamentos_param",
@@ -866,7 +955,14 @@
         "departamentos",
         "param"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:departamentos_param"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:edificios",
@@ -880,7 +976,14 @@
         "dgct",
         "edificios"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:edificios"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:manzanas",
@@ -894,7 +997,14 @@
         "dgct",
         "manzanas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:manzanas"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:parcelas",
@@ -908,7 +1018,14 @@
         "dgct",
         "parcelas"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:parcelas"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:parcelas_legal",
@@ -923,7 +1040,14 @@
         "parcelas",
         "legal"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:parcelas_legal"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:provincias",
@@ -937,7 +1061,14 @@
         "dgct",
         "provincias"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:provincias"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:rios",
@@ -951,7 +1082,14 @@
         "dgct",
         "rios"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:rios"
+        }
+      ]
     },
     {
       "id": "dgct:dgct:zonas_bar_nodat",
@@ -967,7 +1105,14 @@
         "bar",
         "nodat"
       ],
-      "verifiedAt": "2026-10-30"
+      "verifiedAt": "2026-10-30",
+      "services": [
+        {
+          "type": "wfs",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
+          "typeName": "dgct:zonas_bar_nodat"
+        }
+      ]
     },
     {
       "id": "ign:ign:doscientas_millas_sector_antartico",
@@ -5719,6 +5864,5559 @@
           "type": "wfs",
           "endpoint": "https://wms.ign.gob.ar/geoserver/ows",
           "typeName": "ign:area_protegida"
+        }
+      ]
+    },
+    {
+      "id": "rides:Vid_2019",
+      "source": "rides",
+      "typeName": "Vid_2019",
+      "title": "Vid_2019",
+      "abstract": "Vid_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "vid",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Vid_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2018",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2018",
+      "title": "UP_Citrus_Senasa_2018",
+      "abstract": "UP_Citrus_Senasa_2018",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2018"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2018"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2015",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2015",
+      "title": "UP_Citrus_Senasa_2015",
+      "abstract": "UP_Citrus_Senasa_2015",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2015"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2015"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2014",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2014",
+      "title": "UP_Citrus_Senasa_2014",
+      "abstract": "UP_Citrus_Senasa_2014",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2014"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2014"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2013",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2013",
+      "title": "UP_Citrus_Senasa_2013",
+      "abstract": "UP_Citrus_Senasa_2013",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2013"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2013"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2012",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2012",
+      "title": "UP_Citrus_Senasa_2012",
+      "abstract": "UP_Citrus_Senasa_2012",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2012"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2012"
+        }
+      ]
+    },
+    {
+      "id": "rides:UP_Citrus_Senasa_2011",
+      "source": "rides",
+      "typeName": "UP_Citrus_Senasa_2011",
+      "title": "UP_Citrus_Senasa_2011",
+      "abstract": "UP_Citrus_Senasa_2011",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citrus",
+        "senasa",
+        "2011"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "UP_Citrus_Senasa_2011"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2020_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2020_EEAOC",
+      "title": "Trigo_2020_EEAOC",
+      "abstract": "Trigo_2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2018_EEAOC",
+      "title": "Trigo_2018_EEAOC",
+      "abstract": "Trigo_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2016_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2016_EEAOC",
+      "title": "Trigo_2016_EEAOC",
+      "abstract": "Trigo_2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2015_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2015_EEAOC",
+      "title": "Trigo_2015_EEAOC",
+      "abstract": "Trigo_2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2014_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2014_EEAOC",
+      "title": "Trigo_2014_EEAOC",
+      "abstract": "Trigo_2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2013_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2013_EEAOC",
+      "title": "Trigo_2013_EEAOC",
+      "abstract": "Trigo_2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2012_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2012_EEAOC",
+      "title": "Trigo_2012_EEAOC",
+      "abstract": "Trigo_2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2011_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2011_EEAOC",
+      "title": "Trigo_2011_EEAOC",
+      "abstract": "Trigo_2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2010_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2010_EEAOC",
+      "title": "Trigo_2010_EEAOC",
+      "abstract": "Trigo_2010_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2010",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2010_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2009_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2009_EEAOC",
+      "title": "Trigo_2009_EEAOC",
+      "abstract": "Trigo_2009_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2009",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2009_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Trigo_2008_EEAOC",
+      "source": "rides",
+      "typeName": "Trigo_2008_EEAOC",
+      "title": "Trigo_2008_EEAOC",
+      "abstract": "Trigo_2008_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "trigo",
+        "2008",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Trigo_2008_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2025_2026",
+      "source": "rides",
+      "typeName": "Tabaco_2025_2026",
+      "title": "Tabaco_2025_2026",
+      "abstract": "Tabaco_2025_2026",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2025",
+        "2026"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2025_2026"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2024_2025",
+      "source": "rides",
+      "typeName": "Tabaco_2024_2025",
+      "title": "Tabaco_2024_2025",
+      "abstract": "Tabaco_2024_2025",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2024",
+        "2025"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2024_2025"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2023-2024",
+      "source": "rides",
+      "typeName": "Tabaco_2023-2024",
+      "title": "Tabaco_2023-2024",
+      "abstract": "Tabaco_2023-2024",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2023",
+        "2024"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2023-2024"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2022-2023",
+      "source": "rides",
+      "typeName": "Tabaco_2022-2023",
+      "title": "Tabaco_2022-2023",
+      "abstract": "Tabaco_2022-2023",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2022",
+        "2023"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2022-2023"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2020-2021",
+      "source": "rides",
+      "typeName": "Tabaco_2020-2021",
+      "title": "Tabaco_2020-2021",
+      "abstract": "Tabaco_2020-2021",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2020",
+        "2021"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2020-2021"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2019-2020",
+      "source": "rides",
+      "typeName": "Tabaco_2019-2020",
+      "title": "Tabaco_2019-2020",
+      "abstract": "Tabaco_2019-2020",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2019",
+        "2020"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2019-2020"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2018-2019",
+      "source": "rides",
+      "typeName": "Tabaco_2018-2019",
+      "title": "Tabaco_2018-2019",
+      "abstract": "Tabaco_2018-2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2018",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2018-2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2017-2018",
+      "source": "rides",
+      "typeName": "Tabaco_2017-2018",
+      "title": "Tabaco_2017-2018",
+      "abstract": "Tabaco_2017-2018",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2017",
+        "2018"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2017-2018"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2015-2016",
+      "source": "rides",
+      "typeName": "Tabaco_2015-2016",
+      "title": "Tabaco_2015-2016",
+      "abstract": "Tabaco_2015-2016",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2015",
+        "2016"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2015-2016"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2014-2015",
+      "source": "rides",
+      "typeName": "Tabaco_2014-2015",
+      "title": "Tabaco_2014-2015",
+      "abstract": "Tabaco_2014-2015",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2014",
+        "2015"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2014-2015"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2013-2014",
+      "source": "rides",
+      "typeName": "Tabaco_2013-2014",
+      "title": "Tabaco_2013-2014",
+      "abstract": "Tabaco_2013-2014",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2013",
+        "2014"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2013-2014"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2012-2013",
+      "source": "rides",
+      "typeName": "Tabaco_2012-2013",
+      "title": "Tabaco_2012-2013",
+      "abstract": "Tabaco_2012-2013",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2012",
+        "2013"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2012-2013"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2011-2012",
+      "source": "rides",
+      "typeName": "Tabaco_2011-2012",
+      "title": "Tabaco_2011-2012",
+      "abstract": "Tabaco_2011-2012",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2011",
+        "2012"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2011-2012"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tabaco_2008-2009",
+      "source": "rides",
+      "typeName": "Tabaco_2008-2009",
+      "title": "Tabaco_2008-2009",
+      "abstract": "Tabaco_2008-2009",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tabaco",
+        "2008",
+        "2009"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Tabaco_2008-2009"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2025_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2025_EEAOC",
+      "title": "Soja_2025_EEAOC",
+      "abstract": "Soja_2025_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2025",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2025_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2024_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2024_EEAOC",
+      "title": "Soja_2024_EEAOC",
+      "abstract": "Soja_2024_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2024",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2024_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2022-2023_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2022-2023_EEAOC",
+      "title": "Soja_2022-2023_EEAOC",
+      "abstract": "Soja_2022-2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2022",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2022-2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2021-2022_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2021-2022_EEAOC",
+      "title": "Soja_2021-2022_EEAOC",
+      "abstract": "Soja_2021-2022_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2021",
+        "2022",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2021-2022_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2019-2020_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2019-2020_EEAOC",
+      "title": "Soja_2019-2020_EEAOC",
+      "abstract": "Soja_2019-2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2019",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2019-2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2017-2018_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2017-2018_EEAOC",
+      "title": "Soja_2017-2018_EEAOC",
+      "abstract": "Soja_2017-2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2017",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2017-2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2016-2017_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2016-2017_EEAOC",
+      "title": "Soja_2016-2017_EEAOC",
+      "abstract": "Soja_2016-2017_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2016",
+        "2017",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2016-2017_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2015-2016_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2015-2016_EEAOC",
+      "title": "Soja_2015-2016_EEAOC",
+      "abstract": "Soja_2015-2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2015",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2015-2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2014-2015_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2014-2015_EEAOC",
+      "title": "Soja_2014-2015_EEAOC",
+      "abstract": "Soja_2014-2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2014",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2014-2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2013-2014_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2013-2014_EEAOC",
+      "title": "Soja_2013-2014_EEAOC",
+      "abstract": "Soja_2013-2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2013",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2013-2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2012-2013_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2012-2013_EEAOC",
+      "title": "Soja_2012-2013_EEAOC",
+      "abstract": "Soja_2012-2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2012",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2012-2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2011-2012_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2011-2012_EEAOC",
+      "title": "Soja_2011-2012_EEAOC",
+      "abstract": "Soja_2011-2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2011",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2011-2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2010-2011_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2010-2011_EEAOC",
+      "title": "Soja_2010-2011_EEAOC",
+      "abstract": "Soja_2010-2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2010",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2010-2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2009-2010_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2009-2010_EEAOC",
+      "title": "Soja_2009-2010_EEAOC",
+      "abstract": "Soja_2009-2010_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2009",
+        "2010",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2009-2010_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2008-2009_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2008-2009_EEAOC",
+      "title": "Soja_2008-2009_EEAOC",
+      "abstract": "Soja_2008-2009_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2008",
+        "2009",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2008-2009_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Soja_2007-2008_EEAOC",
+      "source": "rides",
+      "typeName": "Soja_2007-2008_EEAOC",
+      "title": "Soja_2007-2008_EEAOC",
+      "abstract": "Soja_2007-2008_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "soja",
+        "2007",
+        "2008",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Soja_2007-2008_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Producción_vitivinícola",
+      "source": "rides",
+      "typeName": "Producción_vitivinícola",
+      "title": "Producción_vitivinícola",
+      "abstract": "Producción_vitivinícola",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "producción",
+        "vitivinícola"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Producción_vitivinícola"
+        }
+      ]
+    },
+    {
+      "id": "rides:Producción_porcina_por_localidades",
+      "source": "rides",
+      "typeName": "Producción_porcina_por_localidades",
+      "title": "Producción_porcina_por_localidades",
+      "abstract": "Producción_porcina_por_localidades",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "producción",
+        "porcina",
+        "por",
+        "localidades"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Producción_porcina_por_localidades"
+        }
+      ]
+    },
+    {
+      "id": "rides:Producción_caprina_por_establecimientos",
+      "source": "rides",
+      "typeName": "Producción_caprina_por_establecimientos",
+      "title": "Producción_caprina_por_establecimientos",
+      "abstract": "Producción_caprina_por_establecimientos",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "producción",
+        "caprina",
+        "por",
+        "establecimientos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Producción_caprina_por_establecimientos"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2025_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2025_EEAOC",
+      "title": "Poroto_2025_EEAOC",
+      "abstract": "Poroto_2025_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2025",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2025_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2024_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2024_EEAOC",
+      "title": "Poroto_2024_EEAOC",
+      "abstract": "Poroto_2024_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2024",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2024_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2023_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2023_EEAOC",
+      "title": "Poroto_2023_EEAOC",
+      "abstract": "Poroto_2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2022_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2022_EEAOC",
+      "title": "Poroto_2022_EEAOC",
+      "abstract": "Poroto_2022_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2022",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2022_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2020_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2020_EEAOC",
+      "title": "Poroto_2020_EEAOC",
+      "abstract": "Poroto_2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Poroto_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Poroto_2018_EEAOC",
+      "title": "Poroto_2018_EEAOC",
+      "abstract": "Poroto_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "poroto",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Poroto_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2025_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2025_EEAOC",
+      "title": "Papa_2025_EEAOC",
+      "abstract": "Papa_2025_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2025",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2025_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2023_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2023_EEAOC",
+      "title": "Papa_2023_EEAOC",
+      "abstract": "Papa_2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2018_EEAOC",
+      "title": "Papa_2018_EEAOC",
+      "abstract": "Papa_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2015_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2015_EEAOC",
+      "title": "Papa_2015_EEAOC",
+      "abstract": "Papa_2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2014_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2014_EEAOC",
+      "title": "Papa_2014_EEAOC",
+      "abstract": "Papa_2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2013_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2013_EEAOC",
+      "title": "Papa_2013_EEAOC",
+      "abstract": "Papa_2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2012_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2012_EEAOC",
+      "title": "Papa_2012_EEAOC",
+      "abstract": "Papa_2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Papa_2011_EEAOC",
+      "source": "rides",
+      "typeName": "Papa_2011_EEAOC",
+      "title": "Papa_2011_EEAOC",
+      "abstract": "Papa_2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "papa",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Papa_2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Nogal_2019",
+      "source": "rides",
+      "typeName": "Nogal_2019",
+      "title": "Nogal_2019",
+      "abstract": "Nogal_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "nogal",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Nogal_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maiz_2025_EEAOC",
+      "source": "rides",
+      "typeName": "Maiz_2025_EEAOC",
+      "title": "Maiz_2025_EEAOC",
+      "abstract": "Maiz_2025_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maiz",
+        "2025",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maiz_2025_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maiz_2024_EEAOC",
+      "source": "rides",
+      "typeName": "Maiz_2024_EEAOC",
+      "title": "Maiz_2024_EEAOC",
+      "abstract": "Maiz_2024_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maiz",
+        "2024",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maiz_2024_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2022-2023_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2022-2023_EEAOC",
+      "title": "Maíz_2022-2023_EEAOC",
+      "abstract": "Maíz_2022-2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2022",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2022-2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2021-2022_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2021-2022_EEAOC",
+      "title": "Maíz_2021-2022_EEAOC",
+      "abstract": "Maíz_2021-2022_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2021",
+        "2022",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2021-2022_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2019-2020_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2019-2020_EEAOC",
+      "title": "Maíz_2019-2020_EEAOC",
+      "abstract": "Maíz_2019-2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2019",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2019-2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2017-2018_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2017-2018_EEAOC",
+      "title": "Maíz_2017-2018_EEAOC",
+      "abstract": "Maíz_2017-2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2017",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2017-2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2016-2017_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2016-2017_EEAOC",
+      "title": "Maíz_2016-2017_EEAOC",
+      "abstract": "Maíz_2016-2017_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2016",
+        "2017",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2016-2017_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2015-2016_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2015-2016_EEAOC",
+      "title": "Maíz_2015-2016_EEAOC",
+      "abstract": "Maíz_2015-2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2015",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2015-2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2014-2015_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2014-2015_EEAOC",
+      "title": "Maíz_2014-2015_EEAOC",
+      "abstract": "Maíz_2014-2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2014",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2014-2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2013-2014_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2013-2014_EEAOC",
+      "title": "Maíz_2013-2014_EEAOC",
+      "abstract": "Maíz_2013-2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2013",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2013-2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2012-2013_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2012-2013_EEAOC",
+      "title": "Maíz_2012-2013_EEAOC",
+      "abstract": "Maíz_2012-2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2012",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2012-2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2011-2012_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2011-2012_EEAOC",
+      "title": "Maíz_2011-2012_EEAOC",
+      "abstract": "Maíz_2011-2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2011",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2011-2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2010-2011_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2010-2011_EEAOC",
+      "title": "Maíz_2010-2011_EEAOC",
+      "abstract": "Maíz_2010-2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2010",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2010-2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2009-2010_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2009-2010_EEAOC",
+      "title": "Maíz_2009-2010_EEAOC",
+      "abstract": "Maíz_2009-2010_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2009",
+        "2010",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2009-2010_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2008-2009_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2008-2009_EEAOC",
+      "title": "Maíz_2008-2009_EEAOC",
+      "abstract": "Maíz_2008-2009_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2008",
+        "2009",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2008-2009_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Maíz_2007-2008_EEAOC",
+      "source": "rides",
+      "typeName": "Maíz_2007-2008_EEAOC",
+      "title": "Maíz_2007-2008_EEAOC",
+      "abstract": "Maíz_2007-2008_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "maíz",
+        "2007",
+        "2008",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Maíz_2007-2008_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2020_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2020_EEAOC",
+      "title": "Garbanzo_2020_EEAOC",
+      "abstract": "Garbanzo_2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2018_EEAOC",
+      "title": "Garbanzo_2018_EEAOC",
+      "abstract": "Garbanzo_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2016_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2016_EEAOC",
+      "title": "Garbanzo_2016_EEAOC",
+      "abstract": "Garbanzo_2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2015_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2015_EEAOC",
+      "title": "Garbanzo_2015_EEAOC",
+      "abstract": "Garbanzo_2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2014_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2014_EEAOC",
+      "title": "Garbanzo_2014_EEAOC",
+      "abstract": "Garbanzo_2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2013_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2013_EEAOC",
+      "title": "Garbanzo_2013_EEAOC",
+      "abstract": "Garbanzo_2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2012_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2012_EEAOC",
+      "title": "Garbanzo_2012_EEAOC",
+      "abstract": "Garbanzo_2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Garbanzo_2011_EEAOC",
+      "source": "rides",
+      "typeName": "Garbanzo_2011_EEAOC",
+      "title": "Garbanzo_2011_EEAOC",
+      "abstract": "Garbanzo_2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "garbanzo",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Garbanzo_2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Frutilla_2024_INTA",
+      "source": "rides",
+      "typeName": "Frutilla_2024_INTA",
+      "title": "Frutilla_2024_INTA",
+      "abstract": "Frutilla_2024_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "frutilla",
+        "2024",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Frutilla_2024_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Frutilla_2023_INTA",
+      "source": "rides",
+      "typeName": "Frutilla_2023_INTA",
+      "title": "Frutilla_2023_INTA",
+      "abstract": "Frutilla_2023_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "frutilla",
+        "2023",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Frutilla_2023_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Frutales_de_carozo_2019",
+      "source": "rides",
+      "typeName": "Frutales_de_carozo_2019",
+      "title": "Frutales_de_carozo_2019",
+      "abstract": "Frutales_de_carozo_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "frutales",
+        "carozo",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Frutales_de_carozo_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cooperativas_cañeras",
+      "source": "rides",
+      "typeName": "Cooperativas_cañeras",
+      "title": "Cooperativas_cañeras",
+      "abstract": "Cooperativas_cañeras",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cooperativas",
+        "cañeras"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cooperativas_cañeras"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2025_INTA",
+      "source": "rides",
+      "typeName": "Cítricos_2025_INTA",
+      "title": "Cítricos_2025_INTA",
+      "abstract": "Cítricos_2025_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2025",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2025_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Citricos_2024_EEAOC",
+      "source": "rides",
+      "typeName": "Citricos_2024_EEAOC",
+      "title": "Citricos_2024_EEAOC",
+      "abstract": "Citricos_2024_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "citricos",
+        "2024",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Citricos_2024_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2023_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2023_EEAOC",
+      "title": "Cítricos_2023_EEAOC",
+      "abstract": "Cítricos_2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2020_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2020_EEAOC",
+      "title": "Cítricos_2020_EEAOC",
+      "abstract": "Cítricos_2020_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2020",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2020_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2019_INTA",
+      "source": "rides",
+      "typeName": "Cítricos_2019_INTA",
+      "title": "Cítricos_2019_INTA",
+      "abstract": "Cítricos_2019_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2019",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2019_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2018_EEAOC",
+      "title": "Cítricos_2018_EEAOC",
+      "abstract": "Cítricos_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2016_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2016_EEAOC",
+      "title": "Cítricos_2016_EEAOC",
+      "abstract": "Cítricos_2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2014_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2014_EEAOC",
+      "title": "Cítricos_2014_EEAOC",
+      "abstract": "Cítricos_2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2012_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2012_EEAOC",
+      "title": "Cítricos_2012_EEAOC",
+      "abstract": "Cítricos_2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2010_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2010_EEAOC",
+      "title": "Cítricos_2010_EEAOC",
+      "abstract": "Cítricos_2010_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2010",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2010_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cítricos_2008_EEAOC",
+      "source": "rides",
+      "typeName": "Cítricos_2008_EEAOC",
+      "title": "Cítricos_2008_EEAOC",
+      "abstract": "Cítricos_2008_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cítricos",
+        "2008",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Cítricos_2008_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2025_INTA_RIDES",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2025_INTA_RIDES",
+      "title": "Caña_de_azúcar_2025_INTA_RIDES",
+      "abstract": "Caña_de_azúcar_2025_INTA_RIDES",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2025",
+        "inta",
+        "rides"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2025_INTA_RIDES"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2024_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2024_EEAOC",
+      "title": "Caña_de_azúcar_2024_EEAOC",
+      "abstract": "Caña_de_azúcar_2024_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2024",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2024_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2023_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2023_EEAOC",
+      "title": "Caña_de_azúcar_2023_EEAOC",
+      "abstract": "Caña_de_azúcar_2023_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2023",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2023_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2022_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2022_EEAOC",
+      "title": "Caña_de_azúcar_2022_EEAOC",
+      "abstract": "Caña_de_azúcar_2022_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2022",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2022_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2021_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2021_EEAOC",
+      "title": "Caña_de_azúcar_2021_EEAOC",
+      "abstract": "Caña_de_azúcar_2021_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2021",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2021_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2019_INTA",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2019_INTA",
+      "title": "Caña_de_azúcar_2019_INTA",
+      "abstract": "Caña_de_azúcar_2019_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2019",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2019_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2018_INTA",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2018_INTA",
+      "title": "Caña_de_azúcar_2018_INTA",
+      "abstract": "Caña_de_azúcar_2018_INTA",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2018",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2018_INTA"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2018_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2018_EEAOC",
+      "title": "Caña_de_azúcar_2018_EEAOC",
+      "abstract": "Caña_de_azúcar_2018_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2018",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2018_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2017_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2017_EEAOC",
+      "title": "Caña_de_azúcar_2017_EEAOC",
+      "abstract": "Caña_de_azúcar_2017_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2017",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2017_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2016_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2016_EEAOC",
+      "title": "Caña_de_azúcar_2016_EEAOC",
+      "abstract": "Caña_de_azúcar_2016_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2016",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2016_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2015_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2015_EEAOC",
+      "title": "Caña_de_azúcar_2015_EEAOC",
+      "abstract": "Caña_de_azúcar_2015_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2015",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2015_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2014_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2014_EEAOC",
+      "title": "Caña_de_azúcar_2014_EEAOC",
+      "abstract": "Caña_de_azúcar_2014_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2014",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2014_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2013_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2013_EEAOC",
+      "title": "Caña_de_azúcar_2013_EEAOC",
+      "abstract": "Caña_de_azúcar_2013_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2013",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2013_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2012_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2012_EEAOC",
+      "title": "Caña_de_azúcar_2012_EEAOC",
+      "abstract": "Caña_de_azúcar_2012_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2012",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2012_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2011_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2011_EEAOC",
+      "title": "Caña_de_azúcar_2011_EEAOC",
+      "abstract": "Caña_de_azúcar_2011_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2011",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2011_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2010_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2010_EEAOC",
+      "title": "Caña_de_azúcar_2010_EEAOC",
+      "abstract": "Caña_de_azúcar_2010_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2010",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2010_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2009_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2009_EEAOC",
+      "title": "Caña_de_azúcar_2009_EEAOC",
+      "abstract": "Caña_de_azúcar_2009_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2009",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2009_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caña_de_azúcar_2008_EEAOC",
+      "source": "rides",
+      "typeName": "Caña_de_azúcar_2008_EEAOC",
+      "title": "Caña_de_azúcar_2008_EEAOC",
+      "abstract": "Caña_de_azúcar_2008_EEAOC",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caña",
+        "azúcar",
+        "2008",
+        "eeaoc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Caña_de_azúcar_2008_EEAOC"
+        }
+      ]
+    },
+    {
+      "id": "rides:Arándano_2016",
+      "source": "rides",
+      "typeName": "Arándano_2016",
+      "title": "Arándano_2016",
+      "abstract": "Arándano_2016",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "arándano",
+        "2016"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Arándano_2016"
+        }
+      ]
+    },
+    {
+      "id": "rides:Apiarios",
+      "source": "rides",
+      "typeName": "Apiarios",
+      "title": "Apiarios",
+      "abstract": "Apiarios",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "apiarios"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
+          "typeName": "Apiarios"
+        }
+      ]
+    },
+    {
+      "id": "rides:Parques_Industriales",
+      "source": "rides",
+      "typeName": "Parques_Industriales",
+      "title": "Parques_Industriales",
+      "abstract": "Parques_Industriales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "parques",
+        "industriales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+          "typeName": "Parques_Industriales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Catastro_minero",
+      "source": "rides",
+      "typeName": "Catastro_minero",
+      "title": "Catastro_minero",
+      "abstract": "Catastro_minero",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "catastro",
+        "minero"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+          "typeName": "Catastro_minero"
+        }
+      ]
+    },
+    {
+      "id": "rides:Industrias",
+      "source": "rides",
+      "typeName": "Industrias",
+      "title": "Industrias",
+      "abstract": "Industrias",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "industrias"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
+          "typeName": "Industrias"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_terciaria",
+      "source": "rides",
+      "typeName": "Red_terciaria",
+      "title": "Red_terciaria",
+      "abstract": "Red_terciaria",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "terciaria"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_terciaria"
+        }
+      ]
+    },
+    {
+      "id": "rides:Vías_principales",
+      "source": "rides",
+      "typeName": "Vías_principales",
+      "title": "Vías_principales",
+      "abstract": "Vías_principales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "vías",
+        "principales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Vías_principales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Ruta_provincial",
+      "source": "rides",
+      "typeName": "Ruta_provincial",
+      "title": "Ruta_provincial",
+      "abstract": "Ruta_provincial",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ruta",
+        "provincial"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Ruta_provincial"
+        }
+      ]
+    },
+    {
+      "id": "rides:Ruta_nacional",
+      "source": "rides",
+      "typeName": "Ruta_nacional",
+      "title": "Ruta_nacional",
+      "abstract": "Ruta_nacional",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ruta",
+        "nacional"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Ruta_nacional"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_ferrocarril",
+      "source": "rides",
+      "typeName": "Red_ferrocarril",
+      "title": "Red_ferrocarril",
+      "abstract": "Red_ferrocarril",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "ferrocarril"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_ferrocarril"
+        }
+      ]
+    },
+    {
+      "id": "rides:Puentes_IGN",
+      "source": "rides",
+      "typeName": "Puentes_IGN",
+      "title": "Puentes_IGN",
+      "abstract": "Puentes_IGN",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "puentes",
+        "ign"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Puentes_IGN"
+        }
+      ]
+    },
+    {
+      "id": "rides:Gasoducto",
+      "source": "rides",
+      "typeName": "Gasoducto",
+      "title": "Gasoducto",
+      "abstract": "Gasoducto",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "gasoducto"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Gasoducto"
+        }
+      ]
+    },
+    {
+      "id": "rides:Líneas_Transnoa",
+      "source": "rides",
+      "typeName": "Líneas_Transnoa",
+      "title": "Líneas_Transnoa",
+      "abstract": "Líneas_Transnoa",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "líneas",
+        "transnoa"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Líneas_Transnoa"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_eléctrica_secundaria_subterránea",
+      "source": "rides",
+      "typeName": "Red_eléctrica_secundaria_subterránea",
+      "title": "Red_eléctrica_secundaria_subterránea",
+      "abstract": "Red_eléctrica_secundaria_subterránea",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "eléctrica",
+        "secundaria",
+        "subterránea"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_eléctrica_secundaria_subterránea"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_eléctrica_secundaria_aérea",
+      "source": "rides",
+      "typeName": "Red_eléctrica_secundaria_aérea",
+      "title": "Red_eléctrica_secundaria_aérea",
+      "abstract": "Red_eléctrica_secundaria_aérea",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "eléctrica",
+        "secundaria",
+        "aérea"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_eléctrica_secundaria_aérea"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_eléctrica_primaria_subterránea",
+      "source": "rides",
+      "typeName": "Red_eléctrica_primaria_subterránea",
+      "title": "Red_eléctrica_primaria_subterránea",
+      "abstract": "Red_eléctrica_primaria_subterránea",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "eléctrica",
+        "primaria",
+        "subterránea"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_eléctrica_primaria_subterránea"
+        }
+      ]
+    },
+    {
+      "id": "rides:Red_eléctrica_primaria_aérea",
+      "source": "rides",
+      "typeName": "Red_eléctrica_primaria_aérea",
+      "title": "Red_eléctrica_primaria_aérea",
+      "abstract": "Red_eléctrica_primaria_aérea",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "red",
+        "eléctrica",
+        "primaria",
+        "aérea"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Red_eléctrica_primaria_aérea"
+        }
+      ]
+    },
+    {
+      "id": "rides:Estaciones_EDET",
+      "source": "rides",
+      "typeName": "Estaciones_EDET",
+      "title": "Estaciones_EDET",
+      "abstract": "Estaciones_EDET",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "estaciones",
+        "edet"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Estaciones_EDET"
+        }
+      ]
+    },
+    {
+      "id": "rides:Torres_Transnoa",
+      "source": "rides",
+      "typeName": "Torres_Transnoa",
+      "title": "Torres_Transnoa",
+      "abstract": "Torres_Transnoa",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "torres",
+        "transnoa"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Torres_Transnoa"
+        }
+      ]
+    },
+    {
+      "id": "rides:Estaciones_meteorológicas",
+      "source": "rides",
+      "typeName": "Estaciones_meteorológicas",
+      "title": "Estaciones_meteorológicas",
+      "abstract": "Estaciones_meteorológicas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "estaciones",
+        "meteorológicas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
+          "typeName": "Estaciones_meteorológicas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tasa_de_analfabetismo",
+      "source": "rides",
+      "typeName": "Tasa_de_analfabetismo",
+      "title": "Tasa_de_analfabetismo",
+      "abstract": "Tasa_de_analfabetismo",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tasa",
+        "analfabetismo"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Tasa_de_analfabetismo"
+        }
+      ]
+    },
+    {
+      "id": "rides:Población_rural_dispersa",
+      "source": "rides",
+      "typeName": "Población_rural_dispersa",
+      "title": "Población_rural_dispersa",
+      "abstract": "Población_rural_dispersa",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "población",
+        "rural",
+        "dispersa"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Población_rural_dispersa"
+        }
+      ]
+    },
+    {
+      "id": "rides:Hogares_con_NBI",
+      "source": "rides",
+      "typeName": "Hogares_con_NBI",
+      "title": "Hogares_con_NBI",
+      "abstract": "Hogares_con_NBI",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "hogares",
+        "nbi"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Hogares_con_NBI"
+        }
+      ]
+    },
+    {
+      "id": "rides:Procedencia_del_agua_para_consumo_por_red_pública",
+      "source": "rides",
+      "typeName": "Procedencia_del_agua_para_consumo_por_red_pública",
+      "title": "Procedencia_del_agua_para_consumo_por_red_pública",
+      "abstract": "Procedencia_del_agua_para_consumo_por_red_pública",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "procedencia",
+        "agua",
+        "consumo",
+        "por",
+        "red",
+        "pública"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Procedencia_del_agua_para_consumo_por_red_pública"
+        }
+      ]
+    },
+    {
+      "id": "rides:Combustible_usado_para_cocinar",
+      "source": "rides",
+      "typeName": "Combustible_usado_para_cocinar",
+      "title": "Combustible_usado_para_cocinar",
+      "abstract": "Combustible_usado_para_cocinar",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "combustible",
+        "usado",
+        "cocinar"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Combustible_usado_para_cocinar"
+        }
+      ]
+    },
+    {
+      "id": "rides:Propietario_de_la_vivienda_y_el_terreno",
+      "source": "rides",
+      "typeName": "Propietario_de_la_vivienda_y_el_terreno",
+      "title": "Propietario_de_la_vivienda_y_el_terreno",
+      "abstract": "Propietario_de_la_vivienda_y_el_terreno",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "propietario",
+        "vivienda",
+        "terreno"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Propietario_de_la_vivienda_y_el_terreno"
+        }
+      ]
+    },
+    {
+      "id": "rides:Propietario_sólo_de_la_vivienda",
+      "source": "rides",
+      "typeName": "Propietario_sólo_de_la_vivienda",
+      "title": "Propietario_sólo_de_la_vivienda",
+      "abstract": "Propietario_sólo_de_la_vivienda",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "propietario",
+        "sólo",
+        "vivienda"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Propietario_sólo_de_la_vivienda"
+        }
+      ]
+    },
+    {
+      "id": "rides:Organismos_que_intervienen_en_el_territorio",
+      "source": "rides",
+      "typeName": "Organismos_que_intervienen_en_el_territorio",
+      "title": "Organismos_que_intervienen_en_el_territorio",
+      "abstract": "Organismos_que_intervienen_en_el_territorio",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "organismos",
+        "que",
+        "intervienen",
+        "territorio"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Organismos_que_intervienen_en_el_territorio"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tierras_Húmedas_y_Secas",
+      "source": "rides",
+      "typeName": "Tierras_Húmedas_y_Secas",
+      "title": "Tierras_Húmedas_y_Secas",
+      "abstract": "Tierras_Húmedas_y_Secas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tierras",
+        "húmedas",
+        "secas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Tierras_Húmedas_y_Secas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tasa_de_Degradación_de_Tierras",
+      "source": "rides",
+      "typeName": "Tasa_de_Degradación_de_Tierras",
+      "title": "Tasa_de_Degradación_de_Tierras",
+      "abstract": "Tasa_de_Degradación_de_Tierras",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tasa",
+        "degradación",
+        "tierras"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Tasa_de_Degradación_de_Tierras"
+        }
+      ]
+    },
+    {
+      "id": "rides:Parcelario_rural_Tafí_del_Valle",
+      "source": "rides",
+      "typeName": "Parcelario_rural_Tafí_del_Valle",
+      "title": "Parcelario_rural_Tafí_del_Valle",
+      "abstract": "Parcelario_rural_Tafí_del_Valle",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "parcelario",
+        "rural",
+        "tafí",
+        "valle"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Parcelario_rural_Tafí_del_Valle"
+        }
+      ]
+    },
+    {
+      "id": "rides:Parcelas_con_cultivos_frutales",
+      "source": "rides",
+      "typeName": "Parcelas_con_cultivos_frutales",
+      "title": "Parcelas_con_cultivos_frutales",
+      "abstract": "Parcelas_con_cultivos_frutales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "parcelas",
+        "cultivos",
+        "frutales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Parcelas_con_cultivos_frutales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Parcelas_con_cultivos_de_vid",
+      "source": "rides",
+      "typeName": "Parcelas_con_cultivos_de_vid",
+      "title": "Parcelas_con_cultivos_de_vid",
+      "abstract": "Parcelas_con_cultivos_de_vid",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "parcelas",
+        "cultivos",
+        "vid"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Parcelas_con_cultivos_de_vid"
+        }
+      ]
+    },
+    {
+      "id": "rides:Mapa_Hidrogeológico",
+      "source": "rides",
+      "typeName": "Mapa_Hidrogeológico",
+      "title": "Mapa_Hidrogeológico",
+      "abstract": "Mapa_Hidrogeológico",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "mapa",
+        "hidrogeológico"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Mapa_Hidrogeológico"
+        }
+      ]
+    },
+    {
+      "id": "rides:Estructura",
+      "source": "rides",
+      "typeName": "Estructura",
+      "title": "Estructura",
+      "abstract": "Estructura",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "estructura"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Estructura"
+        }
+      ]
+    },
+    {
+      "id": "rides:Manzanero",
+      "source": "rides",
+      "typeName": "Manzanero",
+      "title": "Manzanero",
+      "abstract": "Manzanero",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "manzanero"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Manzanero"
+        }
+      ]
+    },
+    {
+      "id": "rides:Índice_de_Aridez",
+      "source": "rides",
+      "typeName": "Índice_de_Aridez",
+      "title": "Índice_de_Aridez",
+      "abstract": "Índice_de_Aridez",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "índice",
+        "aridez"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Índice_de_Aridez"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDWI_Enero_2019",
+      "source": "rides",
+      "typeName": "NDWI_Enero_2019",
+      "title": "NDWI_Enero_2019",
+      "abstract": "NDWI_Enero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndwi",
+        "enero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDWI_Enero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDWI_Febrero_2019",
+      "source": "rides",
+      "typeName": "NDWI_Febrero_2019",
+      "title": "NDWI_Febrero_2019",
+      "abstract": "NDWI_Febrero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndwi",
+        "febrero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDWI_Febrero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDWI_Marzo_2019",
+      "source": "rides",
+      "typeName": "NDWI_Marzo_2019",
+      "title": "NDWI_Marzo_2019",
+      "abstract": "NDWI_Marzo_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndwi",
+        "marzo",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDWI_Marzo_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDWI_Agosto_2019",
+      "source": "rides",
+      "typeName": "NDWI_Agosto_2019",
+      "title": "NDWI_Agosto_2019",
+      "abstract": "NDWI_Agosto_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndwi",
+        "agosto",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDWI_Agosto_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDWI_Septiembre_2019",
+      "source": "rides",
+      "typeName": "NDWI_Septiembre_2019",
+      "title": "NDWI_Septiembre_2019",
+      "abstract": "NDWI_Septiembre_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndwi",
+        "septiembre",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDWI_Septiembre_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDVI_Enero_2019",
+      "source": "rides",
+      "typeName": "NDVI_Enero_2019",
+      "title": "NDVI_Enero_2019",
+      "abstract": "NDVI_Enero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndvi",
+        "enero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDVI_Enero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDVI_Febrero_2019",
+      "source": "rides",
+      "typeName": "NDVI_Febrero_2019",
+      "title": "NDVI_Febrero_2019",
+      "abstract": "NDVI_Febrero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndvi",
+        "febrero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDVI_Febrero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDVI_Marzo_2019",
+      "source": "rides",
+      "typeName": "NDVI_Marzo_2019",
+      "title": "NDVI_Marzo_2019",
+      "abstract": "NDVI_Marzo_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndvi",
+        "marzo",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDVI_Marzo_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDVI_Agosto_2019",
+      "source": "rides",
+      "typeName": "NDVI_Agosto_2019",
+      "title": "NDVI_Agosto_2019",
+      "abstract": "NDVI_Agosto_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndvi",
+        "agosto",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDVI_Agosto_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:NDVI_Septiembre_2019",
+      "source": "rides",
+      "typeName": "NDVI_Septiembre_2019",
+      "title": "NDVI_Septiembre_2019",
+      "abstract": "NDVI_Septiembre_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ndvi",
+        "septiembre",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "NDVI_Septiembre_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:SAVI_Enero_2019",
+      "source": "rides",
+      "typeName": "SAVI_Enero_2019",
+      "title": "SAVI_Enero_2019",
+      "abstract": "SAVI_Enero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "savi",
+        "enero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "SAVI_Enero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:SAVI_Febrero_2019",
+      "source": "rides",
+      "typeName": "SAVI_Febrero_2019",
+      "title": "SAVI_Febrero_2019",
+      "abstract": "SAVI_Febrero_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "savi",
+        "febrero",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "SAVI_Febrero_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:SAVI_Marzo_2019",
+      "source": "rides",
+      "typeName": "SAVI_Marzo_2019",
+      "title": "SAVI_Marzo_2019",
+      "abstract": "SAVI_Marzo_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "savi",
+        "marzo",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "SAVI_Marzo_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:SAVI_Agosto_2019",
+      "source": "rides",
+      "typeName": "SAVI_Agosto_2019",
+      "title": "SAVI_Agosto_2019",
+      "abstract": "SAVI_Agosto_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "savi",
+        "agosto",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "SAVI_Agosto_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:SAVI_Septiembre_2019",
+      "source": "rides",
+      "typeName": "SAVI_Septiembre_2019",
+      "title": "SAVI_Septiembre_2019",
+      "abstract": "SAVI_Septiembre_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "savi",
+        "septiembre",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "SAVI_Septiembre_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_Invierno_2019",
+      "source": "rides",
+      "typeName": "BSI_Invierno_2019",
+      "title": "BSI_Invierno_2019",
+      "abstract": "BSI_Invierno_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "invierno",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_Invierno_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_Invierno_2014",
+      "source": "rides",
+      "typeName": "BSI_Invierno_2014",
+      "title": "BSI_Invierno_2014",
+      "abstract": "BSI_Invierno_2014",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "invierno",
+        "2014"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_Invierno_2014"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_Verano_2020",
+      "source": "rides",
+      "typeName": "BSI_Verano_2020",
+      "title": "BSI_Verano_2020",
+      "abstract": "BSI_Verano_2020",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "verano",
+        "2020"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_Verano_2020"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_Verano_2015",
+      "source": "rides",
+      "typeName": "BSI_Verano_2015",
+      "title": "BSI_Verano_2015",
+      "abstract": "BSI_Verano_2015",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "verano",
+        "2015"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_Verano_2015"
+        }
+      ]
+    },
+    {
+      "id": "rides:Imágen_color_verdadero_enero",
+      "source": "rides",
+      "typeName": "Imágen_color_verdadero_enero",
+      "title": "Imágen_color_verdadero_enero",
+      "abstract": "Imágen_color_verdadero_enero",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "imágen",
+        "color",
+        "verdadero",
+        "enero"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Imágen_color_verdadero_enero"
+        }
+      ]
+    },
+    {
+      "id": "rides:Imágen_color_verdadero_febrero",
+      "source": "rides",
+      "typeName": "Imágen_color_verdadero_febrero",
+      "title": "Imágen_color_verdadero_febrero",
+      "abstract": "Imágen_color_verdadero_febrero",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "imágen",
+        "color",
+        "verdadero",
+        "febrero"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Imágen_color_verdadero_febrero"
+        }
+      ]
+    },
+    {
+      "id": "rides:Imágen_color_verdadero_marzo",
+      "source": "rides",
+      "typeName": "Imágen_color_verdadero_marzo",
+      "title": "Imágen_color_verdadero_marzo",
+      "abstract": "Imágen_color_verdadero_marzo",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "imágen",
+        "color",
+        "verdadero",
+        "marzo"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Imágen_color_verdadero_marzo"
+        }
+      ]
+    },
+    {
+      "id": "rides:Imágen_color_verdadero_agosto",
+      "source": "rides",
+      "typeName": "Imágen_color_verdadero_agosto",
+      "title": "Imágen_color_verdadero_agosto",
+      "abstract": "Imágen_color_verdadero_agosto",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "imágen",
+        "color",
+        "verdadero",
+        "agosto"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Imágen_color_verdadero_agosto"
+        }
+      ]
+    },
+    {
+      "id": "rides:Imágen_color_verdadero_septiembre",
+      "source": "rides",
+      "typeName": "Imágen_color_verdadero_septiembre",
+      "title": "Imágen_color_verdadero_septiembre",
+      "abstract": "Imágen_color_verdadero_septiembre",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "imágen",
+        "color",
+        "verdadero",
+        "septiembre"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Imágen_color_verdadero_septiembre"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_NOA_Invierno_2019",
+      "source": "rides",
+      "typeName": "BSI_NOA_Invierno_2019",
+      "title": "BSI_NOA_Invierno_2019",
+      "abstract": "BSI_NOA_Invierno_2019",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "noa",
+        "invierno",
+        "2019"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_NOA_Invierno_2019"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_NOA_Invierno_2014",
+      "source": "rides",
+      "typeName": "BSI_NOA_Invierno_2014",
+      "title": "BSI_NOA_Invierno_2014",
+      "abstract": "BSI_NOA_Invierno_2014",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "noa",
+        "invierno",
+        "2014"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_NOA_Invierno_2014"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_NOA_Verano_2020",
+      "source": "rides",
+      "typeName": "BSI_NOA_Verano_2020",
+      "title": "BSI_NOA_Verano_2020",
+      "abstract": "BSI_NOA_Verano_2020",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "noa",
+        "verano",
+        "2020"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_NOA_Verano_2020"
+        }
+      ]
+    },
+    {
+      "id": "rides:BSI_NOA_Verano_2015",
+      "source": "rides",
+      "typeName": "BSI_NOA_Verano_2015",
+      "title": "BSI_NOA_Verano_2015",
+      "abstract": "BSI_NOA_Verano_2015",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bsi",
+        "noa",
+        "verano",
+        "2015"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "BSI_NOA_Verano_2015"
+        }
+      ]
+    },
+    {
+      "id": "rides:Prov._de_La_Rioja",
+      "source": "rides",
+      "typeName": "Prov._de_La_Rioja",
+      "title": "Prov._de_La_Rioja",
+      "abstract": "Prov._de_La_Rioja",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "prov",
+        "rioja"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Prov._de_La_Rioja"
+        }
+      ]
+    },
+    {
+      "id": "rides:Prov._de_Catamarca",
+      "source": "rides",
+      "typeName": "Prov._de_Catamarca",
+      "title": "Prov._de_Catamarca",
+      "abstract": "Prov._de_Catamarca",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "prov",
+        "catamarca"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Prov._de_Catamarca"
+        }
+      ]
+    },
+    {
+      "id": "rides:Prov._de_Tucumán",
+      "source": "rides",
+      "typeName": "Prov._de_Tucumán",
+      "title": "Prov._de_Tucumán",
+      "abstract": "Prov._de_Tucumán",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "prov",
+        "tucumán"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Prov._de_Tucumán"
+        }
+      ]
+    },
+    {
+      "id": "rides:Prov._de_Jujuy",
+      "source": "rides",
+      "typeName": "Prov._de_Jujuy",
+      "title": "Prov._de_Jujuy",
+      "abstract": "Prov._de_Jujuy",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "prov",
+        "jujuy"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Prov._de_Jujuy"
+        }
+      ]
+    },
+    {
+      "id": "rides:Grado_de_Degradación_de_tierras",
+      "source": "rides",
+      "typeName": "Grado_de_Degradación_de_tierras",
+      "title": "Grado_de_Degradación_de_tierras",
+      "abstract": "Grado_de_Degradación_de_tierras",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "grado",
+        "degradación",
+        "tierras"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Grado_de_Degradación_de_tierras"
+        }
+      ]
+    },
+    {
+      "id": "rides:Extensión_de_Grado_de_Degradación_de_Tierras",
+      "source": "rides",
+      "typeName": "Extensión_de_Grado_de_Degradación_de_Tierras",
+      "title": "Extensión_de_Grado_de_Degradación_de_Tierras",
+      "abstract": "Extensión_de_Grado_de_Degradación_de_Tierras",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "extensión",
+        "grado",
+        "degradación",
+        "tierras"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Extensión_de_Grado_de_Degradación_de_Tierras"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cursos_de_agua",
+      "source": "rides",
+      "typeName": "Cursos_de_agua",
+      "title": "Cursos_de_agua",
+      "abstract": "Cursos_de_agua",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cursos",
+        "agua"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Cursos_de_agua"
+        }
+      ]
+    },
+    {
+      "id": "rides:Hábitat_rural",
+      "source": "rides",
+      "typeName": "Hábitat_rural",
+      "title": "Hábitat_rural",
+      "abstract": "Hábitat_rural",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "hábitat",
+        "rural"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Hábitat_rural"
+        }
+      ]
+    },
+    {
+      "id": "rides:Comunidades_indígenas",
+      "source": "rides",
+      "typeName": "Comunidades_indígenas",
+      "title": "Comunidades_indígenas",
+      "abstract": "Comunidades_indígenas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "comunidades",
+        "indígenas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Comunidades_indígenas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Caminos_rurales",
+      "source": "rides",
+      "typeName": "Caminos_rurales",
+      "title": "Caminos_rurales",
+      "abstract": "Caminos_rurales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "caminos",
+        "rurales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Caminos_rurales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Canales_de_riego",
+      "source": "rides",
+      "typeName": "Canales_de_riego",
+      "title": "Canales_de_riego",
+      "abstract": "Canales_de_riego",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "canales",
+        "riego"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Canales_de_riego"
+        }
+      ]
+    },
+    {
+      "id": "rides:Bosque_nativo",
+      "source": "rides",
+      "typeName": "Bosque_nativo",
+      "title": "Bosque_nativo",
+      "abstract": "Bosque_nativo",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bosque",
+        "nativo"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Bosque_nativo"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_con_déficit_hídrico",
+      "source": "rides",
+      "typeName": "Áreas_con_déficit_hídrico",
+      "title": "Áreas_con_déficit_hídrico",
+      "abstract": "Áreas_con_déficit_hídrico",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "déficit",
+        "hídrico"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Áreas_con_déficit_hídrico"
+        }
+      ]
+    },
+    {
+      "id": "rides:Área_de_Estudio",
+      "source": "rides",
+      "typeName": "Área_de_Estudio",
+      "title": "Área_de_Estudio",
+      "abstract": "Área_de_Estudio",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "área",
+        "estudio"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
+          "typeName": "Área_de_Estudio"
+        }
+      ]
+    },
+    {
+      "id": "rides:Tratamiento_de_residuos_sólidos_urbanos",
+      "source": "rides",
+      "typeName": "Tratamiento_de_residuos_sólidos_urbanos",
+      "title": "Tratamiento_de_residuos_sólidos_urbanos",
+      "abstract": "Tratamiento_de_residuos_sólidos_urbanos",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "tratamiento",
+        "residuos",
+        "sólidos",
+        "urbanos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Tratamiento_de_residuos_sólidos_urbanos"
+        }
+      ]
+    },
+    {
+      "id": "rides:Riesgo_de_salinización",
+      "source": "rides",
+      "typeName": "Riesgo_de_salinización",
+      "title": "Riesgo_de_salinización",
+      "abstract": "Riesgo_de_salinización",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "riesgo",
+        "salinización"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Riesgo_de_salinización"
+        }
+      ]
+    },
+    {
+      "id": "rides:Riesgo_de_remoción_en_masa",
+      "source": "rides",
+      "typeName": "Riesgo_de_remoción_en_masa",
+      "title": "Riesgo_de_remoción_en_masa",
+      "abstract": "Riesgo_de_remoción_en_masa",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "riesgo",
+        "remoción",
+        "masa"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Riesgo_de_remoción_en_masa"
+        }
+      ]
+    },
+    {
+      "id": "rides:Riesgo_de_inundación",
+      "source": "rides",
+      "typeName": "Riesgo_de_inundación",
+      "title": "Riesgo_de_inundación",
+      "abstract": "Riesgo_de_inundación",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "riesgo",
+        "inundación"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Riesgo_de_inundación"
+        }
+      ]
+    },
+    {
+      "id": "rides:Riesgo_de_erosión",
+      "source": "rides",
+      "typeName": "Riesgo_de_erosión",
+      "title": "Riesgo_de_erosión",
+      "abstract": "Riesgo_de_erosión",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "riesgo",
+        "erosión"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Riesgo_de_erosión"
+        }
+      ]
+    },
+    {
+      "id": "rides:Riesgo_de_desertificación",
+      "source": "rides",
+      "typeName": "Riesgo_de_desertificación",
+      "title": "Riesgo_de_desertificación",
+      "abstract": "Riesgo_de_desertificación",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "riesgo",
+        "desertificación"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Riesgo_de_desertificación"
+        }
+      ]
+    },
+    {
+      "id": "rides:Regiones_geomorfológicas",
+      "source": "rides",
+      "typeName": "Regiones_geomorfológicas",
+      "title": "Regiones_geomorfológicas",
+      "abstract": "Regiones_geomorfológicas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "regiones",
+        "geomorfológicas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Regiones_geomorfológicas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Regiones_agrológicas",
+      "source": "rides",
+      "typeName": "Regiones_agrológicas",
+      "title": "Regiones_agrológicas",
+      "abstract": "Regiones_agrológicas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "regiones",
+        "agrológicas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Regiones_agrológicas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Puntos_verdes",
+      "source": "rides",
+      "typeName": "Puntos_verdes",
+      "title": "Puntos_verdes",
+      "abstract": "Puntos_verdes",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "puntos",
+        "verdes"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Puntos_verdes"
+        }
+      ]
+    },
+    {
+      "id": "rides:Inta_erosión",
+      "source": "rides",
+      "typeName": "Inta_erosión",
+      "title": "Inta_erosión",
+      "abstract": "Inta_erosión",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "inta",
+        "erosión"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Inta_erosión"
+        }
+      ]
+    },
+    {
+      "id": "rides:Inta_drenaje",
+      "source": "rides",
+      "typeName": "Inta_drenaje",
+      "title": "Inta_drenaje",
+      "abstract": "Inta_drenaje",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "inta",
+        "drenaje"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Inta_drenaje"
+        }
+      ]
+    },
+    {
+      "id": "rides:Clasificación_de_suelos_según_nivel_de_suborden_2014",
+      "source": "rides",
+      "typeName": "Clasificación_de_suelos_según_nivel_de_suborden_2014",
+      "title": "Clasificación_de_suelos_según_nivel_de_suborden_2014",
+      "abstract": "Clasificación_de_suelos_según_nivel_de_suborden_2014",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "clasificación",
+        "suelos",
+        "según",
+        "nivel",
+        "suborden",
+        "2014"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Clasificación_de_suelos_según_nivel_de_suborden_2014"
+        }
+      ]
+    },
+    {
+      "id": "rides:Clasificación_de_suelos_INTA_2013",
+      "source": "rides",
+      "typeName": "Clasificación_de_suelos_INTA_2013",
+      "title": "Clasificación_de_suelos_INTA_2013",
+      "abstract": "Clasificación_de_suelos_INTA_2013",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "clasificación",
+        "suelos",
+        "inta",
+        "2013"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Clasificación_de_suelos_INTA_2013"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_OTBN",
+      "source": "rides",
+      "typeName": "Áreas_OTBN",
+      "title": "Áreas_OTBN",
+      "abstract": "Áreas_OTBN",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "otbn"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Áreas_OTBN"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_Naturales_Protegidas_Provinciales",
+      "source": "rides",
+      "typeName": "Áreas_Naturales_Protegidas_Provinciales",
+      "title": "Áreas_Naturales_Protegidas_Provinciales",
+      "abstract": "Áreas_Naturales_Protegidas_Provinciales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "naturales",
+        "protegidas",
+        "provinciales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Áreas_Naturales_Protegidas_Provinciales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_Naturales_Protegidas_Nacionales",
+      "source": "rides",
+      "typeName": "Áreas_Naturales_Protegidas_Nacionales",
+      "title": "Áreas_Naturales_Protegidas_Nacionales",
+      "abstract": "Áreas_Naturales_Protegidas_Nacionales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "naturales",
+        "protegidas",
+        "nacionales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Áreas_Naturales_Protegidas_Nacionales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_húmedas_agrícolas_2017",
+      "source": "rides",
+      "typeName": "Áreas_húmedas_agrícolas_2017",
+      "title": "Áreas_húmedas_agrícolas_2017",
+      "abstract": "Áreas_húmedas_agrícolas_2017",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "húmedas",
+        "agrícolas",
+        "2017"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Áreas_húmedas_agrícolas_2017"
+        }
+      ]
+    },
+    {
+      "id": "rides:Ambientes_Tucumán_Atlas100k",
+      "source": "rides",
+      "typeName": "Ambientes_Tucumán_Atlas100k",
+      "title": "Ambientes_Tucumán_Atlas100k",
+      "abstract": "Ambientes_Tucumán_Atlas100k",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ambientes",
+        "tucumán",
+        "atlas100k"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
+          "typeName": "Ambientes_Tucumán_Atlas100k"
+        }
+      ]
+    },
+    {
+      "id": "rides:Distritos",
+      "source": "rides",
+      "typeName": "Distritos",
+      "title": "Distritos",
+      "abstract": "Distritos",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "distritos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Distritos"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cuencas_hídricas",
+      "source": "rides",
+      "typeName": "Cuencas_hídricas",
+      "title": "Cuencas_hídricas",
+      "abstract": "Cuencas_hídricas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cuencas",
+        "hídricas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Cuencas_hídricas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cuerpos_de_agua",
+      "source": "rides",
+      "typeName": "Cuerpos_de_agua",
+      "title": "Cuerpos_de_agua",
+      "abstract": "Cuerpos_de_agua",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cuerpos",
+        "agua"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Cuerpos_de_agua"
+        }
+      ]
+    },
+    {
+      "id": "rides:Ríos",
+      "source": "rides",
+      "typeName": "Ríos",
+      "title": "Ríos",
+      "abstract": "Ríos",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ríos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Ríos"
+        }
+      ]
+    },
+    {
+      "id": "rides:Canales",
+      "source": "rides",
+      "typeName": "Canales",
+      "title": "Canales",
+      "abstract": "Canales",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "canales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Canales"
+        }
+      ]
+    },
+    {
+      "id": "rides:Pozos_de_agua",
+      "source": "rides",
+      "typeName": "Pozos_de_agua",
+      "title": "Pozos_de_agua",
+      "abstract": "Pozos_de_agua",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "pozos",
+        "agua"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Pozos_de_agua"
+        }
+      ]
+    },
+    {
+      "id": "rides:Diques",
+      "source": "rides",
+      "typeName": "Diques",
+      "title": "Diques",
+      "abstract": "Diques",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "diques"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Diques"
+        }
+      ]
+    },
+    {
+      "id": "rides:Comparticiones",
+      "source": "rides",
+      "typeName": "Comparticiones",
+      "title": "Comparticiones",
+      "abstract": "Comparticiones",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "comparticiones"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
+          "typeName": "Comparticiones"
+        }
+      ]
+    },
+    {
+      "id": "rides:SRTM_90m",
+      "source": "rides",
+      "typeName": "SRTM_90m",
+      "title": "SRTM_90m",
+      "abstract": "SRTM_90m",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "srtm",
+        "90m"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+          "typeName": "SRTM_90m"
+        }
+      ]
+    },
+    {
+      "id": "rides:GlobalDEM_30m",
+      "source": "rides",
+      "typeName": "GlobalDEM_30m",
+      "title": "GlobalDEM_30m",
+      "abstract": "GlobalDEM_30m",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "globaldem",
+        "30m"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+          "typeName": "GlobalDEM_30m"
+        }
+      ]
+    },
+    {
+      "id": "rides:DEM_ALOS_PALSAR_12m",
+      "source": "rides",
+      "typeName": "DEM_ALOS_PALSAR_12m",
+      "title": "DEM_ALOS_PALSAR_12m",
+      "abstract": "DEM_ALOS_PALSAR_12m",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "dem",
+        "alos",
+        "palsar",
+        "12m"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+          "typeName": "DEM_ALOS_PALSAR_12m"
+        }
+      ]
+    },
+    {
+      "id": "rides:Curvas_de_nivel",
+      "source": "rides",
+      "typeName": "Curvas_de_nivel",
+      "title": "Curvas_de_nivel",
+      "abstract": "Curvas_de_nivel",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "curvas",
+        "nivel"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+          "typeName": "Curvas_de_nivel"
+        }
+      ]
+    },
+    {
+      "id": "rides:Cotas",
+      "source": "rides",
+      "typeName": "Cotas",
+      "title": "Cotas",
+      "abstract": "Cotas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "cotas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
+          "typeName": "Cotas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Límite_provincial",
+      "source": "rides",
+      "typeName": "Límite_provincial",
+      "title": "Límite_provincial",
+      "abstract": "Límite_provincial",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "límite",
+        "provincial"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Límite_provincial"
+        }
+      ]
+    },
+    {
+      "id": "rides:Límite_departamental",
+      "source": "rides",
+      "typeName": "Límite_departamental",
+      "title": "Límite_departamental",
+      "abstract": "Límite_departamental",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "límite",
+        "departamental"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Límite_departamental"
+        }
+      ]
+    },
+    {
+      "id": "rides:Municipios_y_comunas",
+      "source": "rides",
+      "typeName": "Municipios_y_comunas",
+      "title": "Municipios_y_comunas",
+      "abstract": "Municipios_y_comunas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "municipios",
+        "comunas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Municipios_y_comunas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Manzanero_urbano",
+      "source": "rides",
+      "typeName": "Manzanero_urbano",
+      "title": "Manzanero_urbano",
+      "abstract": "Manzanero_urbano",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "manzanero",
+        "urbano"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Manzanero_urbano"
+        }
+      ]
+    },
+    {
+      "id": "rides:Áreas_urbanas",
+      "source": "rides",
+      "typeName": "Áreas_urbanas",
+      "title": "Áreas_urbanas",
+      "abstract": "Áreas_urbanas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "áreas",
+        "urbanas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Áreas_urbanas"
+        }
+      ]
+    },
+    {
+      "id": "rides:Pueblos_ferroviarios",
+      "source": "rides",
+      "typeName": "Pueblos_ferroviarios",
+      "title": "Pueblos_ferroviarios",
+      "abstract": "Pueblos_ferroviarios",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "pueblos",
+        "ferroviarios"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Pueblos_ferroviarios"
+        }
+      ]
+    },
+    {
+      "id": "rides:Paraje",
+      "source": "rides",
+      "typeName": "Paraje",
+      "title": "Paraje",
+      "abstract": "Paraje",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "paraje"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Paraje"
+        }
+      ]
+    },
+    {
+      "id": "rides:Localidad",
+      "source": "rides",
+      "typeName": "Localidad",
+      "title": "Localidad",
+      "abstract": "Localidad",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "localidad"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
+          "typeName": "Localidad"
+        }
+      ]
+    },
+    {
+      "id": "rides:1",
+      "source": "rides",
+      "typeName": "1",
+      "title": "Circuito Valles Calchaquíes",
+      "abstract": "Circuito Valles Calchaquíes",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "circuito",
+        "valles",
+        "calchaquíes"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "1"
+        }
+      ]
+    },
+    {
+      "id": "rides:2",
+      "source": "rides",
+      "typeName": "2",
+      "title": "Circuito Valle de Choromoro",
+      "abstract": "Circuito Valle de Choromoro",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "circuito",
+        "valle",
+        "choromoro"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "2"
+        }
+      ]
+    },
+    {
+      "id": "rides:3",
+      "source": "rides",
+      "typeName": "3",
+      "title": "Circuito Sur",
+      "abstract": "Circuito Sur",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "circuito",
+        "sur"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "3"
+        }
+      ]
+    },
+    {
+      "id": "rides:4",
+      "source": "rides",
+      "typeName": "4",
+      "title": "Circuito Nordeste",
+      "abstract": "Circuito Nordeste",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "circuito",
+        "nordeste"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "4"
+        }
+      ]
+    },
+    {
+      "id": "rides:5",
+      "source": "rides",
+      "typeName": "5",
+      "title": "Circuito chico Las Yungas",
+      "abstract": "Circuito chico Las Yungas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "circuito",
+        "chico",
+        "yungas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "5"
+        }
+      ]
+    },
+    {
+      "id": "rides:6",
+      "source": "rides",
+      "typeName": "6",
+      "title": "Ciudad Historica",
+      "abstract": "Ciudad Historica",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ciudad",
+        "historica"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "6"
+        }
+      ]
+    },
+    {
+      "id": "rides:8",
+      "source": "rides",
+      "typeName": "8",
+      "title": "Ecosendas",
+      "abstract": "Ecosendas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ecosendas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "8"
+        }
+      ]
+    },
+    {
+      "id": "rides:9",
+      "source": "rides",
+      "typeName": "9",
+      "title": "Puntos de Interes Ecosendas",
+      "abstract": "Puntos de Interes Ecosendas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "puntos",
+        "interes",
+        "ecosendas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "9"
+        }
+      ]
+    },
+    {
+      "id": "rides:10",
+      "source": "rides",
+      "typeName": "10",
+      "title": "Ruta del Vino",
+      "abstract": "Ruta del Vino",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "ruta",
+        "vino"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "10"
+        }
+      ]
+    },
+    {
+      "id": "rides:11",
+      "source": "rides",
+      "typeName": "11",
+      "title": "Bodegas",
+      "abstract": "Bodegas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "bodegas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "11"
+        }
+      ]
+    },
+    {
+      "id": "rides:12",
+      "source": "rides",
+      "typeName": "12",
+      "title": "Sitios de interés",
+      "abstract": "Sitios de interés",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "sitios",
+        "interés"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "12"
+        }
+      ]
+    },
+    {
+      "id": "rides:13",
+      "source": "rides",
+      "typeName": "13",
+      "title": "Localidades turísticas",
+      "abstract": "Localidades turísticas",
+      "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+      "defaultCrs": "CRS:84",
+      "keywords": [
+        "localidades",
+        "turísticas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
+          "typeName": "13"
         }
       ]
     }

@@ -26,6 +26,11 @@ function stripWorkspace(name: string): string {
   return i === -1 ? name : name.slice(i + 1);
 }
 
+function themeOf(wmsUrl: string): string {
+  const match = /\/services\/([^/]+)\/MapServer\/WMSServer\/?$/.exec(wmsUrl);
+  return match ? match[1] : wmsUrl;
+}
+
 function cleanText(value: string): string {
   return (value || '').replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 }
@@ -39,6 +44,68 @@ let preserved = 0;
 const sources: Catalog['sources'] = {};
 
 for (const ep of ENDPOINTS) {
+  if (ep.id === 'rides') {
+    const wmsServices = ep.wmsServices ?? [];
+    const entries: CatalogEntry[] = [];
+    const failedThemes: string[] = [];
+    let answered = 0;
+    for (const wmsUrl of wmsServices) {
+      const theme = themeOf(wmsUrl);
+      try {
+        const wmsCaps = await getWmsCapabilities(wmsUrl);
+        answered += 1;
+        for (const w of wmsCaps) {
+          entries.push({
+            id: `${ep.id}:${w.name}`,
+            source: ep.id,
+            typeName: w.name,
+            title: w.title || w.name,
+            abstract: cleanText(w.abstract),
+            endpoint: wmsUrl,
+            defaultCrs: w.crs[0] || 'unknown',
+            keywords: keywordsOf(w.name, w.title),
+            verifiedAt: today,
+            services: [{ type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name }],
+          });
+        }
+        console.log(`${ep.id}: ${theme} ${wmsCaps.length} WMS layers`);
+      } catch (err) {
+        failedThemes.push(theme);
+        console.error(`${ep.id}: ${theme} WMS GetCapabilities FAILED on ${today} (${err})`);
+      }
+    }
+    const failedField = failedThemes.length > 0 ? { ridesFailedThemes: failedThemes } : {};
+    if (answered > 0) {
+      layers.push(...entries);
+      sources[ep.id] = {
+        status: 'live',
+        fetchedAt: new Date().toISOString(),
+        wmsStatus: 'live',
+        ...failedField,
+      };
+      console.log(`${ep.id}: ${entries.length} WMS layers from ${answered}/${wmsServices.length} theme services`);
+    } else {
+      const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
+      if (stale.length === 0) {
+        throw new Error(`${ep.id}: all WMS GetCapabilities FAILED and there is no previous snapshot to preserve — ${failedThemes.join(', ')}`);
+      }
+      layers.push(
+        ...stale.map((l) => ({
+          ...l,
+          services: l.services ?? [{ type: ServiceType.Wms, endpoint: l.endpoint, typeName: l.typeName }],
+        })),
+      );
+      preserved += stale.length;
+      sources[ep.id] = {
+        status: 'preserved',
+        fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
+        wmsStatus: 'failed',
+        ...failedField,
+      };
+      console.error(`${ep.id}: all WMS GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${failedThemes.join(', ')})`);
+    }
+    continue;
+  }
   try {
     const caps = await getCapabilities(ep);
     const entries: CatalogEntry[] = caps.map((c) => ({
@@ -98,7 +165,12 @@ for (const ep of ENDPOINTS) {
     if (stale.length === 0) {
       throw new Error(`${ep.id}: GetCapabilities FAILED and there is no previous snapshot to preserve — ${err}`);
     }
-    layers.push(...stale);
+    layers.push(
+      ...stale.map((l) => ({
+        ...l,
+        services: l.services ?? [{ type: ServiceType.Wfs, endpoint: l.endpoint, typeName: l.typeName }],
+      })),
+    );
     preserved += stale.length;
     sources[ep.id] = {
       status: 'preserved',

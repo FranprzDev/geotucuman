@@ -12,7 +12,7 @@ export interface CatalogService {
 export interface CatalogEntry {
   /** `${source}:${typeName}` */
   id: string;
-  source: 'geosplan' | 'dgct' | 'ign';
+  source: 'geosplan' | 'dgct' | 'ign' | 'rides';
   typeName: string;
   title: string;
   abstract: string;
@@ -25,7 +25,7 @@ export interface CatalogEntry {
 
 export interface Catalog {
   generatedAt: string;
-  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string; wmsStatus?: 'live' | 'failed' }>;
+  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string; wmsStatus?: 'live' | 'failed'; ridesFailedThemes?: string[] }>;
   layers: CatalogEntry[];
 }
 

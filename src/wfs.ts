@@ -11,7 +11,7 @@ async function fetchText(url: string): Promise<string> {
     return await res.text();
   } catch (err) {
     const msg = err instanceof Error && err.name === 'AbortError' ? `timeout>${TIMEOUT_MS}ms` : String(err);
-    throw new Error(`WFS request fallo (${url.slice(0, 120)}...): ${msg}`);
+    throw new Error(`WFS request failed (${url.slice(0, 120)}...): ${msg}`);
   } finally {
     clearTimeout(t);
   }
@@ -24,7 +24,7 @@ export interface CapabilityLayer {
   defaultCrs: string;
 }
 
-/** Parsea GetCapabilities sin dependencias XML (los GeoServer de Tucuman son de formato poco estricto). */
+/** Parses GetCapabilities without XML dependencies (Tucuman GeoServer instances use a loose format). */
 export async function getCapabilities(ep: EndpointConfig): Promise<CapabilityLayer[]> {
   const url = `${ep.url}?service=WFS&request=GetCapabilities&version=${ep.wfsVersion}`;
   const xml = await fetchText(url);
@@ -37,7 +37,7 @@ export async function getCapabilities(ep: EndpointConfig): Promise<CapabilityLay
     typeName: pick(b, 'Name'),
     title: pick(b, 'Title'),
     abstract: pick(b, 'Abstract'),
-    // WFS 1.x usa <SRS> o <DefaultCRS>; WFS 2.0 usa <DefaultCRS>
+    // WFS 1.x uses <SRS> or <DefaultCRS>; WFS 2.0 uses <DefaultCRS>
     defaultCrs: pick(b, 'DefaultCRS') || pick(b, 'DefaultSRS') || pick(b, 'SRS'),
   })).filter((l) => l.typeName);
 }
@@ -61,8 +61,8 @@ export async function describeFeatureType(ep: EndpointConfig, typeName: string):
 export interface GetFeatureOptions {
   maxFeatures?: number;
   startIndex?: number;
-  /** bbox en el CRS declarado en bboxCrs. VERIFICADO: los servidores filtran en el CRS
-   *  nativo de la capa; un bbox 4326 sobre capa proyectada devuelve 0. Reproyectar antes. */
+  /** bbox in the CRS declared in bboxCrs. VERIFIED: servers filter in the layer's
+   *  native CRS; a 4326 bbox over a projected layer returns 0. Reproject before. */
   bbox?: [number, number, number, number];
   bboxCrs?: string;
   srsName?: string;
@@ -104,6 +104,6 @@ export async function getFeature(
     }
     return fc;
   } catch {
-    throw new Error(`GetFeature ${typeName}: respuesta no-JSON (${text.slice(0, 200)})`);
+    throw new Error(`GetFeature ${typeName}: non-JSON response (${text.slice(0, 200)})`);
   }
 }

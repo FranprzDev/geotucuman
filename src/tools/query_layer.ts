@@ -5,6 +5,7 @@ import { endpointById } from '../endpoints.js';
 import { getFeature } from '../wfs.js';
 import { epsgCode, reprojectBboxFrom4326 } from '../projection.js';
 import { asText, described, truncateGeometry } from '../lib/shared.js';
+import { ServiceType } from '../service-type.js';
 
 export const schema = {
   typeName: z.string(),
@@ -24,6 +25,12 @@ export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbo
   const entry = findLayer(typeName);
   if (!entry) {
     return { error: `Layer not found in catalog: ${typeName}. Use search_layers first.` };
+  }
+  const layerServices = entry.services ?? [{ type: ServiceType.Wfs, endpoint: entry.endpoint, typeName: entry.typeName }];
+  if (!layerServices.some((svc) => svc.type === ServiceType.Wfs)) {
+    return {
+      error: `Layer ${entry.typeName} is WMS-only (display imagery). Vector query (GetFeature) does not apply; use describe_layer to see its WMS endpoint.`,
+    };
   }
   if (!described.has(entry.typeName.toLowerCase())) {
     return {

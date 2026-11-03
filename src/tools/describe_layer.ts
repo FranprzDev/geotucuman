@@ -25,8 +25,17 @@ export async function describeLayerHandler({ typeName }: InferSchema<typeof sche
   const wfs = services.find((svc) => svc.type === ServiceType.Wfs);
   if (!wfs) {
     return {
-      error: `Layer ${typeName} is WMS-only (display imagery, no vector GetFeature). It cannot be described or queried via WFS.`,
+      typeName: entry.typeName,
+      title: entry.title,
+      abstract: entry.abstract || null,
+      source: entry.source,
+      endpoint: entry.endpoint,
+      defaultCrs: entry.defaultCrs,
+      fields: null,
       services,
+      license: endpointById(entry.source).license,
+      sources: [entry.endpoint],
+      note: 'WMS-only layer: display/context imagery, no vector GetFeature. query_layer does not apply; request the map image from its WMS endpoint.',
     };
   }
   const ep = endpointById(entry.source);

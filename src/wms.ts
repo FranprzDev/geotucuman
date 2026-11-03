@@ -20,6 +20,7 @@ export interface WmsLayer {
   title: string;
   abstract: string;
   crs: string[];
+  queryable: boolean;
 }
 
 function localName(tag: string): string {
@@ -27,11 +28,18 @@ function localName(tag: string): string {
   return i === -1 ? tag : tag.slice(i + 1);
 }
 
+function parseQueryable(attrs: string, fallback: boolean): boolean {
+  const m = /queryable\s*=\s*["']([^"']*)["']/i.exec(attrs);
+  if (!m) return fallback;
+  const value = m[1].trim().toLowerCase();
+  return value === '1' || value === 'true';
+}
+
 /** Parses WMS 1.1.1/1.3.0 GetCapabilities without XML dependencies (nested Capability > Layer > Layer[]). */
 export function parseWmsCapabilities(xml: string): WmsLayer[] {
   const clean = xml.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
   const tagRe = /<(\/?)([A-Za-z_][\w:.-]*)([^>]*?)(\/?)>/g;
-  const frames: Array<{ name: string; title: string; abstract: string; crs: string[] }> = [];
+  const frames: Array<{ name: string; title: string; abstract: string; crs: string[]; queryable: boolean }> = [];
   const out: WmsLayer[] = [];
   let pending: 'name' | 'title' | 'abstract' | 'crs' | null = null;
   let pendingStart = 0;
@@ -62,13 +70,28 @@ export function parseWmsCapabilities(xml: string): WmsLayer[] {
       if (tag === 'layer') {
         const frame = frames.pop();
         if (frame && frame.name) {
-          out.push({ name: frame.name, title: frame.title, abstract: frame.abstract, crs: frame.crs });
+          out.push({
+            name: frame.name,
+            title: frame.title,
+            abstract: frame.abstract,
+            crs: frame.crs,
+            queryable: frame.queryable,
+          });
         }
       }
       continue;
     }
     if (tag === 'layer') {
-      if (!selfClosing) frames.push({ name: '', title: '', abstract: '', crs: [] });
+      if (!selfClosing) {
+        const parent = frames[frames.length - 1];
+        frames.push({
+          name: '',
+          title: '',
+          abstract: '',
+          crs: [],
+          queryable: parseQueryable(m[3], parent?.queryable ?? false),
+        });
+      }
       continue;
     }
     if (tag === 'name' || tag === 'title' || tag === 'abstract' || tag === 'crs' || tag === 'srs') {
@@ -85,4 +108,49 @@ export async function getWmsCapabilities(wmsUrl: string): Promise<WmsLayer[]> {
   const url = `${wmsUrl}?service=WMS&request=GetCapabilities`;
   const xml = await fetchText(url);
   return parseWmsCapabilities(xml);
+}
+
+const PROBE_TIMEOUT_MS = 10_000;
+
+export interface WmsProbe {
+  probedAt: string;
+  ok: boolean;
+  detail: string;
+}
+
+export async function probeWmsGetMap(
+  wmsUrl: string,
+  layerName: string,
+  crs: string,
+  bbox: [number, number, number, number],
+): Promise<WmsProbe> {
+  const probedAt = new Date().toISOString().slice(0, 10);
+  const params = new URLSearchParams({
+    service: 'WMS',
+    version: '1.1.1',
+    request: 'GetMap',
+    layers: layerName,
+    styles: '',
+    format: 'image/png',
+    width: '256',
+    height: '256',
+    srs: crs,
+    bbox: bbox.join(','),
+  });
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), PROBE_TIMEOUT_MS);
+  try {
+    const res = await fetch(`${wmsUrl}?${params.toString()}`, { signal: ctrl.signal });
+    const contentType = (res.headers.get('content-type') ?? '').toLowerCase();
+    return {
+      probedAt,
+      ok: res.status === 200 && contentType.startsWith('image/'),
+      detail: `HTTP ${res.status}, content-type ${contentType || 'unknown'}`,
+    };
+  } catch (err) {
+    const msg = err instanceof Error && err.name === 'AbortError' ? `timeout>${PROBE_TIMEOUT_MS}ms` : String(err);
+    return { probedAt, ok: false, detail: msg };
+  } finally {
+    clearTimeout(t);
+  }
 }

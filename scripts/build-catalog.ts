@@ -65,7 +65,9 @@ for (const ep of ENDPOINTS) {
             defaultCrs: w.crs[0] || 'unknown',
             keywords: keywordsOf(w.name, w.title),
             verifiedAt: today,
-            services: [{ type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name }],
+            services: [
+              { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
+            ],
           });
         }
         console.log(`${ep.id}: ${theme} ${wmsCaps.length} WMS layers`);
@@ -133,6 +135,8 @@ for (const ep of ENDPOINTS) {
               type: ServiceType.Wms,
               endpoint: wmsUrl,
               typeName: w.name,
+              crs: w.crs,
+              queryable: w.queryable,
             });
           } else {
             entries.push({
@@ -145,7 +149,9 @@ for (const ep of ENDPOINTS) {
               defaultCrs: w.crs[0] || 'unknown',
               keywords: keywordsOf(w.name, w.title),
               verifiedAt: today,
-              services: [{ type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name }],
+              services: [
+                { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
+              ],
             });
           }
         }

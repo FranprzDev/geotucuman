@@ -7,6 +7,9 @@ export interface CatalogService {
   type: ServiceType;
   endpoint: string;
   typeName: string;
+  crs?: string[];
+  queryable?: boolean;
+  extent?: [number, number, number, number];
 }
 
 export interface CatalogEntry {

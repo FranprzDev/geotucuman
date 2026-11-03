@@ -1,22 +1,23 @@
 {
-  "generatedAt": "2026-11-03T15:10:36.130Z",
+  "generatedAt": "2026-11-03T15:21:07.993Z",
   "sources": {
     "geosplan": {
       "status": "live",
-      "fetchedAt": "2026-11-03T15:10:18.759Z",
+      "fetchedAt": "2026-11-03T15:20:59.621Z",
       "wmsStatus": "live"
     },
     "dgct": {
-      "status": "preserved",
-      "fetchedAt": "2026-10-30T03:38:44.440Z"
+      "status": "live",
+      "fetchedAt": "2026-11-03T15:21:00.865Z",
+      "wmsStatus": "live"
     },
     "ign": {
       "status": "live",
-      "fetchedAt": "2026-11-03T15:10:30.132Z"
+      "fetchedAt": "2026-11-03T15:21:02.316Z"
     },
     "rides": {
       "status": "live",
-      "fetchedAt": "2026-11-03T15:10:36.130Z",
+      "fetchedAt": "2026-11-03T15:21:07.993Z",
       "wmsStatus": "live"
     }
   },
@@ -46,7 +47,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "aeropuerto"
+          "typeName": "aeropuerto",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -75,7 +81,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "circuitos_turisticos"
+          "typeName": "circuitos_turisticos",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -105,7 +116,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_Citricos_2014"
+          "typeName": "RIDES_Citricos_2014",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -135,7 +151,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "comisasrias_2014"
+          "typeName": "comisasrias_2014",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -165,7 +186,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "organismos_2016"
+          "typeName": "organismos_2016",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -194,7 +220,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_garbanzo_2012"
+          "typeName": "RIDES_garbanzo_2012",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -222,7 +253,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_Ingenios"
+          "typeName": "RIDES_Ingenios",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -250,7 +286,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "jurisdicciones"
+          "typeName": "jurisdicciones",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -280,7 +321,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_maiz_2012"
+          "typeName": "RIDES_maiz_2012",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -308,7 +354,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "microrregiones_2017"
+          "typeName": "microrregiones_2017",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -337,7 +388,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_papa_2012"
+          "typeName": "RIDES_papa_2012",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -367,7 +423,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "GeoSPlan-PAD"
+          "typeName": "GeoSPlan-PAD",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -398,7 +459,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "IEG_radios_censales"
+          "typeName": "IEG_radios_censales",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -432,7 +498,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "fibra_optica_pcial"
+          "typeName": "fibra_optica_pcial",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -466,7 +537,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "fibra_optica_nacional_2014"
+          "typeName": "fibra_optica_nacional_2014",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -496,7 +572,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_soja_2012_2013"
+          "typeName": "RIDES_soja_2012_2013",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -526,7 +607,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_tabaco_2008_2009"
+          "typeName": "RIDES_tabaco_2008_2009",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -558,7 +644,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "terminal_omnibus"
+          "typeName": "terminal_omnibus",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -587,7 +678,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_trigo_2012"
+          "typeName": "RIDES_trigo_2012",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -617,7 +713,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "unidades_reg_policiales"
+          "typeName": "unidades_reg_policiales",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -648,7 +749,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_zafra_2014"
+          "typeName": "RIDES_zafra_2014",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -680,7 +786,12 @@
         {
           "type": "wms",
           "endpoint": "http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wms",
-          "typeName": "RIDES_area_granera_2001_2011"
+          "typeName": "RIDES_area_granera_2001_2011",
+          "crs": [
+            "EPSG:22183",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -697,12 +808,22 @@
         "folio",
         "parc"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:FOLIO_PARC"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "FOLIO_PARC",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -719,12 +840,22 @@
         "folio",
         "parc1"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:FOLIO_PARC1"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "FOLIO_PARC1",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -742,12 +873,22 @@
         "parc1",
         "ent"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:FOLIO_PARC1_ENT"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "FOLIO_PARC1_ENT",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -764,12 +905,22 @@
         "mej",
         "ovi"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:MEJ_OVI"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "MEJ_OVI",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -785,12 +936,22 @@
         "dgct",
         "parcelasr1"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:PARCELASR1"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PARCELASR1",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -806,12 +967,22 @@
         "dgct",
         "parcelasrube"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:PARCELASRUBE"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PARCELASRUBE",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -827,12 +998,22 @@
         "dgct",
         "parcelasrubep"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:PARCELASRUBEP"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PARCELASRUBEP",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -848,12 +1029,22 @@
         "dgct",
         "secciones"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:SECCIONES"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "SECCIONES",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -870,12 +1061,22 @@
         "servidumbre",
         "paso"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:SERVIDUMBRE_PASO"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "SERVIDUMBRE_PASO",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -891,12 +1092,22 @@
         "dgct",
         "calles"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:calles"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "calles",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -912,12 +1123,22 @@
         "dgct",
         "comunasymunicipios"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:comunasymunicipios"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "comunasymunicipios",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -933,12 +1154,22 @@
         "dgct",
         "departamentos"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:departamentos"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "departamentos",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -955,12 +1186,22 @@
         "departamentos",
         "param"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:departamentos_param"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "departamentos_param",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -976,12 +1217,22 @@
         "dgct",
         "edificios"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:edificios"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "edificios",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -997,12 +1248,22 @@
         "dgct",
         "manzanas"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:manzanas"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "manzanas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -1018,12 +1279,22 @@
         "dgct",
         "parcelas"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:parcelas"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "parcelas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -1040,12 +1311,22 @@
         "parcelas",
         "legal"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:parcelas_legal"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "parcelas_legal",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -1061,12 +1342,22 @@
         "dgct",
         "provincias"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:provincias"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "provincias",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -1082,12 +1373,22 @@
         "dgct",
         "rios"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:rios"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "rios",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -1105,12 +1406,1458 @@
         "bar",
         "nodat"
       ],
-      "verifiedAt": "2026-10-30",
+      "verifiedAt": "2026-11-03",
       "services": [
         {
           "type": "wfs",
           "endpoint": "http://200.49.89.203/geoserver/dgct/wfs",
           "typeName": "dgct:zonas_bar_nodat"
+        },
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "zonas_bar_nodat",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:AABE",
+      "source": "dgct",
+      "typeName": "AABE",
+      "title": "AABE",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:404000",
+      "keywords": [
+        "aabe"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "AABE",
+          "crs": [
+            "EPSG:404000",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:BARRIOS_POPULARES",
+      "source": "dgct",
+      "typeName": "BARRIOS_POPULARES",
+      "title": "BARRIOS_POPULARES",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "barrios",
+        "populares"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "BARRIOS_POPULARES",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:OVI_PARCELAS",
+      "source": "dgct",
+      "typeName": "OVI_PARCELAS",
+      "title": "OVI_PARCELAS",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "ovi",
+        "parcelas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "OVI_PARCELAS",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:OVI_PARCELAS1",
+      "source": "dgct",
+      "typeName": "OVI_PARCELAS1",
+      "title": "OVI_PARCELAS1",
+      "abstract": "A sample style that draws a red square point",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "ovi",
+        "parcelas1"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "OVI_PARCELAS1",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:PARCELASR",
+      "source": "dgct",
+      "typeName": "PARCELASR",
+      "title": "PARCELASR",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "parcelasr"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PARCELASR",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:PARCELAS_LEGALR",
+      "source": "dgct",
+      "typeName": "PARCELAS_LEGALR",
+      "title": "PARCELAS_LEGALR",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "parcelas",
+        "legalr"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PARCELAS_LEGALR",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:PUNTOS_OVI",
+      "source": "dgct",
+      "typeName": "PUNTOS_OVI",
+      "title": "PUNTOS_OVI",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "puntos",
+        "ovi"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "PUNTOS_OVI",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:areas_protegidas",
+      "source": "dgct",
+      "typeName": "areas_protegidas",
+      "title": "areas_protegidas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "areas",
+        "protegidas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "areas_protegidas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:barrios",
+      "source": "dgct",
+      "typeName": "barrios",
+      "title": "barrios",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "barrios"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "barrios",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:barriosipv",
+      "source": "dgct",
+      "typeName": "barriosipv",
+      "title": "barriosipv",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "barriosipv"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "barriosipv",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:barros_privados1",
+      "source": "dgct",
+      "typeName": "barros_privados1",
+      "title": "barros_privados1",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "barros",
+        "privados1"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "barros_privados1",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:bosques",
+      "source": "dgct",
+      "typeName": "bosques",
+      "title": "bosques",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "bosques"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "bosques",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:caminos",
+      "source": "dgct",
+      "typeName": "caminos",
+      "title": "caminos",
+      "abstract": "A sample style that draws a line",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "caminos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "caminos",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:canales_riego",
+      "source": "dgct",
+      "typeName": "canales_riego",
+      "title": "canales_riego",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "canales",
+        "riego"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "canales_riego",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:comunidades",
+      "source": "dgct",
+      "typeName": "comunidades",
+      "title": "comunidades",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "comunidades"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "comunidades",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:concesiones",
+      "source": "dgct",
+      "typeName": "concesiones",
+      "title": "concesiones",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "concesiones"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "concesiones",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:cotas",
+      "source": "dgct",
+      "typeName": "cotas",
+      "title": "cotas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "cotas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "cotas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:cuencas",
+      "source": "dgct",
+      "typeName": "cuencas",
+      "title": "cuencas",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "cuencas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "cuencas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:departamentos_wgs",
+      "source": "dgct",
+      "typeName": "departamentos_wgs",
+      "title": "departamentos_wgs",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "departamentos",
+        "wgs"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "departamentos_wgs",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:derecho_superficie",
+      "source": "dgct",
+      "typeName": "derecho_superficie",
+      "title": "derecho_superficie",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "derecho",
+        "superficie"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "derecho_superficie",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:ductos",
+      "source": "dgct",
+      "typeName": "ductos",
+      "title": "ductos",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "ductos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "ductos",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:edificios_legal",
+      "source": "dgct",
+      "typeName": "edificios_legal",
+      "title": "edificios_legal",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "edificios",
+        "legal"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "edificios_legal",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:edificios_oficio",
+      "source": "dgct",
+      "typeName": "edificios_oficio",
+      "title": "edificios_oficio",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "edificios",
+        "oficio"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "edificios_oficio",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:escuelas",
+      "source": "dgct",
+      "typeName": "escuelas",
+      "title": "escuelas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "escuelas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "escuelas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:espacios_verdes",
+      "source": "dgct",
+      "typeName": "espacios_verdes",
+      "title": "espacios_verdes",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "espacios",
+        "verdes"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "espacios_verdes",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:establecimientos_estatale",
+      "source": "dgct",
+      "typeName": "establecimientos_estatale",
+      "title": "establecimientos_estatale",
+      "abstract": "A sample style that draws a red square point",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "establecimientos",
+        "estatale"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "establecimientos_estatale",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:establecimientos_privados",
+      "source": "dgct",
+      "typeName": "establecimientos_privados",
+      "title": "establecimientos_privados",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "establecimientos",
+        "privados"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "establecimientos_privados",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:ffcc",
+      "source": "dgct",
+      "typeName": "ffcc",
+      "title": "ffcc",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "ffcc"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "ffcc",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:fires_modis_24",
+      "source": "dgct",
+      "typeName": "fires_modis_24",
+      "title": "MODIS 24 hrs fires/hotspots",
+      "abstract": "Provides MODIS (Rapid Response Collection) Fires/Hotspots for the past 24 hrs.",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "fires",
+        "modis",
+        "hrs",
+        "hotspots"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "fires_modis_24",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:fires_modis_48",
+      "source": "dgct",
+      "typeName": "fires_modis_48",
+      "title": "MODIS 48 hrs fires/hotspots",
+      "abstract": "Provides MODIS (Rapid Response Collection) Fires/Hotspots for the past 48 hrs.",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "fires",
+        "modis",
+        "hrs",
+        "hotspots"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "fires_modis_48",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:fires_modis_7",
+      "source": "dgct",
+      "typeName": "fires_modis_7",
+      "title": "MODIS 7 days fires/hotspots",
+      "abstract": "Provides MODIS (Rapid Response Collection) Fires/Hotspots for the past 7 days.",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "fires",
+        "modis",
+        "days",
+        "hotspots"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "fires_modis_7",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:fires_modis_72",
+      "source": "dgct",
+      "typeName": "fires_modis_72",
+      "title": "MODIS 72 hrs fires/hotspots",
+      "abstract": "Provides MODIS (Rapid Response Collection) Fires/Hotspots for the past 72 hrs.",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "fires",
+        "modis",
+        "hrs",
+        "hotspots"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "fires_modis_72",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:hidrografia",
+      "source": "dgct",
+      "typeName": "hidrografia",
+      "title": "hidrografia",
+      "abstract": "A sample style that draws a line",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "hidrografia"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "hidrografia",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:hijuelas",
+      "source": "dgct",
+      "typeName": "hijuelas",
+      "title": "hijuelas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "hijuelas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "hijuelas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:laminas",
+      "source": "dgct",
+      "typeName": "laminas",
+      "title": "laminas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "laminas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "laminas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:localidades",
+      "source": "dgct",
+      "typeName": "localidades",
+      "title": "localidades",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "localidades"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "localidades",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:modelos",
+      "source": "dgct",
+      "typeName": "modelos",
+      "title": "modelos",
+      "abstract": "A sample style that draws a line",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "modelos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "modelos",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:parcelas_historico",
+      "source": "dgct",
+      "typeName": "parcelas_historico",
+      "title": "parcelas_historico",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "parcelas",
+        "historico"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "parcelas_historico",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:parcelas_superpuestas",
+      "source": "dgct",
+      "typeName": "parcelas_superpuestas",
+      "title": "parcelas_superpuestas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "parcelas",
+        "superpuestas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "parcelas_superpuestas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:parcelas_temporal",
+      "source": "dgct",
+      "typeName": "parcelas_temporal",
+      "title": "parcelas_temporal",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "parcelas",
+        "temporal"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "parcelas_temporal",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:piscinas",
+      "source": "dgct",
+      "typeName": "piscinas",
+      "title": "piscinas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "piscinas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "piscinas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:pozos",
+      "source": "dgct",
+      "typeName": "pozos",
+      "title": "pozos",
+      "abstract": "Manhattan points of interest",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "pozos"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "pozos",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:prescripcion",
+      "source": "dgct",
+      "typeName": "prescripcion",
+      "title": "prescripcion",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "prescripcion"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "prescripcion",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:ptos_red_geodesica_gk07",
+      "source": "dgct",
+      "typeName": "ptos_red_geodesica_gk07",
+      "title": "ptos_red_geodesica_gk07",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "ptos",
+        "red",
+        "geodesica",
+        "gk07"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "ptos_red_geodesica_gk07",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:r_n_a",
+      "source": "dgct",
+      "typeName": "r_n_a",
+      "title": "r_n_a",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "r_n_a",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:raster",
+      "source": "dgct",
+      "typeName": "raster",
+      "title": "raster",
+      "abstract": "A sample style that draws a raster, good for displaying imagery",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "raster"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "raster",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:rutas_nacionales",
+      "source": "dgct",
+      "typeName": "rutas_nacionales",
+      "title": "rutas_nacionales",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "rutas",
+        "nacionales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "rutas_nacionales",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:rutas_provinciales",
+      "source": "dgct",
+      "typeName": "rutas_provinciales",
+      "title": "rutas_provinciales",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "rutas",
+        "provinciales"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "rutas_provinciales",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:telas",
+      "source": "dgct",
+      "typeName": "telas",
+      "title": "telas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "telas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "telas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:tgn",
+      "source": "dgct",
+      "typeName": "tgn",
+      "title": "tgn",
+      "abstract": "A sample style that draws a line",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "tgn"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "tgn",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:toponimias",
+      "source": "dgct",
+      "typeName": "toponimias",
+      "title": "toponimias",
+      "abstract": "A sample style that draws a red square point",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "toponimias"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "toponimias",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:vial",
+      "source": "dgct",
+      "typeName": "vial",
+      "title": "vial",
+      "abstract": "A sample style that draws a line",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "vial"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "vial",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:villas",
+      "source": "dgct",
+      "typeName": "villas",
+      "title": "villas",
+      "abstract": "A sample style that draws a polygon",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "villas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "villas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:vuturbano",
+      "source": "dgct",
+      "typeName": "vuturbano",
+      "title": "vuturbano",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "vuturbano"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "vuturbano",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:zonas_agroecologicas",
+      "source": "dgct",
+      "typeName": "zonas_agroecologicas",
+      "title": "zonas_agroecologicas",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "zonas",
+        "agroecologicas"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "zonas_agroecologicas",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "dgct:zonas_parc_nodat",
+      "source": "dgct",
+      "typeName": "zonas_parc_nodat",
+      "title": "zonas_parc_nodat",
+      "abstract": "",
+      "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+      "defaultCrs": "EPSG:5345",
+      "keywords": [
+        "zonas",
+        "parc",
+        "nodat"
+      ],
+      "verifiedAt": "2026-11-03",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "http://200.49.89.203/geoserver/dgct/wms",
+          "typeName": "zonas_parc_nodat",
+          "crs": [
+            "EPSG:5345",
+            "CRS:84"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5884,7 +7631,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Vid_2019"
+          "typeName": "Vid_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5906,7 +7659,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2018"
+          "typeName": "UP_Citrus_Senasa_2018",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5928,7 +7687,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2015"
+          "typeName": "UP_Citrus_Senasa_2015",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5950,7 +7715,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2014"
+          "typeName": "UP_Citrus_Senasa_2014",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5972,7 +7743,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2013"
+          "typeName": "UP_Citrus_Senasa_2013",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -5994,7 +7771,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2012"
+          "typeName": "UP_Citrus_Senasa_2012",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6016,7 +7799,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "UP_Citrus_Senasa_2011"
+          "typeName": "UP_Citrus_Senasa_2011",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6038,7 +7827,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2020_EEAOC"
+          "typeName": "Trigo_2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6060,7 +7855,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2018_EEAOC"
+          "typeName": "Trigo_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6082,7 +7883,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2016_EEAOC"
+          "typeName": "Trigo_2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6104,7 +7911,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2015_EEAOC"
+          "typeName": "Trigo_2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6126,7 +7939,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2014_EEAOC"
+          "typeName": "Trigo_2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6148,7 +7967,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2013_EEAOC"
+          "typeName": "Trigo_2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6170,7 +7995,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2012_EEAOC"
+          "typeName": "Trigo_2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6192,7 +8023,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2011_EEAOC"
+          "typeName": "Trigo_2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6214,7 +8051,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2010_EEAOC"
+          "typeName": "Trigo_2010_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6236,7 +8079,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2009_EEAOC"
+          "typeName": "Trigo_2009_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6258,7 +8107,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Trigo_2008_EEAOC"
+          "typeName": "Trigo_2008_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6280,7 +8135,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2025_2026"
+          "typeName": "Tabaco_2025_2026",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6302,7 +8163,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2024_2025"
+          "typeName": "Tabaco_2024_2025",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6324,7 +8191,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2023-2024"
+          "typeName": "Tabaco_2023-2024",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6346,7 +8219,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2022-2023"
+          "typeName": "Tabaco_2022-2023",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6368,7 +8247,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2020-2021"
+          "typeName": "Tabaco_2020-2021",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6390,7 +8275,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2019-2020"
+          "typeName": "Tabaco_2019-2020",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6412,7 +8303,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2018-2019"
+          "typeName": "Tabaco_2018-2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6434,7 +8331,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2017-2018"
+          "typeName": "Tabaco_2017-2018",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6456,7 +8359,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2015-2016"
+          "typeName": "Tabaco_2015-2016",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6478,7 +8387,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2014-2015"
+          "typeName": "Tabaco_2014-2015",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6500,7 +8415,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2013-2014"
+          "typeName": "Tabaco_2013-2014",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6522,7 +8443,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2012-2013"
+          "typeName": "Tabaco_2012-2013",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6544,7 +8471,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2011-2012"
+          "typeName": "Tabaco_2011-2012",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6566,7 +8499,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Tabaco_2008-2009"
+          "typeName": "Tabaco_2008-2009",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6588,7 +8527,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2025_EEAOC"
+          "typeName": "Soja_2025_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6610,7 +8555,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2024_EEAOC"
+          "typeName": "Soja_2024_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6633,7 +8584,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2022-2023_EEAOC"
+          "typeName": "Soja_2022-2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6656,7 +8613,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2021-2022_EEAOC"
+          "typeName": "Soja_2021-2022_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6679,7 +8642,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2019-2020_EEAOC"
+          "typeName": "Soja_2019-2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6702,7 +8671,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2017-2018_EEAOC"
+          "typeName": "Soja_2017-2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6725,7 +8700,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2016-2017_EEAOC"
+          "typeName": "Soja_2016-2017_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6748,7 +8729,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2015-2016_EEAOC"
+          "typeName": "Soja_2015-2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6771,7 +8758,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2014-2015_EEAOC"
+          "typeName": "Soja_2014-2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6794,7 +8787,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2013-2014_EEAOC"
+          "typeName": "Soja_2013-2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6817,7 +8816,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2012-2013_EEAOC"
+          "typeName": "Soja_2012-2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6840,7 +8845,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2011-2012_EEAOC"
+          "typeName": "Soja_2011-2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6863,7 +8874,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2010-2011_EEAOC"
+          "typeName": "Soja_2010-2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6886,7 +8903,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2009-2010_EEAOC"
+          "typeName": "Soja_2009-2010_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6909,7 +8932,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2008-2009_EEAOC"
+          "typeName": "Soja_2008-2009_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6932,7 +8961,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Soja_2007-2008_EEAOC"
+          "typeName": "Soja_2007-2008_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6953,7 +8988,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Producción_vitivinícola"
+          "typeName": "Producción_vitivinícola",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6976,7 +9017,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Producción_porcina_por_localidades"
+          "typeName": "Producción_porcina_por_localidades",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -6999,7 +9046,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Producción_caprina_por_establecimientos"
+          "typeName": "Producción_caprina_por_establecimientos",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7021,7 +9074,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2025_EEAOC"
+          "typeName": "Poroto_2025_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7043,7 +9102,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2024_EEAOC"
+          "typeName": "Poroto_2024_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7065,7 +9130,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2023_EEAOC"
+          "typeName": "Poroto_2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7087,7 +9158,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2022_EEAOC"
+          "typeName": "Poroto_2022_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7109,7 +9186,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2020_EEAOC"
+          "typeName": "Poroto_2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7131,7 +9214,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Poroto_2018_EEAOC"
+          "typeName": "Poroto_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7153,7 +9242,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2025_EEAOC"
+          "typeName": "Papa_2025_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7175,7 +9270,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2023_EEAOC"
+          "typeName": "Papa_2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7197,7 +9298,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2018_EEAOC"
+          "typeName": "Papa_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7219,7 +9326,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2015_EEAOC"
+          "typeName": "Papa_2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7241,7 +9354,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2014_EEAOC"
+          "typeName": "Papa_2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7263,7 +9382,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2013_EEAOC"
+          "typeName": "Papa_2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7285,7 +9410,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2012_EEAOC"
+          "typeName": "Papa_2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7307,7 +9438,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Papa_2011_EEAOC"
+          "typeName": "Papa_2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7328,7 +9465,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Nogal_2019"
+          "typeName": "Nogal_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7350,7 +9493,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maiz_2025_EEAOC"
+          "typeName": "Maiz_2025_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7372,7 +9521,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maiz_2024_EEAOC"
+          "typeName": "Maiz_2024_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7395,7 +9550,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2022-2023_EEAOC"
+          "typeName": "Maíz_2022-2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7418,7 +9579,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2021-2022_EEAOC"
+          "typeName": "Maíz_2021-2022_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7441,7 +9608,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2019-2020_EEAOC"
+          "typeName": "Maíz_2019-2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7464,7 +9637,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2017-2018_EEAOC"
+          "typeName": "Maíz_2017-2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7487,7 +9666,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2016-2017_EEAOC"
+          "typeName": "Maíz_2016-2017_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7510,7 +9695,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2015-2016_EEAOC"
+          "typeName": "Maíz_2015-2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7533,7 +9724,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2014-2015_EEAOC"
+          "typeName": "Maíz_2014-2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7556,7 +9753,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2013-2014_EEAOC"
+          "typeName": "Maíz_2013-2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7579,7 +9782,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2012-2013_EEAOC"
+          "typeName": "Maíz_2012-2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7602,7 +9811,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2011-2012_EEAOC"
+          "typeName": "Maíz_2011-2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7625,7 +9840,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2010-2011_EEAOC"
+          "typeName": "Maíz_2010-2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7648,7 +9869,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2009-2010_EEAOC"
+          "typeName": "Maíz_2009-2010_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7671,7 +9898,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2008-2009_EEAOC"
+          "typeName": "Maíz_2008-2009_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7694,7 +9927,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Maíz_2007-2008_EEAOC"
+          "typeName": "Maíz_2007-2008_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7716,7 +9955,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2020_EEAOC"
+          "typeName": "Garbanzo_2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7738,7 +9983,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2018_EEAOC"
+          "typeName": "Garbanzo_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7760,7 +10011,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2016_EEAOC"
+          "typeName": "Garbanzo_2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7782,7 +10039,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2015_EEAOC"
+          "typeName": "Garbanzo_2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7804,7 +10067,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2014_EEAOC"
+          "typeName": "Garbanzo_2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7826,7 +10095,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2013_EEAOC"
+          "typeName": "Garbanzo_2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7848,7 +10123,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2012_EEAOC"
+          "typeName": "Garbanzo_2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7870,7 +10151,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Garbanzo_2011_EEAOC"
+          "typeName": "Garbanzo_2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7892,7 +10179,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Frutilla_2024_INTA"
+          "typeName": "Frutilla_2024_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7914,7 +10207,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Frutilla_2023_INTA"
+          "typeName": "Frutilla_2023_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7936,7 +10235,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Frutales_de_carozo_2019"
+          "typeName": "Frutales_de_carozo_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7957,7 +10262,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cooperativas_cañeras"
+          "typeName": "Cooperativas_cañeras",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -7979,7 +10290,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2025_INTA"
+          "typeName": "Cítricos_2025_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8001,7 +10318,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Citricos_2024_EEAOC"
+          "typeName": "Citricos_2024_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8023,7 +10346,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2023_EEAOC"
+          "typeName": "Cítricos_2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8045,7 +10374,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2020_EEAOC"
+          "typeName": "Cítricos_2020_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8067,7 +10402,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2019_INTA"
+          "typeName": "Cítricos_2019_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8089,7 +10430,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2018_EEAOC"
+          "typeName": "Cítricos_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8111,7 +10458,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2016_EEAOC"
+          "typeName": "Cítricos_2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8133,7 +10486,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2014_EEAOC"
+          "typeName": "Cítricos_2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8155,7 +10514,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2012_EEAOC"
+          "typeName": "Cítricos_2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8177,7 +10542,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2010_EEAOC"
+          "typeName": "Cítricos_2010_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8199,7 +10570,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Cítricos_2008_EEAOC"
+          "typeName": "Cítricos_2008_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8223,7 +10600,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2025_INTA_RIDES"
+          "typeName": "Caña_de_azúcar_2025_INTA_RIDES",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8246,7 +10629,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2024_EEAOC"
+          "typeName": "Caña_de_azúcar_2024_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8269,7 +10658,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2023_EEAOC"
+          "typeName": "Caña_de_azúcar_2023_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8292,7 +10687,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2022_EEAOC"
+          "typeName": "Caña_de_azúcar_2022_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8315,7 +10716,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2021_EEAOC"
+          "typeName": "Caña_de_azúcar_2021_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8338,7 +10745,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2019_INTA"
+          "typeName": "Caña_de_azúcar_2019_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8361,7 +10774,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2018_INTA"
+          "typeName": "Caña_de_azúcar_2018_INTA",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8384,7 +10803,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2018_EEAOC"
+          "typeName": "Caña_de_azúcar_2018_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8407,7 +10832,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2017_EEAOC"
+          "typeName": "Caña_de_azúcar_2017_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8430,7 +10861,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2016_EEAOC"
+          "typeName": "Caña_de_azúcar_2016_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8453,7 +10890,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2015_EEAOC"
+          "typeName": "Caña_de_azúcar_2015_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8476,7 +10919,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2014_EEAOC"
+          "typeName": "Caña_de_azúcar_2014_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8499,7 +10948,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2013_EEAOC"
+          "typeName": "Caña_de_azúcar_2013_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8522,7 +10977,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2012_EEAOC"
+          "typeName": "Caña_de_azúcar_2012_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8545,7 +11006,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2011_EEAOC"
+          "typeName": "Caña_de_azúcar_2011_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8568,7 +11035,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2010_EEAOC"
+          "typeName": "Caña_de_azúcar_2010_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8591,7 +11064,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2009_EEAOC"
+          "typeName": "Caña_de_azúcar_2009_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8614,7 +11093,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Caña_de_azúcar_2008_EEAOC"
+          "typeName": "Caña_de_azúcar_2008_EEAOC",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8635,7 +11120,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Arándano_2016"
+          "typeName": "Arándano_2016",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8655,7 +11146,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer",
-          "typeName": "Apiarios"
+          "typeName": "Apiarios",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8676,7 +11173,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
-          "typeName": "Parques_Industriales"
+          "typeName": "Parques_Industriales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8697,7 +11200,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
-          "typeName": "Catastro_minero"
+          "typeName": "Catastro_minero",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8717,7 +11226,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Industriales_WMS/MapServer/WMSServer",
-          "typeName": "Industrias"
+          "typeName": "Industrias",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8738,7 +11253,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_terciaria"
+          "typeName": "Red_terciaria",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8759,7 +11280,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Vías_principales"
+          "typeName": "Vías_principales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8780,7 +11307,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Ruta_provincial"
+          "typeName": "Ruta_provincial",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8801,7 +11334,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Ruta_nacional"
+          "typeName": "Ruta_nacional",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8822,7 +11361,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_ferrocarril"
+          "typeName": "Red_ferrocarril",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8843,7 +11388,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Puentes_IGN"
+          "typeName": "Puentes_IGN",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8863,7 +11414,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Gasoducto"
+          "typeName": "Gasoducto",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8884,7 +11441,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Líneas_Transnoa"
+          "typeName": "Líneas_Transnoa",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8907,7 +11470,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_eléctrica_secundaria_subterránea"
+          "typeName": "Red_eléctrica_secundaria_subterránea",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8930,7 +11499,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_eléctrica_secundaria_aérea"
+          "typeName": "Red_eléctrica_secundaria_aérea",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8953,7 +11528,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_eléctrica_primaria_subterránea"
+          "typeName": "Red_eléctrica_primaria_subterránea",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8976,7 +11557,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Red_eléctrica_primaria_aérea"
+          "typeName": "Red_eléctrica_primaria_aérea",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -8997,7 +11584,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Estaciones_EDET"
+          "typeName": "Estaciones_EDET",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9018,7 +11611,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Torres_Transnoa"
+          "typeName": "Torres_Transnoa",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9039,7 +11638,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer",
-          "typeName": "Estaciones_meteorológicas"
+          "typeName": "Estaciones_meteorológicas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9060,7 +11665,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Tasa_de_analfabetismo"
+          "typeName": "Tasa_de_analfabetismo",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9082,7 +11693,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Población_rural_dispersa"
+          "typeName": "Población_rural_dispersa",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9103,7 +11720,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Hogares_con_NBI"
+          "typeName": "Hogares_con_NBI",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9128,7 +11751,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Procedencia_del_agua_para_consumo_por_red_pública"
+          "typeName": "Procedencia_del_agua_para_consumo_por_red_pública",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9150,7 +11779,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Combustible_usado_para_cocinar"
+          "typeName": "Combustible_usado_para_cocinar",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9172,7 +11807,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Propietario_de_la_vivienda_y_el_terreno"
+          "typeName": "Propietario_de_la_vivienda_y_el_terreno",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9194,7 +11835,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Propietario_sólo_de_la_vivienda"
+          "typeName": "Propietario_sólo_de_la_vivienda",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9217,7 +11864,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Organismos_que_intervienen_en_el_territorio"
+          "typeName": "Organismos_que_intervienen_en_el_territorio",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9239,7 +11892,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Tierras_Húmedas_y_Secas"
+          "typeName": "Tierras_Húmedas_y_Secas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9261,7 +11920,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Tasa_de_Degradación_de_Tierras"
+          "typeName": "Tasa_de_Degradación_de_Tierras",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9284,7 +11949,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Parcelario_rural_Tafí_del_Valle"
+          "typeName": "Parcelario_rural_Tafí_del_Valle",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9306,7 +11977,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Parcelas_con_cultivos_frutales"
+          "typeName": "Parcelas_con_cultivos_frutales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9328,7 +12005,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Parcelas_con_cultivos_de_vid"
+          "typeName": "Parcelas_con_cultivos_de_vid",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9349,7 +12032,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Mapa_Hidrogeológico"
+          "typeName": "Mapa_Hidrogeológico",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9369,7 +12058,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Estructura"
+          "typeName": "Estructura",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9389,7 +12084,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Manzanero"
+          "typeName": "Manzanero",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9410,7 +12111,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Índice_de_Aridez"
+          "typeName": "Índice_de_Aridez",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9432,7 +12139,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDWI_Enero_2019"
+          "typeName": "NDWI_Enero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9454,7 +12167,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDWI_Febrero_2019"
+          "typeName": "NDWI_Febrero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9476,7 +12195,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDWI_Marzo_2019"
+          "typeName": "NDWI_Marzo_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9498,7 +12223,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDWI_Agosto_2019"
+          "typeName": "NDWI_Agosto_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9520,7 +12251,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDWI_Septiembre_2019"
+          "typeName": "NDWI_Septiembre_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9542,7 +12279,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDVI_Enero_2019"
+          "typeName": "NDVI_Enero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9564,7 +12307,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDVI_Febrero_2019"
+          "typeName": "NDVI_Febrero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9586,7 +12335,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDVI_Marzo_2019"
+          "typeName": "NDVI_Marzo_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9608,7 +12363,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDVI_Agosto_2019"
+          "typeName": "NDVI_Agosto_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9630,7 +12391,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "NDVI_Septiembre_2019"
+          "typeName": "NDVI_Septiembre_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9652,7 +12419,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "SAVI_Enero_2019"
+          "typeName": "SAVI_Enero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9674,7 +12447,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "SAVI_Febrero_2019"
+          "typeName": "SAVI_Febrero_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9696,7 +12475,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "SAVI_Marzo_2019"
+          "typeName": "SAVI_Marzo_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9718,7 +12503,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "SAVI_Agosto_2019"
+          "typeName": "SAVI_Agosto_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9740,7 +12531,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "SAVI_Septiembre_2019"
+          "typeName": "SAVI_Septiembre_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9762,7 +12559,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_Invierno_2019"
+          "typeName": "BSI_Invierno_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9784,7 +12587,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_Invierno_2014"
+          "typeName": "BSI_Invierno_2014",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9806,7 +12615,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_Verano_2020"
+          "typeName": "BSI_Verano_2020",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9828,7 +12643,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_Verano_2015"
+          "typeName": "BSI_Verano_2015",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9851,7 +12672,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Imágen_color_verdadero_enero"
+          "typeName": "Imágen_color_verdadero_enero",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9874,7 +12701,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Imágen_color_verdadero_febrero"
+          "typeName": "Imágen_color_verdadero_febrero",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9897,7 +12730,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Imágen_color_verdadero_marzo"
+          "typeName": "Imágen_color_verdadero_marzo",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9920,7 +12759,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Imágen_color_verdadero_agosto"
+          "typeName": "Imágen_color_verdadero_agosto",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9943,7 +12788,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Imágen_color_verdadero_septiembre"
+          "typeName": "Imágen_color_verdadero_septiembre",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9966,7 +12817,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_NOA_Invierno_2019"
+          "typeName": "BSI_NOA_Invierno_2019",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -9989,7 +12846,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_NOA_Invierno_2014"
+          "typeName": "BSI_NOA_Invierno_2014",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10012,7 +12875,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_NOA_Verano_2020"
+          "typeName": "BSI_NOA_Verano_2020",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10035,7 +12904,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "BSI_NOA_Verano_2015"
+          "typeName": "BSI_NOA_Verano_2015",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10056,7 +12931,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Prov._de_La_Rioja"
+          "typeName": "Prov._de_La_Rioja",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10077,7 +12958,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Prov._de_Catamarca"
+          "typeName": "Prov._de_Catamarca",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10098,7 +12985,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Prov._de_Tucumán"
+          "typeName": "Prov._de_Tucumán",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10119,7 +13012,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Prov._de_Jujuy"
+          "typeName": "Prov._de_Jujuy",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10141,7 +13040,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Grado_de_Degradación_de_tierras"
+          "typeName": "Grado_de_Degradación_de_tierras",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10164,7 +13069,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Extensión_de_Grado_de_Degradación_de_Tierras"
+          "typeName": "Extensión_de_Grado_de_Degradación_de_Tierras",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10185,7 +13096,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Cursos_de_agua"
+          "typeName": "Cursos_de_agua",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10206,7 +13123,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Hábitat_rural"
+          "typeName": "Hábitat_rural",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10227,7 +13150,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Comunidades_indígenas"
+          "typeName": "Comunidades_indígenas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10248,7 +13177,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Caminos_rurales"
+          "typeName": "Caminos_rurales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10269,7 +13204,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Canales_de_riego"
+          "typeName": "Canales_de_riego",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10290,7 +13231,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Bosque_nativo"
+          "typeName": "Bosque_nativo",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10312,7 +13259,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Áreas_con_déficit_hídrico"
+          "typeName": "Áreas_con_déficit_hídrico",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10333,7 +13286,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer",
-          "typeName": "Área_de_Estudio"
+          "typeName": "Área_de_Estudio",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10356,7 +13315,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Tratamiento_de_residuos_sólidos_urbanos"
+          "typeName": "Tratamiento_de_residuos_sólidos_urbanos",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10377,7 +13342,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Riesgo_de_salinización"
+          "typeName": "Riesgo_de_salinización",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10399,7 +13370,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Riesgo_de_remoción_en_masa"
+          "typeName": "Riesgo_de_remoción_en_masa",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10420,7 +13397,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Riesgo_de_inundación"
+          "typeName": "Riesgo_de_inundación",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10441,7 +13424,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Riesgo_de_erosión"
+          "typeName": "Riesgo_de_erosión",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10462,7 +13451,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Riesgo_de_desertificación"
+          "typeName": "Riesgo_de_desertificación",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10483,7 +13478,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Regiones_geomorfológicas"
+          "typeName": "Regiones_geomorfológicas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10504,7 +13505,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Regiones_agrológicas"
+          "typeName": "Regiones_agrológicas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10525,7 +13532,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Puntos_verdes"
+          "typeName": "Puntos_verdes",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10546,7 +13559,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Inta_erosión"
+          "typeName": "Inta_erosión",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10567,7 +13586,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Inta_drenaje"
+          "typeName": "Inta_drenaje",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10592,7 +13617,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Clasificación_de_suelos_según_nivel_de_suborden_2014"
+          "typeName": "Clasificación_de_suelos_según_nivel_de_suborden_2014",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10615,7 +13646,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Clasificación_de_suelos_INTA_2013"
+          "typeName": "Clasificación_de_suelos_INTA_2013",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10636,7 +13673,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Áreas_OTBN"
+          "typeName": "Áreas_OTBN",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10659,7 +13702,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Áreas_Naturales_Protegidas_Provinciales"
+          "typeName": "Áreas_Naturales_Protegidas_Provinciales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10682,7 +13731,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Áreas_Naturales_Protegidas_Nacionales"
+          "typeName": "Áreas_Naturales_Protegidas_Nacionales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10705,7 +13760,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Áreas_húmedas_agrícolas_2017"
+          "typeName": "Áreas_húmedas_agrícolas_2017",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10727,7 +13788,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer",
-          "typeName": "Ambientes_Tucumán_Atlas100k"
+          "typeName": "Ambientes_Tucumán_Atlas100k",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10747,7 +13814,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Distritos"
+          "typeName": "Distritos",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10768,7 +13841,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Cuencas_hídricas"
+          "typeName": "Cuencas_hídricas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10789,7 +13868,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Cuerpos_de_agua"
+          "typeName": "Cuerpos_de_agua",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10809,7 +13894,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Ríos"
+          "typeName": "Ríos",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10829,7 +13920,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Canales"
+          "typeName": "Canales",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10850,7 +13947,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Pozos_de_agua"
+          "typeName": "Pozos_de_agua",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10870,7 +13973,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Diques"
+          "typeName": "Diques",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10890,7 +13999,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer",
-          "typeName": "Comparticiones"
+          "typeName": "Comparticiones",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10911,7 +14026,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
-          "typeName": "SRTM_90m"
+          "typeName": "SRTM_90m",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10932,7 +14053,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
-          "typeName": "GlobalDEM_30m"
+          "typeName": "GlobalDEM_30m",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10955,7 +14082,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
-          "typeName": "DEM_ALOS_PALSAR_12m"
+          "typeName": "DEM_ALOS_PALSAR_12m",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10976,7 +14109,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
-          "typeName": "Curvas_de_nivel"
+          "typeName": "Curvas_de_nivel",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -10996,7 +14135,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Topografia/MapServer/WMSServer",
-          "typeName": "Cotas"
+          "typeName": "Cotas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22183"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11017,7 +14162,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Límite_provincial"
+          "typeName": "Límite_provincial",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11038,7 +14189,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Límite_departamental"
+          "typeName": "Límite_departamental",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11059,7 +14216,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Municipios_y_comunas"
+          "typeName": "Municipios_y_comunas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11080,7 +14243,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Manzanero_urbano"
+          "typeName": "Manzanero_urbano",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11101,7 +14270,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Áreas_urbanas"
+          "typeName": "Áreas_urbanas",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11122,7 +14297,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Pueblos_ferroviarios"
+          "typeName": "Pueblos_ferroviarios",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11142,7 +14323,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Paraje"
+          "typeName": "Paraje",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11162,7 +14349,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer",
-          "typeName": "Localidad"
+          "typeName": "Localidad",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:22173"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11184,7 +14377,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "1"
+          "typeName": "1",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11206,7 +14405,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "2"
+          "typeName": "2",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11227,7 +14432,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "3"
+          "typeName": "3",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11248,7 +14459,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "4"
+          "typeName": "4",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11270,7 +14487,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "5"
+          "typeName": "5",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11291,7 +14514,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "6"
+          "typeName": "6",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11311,7 +14540,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "8"
+          "typeName": "8",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11333,7 +14568,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "9"
+          "typeName": "9",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11354,7 +14595,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "10"
+          "typeName": "10",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11374,7 +14621,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "11"
+          "typeName": "11",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11395,7 +14648,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "12"
+          "typeName": "12",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     },
@@ -11416,7 +14675,13 @@
         {
           "type": "wms",
           "endpoint": "https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer",
-          "typeName": "13"
+          "typeName": "13",
+          "crs": [
+            "CRS:84",
+            "EPSG:4326",
+            "EPSG:0"
+          ],
+          "queryable": true
         }
       ]
     }

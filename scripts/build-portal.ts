@@ -1,10 +1,10 @@
-/** Genera docs/index.html (landing del MCP) y docs/capas.html (indice de capas descubribles). Sin dependencias externas. */
+/** Generates docs/index.html (MCP landing) and docs/capas.html (index of discoverable layers). No external dependencies. */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
 
 const catalog = JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog;
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
-/** El IGN a veces publica abstracts envueltos en CDATA; se limpian para mostrar texto plano. */
+/** IGN sometimes publishes abstracts wrapped in CDATA; they are cleaned to show plain text. */
 const cleanText = (s: string) => s.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 
 const REPO = 'https://github.com/FranprzDev/geotucuman';
@@ -28,7 +28,7 @@ const SOURCE_ENDPOINT: Record<string, string> = {
   ign: 'https://wms.ign.gob.ar/geoserver/ows',
 };
 
-/** Estado honesto por fuente: live = verde, preserved = ambar. */
+/** Honest status per source: live = green, preserved = amber. */
 function statusKind(id: string): 'live' | 'preserved' {
   const s = catalog.sources[id];
   return s && s.status === 'live' ? 'live' : 'preserved';
@@ -44,9 +44,9 @@ function statusText(id: string): string {
 
 const counts: Record<string, number> = { geosplan: 0, dgct: 0, ign: 0 };
 for (const l of catalog.layers) counts[l.source] = (counts[l.source] ?? 0) + 1;
-const capasLine = `${counts.geosplan} Planeamiento · ${counts.dgct} Catastro · ${counts.ign} IGN = ${catalog.layers.length} capas`;
+const layersLine = `${counts.geosplan} Planeamiento · ${counts.dgct} Catastro · ${counts.ign} IGN = ${catalog.layers.length} capas`;
 
-/** Extrae años (19xx/20xx) y rangos (ej. 2008-2017) del texto, sin duplicar extremos de rango. */
+/** Extracts years (19xx/20xx) and ranges (e.g. 2008-2017) from the text, without duplicating range endpoints. */
 function extractYears(text: string): string[] {
   const year = '(?:19\\d{2}|20\\d{2})';
   const rangeRe = new RegExp(`(?<!\\d)(${year})\\s*[-–]\\s*(${year})(?!\\d)`, 'g');
@@ -65,7 +65,7 @@ function extractYears(text: string): string[] {
   return [...new Set(out)];
 }
 
-/** Linea honesta de vigencia del dato: solo afirma el año si aparece en el nombre/descripcion. */
+/** Honest data vintage line: only states the year if it appears in the name/description. */
 function vintageLine(l: CatalogEntry): string {
   const years = extractYears(`${l.title} ${l.abstract} ${l.typeName}`);
   return years.length > 0
@@ -77,7 +77,7 @@ function crsShort(l: CatalogEntry): string {
   return l.defaultCrs.replace(/^urn:(x-)?ogc:def:crs:EPSG::?(\d+).*$/, 'EPSG:$2');
 }
 
-/** Card HTML del indice de capas. */
+/** HTML card for the layer index. */
 function cardHtml(l: CatalogEntry): string {
   const label = SOURCE_LABEL[l.source] ?? l.source;
   const abs = cleanText(l.abstract)
@@ -148,7 +148,7 @@ const LICENSE_BODY = `
   <p>Geocodificación: términos publicados del <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a>: "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."</p>
   <p>El GetCapabilities de cada servicio no publica licencia por capa: la licencia de cada capa concreta queda sin verificar.</p>`;
 
-/** Sistema visual comun a ambas paginas. */
+/** Shared visual system for both pages. */
 const BASE_CSS = `
   *, *::before, *::after { box-sizing: border-box; }
   :root {
@@ -248,7 +248,7 @@ const BASE_CSS = `
     .tagline-word { color: var(--ink) !important; transition: none !important; }
   }`;
 
-/** Estilos de la landing (explica el MCP). */
+/** Landing styles (explains the MCP). */
 const LANDING_CSS = `
   .hero { position: relative; overflow: hidden; padding: clamp(56px, 9vw, 104px) 20px clamp(48px, 7vw, 84px); }
   .hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 90%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.26), transparent 64%); pointer-events: none; }
@@ -310,7 +310,7 @@ const LANDING_CSS = `
   .tagline-ready .tagline-word.is-lit.is-accent { color: var(--brand); }
   @media (max-width: 520px) { .hero { padding-inline: 16px; } }`;
 
-/** Estilos del catalogo. */
+/** Catalog styles. */
 const CATALOG_CSS = `
   .hero-slim { position: relative; overflow: hidden; padding: clamp(34px, 6vw, 58px) 20px clamp(30px, 5vw, 48px); border-bottom: 1px solid var(--line); }
   .hero-slim::before { content: ""; position: absolute; inset: -40% -10% auto; height: 150%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.2), transparent 64%); pointer-events: none; }
@@ -368,7 +368,7 @@ const catalogHtml = `<!DOCTYPE html>
   <div class="wrap">
     <p class="eyebrow">Catálogo de capas</p>
     <h1 id="catalog-title">Índice de capas descubribles</h1>
-    <p>Lo que el MCP puede descubrir hoy en los servicios oficiales. ${esc(capasLine)}. <a href="./index.html">← Volver al inicio</a></p>
+    <p>Lo que el MCP puede descubrir hoy en los servicios oficiales. ${esc(layersLine)}. <a href="./index.html">← Volver al inicio</a></p>
   </div>
 </section>
 <main id="main" class="wrap">
@@ -383,7 +383,7 @@ const catalogHtml = `<!DOCTYPE html>
     <div id="count"></div>
   </div>
   <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
-  <p class="hint">Cada capa se consulta con la herramienta consultar_capa del MCP, o directo en el servicio oficial del organismo que la publica.</p>
+  <p class="hint">Cada capa se consulta con la herramienta query_layer del MCP, o directo en el servicio oficial del organismo que la publica.</p>
   <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
   <p class="scope">GeoTucumán descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid">${cards}
@@ -519,10 +519,10 @@ const landingHtml = `<!DOCTYPE html>
     <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el ${esc(CAPTURE_DATE)}.</p>
     <h3 class="card-title">Cuatro herramientas</h3>
     <div class="toolgrid">
-      <div class="tool reveal"><code>buscar_capas</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
-      <div class="tool reveal"><code>describir_capa</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
-      <div class="tool reveal"><code>consultar_capa</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
-      <div class="tool reveal"><code>geocodificar</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
+      <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
+      <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
+      <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
+      <div class="tool reveal"><code>geocode</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
     </div>
   </section>
 
@@ -558,7 +558,7 @@ npm install</pre></span></li>
   <section class="panel reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
     <h2 id="fuentes">Tres servicios oficiales, un catálogo honesto</h2>
-    <p>Hoy el catálogo embebido descubre ${esc(capasLine)}, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
+    <p>Hoy el catálogo embebido descubre ${esc(layersLine)}, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
     <div class="source-card reveal">
       <div class="status"><span class="dot ${statusKind('geosplan')}"></span><span>${esc(statusText('geosplan'))}</span></div>
       <p class="org"><span class="src src-geosplan">Geosplan</span> ${esc(SOURCE_ORG.geosplan)}</p>
@@ -574,7 +574,7 @@ npm install</pre></span></li>
       <div class="status"><span class="dot ${statusKind('ign')}"></span><span>${esc(statusText('ign'))}</span></div>
       <p class="org"><span class="src src-ign">IGN</span> ${esc(SOURCE_ORG.ign)}</p>
       <code>${esc(SOURCE_ENDPOINT.ign)}</code>
-      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="${REPO}/blob/main/diagnosticos/2026-10-31-ign-dns.md">diagnosticos/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
+      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="${REPO}/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
@@ -586,7 +586,7 @@ npm install</pre></span></li>
 
   <section class="panel reveal" aria-labelledby="catalogo-cta">
     <p class="eyebrow">Catálogo</p>
-    <h2 id="catalogo-cta">Son las capas que buscar_capas puede encontrar hoy.</h2>
+    <h2 id="catalogo-cta">Son las capas que search_layers puede encontrar hoy.</h2>
     <p><a class="btn primary" href="./capas.html">Ver las ${catalog.layers.length} capas <span aria-hidden="true">→</span></a></p>
   </section>
 
@@ -656,4 +656,4 @@ if (tagline && !reduceMotion) {
 mkdirSync('docs', { recursive: true });
 writeFileSync('docs/index.html', landingHtml);
 writeFileSync('docs/capas.html', catalogHtml);
-console.log(`docs/index.html generado (landing MCP) y docs/capas.html generado (${catalog.layers.length} capas)`);
+console.log(`docs/index.html generated (MCP landing) and docs/capas.html generated (${catalog.layers.length} layers)`);

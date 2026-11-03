@@ -2,13 +2,13 @@ const GEOREF = 'https://apis.datos.gob.ar/georef/api';
 const TIMEOUT_MS = 15_000;
 
 export interface GeorefHit {
-  tipo: string;
-  nombre: string;
-  provincia?: string;
-  departamento?: string;
+  type: string;
+  name: string;
+  province?: string;
+  department?: string;
   lat?: number;
   lon?: number;
-  fuente: string;
+  source: string;
 }
 
 async function georefGet(path: string, params: Record<string, string>): Promise<GeorefHit[]> {
@@ -25,13 +25,13 @@ async function georefGet(path: string, params: Record<string, string>): Promise<
     return rows.map((r) => {
       const c = (r.centroide ?? {}) as Record<string, number>;
       return {
-        tipo: key ?? 'desconocido',
-        nombre: String(r.nombre ?? ''),
-        provincia: typeof r.provincia === 'object' && r.provincia ? String((r.provincia as Record<string, unknown>).nombre) : undefined,
-        departamento: typeof r.departamento === 'object' && r.departamento ? String((r.departamento as Record<string, unknown>).nombre) : undefined,
+        type: key ?? 'unknown',
+        name: String(r.nombre ?? ''),
+        province: typeof r.provincia === 'object' && r.provincia ? String((r.provincia as Record<string, unknown>).nombre) : undefined,
+        department: typeof r.departamento === 'object' && r.departamento ? String((r.departamento as Record<string, unknown>).nombre) : undefined,
         lat: c.lat,
         lon: c.lon,
-        fuente: url,
+        source: url,
       };
     });
   } catch {
@@ -42,18 +42,18 @@ async function georefGet(path: string, params: Record<string, string>): Promise<
 }
 
 /**
- * Geocodifica texto libre con la API Georef (gratis, sin key).
- * Verificado 29/10/2026 con /provincias. El resto de endpoints se prueban aca en vivo.
+ * Geocodes free text with the Georef API (free, no key).
+ * Verified 29/10/2026 with /provincias. The other endpoints are tested live here.
  */
-export async function geocode(texto: string): Promise<GeorefHit[]> {
-  const q = texto.trim();
+export async function geocode(text: string): Promise<GeorefHit[]> {
+  const q = text.trim();
   if (!q) return [];
-  // "Yerba Buena, Tucumán": la API no matchea la coma; separamos lugar y provincia.
+  // "Yerba Buena, Tucumán": the API does not match the comma; split place and province.
   const parts = q.split(',').map((p) => p.trim()).filter(Boolean);
   const place = parts[0];
-  const provincia = parts.length > 1 ? parts[parts.length - 1] : undefined;
+  const province = parts.length > 1 ? parts[parts.length - 1] : undefined;
   const base: Record<string, string> = { nombre: place, max: '5' };
-  if (provincia) base.provincia = provincia;
+  if (province) base.provincia = province;
   const tries: Array<[string, Record<string, string>]> = [
     ['/localidades', base],
     ['/municipios', base],

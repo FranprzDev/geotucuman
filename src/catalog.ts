@@ -33,7 +33,7 @@ export function loadCatalog(): Catalog {
   return cache;
 }
 
-/** Normaliza para busqueda: minusculas y sin acentos. */
+/** Normalizes for search: lowercase and accent-free. */
 export function normalize(s: string): string {
   return s
     .toLowerCase()
@@ -42,8 +42,8 @@ export function normalize(s: string): string {
 }
 
 /**
- * Busqueda simple por substring sobre titulo, abstract, typeName y keywords.
- * Scoring: titulo pesa 3, typeName 2, keywords 2, abstract 1.
+ * Simple substring search over title, abstract, typeName and keywords.
+ * Scoring: title weighs 3, typeName 2, keywords 2, abstract 1.
  */
 export function searchLayers(query: string, limit = 10): CatalogEntry[] {
   const q = normalize(query).split(/\s+/).filter(Boolean);

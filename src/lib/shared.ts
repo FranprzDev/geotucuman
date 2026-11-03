@@ -1,5 +1,5 @@
-/** Regla anti-alucinacion (prestada de GeoContext/IGN Francia): no se consulta
- *  una capa sin describirla antes en esta sesion, para no inventar campos. */
+/** Anti-hallucination rule (borrowed from GeoContext/IGN France): a layer is not
+ *  queried without describing it first in this session, to avoid inventing fields. */
 export const described = new Set<string>();
 
 const MAX_GEOMETRY_CHARS = 4000;
@@ -12,9 +12,9 @@ export function truncateGeometry(feature: Record<string, unknown>): Record<strin
   return {
     ...feature,
     geometry: {
-      truncada: true,
+      truncated: true,
       bbox: feature.bbox ?? null,
-      nota: `Geometria omitida por tamano (${s.length} chars). Pedila con menos features o filtra mas.`,
+      note: `Geometry omitted due to size (${s.length} chars). Request it with fewer features or filter more.`,
     },
   };
 }

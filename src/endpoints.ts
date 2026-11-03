@@ -1,4 +1,4 @@
-/** Endpoints WFS oficiales verificados (29-30/10/2026). No inventar otros. */
+/** Verified official WFS endpoints (29-30/10/2026). Do not invent others. */
 export interface SourceLicense {
   status: string;
   attribution: string;
@@ -10,7 +10,7 @@ export interface EndpointConfig {
   label: string;
   url: string;
   wfsVersion: '1.1.0' | '2.0.0';
-  /** 1.1.0 usa maxFeatures, 2.0.0 usa count */
+  /** 1.1.0 uses maxFeatures, 2.0.0 uses count */
   countParam: 'maxFeatures' | 'count';
   license: SourceLicense;
 }
@@ -56,6 +56,6 @@ export const ENDPOINTS: EndpointConfig[] = [
 
 export function endpointById(id: string): EndpointConfig {
   const ep = ENDPOINTS.find((e) => e.id === id);
-  if (!ep) throw new Error(`Endpoint desconocido: ${id}`);
+  if (!ep) throw new Error(`Unknown endpoint: ${id}`);
   return ep;
 }

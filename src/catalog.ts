@@ -1,6 +1,13 @@
 import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
+import { ServiceType } from './service-type.js';
+
+export interface CatalogService {
+  type: ServiceType;
+  endpoint: string;
+  typeName: string;
+}
 
 export interface CatalogEntry {
   /** `${source}:${typeName}` */
@@ -13,11 +20,12 @@ export interface CatalogEntry {
   defaultCrs: string;
   keywords: string[];
   verifiedAt: string;
+  services: CatalogService[];
 }
 
 export interface Catalog {
   generatedAt: string;
-  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string }>;
+  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string; wmsStatus?: 'live' | 'failed' }>;
   layers: CatalogEntry[];
 }
 
@@ -45,11 +53,12 @@ export function normalize(s: string): string {
  * Simple substring search over title, abstract, typeName and keywords.
  * Scoring: title weighs 3, typeName 2, keywords 2, abstract 1.
  */
-export function searchLayers(query: string, limit = 10): CatalogEntry[] {
+export function searchLayers(query: string, limit = 10, serviceType?: ServiceType): CatalogEntry[] {
   const q = normalize(query).split(/\s+/).filter(Boolean);
   if (q.length === 0) return [];
   const scored: Array<{ e: CatalogEntry; score: number }> = [];
   for (const e of loadCatalog().layers) {
+    if (serviceType && !(e.services ?? []).some((s) => s.type === serviceType)) continue;
     const hay = {
       title: normalize(e.title),
       typeName: normalize(e.typeName),

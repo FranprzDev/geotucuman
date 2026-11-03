@@ -1,0 +1,88 @@
+const TIMEOUT_MS = 20_000;
+
+async function fetchText(url: string): Promise<string> {
+  const ctrl = new AbortController();
+  const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
+  try {
+    const res = await fetch(url, { signal: ctrl.signal });
+    if (!res.ok) throw new Error(`HTTP ${res.status}`);
+    return await res.text();
+  } catch (err) {
+    const msg = err instanceof Error && err.name === 'AbortError' ? `timeout>${TIMEOUT_MS}ms` : String(err);
+    throw new Error(`WMS request failed (${url.slice(0, 120)}...): ${msg}`);
+  } finally {
+    clearTimeout(t);
+  }
+}
+
+export interface WmsLayer {
+  name: string;
+  title: string;
+  abstract: string;
+  crs: string[];
+}
+
+function localName(tag: string): string {
+  const i = tag.indexOf(':');
+  return i === -1 ? tag : tag.slice(i + 1);
+}
+
+/** Parses WMS 1.1.1/1.3.0 GetCapabilities without XML dependencies (nested Capability > Layer > Layer[]). */
+export function parseWmsCapabilities(xml: string): WmsLayer[] {
+  const clean = xml.replace(/<!\[CDATA\[([\s\S]*?)\]\]>/g, '$1');
+  const tagRe = /<(\/?)([A-Za-z_][\w:.-]*)([^>]*?)(\/?)>/g;
+  const frames: Array<{ name: string; title: string; abstract: string; crs: string[] }> = [];
+  const out: WmsLayer[] = [];
+  let pending: 'name' | 'title' | 'abstract' | 'crs' | null = null;
+  let pendingStart = 0;
+  const commit = (text: string) => {
+    const frame = frames[frames.length - 1];
+    if (!frame || !pending) return;
+    const value = text.replace(/<[^>]*>/g, '').trim();
+    if (pending === 'crs') {
+      if (value) frame.crs.push(value);
+    } else if (pending === 'name') {
+      if (!frame.name) frame.name = value;
+    } else if (pending === 'title') {
+      if (!frame.title) frame.title = value;
+    } else if (!frame.abstract) {
+      frame.abstract = value;
+    }
+  };
+  let m: RegExpExecArray | null;
+  while ((m = tagRe.exec(clean)) !== null) {
+    if (pending) {
+      commit(clean.slice(pendingStart, m.index));
+      pending = null;
+    }
+    const closing = m[1] === '/';
+    const selfClosing = m[4] === '/';
+    const tag = localName(m[2]).toLowerCase();
+    if (closing) {
+      if (tag === 'layer') {
+        const frame = frames.pop();
+        if (frame && frame.name) {
+          out.push({ name: frame.name, title: frame.title, abstract: frame.abstract, crs: frame.crs });
+        }
+      }
+      continue;
+    }
+    if (tag === 'layer') {
+      if (!selfClosing) frames.push({ name: '', title: '', abstract: '', crs: [] });
+      continue;
+    }
+    if (tag === 'name' || tag === 'title' || tag === 'abstract' || tag === 'crs' || tag === 'srs') {
+      if (!selfClosing) {
+        pending = tag === 'srs' ? 'crs' : tag;
+        pendingStart = tagRe.lastIndex;
+      }
+    }
+  }
+  return out;
+}
+
+export async function getWmsCapabilities(wmsUrl: string): Promise<WmsLayer[]> {
+  const url = `${wmsUrl}?service=WMS&request=GetCapabilities`;
+  const xml = await fetchText(url);
+  return parseWmsCapabilities(xml);
+}

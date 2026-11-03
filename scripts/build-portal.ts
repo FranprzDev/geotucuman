@@ -8,24 +8,27 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const cleanText = (s: string) => s.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 
 const REPO = 'https://github.com/FranprzDev/geotucuman';
-const CAPTURE_DATE = '2026-10-30';
+const CAPTURE_DATE = catalog.generatedAt.slice(0, 10);
 
 const SOURCE_LABEL: Record<string, string> = {
   geosplan: 'Planeamiento (Geosplan) - Tucuman',
   dgct: 'Direccion General de Catastro - Tucuman',
   ign: 'Instituto Geografico Nacional - Argentina',
+  rides: 'Ministerio de Produccion (RIDES) - Tucuman',
 };
 
 const SOURCE_ORG: Record<string, string> = {
   geosplan: 'Secretaría de Estado de Gestión Pública y Planeamiento, Tucumán',
   dgct: 'Dirección General de Catastro (DGCT), Tucumán',
   ign: 'Instituto Geográfico Nacional (IGN), Argentina',
+  rides: 'Ministerio de Producción, Tucumán (RIDES)',
 };
 
 const SOURCE_ENDPOINT: Record<string, string> = {
   geosplan: 'http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs',
   dgct: 'http://200.49.89.203/geoserver/dgct/wfs',
   ign: 'https://wms.ign.gob.ar/geoserver/ows',
+  rides: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
 };
 
 /** Honest status per source: live = green, preserved = amber. */
@@ -42,9 +45,9 @@ function statusText(id: string): string {
     : `snapshot del ${s.fetchedAt.slice(0, 10)}`;
 }
 
-const counts: Record<string, number> = { geosplan: 0, dgct: 0, ign: 0 };
+const counts: Record<string, number> = { geosplan: 0, dgct: 0, ign: 0, rides: 0 };
 for (const l of catalog.layers) counts[l.source] = (counts[l.source] ?? 0) + 1;
-const layersLine = `${counts.geosplan} Planeamiento · ${counts.dgct} Catastro · ${counts.ign} IGN = ${catalog.layers.length} capas`;
+const layersLine = `${counts.geosplan} Planeamiento · ${counts.dgct} Catastro · ${counts.ign} IGN · ${counts.rides} RIDES = ${catalog.layers.length} capas`;
 
 /** Extracts years (19xx/20xx) and ranges (e.g. 2008-2017) from the text, without duplicating range endpoints. */
 function extractYears(text: string): string[] {
@@ -144,6 +147,7 @@ const LICENSE_BODY = `
     <li><span class="src src-geosplan">${esc(SOURCE_LABEL.geosplan)}</span> Términos publicados del sitio: <a href="http://geosplan.tucuman.gov.ar/index.php/institucional/terminos-de-uso/">"La Secretaría de Estado de Gestión Pública y Planeamiento promueve el acceso y reutilización de la información publicada en este sitio web. Comparte la información en los términos que establece las licencias Creative Commons: Reconocimiento-No comercial-Compartir Igual"</a>, con criterios: "Que el contenido de la información no sea alterado", "Que no se desnaturalice el sentido de la información", "Que se cite la fuente", "Que se mencione la fecha de la última actualización", "Que no se persigan fines comerciales con la obra original o la utilización de la información publicada".</li>
     <li><span class="src src-ign">${esc(SOURCE_LABEL.ign)}</span> Términos publicados del organismo para "información descargada del sitio web del IGN": <a href="https://www.ign.gob.ar/descargas/tyc1.html">"Debe reconocerse la autoría del Instituto Geográfico Nacional de la República Argentina. Se debe compartir de manera libre y gratuita. Se permite su uso comercial únicamente en el caso de obras derivadas en que la información sea utilizada como insumo para generar un nuevo producto. El IGN no se responsabiliza por las consecuencias de la utilización de la información descargada."</a></li>
     <li><span class="src src-dgct">${esc(SOURCE_LABEL.dgct)}</span> Términos publicados del organismo: <a href="https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/">no se publica licencia ni términos de uso; el servicio está documentado como experimental desde 2012</a>.</li>
+    <li><span class="src src-rides">${esc(SOURCE_LABEL.rides)}</span> Organismo público provincial: <a href="https://rides.producciontucuman.gob.ar/servicios-wms/">no publica licencia ni términos de reuso por capa (no verificados)</a>.</li>
   </ul>
   <p>Geocodificación: términos publicados del <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a>: "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."</p>
   <p>El GetCapabilities de cada servicio no publica licencia por capa: la licencia de cada capa concreta queda sin verificar.</p>`;
@@ -211,6 +215,7 @@ const BASE_CSS = `
   .src-dgct { background: rgba(251,191,36,.12); color: #fcd34d; border-color: rgba(251,191,36,.24); }
   .src-ign { background: rgba(96,165,250,.13); color: #93c5fd; border-color: rgba(96,165,250,.26); }
   .src-georef { background: rgba(167,139,250,.13); color: #c4b5fd; border-color: rgba(167,139,250,.26); }
+  .src-rides { background: rgba(244,114,182,.13); color: #f9a8d4; border-color: rgba(244,114,182,.26); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; background: var(--brand); color: #041016; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
   .btn:hover { transform: translateY(-1px); color: #041016; }
   .btn.primary { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; box-shadow: 0 0 0 1px rgba(127,227,242,.25), 0 14px 40px rgba(31,182,212,.28); }
@@ -379,6 +384,7 @@ const catalogHtml = `<!DOCTYPE html>
       <button data-f="geosplan">Planeamiento</button>
       <button data-f="dgct">Catastro</button>
       <button data-f="ign">IGN</button>
+      <button data-f="rides">RIDES</button>
     </div>
     <div id="count"></div>
   </div>
@@ -421,7 +427,7 @@ function apply() {
   while (grid.firstChild) grid.removeChild(grid.firstChild);
   for (const s of shown) { s.c.style.display = ''; grid.appendChild(s.c); }
   countEl.textContent = shown.length === 0
-    ? '0 capas para esta búsqueda. El catálogo cubre 3 servicios WFS + Georef; la capa que buscás puede no estar publicada en estas fuentes (ver la portada, sección Fuentes).'
+    ? '0 capas para esta búsqueda. El catálogo cubre 4 fuentes oficiales (WFS y WMS) + Georef; la capa que buscás puede no estar publicada en estas fuentes (ver la portada, sección Fuentes).'
     : shown.length + ' capas';
 }
 q.addEventListener('input', apply);
@@ -485,7 +491,7 @@ const landingHtml = `<!DOCTYPE html>
         <a class="btn primary" href="./capas.html">Ver las ${catalog.layers.length} capas <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
-      <p class="hero-note">3 servicios WFS + la API Georef · Catálogo verificado el ${esc(CAPTURE_DATE)}</p>
+      <p class="hero-note">4 fuentes oficiales (WFS y WMS) + la API Georef · Catálogo verificado el ${esc(CAPTURE_DATE)}</p>
     </div>
     <div class="hero-visual">
       <div class="map-card">
@@ -558,7 +564,7 @@ npm install</pre></span></li>
 
   <section class="panel reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
-    <h2 id="fuentes">Tres servicios oficiales, un catálogo honesto</h2>
+    <h2 id="fuentes">Cuatro fuentes oficiales, un catálogo honesto</h2>
     <p>Hoy el catálogo embebido descubre ${esc(layersLine)}, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
     <div class="source-card reveal">
       <div class="status"><span class="dot ${statusKind('geosplan')}"></span><span>${esc(statusText('geosplan'))}</span></div>
@@ -575,14 +581,20 @@ npm install</pre></span></li>
       <div class="status"><span class="dot ${statusKind('ign')}"></span><span>${esc(statusText('ign'))}</span></div>
       <p class="org"><span class="src src-ign">IGN</span> ${esc(SOURCE_ORG.ign)}</p>
       <code>${esc(SOURCE_ENDPOINT.ign)}</code>
-      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="${REPO}/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
+      <p class="notice">El DNS del IGN es intermitente: estuvo caído el 31/10/2026 (ver <a href="${REPO}/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>) y volvió. Si cae, el catálogo preserva el último snapshot.</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="status"><span class="dot ${statusKind('rides')}"></span><span>${esc(statusText('rides'))}</span></div>
+      <p class="org"><span class="src src-rides">RIDES</span> ${esc(SOURCE_ORG.rides)}</p>
+      <code>${esc(SOURCE_ENDPOINT.rides)}</code>
+      <p class="hint">9 servicios WMS temáticos (ArcGIS); solo imágenes de mapa, sin vectores WFS.</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
       <p class="org"><span class="src src-georef">Georef</span> Geocodificación (API Georef)</p>
       <code>https://apis.datos.gob.ar/georef/api/</code>
     </div>
-    <p class="scope">Cobertura: hoy 3 servicios WFS + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: RIDES (Producción, Tucumán: <a href="https://rides.producciontucuman.gob.ar/">https://rides.producciontucuman.gob.ar/</a>), el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
+    <p class="scope">Cobertura: hoy 4 fuentes oficiales (dgct, Geosplan, IGN y RIDES, vía WFS y WMS) + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
   </section>
 
   <section class="panel reveal" aria-labelledby="catalogo-cta">

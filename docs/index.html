@@ -68,6 +68,7 @@
   .src-dgct { background: rgba(251,191,36,.12); color: #fcd34d; border-color: rgba(251,191,36,.24); }
   .src-ign { background: rgba(96,165,250,.13); color: #93c5fd; border-color: rgba(96,165,250,.26); }
   .src-georef { background: rgba(167,139,250,.13); color: #c4b5fd; border-color: rgba(167,139,250,.26); }
+  .src-rides { background: rgba(244,114,182,.13); color: #f9a8d4; border-color: rgba(244,114,182,.26); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; background: var(--brand); color: #041016; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
   .btn:hover { transform: translateY(-1px); color: #041016; }
   .btn.primary { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; box-shadow: 0 0 0 1px rgba(127,227,242,.25), 0 14px 40px rgba(31,182,212,.28); }
@@ -191,7 +192,7 @@
         <a class="btn primary" href="./capas.html">Ver las 543 capas <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
-      <p class="hero-note">3 servicios WFS + la API Georef · Catálogo verificado el 2026-10-30</p>
+      <p class="hero-note">4 fuentes oficiales (WFS y WMS) + la API Georef · Catálogo verificado el 2026-11-03</p>
     </div>
     <div class="hero-visual">
       <div class="map-card">
@@ -222,7 +223,7 @@
         </ul>
       </div>
     </div>
-    <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-10-30.</p>
+    <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-11-03.</p>
     <h3 class="card-title">Cinco herramientas</h3>
     <div class="toolgrid">
       <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
@@ -264,8 +265,8 @@ npm install</pre></span></li>
 
   <section class="panel reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
-    <h2 id="fuentes">Tres servicios oficiales, un catálogo honesto</h2>
-    <p>Hoy el catálogo embebido descubre 22 Planeamiento · 76 Catastro · 192 IGN = 543 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
+    <h2 id="fuentes">Cuatro fuentes oficiales, un catálogo honesto</h2>
+    <p>Hoy el catálogo embebido descubre 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-geosplan">Geosplan</span> Secretaría de Estado de Gestión Pública y Planeamiento, Tucumán</p>
@@ -275,20 +276,26 @@ npm install</pre></span></li>
       <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-dgct">Catastro (DGCT)</span> Dirección General de Catastro (DGCT), Tucumán</p>
       <code>http://200.49.89.203/geoserver/dgct/wfs</code>
-      <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el 2026-10-30).</p>
+      <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el 2026-11-03).</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-ign">IGN</span> Instituto Geográfico Nacional (IGN), Argentina</p>
       <code>https://wms.ign.gob.ar/geoserver/ows</code>
-      <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
+      <p class="notice">El DNS del IGN es intermitente: estuvo caído el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>) y volvió. Si cae, el catálogo preserva el último snapshot.</p>
+    </div>
+    <div class="source-card reveal">
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
+      <p class="org"><span class="src src-rides">RIDES</span> Ministerio de Producción, Tucumán (RIDES)</p>
+      <code>https://rides.producciontucuman.gob.ar/servicios-wms/</code>
+      <p class="hint">9 servicios WMS temáticos (ArcGIS); solo imágenes de mapa, sin vectores WFS.</p>
     </div>
     <div class="source-card reveal">
       <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
       <p class="org"><span class="src src-georef">Georef</span> Geocodificación (API Georef)</p>
       <code>https://apis.datos.gob.ar/georef/api/</code>
     </div>
-    <p class="scope">Cobertura: hoy 3 servicios WFS + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: RIDES (Producción, Tucumán: <a href="https://rides.producciontucuman.gob.ar/">https://rides.producciontucuman.gob.ar/</a>), el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
+    <p class="scope">Cobertura: hoy 4 fuentes oficiales (dgct, Geosplan, IGN y RIDES, vía WFS y WMS) + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
   </section>
 
   <section class="panel reveal" aria-labelledby="catalogo-cta">

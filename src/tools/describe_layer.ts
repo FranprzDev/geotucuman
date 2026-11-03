@@ -1,13 +1,26 @@
 import { z } from 'zod';
 import type { InferSchema, ToolMetadata } from 'xmcp';
 import { findLayer } from '../catalog.js';
+import type { CatalogEntry, CatalogService } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { describeFeatureType } from '../wfs.js';
+import { probeWmsGetMap } from '../wms.js';
 import { asText, described } from '../lib/shared.js';
 import { ServiceType } from '../service-type.js';
 
+const TUCUMAN_ENVELOPE: [number, number, number, number] = [-65.9, -28.6, -64.6, -25.9];
+
+const DGCT_COVERAGE_NOTE =
+  'capabilities bbox is the Argentine default extent, not the real provincial coverage';
+
+const PROBE_NOTE = 'A single on-demand probe is not an availability contract.';
+
 export const schema = {
   typeName: z.string().describe('E.g. dgct:parcelas'),
+  probeWms: z
+    .boolean()
+    .optional()
+    .describe('Probe the layer with one on-demand WMS GetMap request. Default false.'),
 };
 
 export const metadata: ToolMetadata = {
@@ -16,12 +29,53 @@ export const metadata: ToolMetadata = {
     'Describe the real fields of a layer (DescribeFeatureType) + catalog metadata. Required before query_layer.',
 };
 
-export async function describeLayerHandler({ typeName }: InferSchema<typeof schema>) {
+function declaredCrsOf(entry: CatalogEntry, services: CatalogService[]): string[] {
+  const crs = new Set<string>();
+  for (const svc of services) {
+    for (const value of svc.crs ?? []) {
+      if (value) crs.add(value);
+    }
+  }
+  return crs.size > 0 ? [...crs] : [entry.defaultCrs];
+}
+
+function queryableSummaryOf(services: CatalogService[]) {
+  return services.map((svc) => ({
+    type: svc.type,
+    typeName: svc.typeName,
+    queryable: svc.type === ServiceType.Wfs ? true : svc.queryable ?? false,
+  }));
+}
+
+function coverageNoteOf(source: CatalogEntry['source']): string | null {
+  return source === 'dgct' ? DGCT_COVERAGE_NOTE : null;
+}
+
+export interface DescribeLayerArgs {
+  typeName: string;
+  probeWms?: boolean;
+}
+
+export async function describeLayerHandler({ typeName, probeWms = false }: DescribeLayerArgs) {
   const entry = findLayer(typeName);
   if (!entry) {
     return { error: `Layer not found in catalog: ${typeName}. Use search_layers first.` };
   }
   const services = entry.services ?? [{ type: ServiceType.Wfs, endpoint: entry.endpoint, typeName: entry.typeName }];
+  const declaredCrs = declaredCrsOf(entry, services);
+  const queryable = queryableSummaryOf(services);
+  const coverage = coverageNoteOf(entry.source);
+  const wms = services.find((svc) => svc.type === ServiceType.Wms);
+  const probe =
+    probeWms && wms
+      ? await probeWmsGetMap(
+          wms.endpoint,
+          wms.typeName,
+          declaredCrs[0] && declaredCrs[0] !== 'unknown' ? declaredCrs[0] : 'EPSG:4326',
+          wms.extent ?? TUCUMAN_ENVELOPE,
+        )
+      : null;
+  const probeFields = probe ? { probe, probeNote: PROBE_NOTE } : {};
   const wfs = services.find((svc) => svc.type === ServiceType.Wfs);
   if (!wfs) {
     return {
@@ -33,6 +87,10 @@ export async function describeLayerHandler({ typeName }: InferSchema<typeof sche
       defaultCrs: entry.defaultCrs,
       fields: null,
       services,
+      queryable,
+      declaredCrs,
+      coverage,
+      ...probeFields,
       license: endpointById(entry.source).license,
       sources: [entry.endpoint],
       note: 'WMS-only layer: display/context imagery, no vector GetFeature. query_layer does not apply; request the map image from its WMS endpoint.',
@@ -50,6 +108,10 @@ export async function describeLayerHandler({ typeName }: InferSchema<typeof sche
     defaultCrs: entry.defaultCrs,
     fields,
     services,
+    queryable,
+    declaredCrs,
+    coverage,
+    ...probeFields,
     license: ep.license,
     sources: [entry.endpoint],
   };

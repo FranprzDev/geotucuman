@@ -53,6 +53,12 @@ await step('query_layer ign area_protegida (real GetFeature)', async () => {
   if (!fc.features?.length) throw new Error('0 features');
 });
 
+await step("suggest_layers('riego') finds candidates (embedded catalog)", async () => {
+  const { suggestLayersHandler } = await import('../src/tools/suggest_layers.js');
+  const r = (await suggestLayersHandler({ goal: 'riego', limit: 5 })) as { candidates?: unknown[] };
+  if (!r.candidates || r.candidates.length === 0) throw new Error('no candidates for riego');
+});
+
 await step("geocode('Yerba Buena, Tucuman') returns lat/lon", async () => {
   const hits = await geocode('Yerba Buena, Tucumán');
   if (!hits.length || hits[0].lat === undefined) throw new Error('no candidates with coordinates');

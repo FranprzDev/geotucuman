@@ -188,7 +188,7 @@
       <h1 id="hero-title"><span>Del “quiero un mapa”</span><span class="grad">a la capa oficial.</span></h1>
       <p class="promise">Descubrí qué capas existen, quién las publica y de cuándo son, y consultalas en el servicio oficial. Sin copiar ni alojar datos.</p>
       <div class="hero-cta">
-        <a class="btn primary" href="./capas.html">Ver las 234 capas <span aria-hidden="true">→</span></a>
+        <a class="btn primary" href="./capas.html">Ver las 543 capas <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
       <p class="hero-note">3 servicios WFS + la API Georef · Catálogo verificado el 2026-10-30</p>
@@ -223,9 +223,10 @@
       </div>
     </div>
     <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-10-30.</p>
-    <h3 class="card-title">Cuatro herramientas</h3>
+    <h3 class="card-title">Cinco herramientas</h3>
     <div class="toolgrid">
       <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
+      <div class="tool reveal"><code>suggest_layers</code><p>Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM), con filtro opcional por tipo de servicio WFS/WMS.</p></div>
       <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
       <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
       <div class="tool reveal"><code>geocode</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
@@ -241,7 +242,7 @@ cd geotucuman
 npm install</pre></span></li>
       <li class="reveal"><span><span class="step-title">Compilá el servidor</span><pre class="code">npm run build</pre><span class="hint">Genera dist/stdio.js y dist/http.js con xmcp.</span></span></li>
       <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
-      <li class="reveal"><span><span class="step-title">Listo</span>: las cuatro herramientas quedan disponibles en tu agente.</span></li>
+      <li class="reveal"><span><span class="step-title">Listo</span>: las cinco herramientas quedan disponibles en tu agente.</span></li>
     </ol>
     <p class="hint">Corre local por stdio. También compila un transporte HTTP (npm run start:http) pensado para hosting futuro: hoy no hay un servidor remoto público.</p>
   </section>
@@ -264,20 +265,20 @@ npm install</pre></span></li>
   <section class="panel reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
     <h2 id="fuentes">Tres servicios oficiales, un catálogo honesto</h2>
-    <p>Hoy el catálogo embebido descubre 22 Planeamiento · 20 Catastro · 192 IGN = 234 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
+    <p>Hoy el catálogo embebido descubre 22 Planeamiento · 76 Catastro · 192 IGN = 543 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-10-30</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-geosplan">Geosplan</span> Secretaría de Estado de Gestión Pública y Planeamiento, Tucumán</p>
       <code>http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs</code>
     </div>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-10-30</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-dgct">Catastro (DGCT)</span> Dirección General de Catastro (DGCT), Tucumán</p>
       <code>http://200.49.89.203/geoserver/dgct/wfs</code>
       <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el 2026-10-30).</p>
     </div>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-10-30</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
       <p class="org"><span class="src src-ign">IGN</span> Instituto Geográfico Nacional (IGN), Argentina</p>
       <code>https://wms.ign.gob.ar/geoserver/ows</code>
       <p class="notice">El DNS del IGN no resuelve desde el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>): las capas IGN se descubren en el catálogo pero no se pueden consultar en vivo hasta que vuelva.</p>
@@ -293,11 +294,11 @@ npm install</pre></span></li>
   <section class="panel reveal" aria-labelledby="catalogo-cta">
     <p class="eyebrow">Catálogo</p>
     <h2 id="catalogo-cta">Son las capas que search_layers puede encontrar hoy.</h2>
-    <p><a class="btn primary" href="./capas.html">Ver las 234 capas <span aria-hidden="true">→</span></a></p>
+    <p><a class="btn primary" href="./capas.html">Ver las 543 capas <span aria-hidden="true">→</span></a></p>
   </section>
 
   <footer class="site">
-    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el 2026-10-30 · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.
+    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el 2026-11-03 · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.
   </footer>
 </div>
 </main>

@@ -517,9 +517,10 @@ const landingHtml = `<!DOCTYPE html>
       </div>
     </div>
     <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el ${esc(CAPTURE_DATE)}.</p>
-    <h3 class="card-title">Cuatro herramientas</h3>
+    <h3 class="card-title">Cinco herramientas</h3>
     <div class="toolgrid">
       <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
+      <div class="tool reveal"><code>suggest_layers</code><p>Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM), con filtro opcional por tipo de servicio WFS/WMS.</p></div>
       <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
       <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
       <div class="tool reveal"><code>geocode</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
@@ -535,7 +536,7 @@ cd geotucuman
 npm install</pre></span></li>
       <li class="reveal"><span><span class="step-title">Compilá el servidor</span><pre class="code">npm run build</pre><span class="hint">Genera dist/stdio.js y dist/http.js con xmcp.</span></span></li>
       <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
-      <li class="reveal"><span><span class="step-title">Listo</span>: las cuatro herramientas quedan disponibles en tu agente.</span></li>
+      <li class="reveal"><span><span class="step-title">Listo</span>: las cinco herramientas quedan disponibles en tu agente.</span></li>
     </ol>
     <p class="hint">Corre local por stdio. También compila un transporte HTTP (npm run start:http) pensado para hosting futuro: hoy no hay un servidor remoto público.</p>
   </section>

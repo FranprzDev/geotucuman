@@ -5,6 +5,8 @@ import type { CatalogEntry, CatalogService } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { describeFeatureType } from '../wfs.js';
 import { probeWmsGetMap } from '../wms.js';
+import { layerFlags } from '../lib/flags.js';
+import { loadCatalog } from '../catalog.js';
 import { asText, described } from '../lib/shared.js';
 import { ServiceType } from '../service-type.js';
 
@@ -62,6 +64,7 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
     return { error: `Layer not found in catalog: ${typeName}. Use search_layers first.` };
   }
   const services = entry.services ?? [{ type: ServiceType.Wfs, endpoint: entry.endpoint, typeName: entry.typeName }];
+  const flags = layerFlags(entry, loadCatalog().sources);
   const declaredCrs = declaredCrsOf(entry, services);
   const queryable = queryableSummaryOf(services);
   const coverage = coverageNoteOf(entry.source);
@@ -87,6 +90,7 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
       defaultCrs: entry.defaultCrs,
       fields: null,
       services,
+      flags,
       queryable,
       declaredCrs,
       coverage,
@@ -108,6 +112,7 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
     defaultCrs: entry.defaultCrs,
     fields,
     services,
+    flags,
     queryable,
     declaredCrs,
     coverage,

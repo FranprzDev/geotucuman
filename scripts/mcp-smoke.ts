@@ -78,6 +78,55 @@ await check('query_layer exposes the source license in describe_layer', async ()
   if (!textOf(result).includes('license')) throw new Error('describe_layer does not report the license');
 });
 
+await check('listTools exposes suggest_layers (9 tools)', async () => {
+  const { tools } = await client.listTools();
+  const names = new Set(tools.map((t) => t.name));
+  if (!names.has('suggest_layers')) throw new Error('missing tool suggest_layers');
+});
+
+await check('suggest_layers suggests riego/pozos layers with rationale, services, evidence and noCoverage', async () => {
+  const result = await client.callTool({
+    name: 'suggest_layers',
+    arguments: { goal: 'quiero armar un mapa de riego y pozos', limit: 5 },
+  });
+  const parsed = JSON.parse(textOf(result)) as {
+    candidates?: Array<{ typeName: string; rationale?: string; services?: unknown[]; evidence?: unknown }>;
+    noCoverage?: unknown[];
+  };
+  const candidates = parsed.candidates ?? [];
+  if (!candidates.some((c) => /canales|pozos/i.test(c.typeName))) {
+    throw new Error('no Canales/Pozos candidate for a riego y pozos goal');
+  }
+  for (const c of candidates) {
+    if (!c.rationale || !Array.isArray(c.services) || !c.evidence) {
+      throw new Error(`candidate ${c.typeName} lacks rationale/services/evidence`);
+    }
+  }
+  if (!Array.isArray(parsed.noCoverage)) throw new Error('missing noCoverage array');
+});
+
+await check('serviceType filter never crosses WFS/WMS equivalence', async () => {
+  const wms = JSON.parse(
+    textOf(await client.callTool({ name: 'search_layers', arguments: { query: 'area protegida', serviceType: 'wms' } })),
+  ) as { layers?: Array<{ typeName: string }> };
+  if ((wms.layers ?? []).some((l) => l.typeName.startsWith('ign:'))) {
+    throw new Error('WFS-only IGN layer returned under a WMS filter');
+  }
+  const wfs = JSON.parse(
+    textOf(await client.callTool({ name: 'search_layers', arguments: { query: 'area protegida', serviceType: 'wfs' } })),
+  ) as { layers?: Array<{ typeName: string }> };
+  if (!(wfs.layers ?? []).some((l) => l.typeName.startsWith('ign:'))) {
+    throw new Error('IGN WFS layer missing under the WFS filter');
+  }
+});
+
+await check('describe_layer describes a WMS-only layer without requiring a WFS schema', async () => {
+  const result = await client.callTool({ name: 'describe_layer', arguments: { typeName: 'rides:Pozos_de_agua' } });
+  const parsed = JSON.parse(textOf(result)) as { error?: string; services?: unknown[] };
+  if (parsed.error) throw new Error(parsed.error);
+  if (!Array.isArray(parsed.services)) throw new Error('WMS-only card lacks services');
+});
+
 await check('consultar_capa alias preserves the Spanish contract (old keys + old tag)', async () => {
   const pending = await client.callTool({ name: 'consultar_capa', arguments: { typeName: 'dgct:parcelas' } });
   if (!textOf(pending).includes('describe-antes-de-consultar')) {

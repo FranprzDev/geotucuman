@@ -1,6 +1,7 @@
 import { z } from 'zod';
 import type { InferSchema, ToolMetadata } from 'xmcp';
 import { loadCatalog, normalize } from '../catalog.js';
+import { layerFlags } from '../lib/flags.js';
 import type { CatalogEntry } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { ServiceType } from '../service-type.js';
@@ -126,7 +127,7 @@ function rationale(candidate: Candidate): string {
   return fields.length > 0 ? `${match} (${fields.join(', ')}).` : `${match}.`;
 }
 
-export async function suggestLayersHandler({ goal, serviceType, limit }: InferSchema<typeof schema>) {
+export async function suggestLayersHandler({ goal, serviceType, limit = 10 }: { goal: string; serviceType?: ServiceType; limit?: number }) {
   const catalog = loadCatalog();
   const goalTerms = Array.from(new Set(tokenize(goal)));
   const expansion = topicExpansion(goalTerms);
@@ -209,6 +210,7 @@ export async function suggestLayersHandler({ goal, serviceType, limit }: InferSc
         source: entry.source,
         rationale: rationale(candidate),
         services,
+        flags: layerFlags(entry, catalog.sources),
         evidence: {
           verifiedAt: entry.verifiedAt,
           sourceStatus: source?.status ?? null,

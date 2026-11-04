@@ -3,7 +3,7 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoTucumán — MCP de geodatos públicos de Tucumán</title>
+<title>geoMCP — MCP de geodatos públicos de Tucumán</title>
 <meta name="description" content="Un servidor MCP open source que conecta tu agente de IA con los geodatos públicos de Tucumán: descubre qué capas existen y las consulta en vivo en los servicios oficiales.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>
@@ -170,9 +170,9 @@
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="GeoTucumán, inicio">
+    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>GeoTucumán</span>
+      <span>geoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html">Capas</a>
@@ -192,7 +192,7 @@
         <a class="btn primary" href="./capas.html">Ver las 543 capas <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
-      <p class="hero-note">4 fuentes oficiales (WFS y WMS) + la API Georef · Catálogo verificado el 2026-11-03</p>
+      <p class="hero-note">4 fuentes oficiales (WFS y WMS) + la API Georef · Catálogo verificado el 2026-11-04</p>
     </div>
     <div class="hero-visual">
       <div class="map-card">
@@ -223,7 +223,7 @@
         </ul>
       </div>
     </div>
-    <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-11-03.</p>
+    <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el 2026-11-04.</p>
     <h3 class="card-title">Cinco herramientas</h3>
     <div class="toolgrid">
       <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
@@ -242,7 +242,7 @@
 cd geotucuman
 npm install</pre></span></li>
       <li class="reveal"><span><span class="step-title">Compilá el servidor</span><pre class="code">npm run build</pre><span class="hint">Genera dist/stdio.js y dist/http.js con xmcp.</span></span></li>
-      <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
+      <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geomcp": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
       <li class="reveal"><span><span class="step-title">Listo</span>: las cinco herramientas quedan disponibles en tu agente.</span></li>
     </ol>
     <p class="hint">Corre local por stdio. También compila un transporte HTTP (npm run start:http) pensado para hosting futuro: hoy no hay un servidor remoto público.</p>
@@ -268,24 +268,24 @@ npm install</pre></span></li>
     <h2 id="fuentes">Cuatro fuentes oficiales, un catálogo honesto</h2>
     <p>Hoy el catálogo embebido descubre 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-04</span></div>
       <p class="org"><span class="src src-geosplan">Geosplan</span> Secretaría de Estado de Gestión Pública y Planeamiento, Tucumán</p>
       <code>http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs</code>
     </div>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-04</span></div>
       <p class="org"><span class="src src-dgct">Catastro (DGCT)</span> Dirección General de Catastro (DGCT), Tucumán</p>
       <code>http://200.49.89.203/geoserver/dgct/wfs</code>
-      <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el 2026-11-03).</p>
+      <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el 2026-11-04).</p>
     </div>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-04</span></div>
       <p class="org"><span class="src src-ign">IGN</span> Instituto Geográfico Nacional (IGN), Argentina</p>
       <code>https://wms.ign.gob.ar/geoserver/ows</code>
       <p class="notice">El DNS del IGN es intermitente: estuvo caído el 31/10/2026 (ver <a href="https://github.com/FranprzDev/geotucuman/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>) y volvió. Si cae, el catálogo preserva el último snapshot.</p>
     </div>
     <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-03</span></div>
+      <div class="status"><span class="dot live"></span><span>actualizado 2026-11-04</span></div>
       <p class="org"><span class="src src-rides">RIDES</span> Ministerio de Producción, Tucumán (RIDES)</p>
       <code>https://rides.producciontucuman.gob.ar/servicios-wms/</code>
       <p class="hint">9 servicios WMS temáticos (ArcGIS); solo imágenes de mapa, sin vectores WFS.</p>
@@ -305,7 +305,7 @@ npm install</pre></span></li>
   </section>
 
   <footer class="site">
-    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el 2026-11-03 · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.
+    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el 2026-11-04 · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.
   </footer>
 </div>
 </main>

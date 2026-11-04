@@ -1,5 +1,5 @@
 {
-  "name": "geotucuman",
+  "name": "geomcp",
   "version": "0.1.0",
   "description": "MCP for discovering and querying public geodata of Tucuman, Argentina",
   "type": "module",

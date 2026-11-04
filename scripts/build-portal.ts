@@ -348,8 +348,8 @@ const catalogHtml = `<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoTucumán — Índice de capas descubribles</title>
-<meta name="description" content="Índice de capas descubribles de GeoTucumán: qué geodatos públicos existen en los servicios oficiales de Tucumán, quién los publica y de cuándo son.">
+<title>geoMCP — Índice de capas descubribles</title>
+<meta name="description" content="Índice de capas descubribles de geoMCP: qué geodatos públicos existen en los servicios oficiales de Tucumán, quién los publica y de cuándo son.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>${BASE_CSS}${CATALOG_CSS}
 </style>
@@ -358,9 +358,9 @@ const catalogHtml = `<!DOCTYPE html>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="GeoTucumán, inicio">
+    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>GeoTucumán</span>
+      <span>geoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
@@ -391,7 +391,7 @@ const catalogHtml = `<!DOCTYPE html>
   <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
   <p class="hint">Cada capa se consulta con la herramienta query_layer del MCP, o directo en el servicio oficial del organismo que la publica.</p>
   <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
-  <p class="scope">GeoTucumán descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
+  <p class="scope">geoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid">${cards}
   </div>
   ${licensesDetails}
@@ -459,7 +459,7 @@ const landingHtml = `<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoTucumán — MCP de geodatos públicos de Tucumán</title>
+<title>geoMCP — MCP de geodatos públicos de Tucumán</title>
 <meta name="description" content="Un servidor MCP open source que conecta tu agente de IA con los geodatos públicos de Tucumán: descubre qué capas existen y las consulta en vivo en los servicios oficiales.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>${BASE_CSS}${LANDING_CSS}
@@ -469,9 +469,9 @@ const landingHtml = `<!DOCTYPE html>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="GeoTucumán, inicio">
+    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>GeoTucumán</span>
+      <span>geoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html">Capas</a>
@@ -541,7 +541,7 @@ const landingHtml = `<!DOCTYPE html>
 cd geotucuman
 npm install</pre></span></li>
       <li class="reveal"><span><span class="step-title">Compilá el servidor</span><pre class="code">npm run build</pre><span class="hint">Genera dist/stdio.js y dist/http.js con xmcp.</span></span></li>
-      <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geotucuman": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
+      <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geomcp": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
       <li class="reveal"><span><span class="step-title">Listo</span>: las cinco herramientas quedan disponibles en tu agente.</span></li>
     </ol>
     <p class="hint">Corre local por stdio. También compila un transporte HTTP (npm run start:http) pensado para hosting futuro: hoy no hay un servidor remoto público.</p>

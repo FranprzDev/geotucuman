@@ -8,7 +8,6 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const cleanText = (s: string) => s.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 
 const REPO = 'https://github.com/FranprzDev/geotucuman';
-const CAPTURE_DATE = catalog.generatedAt.slice(0, 10);
 
 const SOURCE_LABEL: Record<string, string> = {
   geosplan: 'Planeamiento (Geosplan) - Tucuman',
@@ -23,27 +22,6 @@ const SOURCE_ORG: Record<string, string> = {
   ign: 'Instituto Geográfico Nacional (IGN), Argentina',
   rides: 'Ministerio de Producción, Tucumán (RIDES)',
 };
-
-const SOURCE_ENDPOINT: Record<string, string> = {
-  geosplan: 'http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs',
-  dgct: 'http://200.49.89.203/geoserver/dgct/wfs',
-  ign: 'https://wms.ign.gob.ar/geoserver/ows',
-  rides: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
-};
-
-/** Honest status per source: live = green, preserved = amber. */
-function statusKind(id: string): 'live' | 'preserved' {
-  const s = catalog.sources[id];
-  return s && s.status === 'live' ? 'live' : 'preserved';
-}
-
-function statusText(id: string): string {
-  const s = catalog.sources[id];
-  if (!s) return '';
-  return s.status === 'live'
-    ? `actualizado ${s.fetchedAt.slice(0, 10)}`
-    : `snapshot del ${s.fetchedAt.slice(0, 10)}`;
-}
 
 const counts: Record<string, number> = { geosplan: 0, dgct: 0, ign: 0, rides: 0 };
 for (const l of catalog.layers) counts[l.source] = (counts[l.source] ?? 0) + 1;
@@ -161,7 +139,7 @@ const BASE_CSS = `
     --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.16);
     --brand: #1fb6d4; --brand-bright: #7fe3f2; --brand-deep: #0d3b4f;
     --radius: 16px; --radius-sm: 12px;
-    --shadow: 0 24px 70px rgba(0,0,0,.5);
+    --shadow: 0 2px 10px rgba(0,0,0,.3);
     --header-h: 68px;
     color-scheme: dark;
   }
@@ -256,28 +234,32 @@ const BASE_CSS = `
 /** Landing styles (explains the MCP). */
 const LANDING_CSS = `
   .hero { position: relative; overflow: hidden; padding: clamp(56px, 9vw, 104px) 20px clamp(48px, 7vw, 84px); }
-  .hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 90%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.26), transparent 64%); pointer-events: none; }
+  .hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 90%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.14), transparent 62%); pointer-events: none; }
   .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: clamp(34px, 6vw, 64px); align-items: center; }
   @media (min-width: 920px) { .hero-grid { grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr); } }
-  .kicker { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--brand-bright); margin: 0 0 18px; font-weight: 700; }
-  .kicker::before { content: ""; width: 18px; height: 1px; background: var(--brand); box-shadow: 0 0 12px var(--brand); }
+  .kicker { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 600; }
+  .kicker::before { content: ""; width: 18px; height: 1px; background: var(--brand); }
   .hero h1 { font-size: clamp(38px, 7.4vw, 76px); line-height: .98; letter-spacing: -.045em; margin: 0 0 22px; font-weight: 800; }
   .hero h1 span { display: block; }
   .hero h1 .grad { padding-bottom: .08em; background: linear-gradient(90deg, #ffffff 0%, #b9f4fb 45%, var(--brand) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero .promise { font-size: clamp(16px, 2.2vw, 19px); max-width: 620px; color: #aab8c4; margin: 0 0 30px; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .hero-note { margin: 18px 0 0; font-size: 12.5px; color: var(--muted-2); }
   .hero-visual { position: relative; }
-  .map-card { position: relative; border-radius: 24px; padding: 10px; background: linear-gradient(160deg, rgba(31,182,212,.35), rgba(255,255,255,.06) 35%, rgba(255,255,255,.02)); border: 1px solid rgba(127,227,242,.25); box-shadow: 0 30px 90px rgba(0,0,0,.55), 0 0 70px rgba(31,182,212,.2); }
-  .hero-map-img { display: block; width: 100%; max-width: none; border-radius: 16px; margin: 0 auto; }
+  .map-card { position: relative; border-radius: 18px; padding: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--line-strong); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
+  .hero-map-img { display: block; width: 100%; max-width: none; border-radius: 12px; margin: 0 auto; }
   .map-cap { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 0; }
   .map-cap a { color: var(--muted); }
   .map-cap a:hover { color: var(--brand-bright); }
+  .section-open { padding: clamp(34px, 6vw, 62px) 0 clamp(12px, 2vw, 18px); margin: 0; border-top: 1px solid var(--line); }
+  .section-surface { margin: 26px 0 0; padding: clamp(24px, 4vw, 36px); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
+  .section-open > .section-head, .section-surface > .section-head { margin-bottom: 8px; }
+  .eyebrow { font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 10px; }
+  .panel > h2, .section-head h2, .section-open > h2, .section-surface > h2 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; letter-spacing: -.03em; font-weight: 720; color: var(--ink); margin: 0 0 16px; max-width: 40ch; }
   .exchange { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
   @media (min-width: 760px) { .exchange { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .exchange-card { border-radius: var(--radius-sm); padding: 18px 20px; border: 1px solid var(--line); background: var(--surface-2); }
-  .exchange-card.request { background: linear-gradient(145deg, rgba(31,182,212,.22), rgba(13,59,79,.42)); border-color: rgba(127,227,242,.28); box-shadow: inset 0 1px 0 rgba(255,255,255,.08), 0 14px 40px rgba(0,0,0,.25); }
-  .exchange-card.result { background: rgba(10,12,20,.55); }
+  .exchange-card { padding: 18px 20px; border: 1px solid var(--line); background: var(--surface-2); }
+  .exchange-card.request { border-radius: 14px 14px 14px 4px; background: var(--surface-2); border-left: 3px solid var(--brand); }
+  .exchange-card.result { border-radius: 14px 14px 4px 14px; background: rgba(10,12,20,.5); }
+  .exchange-card.result .exchange-label { color: var(--muted); }
   .exchange-label { margin: 0 0 12px; font-size: 11.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--brand-bright); font-weight: 700; }
   .exchange-card blockquote { margin: 0; font-size: clamp(17px, 2.3vw, 21px); line-height: 1.4; letter-spacing: -.015em; color: var(--ink); font-weight: 600; }
   .layer-hits { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
@@ -285,28 +267,36 @@ const LANDING_CSS = `
   .layer-hits li:last-child { padding-bottom: 0; border-bottom: 0; }
   .hit-title { font-size: 14px; font-weight: 650; color: var(--ink); }
   .hit-meta { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
-  .example-note { margin: 14px 0 0; font-size: 12px; color: var(--muted-2); }
   .toolgrid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
   @media (min-width: 760px) { .toolgrid { grid-template-columns: repeat(2, 1fr); } }
-  .tool { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 14px 16px; background: rgba(255,255,255,.025); }
+  .tool { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255,255,255,.02); }
+  .tool:nth-child(3n+2) { border-radius: 6px; }
+  .tool:nth-child(3n) { border-radius: 12px 12px 4px 12px; }
   .tool code { display: inline-block; font-weight: 700; margin-bottom: 5px; }
   .tool p { margin: 0; font-size: 13.5px; }
   .steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
   .steps li { display: flex; gap: 12px; align-items: flex-start; margin: 18px 0; font-size: 14.5px; color: #a6b4c0; }
-  .steps li::before { counter-increment: s; content: counter(s); flex: 0 0 30px; height: 30px; width: 30px; border-radius: 50%; background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; box-shadow: 0 0 18px rgba(31,182,212,.3); }
+  .steps li::before { counter-increment: s; content: counter(s); flex: 0 0 30px; height: 30px; width: 30px; border-radius: 50%; background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
   .steps li > span { min-width: 0; flex: 1; }
   .step-title { font-weight: 650; color: var(--ink); }
   pre.code { background: #070910; color: #d8f7fc; border: 1px solid var(--line); padding: 13px 15px; border-radius: 10px; overflow: auto; font-size: 12.5px; line-height: 1.55; margin: 8px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-  .source-card { border: 1px solid var(--line); border-radius: var(--radius-sm); padding: 15px 17px; margin: 10px 0; background: rgba(255,255,255,.025); }
-  .source-card .org { margin: 7px 0 5px; font-size: 14px; color: #b9c5cf; }
-  .source-card code { display: inline-block; margin-top: 3px; }
-  .source-card .hint, .source-card .notice { margin-top: 8px; }
-  .notice { font-size: 12.5px; color: #fcd34d; line-height: 1.55; padding: 10px 12px; border: 1px solid rgba(251,191,36,.22); border-radius: 10px; background: rgba(251,191,36,.07); }
-  .notice a { color: #fde68a; }
-  .status { display: flex; align-items: center; gap: 7px; font-size: 12.5px; color: var(--muted); }
-  .dot { width: 9px; height: 9px; border-radius: 50%; flex: 0 0 9px; }
-  .dot.live { background: #34d399; box-shadow: 0 0 10px rgba(52,211,153,.6); }
-  .dot.preserved { background: #fbbf24; box-shadow: 0 0 10px rgba(251,191,36,.55); }
+  .logo-marquee { position: relative; margin: 20px 0 6px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
+  .logo-track { display: flex; align-items: stretch; gap: 14px; width: max-content; margin: 0; padding: 4px 2px; list-style: none; animation: logo-scroll 38s linear infinite; }
+  .logo-marquee:hover .logo-track, .logo-marquee:focus-within .logo-track { animation-play-state: paused; }
+  @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+  .logo-item { flex: 0 0 auto; }
+  .logo-link { display: flex; flex-direction: column; align-items: center; gap: 7px; text-decoration: none; }
+  .logo-chip { display: flex; align-items: center; justify-content: center; width: 176px; height: 72px; padding: 12px 16px; background: #fff; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius-sm); box-shadow: 0 6px 18px rgba(0,0,0,.28); transition: transform .2s ease, box-shadow .2s ease; }
+  .logo-link:hover .logo-chip { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.4); }
+  .logo-chip img { max-width: 100%; max-height: 46px; width: auto; height: auto; object-fit: contain; display: block; }
+  .logo-name { font-size: 11.5px; font-weight: 600; color: var(--muted); text-align: center; }
+  .logo-link:hover .logo-name { color: var(--brand-bright); }
+  @media (prefers-reduced-motion: reduce) {
+    .logo-marquee { overflow: visible; -webkit-mask-image: none; mask-image: none; }
+    .logo-track { animation: none; transform: none; flex-wrap: wrap; justify-content: center; width: auto; }
+    .logo-track > [aria-hidden="true"] { display: none; }
+    .logo-link:hover .logo-chip { transform: none; }
+  }
   .tagline-section { padding: clamp(56px, 9vw, 110px) 20px; }
   .tagline { max-width: 980px; margin: 0 auto; text-align: center; font-size: clamp(28px, 5.4vw, 58px); line-height: 1.12; letter-spacing: -.04em; font-weight: 780; color: var(--ink); }
   .tagline-word { color: inherit; transition: color .3s ease; }
@@ -343,13 +333,33 @@ const siteFooter = `<footer class="site">
     Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el ${esc(catalog.generatedAt.slice(0, 10))} · <a href="${REPO}">Repositorio en GitHub</a>.
   </footer>`;
 
+/** Official source logos for the landing marquee (assets are pre-downloaded in docs/assets/logos/). */
+const PORTAL_LOGOS = [
+  { src: './assets/logos/geosplan.png', alt: 'Logo de Geosplan, Secretaría de Gestión Pública y Planeamiento de Tucumán', name: 'Geosplan · Planeamiento', href: 'http://geosplan.tucuman.gov.ar/' },
+  { src: './assets/logos/catastro.png', alt: 'Logo de la Dirección General de Catastro de Tucumán (DGCT)', name: 'Catastro (DGCT)', href: 'https://catastrotucuman.gov.ar/' },
+  { src: './assets/logos/ign.svg', alt: 'Logo del Instituto Geográfico Nacional (IGN)', name: 'IGN', href: 'https://www.ign.gob.ar/', chipBg: '#0b3d66' },
+  { src: './assets/logos/rides.png', alt: 'Logo de RIDES, Ministerio de Producción de Tucumán', name: 'RIDES', href: 'https://rides.producciontucuman.gob.ar/servicios-wms/' },
+  { src: './assets/logos/georef.svg', alt: 'Logo de la API Georef, datos.gob.ar', name: 'API Georef', href: 'https://www.argentina.gob.ar/georef' },
+];
+
+/** A logo chip. Duplicated copy (hidden=true) feeds the seamless CSS loop without duplicating accessibility/focus. */
+function logoItem(l: (typeof PORTAL_LOGOS)[number], hidden: boolean): string {
+  const a = hidden ? ' tabindex="-1"' : '';
+  const li = hidden ? ' aria-hidden="true"' : '';
+  const bg = (l as { chipBg?: string }).chipBg;
+  return `<li class="logo-item"${li}><a class="logo-link" href="${l.href}"${a}><span class="logo-chip"${bg ? ` style="background:${bg}"` : ''}><img src="${l.src}" alt="${esc(l.alt)}" loading="lazy"></span><span class="logo-name">${esc(l.name)}</span></a></li>`;
+}
+const logoItems = PORTAL_LOGOS.map(l => logoItem(l, false)).join('\n        ');
+const logoItemsDup = PORTAL_LOGOS.map(l => logoItem(l, true)).join('\n        ');
+
+
 const catalogHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>geoMCP — Índice de capas descubribles</title>
-<meta name="description" content="Índice de capas descubribles de geoMCP: qué geodatos públicos existen en los servicios oficiales de Tucumán, quién los publica y de cuándo son.">
+<title>GeoMCP — Índice de capas descubribles</title>
+<meta name="description" content="Índice de capas descubribles de GeoMCP: qué geodatos públicos existen en los servicios oficiales, quién los publica y de cuándo son.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>${BASE_CSS}${CATALOG_CSS}
 </style>
@@ -358,9 +368,9 @@ const catalogHtml = `<!DOCTYPE html>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
+    <a class="brand" href="./index.html" aria-label="GeoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>geoMCP</span>
+      <span>GeoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
@@ -391,7 +401,7 @@ const catalogHtml = `<!DOCTYPE html>
   <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
   <p class="hint">Cada capa se consulta con la herramienta query_layer del MCP, o directo en el servicio oficial del organismo que la publica.</p>
   <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
-  <p class="scope">geoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
+  <p class="scope">GeoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid">${cards}
   </div>
   ${licensesDetails}
@@ -459,8 +469,8 @@ const landingHtml = `<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>geoMCP — MCP de geodatos públicos de Tucumán</title>
-<meta name="description" content="Un servidor MCP open source que conecta tu agente de IA con los geodatos públicos de Tucumán: descubre qué capas existen y las consulta en vivo en los servicios oficiales.">
+<title>GeoMCP — MCP de geodatos públicos</title>
+<meta name="description" content="Un servidor MCP open source que conecta tu agente de IA con los geodatos públicos: descubre qué capas existen y las consulta en vivo en los servicios oficiales.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>${BASE_CSS}${LANDING_CSS}
 </style>
@@ -469,9 +479,9 @@ const landingHtml = `<!DOCTYPE html>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
+    <a class="brand" href="./index.html" aria-label="GeoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>geoMCP</span>
+      <span>GeoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html">Capas</a>
@@ -486,12 +496,9 @@ const landingHtml = `<!DOCTYPE html>
     <div class="hero-copy">
       <p class="kicker">Servidor MCP · Código abierto (MIT)</p>
       <h1 id="hero-title"><span>Del “quiero un mapa”</span><span class="grad">a la capa oficial.</span></h1>
-      <p class="promise">Descubrí qué capas existen, quién las publica y de cuándo son, y consultalas en el servicio oficial. Sin copiar ni alojar datos.</p>
       <div class="hero-cta">
-        <a class="btn primary" href="./capas.html">Ver las ${catalog.layers.length} capas <span aria-hidden="true">→</span></a>
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
-      <p class="hero-note">4 fuentes oficiales (WFS y WMS) + la API Georef · Catálogo verificado el ${esc(CAPTURE_DATE)}</p>
     </div>
     <div class="hero-visual">
       <div class="map-card">
@@ -502,7 +509,7 @@ const landingHtml = `<!DOCTYPE html>
   </div>
 </section>
 <div class="wrap">
-  <section class="panel reveal" aria-labelledby="que-hace">
+  <section class="section-open reveal" aria-labelledby="que-hace">
     <div class="section-head">
       <p class="eyebrow">Qué hace</p>
       <h2 id="que-hace">Del pedido a la capa oficial</h2>
@@ -522,7 +529,6 @@ const landingHtml = `<!DOCTYPE html>
         </ul>
       </div>
     </div>
-    <p class="example-note">Ejemplo real sobre el catálogo embebido, verificado el ${esc(CAPTURE_DATE)}.</p>
     <h3 class="card-title">Cinco herramientas</h3>
     <div class="toolgrid">
       <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
@@ -552,55 +558,17 @@ npm install</pre></span></li>
     <p class="tagline" data-tagline>No dibuja mapas ni aloja datos: descubre las capas, dice quién las publica y de cuándo son, y las consulta en la fuente oficial.</p>
   </section>
 
-  <section class="panel reveal" aria-labelledby="limites">
-    <p class="eyebrow">Límites claros</p>
-    <h2 id="limites">Lo que no hace, dicho sin vueltas</h2>
-    <ul>
-      <li>No es un SIG ni un visor: no arma mapas ni análisis; eso lo hacés vos con los datos.</li>
-      <li>No aloja ni redistribuye datasets: todas las consultas van a los servicios oficiales en vivo.</li>
-      <li>No fija licencias por capa: los GetCapabilities no las publican; los términos de cada organismo están en el <a href="./capas.html#licencias">índice de capas</a>.</li>
-    </ul>
-  </section>
-
-  <section class="panel reveal" aria-labelledby="fuentes">
+  <section class="section-surface reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
-    <h2 id="fuentes">Cuatro fuentes oficiales, un catálogo honesto</h2>
+    <h2 id="fuentes">Cuatro fuentes oficiales y geocodificación</h2>
     <p>Hoy el catálogo embebido descubre ${esc(layersLine)}, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
-    <div class="source-card reveal">
-      <div class="status"><span class="dot ${statusKind('geosplan')}"></span><span>${esc(statusText('geosplan'))}</span></div>
-      <p class="org"><span class="src src-geosplan">Geosplan</span> ${esc(SOURCE_ORG.geosplan)}</p>
-      <code>${esc(SOURCE_ENDPOINT.geosplan)}</code>
-    </div>
-    <div class="source-card reveal">
-      <div class="status"><span class="dot ${statusKind('dgct')}"></span><span>${esc(statusText('dgct'))}</span></div>
-      <p class="org"><span class="src src-dgct">Catastro (DGCT)</span> ${esc(SOURCE_ORG.dgct)}</p>
-      <code>${esc(SOURCE_ENDPOINT.dgct)}</code>
-      <p class="hint">Documentado como experimental desde 2012; el endpoint es intermitente (cayó y volvió el ${CAPTURE_DATE}).</p>
-    </div>
-    <div class="source-card reveal">
-      <div class="status"><span class="dot ${statusKind('ign')}"></span><span>${esc(statusText('ign'))}</span></div>
-      <p class="org"><span class="src src-ign">IGN</span> ${esc(SOURCE_ORG.ign)}</p>
-      <code>${esc(SOURCE_ENDPOINT.ign)}</code>
-      <p class="notice">El DNS del IGN es intermitente: estuvo caído el 31/10/2026 (ver <a href="${REPO}/blob/main/diagnostics/2026-10-31-ign-dns.md">diagnostics/2026-10-31-ign-dns.md</a>) y volvió. Si cae, el catálogo preserva el último snapshot.</p>
-    </div>
-    <div class="source-card reveal">
-      <div class="status"><span class="dot ${statusKind('rides')}"></span><span>${esc(statusText('rides'))}</span></div>
-      <p class="org"><span class="src src-rides">RIDES</span> ${esc(SOURCE_ORG.rides)}</p>
-      <code>${esc(SOURCE_ENDPOINT.rides)}</code>
-      <p class="hint">9 servicios WMS temáticos (ArcGIS); solo imágenes de mapa, sin vectores WFS.</p>
-    </div>
-    <div class="source-card reveal">
-      <div class="status"><span class="dot live"></span><span>geocodificación en vivo</span></div>
-      <p class="org"><span class="src src-georef">Georef</span> Geocodificación (API Georef)</p>
-      <code>https://apis.datos.gob.ar/georef/api/</code>
+    <div class="logo-marquee">
+      <ul class="logo-track" aria-label="Fuentes oficiales de datos y geocodificación">
+        ${logoItems}
+        ${logoItemsDup}
+      </ul>
     </div>
     <p class="scope">Cobertura: hoy 4 fuentes oficiales (dgct, Geosplan, IGN y RIDES, vía WFS y WMS) + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
-  </section>
-
-  <section class="panel reveal" aria-labelledby="catalogo-cta">
-    <p class="eyebrow">Catálogo</p>
-    <h2 id="catalogo-cta">Son las capas que search_layers puede encontrar hoy.</h2>
-    <p><a class="btn primary" href="./capas.html">Ver las ${catalog.layers.length} capas <span aria-hidden="true">→</span></a></p>
   </section>
 
   ${siteFooter}

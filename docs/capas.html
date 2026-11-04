@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>geoMCP — Índice de capas descubribles</title>
-<meta name="description" content="Índice de capas descubribles de geoMCP: qué geodatos públicos existen en los servicios oficiales de Tucumán, quién los publica y de cuándo son.">
+<title>GeoMCP — Índice de capas descubribles</title>
+<meta name="description" content="Índice de capas descubribles de GeoMCP: qué geodatos públicos existen en los servicios oficiales, quién los publica y de cuándo son.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
@@ -14,7 +14,7 @@
     --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.16);
     --brand: #1fb6d4; --brand-bright: #7fe3f2; --brand-deep: #0d3b4f;
     --radius: 16px; --radius-sm: 12px;
-    --shadow: 0 24px 70px rgba(0,0,0,.5);
+    --shadow: 0 2px 10px rgba(0,0,0,.3);
     --header-h: 68px;
     color-scheme: dark;
   }
@@ -128,9 +128,9 @@
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="geoMCP, inicio">
+    <a class="brand" href="./index.html" aria-label="GeoMCP, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>geoMCP</span>
+      <span>GeoMCP</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
@@ -161,7 +161,7 @@
   <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
   <p class="hint">Cada capa se consulta con la herramienta query_layer del MCP, o directo en el servicio oficial del organismo que la publica.</p>
   <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
-  <p class="scope">geoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
+  <p class="scope">GeoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid"><article class="card" data-src="geosplan" data-t="aeropuerto benjamín matienzo wfs_geosplan:aeropuerto" data-d="ubicación del aeropuerto benjamín matienzo de la provincia de tucumán." data-k="wfs geosplan aeropuerto benjamín matienzo">
     <h3 class="card-title">Aeropuerto Benjamín Matienzo</h3>
     <p class="card-abs">Ubicación del Aeropuerto Benjamín Matienzo de la Provincia de Tucumán.</p>

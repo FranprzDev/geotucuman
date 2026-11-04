@@ -300,7 +300,7 @@ const LANDING_CSS = `
   .tagline-section { padding: clamp(56px, 9vw, 110px) 20px; }
   .tagline { max-width: 980px; margin: 0 auto; text-align: center; font-size: clamp(28px, 5.4vw, 58px); line-height: 1.12; letter-spacing: -.04em; font-weight: 780; color: var(--ink); }
   .tagline-word { color: inherit; transition: color .3s ease; }
-  .tagline-ready .tagline-word { color: rgba(233,238,243,.16); }
+  .tagline-ready .tagline-word { color: rgba(233,238,243,.38); }
   .tagline-ready .tagline-word.is-lit { color: var(--ink); }
   .tagline-ready .tagline-word.is-lit.is-accent { color: var(--brand); }
   @media (max-width: 520px) { .hero { padding-inline: 16px; } }`;
@@ -615,7 +615,7 @@ if (tagline && !reduceMotion) {
     const rect = tagline.getBoundingClientRect();
     const vh = window.innerHeight || 800;
     const start = vh * 0.88;
-    const end = vh * 0.25 - rect.height;
+    const end = vh * 0.55 - rect.height;
     const progress = Math.min(1, Math.max(0, (start - rect.top) / Math.max(1, start - end)));
     const lit = Math.round(progress * wordEls.length);
     wordEls.forEach((word, i) => word.classList.toggle('is-lit', i < lit));

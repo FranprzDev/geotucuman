@@ -1,8 +1,8 @@
-# geoMCP
+# GeoMCP
 
-MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**, empezando por Tucumán, Argentina. Corre local por stdio con tu cliente (Claude Code, etc.).
+MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). Hoy el catálogo cubre fuentes oficiales de Tucumán, el IGN nacional y la API Georef.
 
-> Antes **GeoTucumán**; renombrado a **geoMCP** el 4/11/2026. El repositorio y la URL pública no cambian.
+> Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026. El repositorio y la URL pública no cambian.
 
 **Qué es:** una capa de descubrimiento y consulta sobre servicios oficiales WFS y WMS, más la API Georef.
 **Qué NO es:** un SIG completo, ni un visor, ni una copia de los datos. Consulta en vivo y cita la fuente.
@@ -19,27 +19,49 @@ MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos público
 
 Las capas WMS-only se buscan y describen igual (metadatos vía GetCapabilities); `query_layer` aplica a capas WFS.
 
-## Quickstart
+## Cómo usarlo
 
-```bash
-npm install
-npm run catalog   # genera data/catalog.json desde los GetCapabilities en vivo
-npm run smoke     # prueba end-to-end contra los servicios reales
-npm run portal    # genera docs/index.html (miniweb) y docs/capas.html (catalogo)
-npm run build && npm start   # build con xmcp (genera dist/stdio.js + dist/http.js) y servidor MCP por stdio (npm run start:http para http)
-```
+Requisitos: Node.js y npm.
 
-Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/tools/, transportes stdio y http (http disponible para hosting futuro, sin hosting configurado hoy).
+1. Clonar e instalar dependencias:
+
+   ```bash
+   git clone https://github.com/franprzdev/geotucuman.git
+   cd geotucuman
+   npm install
+   ```
+
+2. Compilar el servidor (xmcp genera `dist/stdio.js` y `dist/http.js`):
+
+   ```bash
+   npm run build
+   ```
+
+3. Configurar el cliente MCP (ej. Claude Code) apuntando al build por stdio:
+
+   ```json
+   { "mcpServers": { "geomcp": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }
+   ```
+
+4. Regenerar catálogo y portal cuando haga falta:
+
+   ```bash
+   npm run catalog   # genera data/catalog.json desde los GetCapabilities en vivo
+   npm run portal    # genera docs/index.html (miniweb) y docs/capas.html (catalogo)
+   ```
+
+Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm start` (server compilado por stdio) y `npm run start:http` (transporte http). Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/tools/, transportes stdio y http (http disponible para hosting futuro, sin hosting configurado hoy).
+
+### Ejemplos reales de uso
+
+- **Buscar capas por palabra clave** — `search_layers`: pedile "capas de aeropuerto en Tucumán" y devuelve coincidencias del catálogo embebido, por ejemplo `WFS_GEOSPLAN:aeropuerto` (título "Aeropuerto Benjamín Matienzo"), con `typeName`, fuente, endpoint y CRS por defecto.
+- **Sugerir capas desde un objetivo** — `suggest_layers`: "quiero armar un mapa de riego y pozos" devuelve candidatas puntuadas con su justificación, capacidades por servicio y evidencia de la fuente (determinista, sin LLM).
+- **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS: las WMS-only (por ejemplo las RIDES) son imágenes para display y no admiten GetFeature.
+- **Geocodificar texto libre** — `geocode`: "Yerba Buena, Tucumán" devuelve coordenadas vía la API nacional Georef (gratis, sin key).
 
 ## Web pública
 
 Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
-
-Config de cliente MCP (ej. Claude Code):
-
-```json
-{ "mcpServers": { "geomcp": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }
-```
 
 ## Fuentes (catálogo regenerado desde los GetCapabilities en vivo el 4/11/2026)
 

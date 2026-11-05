@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoMCP — MCP de geodatos públicos</title>
-<meta name="description" content="Un servidor MCP open source que conecta tu agente de IA con los geodatos públicos: descubre qué capas existen y las consulta en vivo en los servicios oficiales.">
+<title>GeoMCP — Geodatos públicos de Argentina para tu agente de IA</title>
+<meta name="description" content="GeoMCP: un servidor MCP open source que conecta tu agente de IA con los geodatos públicos de Argentina. Descubre qué capas existen, quién las publica y las consulta en vivo en los servicios oficiales.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
@@ -54,6 +54,7 @@
   .card { background: linear-gradient(180deg, rgba(22,26,39,.96), rgba(15,18,28,.97)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.3); padding: 18px 20px; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
   .card:hover { border-color: rgba(31,182,212,.36); transform: translateY(-2px); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
   h3.card-title { font-size: 17px; margin: 0 0 7px; color: var(--ink); line-height: 1.3; letter-spacing: -.01em; }
+  h3.card-title.tools-title { margin-top: 30px; }
   code.typename { font-size: 12px; word-break: break-all; display: inline-block; }
   .card-abs { font-size: 13.5px; color: #a6b4c0; margin: 8px 0; }
   .card-abs.dim { color: var(--muted-2); font-style: italic; }
@@ -198,14 +199,14 @@
   <div class="wrap hero-grid">
     <div class="hero-copy">
       <p class="kicker">Servidor MCP · Código abierto (MIT)</p>
-      <h1 id="hero-title"><span>Del “quiero un mapa”</span><span class="grad">a la capa oficial.</span></h1>
+      <h1 id="hero-title"><span>Los geodatos públicos de Argentina,</span><span class="grad">dentro de tu agente de IA.</span></h1>
       <div class="hero-cta">
         <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
       </div>
     </div>
     <div class="hero-visual">
       <div class="map-card">
-        <img class="hero-map-img" src="./assets/mapa-tucuman.jpg" alt="Mapa real de la provincia de Tucumán con su contorno destacado y la capital marcada">
+        <img class="hero-map-img" src="./assets/mapa-argentina.jpg" alt="Mapa de Argentina con su contorno destacado">
       </div>
       <p class="map-cap">Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></p>
     </div>
@@ -215,26 +216,26 @@
   <section class="section-open reveal" aria-labelledby="que-hace">
     <div class="section-head">
       <p class="eyebrow">Qué hace</p>
-      <h2 id="que-hace">Del pedido a la capa oficial</h2>
+      <h2 id="que-hace">Un ejemplo real</h2>
     </div>
     <div class="exchange">
       <div class="exchange-card request reveal">
-        <p class="exchange-label">El pedido</p>
-        <blockquote>«Quiero hacer un mapa de cultivos de soja en Tucumán.»</blockquote>
+        <p class="exchange-label">Vos le decís</p>
+        <blockquote>«Quiero un mapa de los ferrocarriles del país.»</blockquote>
       </div>
       <div class="exchange-card result reveal">
-        <p class="exchange-label">Lo que encuentra</p>
+        <p class="exchange-label">El agente encuentra</p>
         <ul class="layer-hits">
-          <li><span class="hit-title">Soja 2012-2013</span><span class="hit-meta"><span class="src src-geosplan">Geosplan</span> Dato: 2012-2013</span></li>
-          <li><span class="hit-title">Maíz 2012</span><span class="hit-meta"><span class="src src-geosplan">Geosplan</span> Dato: 2012</span></li>
-          <li><span class="hit-title">Citrus 2014</span><span class="hit-meta"><span class="src src-geosplan">Geosplan</span> Dato: 2014</span></li>
-          <li><span class="hit-title">Terreno para cultivo</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
+          <li><span class="hit-title">Ferrocarril</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
+          <li><span class="hit-title">Estación de ferrocarril</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
+          <li><span class="hit-title">Puente</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
+          <li><span class="hit-title">Indicador de kilómetros</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
         </ul>
       </div>
     </div>
-    <h3 class="card-title">Cinco herramientas</h3>
+    <h3 class="card-title tools-title">Cinco herramientas</h3>
     <div class="toolgrid">
-      <div class="tool reveal"><code>search_layers</code><p>Descubre qué capas existen por tema o palabra clave dentro del catálogo embebido.</p></div>
+      <div class="tool reveal"><code>search_layers</code><p>Busca capas por tema o palabra clave en el catálogo embebido.</p></div>
       <div class="tool reveal"><code>suggest_layers</code><p>Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM), con filtro opcional por tipo de servicio WFS/WMS.</p></div>
       <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
       <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
@@ -258,13 +259,14 @@ npm install</pre></span></li>
 
   <section class="tagline-section" aria-labelledby="tagline-title">
     <h2 id="tagline-title" class="sr-only">En una frase</h2>
-    <p class="tagline" data-tagline>No dibuja mapas ni aloja datos: descubre las capas, dice quién las publica y de cuándo son, y las consulta en la fuente oficial.</p>
+    <p class="tagline" data-tagline>Descubre la capa, dice quién la publica y de cuándo es, y la consulta en vivo en la fuente oficial. No dibuja mapas ni copia datos.</p>
   </section>
 
   <section class="section-surface reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
-    <h2 id="fuentes">Cuatro fuentes oficiales y geocodificación</h2>
-    <p>Hoy el catálogo embebido descubre 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas, generado desde los GetCapabilities en vivo (se preserva un snapshot si un endpoint cae).</p>
+    <h2 id="fuentes">De dónde salen los datos</h2>
+    <p>El catálogo embebido descubre hoy 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas, generado desde los GetCapabilities en vivo (si un endpoint cae, se conserva un snapshot).</p>
+    <p>IGN y la API Georef tienen cobertura nacional. Las fuentes provinciales integradas hoy son de Tucumán; sumar otra provincia es agregar su servicio WFS o WMS a la configuración.</p>
     <div class="logo-marquee">
       <ul class="logo-track" aria-label="Fuentes oficiales de datos y geocodificación">
         <li class="logo-item"><a class="logo-link" href="http://geosplan.tucuman.gov.ar/"><span class="logo-chip"><img src="./assets/logos/geosplan.png" alt="Logo de Geosplan, Secretaría de Gestión Pública y Planeamiento de Tucumán" loading="lazy"></span><span class="logo-name">Geosplan · Planeamiento</span></a></li>
@@ -279,7 +281,7 @@ npm install</pre></span></li>
         <li class="logo-item" aria-hidden="true"><a class="logo-link" href="https://www.argentina.gob.ar/georef" tabindex="-1"><span class="logo-chip"><img src="./assets/logos/georef.svg" alt="Logo de la API Georef, datos.gob.ar" loading="lazy"></span><span class="logo-name">API Georef</span></a></li>
       </ul>
     </div>
-    <p class="scope">Cobertura: hoy 4 fuentes oficiales (dgct, Geosplan, IGN y RIDES, vía WFS y WMS) + la API Georef. No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
+    <p class="scope">No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
   </section>
 
   <footer class="site">
@@ -310,7 +312,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 const tagline = document.querySelector('[data-tagline]');
 if (tagline && !reduceMotion) {
   const words = tagline.textContent.trim().split(/\s+/);
-  const accentWords = new Set(['dibuja', 'mapas', 'fuente', 'oficial']);
+  const accentWords = new Set(['descubre', 'capa', 'vivo', 'fuente', 'oficial']);
   tagline.textContent = '';
   const wordEls = words.map((word, index) => {
     const span = document.createElement('span');

@@ -271,7 +271,9 @@ const LANDING_CSS = `
   .hit-meta { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
   .toolgrid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
   @media (min-width: 760px) { .toolgrid { grid-template-columns: repeat(2, 1fr); } }
-  .tool { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255,255,255,.02); }
+  .tool { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255,255,255,.02); transition: border-color .2s ease; }
+  .tool:hover { border-color: rgba(31,182,212,.36); }
+  .tool-icon { width: 18px; height: 18px; color: var(--brand); margin-bottom: 8px; display: block; }
   .tool:nth-child(3n+2) { border-radius: 6px; }
   .tool:nth-child(3n) { border-radius: 12px 12px 4px 12px; }
   .tool .tool-name { display: block; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -.01em; }
@@ -326,7 +328,7 @@ const licensesDetails = `<details class="licenses" id="licencias">
 </details>`;
 
 const siteFooter = `<footer class="site">
-    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · Generado el ${esc(catalog.generatedAt.slice(0, 10))} · <a href="${REPO}">Repositorio en GitHub</a>.
+    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="${REPO}">Repositorio en GitHub</a>.
   </footer>`;
 
 /** Official source logos for the landing marquee (assets are pre-downloaded in docs/assets/logos/). */
@@ -528,10 +530,10 @@ const landingHtml = `<!DOCTYPE html>
     </div>
     <h3 class="card-title tools-title">Qué podés pedirle</h3>
     <div class="toolgrid">
-      <div class="tool reveal"><strong class="tool-name">Buscá por tema</strong><p>Encontrá capas por palabra clave: agua, soja, ferrocarriles, barrios.</p></div>
-      <div class="tool reveal"><strong class="tool-name">Contale tu idea</strong><p>Decile qué mapa querés hacer y te sugiere qué capas convienen.</p></div>
-      <div class="tool reveal"><strong class="tool-name">Consultá en vivo</strong><p>Tu agente trae los datos directo de la fuente oficial, con quién los publica y de cuándo son.</p></div>
-      <div class="tool reveal"><strong class="tool-name">Ubicá direcciones</strong><p>Convierte una dirección en coordenadas con Georef, gratis y sin clave.</p></div>
+      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><strong class="tool-name">Buscá por tema</strong><p>Encontrá capas por palabra clave: agua, soja, ferrocarriles, barrios.</p></div>
+      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><strong class="tool-name">Contale tu idea</strong><p>Decile qué mapa querés hacer y te sugiere qué capas convienen.</p></div>
+      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><strong class="tool-name">Consultá en vivo</strong><p>Tu agente trae los datos directo de la fuente oficial, con quién los publica y de cuándo son.</p></div>
+      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><strong class="tool-name">Ubicá direcciones</strong><p>Convierte una dirección en coordenadas con Georef, gratis y sin clave.</p></div>
     </div>
   </section>
 
@@ -553,15 +555,15 @@ const landingHtml = `<!DOCTYPE html>
   <section class="section-surface reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
     <h2 id="fuentes">De dónde salen los datos</h2>
-    <p>El catálogo descubre hoy ${esc(layersLine)} y se actualiza desde los servicios oficiales en vivo.</p>
-    <p>IGN y Georef cubren todo el país. Las fuentes provinciales integradas hoy son de Tucumán; sumar otra provincia es agregar su servicio al catálogo.</p>
+    <p>Hoy descubre ${catalog.layers.length} capas de fuentes oficiales y se actualiza desde los servicios en vivo.</p>
+    <p>IGN y Georef cubren todo el país; las fuentes provinciales de hoy son de Tucumán.</p>
     <div class="logo-marquee">
       <ul class="logo-track" aria-label="Fuentes oficiales de datos y geocodificación">
         ${logoItems}
         ${logoItemsDup}
       </ul>
     </div>
-    <p class="scope">No es exhaustivo: hay más datos públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y los metadatos de IDERA.</p>
+    <p class="scope">No es exhaustivo: hay más datos públicos dispersos.</p>
   </section>
 
   ${siteFooter}

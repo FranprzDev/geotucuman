@@ -328,7 +328,7 @@ const licensesDetails = `<details class="licenses" id="licencias">
 </details>`;
 
 const siteFooter = `<footer class="site">
-    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="${REPO}">Repositorio en GitHub</a>.
+    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="${REPO}">Repositorio en GitHub</a> · Hecho por FranPrzDev.
   </footer>`;
 
 /** Official source logos for the landing marquee (assets are pre-downloaded in docs/assets/logos/). */
@@ -563,7 +563,6 @@ const landingHtml = `<!DOCTYPE html>
         ${logoItemsDup}
       </ul>
     </div>
-    <p class="scope">No es exhaustivo: hay más datos públicos dispersos.</p>
   </section>
 
   ${siteFooter}

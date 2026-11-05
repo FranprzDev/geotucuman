@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>GeoMCP — Geodatos públicos de Argentina para tu agente de IA</title>
-<meta name="description" content="GeoMCP: un servidor MCP open source que conecta tu agente de IA con los geodatos públicos de Argentina. Descubre qué capas existen, quién las publica y las consulta en vivo en los servicios oficiales.">
+<meta name="description" content="GeoMCP conecta tu agente de IA con los geodatos públicos de Argentina: encuentra qué datos existen, quién los publica y los consulta en vivo en la fuente oficial.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <style>
   *, *::before, *::after { box-sizing: border-box; }
@@ -115,6 +115,7 @@
   .hero h1 { font-size: clamp(38px, 7.4vw, 76px); line-height: .98; letter-spacing: -.045em; margin: 0 0 22px; font-weight: 800; }
   .hero h1 span { display: block; }
   .hero h1 .grad { padding-bottom: .08em; background: linear-gradient(90deg, #ffffff 0%, #b9f4fb 45%, var(--brand) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero-lede { color: var(--muted); max-width: 46ch; font-size: clamp(15px, 1.6vw, 17.5px); margin: 0 0 26px; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .hero-visual { position: relative; }
   .map-card { position: relative; border-radius: 18px; padding: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--line-strong); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
@@ -145,14 +146,8 @@
   .tool { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255,255,255,.02); }
   .tool:nth-child(3n+2) { border-radius: 6px; }
   .tool:nth-child(3n) { border-radius: 12px 12px 4px 12px; }
-  .tool code { display: inline-block; font-weight: 700; margin-bottom: 5px; }
+  .tool .tool-name { display: block; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -.01em; }
   .tool p { margin: 0; font-size: 13.5px; }
-  .steps { list-style: none; padding: 0; margin: 0; counter-reset: s; }
-  .steps li { display: flex; gap: 12px; align-items: flex-start; margin: 18px 0; font-size: 14.5px; color: #a6b4c0; }
-  .steps li::before { counter-increment: s; content: counter(s); flex: 0 0 30px; height: 30px; width: 30px; border-radius: 50%; background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 14px; }
-  .steps li > span { min-width: 0; flex: 1; }
-  .step-title { font-weight: 650; color: var(--ink); }
-  pre.code { background: #070910; color: #d8f7fc; border: 1px solid var(--line); padding: 13px 15px; border-radius: 10px; overflow: auto; font-size: 12.5px; line-height: 1.55; margin: 8px 0 0; font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
   .logo-marquee { position: relative; margin: 20px 0 6px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
   .logo-track { display: flex; align-items: stretch; gap: 14px; width: max-content; margin: 0; padding: 4px 2px; list-style: none; animation: logo-scroll 38s linear infinite; }
   .logo-marquee:hover .logo-track, .logo-marquee:focus-within .logo-track { animation-play-state: paused; }
@@ -189,7 +184,6 @@
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html">Capas</a>
-      <a href="#como-usar">Cómo usarlo</a>
       <a href="https://github.com/FranprzDev/geotucuman">GitHub</a>
     </nav>
   </div>
@@ -198,10 +192,12 @@
 <section class="hero" aria-labelledby="hero-title">
   <div class="wrap hero-grid">
     <div class="hero-copy">
-      <p class="kicker">Servidor MCP · Código abierto (MIT)</p>
+      <p class="kicker">Código abierto (MIT)</p>
       <h1 id="hero-title"><span>Los geodatos públicos de Argentina,</span><span class="grad">dentro de tu agente de IA.</span></h1>
+      <p class="hero-lede">Le decís a tu agente qué mapa querés armar y GeoMCP encuentra los datos públicos que hacen falta: cuáles existen, quién los publica y de cuándo son.</p>
       <div class="hero-cta">
-        <a class="btn ghost" href="#como-usar">Cómo usarlo</a>
+        <a class="btn primary" href="https://github.com/FranprzDev/geotucuman">Ver en GitHub</a>
+        <a class="btn ghost" href="#que-hace">Ver un ejemplo</a>
       </div>
     </div>
     <div class="hero-visual">
@@ -233,28 +229,23 @@
         </ul>
       </div>
     </div>
-    <h3 class="card-title tools-title">Cinco herramientas</h3>
+    <h3 class="card-title tools-title">Qué podés pedirle</h3>
     <div class="toolgrid">
-      <div class="tool reveal"><code>search_layers</code><p>Busca capas por tema o palabra clave en el catálogo embebido.</p></div>
-      <div class="tool reveal"><code>suggest_layers</code><p>Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM), con filtro opcional por tipo de servicio WFS/WMS.</p></div>
-      <div class="tool reveal"><code>describe_layer</code><p>Devuelve los campos reales de una capa. Obligatorio antes de consultarla.</p></div>
-      <div class="tool reveal"><code>query_layer</code><p>Trae features con filtros, paginación y bbox en EPSG:4326, reproyectado al CRS nativo de cada capa.</p></div>
-      <div class="tool reveal"><code>geocode</code><p>Convierte una dirección en coordenadas con la API Georef (gratis, sin key).</p></div>
+      <div class="tool reveal"><strong class="tool-name">Buscá por tema</strong><p>Encontrá capas por palabra clave: agua, soja, ferrocarriles, barrios.</p></div>
+      <div class="tool reveal"><strong class="tool-name">Contale tu idea</strong><p>Decile qué mapa querés hacer y te sugiere qué capas convienen.</p></div>
+      <div class="tool reveal"><strong class="tool-name">Consultá en vivo</strong><p>Tu agente trae los datos directo de la fuente oficial, con quién los publica y de cuándo son.</p></div>
+      <div class="tool reveal"><strong class="tool-name">Ubicá direcciones</strong><p>Convierte una dirección en coordenadas con Georef, gratis y sin clave.</p></div>
     </div>
   </section>
 
-  <section class="panel reveal" id="como-usar" aria-labelledby="como-usar-title">
-    <p class="eyebrow">Cómo usarlo</p>
-    <h2 id="como-usar-title">De cero a tu agente en cuatro pasos</h2>
-    <ol class="steps">
-      <li class="reveal"><span><span class="step-title">Cloná e instalá</span><pre class="code">git clone https://github.com/FranprzDev/geotucuman.git
-cd geotucuman
-npm install</pre></span></li>
-      <li class="reveal"><span><span class="step-title">Compilá el servidor</span><pre class="code">npm run build</pre><span class="hint">Genera dist/stdio.js y dist/http.js con xmcp.</span></span></li>
-      <li class="reveal"><span><span class="step-title">Conectalo a tu cliente MCP</span> (ejemplo Claude Code):<pre class="code">{ "mcpServers": { "geomcp": { "command": "node", "args": ["/ruta/geotucuman/dist/stdio.js"] } } }</pre></span></li>
-      <li class="reveal"><span><span class="step-title">Listo</span>: las cinco herramientas quedan disponibles en tu agente.</span></li>
-    </ol>
-    <p class="hint">Corre local por stdio. También compila un transporte HTTP (npm run start:http) pensado para hosting futuro: hoy no hay un servidor remoto público.</p>
+  <section class="panel reveal" aria-labelledby="probar-title">
+    <p class="eyebrow">Para probarlo</p>
+    <h2 id="probar-title">¿Lo querés usar?</h2>
+    <p>Es gratis y de código abierto. Corre en tu computadora y la guía de instalación paso a paso está en el repositorio.</p>
+    <div class="hero-cta">
+      <a class="btn primary" href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>
+      <a class="btn ghost" href="./capas.html">Explorar el catálogo de capas</a>
+    </div>
   </section>
 
   <section class="tagline-section" aria-labelledby="tagline-title">
@@ -265,8 +256,8 @@ npm install</pre></span></li>
   <section class="section-surface reveal" aria-labelledby="fuentes">
     <p class="eyebrow">Cobertura y fuentes</p>
     <h2 id="fuentes">De dónde salen los datos</h2>
-    <p>El catálogo embebido descubre hoy 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas, generado desde los GetCapabilities en vivo (si un endpoint cae, se conserva un snapshot).</p>
-    <p>IGN y la API Georef tienen cobertura nacional. Las fuentes provinciales integradas hoy son de Tucumán; sumar otra provincia es agregar su servicio WFS o WMS a la configuración.</p>
+    <p>El catálogo descubre hoy 22 Planeamiento · 76 Catastro · 192 IGN · 253 RIDES = 543 capas y se actualiza desde los servicios oficiales en vivo.</p>
+    <p>IGN y Georef cubren todo el país. Las fuentes provinciales integradas hoy son de Tucumán; sumar otra provincia es agregar su servicio al catálogo.</p>
     <div class="logo-marquee">
       <ul class="logo-track" aria-label="Fuentes oficiales de datos y geocodificación">
         <li class="logo-item"><a class="logo-link" href="http://geosplan.tucuman.gov.ar/"><span class="logo-chip"><img src="./assets/logos/geosplan.png" alt="Logo de Geosplan, Secretaría de Gestión Pública y Planeamiento de Tucumán" loading="lazy"></span><span class="logo-name">Geosplan · Planeamiento</span></a></li>
@@ -281,7 +272,7 @@ npm install</pre></span></li>
         <li class="logo-item" aria-hidden="true"><a class="logo-link" href="https://www.argentina.gob.ar/georef" tabindex="-1"><span class="logo-chip"><img src="./assets/logos/georef.svg" alt="Logo de la API Georef, datos.gob.ar" loading="lazy"></span><span class="logo-name">API Georef</span></a></li>
       </ul>
     </div>
-    <p class="scope">No es exhaustivo: hay más datasets públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y el enriquecimiento con metadatos IDERA.</p>
+    <p class="scope">No es exhaustivo: hay más datos públicos dispersos. Faltantes conocidos: el portal de Datos Abiertos de Tucumán (<a href="https://datos.tucuman.gob.ar/">https://datos.tucuman.gob.ar/</a>) y los metadatos de IDERA.</p>
   </section>
 
   <footer class="site">

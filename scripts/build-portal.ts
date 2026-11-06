@@ -134,10 +134,10 @@ const LICENSE_BODY = `
 const BASE_CSS = `
   *, *::before, *::after { box-sizing: border-box; }
   :root {
-    --bg: #090a10; --bg-soft: #0d0f18; --surface: #11141f; --surface-2: #161b28;
-    --ink: #e9eef3; --muted: #8b9aa8; --muted-2: #6f7d8a;
-    --line: rgba(255,255,255,.08); --line-strong: rgba(255,255,255,.16);
-    --brand: #1fb6d4; --brand-bright: #7fe3f2; --brand-deep: #0d3b4f;
+    --bg: #05070c; --bg-soft: #080c14; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --muted-2: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --brand: #3fd6ea; --brand-bright: #8ce9f4; --brand-deep: #0e7d95;
     --radius: 16px; --radius-sm: 12px;
     --shadow: 0 2px 10px rgba(0,0,0,.3);
     --header-h: 68px;
@@ -145,29 +145,29 @@ const BASE_CSS = `
   }
   html { -webkit-text-size-adjust: 100%; scroll-behavior: smooth; scroll-padding-top: calc(var(--header-h) + 16px); }
   body {
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
     margin: 0; color: var(--ink); line-height: 1.6; min-height: 100vh;
     background-color: var(--bg);
     background-image:
-      radial-gradient(900px 540px at 50% -220px, rgba(31,182,212,.17), transparent 70%),
+      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
       linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
     background-repeat: no-repeat, repeat, repeat;
     background-size: auto, 48px 48px, 48px 48px;
     background-attachment: fixed, fixed, fixed;
   }
-  a { color: var(--brand); text-decoration-color: rgba(31,182,212,.45); text-underline-offset: 3px; }
+  a { color: var(--brand); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
   a:hover { color: var(--brand-bright); }
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 3px; border-radius: 8px; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(31,182,212,.09); color: var(--brand-bright); border: 1px solid rgba(31,182,212,.16); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--brand-bright); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; width: 100%; }
   .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--brand); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
   .skip:focus { top: 12px; }
-  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(9,10,16,.74); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.68); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
   .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
   .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 750; letter-spacing: -.025em; }
   .brand:hover { color: var(--ink); }
-  .brand svg { width: 22px; height: 22px; color: var(--brand); filter: drop-shadow(0 0 10px rgba(31,182,212,.55)); }
+  .brand svg { width: 22px; height: 22px; color: var(--brand); filter: drop-shadow(0 0 10px rgba(63,214,234,.55)); }
   .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
   .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
   .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
@@ -177,7 +177,7 @@ const BASE_CSS = `
   .panel p, .panel li { font-size: 14.5px; color: #a6b4c0; }
   .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); font-weight: 700; margin: 0 0 10px; }
   .card { background: linear-gradient(180deg, rgba(22,26,39,.96), rgba(15,18,28,.97)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.3); padding: 18px 20px; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
-  .card:hover { border-color: rgba(31,182,212,.36); transform: translateY(-2px); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
+  .card:hover { border-color: rgba(63,214,234,.36); transform: translateY(-2px); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
   h3.card-title { font-size: 17px; margin: 0 0 7px; color: var(--ink); line-height: 1.3; letter-spacing: -.01em; }
   h3.card-title.tools-title { margin-top: 30px; }
   code.typename { font-size: 12px; word-break: break-all; display: inline-block; }
@@ -197,8 +197,8 @@ const BASE_CSS = `
   .src-rides { background: rgba(244,114,182,.13); color: #f9a8d4; border-color: rgba(244,114,182,.26); }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 46px; background: var(--brand); color: #041016; text-decoration: none; padding: 11px 20px; border-radius: 999px; font-size: 14px; font-weight: 700; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease; }
   .btn:hover { transform: translateY(-1px); color: #041016; }
-  .btn.primary { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; box-shadow: 0 0 0 1px rgba(127,227,242,.25), 0 14px 40px rgba(31,182,212,.28); }
-  .btn.primary:hover { box-shadow: 0 0 0 1px rgba(127,227,242,.4), 0 18px 50px rgba(31,182,212,.4); }
+  .btn.primary { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; box-shadow: 0 0 0 1px rgba(127,227,242,.25), 0 14px 40px rgba(63,214,234,.28); }
+  .btn.primary:hover { box-shadow: 0 0 0 1px rgba(127,227,242,.4), 0 18px 50px rgba(63,214,234,.4); }
   .btn.ghost { background: rgba(255,255,255,.03); color: var(--ink); border-color: var(--line-strong); }
   .btn.ghost:hover { background: rgba(255,255,255,.07); color: #fff; }
   .btn.ghost-light { background: var(--ink); color: var(--bg); border-color: var(--ink); }
@@ -225,6 +225,11 @@ const BASE_CSS = `
   .js .reveal, .js .card { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
   .js .reveal.is-visible, .js .card.is-visible { opacity: 1; transform: none; }
   @media (max-width: 520px) { .nav a { padding: 8px 7px; font-size: 12.5px; } .brand { font-size: 16px; } .wrap { padding: 0 16px; } }
+  h1, h2, h3, .brand { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.02em; }
+  .nav a.nav-cta { color: #04141a; background: var(--brand); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--brand-bright); color: #04141a; }
+  footer.site { display: flex; justify-content: space-between; gap: 10px 18px; flex-wrap: wrap; }
+  footer.site .made { color: var(--muted-2); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
     .js .reveal, .js .card { opacity: 1 !important; transform: none !important; transition: none !important; }
@@ -233,80 +238,9 @@ const BASE_CSS = `
   }`;
 
 /** Landing styles (explains the MCP). */
-const LANDING_CSS = `
-  .hero { position: relative; overflow: hidden; padding: clamp(56px, 9vw, 104px) 20px clamp(48px, 7vw, 84px); }
-  .hero::before { content: ""; position: absolute; inset: -20% -10% auto; height: 90%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.14), transparent 62%); pointer-events: none; }
-  .hero-grid { position: relative; display: grid; grid-template-columns: 1fr; gap: clamp(34px, 6vw, 64px); align-items: center; }
-  @media (min-width: 920px) { .hero-grid { grid-template-columns: minmax(0, 1.16fr) minmax(0, .84fr); } }
-  .kicker { display: inline-flex; align-items: center; gap: 9px; font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); margin: 0 0 18px; font-weight: 600; }
-  .kicker::before { content: ""; width: 18px; height: 1px; background: var(--brand); }
-  .hero h1 { font-size: clamp(38px, 7.4vw, 76px); line-height: .98; letter-spacing: -.045em; margin: 0 0 22px; font-weight: 800; }
-  .hero h1 span { display: block; }
-  .hero h1 .grad { padding-bottom: .08em; background: linear-gradient(90deg, #ffffff 0%, #b9f4fb 45%, var(--brand) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
-  .hero-lede { color: var(--muted); max-width: 46ch; font-size: clamp(15px, 1.6vw, 17.5px); margin: 0 0 26px; }
-  .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
-  .hero-visual { position: relative; }
-  .map-card { position: relative; border-radius: 18px; padding: 8px; background: rgba(255,255,255,.04); border: 1px solid var(--line-strong); box-shadow: 0 16px 40px rgba(0,0,0,.4); }
-  .hero-map-img { display: block; width: 100%; max-width: none; border-radius: 12px; margin: 0 auto; }
-  .map-cap { font-size: 11px; color: var(--muted); text-align: center; margin: 10px 0 0; }
-  .map-cap a { color: var(--muted); }
-  .map-cap a:hover { color: var(--brand-bright); }
-  .section-open { padding: clamp(34px, 6vw, 62px) 0 clamp(12px, 2vw, 18px); margin: 0; border-top: 1px solid var(--line); }
-  .section-surface { margin: 26px 0 0; padding: clamp(24px, 4vw, 36px); background: var(--surface); border: 1px solid var(--line); border-radius: 10px; }
-  .section-open > .section-head, .section-surface > .section-head { margin-bottom: 8px; }
-  .eyebrow { font-size: 11.5px; letter-spacing: .09em; text-transform: uppercase; color: var(--muted); font-weight: 600; margin: 0 0 10px; }
-  .panel > h2, .section-head h2, .section-open > h2, .section-surface > h2 { font-size: clamp(24px, 3.4vw, 34px); line-height: 1.12; letter-spacing: -.03em; font-weight: 720; color: var(--ink); margin: 0 0 16px; max-width: 40ch; }
-  .exchange { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 22px; }
-  @media (min-width: 760px) { .exchange { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-  .exchange-card { padding: 18px 20px; border: 1px solid var(--line); background: var(--surface-2); }
-  .exchange-card.request { border-radius: 14px 14px 14px 4px; background: var(--surface-2); border-left: 3px solid var(--brand); }
-  .exchange-card.result { border-radius: 14px 14px 4px 14px; background: rgba(10,12,20,.5); }
-  .exchange-card.result .exchange-label { color: var(--muted); }
-  .exchange-label { margin: 0 0 12px; font-size: 11.5px; letter-spacing: .13em; text-transform: uppercase; color: var(--brand-bright); font-weight: 700; }
-  .exchange-card blockquote { margin: 0; font-size: clamp(17px, 2.3vw, 21px); line-height: 1.4; letter-spacing: -.015em; color: var(--ink); font-weight: 600; }
-  .layer-hits { list-style: none; margin: 0; padding: 0; display: grid; gap: 11px; }
-  .layer-hits li { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 7px 12px; padding-bottom: 11px; border-bottom: 1px solid var(--line); }
-  .layer-hits li:last-child { padding-bottom: 0; border-bottom: 0; }
-  .hit-title { font-size: 14px; font-weight: 650; color: var(--ink); }
-  .hit-meta { display: inline-flex; align-items: center; gap: 8px; flex-wrap: wrap; font-size: 11.5px; color: var(--muted); }
-  .toolgrid { display: grid; grid-template-columns: 1fr; gap: 12px; margin-top: 18px; }
-  @media (min-width: 760px) { .toolgrid { grid-template-columns: repeat(2, 1fr); } }
-  .tool { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; background: rgba(255,255,255,.02); transition: border-color .2s ease; }
-  .tool:hover { border-color: rgba(31,182,212,.36); }
-  .tool-icon { width: 18px; height: 18px; color: var(--brand); margin-bottom: 8px; display: block; }
-  .tool:nth-child(3n+2) { border-radius: 6px; }
-  .tool:nth-child(3n) { border-radius: 12px 12px 4px 12px; }
-  .tool .tool-name { display: block; font-size: 15px; font-weight: 700; color: var(--ink); margin-bottom: 6px; letter-spacing: -.01em; }
-  .tool p { margin: 0; font-size: 13.5px; }
-  .logo-marquee { position: relative; margin: 20px 0 6px; overflow: hidden; -webkit-mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); mask-image: linear-gradient(90deg, transparent, #000 7%, #000 93%, transparent); }
-  .logo-track { display: flex; align-items: stretch; gap: 14px; width: max-content; margin: 0; padding: 4px 2px; list-style: none; animation: logo-scroll 38s linear infinite; }
-  .logo-marquee:hover .logo-track, .logo-marquee:focus-within .logo-track { animation-play-state: paused; }
-  @keyframes logo-scroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
-  .logo-item { flex: 0 0 auto; }
-  .logo-link { display: flex; flex-direction: column; align-items: center; gap: 7px; text-decoration: none; }
-  .logo-chip { display: flex; align-items: center; justify-content: center; width: 176px; height: 72px; padding: 12px 16px; background: #fff; border: 1px solid rgba(255,255,255,.16); border-radius: var(--radius-sm); box-shadow: 0 6px 18px rgba(0,0,0,.28); transition: transform .2s ease, box-shadow .2s ease; }
-  .logo-link:hover .logo-chip { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(0,0,0,.4); }
-  .logo-chip img { max-width: 100%; max-height: 46px; width: auto; height: auto; object-fit: contain; display: block; }
-  .logo-name { font-size: 11.5px; font-weight: 600; color: var(--muted); text-align: center; }
-  .logo-link:hover .logo-name { color: var(--brand-bright); }
-  @media (prefers-reduced-motion: reduce) {
-    .logo-marquee { overflow: visible; -webkit-mask-image: none; mask-image: none; }
-    .logo-track { animation: none; transform: none; flex-wrap: wrap; justify-content: center; width: auto; }
-    .logo-track > [aria-hidden="true"] { display: none; }
-    .logo-link:hover .logo-chip { transform: none; }
-  }
-  .tagline-section { padding: clamp(56px, 9vw, 110px) 20px; }
-  .tagline { max-width: 980px; margin: 0 auto; text-align: center; font-size: clamp(28px, 5.4vw, 58px); line-height: 1.12; letter-spacing: -.04em; font-weight: 780; color: var(--ink); }
-  .tagline-word { color: inherit; transition: color .3s ease; }
-  .tagline-ready .tagline-word { color: rgba(233,238,243,.38); }
-  .tagline-ready .tagline-word.is-lit { color: var(--ink); }
-  .tagline-ready .tagline-word.is-lit.is-accent { color: var(--brand); }
-  @media (max-width: 520px) { .hero { padding-inline: 16px; } }`;
-
-/** Catalog styles. */
 const CATALOG_CSS = `
   .hero-slim { position: relative; overflow: hidden; padding: clamp(34px, 6vw, 58px) 20px clamp(30px, 5vw, 48px); border-bottom: 1px solid var(--line); }
-  .hero-slim::before { content: ""; position: absolute; inset: -40% -10% auto; height: 150%; background: radial-gradient(ellipse at 50% 0%, rgba(31,182,212,.2), transparent 64%); pointer-events: none; }
+  .hero-slim::before { content: ""; position: absolute; inset: -40% -10% auto; height: 150%; background: radial-gradient(ellipse at 50% 0%, rgba(63,214,234,.2), transparent 64%); pointer-events: none; }
   .hero-slim .wrap { position: relative; }
   .hero-slim h1 { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.08; letter-spacing: -.035em; margin: 0 0 8px; color: var(--ink); }
   .hero-slim p { margin: 0; font-size: 14.5px; color: var(--muted); max-width: 760px; }
@@ -314,11 +248,11 @@ const CATALOG_CSS = `
   .controls { position: sticky; top: var(--header-h); z-index: 20; background: rgba(9,10,16,.88); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); padding: 14px 0 12px; border-bottom: 1px solid var(--line); }
   #q { width: 100%; min-height: 50px; font-size: 16px; padding: 12px 18px; border: 1px solid var(--line-strong); border-radius: 999px; background: rgba(17,20,31,.9); color: var(--ink); }
   #q::placeholder { color: var(--muted-2); }
-  #q:focus { border-color: rgba(31,182,212,.6); box-shadow: 0 0 0 4px rgba(31,182,212,.12); outline: none; }
+  #q:focus { border-color: rgba(63,214,234,.6); box-shadow: 0 0 0 4px rgba(63,214,234,.12); outline: none; }
   .filters { display: flex; gap: 8px; margin-top: 10px; flex-wrap: wrap; }
   .filters button { min-height: 44px; font-size: 13.5px; padding: 0 16px; border-radius: 999px; border: 1px solid var(--line-strong); background: rgba(255,255,255,.03); color: var(--muted); cursor: pointer; font-weight: 650; }
-  .filters button:hover { color: var(--ink); border-color: rgba(31,182,212,.35); }
-  .filters button.on { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; border-color: transparent; box-shadow: 0 0 20px rgba(31,182,212,.22); }
+  .filters button:hover { color: var(--ink); border-color: rgba(63,214,234,.35); }
+  .filters button.on { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; border-color: transparent; box-shadow: 0 0 20px rgba(63,214,234,.22); }
   #count { font-size: 14px; font-weight: 650; color: var(--brand-bright); margin-top: 10px; }
   .grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 8px; }
   @media (min-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }`;
@@ -328,27 +262,10 @@ const licensesDetails = `<details class="licenses" id="licencias">
 </details>`;
 
 const siteFooter = `<footer class="site">
-    Código MIT · Los datos son de sus organismos publicadores · Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a> · <a href="${REPO}">Repositorio en GitHub</a> · Hecho por FranPrzDev.
-  </footer>`;
+      <span>Código MIT · Los datos son de sus organismos publicadores · <a href="${REPO}">Repositorio en GitHub</a></span>
+      <span class="made">Hecho por FranPrzDev</span>
+    </footer>`;
 
-/** Official source logos for the landing marquee (assets are pre-downloaded in docs/assets/logos/). */
-const PORTAL_LOGOS = [
-  { src: './assets/logos/geosplan.png', alt: 'Logo de Geosplan, Secretaría de Gestión Pública y Planeamiento de Tucumán', name: 'Geosplan · Planeamiento', href: 'http://geosplan.tucuman.gov.ar/' },
-  { src: './assets/logos/catastro.png', alt: 'Logo de la Dirección General de Catastro de Tucumán (DGCT)', name: 'Catastro (DGCT)', href: 'https://catastrotucuman.gov.ar/' },
-  { src: './assets/logos/ign.svg', alt: 'Logo del Instituto Geográfico Nacional (IGN)', name: 'IGN', href: 'https://www.ign.gob.ar/', chipBg: '#0b3d66' },
-  { src: './assets/logos/rides.png', alt: 'Logo de RIDES, Ministerio de Producción de Tucumán', name: 'RIDES', href: 'https://rides.producciontucuman.gob.ar/servicios-wms/' },
-  { src: './assets/logos/georef.svg', alt: 'Logo de la API Georef, datos.gob.ar', name: 'API Georef', href: 'https://www.argentina.gob.ar/georef' },
-];
-
-/** A logo chip. Duplicated copy (hidden=true) feeds the seamless CSS loop without duplicating accessibility/focus. */
-function logoItem(l: (typeof PORTAL_LOGOS)[number], hidden: boolean): string {
-  const a = hidden ? ' tabindex="-1"' : '';
-  const li = hidden ? ' aria-hidden="true"' : '';
-  const bg = (l as { chipBg?: string }).chipBg;
-  return `<li class="logo-item"${li}><a class="logo-link" href="${l.href}"${a}><span class="logo-chip"${bg ? ` style="background:${bg}"` : ''}><img src="${l.src}" alt="${esc(l.alt)}" loading="lazy"></span><span class="logo-name">${esc(l.name)}</span></a></li>`;
-}
-const logoItems = PORTAL_LOGOS.map(l => logoItem(l, false)).join('\n        ');
-const logoItemsDup = PORTAL_LOGOS.map(l => logoItem(l, true)).join('\n        ');
 
 
 const catalogHtml = `<!DOCTYPE html>
@@ -359,6 +276,9 @@ const catalogHtml = `<!DOCTYPE html>
 <title>GeoMCP — Índice de capas descubribles</title>
 <meta name="description" content="Índice de capas descubribles de GeoMCP: qué geodatos públicos existen en los servicios oficiales, quién los publica y de cuándo son.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>${BASE_CSS}${CATALOG_CSS}
 </style>
 </head>
@@ -372,8 +292,7 @@ const catalogHtml = `<!DOCTYPE html>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
-      <a href="./index.html#como-usar">Cómo usarlo</a>
-      <a href="${REPO}">GitHub</a>
+      <a class="nav-cta" href="${REPO}">GitHub</a>
     </nav>
   </div>
 </header>
@@ -462,173 +381,7 @@ if (!reduceMotion && 'IntersectionObserver' in window) {
 </body>
 </html>`;
 
-const landingHtml = `<!DOCTYPE html>
-<html lang="es">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoMCP — Geodatos públicos de Argentina para tu agente de IA</title>
-<meta name="description" content="GeoMCP conecta tu agente de IA con los geodatos públicos de Argentina: encuentra qué datos existen, quién los publica y los consulta en vivo en la fuente oficial.">
-<script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
-<style>${BASE_CSS}${LANDING_CSS}
-</style>
-</head>
-<body>
-<a class="skip" href="#main">Saltar al contenido</a>
-<header class="site-header">
-  <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="GeoMCP, inicio">
-      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>GeoMCP</span>
-    </a>
-    <nav class="nav" aria-label="Principal">
-      <a href="./capas.html">Capas</a>
-      <a href="${REPO}">GitHub</a>
-    </nav>
-  </div>
-</header>
-<main id="main">
-<section class="hero" aria-labelledby="hero-title">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="kicker">Código abierto (MIT)</p>
-      <h1 id="hero-title"><span>Los geodatos públicos de Argentina,</span><span class="grad">dentro de tu agente de IA.</span></h1>
-      <p class="hero-lede">Le decís a tu agente qué mapa querés armar y GeoMCP encuentra los datos públicos que hacen falta: cuáles existen, quién los publica y de cuándo son.</p>
-      <div class="hero-cta">
-        <a class="btn primary" href="https://github.com/FranprzDev/geotucuman">Ver en GitHub</a>
-        <a class="btn ghost" href="#que-hace">Ver un ejemplo</a>
-      </div>
-    </div>
-    <div class="hero-visual">
-      <div class="map-card">
-        <img class="hero-map-img" src="./assets/mapa-argentina.jpg" alt="Mapa de Argentina con su contorno destacado">
-      </div>
-      <p class="map-cap">Mapa © <a href="https://www.openstreetmap.org/copyright">OpenStreetMap contributors</a></p>
-    </div>
-  </div>
-</section>
-<div class="wrap">
-  <section class="section-open reveal" aria-labelledby="que-hace">
-    <div class="section-head">
-      <p class="eyebrow">Qué hace</p>
-      <h2 id="que-hace">Un ejemplo real</h2>
-    </div>
-    <div class="exchange">
-      <div class="exchange-card request reveal">
-        <p class="exchange-label">Vos le decís</p>
-        <blockquote>«Quiero un mapa de los ferrocarriles del país.»</blockquote>
-      </div>
-      <div class="exchange-card result reveal">
-        <p class="exchange-label">El agente encuentra</p>
-        <ul class="layer-hits">
-          <li><span class="hit-title">Ferrocarril</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
-          <li><span class="hit-title">Estación de ferrocarril</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
-          <li><span class="hit-title">Puente</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
-          <li><span class="hit-title">Indicador de kilómetros</span><span class="hit-meta"><span class="src src-ign">IGN</span> Vigencia: sin indicar</span></li>
-        </ul>
-      </div>
-    </div>
-    <h3 class="card-title tools-title">Qué podés pedirle</h3>
-    <div class="toolgrid">
-      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg><strong class="tool-name">Buscá por tema</strong><p>Encontrá capas por palabra clave: agua, soja, ferrocarriles, barrios.</p></div>
-      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg><strong class="tool-name">Contale tu idea</strong><p>Decile qué mapa querés hacer y te sugiere qué capas convienen.</p></div>
-      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg><strong class="tool-name">Consultá en vivo</strong><p>Tu agente trae los datos directo de la fuente oficial, con quién los publica y de cuándo son.</p></div>
-      <div class="tool reveal"><svg class="tool-icon" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z"/><circle cx="12" cy="10" r="2.6"/></svg><strong class="tool-name">Ubicá direcciones</strong><p>Convierte una dirección en coordenadas con Georef, gratis y sin clave.</p></div>
-    </div>
-  </section>
-
-  <section class="panel reveal" aria-labelledby="probar-title">
-    <p class="eyebrow">Para probarlo</p>
-    <h2 id="probar-title">¿Lo querés usar?</h2>
-    <p>Es gratis y de código abierto. Corre en tu computadora y la guía de instalación paso a paso está en el repositorio.</p>
-    <div class="hero-cta">
-      <a class="btn primary" href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>
-      <a class="btn ghost" href="./capas.html">Explorar el catálogo de capas</a>
-    </div>
-  </section>
-
-  <section class="tagline-section" aria-labelledby="tagline-title">
-    <h2 id="tagline-title" class="sr-only">En una frase</h2>
-    <p class="tagline" data-tagline>Descubre la capa, dice quién la publica y de cuándo es, y la consulta en vivo en la fuente oficial. No dibuja mapas ni copia datos.</p>
-  </section>
-
-  <section class="section-surface reveal" aria-labelledby="fuentes">
-    <p class="eyebrow">Cobertura y fuentes</p>
-    <h2 id="fuentes">De dónde salen los datos</h2>
-    <p>Hoy descubre ${catalog.layers.length} capas de fuentes oficiales y se actualiza desde los servicios en vivo.</p>
-    <p>IGN y Georef cubren todo el país; las fuentes provinciales de hoy son de Tucumán.</p>
-    <div class="logo-marquee">
-      <ul class="logo-track" aria-label="Fuentes oficiales de datos y geocodificación">
-        ${logoItems}
-        ${logoItemsDup}
-      </ul>
-    </div>
-  </section>
-
-  ${siteFooter}
-</div>
-</main>
-<script>
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-const revealItems = [...document.querySelectorAll('.reveal')];
-if (!reduceMotion && 'IntersectionObserver' in window) {
-  revealItems.forEach((el) => {
-    const parent = el.parentElement;
-    const siblings = parent ? [...parent.children].filter(node => node.classList && node.classList.contains('reveal')) : [];
-    const index = siblings.indexOf(el);
-    el.style.transitionDelay = Math.min(Math.max(index, 0), 6) * 60 + 'ms';
-  });
-  const revealObserver = new IntersectionObserver((entries, observer) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  revealItems.forEach(el => revealObserver.observe(el));
-}
-const tagline = document.querySelector('[data-tagline]');
-if (tagline && !reduceMotion) {
-  const words = tagline.textContent.trim().split(/\\s+/);
-  const accentWords = new Set(['descubre', 'capa', 'vivo', 'fuente', 'oficial']);
-  tagline.textContent = '';
-  const wordEls = words.map((word, index) => {
-    const span = document.createElement('span');
-    const clean = word.toLowerCase().replace(/[^a-záéíóúüñ]/g, '');
-    span.className = 'tagline-word' + (accentWords.has(clean) ? ' is-accent' : '');
-    span.textContent = word;
-    tagline.appendChild(span);
-    if (index < words.length - 1) tagline.appendChild(document.createTextNode(' '));
-    return span;
-  });
-  tagline.classList.add('tagline-ready');
-  let ticking = false;
-  function updateTagline() {
-    ticking = false;
-    const rect = tagline.getBoundingClientRect();
-    const vh = window.innerHeight || 800;
-    const start = vh * 0.88;
-    const end = vh * 0.55 - rect.height;
-    const progress = Math.min(1, Math.max(0, (start - rect.top) / Math.max(1, start - end)));
-    const lit = Math.round(progress * wordEls.length);
-    wordEls.forEach((word, i) => word.classList.toggle('is-lit', i < lit));
-  }
-  function requestTaglineUpdate() {
-    if (!ticking) {
-      ticking = true;
-      window.requestAnimationFrame(updateTagline);
-    }
-  }
-  window.addEventListener('scroll', requestTaglineUpdate, { passive: true });
-  window.addEventListener('resize', requestTaglineUpdate);
-  updateTagline();
-}
-</script>
-</body>
-</html>`;
-
 mkdirSync('docs', { recursive: true });
-writeFileSync('docs/index.html', landingHtml);
+// docs/index.html (landing) is hand-authored; this script only generates the catalog.
 writeFileSync('docs/capas.html', catalogHtml);
-console.log(`docs/index.html generated (MCP landing) and docs/capas.html generated (${catalog.layers.length} layers)`);
+console.log(`docs/capas.html generated (${catalog.layers.length} layers)`);

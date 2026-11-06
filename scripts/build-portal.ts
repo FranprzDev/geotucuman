@@ -69,8 +69,7 @@ function cardHtml(l: CatalogEntry): string {
     ${abs}
     <div class="card-meta"><span class="src src-${l.source}">${esc(label)}</span><span class="vig">${esc(vintageLine(l))}</span></div>
     <p class="meta-line">Publica: ${esc(SOURCE_ORG[l.source] ?? label)}</p>
-    <p class="meta-line">Catálogo verificado: ${esc(l.verifiedAt)}</p>
-    <details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><code class="typename">${esc(l.typeName)}</code><div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span></div></div></details>
+    <details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><code class="typename">${esc(l.typeName)}</code><div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span><span class="verified">Catálogo verificado: ${esc(l.verifiedAt)}</span></div></div></details>
   </article>`;
 }
 
@@ -176,9 +175,10 @@ const BASE_CSS = `
   .panel > h2, .section-head h2 { font-size: clamp(22px, 3vw, 30px); line-height: 1.15; letter-spacing: -.025em; font-weight: 750; color: var(--ink); margin: 0 0 16px; }
   .panel p, .panel li { font-size: 14.5px; color: #a6b4c0; }
   .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--brand); font-weight: 700; margin: 0 0 10px; }
-  .card { background: linear-gradient(180deg, rgba(22,26,39,.96), rgba(15,18,28,.97)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.3); padding: 18px 20px; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
+  .card { min-width: 0; background: linear-gradient(180deg, rgba(22,26,39,.96), rgba(15,18,28,.97)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: 0 10px 30px rgba(0,0,0,.3); padding: 18px 20px; transition: border-color .2s ease, transform .2s ease, box-shadow .2s ease; }
   .card:hover { border-color: rgba(63,214,234,.36); transform: translateY(-2px); box-shadow: 0 18px 50px rgba(0,0,0,.45); }
   h3.card-title { font-size: 17px; margin: 0 0 7px; color: var(--ink); line-height: 1.3; letter-spacing: -.01em; }
+  h3.card-title, .card-abs, .card-foot, code.typename { overflow-wrap: anywhere; }
   h3.card-title.tools-title { margin-top: 30px; }
   code.typename { font-size: 12px; word-break: break-all; display: inline-block; }
   .card-abs { font-size: 13.5px; color: #a6b4c0; margin: 8px 0; }
@@ -189,7 +189,7 @@ const BASE_CSS = `
   .card-foot { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 8px; }
   .crs { font-size: 11.5px; color: var(--muted); }
   .endpoint { font-size: 11px; color: var(--muted-2); word-break: break-all; }
-  .src { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 650; padding: 3px 8px; border-radius: 999px; white-space: nowrap; border: 1px solid transparent; }
+  .src { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 650; padding: 3px 8px; border-radius: 999px; border: 1px solid transparent; }
   .src-geosplan { background: rgba(52,211,153,.12); color: #6ee7b7; border-color: rgba(52,211,153,.24); }
   .src-dgct { background: rgba(251,191,36,.12); color: #fcd34d; border-color: rgba(251,191,36,.24); }
   .src-ign { background: rgba(96,165,250,.13); color: #93c5fd; border-color: rgba(96,165,250,.26); }
@@ -222,8 +222,8 @@ const BASE_CSS = `
   details.tech > summary::before { content: "> "; color: var(--brand); }
   details.tech[open] > summary::before { content: "v "; }
   details.tech .tech-body { margin-top: 8px; padding-top: 8px; border-top: 1px solid var(--line); }
-  .js .reveal, .js .card { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
-  .js .reveal.is-visible, .js .card.is-visible { opacity: 1; transform: none; }
+  .js .reveal { opacity: 0; transform: translateY(16px); transition: opacity .7s cubic-bezier(.2,.7,.2,1), transform .7s cubic-bezier(.2,.7,.2,1); }
+  .js .reveal.is-visible { opacity: 1; transform: none; }
   @media (max-width: 520px) { .nav a { padding: 8px 7px; font-size: 12.5px; } .brand { font-size: 16px; } .wrap { padding: 0 16px; } }
   h1, h2, h3, .brand { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.02em; }
   .nav a.nav-cta { color: #04141a; background: var(--brand); font-weight: 600; margin-left: 6px; }
@@ -232,7 +232,7 @@ const BASE_CSS = `
   footer.site .made { color: var(--muted-2); }
   @media (prefers-reduced-motion: reduce) {
     html { scroll-behavior: auto; }
-    .js .reveal, .js .card { opacity: 1 !important; transform: none !important; transition: none !important; }
+    .js .reveal { opacity: 1 !important; transform: none !important; transition: none !important; }
     .card:hover, .btn:hover { transform: none; }
     .tagline-word { color: var(--ink) !important; transition: none !important; }
   }`;
@@ -254,7 +254,7 @@ const CATALOG_CSS = `
   .filters button:hover { color: var(--ink); border-color: rgba(63,214,234,.35); }
   .filters button.on { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; border-color: transparent; box-shadow: 0 0 20px rgba(63,214,234,.22); }
   #count { font-size: 14px; font-weight: 650; color: var(--brand-bright); margin-top: 10px; }
-  .grid { display: grid; grid-template-columns: 1fr; gap: 14px; margin-top: 8px; }
+  .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 8px; }
   @media (min-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }`;
 
 const licensesDetails = `<details class="licenses" id="licencias">
@@ -300,7 +300,7 @@ const catalogHtml = `<!DOCTYPE html>
   <div class="wrap">
     <p class="eyebrow">Catálogo de capas</p>
     <h1 id="catalog-title">Índice de capas descubribles</h1>
-    <p>Lo que el MCP puede descubrir hoy en los servicios oficiales. ${esc(layersLine)}. <a href="./index.html">← Volver al inicio</a></p>
+    <p>Las capas que GeoMCP encuentra hoy en los servicios oficiales: ${esc(layersLine)}. <a href="./index.html">← Volver al inicio</a></p>
   </div>
 </section>
 <main id="main" class="wrap">
@@ -315,14 +315,12 @@ const catalogHtml = `<!DOCTYPE html>
     </div>
     <div id="count"></div>
   </div>
-  <p class="hint">Probá por intención: "quiero hacer un mapa sobre agua" también funciona (sin las comillas).</p>
-  <p class="hint">Cada capa se consulta con la herramienta query_layer del MCP, o directo en el servicio oficial del organismo que la publica.</p>
-  <p class="hint">Orden: primero coincidencias en el nombre de la capa, después en la descripción, al final en palabras clave genéricas.</p>
-  <p class="scope">GeoMCP descubre y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   <div class="grid" id="grid">${cards}
   </div>
+  <details class="licenses"><summary>Qué hace GeoMCP (y qué no)</summary>
+  <p>Encuentra y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
+  </details>
   ${licensesDetails}
-  <p class="dim">Catálogo generado el ${esc(catalog.generatedAt.slice(0, 10))}. ${catalog.layers.length} capas.</p>
   ${siteFooter}
 </main>
 <script>
@@ -354,7 +352,7 @@ function apply() {
   while (grid.firstChild) grid.removeChild(grid.firstChild);
   for (const s of shown) { s.c.style.display = ''; grid.appendChild(s.c); }
   countEl.textContent = shown.length === 0
-    ? '0 capas para esta búsqueda. El catálogo cubre 4 fuentes oficiales (WFS y WMS) + Georef; la capa que buscás puede no estar publicada en estas fuentes (ver la portada, sección Cobertura y fuentes).'
+    ? '0 capas para esta búsqueda. El catálogo cubre 4 fuentes oficiales (WFS y WMS) + Georef; la capa que buscás puede no estar publicada en estas fuentes.'
     : shown.length + ' capas';
 }
 q.addEventListener('input', apply);
@@ -363,20 +361,6 @@ document.querySelectorAll('.filters button').forEach(b => b.addEventListener('cl
   b.classList.add('on'); filter = b.dataset.f; apply();
 }));
 apply();
-const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-if (!reduceMotion && 'IntersectionObserver' in window) {
-  const revealCards = [...document.querySelectorAll('.card')];
-  revealCards.forEach((el, i) => { el.style.transitionDelay = (i % 4) * 55 + 'ms'; });
-  const cardObserver = new IntersectionObserver((entries, observer) => {
-    for (const entry of entries) {
-      if (entry.isIntersecting) {
-        entry.target.classList.add('is-visible');
-        observer.unobserve(entry.target);
-      }
-    }
-  }, { threshold: 0.12, rootMargin: '0px 0px -8% 0px' });
-  revealCards.forEach(el => cardObserver.observe(el));
-}
 </script>
 </body>
 </html>`;

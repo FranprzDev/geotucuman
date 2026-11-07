@@ -8,16 +8,17 @@ import { asText } from '../lib/shared.js';
 export const schema = {
   query: z.string().describe('Keyword, e.g. "parcelas", "calles", "cultivos"'),
   serviceType: z.enum([ServiceType.Wfs, ServiceType.Wms]).optional().describe('Filter by service type'),
+  province: z.string().optional().describe('Filter by province, e.g. "Córdoba"'),
 };
 
 export const metadata: ToolMetadata = {
   name: 'search_layers',
   description:
-    'Search public geographic layers (Tucuman + national IGN) by keyword in the embedded catalog. Returns typeName, title, abstract, source and default CRS. Use serviceType to filter by WFS or WMS availability.',
+    'Search public geographic layers of Argentina (national IGN + provincial sources) by keyword in the embedded catalog. Returns typeName, title, abstract, source, province and default CRS. Use serviceType to filter by WFS or WMS availability and province to narrow to one province.',
 };
 
-export async function searchLayersHandler({ query, serviceType }: { query: string; serviceType?: ServiceType }) {
-  const hits = searchLayers(query, 10, serviceType);
+export async function searchLayersHandler({ query, serviceType, province }: { query: string; serviceType?: ServiceType; province?: string }) {
+  const hits = searchLayers(query, 10, serviceType, province);
   return {
     total: hits.length,
     layers: hits.map((e) => ({
@@ -25,6 +26,7 @@ export async function searchLayersHandler({ query, serviceType }: { query: strin
       title: e.title,
       abstract: e.abstract || null,
       source: e.source,
+      province: e.province,
       endpoint: e.endpoint,
       defaultCrs: e.defaultCrs,
       license: endpointById(e.source).license.status,

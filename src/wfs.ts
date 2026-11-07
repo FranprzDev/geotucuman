@@ -2,11 +2,13 @@ import type { EndpointConfig } from './endpoints.js';
 
 const TIMEOUT_MS = 20_000;
 
+const USER_AGENT = 'GeoMCP/0.2 (+https://franprzdev.github.io/geotucuman/)';
+
 async function fetchText(url: string): Promise<string> {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: ctrl.signal });
+    const res = await fetch(url, { signal: ctrl.signal, headers: { 'User-Agent': USER_AGENT } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.text();
   } catch (err) {
@@ -28,9 +30,11 @@ export interface CapabilityLayer {
 export async function getCapabilities(ep: EndpointConfig): Promise<CapabilityLayer[]> {
   const url = `${ep.url}?service=WFS&request=GetCapabilities&version=${ep.wfsVersion}`;
   const xml = await fetchText(url);
-  const blocks = xml.match(/<FeatureType[^>]*>[\s\S]*?<\/FeatureType>/g) ?? [];
-  const pick = (b: string, tag: string) => {
-    const m = b.match(new RegExp(`<${tag}>([\\s\\S]*?)</${tag}>`));
+  // Tags may carry a namespace prefix (GeoServer default ns vs ArcGIS wfs:).
+  const tag = (name: string) => `(?:[A-Za-z_][\\w.-]*:)?${name}`;
+  const blocks = xml.match(new RegExp(`<${tag('FeatureType')}[\\s>][\\s\\S]*?</${tag('FeatureType')}>`, 'g')) ?? [];
+  const pick = (b: string, name: string) => {
+    const m = b.match(new RegExp(`<${tag(name)}>([\\s\\S]*?)</${tag(name)}>`));
     return m ? m[1].trim() : '';
   };
   return blocks.map((b) => ({

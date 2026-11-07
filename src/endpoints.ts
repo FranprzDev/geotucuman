@@ -1,4 +1,4 @@
-/** Verified official WFS endpoints (29-30/10/2026). Do not invent others. */
+/** Verified official WFS/WMS endpoints (last full check 2026-11-07). Do not invent others. */
 export interface SourceLicense {
   status: string;
   attribution: string;
@@ -6,20 +6,49 @@ export interface SourceLicense {
 }
 
 export interface EndpointConfig {
-  id: 'geosplan' | 'dgct' | 'ign' | 'rides';
+  id: string;
   label: string;
+  /** Official province name (Spanish). National sources use 'Argentina (nacional)'. */
+  province: string;
   url: string;
   wfsVersion: '1.1.0' | '2.0.0';
   /** 1.1.0 uses maxFeatures, 2.0.0 uses count */
   countParam: 'maxFeatures' | 'count';
+  /** Explicit WMS base when it cannot be derived from the WFS url. */
+  wmsUrl?: string;
+  /** Source with no WFS: `url` is the WMS base and doubles as the info page. */
+  wmsOnly?: boolean;
+  /** Several themed WMS services under one source (ArcGIS MapServer pattern). */
   wmsServices?: string[];
   license: SourceLicense;
+}
+
+/**
+ * Resolves the WMS base URL for a WFS endpoint:
+ * explicit wmsUrl wins; '/wfs' suffix maps to '/wms'; '/ows' serves both; otherwise none.
+ */
+export function wmsUrlFor(ep: EndpointConfig): string | null {
+  if (ep.wmsUrl) return ep.wmsUrl;
+  if (ep.url.endsWith('/wfs')) return ep.url.replace(/\/wfs$/, '/wms');
+  if (ep.url.endsWith('/ows')) return ep.url;
+  return null;
+}
+
+/** Shared license text for provincial sources whose services publish no per-layer license. */
+function provincialLicense(serviceUrl: string): SourceLicense {
+  return {
+    status:
+      'Organismo publico provincial; el GetCapabilities no publica licencia por capa y no se encontraron terminos de reuso publicados',
+    attribution: 'Citar al organismo provincial; condiciones de reuso por capa no publicadas.',
+    url: serviceUrl,
+  };
 }
 
 export const ENDPOINTS: EndpointConfig[] = [
   {
     id: 'geosplan',
     label: 'Sec. de Gestion Publica y Planeamiento (Geosplan), Tucuman',
+    province: 'Tucumán',
     url: 'http://g.geosplan.tucuman.gob.ar/geoserver/WFS_GEOSPLAN/wfs',
     wfsVersion: '1.1.0',
     countParam: 'maxFeatures',
@@ -32,6 +61,7 @@ export const ENDPOINTS: EndpointConfig[] = [
   {
     id: 'dgct',
     label: 'Direccion General de Catastro, Tucuman',
+    province: 'Tucumán',
     url: 'http://200.49.89.203/geoserver/dgct/wfs',
     wfsVersion: '1.1.0',
     countParam: 'maxFeatures',
@@ -44,6 +74,7 @@ export const ENDPOINTS: EndpointConfig[] = [
   {
     id: 'ign',
     label: 'Instituto Geografico Nacional, Argentina',
+    province: 'Argentina (nacional)',
     url: 'https://wms.ign.gob.ar/geoserver/ows',
     wfsVersion: '2.0.0',
     countParam: 'count',
@@ -56,6 +87,7 @@ export const ENDPOINTS: EndpointConfig[] = [
   {
     id: 'rides',
     label: 'Ministerio de Produccion (RIDES), Tucuman',
+    province: 'Tucumán',
     url: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
     wfsVersion: '1.1.0',
     countParam: 'maxFeatures',
@@ -75,6 +107,131 @@ export const ENDPOINTS: EndpointConfig[] = [
       attribution: 'Citar al Ministerio de Produccion de Tucuman (RIDES); condiciones de reuso por capa no publicadas.',
       url: 'https://rides.producciontucuman.gob.ar/servicios-wms/',
     },
+  },
+  {
+    id: 'caba',
+    label: 'Direccion General de Estadistica y Censos (CABA)',
+    province: 'Ciudad Autónoma de Buenos Aires',
+    url: 'https://ideec.estadisticaciudad.gob.ar/geoserver/ows',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('https://ideec.estadisticaciudad.gob.ar/geoserver/ows'),
+  },
+  {
+    id: 'ideba',
+    label: 'Infraestructura de Datos Espaciales de la Provincia de Buenos Aires (IDEBA)',
+    province: 'Buenos Aires',
+    url: 'https://geoserver.ideba.gba.gob.ar/geoserver/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'https://geoserver.ideba.gba.gob.ar/geoserver/wms',
+    license: provincialLicense('https://geoserver.ideba.gba.gob.ar/geoserver/'),
+  },
+  {
+    id: 'idecor',
+    label: 'Infraestructura de Datos Espaciales de Cordoba (IDECOR)',
+    province: 'Córdoba',
+    url: 'https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms',
+    license: provincialLicense('https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/'),
+  },
+  {
+    id: 'entrerios',
+    label: 'Infraestructura de Datos Espaciales de Entre Rios',
+    province: 'Entre Ríos',
+    url: 'https://geoservicios.entrerios.gov.ar/geoserver/ows',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('https://geoservicios.entrerios.gov.ar/geoserver/ows'),
+  },
+  {
+    id: 'idejuy',
+    label: 'Infraestructura de Datos Espaciales de Jujuy (IDEJuy)',
+    province: 'Jujuy',
+    url: 'https://geo.idejuy.jujuy.gob.ar/geoserver/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'https://geo.idejuy.jujuy.gob.ar/geoserver/wms',
+    license: provincialLicense('https://geo.idejuy.jujuy.gob.ar/geoserver/'),
+  },
+  {
+    id: 'misiones',
+    label: 'Direccion Provincial de Vialidad (Misiones)',
+    province: 'Misiones',
+    url: 'https://sigvial.dpvmisiones.gob.ar/geoserver/ows',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('https://sigvial.dpvmisiones.gob.ar/geoserver/ows'),
+  },
+  {
+    id: 'neuquen',
+    label: 'Direccion Provincial de Catastro e Informacion Territorial (Neuquen)',
+    province: 'Neuquén',
+    url: 'https://catastro.neuquen.gov.ar/nqn_ide/services/IDE/Catastro/MapServer/WMSServer',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsOnly: true,
+    license: provincialLicense('https://catastro.neuquen.gov.ar/nqn_ide/services/IDE/Catastro/MapServer'),
+  },
+  {
+    id: 'idern',
+    label: 'Infraestructura de Datos Espaciales de Rio Negro (IDERN)',
+    province: 'Río Negro',
+    url: 'https://idern.rionegro.gov.ar/geoserver/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'https://idern.rionegro.gov.ar/geoserver/wms',
+    license: provincialLicense('https://idern.rionegro.gov.ar/geoserver/'),
+  },
+  {
+    id: 'salta',
+    label: 'Infraestructura de Datos Espaciales de Salta',
+    province: 'Salta',
+    url: 'https://geoportal.salta.gob.ar/geoserver/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'https://geoportal.salta.gob.ar/geoserver/wms',
+    license: provincialLicense('https://geoportal.salta.gob.ar/geoserver/'),
+  },
+  {
+    id: 'sanjuan',
+    label: 'Infraestructura de Datos Espaciales de San Juan (UNIDE)',
+    province: 'San Juan',
+    url: 'https://unide.sanjuan.gob.ar/geoserver/wms',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsOnly: true,
+    license: provincialLicense('https://unide.sanjuan.gob.ar/geoserver/'),
+  },
+  {
+    id: 'sanluis',
+    label: 'Direccion Provincial de Catastro y Tierras Fiscales (San Luis)',
+    province: 'San Luis',
+    url: 'http://visualcatsl.dyndns.info/geoserver/SanLuis/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    wmsUrl: 'http://visualcatsl.dyndns.info/geoserver/SanLuis/wms',
+    license: provincialLicense('http://visualcatsl.dyndns.info/geoserver/SanLuis/'),
+  },
+  {
+    id: 'santacruz',
+    label: 'Sistema de Informacion Territorial Unico (Santa Cruz)',
+    province: 'Santa Cruz',
+    url: 'https://situ.santacruz.gob.ar/geoserver/ows',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('https://situ.santacruz.gob.ar/geoserver/ows'),
+  },
+  {
+    id: 'tdf',
+    label: 'Infraestructura de Datos Espaciales de Tierra del Fuego',
+    province: 'Tierra del Fuego',
+    url: 'https://tiles.tierradelfuego.gob.ar/geoserver/ows',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('https://tiles.tierradelfuego.gob.ar/geoserver/ows'),
   },
 ];
 

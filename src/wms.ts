@@ -1,10 +1,12 @@
 const TIMEOUT_MS = 20_000;
 
+const USER_AGENT = 'GeoMCP/0.2 (+https://franprzdev.github.io/geotucuman/)';
+
 async function fetchText(url: string): Promise<string> {
   const ctrl = new AbortController();
   const t = setTimeout(() => ctrl.abort(), TIMEOUT_MS);
   try {
-    const res = await fetch(url, { signal: ctrl.signal });
+    const res = await fetch(url, { signal: ctrl.signal, headers: { 'User-Agent': USER_AGENT } });
     if (!res.ok) throw new Error(`HTTP ${res.status}`);
     return await res.text();
   } catch (err) {

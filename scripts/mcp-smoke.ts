@@ -45,8 +45,8 @@ await check('listTools exposes search_layers/describe_layer/query_layer/geocode 
   }
 });
 
-await check("search_layers {query:'parcelas'} mentions dgct:parcelas", async () => {
-  const result = await client.callTool({ name: 'search_layers', arguments: { query: 'parcelas' } });
+await check("search_layers {query:'parcelas', province:'Tucumán'} mentions dgct:parcelas", async () => {
+  const result = await client.callTool({ name: 'search_layers', arguments: { query: 'parcelas', province: 'Tucumán' } });
   if (!textOf(result).includes('dgct:parcelas')) throw new Error('dgct:parcelas does not appear in the response');
 });
 
@@ -105,18 +105,19 @@ await check('suggest_layers suggests riego/pozos layers with rationale, services
   if (!Array.isArray(parsed.noCoverage)) throw new Error('missing noCoverage array');
 });
 
-await check('serviceType filter never crosses WFS/WMS equivalence', async () => {
-  const wms = JSON.parse(
-    textOf(await client.callTool({ name: 'search_layers', arguments: { query: 'area protegida', serviceType: 'wms' } })),
-  ) as { layers?: Array<{ typeName: string }> };
-  if ((wms.layers ?? []).some((l) => l.typeName.startsWith('ign:'))) {
-    throw new Error('WFS-only IGN layer returned under a WMS filter');
-  }
-  const wfs = JSON.parse(
-    textOf(await client.callTool({ name: 'search_layers', arguments: { query: 'area protegida', serviceType: 'wfs' } })),
-  ) as { layers?: Array<{ typeName: string }> };
-  if (!(wfs.layers ?? []).some((l) => l.typeName.startsWith('ign:'))) {
-    throw new Error('IGN WFS layer missing under the WFS filter');
+await check('serviceType filter returns only layers exposing that service', async () => {
+  const { findLayer } = await import('../src/catalog.js');
+  for (const serviceType of ['wms', 'wfs'] as const) {
+    const res = JSON.parse(
+      textOf(await client.callTool({ name: 'search_layers', arguments: { query: 'area protegida', serviceType } })),
+    ) as { layers?: Array<{ typeName: string }> };
+    if ((res.layers ?? []).length === 0) throw new Error(`no layers under the ${serviceType} filter`);
+    for (const l of res.layers ?? []) {
+      const entry = findLayer(l.typeName);
+      if (!(entry?.services ?? []).some((s) => s.type === serviceType)) {
+        throw new Error(`${l.typeName} lacks a ${serviceType} service`);
+      }
+    }
   }
 });
 

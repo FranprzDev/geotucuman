@@ -91,7 +91,7 @@ Provinciales (una fuente principal por provincia, WFS+WMS salvo indicación):
 
 Índice de organismos de Tucumán (IDET): https://idet.tucuman.gob.ar/servicios/
 
-Pendientes de incorporar (relevadas el 7/11/2026, sin servicio verificable desde nuestra red en este momento): Chaco (IDEChaco, verificada una vez con 998 capas WFS y luego dejó de aceptar conexiones de esta red), Corrientes (ídem, 67 capas), Catamarca (403), La Pampa, Santa Fe, Formosa, Mendoza (idemza2 con 503), La Rioja (522) y Santiago del Estero (sin endpoint OGC público hallado). El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, así que varias parecen limitar tráfico exterior; se reintentan desde otra red.
+Pendientes de incorporar (relevadas el 7/11/2026, sin servicio verificable desde nuestra red en este momento): Chaco (IDEChaco, verificada una vez con 998 capas WFS y luego dejó de aceptar conexiones de esta red), Corrientes (ídem, 67 capas), Catamarca (403), La Pampa, Santa Fe, Formosa, Mendoza (503), La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, así que varias parecen limitar tráfico exterior; se reintentan desde otra red.
 
 `search_layers` acepta un filtro opcional `province` (ej: "Córdoba") para acotar por provincia.
 
@@ -125,7 +125,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 1. Enriquecimiento de catálogo con metadatos IDERA (licencia por capa, fecha, organismo).
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
-4. Reintentar las provincias pendientes (Chaco, Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, Mendoza, La Rioja, Santiago del Estero) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA.
+4. Reintentar las provincias pendientes (Chaco, Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, Mendoza, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA.
 5. Hosting público del MCP (el transporte HTTP ya corre en local con npm run start:http).
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

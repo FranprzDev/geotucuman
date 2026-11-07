@@ -6,6 +6,7 @@ const KEY_MAPS: Record<LegacyTool, Record<string, string>> = {
     title: 'titulo',
     abstract: 'resumen',
     source: 'fuente',
+    province: 'provincia',
     defaultCrs: 'crsPorDefecto',
     license: 'licencia',
     attribution: 'atribucion',

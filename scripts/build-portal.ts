@@ -1,6 +1,7 @@
 /** Generates docs/index.html (MCP landing) and docs/capas.html (index of discoverable layers). No external dependencies. */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
+import { ENDPOINTS } from '../src/endpoints.js';
 
 const catalog = JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog;
 const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
@@ -23,9 +24,23 @@ const SOURCE_ORG: Record<string, string> = {
   rides: 'Ministerio de Producción, Tucumán (RIDES)',
 };
 
-const counts: Record<string, number> = { geosplan: 0, dgct: 0, ign: 0, rides: 0 };
+/** Short chip labels for the original sources; newer sources fall back to their province name. */
+const SOURCE_SHORT: Record<string, string> = { geosplan: 'Planeamiento', dgct: 'Catastro', ign: 'IGN', rides: 'RIDES' };
+for (const ep of ENDPOINTS) {
+  if (!SOURCE_LABEL[ep.id]) SOURCE_LABEL[ep.id] = `${ep.label} - ${ep.province}`;
+  if (!SOURCE_ORG[ep.id]) SOURCE_ORG[ep.id] = ep.label;
+}
+const provinceOf = (id: string): string => ENDPOINTS.find((e) => e.id === id)?.province ?? id;
+
+const counts: Record<string, number> = {};
 for (const l of catalog.layers) counts[l.source] = (counts[l.source] ?? 0) + 1;
-const layersLine = `${counts.geosplan} Planeamiento · ${counts.dgct} Catastro · ${counts.ign} IGN · ${counts.rides} RIDES = ${catalog.layers.length} capas`;
+const layersLine = `${Object.keys(counts)
+  .map((id) => `${counts[id]} ${SOURCE_SHORT[id] ?? provinceOf(id)}`)
+  .join(' · ')} = ${catalog.layers.length} capas`;
+
+const filterButtons = Object.keys(counts)
+  .map((id) => `      <button data-f="${id}">${esc(SOURCE_SHORT[id] ?? provinceOf(id))}</button>`)
+  .join('\n');
 
 /** Extracts years (19xx/20xx) and ranges (e.g. 2008-2017) from the text, without duplicating range endpoints. */
 function extractYears(text: string): string[] {
@@ -118,6 +133,13 @@ function tierScore(card, term) {
 }
 `;
 
+const EXTRA_LICENSES = ENDPOINTS.filter((ep) => !['geosplan', 'dgct', 'ign', 'rides'].includes(ep.id))
+  .map(
+    (ep) =>
+      `    <li><span class="src src-${ep.id}">${esc(SOURCE_LABEL[ep.id])}</span> <a href="${esc(ep.license.url)}">${esc(ep.license.status)}</a></li>`,
+  )
+  .join('\n');
+
 const LICENSE_BODY = `
   <p>Que un servicio sea público no garantiza reutilización. Lo siguiente son los términos publicados por cada organismo a nivel sitio/servicio, no licencias por capa; revisá el enlace antes de redistribuir:</p>
   <ul>
@@ -125,6 +147,7 @@ const LICENSE_BODY = `
     <li><span class="src src-ign">${esc(SOURCE_LABEL.ign)}</span> Términos publicados del organismo para "información descargada del sitio web del IGN": <a href="https://www.ign.gob.ar/descargas/tyc1.html">"Debe reconocerse la autoría del Instituto Geográfico Nacional de la República Argentina. Se debe compartir de manera libre y gratuita. Se permite su uso comercial únicamente en el caso de obras derivadas en que la información sea utilizada como insumo para generar un nuevo producto. El IGN no se responsabiliza por las consecuencias de la utilización de la información descargada."</a></li>
     <li><span class="src src-dgct">${esc(SOURCE_LABEL.dgct)}</span> Términos publicados del organismo: <a href="https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/">no se publica licencia ni términos de uso; el servicio está documentado como experimental desde 2012</a>.</li>
     <li><span class="src src-rides">${esc(SOURCE_LABEL.rides)}</span> Organismo público provincial: <a href="https://rides.producciontucuman.gob.ar/servicios-wms/">no publica licencia ni términos de reuso por capa (no verificados)</a>.</li>
+${EXTRA_LICENSES}
   </ul>
   <p>Geocodificación: términos publicados del <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a>: "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."</p>
   <p>El GetCapabilities de cada servicio no publica licencia por capa: la licencia de cada capa concreta queda sin verificar.</p>`;
@@ -189,7 +212,7 @@ const BASE_CSS = `
   .card-foot { display: flex; flex-wrap: wrap; gap: 8px 14px; margin-top: 8px; }
   .crs { font-size: 11.5px; color: var(--muted); }
   .endpoint { font-size: 11px; color: var(--muted-2); word-break: break-all; }
-  .src { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 650; padding: 3px 8px; border-radius: 999px; border: 1px solid transparent; }
+  .src { display: inline-flex; align-items: center; gap: 4px; font-size: 11.5px; font-weight: 650; padding: 3px 8px; border-radius: 999px; border: 1px solid transparent; background: rgba(148,178,203,.10); color: #b6c6d4; border-color: rgba(148,178,203,.22); }
   .src-geosplan { background: rgba(52,211,153,.12); color: #6ee7b7; border-color: rgba(52,211,153,.24); }
   .src-dgct { background: rgba(251,191,36,.12); color: #fcd34d; border-color: rgba(251,191,36,.24); }
   .src-ign { background: rgba(96,165,250,.13); color: #93c5fd; border-color: rgba(96,165,250,.26); }
@@ -308,10 +331,7 @@ const catalogHtml = `<!DOCTYPE html>
     <input id="q" type="search" placeholder='Buscar por tema o palabra: "agua", "cultivos", "calles"...' aria-label="Buscar en el catálogo">
     <div class="filters">
       <button data-f="" class="on">Todas</button>
-      <button data-f="geosplan">Planeamiento</button>
-      <button data-f="dgct">Catastro</button>
-      <button data-f="ign">IGN</button>
-      <button data-f="rides">RIDES</button>
+${filterButtons}
     </div>
     <div id="count"></div>
   </div>

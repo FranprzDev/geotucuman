@@ -15,7 +15,9 @@ export interface CatalogService {
 export interface CatalogEntry {
   /** `${source}:${typeName}` */
   id: string;
-  source: 'geosplan' | 'dgct' | 'ign' | 'rides';
+  source: string;
+  /** Official province name (Spanish), e.g. 'Córdoba'. National sources use 'Argentina (nacional)'. */
+  province: string;
   typeName: string;
   title: string;
   abstract: string;
@@ -56,12 +58,14 @@ export function normalize(s: string): string {
  * Simple substring search over title, abstract, typeName and keywords.
  * Scoring: title weighs 3, typeName 2, keywords 2, abstract 1.
  */
-export function searchLayers(query: string, limit = 10, serviceType?: ServiceType): CatalogEntry[] {
+export function searchLayers(query: string, limit = 10, serviceType?: ServiceType, province?: string): CatalogEntry[] {
   const q = normalize(query).split(/\s+/).filter(Boolean);
   if (q.length === 0) return [];
+  const wantedProvince = province ? normalize(province) : null;
   const scored: Array<{ e: CatalogEntry; score: number }> = [];
   for (const e of loadCatalog().layers) {
     if (serviceType && !(e.services ?? []).some((s) => s.type === serviceType)) continue;
+    if (wantedProvince && normalize(e.province ?? '') !== wantedProvince) continue;
     const hay = {
       title: normalize(e.title),
       typeName: normalize(e.typeName),

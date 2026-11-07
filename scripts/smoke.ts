@@ -5,6 +5,8 @@ import { describeFeatureType, getFeature } from '../src/wfs.js';
 import { geocode } from '../src/georef.js';
 import { lonLatToTransverseMercator, reprojectBboxFrom4326 } from '../src/projection.js';
 
+import { ENDPOINTS } from '../src/endpoints.js';
+
 let failures = 0;
 
 async function step(name: string, fn: () => Promise<void>): Promise<void> {
@@ -18,17 +20,23 @@ async function step(name: string, fn: () => Promise<void>): Promise<void> {
   }
 }
 
-await step('catalog has layers from the 3 sources', async () => {
+await step('catalog has layers from every configured source', async () => {
   const c = loadCatalog();
-  for (const s of ['geosplan', 'dgct', 'ign']) {
-    if (!c.layers.some((l) => l.source === s)) throw new Error(`no layers from ${s}`);
+  for (const ep of ENDPOINTS) {
+    if (!c.layers.some((l) => l.source === ep.id)) throw new Error(`no layers from ${ep.id}`);
   }
   console.log(`  (${c.layers.length} layers in catalog)`);
 });
 
-await step("search_layers('parcelas') finds dgct:parcelas", async () => {
-  const hits = searchLayers('parcelas');
+await step("search_layers('parcelas', province 'Tucumán') finds dgct:parcelas", async () => {
+  const hits = searchLayers('parcelas', 10, undefined, 'Tucumán');
   if (!hits.some((h) => h.typeName === 'dgct:parcelas')) throw new Error('dgct:parcelas does not appear');
+});
+
+await step("search_layers('parcelas') spans provinces", async () => {
+  const hits = searchLayers('parcelas');
+  const provinces = new Set(hits.map((h) => h.province));
+  if (provinces.size < 2) throw new Error(`expected hits from several provinces, got ${[...provinces].join(', ')}`);
 });
 
 await step("describe_layer('dgct:parcelas') returns real fields", async () => {
@@ -46,6 +54,15 @@ await step('query_layer geosplan jurisdicciones (real GetFeature)', async () => 
   const fc = await getFeature(endpointById('geosplan'), 'WFS_GEOSPLAN:jurisdicciones', { maxFeatures: 2, srsName: 'EPSG:4326' });
   if (!fc.features?.length) throw new Error('0 features');
   console.log(`  (totalFeatures=${fc.totalFeatures})`);
+});
+
+await step('neuquen WMS GetMap probe (ArcGIS, WMS-only source)', async () => {
+  const { getWmsCapabilities, probeWmsGetMap } = await import('../src/wms.js');
+  const ep = endpointById('neuquen');
+  const caps = await getWmsCapabilities(ep.url);
+  if (caps.length === 0) throw new Error('no WMS layers');
+  const probe = await probeWmsGetMap(ep.url, caps[0].name, 'EPSG:4326', [-73.6, -41.1, -68.0, -36.4]);
+  if (!probe.ok) throw new Error(`GetMap failed: ${probe.detail}`);
 });
 
 await step('query_layer ign area_protegida (real GetFeature)', async () => {

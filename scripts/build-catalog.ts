@@ -1,8 +1,10 @@
 /** Generates data/catalog.json from the live GetCapabilities of the official endpoints. */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
-import { ENDPOINTS } from '../src/endpoints.js';
+import { ENDPOINTS, wmsUrlFor } from '../src/endpoints.js';
+import type { EndpointConfig } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
 import { getWmsCapabilities } from '../src/wms.js';
+import type { WmsLayer } from '../src/wms.js';
 import { ServiceType } from '../src/service-type.js';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
 
@@ -15,10 +17,6 @@ function keywordsOf(typeName: string, title: string): string[] {
     .split(/\s+/)
     .filter((w) => w.length > 2 && !STOP.has(w));
   return [...new Set(raw)];
-}
-
-function wmsUrlOf(wfsUrl: string): string {
-  return wfsUrl.replace(/\/wfs\/?$/, '/wms');
 }
 
 function stripWorkspace(name: string): string {
@@ -35,7 +33,35 @@ function cleanText(value: string): string {
   return (value || '').replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 }
 
+function wmsEntry(ep: EndpointConfig, wmsUrl: string, w: WmsLayer): CatalogEntry {
+  return {
+    id: `${ep.id}:${w.name}`,
+    source: ep.id,
+    province: ep.province,
+    typeName: w.name,
+    title: w.title || w.name,
+    abstract: cleanText(w.abstract),
+    endpoint: wmsUrl,
+    defaultCrs: w.crs[0] || 'unknown',
+    keywords: keywordsOf(w.name, w.title),
+    verifiedAt: today,
+    services: [
+      { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
+    ],
+  };
+}
+
 const today = new Date().toISOString().slice(0, 10);
+
+/** One retry with a short pause: several provincial servers answer intermittently. */
+async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch {
+    await new Promise((r) => setTimeout(r, 2500));
+    return fn();
+  }
+}
 const layers: CatalogEntry[] = [];
 const previous: Catalog | null = existsSync('data/catalog.json')
   ? (JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog)
@@ -43,33 +69,40 @@ const previous: Catalog | null = existsSync('data/catalog.json')
 let preserved = 0;
 const sources: Catalog['sources'] = {};
 
+function preserveFromSnapshot(ep: EndpointConfig, reason: string, failedThemes?: string[]): void {
+  const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
+  if (stale.length === 0) {
+    throw new Error(`${ep.id}: GetCapabilities FAILED and there is no previous snapshot to preserve — ${reason}`);
+  }
+  layers.push(
+    ...stale.map((l) => ({
+      ...l,
+      services: l.services ?? [{ type: ServiceType.Wfs, endpoint: l.endpoint, typeName: l.typeName }],
+    })),
+  );
+  preserved += stale.length;
+  const failedField = failedThemes && failedThemes.length > 0 ? { ridesFailedThemes: failedThemes } : {};
+  sources[ep.id] = {
+    status: 'preserved',
+    fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
+    ...failedField,
+  };
+  console.error(`${ep.id}: GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${reason})`);
+}
+
 for (const ep of ENDPOINTS) {
-  if (ep.id === 'rides') {
-    const wmsServices = ep.wmsServices ?? [];
+  // WMS-only flow: themed ArcGIS services (wmsServices) or a single WMS base (wmsOnly).
+  const wmsServices = ep.wmsServices ?? (ep.wmsOnly ? [ep.url] : null);
+  if (wmsServices) {
     const entries: CatalogEntry[] = [];
     const failedThemes: string[] = [];
     let answered = 0;
     for (const wmsUrl of wmsServices) {
       const theme = themeOf(wmsUrl);
       try {
-        const wmsCaps = await getWmsCapabilities(wmsUrl);
+        const wmsCaps = await withRetry(() => getWmsCapabilities(wmsUrl));
         answered += 1;
-        for (const w of wmsCaps) {
-          entries.push({
-            id: `${ep.id}:${w.name}`,
-            source: ep.id,
-            typeName: w.name,
-            title: w.title || w.name,
-            abstract: cleanText(w.abstract),
-            endpoint: wmsUrl,
-            defaultCrs: w.crs[0] || 'unknown',
-            keywords: keywordsOf(w.name, w.title),
-            verifiedAt: today,
-            services: [
-              { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
-            ],
-          });
-        }
+        for (const w of wmsCaps) entries.push(wmsEntry(ep, wmsUrl, w));
         console.log(`${ep.id}: ${theme} ${wmsCaps.length} WMS layers`);
       } catch (err) {
         failedThemes.push(theme);
@@ -87,32 +120,19 @@ for (const ep of ENDPOINTS) {
       };
       console.log(`${ep.id}: ${entries.length} WMS layers from ${answered}/${wmsServices.length} theme services`);
     } else {
-      const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
-      if (stale.length === 0) {
-        throw new Error(`${ep.id}: all WMS GetCapabilities FAILED and there is no previous snapshot to preserve — ${failedThemes.join(', ')}`);
-      }
-      layers.push(
-        ...stale.map((l) => ({
-          ...l,
-          services: l.services ?? [{ type: ServiceType.Wms, endpoint: l.endpoint, typeName: l.typeName }],
-        })),
-      );
-      preserved += stale.length;
-      sources[ep.id] = {
-        status: 'preserved',
-        fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
-        wmsStatus: 'failed',
-        ...failedField,
-      };
-      console.error(`${ep.id}: all WMS GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${failedThemes.join(', ')})`);
+      preserveFromSnapshot(ep, failedThemes.join(', '), failedThemes);
+      if (sources[ep.id]) sources[ep.id].wmsStatus = 'failed';
     }
     continue;
   }
+
+  // WFS flow, with WMS merge for every endpoint that exposes one.
   try {
-    const caps = await getCapabilities(ep);
+    const caps = await withRetry(() => getCapabilities(ep));
     const entries: CatalogEntry[] = caps.map((c) => ({
       id: `${ep.id}:${c.typeName}`,
       source: ep.id,
+      province: ep.province,
       typeName: c.typeName,
       title: c.title || c.typeName,
       abstract: cleanText(c.abstract),
@@ -122,10 +142,10 @@ for (const ep of ENDPOINTS) {
       verifiedAt: today,
       services: [{ type: ServiceType.Wfs, endpoint: ep.url, typeName: c.typeName }],
     }));
-    if (ep.id === 'geosplan' || ep.id === 'dgct') {
-      const wmsUrl = wmsUrlOf(ep.url);
+    const wmsUrl = wmsUrlFor(ep);
+    if (wmsUrl) {
       try {
-        const wmsCaps = await getWmsCapabilities(wmsUrl);
+        const wmsCaps = await withRetry(() => getWmsCapabilities(wmsUrl));
         for (const w of wmsCaps) {
           const match = entries.find(
             (e) => w.name === e.typeName || w.name === stripWorkspace(e.typeName),
@@ -139,20 +159,7 @@ for (const ep of ENDPOINTS) {
               queryable: w.queryable,
             });
           } else {
-            entries.push({
-              id: `${ep.id}:${w.name}`,
-              source: ep.id,
-              typeName: w.name,
-              title: w.title || w.name,
-              abstract: cleanText(w.abstract),
-              endpoint: wmsUrl,
-              defaultCrs: w.crs[0] || 'unknown',
-              keywords: keywordsOf(w.name, w.title),
-              verifiedAt: today,
-              services: [
-                { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
-              ],
-            });
+            entries.push(wmsEntry(ep, wmsUrl, w));
           }
         }
         sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString(), wmsStatus: 'live' };
@@ -167,22 +174,7 @@ for (const ep of ENDPOINTS) {
     }
     layers.push(...entries);
   } catch (err) {
-    const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
-    if (stale.length === 0) {
-      throw new Error(`${ep.id}: GetCapabilities FAILED and there is no previous snapshot to preserve — ${err}`);
-    }
-    layers.push(
-      ...stale.map((l) => ({
-        ...l,
-        services: l.services ?? [{ type: ServiceType.Wfs, endpoint: l.endpoint, typeName: l.typeName }],
-      })),
-    );
-    preserved += stale.length;
-    sources[ep.id] = {
-      status: 'preserved',
-      fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
-    };
-    console.error(`${ep.id}: GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${err})`);
+    preserveFromSnapshot(ep, String(err));
   }
 }
 

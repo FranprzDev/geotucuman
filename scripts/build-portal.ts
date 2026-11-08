@@ -84,7 +84,7 @@ function cardHtml(l: CatalogEntry): string {
     ${abs}
     <div class="card-meta"><span class="src src-${l.source}">${esc(label)}</span><span class="vig">${esc(vintageLine(l))}</span></div>
     <p class="meta-line">Publica: ${esc(SOURCE_ORG[l.source] ?? label)}</p>
-    <details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><code class="typename">${esc(l.typeName)}</code><div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span><span class="verified">Catálogo verificado: ${esc(l.verifiedAt)}</span></div></div></details>
+    <details class="tech"><summary>Detalles técnicos</summary><div class="tech-body"><span class="service-type">${esc(l.services.map(s=>s.type.toUpperCase()).join(' / '))}</span><code class="typename">${esc(l.typeName)}</code><div class="card-foot"><span class="crs">${esc(crsShort(l))}</span><span class="endpoint">${esc(l.endpoint)}</span><span class="verified">Catálogo verificado: ${esc(l.verifiedAt)}</span></div></div></details>
   </article>`;
 }
 
@@ -278,7 +278,8 @@ const CATALOG_CSS = `
   .filters button.on { background: linear-gradient(135deg, #2bd0ee, #0f8ba7); color: #031015; border-color: transparent; box-shadow: 0 0 20px rgba(63,214,234,.22); }
   #count { font-size: 14px; font-weight: 650; color: var(--brand-bright); margin-top: 10px; }
   .grid { display: grid; grid-template-columns: minmax(0, 1fr); gap: 14px; margin-top: 8px; }
-  @media (min-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }`;
+  @media (min-width: 760px) { .grid { grid-template-columns: repeat(2, 1fr); } }
+  @media (max-width: 759px) { .controls { position: static; } .card { scroll-margin-top: 80px; } }`;
 
 const licensesDetails = `<details class="licenses" id="licencias">
   <summary>Licencias y atribución por fuente</summary>${LICENSE_BODY}

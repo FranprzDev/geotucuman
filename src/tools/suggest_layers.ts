@@ -10,7 +10,7 @@ import { asText } from '../lib/shared.js';
 
 export const schema = {
   goal: z.string().describe('Free-text intent, Spanish or English, e.g. "quiero armar un mapa de riego y pozos"'),
-  serviceType: z.enum([ServiceType.Wfs, ServiceType.Wms]).optional().describe('Filter by service type'),
+  serviceType: z.enum([ServiceType.Wfs, ServiceType.Wms, ServiceType.ArcGis]).optional().describe('Filter by service type'),
   limit: z.number().int().min(1).max(20).default(10),
 };
 
@@ -23,6 +23,7 @@ export const metadata: ToolMetadata = {
 const CAPABILITY_SEMANTICS: Record<ServiceType, string> = {
   [ServiceType.Wfs]: 'Analyzable/downloadable vector data (GetFeature)',
   [ServiceType.Wms]: 'Display/context map imagery (GetMap)',
+  [ServiceType.ArcGis]: 'Vector data via ArcGIS REST query',
 };
 
 function variants(term: string): string[] {

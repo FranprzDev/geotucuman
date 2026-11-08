@@ -1,10 +1,12 @@
-/** Generates data/catalog.json from the live GetCapabilities of the official endpoints. */
+/** Generates data/catalog.json from the live GetCapabilities / ArcGIS REST of the official endpoints. */
 import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { ENDPOINTS, wmsUrlFor } from '../src/endpoints.js';
 import type { EndpointConfig } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
 import { getWmsCapabilities } from '../src/wms.js';
 import type { WmsLayer } from '../src/wms.js';
+import { listArcgisServices, getArcgisLayersCached, mapPool } from '../src/arcgis.js';
+import type { ArcGisLayerMeta } from '../src/arcgis.js';
 import { ServiceType } from '../src/service-type.js';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
 
@@ -69,7 +71,16 @@ const previous: Catalog | null = existsSync('data/catalog.json')
 let preserved = 0;
 const sources: Catalog['sources'] = {};
 
-function preserveFromSnapshot(ep: EndpointConfig, reason: string, failedThemes?: string[]): void {
+const onlyEnv = process.env.GEOARG_ONLY;
+const onlySet: Set<string> | null = onlyEnv
+  ? new Set(onlyEnv.split(',').map((s) => s.trim()).filter(Boolean))
+  : null;
+
+function isOnlySkipped(id: string): boolean {
+  return onlySet !== null && !onlySet.has(id);
+}
+
+function preserveFromSnapshot(ep: EndpointConfig, reason: string, failedThemes?: string[], silent = false): void {
   const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
   if (stale.length === 0) {
     throw new Error(`${ep.id}: GetCapabilities FAILED and there is no previous snapshot to preserve — ${reason}`);
@@ -87,10 +98,114 @@ function preserveFromSnapshot(ep: EndpointConfig, reason: string, failedThemes?:
     fetchedAt: previous?.sources?.[ep.id]?.fetchedAt ?? previous?.generatedAt ?? new Date().toISOString(),
     ...failedField,
   };
-  console.error(`${ep.id}: GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${reason})`);
+  if (!silent) {
+    console.error(`${ep.id}: GetCapabilities FAILED — preserving ${stale.length} layers from the previous snapshot (${reason})`);
+  }
+}
+
+function preserveUnchanged(ep: EndpointConfig): void {
+  const stale = previous?.layers.filter((l) => l.source === ep.id) ?? [];
+  if (stale.length === 0) {
+    console.error(`${ep.id}: GEOARG_ONLY skips this source but there is no previous snapshot to preserve`);
+    return;
+  }
+  layers.push(
+    ...stale.map((l) => ({
+      ...l,
+      services: l.services ?? [{ type: ServiceType.Wfs, endpoint: l.endpoint, typeName: l.typeName }],
+    })),
+  );
+  preserved += stale.length;
+  const prevSource = previous?.sources?.[ep.id];
+  sources[ep.id] = prevSource
+    ? { ...prevSource, status: 'preserved' }
+    : {
+        status: 'preserved',
+        fetchedAt: previous?.generatedAt ?? new Date().toISOString(),
+      };
+}
+
+function isGenericLayerName(name: string): boolean {
+  const n = name.trim().toLowerCase();
+  return ['polygons', 'polygon', 'points', 'point', 'lines', 'line', 'layer', 'capa', 'features', 'feature layer'].includes(n) || /^layer[ _]?\d*$/.test(n);
+}
+
+function arcgisEntry(
+  ep: EndpointConfig,
+  root: string,
+  serviceName: string,
+  layer: { id: number; name: string; description?: string; wkid?: number },
+): CatalogEntry {
+  const typeName = `${serviceName}/${layer.id}`;
+  const endpoint = `${root.replace(/\/+$/, '')}/${serviceName}/FeatureServer/${layer.id}`;
+  const humanizedService = serviceName.replace(/^Hosted\//, '').replace(/_/g, ' ').trim();
+  const title = isGenericLayerName(layer.name || '') ? humanizedService : (layer.name || humanizedService);
+  const description = layer.description || '';
+  const abstract =
+    description && description.toLowerCase() !== title.toLowerCase() && description.toLowerCase() !== (layer.name || '').toLowerCase()
+      ? cleanText(description)
+      : '';
+  const wkid = layer.wkid ?? 4326;
+  return {
+    id: `${ep.id}:${typeName}`,
+    source: ep.id,
+    province: ep.province,
+    typeName,
+    title,
+    abstract,
+    endpoint,
+    defaultCrs: `EPSG:${wkid}`,
+    keywords: keywordsOf(typeName, title),
+    verifiedAt: today,
+    services: [
+      { type: ServiceType.ArcGis, endpoint, typeName, queryable: true },
+    ],
+  };
 }
 
 for (const ep of ENDPOINTS) {
+  if (isOnlySkipped(ep.id)) {
+    preserveUnchanged(ep);
+    continue;
+  }
+
+  // ArcGIS REST flow: root + folders of FeatureServer services.
+  if (ep.arcgis) {
+    const { root, folders } = ep.arcgis;
+    try {
+      const services = await withRetry(() => listArcgisServices(root, folders));
+      services.sort();
+      const entries: CatalogEntry[] = [];
+      const failedServices: string[] = [];
+      const results = await mapPool(services, 3, async (svc): Promise<ArcGisLayerMeta[] | null> => {
+        try {
+          return await getArcgisLayersCached(root, svc);
+        } catch (err) {
+          failedServices.push(svc);
+          console.error(`${ep.id}: ${svc} FeatureServer metadata FAILED (${err})`);
+          return null;
+        }
+      });
+      for (let i = 0; i < services.length; i++) {
+        const svcLayers = results[i];
+        if (!svcLayers) continue;
+        for (const layer of svcLayers) entries.push(arcgisEntry(ep, root, services[i], layer));
+      }
+      if (entries.length === 0 && failedServices.length > 0) {
+        throw new Error(`all ${services.length} FeatureServer services failed`);
+      }
+      layers.push(...entries);
+      sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString() };
+      console.log(
+        `${ep.id}: ${services.length} FeatureServer services, ${entries.length} ArcGIS layers` +
+          (failedServices.length ? ` (${failedServices.length} services failed: ${failedServices.join(', ')})` : ''),
+      );
+    } catch (err) {
+      preserveFromSnapshot(ep, String(err));
+    }
+    continue;
+  }
+
   // WMS-only flow: themed ArcGIS services (wmsServices) or a single WMS base (wmsOnly).
   const wmsServices = ep.wmsServices ?? (ep.wmsOnly ? [ep.url] : null);
   if (wmsServices) {

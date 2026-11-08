@@ -1,8 +1,8 @@
 {
-  "generatedAt": "2026-11-08T14:15:41.263Z",
+  "generatedAt": "2026-11-08T17:42:50.354Z",
   "sources": {
     "geosplan": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:14:36.464Z",
       "wmsStatus": "live"
     },
@@ -11,84 +11,88 @@
       "fetchedAt": "2026-11-07T20:30:37.518Z"
     },
     "ign": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:01.874Z",
       "wmsStatus": "live"
     },
     "rides": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:07.508Z",
       "wmsStatus": "live"
     },
     "caba": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:10.284Z",
       "wmsStatus": "live"
     },
     "ideba": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:12.170Z",
       "wmsStatus": "live"
     },
     "idecor": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:14.731Z",
       "wmsStatus": "live"
     },
     "entrerios": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:16.712Z",
       "wmsStatus": "live"
     },
     "idechaco": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:18.698Z",
       "wmsStatus": "live"
     },
     "idejuy": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:21.163Z",
       "wmsStatus": "live"
     },
     "misiones": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:23.362Z",
       "wmsStatus": "live"
     },
     "neuquen": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:24.488Z",
       "wmsStatus": "live"
     },
     "idern": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:29.848Z",
       "wmsStatus": "live"
     },
     "salta": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:31.312Z",
       "wmsStatus": "live"
     },
     "sanjuan": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:33.070Z",
       "wmsStatus": "live"
     },
     "sanluis": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:34.154Z",
       "wmsStatus": "live"
     },
     "santacruz": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:36.018Z",
       "wmsStatus": "live"
     },
     "tdf": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T14:15:41.262Z",
       "wmsStatus": "live"
+    },
+    "mendoza": {
+      "status": "live",
+      "fetchedAt": "2026-11-08T17:42:50.353Z"
     }
   },
   "layers": [
@@ -123377,6 +123381,228 @@
             "EPSG:5344",
             "CRS:84"
           ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Bomberos/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Bomberos/0",
+      "title": "BOMBEROS",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Bomberos/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "bomberos"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Bomberos/FeatureServer/0",
+          "typeName": "Hosted/Bomberos/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Bosques_Nativos_/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Bosques_Nativos_/0",
+      "title": "BosqueNativo2023",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Bosques_Nativos_/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "bosques",
+        "nativos",
+        "bosquenativo2023"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Bosques_Nativos_/FeatureServer/0",
+          "typeName": "Hosted/Bosques_Nativos_/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Cuencas_Hidrográficas/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Cuencas_Hidrográficas/0",
+      "title": "cuencas_hidrograficas",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Cuencas_Hidrográficas/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "cuencas",
+        "hidrográficas",
+        "hidrograficas"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Cuencas_Hidrográficas/FeatureServer/0",
+          "typeName": "Hosted/Cuencas_Hidrográficas/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Departamentos_2024/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Departamentos_2024/0",
+      "title": "Departamentos_2024",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Departamentos_2024/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "departamentos",
+        "2024"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Departamentos_2024/FeatureServer/0",
+          "typeName": "Hosted/Departamentos_2024/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Inventario_Nacional_Glaciares_IANIGLA/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Inventario_Nacional_Glaciares_IANIGLA/0",
+      "title": "Inventario_Nacional_Glaciares_IANIGLA",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Inventario_Nacional_Glaciares_IANIGLA/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "inventario",
+        "nacional",
+        "glaciares",
+        "ianigla"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Inventario_Nacional_Glaciares_IANIGLA/FeatureServer/0",
+          "typeName": "Hosted/Inventario_Nacional_Glaciares_IANIGLA/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Rutas_de_Mendoza_IGN/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Rutas_de_Mendoza_IGN/0",
+      "title": "Rutas de Mendoza",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Rutas_de_Mendoza_IGN/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "rutas",
+        "mendoza",
+        "ign"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Rutas_de_Mendoza_IGN/FeatureServer/0",
+          "typeName": "Hosted/Rutas_de_Mendoza_IGN/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/Suelos/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/Suelos/0",
+      "title": "suelos_INTA",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Suelos/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "suelos",
+        "inta"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/Suelos/FeatureServer/0",
+          "typeName": "Hosted/Suelos/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/aridez_futuro_vect/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/aridez_futuro_vect/0",
+      "title": "aridez_futuro",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/aridez_futuro_vect/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "aridez",
+        "futuro",
+        "vect"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/aridez_futuro_vect/FeatureServer/0",
+          "typeName": "Hosted/aridez_futuro_vect/0",
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "mendoza:Hosted/aridez_pasado_vect/0",
+      "source": "mendoza",
+      "province": "Mendoza",
+      "typeName": "Hosted/aridez_pasado_vect/0",
+      "title": "aridez_pasado",
+      "abstract": "",
+      "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/aridez_pasado_vect/FeatureServer/0",
+      "defaultCrs": "EPSG:3857",
+      "keywords": [
+        "hosted",
+        "aridez",
+        "pasado",
+        "vect"
+      ],
+      "verifiedAt": "2026-11-08",
+      "services": [
+        {
+          "type": "arcgis",
+          "endpoint": "https://ide.mendoza.gov.ar/server/rest/services/Hosted/aridez_pasado_vect/FeatureServer/0",
+          "typeName": "Hosted/aridez_pasado_vect/0",
           "queryable": true
         }
       ]

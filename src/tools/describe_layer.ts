@@ -4,6 +4,7 @@ import { findLayer } from '../catalog.js';
 import type { CatalogEntry, CatalogService } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { describeFeatureType } from '../wfs.js';
+import { describeArcgisFields } from '../arcgis.js';
 import { probeWmsGetMap } from '../wms.js';
 import { layerFlags } from '../lib/flags.js';
 import { loadCatalog } from '../catalog.js';
@@ -28,7 +29,7 @@ export const schema = {
 export const metadata: ToolMetadata = {
   name: 'describe_layer',
   description:
-    'Describe the real fields of a layer (DescribeFeatureType) + catalog metadata. Required before query_layer.',
+    'Describe the real fields of a WFS or ArcGIS REST layer (DescribeFeatureType / FeatureServer layer metadata) + catalog metadata. Required before query_layer.',
 };
 
 function declaredCrsOf(entry: CatalogEntry, services: CatalogService[]): string[] {
@@ -45,7 +46,7 @@ function queryableSummaryOf(services: CatalogService[]) {
   return services.map((svc) => ({
     type: svc.type,
     typeName: svc.typeName,
-    queryable: svc.type === ServiceType.Wfs ? true : svc.queryable ?? false,
+    queryable: svc.type === ServiceType.Wfs || svc.type === ServiceType.ArcGis ? true : svc.queryable ?? false,
   }));
 }
 
@@ -80,7 +81,8 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
       : null;
   const probeFields = probe ? { probe, probeNote: PROBE_NOTE } : {};
   const wfs = services.find((svc) => svc.type === ServiceType.Wfs);
-  if (!wfs) {
+  const arcgis = services.find((svc) => svc.type === ServiceType.ArcGis);
+  if (!wfs && !arcgis) {
     return {
       typeName: entry.typeName,
       title: entry.title,
@@ -101,6 +103,36 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
     };
   }
   const ep = endpointById(entry.source);
+  if (arcgis && ep.arcgis) {
+    const m = /^(.*\/FeatureServer)\/(\d+)$/.exec(arcgis.endpoint);
+    if (!m) {
+      return { error: `ArcGIS endpoint not parseable for ${entry.typeName}: ${arcgis.endpoint}` };
+    }
+    const layerId = Number(m[2]);
+    const serviceName = entry.typeName.replace(/\/\d+$/, '');
+    const fields = await describeArcgisFields(ep.arcgis.root, serviceName, layerId);
+    described.add(entry.typeName.toLowerCase());
+    return {
+      typeName: entry.typeName,
+      title: entry.title,
+      abstract: entry.abstract || null,
+      source: entry.source,
+      endpoint: entry.endpoint,
+      defaultCrs: entry.defaultCrs,
+      fields,
+      services,
+      flags,
+      queryable,
+      declaredCrs,
+      coverage,
+      ...probeFields,
+      license: ep.license,
+      sources: [entry.endpoint],
+    };
+  }
+  if (!wfs) {
+    return { error: `Layer ${entry.typeName} is WMS-only.` };
+  }
   const fields = await describeFeatureType(ep, wfs.typeName);
   described.add(entry.typeName.toLowerCase());
   return {

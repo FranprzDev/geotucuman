@@ -11,8 +11,15 @@ export interface EndpointConfig {
   /** Official province name (Spanish). National sources use 'Argentina (nacional)'. */
   province: string;
   url: string;
+  /**
+   * WFS version. Inert for ArcGIS sources (kept required for the shared interface);
+   * use the placeholder '1.1.0'.
+   */
   wfsVersion: '1.1.0' | '2.0.0';
-  /** 1.1.0 uses maxFeatures, 2.0.0 uses count */
+  /**
+   * Pagination parameter name. Inert for ArcGIS sources;
+   * use the placeholder 'maxFeatures'.
+   */
   countParam: 'maxFeatures' | 'count';
   /** Explicit WMS base when it cannot be derived from the WFS url. */
   wmsUrl?: string;
@@ -20,14 +27,31 @@ export interface EndpointConfig {
   wmsOnly?: boolean;
   /** Several themed WMS services under one source (ArcGIS MapServer pattern). */
   wmsServices?: string[];
+  /**
+   * ArcGIS REST root + folders that contain FeatureServer services.
+   * Only FeatureServer vector layers with the Query capability are indexed.
+   */
+  arcgis?: {
+    root: string;
+    folders: string[];
+    /**
+     * Explicit allowlist of full FeatureServer service names to index (e.g. 'Hosted/Bomberos').
+     * When set, discovery is skipped and only these services are fetched/preserved.
+     */
+    services?: string[];
+  };
+  /** Source with no WFS and no WMS: only ArcGIS REST (FeatureServer) services. */
+  arcgisOnly?: boolean;
   license: SourceLicense;
 }
 
 /**
  * Resolves the WMS base URL for a WFS endpoint:
  * explicit wmsUrl wins; '/wfs' suffix maps to '/wms'; '/ows' serves both; otherwise none.
+ * ArcGIS-only sources have no WMS base: always returns null.
  */
 export function wmsUrlFor(ep: EndpointConfig): string | null {
+  if (ep.arcgisOnly) return null;
   if (ep.wmsUrl) return ep.wmsUrl;
   if (ep.url.endsWith('/wfs')) return ep.url.replace(/\/wfs$/, '/wms');
   if (ep.url.endsWith('/ows')) return ep.url;
@@ -55,7 +79,7 @@ export const ENDPOINTS: EndpointConfig[] = [
     license: {
       status: 'Terminos del sitio Geosplan: CC BY-NC-SA (Reconocimiento-NoComercial-CompartirIgual)',
       attribution: 'Citar la fuente y la fecha de ultima actualizacion, no alterar el contenido ni su sentido, sin fines comerciales sobre la obra original o la informacion publicada. Terminos a nivel sitio: el servicio WFS no publica licencia por capa.',
-      url: 'http://geosplan.tucuman.gov.ar/index.php/institucional/terminos-de-uso/',
+      url: 'http://geosplan.tucuman.gob.ar/index.php/institucional/terminos-de-uso/',
     },
   },
   {
@@ -242,6 +266,39 @@ export const ENDPOINTS: EndpointConfig[] = [
     wfsVersion: '1.1.0',
     countParam: 'maxFeatures',
     license: provincialLicense('https://tiles.tierradelfuego.gob.ar/geoserver/ows'),
+  },
+  {
+    id: 'mendoza',
+    label: 'Infraestructura de Datos Espaciales de Mendoza (IDE Mendoza)',
+    province: 'Mendoza',
+    // ArcGIS-only source: root + folders are the discovery surface. wfsVersion/countParam
+    // are inert placeholders required by the shared interface.
+    url: 'https://ide.mendoza.gov.ar/server/rest/services',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    arcgis: {
+      root: 'https://ide.mendoza.gov.ar/server/rest/services',
+      folders: ['Hosted'],
+      // Reviewed public-environment/infrastructure schemas only. This is NOT the full
+      // 'Hosted' folder: any other Hosted service is intentionally left out of scope.
+      services: [
+        'Hosted/Bomberos',
+        'Hosted/Departamentos_2024',
+        'Hosted/Bosques_Nativos_',
+        'Hosted/Cuencas_Hidrográficas',
+        'Hosted/Suelos',
+        'Hosted/Inventario_Nacional_Glaciares_IANIGLA',
+        'Hosted/Rutas_de_Mendoza_IGN',
+        'Hosted/aridez_pasado_vect',
+        'Hosted/aridez_futuro_vect',
+      ],
+    },
+    arcgisOnly: true,
+    license: {
+      status: 'El servicio no declara licencia ni terminos de reuso publicados',
+      attribution: 'Citar al organismo provincial (IDE Mendoza); condiciones de reuso no publicadas',
+      url: 'https://ide.mendoza.gov.ar/server/rest/services',
+    },
   },
 ];
 

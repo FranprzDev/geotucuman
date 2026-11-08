@@ -1,23 +1,23 @@
 # GeoArg
 
-MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 15 provincias (detalle abajo).
+MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 16 jurisdicciones subnacionales (detalle abajo; 19 endpoints de capas (18 provinciales + IGN), más la API Georef; 16 jurisdicciones subnacionales, con 3 fuentes de Tucumán).
 
 > Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026 y a **GeoArg** el 7/11/2026. El repositorio y la URL pública no cambian.
 
-**Qué es:** una capa de descubrimiento y consulta sobre servicios oficiales WFS y WMS, más la API Georef.
+**Qué es:** una capa de descubrimiento y consulta sobre servicios oficiales WFS, WMS y ArcGIS REST (FeatureServer), más la API Georef.
 **Qué NO es:** un SIG completo, ni un visor, ni una copia de los datos. Consulta en vivo y cita la fuente.
 
 ## Herramientas
 
 | Tool | Qué hace |
 | --- | --- |
-| `search_layers` | Busca capas por palabra clave en el catálogo embebido (filtro opcional por tipo de servicio WFS/WMS) |
+| `search_layers` | Busca capas por palabra clave en el catálogo embebido (filtro opcional por tipo de servicio WFS/WMS/ArcGIS) |
 | `suggest_layers` | Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM) |
 | `describe_layer` | Campos reales de una capa (obligatorio antes de consultar) |
 | `query_layer` | GetFeature con filtros, paginación y bbox en EPSG:4326 (se reproyecta al CRS nativo de la capa en el cliente) |
 | `geocode` | Texto libre a coordenadas vía API Georef (gratis, sin key) |
 
-Las capas WMS-only se buscan y describen igual (metadatos vía GetCapabilities); `query_layer` aplica a capas WFS.
+Las capas WMS-only se buscan y describen igual (metadatos vía GetCapabilities); `query_layer` aplica a capas WFS y ArcGIS REST (`serviceType: arcgis`, con describe/query/paginación/bbox/filtro por servicio).
 
 ## Cómo usarlo
 
@@ -89,17 +89,18 @@ Provinciales (una fuente principal por provincia, WFS+WMS salvo indicación):
 - San Luis — Dirección Provincial de Catastro y Tierras Fiscales: http://visualcatsl.dyndns.info/geoserver/SanLuis/wfs (host dinámico)
 - Santa Cruz — SIT Santa Cruz: https://situ.santacruz.gob.ar/geoserver/ows
 - Tierra del Fuego — IDE TDF: https://tiles.tierradelfuego.gob.ar/geoserver/ows
+- Mendoza — ArcGIS REST FeatureServer (tipo de servicio propio `arcgis`), con lista blanca explícita de 9 capas: estaciones de bomberos, bosques nativos, cuencas hidrográficas, departamentos 2024, glaciares IANIGLA, rutas IGN, suelos INTA y aridez pasada/futura. Sin volcado masivo de los cientos de servicios del directorio. No se declara licencia en los metadatos inspeccionados del servicio: se cita la fuente y no se promete derecho de redistribución. Los campos de usuario auditados no se solicitan ni se exponen.
 
 Índice de organismos de Tucumán (IDET): https://idet.tucuman.gob.ar/servicios/
 
-Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026): Corrientes (servidor alcanzable pero con cadena TLS incompleta: falta el certificado intermedio de Sectigo; con verificación relajada responde 67 capas WFS, pero Node rechaza el handshake con UNABLE_TO_VERIFY_LEAF_SIGNATURE y no vamos a debilitar TLS en el código), Catamarca (403), La Pampa, Santa Fe, Formosa, Mendoza (503), La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, así que varias parecen limitar tráfico exterior; se reintentan desde otra red.
+Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026; quedan 8): Corrientes (servidor alcanzable pero con cadena TLS incompleta: falta el certificado intermedio de Sectigo; con verificación relajada responde 67 capas WFS, pero Node rechaza el handshake con UNABLE_TO_VERIFY_LEAF_SIGNATURE y no vamos a debilitar TLS en el código), Catamarca (403), La Pampa, Santa Fe, Formosa, La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). Hay un candidato nuevo: una alternativa oficial regional de INTA (aún no integrada) para Corrientes, Catamarca, La Rioja, Santiago del Estero, Santa Fe y Chubut, que requiere validación de territorio capa por capa. El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, pero solo se probaron redes limitadas: no se afirma que todas estén vivas o geobloqueadas globalmente; se reintentan desde otra red.
 
 `search_layers` acepta un filtro opcional `province` (ej: "Córdoba") para acotar por provincia.
 
 ## Estado verificado (8/11/2026)
 
-- Catálogo regenerado en vivo el 8/11/2026: 3675 capas de 18 fuentes (15 provincias + IGN nacional). Fuentes nuevas validadas una por una con GetCapabilities en vivo; Neuquén (ArcGIS) además con DescribeFeatureType y GetFeature reales.
-- Smoke completo (npm run smoke) 12/12 PASS el 4/11/2026, con GetFeature real contra Geosplan, DGCT e IGN, y MCP smoke 10/10. Entre el 31/10 y el 2/11/2026 el IGN estuvo caído por un problema de DNS del propio organismo (wms.ign.gob.ar no resolvía; diagnóstico en diagnostics/2026-10-31-ign-dns.md) y volvió sin cambios de este lado. Paginacion (startIndex/nextStartIndex) verificada en Geosplan.
+- Catálogo regenerado en vivo el 8/11/2026: 3684 capas de 19 endpoints de capas (16 jurisdicciones subnacionales + IGN; Georef es una API adicional, no aporta capas al catálogo). Respecto de las 3675 previas se suman 9 capas revisadas de Mendoza (las 3675 anteriores quedan sin cambios). Las fuentes WFS/WMS se descubren mediante GetCapabilities; Mendoza usa metadatos y query de ArcGIS REST. La verificación de capas representativas no garantiza la disponibilidad de cada capa.
+- Smoke completo (npm run smoke) 12/12 PASS el 4/11/2026, con GetFeature real contra Geosplan, DGCT e IGN, y MCP smoke 10/10. Smoke existente más los nuevos tests de ArcGIS (describe/query/paginación/bbox/filtro por servicio) todos PASS el 8/11/2026; regresión MCP stdio PASS; tests offline en CI. Entre el 31/10 y el 2/11/2026 el IGN estuvo caído por un problema de DNS del propio organismo (wms.ign.gob.ar no resolvía; diagnóstico en diagnostics/2026-10-31-ign-dns.md) y volvió sin cambios de este lado. Paginacion (startIndex/nextStartIndex) verificada en Geosplan.
 - El bbox se pasa en EPSG:4326 y el cliente lo reproyecta al CRS nativo de la capa antes de filtrar (verificado: bbox 4326 sobre capa proyectada devuelve 0 si se manda directo). Reproyección Gauss-Krüger/TM propia para EPSG:22183 y EPSG:5345, contrastada contra proj4 con error <0.001 m. Para otro CRS nativo, el MCP devuelve un error claro en vez de 0 silencioso.
 - CRS por defecto varía por capa (observados EPSG:22183, 5345, 4326). Las geometrías se piden siempre con `srsName=EPSG:4326`.
 - El endpoint de Catastro (DGCT) es intermitente: el 30/10/2026 a la madrugada no respondió (timeout de conexión) y volvió el mismo día; el catálogo registra por fuente si las capas son fetch en vivo o snapshot conservado.
@@ -126,7 +127,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 1. Enriquecimiento de catálogo con metadatos IDERA (licencia por capa, fecha, organismo).
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
-4. Reintentar las provincias pendientes (Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, Mendoza, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA.
+4. Reintentar las provincias pendientes (Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA. Evaluar la alternativa oficial regional de INTA para Corrientes, Catamarca, La Rioja, Santiago del Estero, Santa Fe y Chubut, con validación de territorio capa por capa.
 5. Hosting público del MCP (el transporte HTTP ya corre en local con npm run start:http).
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

@@ -3,6 +3,7 @@ import type { InferSchema, ToolMetadata } from 'xmcp';
 import { findLayer } from '../catalog.js';
 import { endpointById } from '../endpoints.js';
 import { getFeature } from '../wfs.js';
+import { queryArcgis } from '../arcgis.js';
 import { epsgCode, reprojectBboxFrom4326 } from '../projection.js';
 import { asText, described, truncateGeometry } from '../lib/shared.js';
 import { ServiceType } from '../service-type.js';
@@ -18,7 +19,7 @@ export const schema = {
 export const metadata: ToolMetadata = {
   name: 'query_layer',
   description:
-    'Query features of a WFS layer (GetFeature). REQUIRES having called describe_layer before. Geometries in EPSG:4326 lon,lat. The bbox is passed in EPSG:4326 (lon,lat) by default and reprojected on the client to the layer native CRS (verified: these servers return 0 if the bbox is sent in 4326 over a projected layer).',
+    'Query features of a WFS or ArcGIS REST layer (GetFeature / FeatureServer query). REQUIRES having called describe_layer before. Geometries in EPSG:4326 lon,lat. The bbox is passed in EPSG:4326 (lon,lat) by default and reprojected on the client to the layer native CRS (verified: WFS servers return 0 if the bbox is sent in 4326 over a projected layer; ArcGIS receives the bbox in EPSG:4326 with inSR=4326).',
 };
 
 export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbox, bboxCrs }: InferSchema<typeof schema>) {
@@ -27,7 +28,9 @@ export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbo
     return { error: `Layer not found in catalog: ${typeName}. Use search_layers first.` };
   }
   const layerServices = entry.services ?? [{ type: ServiceType.Wfs, endpoint: entry.endpoint, typeName: entry.typeName }];
-  if (!layerServices.some((svc) => svc.type === ServiceType.Wfs)) {
+  const arcgisSvc = layerServices.find((svc) => svc.type === ServiceType.ArcGis);
+  const wfsSvc = layerServices.find((svc) => svc.type === ServiceType.Wfs);
+  if (!wfsSvc && !arcgisSvc) {
     return {
       error: `Layer ${entry.typeName} is WMS-only (display imagery). Vector query (GetFeature) does not apply; use describe_layer to see its WMS endpoint.`,
     };
@@ -38,6 +41,49 @@ export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbo
     };
   }
   const ep = endpointById(entry.source);
+
+  if (arcgisSvc) {
+    // ArcGIS REST: bbox is handed to the service in EPSG:4326 directly (outSR=4326 too).
+    let arcgisBbox: [number, number, number, number] | undefined;
+    if (bbox) {
+      const fromEpsg = epsgCode(bboxCrs ?? 'EPSG:4326');
+      if (fromEpsg !== '4326') {
+        return {
+          error: `ArcGIS layers accept the bbox only in EPSG:4326 (got ${bboxCrs ?? 'EPSG:4326'}).`,
+        };
+      }
+      arcgisBbox = bbox as [number, number, number, number];
+    }
+    // Split `Service/LayerId` from the endpoint: it ends with `/FeatureServer/<layerId>`.
+    const m = /^(.*\/FeatureServer)\/(\d+)$/.exec(arcgisSvc.endpoint);
+    if (!m || !ep.arcgis) {
+      return { error: `ArcGIS endpoint not parseable for ${entry.typeName}: ${arcgisSvc.endpoint}` };
+    }
+    const layerId = Number(m[2]);
+    const fc = await queryArcgis(ep.arcgis.root, entry.typeName.replace(/\/\d+$/, ''), layerId, {
+      maxFeatures,
+      startIndex,
+      bbox: arcgisBbox,
+    });
+    const features = ((fc.features ?? []) as Array<Record<string, unknown>>).map(truncateGeometry);
+    const nextStartIndex = features.length === maxFeatures ? (startIndex ?? 0) + features.length : null;
+    return {
+      typeName: entry.typeName,
+      returned: features.length,
+      totalFeatures: fc.totalFeatures ?? null,
+      nextStartIndex,
+      features,
+      note: 'Geometries requested in EPSG:4326 (lon,lat) via ArcGIS FeatureServer query with f=geojson and outSR=4326. The bbox was passed as an EPSG:4326 envelope (inSR=4326, esriSpatialRelIntersects). nextStartIndex indicates how to keep paginating (null if there is no obvious next page).',
+      sources: [entry.endpoint],
+    };
+  }
+
+  // WFS path (unchanged).
+  if (!wfsSvc) {
+    return {
+      error: `Layer ${entry.typeName} is WMS-only (display imagery). Vector query (GetFeature) does not apply; use describe_layer to see its WMS endpoint.`,
+    };
+  }
   let nativeBbox: [number, number, number, number] | undefined;
   if (bbox) {
     const fromEpsg = epsgCode(bboxCrs ?? 'EPSG:4326');

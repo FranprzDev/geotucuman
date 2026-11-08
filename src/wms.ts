@@ -1,6 +1,6 @@
 const TIMEOUT_MS = 20_000;
 
-const USER_AGENT = 'GeoMCP/0.2 (+https://franprzdev.github.io/geotucuman/)';
+const USER_AGENT = 'GeoArg/0.2 (+https://franprzdev.github.io/geotucuman/)';
 
 async function fetchText(url: string): Promise<string> {
   const ctrl = new AbortController();

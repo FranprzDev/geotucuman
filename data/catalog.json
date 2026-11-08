@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:15:53.493Z",
+  "generatedAt": "2026-11-08T18:17:12.461Z",
   "sources": {
     "geosplan": {
       "status": "preserved",
@@ -96,37 +96,37 @@
     },
     "inta_santiago": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:47.699Z",
+      "fetchedAt": "2026-11-08T18:17:08.503Z",
       "wmsStatus": "live"
     },
     "inta_catamarca": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:48.553Z",
+      "fetchedAt": "2026-11-08T18:17:09.206Z",
       "wmsStatus": "live"
     },
     "inta_larioja": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:48.785Z",
+      "fetchedAt": "2026-11-08T18:17:09.440Z",
       "wmsStatus": "live"
     },
     "inta_corrientes": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:50.042Z",
+      "fetchedAt": "2026-11-08T18:17:10.270Z",
       "wmsStatus": "live"
     },
     "inta_santafe": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:51.142Z",
+      "fetchedAt": "2026-11-08T18:17:10.942Z",
       "wmsStatus": "live"
     },
     "inta_chubut": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:52.234Z",
+      "fetchedAt": "2026-11-08T18:17:11.620Z",
       "wmsStatus": "live"
     },
     "inta_lapampa": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:15:53.493Z",
+      "fetchedAt": "2026-11-08T18:17:12.461Z",
       "wmsStatus": "live"
     }
   },

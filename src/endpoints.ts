@@ -428,9 +428,9 @@ export const ENDPOINTS: EndpointConfig[] = [
       'Fuente oficial INTA (nodo15), tematica regional de productividad forrajera; no es IDE provincial ni cubre todos los temas. INTA PPNA pastizales, modelo 2001-2011 / series 2000-2013, no es tiempo real. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion. GeoArg indexa metadatos y enlaza; no aloja ni redistribuye raster/vector. Comprobar terminos originales antes de cualquier uso.',
     license: {
       status:
-        'Condiciones contradictorias: PD y Atribucion - No Comercial (by-nc); no es licencia libre. Sin version CC indicada; no asumir uso comercial.',
+        'Metadatos contienen PD y Atribucion - No Comercial (by-nc). Se permite la generacion de obras derivadas siempre que no se haga con fines comerciales. Tampoco se puede utilizar la obra original con fines comerciales. Esta licencia no es una licencia libre. Sin version CC indicada.',
       attribution:
-        'INTA, Pablo Vazquez, EEA Anguil. Productividad forrajera PPNA pastizales, modelo 2001-2011 / series 2000-2013. Atribucion. Sin uso comercial de original ni derivados; no es licencia libre.',
+        'INTA, Pablo Vazquez, EEA Anguil. Productividad forrajera PPNA pastizales, modelo 2001-2011 / series 2000-2013.',
       url: 'https://geo-nodo15.inta.gob.ar/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=11400a25-9948-4c42-8eec-ee2a3a1de4fd&outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&elementsetname=full',
     },
   },

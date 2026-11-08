@@ -1,6 +1,6 @@
 # GeoArg
 
-MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 16 jurisdicciones subnacionales (detalle abajo; 19 endpoints de capas (18 provinciales + IGN), más la API Georef; 16 jurisdicciones subnacionales, con 3 fuentes de Tucumán).
+MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 23 jurisdicciones subnacionales, incluidas 7 fuentes INTA WMS-only integradas y probadas en vivo (detalle abajo; 26 fuentes configuradas de capas (25 subnacionales + IGN; 25 URLs de servicio distintas, porque Catamarca y La Rioja comparten nodo11), más la API Georef; 23 jurisdicciones subnacionales, con 3 fuentes de Tucumán).
 
 > Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026 y a **GeoArg** el 7/11/2026. El repositorio y la URL pública no cambian.
 
@@ -56,14 +56,14 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 
 - **Buscar capas por palabra clave** — `search_layers`: pedile "capas de aeropuerto en Tucumán" y devuelve coincidencias del catálogo embebido, por ejemplo `WFS_GEOSPLAN:aeropuerto` (título "Aeropuerto Benjamín Matienzo"), con `typeName`, fuente, endpoint y CRS por defecto.
 - **Sugerir capas desde un objetivo** — `suggest_layers`: "quiero armar un mapa de riego y pozos" devuelve candidatas puntuadas con su justificación, capacidades por servicio y evidencia de la fuente (determinista, sin LLM).
-- **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS: las WMS-only (por ejemplo las RIDES) son imágenes para display y no admiten GetFeature.
+- **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS y ArcGIS REST: las WMS-only (por ejemplo las RIDES y las 7 fuentes INTA de suelos/cobertura/productividad) son imágenes para display y no admiten GetFeature.
 - **Geocodificar texto libre** — `geocode`: "Yerba Buena, Tucumán" devuelve coordenadas vía la API nacional Georef (gratis, sin key).
 
 ## Web pública
 
 Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
 
-## Fuentes (catálogo regenerado desde los GetCapabilities en vivo el 7/11/2026)
+## Fuentes (catálogo regenerado desde los GetCapabilities en vivo el 9/11/2026)
 
 Nacionales:
 
@@ -90,16 +90,57 @@ Provinciales (una fuente principal por provincia, WFS+WMS salvo indicación):
 - Santa Cruz — SIT Santa Cruz: https://situ.santacruz.gob.ar/geoserver/ows
 - Tierra del Fuego — IDE TDF: https://tiles.tierradelfuego.gob.ar/geoserver/ows
 - Mendoza — ArcGIS REST FeatureServer (tipo de servicio propio `arcgis`), con lista blanca explícita de 9 capas: estaciones de bomberos, bosques nativos, cuencas hidrográficas, departamentos 2024, glaciares IANIGLA, rutas IGN, suelos INTA y aridez pasada/futura. Sin volcado masivo de los cientos de servicios del directorio. No se declara licencia en los metadatos inspeccionados del servicio: se cita la fuente y no se promete derecho de redistribución. Los campos de usuario auditados no se solicitan ni se exponen.
+- INTA (7 fuentes WMS-only, una capa explícita por fuente, probadas en vivo 8/11/2026):
+  - Santiago del Estero — Suelos de Santiago del Estero: https://geo-nodo02.inta.gob.ar/geoserver/wms (capa `geonode:suelos`; metadatos https://geo-nodo02.inta.gob.ar/showmetadata/xsl/8)
+  - Catamarca — Suelos de Catamarca: https://geo-nodo11.inta.gob.ar/geoserver/wms (capa `geonode:suelocatamarca_1_500`; metadatos https://geo-nodo11.inta.gob.ar/showmetadata/xsl/21)
+  - La Rioja — Cobertura de Suelos de La Rioja: https://geo-nodo11.inta.gob.ar/geoserver/wms (capa `geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712`; metadatos https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&elementsetname=full)
+  - Corrientes — Lomas Arenosas de Corrientes: https://geo-nodo09.inta.gob.ar/geoserver/wms (capa `geonode:Lomas_arenosas`; metadatos https://geo-nodo09.inta.gob.ar/showmetadata/xsl/251)
+  - Santa Fe — Capacidad Productiva de Santa Fe: https://geo-nodo10.inta.gob.ar/geoserver/wms (capa `geonode:cpa_santa_fe`; metadatos https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=8003225d-276c-48d1-bf84-af3f0c02320d&outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&elementsetname=full)
+  - Chubut — Unidades de Paisaje Patagonia Sur: https://geo-nodo06.inta.gob.ar/geoserver/wms (capa `geonode:psur_unidades_paisaje_3857`; metadatos https://geo-nodo06.inta.gob.ar/showmetadata/xsl/20)
+  - La Pampa — Productividad Forrajera de La Pampa: https://geo-nodo15.inta.gob.ar/geoserver/wms (capa `geonode:productividad_forrajera_la_pampaf78de876da1c`; metadatos https://geo-nodo15.inta.gob.ar/catalogue/csw?request=GetRecordById&service=CSW&version=2.0.2&id=11400a25-9948-4c42-8eec-ee2a3a1de4fd&outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&elementsetname=full)
 
 Índice de organismos de Tucumán (IDET): https://idet.tucuman.gob.ar/servicios/
 
-Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026; quedan 8): Corrientes (servidor alcanzable pero con cadena TLS incompleta: falta el certificado intermedio de Sectigo; con verificación relajada responde 67 capas WFS, pero Node rechaza el handshake con UNABLE_TO_VERIFY_LEAF_SIGNATURE y no vamos a debilitar TLS en el código), Catamarca (403), La Pampa, Santa Fe, Formosa, La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). Hay un candidato nuevo: una alternativa oficial regional de INTA (aún no integrada) para Corrientes, Catamarca, La Rioja, Santiago del Estero, Santa Fe y Chubut, que requiere validación de territorio capa por capa. El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, pero solo se probaron redes limitadas: no se afirma que todas estén vivas o geobloqueadas globalmente; se reintentan desde otra red.
+Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026; queda 1): Formosa. El IDEF publicó su endpoint WMS en /servicios/wms?version=1.1.1 pero responde HTTP 500, la variante HTTPS está cerrada y el nodo INTA 14 no expone capas en sus GetCapabilities; no se declara cobertura nacional completa. Las demás fuentes antes listadas como pendientes (Corrientes, Catamarca, La Pampa, Santa Fe, La Rioja, Santiago del Estero y Chubut) se integraron el 8/11/2026 mediante 7 fuentes INTA WMS-only con lista blanca de una capa por fuente, probadas en vivo. Esa integración INTA no es exhaustiva: la representación territorial y temática es parcial — Corrientes solo cubre el área cartografiada de Lomas Arenosas (no la provincia completa); Chubut usa una capa regional Patagonia Sur sin recorte provincial; La Rioja aporta cobertura de suelo histórica 2006-2007; La Pampa aporta productividad forrajera modelada 2001-2011 / series 2000-2013; Catamarca y Santiago del Estero aportan suelos. No se afirma que todas las capas de cada nodo INTA estén revisadas: en cada fuente se indexa exactamente una capa. El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/resource/581?lang=en) muestra para Formosa LastCheck 2026-11-08T03:04:00Z con Success=False y RemoteDisconnected, la misma falla externa observada; es orientación, no prueba de disponibilidad actual, y no se afirma que todas las fuentes estén vivas o geobloqueadas globalmente.
 
 `search_layers` acepta un filtro opcional `province` (ej: "Córdoba") para acotar por provincia.
 
+### Resumen de fuentes y cobertura
+
+| Fuente | Jurisdicción | Tipo | Capas indexadas | Cobertura |
+| --- | --- | --- | --- | --- |
+| Geosplan | Tucumán | WFS+WMS | todas (GetCapabilities) | provincial |
+| DGCT | Tucumán | WFS+WMS | todas (GetCapabilities) | provincial, intermitente |
+| RIDES | Tucumán | WMS (9 servicios) | todas por servicio | provincial |
+| CABA | CABA | WFS+WMS | todas | jurisdiccional |
+| IDEBA | Buenos Aires | WFS+WMS | todas | provincial |
+| IDEChaco | Chaco | WFS+WMS | todas | provincial |
+| IDECOR | Córdoba | WFS+WMS | todas | provincial |
+| IDE Entre Ríos | Entre Ríos | WFS+WMS | todas | provincial |
+| IDEJuy | Jujuy | WFS+WMS | todas | provincial |
+| Vialidad Misiones | Misiones | WFS+WMS | todas | provincial |
+| Catastro Neuquén | Neuquén | WMS-only | todas | provincial |
+| IDERN | Río Negro | WFS+WMS | todas | provincial |
+| IDE Salta | Salta | WFS+WMS | todas | provincial |
+| UNIDE | San Juan | WMS-only | todas | provincial |
+| Catastro San Luis | San Luis | WFS+WMS | todas | provincial, host dinámico |
+| SIT Santa Cruz | Santa Cruz | WFS+WMS | todas | provincial |
+| IDE TDF | Tierra del Fuego | WFS+WMS | todas | provincial |
+| Mendoza | Mendoza | ArcGIS (whitelist 9) | 9 explícitas | provincial, no exhaustiva |
+| IGN | Argentina | WFS+WMS | todas | nacional |
+| INTA nodo02 | Santiago del Estero | WMS-only (whitelist 1) | `geonode:suelos` | suelos 1:500000 |
+| INTA nodo11 | Catamarca | WMS-only (whitelist 1) | `geonode:suelocatamarca_1_500` | suelos 1:500000 |
+| INTA nodo11 | La Rioja | WMS-only (whitelist 1) | `geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712` | cobertura histórica 2006-2007 |
+| INTA nodo09 | Corrientes | WMS-only (whitelist 1) | `geonode:Lomas_arenosas` | solo área cartografiada Lomas Arenosas, no provincia completa |
+| INTA nodo10 | Santa Fe | WMS-only (whitelist 1) | `geonode:cpa_santa_fe` | capacidad productiva 1:250000 |
+| INTA nodo06 | Chubut | WMS-only (whitelist 1) | `geonode:psur_unidades_paisaje_3857` | regional Patagonia Sur, sin recorte provincial |
+| INTA nodo15 | La Pampa | WMS-only (whitelist 1) | `geonode:productividad_forrajera_la_pampaf78de876da1c` | modelado 2001-2011 / series 2000-2013 |
+
+La tabla refleja lo configurado e indexado, no una inspección capa por capa de cada servicio. En las fuentes INTA se indexa exactamente una capa por fuente; otras capas publicadas por los nodos INTA no fueron revisadas ni incorporadas. Requiere verificación previa antes de usar cualquier capa concreta en producción.
+
 ## Estado verificado (8/11/2026)
 
-- Catálogo regenerado en vivo el 8/11/2026: 3684 capas de 19 endpoints de capas (16 jurisdicciones subnacionales + IGN; Georef es una API adicional, no aporta capas al catálogo). Respecto de las 3675 previas se suman 9 capas revisadas de Mendoza (las 3675 anteriores quedan sin cambios). Las fuentes WFS/WMS se descubren mediante GetCapabilities; Mendoza usa metadatos y query de ArcGIS REST. La verificación de capas representativas no garantiza la disponibilidad de cada capa.
+- Catálogo regenerado en vivo el 8/11/2026: 3691 capas de 26 fuentes configuradas de capas (25 subnacionales + IGN; 25 URLs de servicio distintas, porque Catamarca y La Rioja comparten nodo11; Georef es una API adicional, no aporta capas al catálogo). Respecto de las 3684 previas se suman 7 capas INTA (una por fuente, lista blanca explícita) integradas y probadas en vivo ese día; las 3684 anteriores quedan sin cambios. Las fuentes WFS/WMS se descubren mediante GetCapabilities; Mendoza usa metadatos y query de ArcGIS REST; las fuentes INTA usan WMS-only con lista blanca de una capa exacta por fuente. La verificación de capas representativas no garantiza la disponibilidad de cada capa.
 - Smoke completo (npm run smoke) 12/12 PASS el 4/11/2026, con GetFeature real contra Geosplan, DGCT e IGN, y MCP smoke 10/10. Smoke existente más los nuevos tests de ArcGIS (describe/query/paginación/bbox/filtro por servicio) todos PASS el 8/11/2026; regresión MCP stdio PASS; tests offline en CI. Entre el 31/10 y el 2/11/2026 el IGN estuvo caído por un problema de DNS del propio organismo (wms.ign.gob.ar no resolvía; diagnóstico en diagnostics/2026-10-31-ign-dns.md) y volvió sin cambios de este lado. Paginacion (startIndex/nextStartIndex) verificada en Geosplan.
 - El bbox se pasa en EPSG:4326 y el cliente lo reproyecta al CRS nativo de la capa antes de filtrar (verificado: bbox 4326 sobre capa proyectada devuelve 0 si se manda directo). Reproyección Gauss-Krüger/TM propia para EPSG:22183 y EPSG:5345, contrastada contra proj4 con error <0.001 m. Para otro CRS nativo, el MCP devuelve un error claro en vez de 0 silencioso.
 - CRS por defecto varía por capa (observados EPSG:22183, 5345, 4326). Las geometrías se piden siempre con `srsName=EPSG:4326`.
@@ -113,7 +154,10 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 - **IGN (nacional):** [términos y condiciones](https://www.ign.gob.ar/descargas/tyc1.html) para "información descargada del sitio web del IGN": "Debe reconocerse la autoría del Instituto Geográfico Nacional de la República Argentina. Se debe compartir de manera libre y gratuita. Se permite su uso comercial únicamente en el caso de obras derivadas en que la información sea utilizada como insumo para generar un nuevo producto. El IGN no se responsabiliza por las consecuencias de la utilización de la información descargada."
 - **Catastro (DGCT, Tucumán):** [servicio WMS/WFS](https://catastrotucuman.gov.ar/gestiones/servicio-wms-wfs/): no se publica licencia ni términos de uso; el servicio está documentado como experimental desde 2012.
 - **Georef (geocodificación):** [condiciones de uso](https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia): "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."
-- **Licencia por capa: sin verificar.** Los GetCapabilities no publican licencia por capa; el enriquecimiento con metadatos IDERA (que podría traerla) sigue pendiente.
+- **Licencia por capa: sin verificar en las fuentes legacy.** Los GetCapabilities no publican licencia por capa. De las 7 fuentes INTA se revisaron los metadatos de cada capa indexada (detalle abajo); el resto de las fuentes no tiene licencia por capa verificada, y el enriquecimiento con metadatos IDERA (que podría traerla) sigue pendiente.
+- **INTA - Santiago del Estero (suelos):** licencia no especificada por el autor en los metadatos; reuso no autorizado por inferencia.
+- **INTA - Catamarca (suelos), La Rioja (cobertura de suelos 2006-2007), Corrientes (Lomas Arenosas), Santa Fe (capacidad productiva) y Chubut (Patagonia Sur):** dominio público (PD) declarado en metadatos; las citas de autoría por capa están en los `coverageNote` y `license.attribution` de cada fuente y conviene revisarlas antes de redistribuir.
+- **INTA - La Pampa (productividad forrajera):** cita textual de los metadatos: "Atribución - No Comercial (by-nc): Se permite la generación de obras derivadas siempre que no se haga con fines comerciales. Tampoco se puede utilizar la obra original con fines comerciales. Esta licencia no es una licencia libre." Los metadatos además contienen una contradicción entre dominio público (PD) y esta cláusula by-nc, y no indican versión CC. GeoArg indexa metadatos y enlaza; no aloja ni redistribuye raster/vector. La prueba GetMap es transitoria y devuelve solo estado, no imagen; no se concede reutilización comercial.
 
 ## Límites (sin maquillar)
 
@@ -127,7 +171,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 1. Enriquecimiento de catálogo con metadatos IDERA (licencia por capa, fecha, organismo).
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
-4. Reintentar las provincias pendientes (Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA. Evaluar la alternativa oficial regional de INTA para Corrientes, Catamarca, La Rioja, Santiago del Estero, Santa Fe y Chubut, con validación de territorio capa por capa.
+4. Reintentar la provincia pendiente (Formosa) desde una red que el servicio acepte; se toma el monitor IDERA como orientación, no como prueba de disponibilidad actual. Evaluar la ampliación de las 7 fuentes INTA ya integradas (una capa por fuente) hacia más capas por nodo, con validación de territorio y licencia capa por capa. La representación INTA actual no es exhaustiva: Corrientes solo cubre Lomas Arenosas, Chubut aporta una capa regional sin recorte provincial, La Rioja es cobertura histórica 2006-2007 y La Pampa es modelada 2001-2011 / series 2000-2013.
 5. Hosting público del MCP (el transporte HTTP ya corre en local con npm run start:http).
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

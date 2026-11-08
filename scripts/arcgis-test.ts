@@ -6,6 +6,8 @@ import {
   describeArcgisFields,
   queryArcgis,
 } from '../src/arcgis.js';
+import { selectWmsLayers } from '../src/wms.js';
+import type { WmsLayer } from '../src/wms.js';
 
 type FetchCall = { url: string; init?: RequestInit };
 type MockHandler = (url: string) => unknown | Promise<unknown>;
@@ -285,7 +287,40 @@ async function main(): Promise<void> {
     );
   });
 
-  console.log('All arcgis tests passed.');
+  await test('selectWmsLayers returns all when allowlist undefined', async () => {
+    const layers: WmsLayer[] = [
+      { name: 'a', title: '', abstract: '', crs: [], queryable: false },
+      { name: 'b', title: '', abstract: '', crs: [], queryable: false },
+    ];
+    assert.equal(selectWmsLayers(layers), layers);
+  });
+
+  await test('selectWmsLayers filters to allowlist', async () => {
+    const layers: WmsLayer[] = [
+      { name: 'a', title: '', abstract: '', crs: [], queryable: false },
+      { name: 'b', title: '', abstract: '', crs: [], queryable: false },
+    ];
+    const result = selectWmsLayers(layers, ['a']);
+    assert.equal(result.length, 1);
+    assert.equal(result[0].name, 'a');
+  });
+
+  await test('selectWmsLayers rejects missing allowlisted layer', async () => {
+    const layers: WmsLayer[] = [
+      { name: 'a', title: '', abstract: '', crs: [], queryable: false },
+      { name: 'b', title: '', abstract: '', crs: [], queryable: false },
+    ];
+    assert.throws(() => selectWmsLayers(layers, ['a', 'c']), /absent from GetCapabilities/);
+  });
+
+  await test('selectWmsLayers rejects empty allowlist', async () => {
+    const layers: WmsLayer[] = [
+      { name: 'a', title: '', abstract: '', crs: [], queryable: false },
+    ];
+    assert.throws(() => selectWmsLayers(layers, []), /allowlist is configured but empty/);
+  });
+
+  console.log('All offline tests passed.');
 }
 
 main().catch((err) => {

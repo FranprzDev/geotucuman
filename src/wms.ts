@@ -156,3 +156,17 @@ export async function probeWmsGetMap(
     clearTimeout(t);
   }
 }
+
+export function selectWmsLayers(layers: WmsLayer[], allowlist?: string[]): WmsLayer[] {
+  if (allowlist === undefined) return layers;
+  if (allowlist.length === 0) {
+    throw new Error('WMS layer allowlist is configured but empty');
+  }
+  const names = new Set(layers.map((w) => w.name));
+  const missing = allowlist.filter((n) => !names.has(n));
+  if (missing.length > 0) {
+    throw new Error(`allowlisted WMS layer(s) absent from GetCapabilities: ${missing.join(', ')}`);
+  }
+  const allowed = new Set(allowlist);
+  return layers.filter((w) => allowed.has(w.name));
+}

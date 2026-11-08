@@ -3,7 +3,7 @@ import { existsSync, readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { ENDPOINTS, wmsUrlFor } from '../src/endpoints.js';
 import type { EndpointConfig } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
-import { getWmsCapabilities } from '../src/wms.js';
+import { getWmsCapabilities, selectWmsLayers } from '../src/wms.js';
 import type { WmsLayer } from '../src/wms.js';
 import { listArcgisServices, getArcgisLayersCached, mapPool } from '../src/arcgis.js';
 import type { ArcGisLayerMeta } from '../src/arcgis.js';
@@ -271,9 +271,19 @@ for (const ep of ENDPOINTS) {
       const theme = themeOf(wmsUrl);
       try {
         const wmsCaps = await withRetry(() => getWmsCapabilities(wmsUrl));
+        const selected = selectWmsLayers(wmsCaps, ep.wmsLayerAllowlist);
+        for (const w of selected) {
+          const entry = wmsEntry(ep, wmsUrl, w);
+          if (ep.coverageNote) {
+            entry.abstract = entry.abstract ? `${entry.abstract} ${ep.coverageNote}` : ep.coverageNote;
+          }
+          entries.push(entry);
+        }
         answered += 1;
-        for (const w of wmsCaps) entries.push(wmsEntry(ep, wmsUrl, w));
-        console.log(`${ep.id}: ${theme} ${wmsCaps.length} WMS layers`);
+        console.log(
+          `${ep.id}: ${theme} ${wmsCaps.length} WMS layers` +
+            (selected !== wmsCaps ? `, ${selected.length} allowlisted` : ''),
+        );
       } catch (err) {
         failedThemes.push(theme);
         console.error(`${ep.id}: ${theme} WMS GetCapabilities FAILED on ${today} (${err})`);

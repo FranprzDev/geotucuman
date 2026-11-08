@@ -134,10 +134,10 @@ function tierScore(card, term) {
 `;
 
 const EXTRA_LICENSES = ENDPOINTS.filter((ep) => !['geosplan', 'dgct', 'ign', 'rides'].includes(ep.id))
-  .map(
-    (ep) =>
-      `    <li><span class="src src-${ep.id}">${esc(SOURCE_LABEL[ep.id])}</span> <a href="${esc(ep.license.url)}">${esc(ep.license.status)}</a></li>`,
-  )
+  .map((ep) => {
+    const attribution = ep.id.startsWith('inta_') ? ` ${esc(ep.license.attribution)}` : '';
+    return `    <li><span class="src src-${ep.id}">${esc(SOURCE_LABEL[ep.id])}</span> <a href="${esc(ep.license.url)}">${esc(ep.license.status)}</a>${attribution}</li>`;
+  })
   .join('\n');
 
 const LICENSE_BODY = `
@@ -150,7 +150,7 @@ const LICENSE_BODY = `
 ${EXTRA_LICENSES}
   </ul>
   <p>Geocodificación: términos publicados del <a href="https://www.argentina.gob.ar/georef/condiciones-de-uso-y-licencia">Servicio Georef</a>: "Atribución obligatoria: se debe mencionar la fuente como 'Servicio Georef – argentina.gob.ar/georef' o incluir un enlace al sitio oficial. Indicación de modificaciones: si se redistribuye la información con cambios, debe indicarse que ha sido modificada. Uso responsable."</p>
-  <p>El GetCapabilities de cada servicio no publica licencia por capa: la licencia de cada capa concreta queda sin verificar.</p>`;
+  <p>Para las fuentes anteriores sin licencia por capa verificada, el acceso no implica permiso de redistribución. En las siete capas INTA se revisaron los metadatos originales enlazados; respetá sus condiciones, fechas y límites. GeoArg indexa metadatos y enlaces, no aloja ni redistribuye esos raster o vectores.</p>`;
 
 /** Shared visual system for both pages. */
 const BASE_CSS = `

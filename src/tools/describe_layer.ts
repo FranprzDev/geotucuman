@@ -51,6 +51,8 @@ function queryableSummaryOf(services: CatalogService[]) {
 }
 
 function coverageNoteOf(source: CatalogEntry['source']): string | null {
+  const ep = endpointById(source);
+  if (ep.coverageNote) return ep.coverageNote;
   return source === 'dgct' ? DGCT_COVERAGE_NOTE : null;
 }
 
@@ -70,13 +72,14 @@ export async function describeLayerHandler({ typeName, probeWms = false }: Descr
   const queryable = queryableSummaryOf(services);
   const coverage = coverageNoteOf(entry.source);
   const wms = services.find((svc) => svc.type === ServiceType.Wms);
+  const configuredProbe = endpointById(entry.source).wmsProbe;
   const probe =
     probeWms && wms
       ? await probeWmsGetMap(
           wms.endpoint,
           wms.typeName,
-          declaredCrs[0] && declaredCrs[0] !== 'unknown' ? declaredCrs[0] : 'EPSG:4326',
-          wms.extent ?? TUCUMAN_ENVELOPE,
+          configuredProbe?.crs ?? (declaredCrs[0] && declaredCrs[0] !== 'unknown' ? declaredCrs[0] : 'EPSG:4326'),
+          configuredProbe?.bbox ?? wms.extent ?? TUCUMAN_ENVELOPE,
         )
       : null;
   const probeFields = probe ? { probe, probeNote: PROBE_NOTE } : {};

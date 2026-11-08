@@ -1,6 +1,6 @@
 # GeoArg
 
-MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 14 provincias (detalle abajo).
+MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 15 provincias (detalle abajo).
 
 > Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026 y a **GeoArg** el 7/11/2026. El repositorio y la URL pública no cambian.
 
@@ -77,6 +77,7 @@ Provinciales (una fuente principal por provincia, WFS+WMS salvo indicación):
 - Tucumán — RIDES (Ministerio de Producción): https://rides.producciontucuman.gob.ar/servicios-wms/ (9 servicios WMS ArcGIS)
 - Ciudad Autónoma de Buenos Aires — Dirección General de Estadística y Censos: https://ideec.estadisticaciudad.gob.ar/geoserver/ows
 - Buenos Aires — IDEBA: https://geoserver.ideba.gba.gob.ar/geoserver/wfs
+- Chaco — IDEChaco: http://idechaco.gob.ar/geoserver/idechaco/wfs (solo HTTP; el host HTTPS geoportal.idechaco.gob.ar no acepta conexiones)
 - Córdoba — IDECOR: https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wfs
 - Entre Ríos — IDE Entre Ríos: https://geoservicios.entrerios.gov.ar/geoserver/ows
 - Jujuy — IDEJuy: https://geo.idejuy.jujuy.gob.ar/geoserver/wfs
@@ -91,13 +92,13 @@ Provinciales (una fuente principal por provincia, WFS+WMS salvo indicación):
 
 Índice de organismos de Tucumán (IDET): https://idet.tucuman.gob.ar/servicios/
 
-Pendientes de incorporar (relevadas el 7/11/2026, sin servicio verificable desde nuestra red en este momento): Chaco (IDEChaco, verificada una vez con 998 capas WFS y luego dejó de aceptar conexiones de esta red), Corrientes (ídem, 67 capas), Catamarca (403), La Pampa, Santa Fe, Formosa, Mendoza (503), La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, así que varias parecen limitar tráfico exterior; se reintentan desde otra red.
+Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026): Corrientes (servidor alcanzable pero con cadena TLS incompleta: falta el certificado intermedio de Sectigo; con verificación relajada responde 67 capas WFS, pero Node rechaza el handshake con UNABLE_TO_VERIFY_LEAF_SIGNATURE y no vamos a debilitar TLS en el código), Catamarca (403), La Pampa, Santa Fe, Formosa, Mendoza (503), La Rioja (522), Santiago del Estero y Chubut (sin endpoint OGC público hallado). El monitor de IDERA (https://controlserviciosidera.iado-conicet.gob.ar/) las registra como vivas desde Argentina, así que varias parecen limitar tráfico exterior; se reintentan desde otra red.
 
 `search_layers` acepta un filtro opcional `province` (ej: "Córdoba") para acotar por provincia.
 
-## Estado verificado (7/11/2026)
+## Estado verificado (8/11/2026)
 
-- Catálogo regenerado en vivo el 7/11/2026: 2593 capas de 17 fuentes (14 provincias + IGN nacional). Fuentes nuevas validadas una por una con GetCapabilities en vivo; Neuquén (ArcGIS) además con DescribeFeatureType y GetFeature reales.
+- Catálogo regenerado en vivo el 8/11/2026: 3675 capas de 18 fuentes (15 provincias + IGN nacional). Fuentes nuevas validadas una por una con GetCapabilities en vivo; Neuquén (ArcGIS) además con DescribeFeatureType y GetFeature reales.
 - Smoke completo (npm run smoke) 12/12 PASS el 4/11/2026, con GetFeature real contra Geosplan, DGCT e IGN, y MCP smoke 10/10. Entre el 31/10 y el 2/11/2026 el IGN estuvo caído por un problema de DNS del propio organismo (wms.ign.gob.ar no resolvía; diagnóstico en diagnostics/2026-10-31-ign-dns.md) y volvió sin cambios de este lado. Paginacion (startIndex/nextStartIndex) verificada en Geosplan.
 - El bbox se pasa en EPSG:4326 y el cliente lo reproyecta al CRS nativo de la capa antes de filtrar (verificado: bbox 4326 sobre capa proyectada devuelve 0 si se manda directo). Reproyección Gauss-Krüger/TM propia para EPSG:22183 y EPSG:5345, contrastada contra proj4 con error <0.001 m. Para otro CRS nativo, el MCP devuelve un error claro en vez de 0 silencioso.
 - CRS por defecto varía por capa (observados EPSG:22183, 5345, 4326). Las geometrías se piden siempre con `srsName=EPSG:4326`.
@@ -125,7 +126,7 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 1. Enriquecimiento de catálogo con metadatos IDERA (licencia por capa, fecha, organismo).
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
-4. Reintentar las provincias pendientes (Chaco, Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, Mendoza, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA.
+4. Reintentar las provincias pendientes (Corrientes, Catamarca, La Pampa, Santa Fe, Formosa, Mendoza, La Rioja, Santiago del Estero, Chubut) desde una red que los servicios acepten; varias figuran vivas en el monitor de IDERA.
 5. Hosting público del MCP (el transporte HTTP ya corre en local con npm run start:http).
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

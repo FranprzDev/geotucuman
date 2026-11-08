@@ -1,8 +1,8 @@
-# GeoMCP
+# GeoArg
 
 MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 14 provincias (detalle abajo).
 
-> Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026. El repositorio y la URL pública no cambian.
+> Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026 y a **GeoArg** el 7/11/2026. El repositorio y la URL pública no cambian.
 
 **Qué es:** una capa de descubrimiento y consulta sobre servicios oficiales WFS y WMS, más la API Georef.
 **Qué NO es:** un SIG completo, ni un visor, ni una copia de los datos. Consulta en vivo y cita la fuente.

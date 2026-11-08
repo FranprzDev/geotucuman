@@ -296,8 +296,8 @@ const catalogHtml = `<!DOCTYPE html>
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>GeoMCP — Índice de capas descubribles</title>
-<meta name="description" content="Índice de capas descubribles de GeoMCP: qué geodatos públicos existen en los servicios oficiales, quién los publica y de cuándo son.">
+<title>GeoArg — Índice de capas descubribles</title>
+<meta name="description" content="Índice de capas descubribles de GeoArg: qué geodatos públicos existen en los servicios oficiales, quién los publica y de cuándo son.">
 <script>if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) document.documentElement.classList.add('js');</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -309,9 +309,9 @@ const catalogHtml = `<!DOCTYPE html>
 <a class="skip" href="#main">Saltar al contenido</a>
 <header class="site-header">
   <div class="wrap header-inner">
-    <a class="brand" href="./index.html" aria-label="GeoMCP, inicio">
+    <a class="brand" href="./index.html" aria-label="GeoArg, inicio">
       <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
-      <span>GeoMCP</span>
+      <span>GeoArg</span>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
@@ -323,7 +323,7 @@ const catalogHtml = `<!DOCTYPE html>
   <div class="wrap">
     <p class="eyebrow">Catálogo de capas</p>
     <h1 id="catalog-title">Índice de capas descubribles</h1>
-    <p>Las capas que GeoMCP encuentra hoy en los servicios oficiales: ${esc(layersLine)}. <a href="./index.html">← Volver al inicio</a></p>
+    <p>Las capas que GeoArg encuentra hoy en los servicios oficiales: ${esc(layersLine)}. <a href="./index.html">← Volver al inicio</a></p>
   </div>
 </section>
 <main id="main" class="wrap">
@@ -337,7 +337,7 @@ ${filterButtons}
   </div>
   <div class="grid" id="grid">${cards}
   </div>
-  <details class="licenses"><summary>Qué hace GeoMCP (y qué no)</summary>
+  <details class="licenses"><summary>Qué hace GeoArg (y qué no)</summary>
   <p>Encuentra y sugiere datasets: cuáles existen, quién los publica, de cuándo son y cómo consultarlos. No arma mapas ni análisis: eso lo hacés vos con el dataset. Ojo: una capa muestra lo que contiene — las parcelas catastrales no dicen cuántas personas viven ahí; para población buscá capas censales.</p>
   </details>
   ${licensesDetails}

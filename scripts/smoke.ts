@@ -235,5 +235,55 @@ await step('WMS filter does not return Mendoza ArcGIS-only entries', async () =>
   }
 });
 
+for (const ep of ENDPOINTS) {
+  if (!ep.wmsLayerAllowlist || ep.wmsLayerAllowlist.length === 0) continue;
+  await step(`INTA ${ep.id}: catalog contains exactly the allowlisted layers`, async () => {
+    const c = loadCatalog();
+    const got = new Set(
+      c.layers.filter((l) => l.source === ep.id).map((l) => l.typeName),
+    );
+    const allow = new Set(ep.wmsLayerAllowlist);
+    for (const n of allow) if (!got.has(n)) throw new Error(`missing allowlisted ${n}`);
+    for (const n of got) if (!allow.has(n)) throw new Error(`unexpected non-allowlisted ${n}`);
+  });
+  await step(`INTA ${ep.id}: GetCapabilities exposes allowlisted layer`, async () => {
+    const { getWmsCapabilities } = await import('../src/wms.js');
+    const caps = await getWmsCapabilities(ep.url);
+    const names = new Set(caps.map((w) => w.name));
+    for (const n of ep.wmsLayerAllowlist!) if (!names.has(n)) throw new Error(`layer ${n} absent from GetCapabilities`);
+  });
+  await step(`INTA ${ep.id}: GetMap probe passes with configured crs/bbox`, async () => {
+    if (!ep.wmsProbe) throw new Error('missing wmsProbe config');
+    const { probeWmsGetMap } = await import('../src/wms.js');
+    const layer = ep.wmsLayerAllowlist![0]!;
+    const probe = await probeWmsGetMap(ep.url, layer, ep.wmsProbe.crs, ep.wmsProbe.bbox);
+    if (!probe.ok) throw new Error(`GetMap failed: ${probe.detail}`);
+  });
+  await step(`INTA ${ep.id}: describe_layer reports license + coverage note`, async () => {
+    const { describeLayerHandler } = await import('../src/tools/describe_layer.js');
+    const layer = ep.wmsLayerAllowlist![0]!;
+    const r = (await describeLayerHandler({ typeName: `${ep.id}:${layer}`, probeWms: true })) as {
+      error?: string;
+      license?: { status?: string; attribution?: string };
+      coverage?: string | null;
+      probe?: { ok?: boolean };
+    };
+    if (r.error) throw new Error(`describe error: ${r.error}`);
+    if (!r.license || r.license.status !== ep.license.status) throw new Error('license status mismatch');
+    if (r.license.attribution !== ep.license.attribution) throw new Error('license attribution mismatch');
+    if (ep.coverageNote && r.coverage !== ep.coverageNote) throw new Error('coverage note missing/mismatched');
+    if (!r.probe || r.probe.ok !== true) throw new Error('describe_layer WMS probe did not report ok');
+  });
+  await step(`INTA ${ep.id}: query_layer rejects WMS-only layer`, async () => {
+    const { queryLayerHandler } = await import('../src/tools/query_layer.js');
+    const layer = ep.wmsLayerAllowlist![0]!;
+    const r = (await queryLayerHandler({ typeName: `${ep.id}:${layer}`, maxFeatures: 1 } as never)) as {
+      error?: string;
+      features?: unknown[];
+    };
+    if (!r.error) throw new Error('expected WMS-only query_layer to be rejected');
+  });
+}
+
 console.log(failures === 0 ? 'SMOKE OK' : `SMOKE: ${failures} failures`);
 process.exit(failures === 0 ? 0 : 1);

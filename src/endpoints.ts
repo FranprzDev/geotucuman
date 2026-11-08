@@ -147,6 +147,16 @@ export const ENDPOINTS: EndpointConfig[] = [
     license: provincialLicense('https://geoservicios.entrerios.gov.ar/geoserver/ows'),
   },
   {
+    id: 'idechaco',
+    label: 'Infraestructura de Datos Espaciales del Chaco (IDEChaco)',
+    province: 'Chaco',
+    // Plain HTTP: the HTTPS host geoportal.idechaco.gob.ar refuses connections.
+    url: 'http://idechaco.gob.ar/geoserver/idechaco/wfs',
+    wfsVersion: '1.1.0',
+    countParam: 'maxFeatures',
+    license: provincialLicense('http://idechaco.gob.ar/geoserver/idechaco/'),
+  },
+  {
     id: 'idejuy',
     label: 'Infraestructura de Datos Espaciales de Jujuy (IDEJuy)',
     province: 'Jujuy',

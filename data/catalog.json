@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:03:38.443Z",
+  "generatedAt": "2026-11-08T18:15:53.493Z",
   "sources": {
     "geosplan": {
       "status": "preserved",
@@ -96,37 +96,37 @@
     },
     "inta_santiago": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:34.038Z",
+      "fetchedAt": "2026-11-08T18:15:47.699Z",
       "wmsStatus": "live"
     },
     "inta_catamarca": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:34.700Z",
+      "fetchedAt": "2026-11-08T18:15:48.553Z",
       "wmsStatus": "live"
     },
     "inta_larioja": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:34.929Z",
+      "fetchedAt": "2026-11-08T18:15:48.785Z",
       "wmsStatus": "live"
     },
     "inta_corrientes": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:35.769Z",
+      "fetchedAt": "2026-11-08T18:15:50.042Z",
       "wmsStatus": "live"
     },
     "inta_santafe": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:36.995Z",
+      "fetchedAt": "2026-11-08T18:15:51.142Z",
       "wmsStatus": "live"
     },
     "inta_chubut": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:37.642Z",
+      "fetchedAt": "2026-11-08T18:15:52.234Z",
       "wmsStatus": "live"
     },
     "inta_lapampa": {
       "status": "live",
-      "fetchedAt": "2026-11-08T18:03:38.443Z",
+      "fetchedAt": "2026-11-08T18:15:53.493Z",
       "wmsStatus": "live"
     }
   },
@@ -123648,7 +123648,7 @@
       "province": "Santiago del Estero",
       "typeName": "geonode:suelos",
       "title": "Sgo. del Estero - Suelos - 1:500.000",
-      "abstract": "Mapa de suelos de Santiago del Estero, escala 1:500.000 Fuente oficial INTA (nodo02), tematica regional de suelos; no es IDE provincial ni cubre todos los temas. Capa de suelos de Santiago del Estero, escala 1:500000. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Mapa de suelos de Santiago del Estero, escala 1:500.000 Fuente oficial INTA (nodo02), tematica regional de suelos; no es IDE provincial ni cubre todos los temas. Capa de suelos de Santiago del Estero, escala 1:500000. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo02.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
@@ -123679,7 +123679,7 @@
       "province": "Catamarca",
       "typeName": "geonode:suelocatamarca_1_500",
       "title": "suelocatamarca_1_500",
-      "abstract": "Fuente oficial INTA (nodo11), tematica regional de suelos; no es IDE provincial ni cubre todos los temas. Capa de suelos de Catamarca, escala 1:500000. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Fuente oficial INTA (nodo11), tematica regional de suelos; no es IDE provincial ni cubre todos los temas. Capa de suelos de Catamarca, escala 1:500000. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo11.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
@@ -123707,7 +123707,7 @@
       "province": "La Rioja",
       "typeName": "geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712",
       "title": "lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712",
-      "abstract": "Fuente oficial INTA (nodo11), tematica regional de cobertura; no es IDE provincial ni cubre todos los temas. Cobertura de suelo historica 2006-2007 (LCCS FAO), recorte provincial, no es cobertura actual. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Fuente oficial INTA (nodo11), tematica regional de cobertura; no es IDE provincial ni cubre todos los temas. Cobertura de suelo historica 2006-2007 (LCCS FAO), recorte provincial, no es cobertura actual. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo11.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
@@ -123736,7 +123736,7 @@
       "province": "Corrientes",
       "typeName": "geonode:Lomas_arenosas",
       "title": "Corrientes - Suelos Lomas Arenosas - 1:100.000",
-      "abstract": "Suelos Lomas Arenosas. Corrientes  -1:100.000 Fuente oficial INTA (nodo09), tematica regional; no es IDE provincial ni cubre todos los temas. Solo el area cartografiada de Lomas Arenosas (1:100000), no la provincia completa. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Suelos Lomas Arenosas. Corrientes  -1:100.000 Fuente oficial INTA (nodo09), tematica regional; no es IDE provincial ni cubre todos los temas. Solo el area cartografiada de Lomas Arenosas (1:100000), no la provincia completa. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo09.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
@@ -123768,7 +123768,7 @@
       "province": "Santa Fe",
       "typeName": "geonode:cpa_santa_fe",
       "title": "Santa Fe - Capacidad productiva de las tierras - 1:250.000",
-      "abstract": "Capacidad productiva de las tierras para uso agrícola y pasturas de alfalfa. Provincia de Santa Fe 1:250.000 Fuente oficial INTA (nodo10), tematica regional de capacidad productiva (alfalfa); no es IDE provincial ni cubre todos los temas. Capa INTA de capacidad productiva agricola para alfalfa, escala 1:250000. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Capacidad productiva de las tierras para uso agrícola y pasturas de alfalfa. Provincia de Santa Fe 1:250.000 Fuente oficial INTA (nodo10), tematica regional de capacidad productiva (alfalfa); no es IDE provincial ni cubre todos los temas. Capa INTA de capacidad productiva agricola para alfalfa, escala 1:250000. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo10.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
@@ -123801,7 +123801,7 @@
       "province": "Chubut",
       "typeName": "geonode:psur_unidades_paisaje_3857",
       "title": "Unidades de Paisaje de Patagonia Sur",
-      "abstract": "Unidades de Paisaje de Patagonia Sur Fuente oficial INTA (nodo06), tematica regional; no es IDE provincial ni cubre todos los temas. Unidades de Paisaje Patagonia Sur: incluye Chubut y otras provincias. Capa regional, no recortada a limites provinciales; prueba GetMap realizada dentro de Chubut. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Unidades de Paisaje de Patagonia Sur Fuente oficial INTA (nodo06), tematica regional; no es IDE provincial ni cubre todos los temas. Unidades de Paisaje Patagonia Sur: incluye Chubut y otras provincias. Capa regional, no recortada a limites provinciales; prueba GetMap realizada dentro de Chubut. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion.",
       "endpoint": "https://geo-nodo06.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:3857",
       "keywords": [
@@ -123833,7 +123833,7 @@
       "province": "La Pampa",
       "typeName": "geonode:productividad_forrajera_la_pampaf78de876da1c",
       "title": "productividad_forrajera_la_pampaf78de876da1c",
-      "abstract": "Fuente oficial INTA (nodo15), tematica regional de productividad forrajera; no es IDE provincial ni cubre todos los temas. INTA PPNA pastizales, modelo 2001-2011 / series 2000-2013, no es tiempo real. Unica capa revisada y permitida en este endpoint.",
+      "abstract": "Fuente oficial INTA (nodo15), tematica regional de productividad forrajera; no es IDE provincial ni cubre todos los temas. INTA PPNA pastizales, modelo 2001-2011 / series 2000-2013, no es tiempo real. Unica capa seleccionada para indexar metadatos en este endpoint; acceso tecnico no concede permisos de reutilizacion. GeoArg indexa metadatos y enlaza; no aloja ni redistribuye raster/vector. Comprobar terminos originales antes de cualquier uso.",
       "endpoint": "https://geo-nodo15.inta.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [

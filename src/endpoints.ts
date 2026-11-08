@@ -31,7 +31,15 @@ export interface EndpointConfig {
    * ArcGIS REST root + folders that contain FeatureServer services.
    * Only FeatureServer vector layers with the Query capability are indexed.
    */
-  arcgis?: { root: string; folders: string[] };
+  arcgis?: {
+    root: string;
+    folders: string[];
+    /**
+     * Explicit allowlist of full FeatureServer service names to index (e.g. 'Hosted/Bomberos').
+     * When set, discovery is skipped and only these services are fetched/preserved.
+     */
+    services?: string[];
+  };
   /** Source with no WFS and no WMS: only ArcGIS REST (FeatureServer) services. */
   arcgisOnly?: boolean;
   license: SourceLicense;
@@ -271,6 +279,19 @@ export const ENDPOINTS: EndpointConfig[] = [
     arcgis: {
       root: 'https://ide.mendoza.gov.ar/server/rest/services',
       folders: ['Hosted'],
+      // Reviewed public-environment/infrastructure schemas only. This is NOT the full
+      // 'Hosted' folder: any other Hosted service is intentionally left out of scope.
+      services: [
+        'Hosted/Bomberos',
+        'Hosted/Departamentos_2024',
+        'Hosted/Bosques_Nativos_',
+        'Hosted/Cuencas_Hidrográficas',
+        'Hosted/Suelos',
+        'Hosted/Inventario_Nacional_Glaciares_IANIGLA',
+        'Hosted/Rutas_de_Mendoza_IGN',
+        'Hosted/aridez_pasado_vect',
+        'Hosted/aridez_futuro_vect',
+      ],
     },
     arcgisOnly: true,
     license: {

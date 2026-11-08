@@ -30,7 +30,7 @@ export interface CatalogEntry {
 
 export interface Catalog {
   generatedAt: string;
-  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string; wmsStatus?: 'live' | 'failed'; ridesFailedThemes?: string[] }>;
+  sources: Record<string, { status: 'live' | 'preserved'; fetchedAt: string; wmsStatus?: 'live' | 'failed'; ridesFailedThemes?: string[]; failedServices?: string[] }>;
   layers: CatalogEntry[];
 }
 

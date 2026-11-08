@@ -372,7 +372,7 @@ function apply() {
   while (grid.firstChild) grid.removeChild(grid.firstChild);
   for (const s of shown) { s.c.style.display = ''; grid.appendChild(s.c); }
   countEl.textContent = shown.length === 0
-    ? '0 capas para esta búsqueda. El catálogo cubre 4 fuentes oficiales (WFS y WMS) + Georef; la capa que buscás puede no estar publicada en estas fuentes.'
+    ? '0 capas para esta búsqueda. El catálogo reúne fuentes oficiales (WFS, WMS y ArcGIS REST) + Georef; la capa que buscás puede no estar publicada en estas fuentes.'
     : shown.length + ' capas';
 }
 q.addEventListener('input', apply);

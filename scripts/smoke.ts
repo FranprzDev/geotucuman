@@ -4,6 +4,7 @@ import { endpointById } from '../src/endpoints.js';
 import { describeFeatureType, getFeature } from '../src/wfs.js';
 import { geocode } from '../src/georef.js';
 import { lonLatToTransverseMercator, reprojectBboxFrom4326 } from '../src/projection.js';
+import { ServiceType } from '../src/service-type.js';
 
 import { ENDPOINTS } from '../src/endpoints.js';
 
@@ -123,6 +124,115 @@ await step('reprojectBboxFrom4326 to EPSG:22183 produces a valid envelope', asyn
   }
   const identity = reprojectBboxFrom4326([-66, -27, -65, -26], '4326');
   if (!identity || identity[0] !== -66 || identity[3] !== -26) throw new Error('4326 identity broken');
+});
+
+// --- Live ArcGIS checks (real network) ---
+await step('Arcgis: listArcgisServices Mendoza Hosted >= 100 services', async () => {
+  const { listArcgisServices } = await import('../src/arcgis.js');
+  const { ENDPOINTS } = await import('../src/endpoints.js');
+  const mendoza = ENDPOINTS.find((e) => e.id === 'mendoza');
+  if (!mendoza || !mendoza.arcgis) throw new Error('mendoza endpoint not configured with arcgis');
+  const services = await listArcgisServices(mendoza.arcgis.root, mendoza.arcgis.folders);
+  const hosted = services.filter((s) => s.startsWith('Hosted/'));
+  if (hosted.length < 100) throw new Error(`expected >=100 Hosted services, got ${hosted.length}`);
+  console.log(`  (${services.length} services, ${hosted.length} Hosted)`);
+});
+
+await step('Arcgis: describe_layer mendoza Hosted/Bomberos/0 returns fields', async () => {
+  const { describeLayerHandler } = await import('../src/tools/describe_layer.js');
+  const { ENDPOINTS } = await import('../src/endpoints.js');
+  const mendoza = ENDPOINTS.find((e) => e.id === 'mendoza');
+  if (!mendoza) throw new Error('mendoza endpoint not configured');
+  const r = (await describeLayerHandler({ typeName: 'mendoza:Hosted/Bomberos/0' })) as { fields?: unknown[]; error?: string };
+  if (r.error) throw new Error(`describe error: ${r.error}`);
+  if (!r.fields || r.fields.length === 0) throw new Error('no fields returned');
+});
+
+await step('Arcgis: query_layer mendoza Hosted/Bomberos/0 returns 2 WGS84 points in Argentina', async () => {
+  const { queryLayerHandler } = await import('../src/tools/query_layer.js');
+  const r = (await queryLayerHandler({ ...{startIndex: undefined, bbox: undefined, bboxCrs: undefined}, typeName: 'mendoza:Hosted/Bomberos/0', maxFeatures: 2 })) as {
+    features?: Array<{ geometry?: { coordinates?: number[] } }>;
+    error?: string;
+  };
+  if (r.error) throw new Error(`query error: ${r.error}`);
+  if (!r.features || r.features.length !== 2) throw new Error(`expected 2 features, got ${r.features?.length ?? 0}`);
+  for (const f of r.features) {
+    const c = f.geometry?.coordinates;
+    if (!Array.isArray(c) || c.length < 2) throw new Error('missing coordinates');
+    const lon = c[0]!;
+    const lat = c[1]!;
+    if (!(lon > -71 && lon < -66)) throw new Error(`lon out of range: ${lon}`);
+    if (!(lat > -38 && lat < -31)) throw new Error(`lat out of range: ${lat}`);
+  }
+});
+
+await step('Arcgis: query_layer startIndex page 2 differs from page 1', async () => {
+  const { queryLayerHandler } = await import('../src/tools/query_layer.js');
+  const base = { typeName: 'mendoza:Hosted/Bomberos/0', maxFeatures: 2 };
+  const p1 = (await queryLayerHandler({ ...{startIndex: undefined, bbox: undefined, bboxCrs: undefined}, ...base, startIndex: 0 })) as { features?: Array<{ id?: unknown; properties?: Record<string, unknown> }>; error?: string };
+  const p2 = (await queryLayerHandler({ ...{startIndex: undefined, bbox: undefined, bboxCrs: undefined}, ...base, startIndex: 2 })) as { features?: Array<{ id?: unknown; properties?: Record<string, unknown> }>; error?: string };
+  if (p1.error) throw new Error(`page1 error: ${p1.error}`);
+  if (p2.error) throw new Error(`page2 error: ${p2.error}`);
+  const key = (f: { id?: unknown; properties?: Record<string, unknown> }) => {
+    if (f.id !== undefined && f.id !== null) return String(f.id);
+    try {
+      return JSON.stringify(f.properties ?? {});
+    } catch {
+      return String(f.id);
+    }
+  };
+  const ids1 = new Set((p1.features ?? []).map(key));
+  const ids2 = (p2.features ?? []).map(key);
+  if (ids2.length === 0) throw new Error('page2 returned no features');
+  if (ids2.every((id) => ids1.has(id))) throw new Error('page2 returned identical IDs to page1');
+});
+
+await step('Arcgis: query_layer bbox returns only features inside envelope', async () => {
+  const { queryLayerHandler } = await import('../src/tools/query_layer.js');
+  const bbox: [number, number, number, number] = [-70, -37, -67, -32];
+  const r = (await queryLayerHandler({ ...{startIndex: undefined, bbox: undefined, bboxCrs: undefined}, typeName: 'mendoza:Hosted/Bomberos/0', maxFeatures: 50, bbox })) as {
+    features?: Array<{ geometry?: { coordinates?: number[] } }>;
+    error?: string;
+  };
+  if (r.error) throw new Error(`bbox query error: ${r.error}`);
+  for (const f of r.features ?? []) {
+    const c = f.geometry?.coordinates;
+    if (!Array.isArray(c) || c.length < 2) continue;
+    const lon = c[0]!;
+    const lat = c[1]!;
+    if (!(lon >= bbox[0] && lon <= bbox[2] && lat >= bbox[1] && lat <= bbox[3])) {
+      throw new Error(`feature outside bbox: ${lon},${lat}`);
+    }
+  }
+});
+
+await step("ArcGIS filter: searchLayers('bomberos', 50, ArcGis, 'Mendoza') nonempty & all arcgis", async () => {
+  const hits = searchLayers('bomberos', 50, ServiceType.ArcGis, 'Mendoza');
+  if (hits.length === 0) throw new Error('no ArcGIS hits for bomberos in Mendoza');
+  for (const h of hits) {
+    if (!(h.services ?? []).some((s) => s.type === ServiceType.ArcGis)) {
+      throw new Error(`non-ArcGIS entry in results: ${h.id}`);
+    }
+  }
+  console.log(`  (${hits.length} hits)`);
+});
+
+await step('WFS filter does not return Mendoza ArcGIS-only entries', async () => {
+  const hits = searchLayers('bomberos', 50, ServiceType.Wfs, 'Mendoza');
+  for (const h of hits) {
+    if (!(h.services ?? []).some((s) => s.type === ServiceType.Wfs)) {
+      throw new Error(`non-WFS entry under WFS filter: ${h.id}`);
+    }
+  }
+});
+
+await step('WMS filter does not return Mendoza ArcGIS-only entries', async () => {
+  const hits = searchLayers('bomberos', 50, ServiceType.Wms, 'Mendoza');
+  for (const h of hits) {
+    if (!(h.services ?? []).some((s) => s.type === ServiceType.Wms)) {
+      throw new Error(`non-WMS entry under WMS filter: ${h.id}`);
+    }
+  }
 });
 
 console.log(failures === 0 ? 'SMOKE OK' : `SMOKE: ${failures} failures`);

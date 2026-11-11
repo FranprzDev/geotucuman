@@ -26,6 +26,9 @@ jobs:
       - name: Validate catalog
         run: npm run validate-catalog
 
+      - name: Documentation consistency
+        run: npm run test:docs
+
       - name: ArcGIS offline tests
         run: npx tsx scripts/arcgis-test.ts
 

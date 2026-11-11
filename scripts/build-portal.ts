@@ -1,4 +1,4 @@
-/** Generates docs/index.html (MCP landing) and docs/capas.html (index of discoverable layers). No external dependencies. */
+/** Generates docs/mcp.html and docs/capas.html, and keeps metadata/docs links on the hand-authored landing. No external dependencies. */
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
 import { ENDPOINTS } from '../src/endpoints.js';
@@ -9,6 +9,8 @@ const esc = (s: string) => s.replace(/&/g, '&amp;').replace(/</g, '&lt;').replac
 const cleanText = (s: string) => s.replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 
 const REPO = 'https://github.com/FranprzDev/geotucuman';
+const WEB = 'https://franprzdev.github.io/geotucuman';
+const MCP_ENDPOINT = 'https://geoarg-mcp.franprzdev.workers.dev/mcp';
 
 const SOURCE_LABEL: Record<string, string> = {
   geosplan: 'Planeamiento (Geosplan) - Tucuman',
@@ -292,6 +294,216 @@ const siteFooter = `<footer class="site">
 
 
 
+const mcpDocHtml = `<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeoArg MCP: documentación y conexión</title>
+<meta name="description" content="Cómo conectar GeoArg, MCP de descubrimiento y consulta de geodatos públicos de Argentina. Endpoint HTTP público, instalación local por stdio, herramientas, atribución y límites de cobertura.">
+<link rel="canonical" href="${WEB}/mcp.html">
+<meta property="og:title" content="GeoArg MCP: documentación y conexión">
+<meta property="og:description" content="Endpoint público Streamable HTTP, instalación local por stdio, herramientas y límites de GeoArg.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="${WEB}/mcp.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%233fd6ea' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%233fd6ea'/%3E%3C/svg%3E">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "GeoArg",
+  "description": "Servidor MCP de código abierto (MIT) para descubrir y consultar geodatos públicos de Argentina por stdio local o Streamable HTTP. Solo lectura y sin API key.",
+  "url": "${WEB}/mcp.html",
+  "codeRepository": "${REPO}",
+  "license": "https://opensource.org/licenses/MIT",
+  "isAccessibleForFree": true
+}</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --cyan: #3fd6ea; --cyan-soft: #8ce9f4;
+    --maxw: 920px; --header-h: 68px;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: auto, 48px 48px, 48px 48px;
+    background-attachment: fixed, fixed, fixed;
+  }
+  a { color: var(--cyan); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--cyan-soft); }
+  a:focus-visible { outline: 2px solid var(--cyan-soft); outline-offset: 3px; border-radius: 8px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--cyan-soft); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
+  pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--cyan); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
+  .brand svg { width: 22px; height: 22px; color: var(--cyan); }
+  .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
+  .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+  .nav a[aria-current="page"] { color: var(--cyan-soft); }
+  .nav a.nav-cta { color: #04141a; background: var(--cyan); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--cyan-soft); color: #04141a; }
+  main { display: block; padding-bottom: 24px; }
+  .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin: 0 0 10px; }
+  h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p, li { color: #a6b4c0; font-size: 15px; }
+  .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--cyan); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary p { margin: 0; font-size: 14px; }
+  .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
+  .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td { color: #a6b4c0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 0; list-style: none; }
+  .links li { margin: 0; }
+  footer.site { margin-top: 34px; padding: 20px 0 38px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--faint); }
+  footer.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; padding: 10px 0; }
+    .nav { gap: 0; }
+    .nav a { padding: 8px 7px; font-size: 12.5px; }
+    .nav a.nav-cta { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    footer.site .wrap { flex-direction: column; align-items: flex-start; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 4px; }
+    td { padding-top: 0; border-bottom: 0; }
+    tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="./index.html" aria-label="GeoArg, inicio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>GeoArg</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="./capas.html">Capas</a>
+      <a href="./salud.html">Salud de capas</a>
+      <a href="./mcp.html" aria-current="page">Documentación MCP</a>
+      <a class="nav-cta" href="${REPO}">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="mcp-title">
+    <p class="eyebrow">Documentación MCP</p>
+    <h1 id="mcp-title">GeoArg: geodatos públicos de Argentina para tu agente</h1>
+    <p class="lede">GeoArg es un servidor MCP (Model Context Protocol) para descubrir y consultar geodatos públicos de Argentina. Se puede usar local por stdio o contra el endpoint público Streamable HTTP. Es gratis, de código abierto (MIT), de solo lectura y no requiere API key.</p>
+    <div class="summary">
+      <p><strong>English summary:</strong> GeoArg is a free, open-source (MIT) Model Context Protocol server for discovering and querying Argentine public geodata. It runs locally over stdio or through a public Streamable HTTP endpoint. It is read-only, needs no API key, and represents 22 provinces plus CABA, 23 of 24 Argentine jurisdictions; Formosa has no working source. Coverage depends on the specific catalog layers and their limitations. WMS layers are display imagery, while WFS and ArcGIS REST layers are queryable. Third-party services may change or fail.</p>
+    </div>
+  </section>
+
+  <section aria-labelledby="que-es">
+    <h2 id="que-es">Qué es y nombres anteriores</h2>
+    <p>GeoArg indexa metadatos de servicios oficiales WFS, WMS y ArcGIS REST, más la API Georef, y permite que un agente busque capas, las describa y consulte datos en vivo. No es un SIG completo, ni un visor, ni una copia de los datos: enlaza la fuente y devuelve su atribución cuando está disponible.</p>
+    <p>El proyecto se llamó antes <strong>GeoTucumán</strong> y luego <strong>GeoMCP</strong>; el nombre visible pasó a <strong>GeoArg</strong> el 7/11/2026. El repositorio y la URL pública siguen en la ruta <code>geotucuman</code>.</p>
+  </section>
+
+  <section aria-labelledby="conexion">
+    <h2 id="conexion">Conexión</h2>
+    <h3>Endpoint público por Streamable HTTP</h3>
+    <p>Endpoint MCP: <code>${MCP_ENDPOINT}</code></p>
+    <p>Es stateless, de solo lectura y no requiere API key. JSON genérico para un cliente MCP:</p>
+    <pre><code>{
+  "mcpServers": {
+    "geoarg": {
+      "url": "${MCP_ENDPOINT}"
+    }
+  }
+}</code></pre>
+    <p>Claude Code, en una línea (comando documentado por Claude Code; no se verificó su ejecución en Claude desde este repositorio):</p>
+    <pre><code>claude mcp add --transport http geoarg ${MCP_ENDPOINT}</code></pre>
+    <p>El endpoint público depende de Cloudflare Workers y de servicios oficiales de terceros. Puede fallar, demorar o cambiar sin aviso, y GeoArg no controla su disponibilidad. Para uso local, el transporte por stdio no depende de ese Worker.</p>
+
+    <h3>Instalación local por stdio</h3>
+    <pre><code>git clone https://github.com/franprzdev/geotucuman.git
+cd geotucuman
+npm install
+npm run build</code></pre>
+    <p>Configuración genérica por stdio, reemplazando la ruta por la de tu copia:</p>
+    <pre><code>{
+  "mcpServers": {
+    "geoarg": {
+      "command": "node",
+      "args": ["/ruta/geotucuman/dist/stdio.js"]
+    }
+  }
+}</code></pre>
+  </section>
+
+  <section aria-labelledby="herramientas">
+    <h2 id="herramientas">Cinco herramientas principales</h2>
+    <table>
+      <thead><tr><th>Tool</th><th>Qué hace y ejemplo real</th></tr></thead>
+      <tbody>
+        <tr><td><code>search_layers</code></td><td>Busca capas por palabra clave. Ejemplo: <code>query: "aeropuerto"</code> con <code>province: "Tucumán"</code> devuelve <code>WFS_GEOSPLAN:aeropuerto</code>.</td></tr>
+        <tr><td><code>suggest_layers</code></td><td>Sugiere capas desde un objetivo en texto libre, sin LLM. Ejemplo: <code>goal: "quiero armar un mapa de riego y pozos"</code>.</td></tr>
+        <tr><td><code>describe_layer</code></td><td>Muestra los campos reales de una capa y es obligatorio antes de consultar. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code>.</td></tr>
+        <tr><td><code>query_layer</code></td><td>Consulta features de capas WFS o ArcGIS REST. El bbox va en EPSG:4326, se reproyecta al CRS nativo y acepta hasta 50 features con paginación. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code> después de <code>describe_layer</code>.</td></tr>
+        <tr><td><code>geocode</code></td><td>Convierte texto libre en coordenadas con la API Georef, gratis y sin key. Ejemplo: <code>text: "Yerba Buena, Tucumán"</code>.</td></tr>
+      </tbody>
+    </table>
+    <p>Las capas WMS-only se pueden buscar y describir (metadatos vía GetCapabilities), pero <code>query_layer</code> no aplica: WMS entrega imágenes de mapa para visualización, mientras que WFS y ArcGIS REST entregan features consultables. Las 7 fuentes INTA integradas son WMS-only y usan una lista blanca de una capa por fuente.</p>
+  </section>
+
+  <section aria-labelledby="datos">
+    <h2 id="datos">Datos, atribución y cobertura</h2>
+    <p>GeoArg no aloja ni redistribuye los datos: consulta servicios oficiales en vivo y devuelve la fuente. Cada organismo publica sus propios términos y licencias, que pueden variar por capa y deben revisarse antes de redistribuir o reutilizar. Que un servicio sea público no implica permiso de reutilización.</p>
+    <p>La cobertura alcanza 23 de las 24 jurisdicciones argentinas: están representadas 22 provincias + CABA, además del IGN nacional y la API Georef. <strong>Formosa no tiene una fuente operativa integrada</strong>: su IDE responde la portada pero cierra las conexiones WMS/WFS desde fuera de Argentina, según el diagnóstico del repositorio. Las Islas Malvinas no tienen una capa dedicada ni cobertura completa: solo pueden aparecer en capas específicas del catálogo, como las de Tierra del Fuego o del IGN nacional, con sus propios límites de cobertura.</p>
+    <p>La representación territorial y temática no es uniforme ni exhaustiva. En las fuentes INTA se indexa una sola capa por nodo; por ejemplo, Corrientes cubre el área cartografiada de Lomas Arenosas y no toda la provincia, Chubut aporta una capa regional Patagonia Sur sin recorte provincial, La Rioja es cobertura histórica 2006-2007 y La Pampa es productividad modelada 2001-2011 / series 2000-2013. La disponibilidad depende de terceros y puede cambiar sin aviso.</p>
+  </section>
+
+  <section aria-labelledby="enlaces">
+    <h2 id="enlaces">Enlaces útiles</h2>
+    <ul class="links">
+      <li><a href="./capas.html">Catálogo de capas</a></li>
+      <li><a href="./salud.html">Salud de capas</a></li>
+      <li><a href="./ejemplos/focos-tucuman.html">Ejemplo aplicado: focos de calor vs agua en Tucumán</a></li>
+      <li><a href="${MCP_ENDPOINT.replace(/\/mcp$/, '/')}">Info del servicio HTTP</a></li>
+      <li><a href="${REPO}">Repositorio en GitHub</a></li>
+      <li><a href="./llms.txt">Índice llms.txt (opcional)</a></li>
+    </ul>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>GeoArg · Código MIT · Los datos son de sus organismos publicadores</span>
+    <span><a href="./index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+</body>
+</html>`;
+
 const catalogHtml = `<!DOCTYPE html>
 <html lang="es">
 <head>
@@ -316,6 +528,7 @@ const catalogHtml = `<!DOCTYPE html>
     </a>
     <nav class="nav" aria-label="Principal">
       <a href="./capas.html" aria-current="page">Capas</a>
+      <a href="./salud.html">Salud de capas</a>
       <a class="nav-cta" href="${REPO}">GitHub</a>
     </nav>
   </div>
@@ -386,7 +599,38 @@ apply();
 </body>
 </html>`;
 
+/** Adds the canonical URL and documentation links without replacing the hand-authored landing design. */
+function syncLandingMetadata(): void {
+  const path = 'docs/index.html';
+  let html = readFileSync(path, 'utf-8');
+  const canonical = `<link rel="canonical" href="${WEB}/">`;
+  if (!html.includes('rel="canonical"')) {
+    html = html.replace('</head>', `${canonical}\n</head>`);
+  }
+
+  const navStart = html.indexOf('<nav class="nav"');
+  const navEnd = navStart >= 0 ? html.indexOf('</nav>', navStart) : -1;
+  if (navStart >= 0 && navEnd > navStart && !html.slice(navStart, navEnd).includes('href="./mcp.html"')) {
+    html = html.replace(
+      '      <a href="./salud.html">Salud de capas</a>',
+      '      <a href="./salud.html">Salud de capas</a>\n      <a href="./mcp.html">Documentación MCP</a>',
+    );
+  }
+
+  const footerStart = html.indexOf('<footer class="site">');
+  if (footerStart >= 0 && !html.slice(footerStart).includes('href="./mcp.html"')) {
+    html = html.replace(
+      ' · Geometría del mapa: Georef (datos.gob.ar)</span>',
+      ' · <a href="./mcp.html">Documentación MCP</a> · Geometría del mapa: Georef (datos.gob.ar)</span>',
+    );
+  }
+  writeFileSync(path, html);
+}
+
 mkdirSync('docs', { recursive: true });
-// docs/index.html (landing) is hand-authored; this script only generates the catalog.
 writeFileSync('docs/capas.html', catalogHtml);
+writeFileSync('docs/mcp.html', `${mcpDocHtml.replace(/\n+$/, '')}\n`);
+syncLandingMetadata();
 console.log(`docs/capas.html generated (${catalog.layers.length} layers)`);
+console.log('docs/mcp.html generated');
+console.log('docs/index.html metadata and documentation links checked');

@@ -1,0 +1,38 @@
+# GeoArg
+
+> GeoArg es un servidor MCP de código abierto (MIT) para descubrir y consultar geodatos públicos de Argentina. Se puede usar local por stdio o por el endpoint público Streamable HTTP. Es de solo lectura y no requiere API key.
+
+Este archivo es un índice de conveniencia opcional. No es un estándar obligatorio ni una garantía de posicionamiento en buscadores o agentes.
+
+## Enlaces canónicos
+
+- Web: https://franprzdev.github.io/geotucuman/
+- Documentación MCP: https://franprzdev.github.io/geotucuman/mcp.html
+- Catálogo de capas: https://franprzdev.github.io/geotucuman/capas.html
+- Salud de capas: https://franprzdev.github.io/geotucuman/salud.html
+- Ejemplo aplicado: https://franprzdev.github.io/geotucuman/ejemplos/focos-tucuman.html
+- Repositorio: https://github.com/FranprzDev/geotucuman
+
+## Endpoint MCP
+
+- Streamable HTTP: https://geoarg-mcp.franprzdev.workers.dev/mcp
+- Info del servicio: https://geoarg-mcp.franprzdev.workers.dev/
+
+## Herramientas principales
+
+- search_layers: busca capas por palabra clave, con filtros opcionales por tipo de servicio y provincia.
+- suggest_layers: sugiere capas desde un objetivo en texto libre, de forma determinista y sin LLM.
+- describe_layer: muestra los campos reales de una capa y es obligatorio antes de consultar.
+- query_layer: consulta features de capas WFS o ArcGIS REST, con bbox en EPSG:4326 y paginación.
+- geocode: convierte texto libre en coordenadas con la API Georef, gratis y sin key.
+
+## Hechos y límites
+
+- Cobertura: 23 de las 24 jurisdicciones argentinas, con 22 provincias + CABA representadas, además del IGN nacional y la API Georef.
+- Formosa no tiene una fuente operativa integrada; su IDE cierra las conexiones WMS/WFS desde fuera de Argentina.
+- Las Islas Malvinas no tienen una capa dedicada ni cobertura completa; solo pueden aparecer en capas específicas del catálogo con sus propios límites.
+- Las capas WMS entregan imágenes para visualización. Las capas WFS y ArcGIS REST son las consultables por query_layer.
+- Las 7 fuentes INTA son WMS-only y usan una lista blanca de una capa por fuente; la cobertura no es exhaustiva.
+- GeoArg no aloja ni redistribuye datos. Consulta servicios oficiales en vivo y cita la fuente.
+- La disponibilidad y las licencias dependen de organismos de terceros y pueden cambiar sin aviso.
+- El endpoint público depende de Cloudflare Workers y de servicios oficiales de terceros.

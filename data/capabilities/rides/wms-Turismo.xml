@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[Turismo]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Turismo]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.107809</westBoundLongitude><eastBoundLongitude>-64.862022</eastBoundLongitude><southBoundLatitude>-28.077391</southBoundLatitude><northBoundLatitude>-26.070632</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.107809" miny="-28.077391" maxx="-64.862022" maxy="-26.070632"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.077391" miny="-66.107809" maxx="-26.070632" maxy="-64.862022"/>
+<BoundingBox CRS="EPSG:0" minx="3489403.245085" miny="6894947.536145" maxx="3611862.600015" maxy="7116826.297755"/>
+      <Layer>
+        <Title><![CDATA[Circuitos Turisticos]]></Title>
+        <Abstract><![CDATA[Circuitos Turisticos]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.031442</westBoundLongitude><eastBoundLongitude>-64.920995</eastBoundLongitude><southBoundLatitude>-27.840763</southBoundLatitude><northBoundLatitude>-26.216764</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.031442" miny="-27.840763" maxx="-64.920995" maxy="-26.216764"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.840763" miny="-66.031442" maxx="-26.216764" maxy="-64.920995"/>
+<BoundingBox CRS="EPSG:0" minx="3496902.728200" miny="6921170.318900" maxx="3606296.265700" maxy="7100680.068600"/>
+      <Layer queryable="1">
+        <Name>1</Name>
+        <Title><![CDATA[Circuito Valles Calchaquíes]]></Title>
+        <Abstract><![CDATA[Circuito Valles Calchaquíes]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.031241</westBoundLongitude><eastBoundLongitude>-65.211676</eastBoundLongitude><southBoundLatitude>-27.128031</southBoundLatitude><northBoundLatitude>-26.345898</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.031241" miny="-27.128031" maxx="-65.211676" maxy="-26.345898"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.128031" miny="-66.031241" maxx="-26.345898" maxy="-65.211676"/>
+<BoundingBox CRS="EPSG:0" minx="3496902.728200" miny="7000149.070700" maxx="3578159.174300" maxy="7086571.881700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>1</Title>
+          <LegendURL width="201" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=1" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>2</Name>
+        <Title><![CDATA[Circuito Valle de Choromoro]]></Title>
+        <Abstract><![CDATA[Circuito Valle de Choromoro]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.620766</westBoundLongitude><eastBoundLongitude>-65.202804</eastBoundLongitude><southBoundLatitude>-26.819644</southBoundLatitude><northBoundLatitude>-26.218511</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.620766" miny="-26.819644" maxx="-65.202804" maxy="-26.218511"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.819644" miny="-65.620766" maxx="-26.218511" maxy="-65.202804"/>
+<BoundingBox CRS="EPSG:0" minx="3537897.117600" miny="7034262.393800" maxx="3579254.209100" maxy="7100680.068600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>2</Title>
+          <LegendURL width="205" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=2" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>3</Name>
+        <Title><![CDATA[Circuito Sur]]></Title>
+        <Abstract><![CDATA[Circuito Sur]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.011683</westBoundLongitude><eastBoundLongitude>-65.189018</eastBoundLongitude><southBoundLatitude>-27.840763</southBoundLatitude><northBoundLatitude>-26.833036</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.011683" miny="-27.840763" maxx="-65.189018" maxy="-26.833036"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.840763" miny="-66.011683" maxx="-26.833036" maxy="-65.189018"/>
+<BoundingBox CRS="EPSG:0" minx="3498849.130600" miny="6921170.318900" maxx="3579889.906700" maxy="7032582.449700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>3</Title>
+          <LegendURL width="108" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=3" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>4</Name>
+        <Title><![CDATA[Circuito Nordeste]]></Title>
+        <Abstract><![CDATA[Circuito Nordeste]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.201299</westBoundLongitude><eastBoundLongitude>-64.930624</eastBoundLongitude><southBoundLatitude>-26.839639</southBoundLatitude><northBoundLatitude>-26.441147</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.201299" miny="-26.839639" maxx="-64.930624" maxy="-26.441147"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.839639" miny="-65.201299" maxx="-26.441147" maxy="-64.930624"/>
+<BoundingBox CRS="EPSG:0" minx="3579663.486000" miny="7031852.252900" maxx="3606296.265700" maxy="7075815.685100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>4</Title>
+          <LegendURL width="142" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=4" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>5</Name>
+        <Title><![CDATA[Circuito chico Las Yungas]]></Title>
+        <Abstract><![CDATA[Circuito chico Las Yungas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.449113</westBoundLongitude><eastBoundLongitude>-65.196489</eastBoundLongitude><southBoundLatitude>-26.944835</southBoundLatitude><northBoundLatitude>-26.592862</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.449113" miny="-26.944835" maxx="-65.196489" maxy="-26.592862"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.944835" miny="-65.449113" maxx="-26.592862" maxy="-65.196489"/>
+<BoundingBox CRS="EPSG:0" minx="3554873.741800" miny="7020327.985100" maxx="3579793.688800" maxy="7059196.790300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>5</Title>
+          <LegendURL width="192" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=5" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>6</Name>
+        <Title><![CDATA[Ciudad Historica]]></Title>
+        <Abstract><![CDATA[Ciudad Historica]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.221637</westBoundLongitude><eastBoundLongitude>-65.200654</eastBoundLongitude><southBoundLatitude>-26.838019</southBoundLatitude><northBoundLatitude>-26.817694</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.221637" miny="-26.838019" maxx="-65.200654" maxy="-26.817694"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.838019" miny="-65.221637" maxx="-26.817694" maxy="-65.200654"/>
+<BoundingBox CRS="EPSG:0" minx="3577381.859500" miny="7032045.974800" maxx="3579453.960300" maxy="7034285.318300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>6</Title>
+          <LegendURL width="137" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=6" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Rutas Temáticas]]></Title>
+        <Abstract><![CDATA[Rutas Temáticas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.050995</westBoundLongitude><eastBoundLongitude>-65.253085</eastBoundLongitude><southBoundLatitude>-27.686576</southBoundLatitude><northBoundLatitude>-26.267477</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.050995" miny="-27.686576" maxx="-65.253085" maxy="-26.267477"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.686576" miny="-66.050995" maxx="-26.267477" maxy="-65.253085"/>
+<BoundingBox CRS="EPSG:0" minx="3494969.579400" miny="6938256.691200" maxx="3573682.008000" maxy="7095287.507200"/>
+      <Layer queryable="1">
+        <Name>8</Name>
+        <Title><![CDATA[Ecosendas]]></Title>
+        <Abstract><![CDATA[Ecosendas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.969038</westBoundLongitude><eastBoundLongitude>-65.273869</eastBoundLongitude><southBoundLatitude>-27.683892</southBoundLatitude><northBoundLatitude>-26.282934</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.969038" miny="-27.683892" maxx="-65.273869" maxy="-26.282934"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.683892" miny="-65.969038" maxx="-26.282934" maxy="-65.273869"/>
+<BoundingBox CRS="EPSG:0" minx="3503092.297500" miny="6938553.736800" maxx="3571633.287600" maxy="7093586.267400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>8</Title>
+          <LegendURL width="226" height="356">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=8" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>9</Name>
+        <Title><![CDATA[Puntos de Interes Ecosendas]]></Title>
+        <Abstract><![CDATA[Puntos de Interes Ecosendas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.969865</westBoundLongitude><eastBoundLongitude>-65.273182</eastBoundLongitude><southBoundLatitude>-27.686572</southBoundLatitude><northBoundLatitude>-26.283805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.969865" miny="-27.686572" maxx="-65.273182" maxy="-26.283805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.686572" miny="-65.969865" maxx="-26.283805" maxy="-65.273182"/>
+<BoundingBox CRS="EPSG:0" minx="3503009.750500" miny="6938256.691200" maxx="3571699.274700" maxy="7093489.422900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>9</Title>
+          <LegendURL width="213" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=9" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>10</Name>
+        <Title><![CDATA[Ruta del Vino]]></Title>
+        <Abstract><![CDATA[Ruta del Vino]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.050739</westBoundLongitude><eastBoundLongitude>-65.256840</eastBoundLongitude><southBoundLatitude>-27.126603</southBoundLatitude><northBoundLatitude>-26.267477</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.050739" miny="-27.126603" maxx="-65.256840" maxy="-26.267477"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.126603" miny="-66.050739" maxx="-26.267477" maxy="-65.256840"/>
+<BoundingBox CRS="EPSG:0" minx="3494969.579400" miny="7000307.282100" maxx="3573682.008000" maxy="7095287.507200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>10</Title>
+          <LegendURL width="118" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=10" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>11</Name>
+        <Title><![CDATA[Bodegas]]></Title>
+        <Abstract><![CDATA[Bodegas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.044843</westBoundLongitude><eastBoundLongitude>-65.737694</eastBoundLongitude><southBoundLatitude>-26.866684</southBoundLatitude><northBoundLatitude>-26.298941</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.044843" miny="-26.866684" maxx="-65.737694" maxy="-26.298941"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.866684" miny="-66.044843" maxx="-26.298941" maxy="-65.737694"/>
+<BoundingBox CRS="EPSG:0" minx="3495543.847300" miny="7029107.161800" maxx="3526065.888900" maxy="7091985.137000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>11</Title>
+          <LegendURL width="91" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=11" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer queryable="1">
+        <Name>12</Name>
+        <Title><![CDATA[Sitios de interés]]></Title>
+        <Abstract><![CDATA[Sitios de interés]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.038328</westBoundLongitude><eastBoundLongitude>-64.982283</eastBoundLongitude><southBoundLatitude>-27.986384</southBoundLatitude><northBoundLatitude>-26.162511</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.038328" miny="-27.986384" maxx="-64.982283" maxy="-26.162511"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.986384" miny="-66.038328" maxx="-26.162511" maxy="-64.982283"/>
+<BoundingBox CRS="EPSG:0" minx="3496229.466600" miny="6905032.934400" maxx="3600123.530800" maxy="7106740.899500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>12</Title>
+          <LegendURL width="196" height="765">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=12" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>13</Name>
+        <Title><![CDATA[Localidades turísticas]]></Title>
+        <Abstract><![CDATA[Localidades turísticas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.031548</westBoundLongitude><eastBoundLongitude>-64.925534</eastBoundLongitude><southBoundLatitude>-27.839406</southBoundLatitude><northBoundLatitude>-26.228761</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.031548" miny="-27.839406" maxx="-64.925534" maxy="-26.228761"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.839406" miny="-66.031548" maxx="-26.228761" maxy="-64.925534"/>
+<BoundingBox CRS="EPSG:0" minx="3496892.256200" miny="6921320.685400" maxx="3605850.325700" maxy="7099354.263700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>13</Title>
+          <LegendURL width="167" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Turismo/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=13" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

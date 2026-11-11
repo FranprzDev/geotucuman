@@ -1,3 +1,6 @@
+import { cachedResponse } from './capability-cache.js';
+import type { RawCacheTarget } from './capability-cache.js';
+
 const TIMEOUT_MS = 20_000;
 
 const USER_AGENT = 'GeoArg/0.2 (+https://franprzdev.github.io/geotucuman/)';
@@ -106,9 +109,13 @@ export function parseWmsCapabilities(xml: string): WmsLayer[] {
   return out;
 }
 
-export async function getWmsCapabilities(wmsUrl: string): Promise<WmsLayer[]> {
+/**
+ * Fetches and parses a WMS GetCapabilities. When `cache` is provided the raw XML is read
+ * from / written to disk, so offline (`fromCache`) builds are byte-reproducible.
+ */
+export async function getWmsCapabilities(wmsUrl: string, cache?: RawCacheTarget): Promise<WmsLayer[]> {
   const url = `${wmsUrl}?service=WMS&request=GetCapabilities`;
-  const xml = await fetchText(url);
+  const xml = await cachedResponse(cache, () => fetchText(url));
   return parseWmsCapabilities(xml);
 }
 

@@ -1,0 +1,455 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[Medio_Ambiente_WMS]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Medio Ambiente]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.266996</westBoundLongitude><eastBoundLongitude>-64.367436</eastBoundLongitude><southBoundLatitude>-28.113078</southBoundLatitude><northBoundLatitude>-25.952615</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.266996" miny="-28.113078" maxx="-64.367436" maxy="-25.952615"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.113078" miny="-66.266996" maxx="-25.952615" maxy="-64.367436"/>
+<BoundingBox CRS="EPSG:0" minx="3473765.093335" miny="6890992.675455" maxx="3660440.757565" maxy="7129399.262445"/>
+      <Layer queryable="1">
+        <Name>Tratamiento_de_residuos_sólidos_urbanos</Name>
+        <Title><![CDATA[Tratamiento_de_residuos_sólidos_urbanos]]></Title>
+        <Abstract><![CDATA[Tratamiento_de_residuos_sólidos_urbanos]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.279532</westBoundLongitude><eastBoundLongitude>-64.868845</eastBoundLongitude><southBoundLatitude>-26.877865</southBoundLatitude><northBoundLatitude>-26.732313</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.279532" miny="-26.877865" maxx="-64.868845" maxy="-26.732313"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.877865" miny="-65.279532" maxx="-26.732313" maxy="-64.868845"/>
+<BoundingBox CRS="EPSG:0" minx="3571677.994800" miny="7027664.270600" maxx="3612400.717400" maxy="7043497.038700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tratamiento_de_residuos_sólidos_urbanos</Title>
+          <LegendURL width="294" height="17">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tratamiento_de_residuos_sólidos_urbanos" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Riesgo_de_salinización</Name>
+        <Title><![CDATA[Riesgo_de_salinización]]></Title>
+        <Abstract><![CDATA[Riesgo_de_salinización]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Riesgo_de_salinización</Title>
+          <LegendURL width="104" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Riesgo_de_salinización" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Riesgo_de_remoción_en_masa</Name>
+        <Title><![CDATA[Riesgo_de_remoción_en_masa]]></Title>
+        <Abstract><![CDATA[Riesgo_de_remoción_en_masa]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Riesgo_de_remoción_en_masa</Title>
+          <LegendURL width="154" height="152">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Riesgo_de_remoción_en_masa" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Riesgo_de_inundación</Name>
+        <Title><![CDATA[Riesgo_de_inundación]]></Title>
+        <Abstract><![CDATA[Riesgo_de_inundación]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Riesgo_de_inundación</Title>
+          <LegendURL width="154" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Riesgo_de_inundación" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Riesgo_de_erosión</Name>
+        <Title><![CDATA[Riesgo_de_erosión]]></Title>
+        <Abstract><![CDATA[Riesgo_de_erosión]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Riesgo_de_erosión</Title>
+          <LegendURL width="154" height="152">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Riesgo_de_erosión" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Riesgo_de_desertificación</Name>
+        <Title><![CDATA[Riesgo_de_desertificación]]></Title>
+        <Abstract><![CDATA[Riesgo_de_desertificación]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Riesgo_de_desertificación</Title>
+          <LegendURL width="101" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Riesgo_de_desertificación" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Regiones_geomorfológicas</Name>
+        <Title><![CDATA[Regiones_geomorfológicas]]></Title>
+        <Abstract><![CDATA[Regiones_geomorfológicas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Regiones_geomorfológicas</Title>
+          <LegendURL width="374" height="197">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Regiones_geomorfológicas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Regiones_agrológicas</Name>
+        <Title><![CDATA[Regiones_agrológicas]]></Title>
+        <Abstract><![CDATA[Regiones_agrológicas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153100" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Regiones_agrológicas</Title>
+          <LegendURL width="421" height="379">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Regiones_agrológicas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Puntos_verdes</Name>
+        <Title><![CDATA[Puntos_verdes]]></Title>
+        <Abstract><![CDATA[Puntos_verdes]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.268322</westBoundLongitude><eastBoundLongitude>-65.161765</eastBoundLongitude><southBoundLatitude>-26.895629</southBoundLatitude><northBoundLatitude>-26.720752</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.268322" miny="-26.895629" maxx="-65.161765" maxy="-26.720752"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.895629" miny="-65.268322" maxx="-26.720752" maxy="-65.161765"/>
+<BoundingBox CRS="EPSG:0" minx="3572801.984900" miny="7025689.389000" maxx="3583277.832800" maxy="7045002.995900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Puntos_verdes</Title>
+          <LegendURL width="214" height="63">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Puntos_verdes" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Inta_erosión</Name>
+        <Title><![CDATA[Inta_erosión]]></Title>
+        <Abstract><![CDATA[Inta_erosión]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164428</westBoundLongitude><eastBoundLongitude>-64.455345</eastBoundLongitude><southBoundLatitude>-28.001579</southBoundLatitude><northBoundLatitude>-26.064459</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164428" miny="-28.001579" maxx="-64.455345" maxy="-26.064459"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.001579" miny="-66.164428" maxx="-26.064459" maxy="-64.455345"/>
+<BoundingBox CRS="EPSG:0" minx="3483826.749800" miny="6903348.999800" maxx="3651955.500100" maxy="7117105.000200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Inta_erosión</Title>
+          <LegendURL width="285" height="220">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Inta_erosión" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Inta_drenaje</Name>
+        <Title><![CDATA[Inta_drenaje]]></Title>
+        <Abstract><![CDATA[Inta_drenaje]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164428</westBoundLongitude><eastBoundLongitude>-64.455345</eastBoundLongitude><southBoundLatitude>-28.001579</southBoundLatitude><northBoundLatitude>-26.064459</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164428" miny="-28.001579" maxx="-64.455345" maxy="-26.064459"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.001579" miny="-66.164428" maxx="-26.064459" maxy="-64.455345"/>
+<BoundingBox CRS="EPSG:0" minx="3483826.749800" miny="6903348.999800" maxx="3651955.500100" maxy="7117105.000200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Inta_drenaje</Title>
+          <LegendURL width="217" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Inta_drenaje" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Clasificación_de_suelos_según_nivel_de_suborden_2014</Name>
+        <Title><![CDATA[Clasificación_de_suelos_según_nivel_de_suborden_2014]]></Title>
+        <Abstract><![CDATA[Clasificación_de_suelos_según_nivel_de_suborden_2014]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Clasificación_de_suelos_según_nivel_de_suborden_2014</Title>
+          <LegendURL width="304" height="877">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Clasificación_de_suelos_según_nivel_de_suborden_2014" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Clasificación_de_suelos_INTA_2013</Name>
+        <Title><![CDATA[Clasificación_de_suelos_INTA_2013]]></Title>
+        <Abstract><![CDATA[Clasificación_de_suelos_INTA_2013]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.504300" miny="6901829.338500" maxx="3651622.153200" maxy="7118562.599400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Clasificación_de_suelos_INTA_2013</Title>
+          <LegendURL width="158" height="288">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Clasificación_de_suelos_INTA_2013" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_OTBN</Name>
+        <Title><![CDATA[Áreas_OTBN]]></Title>
+        <Abstract><![CDATA[Áreas_OTBN]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164210</westBoundLongitude><eastBoundLongitude>-64.458934</eastBoundLongitude><southBoundLatitude>-27.999436</southBoundLatitude><northBoundLatitude>-26.066994</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164210" miny="-27.999436" maxx="-64.458934" maxy="-26.066994"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.999436" miny="-66.164210" maxx="-26.066994" maxy="-64.458934"/>
+<BoundingBox CRS="EPSG:0" minx="3483847.897000" miny="6903586.521300" maxx="3651605.286000" maxy="7116828.129700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_OTBN</Title>
+          <LegendURL width="305" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_OTBN" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_Naturales_Protegidas_Provinciales</Name>
+        <Title><![CDATA[Áreas_Naturales_Protegidas_Provinciales]]></Title>
+        <Abstract><![CDATA[Áreas_Naturales_Protegidas_Provinciales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.178358</westBoundLongitude><eastBoundLongitude>-65.158945</eastBoundLongitude><southBoundLatitude>-27.541637</southBoundLatitude><northBoundLatitude>-26.094580</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.178358" miny="-27.541637" maxx="-65.158945" maxy="-26.094580"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.541637" miny="-66.178358" maxx="-26.094580" maxy="-65.158945"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.692800" miny="6954317.811200" maxx="3583078.754900" maxy="7114387.972600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_Naturales_Protegidas_Provinciales</Title>
+          <LegendURL width="317" height="220">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_Naturales_Protegidas_Provinciales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_Naturales_Protegidas_Nacionales</Name>
+        <Title><![CDATA[Áreas_Naturales_Protegidas_Nacionales]]></Title>
+        <Abstract><![CDATA[Áreas_Naturales_Protegidas_Nacionales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.084371</westBoundLongitude><eastBoundLongitude>-65.287781</eastBoundLongitude><southBoundLatitude>-27.692701</southBoundLatitude><northBoundLatitude>-26.618150</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.084371" miny="-27.692701" maxx="-65.287781" maxy="-26.618150"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.692701" miny="-66.084371" maxx="-26.618150" maxy="-65.287781"/>
+<BoundingBox CRS="EPSG:0" minx="3491677.680800" miny="6937577.927600" maxx="3570255.080200" maxy="7056450.794400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_Naturales_Protegidas_Nacionales</Title>
+          <LegendURL width="206" height="39">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_Naturales_Protegidas_Nacionales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_húmedas_agrícolas_2017</Name>
+        <Title><![CDATA[Áreas_húmedas_agrícolas_2017]]></Title>
+        <Abstract><![CDATA[Áreas_húmedas_agrícolas_2017]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.812404</westBoundLongitude><eastBoundLongitude>-64.651569</eastBoundLongitude><southBoundLatitude>-28.014944</southBoundLatitude><northBoundLatitude>-26.056404</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.812404" miny="-28.014944" maxx="-64.651569" maxy="-26.056404"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.014944" miny="-65.812404" maxx="-26.056404" maxy="-64.651569"/>
+<BoundingBox CRS="EPSG:0" minx="3518771.753100" miny="6901853.192600" maxx="3632630.702200" maxy="7118208.328900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_húmedas_agrícolas_2017</Title>
+          <LegendURL width="234" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_húmedas_agrícolas_2017" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Ambientes_Tucumán_Atlas100k</Name>
+        <Title><![CDATA[Ambientes_Tucumán_Atlas100k]]></Title>
+        <Abstract><![CDATA[Ambientes_Tucumán_Atlas100k]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.180476</westBoundLongitude><eastBoundLongitude>-64.458836</eastBoundLongitude><southBoundLatitude>-28.014577</southBoundLatitude><northBoundLatitude>-26.051757</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.180476" miny="-28.014577" maxx="-64.458836" maxy="-26.051757"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.014577" miny="-66.180476" maxx="-26.051757" maxy="-64.458836"/>
+<BoundingBox CRS="EPSG:0" minx="3482250.350800" miny="6901908.512600" maxx="3651593.704300" maxy="7118516.924500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Ambientes_Tucumán_Atlas100k</Title>
+          <LegendURL width="180" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Medio_Ambiente_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Ambientes_Tucumán_Atlas100k" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

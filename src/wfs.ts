@@ -1,4 +1,6 @@
 import type { EndpointConfig } from './endpoints.js';
+import { cachedResponse } from './capability-cache.js';
+import type { RawCacheTarget } from './capability-cache.js';
 
 const TIMEOUT_MS = 20_000;
 
@@ -27,9 +29,7 @@ export interface CapabilityLayer {
 }
 
 /** Parses GetCapabilities without XML dependencies (Tucuman GeoServer instances use a loose format). */
-export async function getCapabilities(ep: EndpointConfig): Promise<CapabilityLayer[]> {
-  const url = `${ep.url}?service=WFS&request=GetCapabilities&version=${ep.wfsVersion}`;
-  const xml = await fetchText(url);
+export function parseWfsCapabilities(xml: string): CapabilityLayer[] {
   // Tags may carry a namespace prefix (GeoServer default ns vs ArcGIS wfs:).
   const tag = (name: string) => `(?:[A-Za-z_][\\w.-]*:)?${name}`;
   const blocks = xml.match(new RegExp(`<${tag('FeatureType')}[\\s>][\\s\\S]*?</${tag('FeatureType')}>`, 'g')) ?? [];
@@ -44,6 +44,16 @@ export async function getCapabilities(ep: EndpointConfig): Promise<CapabilityLay
     // WFS 1.x uses <SRS> or <DefaultCRS>; WFS 2.0 uses <DefaultCRS>
     defaultCrs: pick(b, 'DefaultCRS') || pick(b, 'DefaultSRS') || pick(b, 'SRS'),
   })).filter((l) => l.typeName);
+}
+
+/**
+ * Fetches and parses a WFS GetCapabilities. When `cache` is provided the raw XML is read
+ * from / written to disk, so offline (`fromCache`) builds are byte-reproducible.
+ */
+export async function getCapabilities(ep: EndpointConfig, cache?: RawCacheTarget): Promise<CapabilityLayer[]> {
+  const url = `${ep.url}?service=WFS&request=GetCapabilities&version=${ep.wfsVersion}`;
+  const xml = await cachedResponse(cache, () => fetchText(url));
+  return parseWfsCapabilities(xml);
 }
 
 export interface FieldInfo {

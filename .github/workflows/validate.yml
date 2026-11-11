@@ -23,6 +23,9 @@ jobs:
       - name: Typecheck
         run: npm run typecheck
 
+      - name: Validate catalog
+        run: npm run validate-catalog
+
       - name: ArcGIS offline tests
         run: npx tsx scripts/arcgis-test.ts
 

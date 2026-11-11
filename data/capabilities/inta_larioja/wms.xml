@@ -1,0 +1,561 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="1023" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://geo-nodo11.inta.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>GeoNode Local GeoServer</Title>
+    <Abstract>This is a description of your Web Map Server.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization/>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address/>
+        <City/>
+        <StateOrProvince/>
+        <PostCode/>
+        <Country/>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress/>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+      <Format>JSONP</Format>
+    </Exception>
+    <Layer>
+      <Title>GeoNode Local GeoServer</Title>
+      <Abstract>This is a description of your Web Map Server.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3785</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:32647</CRS>
+      <CRS>EPSG:32736</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-69.63497275599997</westBoundLongitude>
+        <eastBoundLongitude>-64.78096511799998</eastBoundLongitude>
+        <southBoundLatitude>-31.99839764899997</southBoundLatitude>
+        <northBoundLatitude>-25.168312799999967</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-69.63497275599997" miny="-31.99839764899997" maxx="-64.78096511799998" maxy="-25.168312799999967"/>
+      <BoundingBox CRS="EPSG:4326" minx="-31.99839764899997" miny="-69.63497275599997" maxx="-25.168312799999967" maxy="-64.78096511799998"/>
+      <BoundingBox CRS="EPSG:3785" minx="-7751729.708601395" miny="-3740453.7319450886" maxx="-7211384.050032575" maxy="-2878262.864567105"/>
+      <BoundingBox CRS="EPSG:3857" minx="-7751729.708601395" miny="-3763100.295514069" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+      <BoundingBox CRS="EPSG:900913" minx="-7751729.708601395" miny="-3763100.295514069" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+      <BoundingBox CRS="EPSG:32647" minx="-1718637.6172050764" miny="-2.5374280336770916E8" maxx="5.978671581611385E7" maxy="-1.1586859259246607E8"/>
+      <BoundingBox CRS="EPSG:32736" minx="-1.269867740773239E7" miny="-7191187.60241995" maxx="-8325387.672939291" maxy="-3585483.717453285"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:citrus2025___catamarca</Name>
+        <Title>Citrus Catamarca 2025</Title>
+        <Abstract>Citrus Catamarca 2025</Abstract>
+        <KeywordList>
+          <Keyword>Agricultura</Keyword>
+          <Keyword>Citrus</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>citrus2025___catamarca</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.24637510743472</westBoundLongitude>
+          <eastBoundLongitude>-65.4641055473821</eastBoundLongitude>
+          <southBoundLatitude>-28.856022644867775</southBoundLatitude>
+          <northBoundLatitude>-28.0981233283981</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.24637510743472" miny="-28.856022644867775" maxx="-65.4641055473821" maxy="-28.0981233283981"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.856022644867775" miny="-66.24637510743472" maxx="-28.0981233283981" maxy="-65.4641055473821"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7374512.743859827" miny="-3336711.285688484" maxx="-7287430.894771691" maxy="-3241225.7407914326"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7374512.743859827" miny="-3357333.675288392" maxx="-7287430.894771691" maxy="-3261350.538424184"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7374512.743859827" miny="-3357333.675288392" maxx="-7287430.894771691" maxy="-3261350.538424184"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.381802234712907E7" miny="-1.812240342035921E8" maxx="3.0961092777737223E7" maxy="-1.6499237916021556E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0451201822760968E7" miny="-4869901.340388122" maxx="-9980777.584513158" maxy="-4385608.327111534"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=aaff96a1-e6b1-4201-a04d-18b8ac806b8e&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/30"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:citrus2025___catamarca</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acitrus2025___catamarca"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:larioja_suelo_corregido</Name>
+        <Title>larioja_suelo_corregido</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>larioja_suelo_corregido</Keyword>
+          <Keyword>suelo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.63083860809849</westBoundLongitude>
+          <eastBoundLongitude>-65.42298521799995</eastBoundLongitude>
+          <southBoundLatitude>-31.99839764899997</southBoundLatitude>
+          <northBoundLatitude>-27.707115339999973</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.63083860809849" miny="-31.99839764899997" maxx="-65.42298521799995" maxy="-27.707115339999973"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.99839764899997" miny="-69.63083860809849" maxx="-27.707115339999973" maxy="-65.42298521799995"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7751269.497362137" miny="-3740453.7319450886" maxx="-7282853.400643618" maxy="-3192230.9442865117"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7751269.497362137" miny="-3763100.295514069" maxx="-7282853.400643618" maxy="-3212097.6662005493"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7751269.497362137" miny="-3763100.295514069" maxx="-7282853.400643618" maxy="-3212097.6662005493"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.075273824835675E7" miny="-2.1254564199221423E8" maxx="5.9773687456443086E7" maxy="-1.1837739750849132E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0929068933762133E7" miny="-6788019.245441373" maxx="-8325544.8786023725" maxy="-3836272.966923929"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/34"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=685545bc-8ded-4396-9aed-148b1927e71a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:larioja_suelo_corregido</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alarioja_suelo_corregido"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:lccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e</Name>
+        <Title>lccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e</Keyword>
+          <Keyword>Cobertura del suelo Uso del suelo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.09526410599995</westBoundLongitude>
+          <eastBoundLongitude>-64.78096511799998</eastBoundLongitude>
+          <southBoundLatitude>-30.119602481999948</southBoundLatitude>
+          <northBoundLatitude>-25.168312799999967</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.09526410599995" miny="-30.119602481999948" maxx="-64.78096511799998" maxy="-25.168312799999967"/>
+        <BoundingBox CRS="EPSG:4326" minx="-30.119602481999948" miny="-69.09526410599995" maxx="-25.168312799999967" maxy="-64.78096511799998"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7691649.616506667" miny="-3497488.8829009244" maxx="-7211384.050032575" maxy="-2878262.864567105"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7691649.616506667" miny="-3518932.9102136944" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7691649.616506667" miny="-3518932.9102136944" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1718637.6172050764" miny="-2.48432175432501E8" maxx="4.675602872951787E7" maxy="-1.4282811845467374E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.2620418219500914E7" miny="-6840564.127919253" maxx="-9297181.719300924" maxy="-3896483.073692343"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=47222892-6aa2-49ed-a0ed-9f1bb87bdc96&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/24"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:lccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e</Name>
+          <Title>geonode:lccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e</Title>
+          <LegendURL width="554" height="840">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alccs_n3_2007_catamarca_d58a147c2c104c02ae93e6ed340d571e"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712</Name>
+        <Title>lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712</Keyword>
+          <Keyword>Cobertura del suelo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.63497275599997</westBoundLongitude>
+          <eastBoundLongitude>-65.42298521799995</eastBoundLongitude>
+          <southBoundLatitude>-31.99839764899997</southBoundLatitude>
+          <northBoundLatitude>-27.707115339999973</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.63497275599997" miny="-31.99839764899997" maxx="-65.42298521799995" maxy="-27.707115339999973"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.99839764899997" miny="-69.63497275599997" maxx="-27.707115339999973" maxy="-65.42298521799995"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7751729.708601395" miny="-3740453.7319450886" maxx="-7282853.400643618" maxy="-3192230.9442865117"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7751729.708601395" miny="-3763100.295514069" maxx="-7282853.400643618" maxy="-3212097.6662005493"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7751729.708601395" miny="-3763100.295514069" maxx="-7282853.400643618" maxy="-3212097.6662005493"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.075273824835675E7" miny="-2.125787574533956E8" maxx="5.978671581611385E7" maxy="-1.1837739750849132E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.092934329545117E7" miny="-6790470.078625523" maxx="-8325387.672939291" maxy="-3836272.966923929"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c8b3cd-7d96-45ec-adf8-a2b3f315b039&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/27"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712</Name>
+          <Title>geonode:lccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712</Title>
+          <LegendURL width="554" height="840">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alccs_n3_2007_lr_c01bf1947b73120dcc56d9b76907d712"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:ocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf</Name>
+        <Title>ocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>Carbono orgánico en el suelo</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>ocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>stock</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.09372</westBoundLongitude>
+          <eastBoundLongitude>-64.78172</eastBoundLongitude>
+          <southBoundLatitude>-30.11895</southBoundLatitude>
+          <northBoundLatitude>-25.16895</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.09372" miny="-30.11895" maxx="-64.78172" maxy="-25.16895"/>
+        <BoundingBox CRS="EPSG:4326" minx="-30.11895" miny="-69.09372" maxx="-25.16895" maxy="-64.78172"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7691477.727413022" miny="-3497405.3329684073" maxx="-7211468.083112426" maxy="-2878340.807581836"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7691477.727413022" miny="-3518848.938628499" maxx="-7211468.083112427" maxy="-2896510.635274719"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7691477.727413022" miny="-3518848.938628499" maxx="-7211468.083112427" maxy="-2896510.635274719"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1712078.1982136695" miny="-2.4840781167460355E8" maxx="4.674736446682097E7" maxy="-1.4284136271843734E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.2619743376662847E7" miny="-6839515.798119836" maxx="-9297532.614573363" maxy="-3896904.864310325"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9847780-78c2-4ca8-bdcb-0e4155190143&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/29"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:ocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf</Name>
+          <Title>geonode:ocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf</Title>
+          <LegendURL width="93" height="183">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aocsmgha_ipcc_rf_jun18_con_m_catamarca66de0ccd6faf"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:ocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055</Name>
+        <Title>ocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>ocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055</Keyword>
+          <Keyword>Carbono orgánico en el suelo</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>stock</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.63372</westBoundLongitude>
+          <eastBoundLongitude>-65.42372</eastBoundLongitude>
+          <southBoundLatitude>-31.99695</southBoundLatitude>
+          <northBoundLatitude>-27.70895</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.63372" miny="-31.99695" maxx="-65.42372" maxy="-27.70895"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.99695" miny="-69.63372" maxx="-27.70895" maxy="-65.42372"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7751590.2524413895" miny="-3740264.6278263507" maxx="-7282935.196201708" maxy="-3192460.4178314423"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7751590.2524413895" miny="-3762910.273907758" maxx="-7282935.196201708" maxy="-3212328.352809006"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7751590.2524413895" miny="-3762910.273907758" maxx="-7282935.196201708" maxy="-3212328.352809006"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.0768306008466262E7" miny="-2.12537181687833E8" maxx="5.9775074642313786E7" maxy="-1.184015415702758E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0928036321980447E7" miny="-6789345.291782897" maxx="-8326219.87283593" maxy="-3836845.8773954595"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0232a5e0-681c-4fd6-bf07-54377a2ece99&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/28"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:ocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055</Name>
+          <Title>geonode:ocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055</Title>
+          <LegendURL width="93" height="183">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aocsmgha_ipcc_rf_jun18_con_m_lr_3bce59e73519fbf932493e04025bb055"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:suelocatamarca_1_500</Name>
+        <Title>suelocatamarca_1_500</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>suelocatamarca_1_500</Keyword>
+          <Keyword>suelo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.09526410599995</westBoundLongitude>
+          <eastBoundLongitude>-64.78096511799998</eastBoundLongitude>
+          <southBoundLatitude>-30.119602481999948</southBoundLatitude>
+          <northBoundLatitude>-25.168312799999967</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.09526410599995" miny="-30.119602481999948" maxx="-64.78096511799998" maxy="-25.168312799999967"/>
+        <BoundingBox CRS="EPSG:4326" minx="-30.119602481999948" miny="-69.09526410599995" maxx="-25.168312799999967" maxy="-64.78096511799998"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7691649.616506667" miny="-3497488.8829009244" maxx="-7211384.050032575" maxy="-2878262.864567105"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7691649.616506667" miny="-3518932.9102136944" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7691649.616506667" miny="-3518932.9102136944" maxx="-7211384.050032575" maxy="-2896432.2617109814"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1718637.6172050764" miny="-2.48432175432501E8" maxx="4.675602872951787E7" maxy="-1.4282811845467374E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.2620418219500914E7" miny="-6840564.127919253" maxx="-9297181.719300924" maxy="-3896483.073692343"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a02f6101-b104-4c1b-9ba2-3b10617663f2&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/showmetadata/xsl/21"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:suelocatamarca_1_500</Name>
+          <Title>suelocatamarca_1_500</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo11.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asuelocatamarca_1_500"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[Infraestructura]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Layers]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.199959</westBoundLongitude><eastBoundLongitude>-64.378082</eastBoundLongitude><southBoundLatitude>-28.194594</southBoundLatitude><northBoundLatitude>-25.854386</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.199959" miny="-28.194594" maxx="-64.378082" maxy="-25.854386"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.194594" miny="-66.199959" maxx="-25.854386" maxy="-64.378082"/>
+<BoundingBox CRS="EPSG:22183" minx="6881958.922785" miny="3480367.097365" maxx="7140300.100715" maxy="3659273.487335"/>
+      <Layer queryable="1">
+        <Name>Red_terciaria</Name>
+        <Title><![CDATA[Red_terciaria]]></Title>
+        <Abstract><![CDATA[Red_terciaria]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.116933</westBoundLongitude><eastBoundLongitude>-64.464315</eastBoundLongitude><southBoundLatitude>-28.009114</southBoundLatitude><northBoundLatitude>-26.058899</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.116933" miny="-28.009114" maxx="-64.464315" maxy="-26.058899"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.009114" miny="-66.116933" maxx="-26.058899" maxy="-64.464315"/>
+<BoundingBox CRS="EPSG:22183" minx="6902513.996300" miny="3488499.206000" maxx="7117731.497900" maxy="3651062.299600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_terciaria</Title>
+          <LegendURL width="118" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_terciaria" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Vías_principales</Name>
+        <Title><![CDATA[Vías_principales]]></Title>
+        <Abstract><![CDATA[Vías_principales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.318190</westBoundLongitude><eastBoundLongitude>-65.108793</eastBoundLongitude><southBoundLatitude>-26.897994</southBoundLatitude><northBoundLatitude>-26.763655</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.318190" miny="-26.897994" maxx="-65.108793" maxy="-26.763655"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.897994" miny="-65.318190" maxx="-26.763655" maxy="-65.108793"/>
+<BoundingBox CRS="EPSG:22183" minx="7025455.208300" miny="3567814.111700" maxx="7040213.163300" maxy="3588539.374800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Vías_principales</Title>
+          <LegendURL width="137" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Vías_principales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Ruta_provincial</Name>
+        <Title><![CDATA[Ruta_provincial]]></Title>
+        <Abstract><![CDATA[Ruta_provincial]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.036539</westBoundLongitude><eastBoundLongitude>-64.490367</eastBoundLongitude><southBoundLatitude>-27.861126</southBoundLatitude><northBoundLatitude>-26.142635</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.036539" miny="-27.861126" maxx="-64.490367" maxy="-26.142635"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.861126" miny="-66.036539" maxx="-26.142635" maxy="-64.490367"/>
+<BoundingBox CRS="EPSG:22183" minx="6918913.748000" miny="3496401.382000" maxx="7108478.419100" maxy="3648701.254800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Ruta_provincial</Title>
+          <LegendURL width="131" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Ruta_provincial" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Ruta_nacional</Name>
+        <Title><![CDATA[Ruta_nacional]]></Title>
+        <Abstract><![CDATA[Ruta_nacional]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.055404</westBoundLongitude><eastBoundLongitude>-64.472750</eastBoundLongitude><southBoundLatitude>-28.042114</southBoundLatitude><northBoundLatitude>-26.097379</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.055404" miny="-28.042114" maxx="-64.472750" maxy="-26.097379"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.042114" miny="-66.055404" maxx="-26.097379" maxy="-64.472750"/>
+<BoundingBox CRS="EPSG:22183" minx="6898856.887200" miny="3494552.474300" maxx="7113476.960200" maxy="3650186.487200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Ruta_nacional</Title>
+          <LegendURL width="124" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Ruta_nacional" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Red_ferrocarril</Name>
+        <Title><![CDATA[Red_ferrocarril]]></Title>
+        <Abstract><![CDATA[Red_ferrocarril]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.747356</westBoundLongitude><eastBoundLongitude>-64.477792</eastBoundLongitude><southBoundLatitude>-27.945429</southBoundLatitude><northBoundLatitude>-26.115713</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.747356" miny="-27.945429" maxx="-64.477792" maxy="-26.115713"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.945429" miny="-65.747356" maxx="-26.115713" maxy="-64.477792"/>
+<BoundingBox CRS="EPSG:22183" minx="6909544.996400" miny="3525267.748900" maxx="7111449.275700" maxy="3649823.790100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_ferrocarril</Title>
+          <LegendURL width="127" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_ferrocarril" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Puentes_IGN</Name>
+        <Title><![CDATA[Puentes_IGN]]></Title>
+        <Abstract><![CDATA[Puentes_IGN]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.019161</westBoundLongitude><eastBoundLongitude>-64.514810</eastBoundLongitude><southBoundLatitude>-28.008313</southBoundLatitude><northBoundLatitude>-26.116378</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.019161" miny="-28.008313" maxx="-64.514810" maxy="-26.116378"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.008313" miny="-66.019161" maxx="-26.116378" maxy="-64.514810"/>
+<BoundingBox CRS="EPSG:22183" minx="6902602.687500" miny="3498115.479600" maxx="7111417.963600" maxy="3646094.903800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Puentes_IGN</Title>
+          <LegendURL width="119" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Puentes_IGN" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Gasoducto</Name>
+        <Title><![CDATA[Gasoducto]]></Title>
+        <Abstract><![CDATA[Gasoducto]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.278952</westBoundLongitude><eastBoundLongitude>-65.114760</eastBoundLongitude><southBoundLatitude>-27.879467</southBoundLatitude><northBoundLatitude>-26.197919</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.278952" miny="-27.879467" maxx="-65.114760" maxy="-26.197919"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.879467" miny="-65.278952" maxx="-26.197919" maxy="-65.114760"/>
+<BoundingBox CRS="EPSG:22183" minx="6916666.024800" miny="3572068.920800" maxx="7102910.852600" maxy="3587173.210900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Gasoducto</Title>
+          <LegendURL width="103" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Gasoducto" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Líneas_Transnoa</Name>
+        <Title><![CDATA[Líneas_Transnoa]]></Title>
+        <Abstract><![CDATA[Líneas_Transnoa]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.085452</westBoundLongitude><eastBoundLongitude>-64.719581</eastBoundLongitude><southBoundLatitude>-28.088633</southBoundLatitude><northBoundLatitude>-25.963620</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.085452" miny="-28.088633" maxx="-64.719581" maxy="-25.963620"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.088633" miny="-66.085452" maxx="-25.963620" maxy="-64.719581"/>
+<BoundingBox CRS="EPSG:22183" minx="6893701.703600" miny="3491601.694600" maxx="7128557.319800" maxy="3625854.049300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Líneas_Transnoa</Title>
+          <LegendURL width="142" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Líneas_Transnoa" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Red_eléctrica_secundaria_subterránea</Name>
+        <Title><![CDATA[Red_eléctrica_secundaria_subterránea]]></Title>
+        <Abstract><![CDATA[Red_eléctrica_secundaria_subterránea]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.078609</westBoundLongitude><eastBoundLongitude>-64.470833</eastBoundLongitude><southBoundLatitude>-27.996123</southBoundLatitude><northBoundLatitude>-26.059491</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.078609" miny="-27.996123" maxx="-64.470833" maxy="-26.059491"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996123" miny="-66.078609" maxx="-26.059491" maxy="-64.470833"/>
+<BoundingBox CRS="EPSG:22183" minx="6903953.584600" miny="3492267.601500" maxx="7117673.072400" maxy="3650438.978700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_eléctrica_secundaria_subterránea</Title>
+          <LegendURL width="271" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_eléctrica_secundaria_subterránea" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Red_eléctrica_secundaria_aérea</Name>
+        <Title><![CDATA[Red_eléctrica_secundaria_aérea]]></Title>
+        <Abstract><![CDATA[Red_eléctrica_secundaria_aérea]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.082050</westBoundLongitude><eastBoundLongitude>-64.466368</eastBoundLongitude><southBoundLatitude>-28.007863</southBoundLatitude><northBoundLatitude>-26.058929</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.082050" miny="-28.007863" maxx="-64.466368" maxy="-26.058929"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.007863" miny="-66.082050" maxx="-26.058929" maxy="-64.466368"/>
+<BoundingBox CRS="EPSG:22183" minx="6902652.584700" miny="3491929.987900" maxx="7117730.572400" maxy="3650861.978700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_eléctrica_secundaria_aérea</Title>
+          <LegendURL width="234" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_eléctrica_secundaria_aérea" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Red_eléctrica_primaria_subterránea</Name>
+        <Title><![CDATA[Red_eléctrica_primaria_subterránea]]></Title>
+        <Abstract><![CDATA[Red_eléctrica_primaria_subterránea]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.755073</westBoundLongitude><eastBoundLongitude>-64.723214</eastBoundLongitude><southBoundLatitude>-27.838962</southBoundLatitude><northBoundLatitude>-26.228824</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.755073" miny="-27.838962" maxx="-64.723214" maxy="-26.228824"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.838962" miny="-65.755073" maxx="-26.228824" maxy="-64.723214"/>
+<BoundingBox CRS="EPSG:22183" minx="6921345.083700" miny="3524472.808100" maxx="7099169.073400" maxy="3625785.680200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_eléctrica_primaria_subterránea</Title>
+          <LegendURL width="254" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_eléctrica_primaria_subterránea" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Red_eléctrica_primaria_aérea</Name>
+        <Title><![CDATA[Red_eléctrica_primaria_aérea]]></Title>
+        <Abstract><![CDATA[Red_eléctrica_primaria_aérea]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.078625</westBoundLongitude><eastBoundLongitude>-64.463389</eastBoundLongitude><southBoundLatitude>-28.017708</southBoundLatitude><northBoundLatitude>-26.058895</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.078625" miny="-28.017708" maxx="-64.463389" maxy="-26.058895"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.017708" miny="-66.078625" maxx="-26.058895" maxy="-64.463389"/>
+<BoundingBox CRS="EPSG:22183" minx="6901561.584700" miny="3492267.601800" maxx="7117731.072400" maxy="3651141.378700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Red_eléctrica_primaria_aérea</Title>
+          <LegendURL width="217" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Red_eléctrica_primaria_aérea" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Estaciones_EDET</Name>
+        <Title><![CDATA[Estaciones_EDET]]></Title>
+        <Abstract><![CDATA[Estaciones_EDET]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.078647</westBoundLongitude><eastBoundLongitude>-64.470541</eastBoundLongitude><southBoundLatitude>-28.017492</southBoundLatitude><northBoundLatitude>-26.059533</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.078647" miny="-28.017492" maxx="-64.470541" maxy="-26.059533"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.017492" miny="-66.078647" maxx="-26.059533" maxy="-64.470541"/>
+<BoundingBox CRS="EPSG:22183" minx="6901585.500000" miny="3492265.412400" maxx="7117668.500000" maxy="3650438.067700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Estaciones_EDET</Title>
+          <LegendURL width="132" height="131">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Estaciones_EDET" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Torres_Transnoa</Name>
+        <Title><![CDATA[Torres_Transnoa]]></Title>
+        <Abstract><![CDATA[Torres_Transnoa]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.085452</westBoundLongitude><eastBoundLongitude>-64.719581</eastBoundLongitude><southBoundLatitude>-28.088633</southBoundLatitude><northBoundLatitude>-25.963620</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.085452" miny="-28.088633" maxx="-64.719581" maxy="-25.963620"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.088633" miny="-66.085452" maxx="-25.963620" maxy="-64.719581"/>
+<BoundingBox CRS="EPSG:22183" minx="6893701.703700" miny="3491601.694600" maxx="7128557.319900" maxy="3625854.049300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Torres_Transnoa</Title>
+          <LegendURL width="139" height="17">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Torres_Transnoa" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Estaciones_meteorológicas</Name>
+        <Title><![CDATA[Estaciones_meteorológicas]]></Title>
+        <Abstract><![CDATA[Estaciones_meteorológicas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22183</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.964944</westBoundLongitude><eastBoundLongitude>-64.468284</eastBoundLongitude><southBoundLatitude>-27.984303</southBoundLatitude><northBoundLatitude>-26.115988</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.964944" miny="-27.984303" maxx="-64.468284" maxy="-26.115988"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.984303" miny="-65.964944" maxx="-26.115988" maxy="-64.468284"/>
+<BoundingBox CRS="EPSG:22183" minx="6905263.039500" miny="3503506.018800" maxx="7111408.656000" maxy="3650706.259000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Estaciones_meteorológicas</Title>
+          <LegendURL width="202" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Infraestructura/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Estaciones_meteorológicas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

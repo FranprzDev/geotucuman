@@ -1,0 +1,570 @@
+{
+  "service": {
+    "allowGeometryUpdates": true,
+    "supportsApplyEditsWithGlobalIds": true,
+    "maxRecordCount": 2000,
+    "description": "",
+    "infoInEstimates": [
+      "extent",
+      "count"
+    ],
+    "units": "esriMeters",
+    "supportsAdminApi": true,
+    "maxViewsCount": 20,
+    "syncEnabled": true,
+    "tables": [],
+    "hasVersionedData": false,
+    "supportedAppendSourceFilterFormats": "featureService",
+    "hasViews": false,
+    "layerOverridesEnabled": true,
+    "supportsRelationshipsResource": true,
+    "layers": [
+      {
+        "serviceItemId": "ffefc83903a14ab09a306cf1e83569b5",
+        "name": "BosqueNativo2023",
+        "id": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      }
+    ],
+    "GUIDFormat": "O",
+    "spatialReference": {
+      "falseM": -100000,
+      "xyTolerance": 0.001,
+      "mUnits": 10000,
+      "zUnits": 10000,
+      "latestWkid": 3857,
+      "zTolerance": 0.001,
+      "wkid": 102100,
+      "xyUnits": 148923141.92838538,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "falseZ": -100000
+    },
+    "supportedGUIDFormats": "B,O",
+    "fullExtent": {
+      "ymin": -4300723.719576832,
+      "xmin": -7812070.2000641525,
+      "ymax": -3772635.6367415935,
+      "xmax": -7400291.268116159,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "enableZDefaults": true,
+    "serviceItemId": "ffefc83903a14ab09a306cf1e83569b5",
+    "allowUpdateWithoutMValues": true,
+    "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+    "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+    "supportsAppend": true,
+    "syncCapabilities": {
+      "supportsAsync": true,
+      "supportsSyncDirectionControl": true,
+      "supportsRegisteringExistingData": true,
+      "supportsBiDirectionalSyncForServer": true,
+      "supportsAttachmentsSyncDirection": true,
+      "supportsRegisterReplicaForServer": true,
+      "supportsPerLayerSync": true,
+      "supportsSyncModelNone": true,
+      "supportsRollbackOnFailure": false,
+      "supportsPerReplicaSync": false
+    },
+    "supportsDisconnectedEditing": false,
+    "supportsSyncModelNone": true,
+    "supportedAppendFormats": "featureCollection,featureService,shapefile",
+    "supportsReturnDeleteResults": true,
+    "currentVersion": 12,
+    "advancedEditingCapabilities": {
+      "supportsAsyncApplyEdits": true,
+      "supportsApplyEditsbyUploadID": true,
+      "supportsReturnEditResults": true,
+      "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+    },
+    "supportedQueryFormats": "JSON",
+    "initialExtent": {
+      "ymin": -4330558.306669092,
+      "xmin": -7833297.060701531,
+      "ymax": -3743338.9011799735,
+      "xmax": -7376529.897703544,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "serviceDescription": "",
+    "editorTrackingInfo": {
+      "allowAnonymousToQuery": true,
+      "allowOthersToUpdate": true,
+      "allowAnonymousToUpdate": true,
+      "enableEditorTracking": true,
+      "allowOthersToDelete": true,
+      "allowOthersToQuery": true,
+      "enableOwnershipAccessControl": false,
+      "allowAnonymousToDelete": true
+    },
+    "hasSyncEnabledViews": false,
+    "copyrightText": "",
+    "zDefault": 0,
+    "supportsLayerOverrides": true
+  },
+  "layers": {
+    "0": {
+      "isCoGoEnabled": false,
+      "extent": {
+        "ymin": -4300723.719576832,
+        "xmin": -7812070.2000641525,
+        "ymax": -3772635.6367415935,
+        "xmax": -7400291.268116159,
+        "spatialReference": {
+          "falseM": -100000,
+          "xyTolerance": 0.001,
+          "mUnits": 10000,
+          "zUnits": 10000,
+          "latestWkid": 3857,
+          "zTolerance": 0.001,
+          "wkid": 102100,
+          "xyUnits": 148923141.92838538,
+          "mTolerance": 0.001,
+          "falseX": -20037700,
+          "falseY": -30241100,
+          "falseZ": -100000
+        }
+      },
+      "isDataBranchVersioned": false,
+      "supportsApplyEditsWithGlobalIds": true,
+      "maxRecordCount": 2000,
+      "infoInEstimates": [
+        "extent",
+        "count"
+      ],
+      "datesInUnknownTimezone": false,
+      "type": "Feature Layer",
+      "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+      "syncEnabled": true,
+      "supportsAttachmentsByUploadId": true,
+      "editingInfo": {
+        "lastEditDate": 1735907218105
+      },
+      "relationships": [],
+      "supportedAppendCapabilities": "Features,Attachments",
+      "supportsAttachmentsResizing": true,
+      "cimVersion": "3.3.0",
+      "isDataArchived": false,
+      "id": 0,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      },
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+      "standardMaxRecordCount": 2000,
+      "isDataVersioned": false,
+      "templates": [
+        {
+          "name": "BosqueNativo2023",
+          "description": "",
+          "drawingTool": "esriFeatureEditToolPolygon",
+          "prototype": {
+            "attributes": {
+              "categoria": null,
+              "fid_1": null,
+              "supcie_ha": null
+            }
+          }
+        }
+      ],
+      "hasGeometryProperties": true,
+      "supportsAdvancedQueries": true,
+      "parentLayer": null,
+      "currentVersion": 12,
+      "canScaleSymbols": false,
+      "hasZ": false,
+      "advancedEditingCapabilities": {
+        "supportsAsyncApplyEdits": true,
+        "supportsApplyEditsbyUploadID": true,
+        "supportsReturnEditResults": true,
+        "supportedSqlFormatsInCalculate": [
+          "standard"
+        ],
+        "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+      },
+      "objectIdField": "fid",
+      "supportsQuantizationEditMode": true,
+      "hasContingentValuesDefinition": false,
+      "name": "BosqueNativo2023",
+      "allowTrueCurvesUpdates": false,
+      "displayField": "categoria",
+      "supportsCalculate": true,
+      "fields": [
+        {
+          "modelName": "fid",
+          "nullable": false,
+          "defaultValue": null,
+          "editable": false,
+          "domain": null,
+          "length": 4,
+          "name": "fid",
+          "alias": "fid",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "modelName": "fid_1",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "fid_1",
+          "alias": "fid_1",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "modelName": "categoria",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "categoria",
+          "length": 50,
+          "alias": "Categoria",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "modelName": "supcie_ha",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "supcie_ha",
+          "alias": "Supcie_ha",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "virtual": true,
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "SHAPE__Length",
+          "alias": "SHAPE__Length",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "virtual": true,
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "SHAPE__Area",
+          "alias": "SHAPE__Area",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "nullable": false,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "globalid",
+          "length": 38,
+          "alias": "globalid",
+          "type": "esriFieldTypeGlobalID"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "created_user",
+          "length": 255,
+          "alias": "created_user",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "precision": 1,
+          "name": "created_date",
+          "length": 29,
+          "alias": "created_date",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "last_edited_user",
+          "length": 255,
+          "alias": "last_edited_user",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "precision": 1,
+          "name": "last_edited_date",
+          "length": 29,
+          "alias": "last_edited_date",
+          "type": "esriFieldTypeDate"
+        }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+        "timeZoneIANA": "Etc/UTC",
+        "respectsDaylightSaving": false,
+        "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "hasM": false,
+      "allowGeometryUpdates": true,
+      "useStandardizedQueries": true,
+      "globalIdField": "globalid",
+      "sourceSpatialReference": {
+        "wkt": "PROJCS[\"WGS_1984_Web_Mercator_Auxiliary_Sphere\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Mercator_Auxiliary_Sphere\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",0.0],PARAMETER[\"Standard_Parallel_1\",0.0],PARAMETER[\"Auxiliary_Sphere_Type\",0.0],UNIT[\"Meter\",1.0]]",
+        "falseM": 0,
+        "mUnits": 1,
+        "zUnits": 1,
+        "zTolerance": 0.001,
+        "wkid": 3857,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": 0
+      },
+      "description": "BosqueNativo2023",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportedSpatialRelationships": [
+        "esriSpatialRelIntersects",
+        "esriSpatialRelContains",
+        "esriSpatialRelCrosses",
+        "esriSpatialRelEnvelopeIntersects",
+        "esriSpatialRelOverlaps",
+        "esriSpatialRelTouches",
+        "esriSpatialRelWithin"
+      ],
+      "geometryProperties": {
+        "shapeAreaFieldName": "SHAPE__Area",
+        "shapeLengthFieldName": "SHAPE__Length",
+        "units": "esriMeters"
+      },
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": true,
+      "standardMaxRecordCountNoGeometry": 16000,
+      "supportsTruncate": false,
+      "indexes": [
+        {
+          "name": "r128_sde_rowid_uk",
+          "isUnique": false,
+          "description": "",
+          "fields": "fid",
+          "isAscending": true
+        },
+        {
+          "name": "a112_ix1",
+          "isUnique": false,
+          "description": "",
+          "fields": "shape",
+          "isAscending": true
+        },
+        {
+          "name": "uuid_128",
+          "isUnique": true,
+          "description": "",
+          "fields": "globalid",
+          "isAscending": true
+        }
+      ],
+      "supportedAppendSourceFilterFormats": "featureService",
+      "editFieldsInfo": {
+        "editDateField": "last_edited_date",
+        "editorField": "last_edited_user",
+        "creationDateField": "created_date",
+        "creatorField": "created_user"
+      },
+      "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+      "GUIDFormat": "O",
+      "minScale": 0,
+      "hasAttachments": false,
+      "queryBinsCapabilities": {
+        "supportsFirstDayOfWeek": true,
+        "supportedNormalizationTypes": [
+          "boxCox",
+          "field",
+          "inverse",
+          "log",
+          "naturalLog",
+          "percentOfTotal",
+          "squareRoot"
+        ],
+        "supportedStatisticTypes": [
+          "count",
+          "sum",
+          "min",
+          "max",
+          "avg",
+          "stddev",
+          "var",
+          "percentile_cont",
+          "percentile_disc"
+        ],
+        "supportsNormalization": true,
+        "supportsSnapToData": true,
+        "supportsFixedIntervalBin": true,
+        "supportsStackBy": true,
+        "supportsAutoIntervalBin": true,
+        "supportsFixedBoundariesBin": true,
+        "supportsDateBin": true,
+        "supportsSplitBy": true,
+        "supportsReturnFullIntervalBin": true
+      },
+      "advancedQueryCapabilities": {
+        "supportsSqlExpression": true,
+        "supportsQueryWithResultType": true,
+        "supportsQueryRelatedPagination": true,
+        "supportsQueryWithCacheHint": false,
+        "supportsQueryWithDatumTransformation": true,
+        "supportsCurrentUserQueries": true,
+        "supportsQueryAttachmentsWithReturnUrl": true,
+        "fullTextSearchCapabilities": {
+          "supportsOperator": true,
+          "supportsSearchOperator": true
+        },
+        "supportsDefaultSR": true,
+        "supportsQueryDateBins": true,
+        "supportsQueryBins": true,
+        "supportsQueryWithLodSR": true,
+        "supportsPaginationOnAggregatedQueries": true,
+        "supportsPagination": true,
+        "supportsMaxRecordCountFactor": true,
+        "supportsDegeneratedQuantizedGeometry": true,
+        "fullTextSearchableFields": [],
+        "supportsStatistics": true,
+        "supportsOrderBy": true,
+        "supportsReturningGeometryProperties": true,
+        "supportsFullTextSearch": true,
+        "supportsQueryWithDistance": true,
+        "supportsLod": true,
+        "supportsQueryAttachmentOrderByFields": true,
+        "supportsCountDistinct": true,
+        "supportsAdvancedQueryRelated": true,
+        "supportsQueryAttachments": true,
+        "supportsReturningQueryExtent": true,
+        "supportsQueryAttachmentsCountOnly": true,
+        "supportsISODOW": true,
+        "supportsOrderByOnlyOnLayerFields": false,
+        "supportsOutFieldSqlExpression": true,
+        "supportsTopFeaturesQuery": true,
+        "supportsReturningGeometryEnvelope": true,
+        "supportsDistinct": true,
+        "supportsReturningGeometryCentroid": true,
+        "supportsQueryAnalytic": true,
+        "supportsPercentileStatistics": true,
+        "supportsISOWeek": true,
+        "supportsHavingClause": true
+      },
+      "subtypeField": "",
+      "supportsValidateSQL": true,
+      "enableZDefaults": true,
+      "serviceItemId": "ffefc83903a14ab09a306cf1e83569b5",
+      "allowUpdateWithoutMValues": true,
+      "supportsCoordinatesQuantization": true,
+      "types": [],
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+      "maxScale": 1155581,
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+        "supportsAsync": true,
+        "supportsLinearRegression": true,
+        "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": true,
+      "supportedAppendFormats": "csv,excel,featureCollection,featureService,geojson,imageCollection,jsonl,pbf,shapefile",
+      "tileMaxRecordCount": 2000,
+      "typeIdField": "",
+      "supportsASyncCalculate": true,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_11.4.0",
+      "drawingInfo": {
+        "renderer": {
+          "symbol": {
+            "outline": {
+              "color": [
+                110,
+                110,
+                110,
+                255
+              ],
+              "width": 0.7,
+              "style": "esriSLSSolid",
+              "type": "esriSLS"
+            },
+            "color": [
+              252,
+              207,
+              234,
+              255
+            ],
+            "style": "esriSFSSolid",
+            "type": "esriSFS"
+          },
+          "type": "simple"
+        },
+        "scaleSymbols": true,
+        "transparency": 0,
+        "labelingInfo": null
+      },
+      "geometryField": {
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "name": "shape",
+        "typeName": "st_geometry",
+        "length": 2147483647,
+        "type": "esriFieldTypeGeometry"
+      },
+      "copyrightText": "",
+      "zDefault": 0,
+      "geometryType": "esriGeometryPolygon",
+      "supportsLayerOverrides": true
+    }
+  }
+}

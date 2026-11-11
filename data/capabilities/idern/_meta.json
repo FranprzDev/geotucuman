@@ -1,0 +1,10 @@
+{
+  "source": "idern",
+  "fetchedAt": "2026-11-11T01:19:05.966Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wfs.xml",
+    "wms.xml"
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "source": "rides",
+  "fetchedAt": "2026-11-11T01:18:41.900Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms-Actividades_Agropecuarias_WMS.xml",
+    "wms-Actividades_Industriales_WMS.xml",
+    "wms-Infraestructura.xml",
+    "wms-MST.xml",
+    "wms-Medio_Ambiente_WMS.xml",
+    "wms-Recursos_Hidricos_WMS.xml",
+    "wms-Topografia.xml",
+    "wms-Tucuman.xml",
+    "wms-Turismo.xml"
+  ]
+}

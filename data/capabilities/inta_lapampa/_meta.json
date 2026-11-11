@@ -1,0 +1,9 @@
+{
+  "source": "inta_lapampa",
+  "fetchedAt": "2026-11-11T01:19:38.377Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

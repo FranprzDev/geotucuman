@@ -1,0 +1,595 @@
+{
+  "service": {
+    "allowGeometryUpdates": true,
+    "supportsApplyEditsWithGlobalIds": true,
+    "maxRecordCount": 2000,
+    "description": "",
+    "infoInEstimates": [
+      "extent",
+      "count"
+    ],
+    "units": "esriMeters",
+    "supportsAdminApi": true,
+    "maxViewsCount": 20,
+    "syncEnabled": true,
+    "tables": [],
+    "hasVersionedData": false,
+    "supportedAppendSourceFilterFormats": "featureService",
+    "hasViews": false,
+    "layerOverridesEnabled": true,
+    "supportsRelationshipsResource": true,
+    "layers": [
+      {
+        "serviceItemId": "4bca9cbe9da84dbca100c8119cb6c004",
+        "name": "Rutas de Mendoza",
+        "id": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolyline"
+      }
+    ],
+    "GUIDFormat": "O",
+    "spatialReference": {
+      "falseM": -100000,
+      "xyTolerance": 0.001,
+      "mUnits": 10000,
+      "zUnits": 10000,
+      "latestWkid": 3857,
+      "zTolerance": 0.001,
+      "wkid": 102100,
+      "xyUnits": 148923141.92838538,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "falseZ": -100000
+    },
+    "supportedGUIDFormats": "B,O",
+    "fullExtent": {
+      "ymin": -4468095.10419666,
+      "xmin": -7850341.628144797,
+      "ymax": -3772920.533184387,
+      "xmax": -7401868.612802984,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "enableZDefaults": true,
+    "serviceItemId": "4bca9cbe9da84dbca100c8119cb6c004",
+    "allowUpdateWithoutMValues": true,
+    "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+    "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+    "supportsAppend": true,
+    "syncCapabilities": {
+      "supportsAsync": true,
+      "supportsSyncDirectionControl": true,
+      "supportsRegisteringExistingData": true,
+      "supportsBiDirectionalSyncForServer": true,
+      "supportsAttachmentsSyncDirection": true,
+      "supportsRegisterReplicaForServer": true,
+      "supportsPerLayerSync": true,
+      "supportsSyncModelNone": true,
+      "supportsRollbackOnFailure": false,
+      "supportsPerReplicaSync": false
+    },
+    "supportsDisconnectedEditing": false,
+    "supportsSyncModelNone": true,
+    "supportedAppendFormats": "featureCollection,featureService,shapefile",
+    "supportsReturnDeleteResults": true,
+    "currentVersion": 12,
+    "advancedEditingCapabilities": {
+      "supportsAsyncApplyEdits": true,
+      "supportsApplyEditsbyUploadID": true,
+      "supportsReturnEditResults": true,
+      "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+    },
+    "supportedQueryFormats": "JSON",
+    "initialExtent": {
+      "ymin": -4502853.83277807,
+      "xmin": -7872765.278887253,
+      "ymax": -3738161.804671311,
+      "xmax": -7379444.962009398,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "serviceDescription": "",
+    "editorTrackingInfo": {
+      "allowAnonymousToQuery": true,
+      "allowOthersToUpdate": true,
+      "allowAnonymousToUpdate": true,
+      "enableEditorTracking": true,
+      "allowOthersToDelete": true,
+      "allowOthersToQuery": true,
+      "enableOwnershipAccessControl": false,
+      "allowAnonymousToDelete": true
+    },
+    "hasSyncEnabledViews": false,
+    "copyrightText": "",
+    "zDefault": 0,
+    "supportsLayerOverrides": true
+  },
+  "layers": {
+    "0": {
+      "isCoGoEnabled": false,
+      "extent": {
+        "ymin": -4468095.10419666,
+        "xmin": -7850341.628144797,
+        "ymax": -3772920.533184387,
+        "xmax": -7401868.612802984,
+        "spatialReference": {
+          "falseM": -100000,
+          "xyTolerance": 0.001,
+          "mUnits": 10000,
+          "zUnits": 10000,
+          "latestWkid": 3857,
+          "zTolerance": 0.001,
+          "wkid": 102100,
+          "xyUnits": 148923141.92838538,
+          "mTolerance": 0.001,
+          "falseX": -20037700,
+          "falseY": -30241100,
+          "falseZ": -100000
+        }
+      },
+      "isDataBranchVersioned": false,
+      "supportsApplyEditsWithGlobalIds": true,
+      "maxRecordCount": 2000,
+      "infoInEstimates": [
+        "extent",
+        "count"
+      ],
+      "datesInUnknownTimezone": false,
+      "type": "Feature Layer",
+      "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+      "syncEnabled": true,
+      "supportsAttachmentsByUploadId": true,
+      "editingInfo": {
+        "lastEditDate": 1739453312445
+      },
+      "relationships": [],
+      "supportedAppendCapabilities": "Features,Attachments",
+      "supportsAttachmentsResizing": true,
+      "cimVersion": "3.3.0",
+      "isDataArchived": false,
+      "id": 0,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      },
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+      "standardMaxRecordCount": 2000,
+      "isDataVersioned": false,
+      "templates": [
+        {
+          "name": "Rutas de Mendoza",
+          "description": "",
+          "drawingTool": "esriFeatureEditToolLine",
+          "prototype": {
+            "attributes": {
+              "rst": null,
+              "gid": null,
+              "fdc": null,
+              "sag": null,
+              "hct": null,
+              "typ": null,
+              "rtn": null
+            }
+          }
+        }
+      ],
+      "hasGeometryProperties": true,
+      "supportsAdvancedQueries": true,
+      "parentLayer": null,
+      "currentVersion": 12,
+      "canScaleSymbols": false,
+      "hasZ": false,
+      "advancedEditingCapabilities": {
+        "supportsAsyncApplyEdits": true,
+        "supportsApplyEditsbyUploadID": true,
+        "supportsReturnEditResults": true,
+        "supportedSqlFormatsInCalculate": [
+          "standard"
+        ],
+        "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+      },
+      "objectIdField": "fid",
+      "supportsQuantizationEditMode": true,
+      "hasContingentValuesDefinition": false,
+      "name": "Rutas de Mendoza",
+      "allowTrueCurvesUpdates": false,
+      "displayField": "rtn",
+      "supportsCalculate": true,
+      "fields": [
+        {
+          "modelName": "fid",
+          "nullable": false,
+          "defaultValue": null,
+          "editable": false,
+          "domain": null,
+          "length": 4,
+          "name": "fid",
+          "alias": "fid",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "modelName": "gid",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "gid",
+          "alias": "gid",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "modelName": "rtn",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "rtn",
+          "length": 254,
+          "alias": "rtn",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "modelName": "typ",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "typ",
+          "alias": "typ",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "modelName": "rst",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "rst",
+          "alias": "rst",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "modelName": "hct",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "hct",
+          "alias": "hct",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "modelName": "fdc",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "fdc",
+          "length": 254,
+          "alias": "fdc",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "modelName": "sag",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "sag",
+          "length": 254,
+          "alias": "sag",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "virtual": true,
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "SHAPE__Length",
+          "alias": "SHAPE__Length",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "nullable": false,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "globalid",
+          "length": 38,
+          "alias": "globalid",
+          "type": "esriFieldTypeGlobalID"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "created_user",
+          "length": 255,
+          "alias": "created_user",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "precision": 1,
+          "name": "created_date",
+          "length": 29,
+          "alias": "created_date",
+          "type": "esriFieldTypeDate"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "last_edited_user",
+          "length": 255,
+          "alias": "last_edited_user",
+          "type": "esriFieldTypeString"
+        },
+        {
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "precision": 1,
+          "name": "last_edited_date",
+          "length": 29,
+          "alias": "last_edited_date",
+          "type": "esriFieldTypeDate"
+        }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+        "timeZoneIANA": "Etc/UTC",
+        "respectsDaylightSaving": false,
+        "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "hasM": false,
+      "allowGeometryUpdates": true,
+      "useStandardizedQueries": true,
+      "globalIdField": "globalid",
+      "sourceSpatialReference": {
+        "wkt": "PROJCS[\"WGS_1984_Web_Mercator_Auxiliary_Sphere\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Mercator_Auxiliary_Sphere\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",0.0],PARAMETER[\"Standard_Parallel_1\",0.0],PARAMETER[\"Auxiliary_Sphere_Type\",0.0],UNIT[\"Meter\",1.0]]",
+        "falseM": 0,
+        "mUnits": 1,
+        "zUnits": 1,
+        "zTolerance": 0.001,
+        "wkid": 3857,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": 0
+      },
+      "description": "Rutas de Mendoza",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportedSpatialRelationships": [
+        "esriSpatialRelIntersects",
+        "esriSpatialRelContains",
+        "esriSpatialRelCrosses",
+        "esriSpatialRelEnvelopeIntersects",
+        "esriSpatialRelOverlaps",
+        "esriSpatialRelTouches",
+        "esriSpatialRelWithin"
+      ],
+      "geometryProperties": {
+        "shapeLengthFieldName": "SHAPE__Length",
+        "units": "esriMeters"
+      },
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": true,
+      "standardMaxRecordCountNoGeometry": 16000,
+      "supportsTruncate": false,
+      "indexes": [
+        {
+          "name": "r426_sde_rowid_uk",
+          "isUnique": false,
+          "description": "",
+          "fields": "fid",
+          "isAscending": true
+        },
+        {
+          "name": "a408_ix1",
+          "isUnique": false,
+          "description": "",
+          "fields": "shape",
+          "isAscending": true
+        },
+        {
+          "name": "uuid_426",
+          "isUnique": true,
+          "description": "",
+          "fields": "globalid",
+          "isAscending": true
+        }
+      ],
+      "supportedAppendSourceFilterFormats": "featureService",
+      "editFieldsInfo": {
+        "editDateField": "last_edited_date",
+        "editorField": "last_edited_user",
+        "creationDateField": "created_date",
+        "creatorField": "created_user"
+      },
+      "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+      "GUIDFormat": "O",
+      "minScale": 9244649,
+      "hasAttachments": false,
+      "queryBinsCapabilities": {
+        "supportsFirstDayOfWeek": true,
+        "supportedNormalizationTypes": [
+          "boxCox",
+          "field",
+          "inverse",
+          "log",
+          "naturalLog",
+          "percentOfTotal",
+          "squareRoot"
+        ],
+        "supportedStatisticTypes": [
+          "count",
+          "sum",
+          "min",
+          "max",
+          "avg",
+          "stddev",
+          "var",
+          "percentile_cont",
+          "percentile_disc"
+        ],
+        "supportsNormalization": true,
+        "supportsSnapToData": true,
+        "supportsFixedIntervalBin": true,
+        "supportsStackBy": true,
+        "supportsAutoIntervalBin": true,
+        "supportsFixedBoundariesBin": true,
+        "supportsDateBin": true,
+        "supportsSplitBy": true,
+        "supportsReturnFullIntervalBin": true
+      },
+      "advancedQueryCapabilities": {
+        "supportsSqlExpression": true,
+        "supportsQueryWithResultType": true,
+        "supportsQueryRelatedPagination": true,
+        "supportsQueryWithCacheHint": false,
+        "supportsQueryWithDatumTransformation": true,
+        "supportsCurrentUserQueries": true,
+        "supportsQueryAttachmentsWithReturnUrl": true,
+        "fullTextSearchCapabilities": {
+          "supportsOperator": true,
+          "supportsSearchOperator": true
+        },
+        "supportsDefaultSR": true,
+        "supportsQueryDateBins": true,
+        "supportsQueryBins": true,
+        "supportsQueryWithLodSR": true,
+        "supportsPaginationOnAggregatedQueries": true,
+        "supportsPagination": true,
+        "supportsMaxRecordCountFactor": true,
+        "supportsDegeneratedQuantizedGeometry": true,
+        "fullTextSearchableFields": [],
+        "supportsStatistics": true,
+        "supportsOrderBy": true,
+        "supportsReturningGeometryProperties": true,
+        "supportsFullTextSearch": true,
+        "supportsQueryWithDistance": true,
+        "supportsLod": true,
+        "supportsQueryAttachmentOrderByFields": true,
+        "supportsCountDistinct": true,
+        "supportsAdvancedQueryRelated": true,
+        "supportsQueryAttachments": true,
+        "supportsReturningQueryExtent": true,
+        "supportsQueryAttachmentsCountOnly": true,
+        "supportsISODOW": true,
+        "supportsOrderByOnlyOnLayerFields": false,
+        "supportsOutFieldSqlExpression": true,
+        "supportsTopFeaturesQuery": true,
+        "supportsReturningGeometryEnvelope": true,
+        "supportsDistinct": true,
+        "supportsReturningGeometryCentroid": false,
+        "supportsQueryAnalytic": true,
+        "supportsPercentileStatistics": true,
+        "supportsISOWeek": true,
+        "supportsHavingClause": true
+      },
+      "subtypeField": "",
+      "supportsValidateSQL": true,
+      "enableZDefaults": true,
+      "serviceItemId": "4bca9cbe9da84dbca100c8119cb6c004",
+      "allowUpdateWithoutMValues": true,
+      "supportsCoordinatesQuantization": true,
+      "types": [],
+      "capabilities": "Query,Create,Update,Delete,Editing,Sync,Extract,Uploads",
+      "maxScale": 0,
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+        "supportsAsync": true,
+        "supportsLinearRegression": true,
+        "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": true,
+      "supportedAppendFormats": "csv,excel,featureCollection,featureService,geojson,imageCollection,jsonl,pbf,shapefile",
+      "tileMaxRecordCount": 2000,
+      "typeIdField": "",
+      "supportsASyncCalculate": true,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_11.4.0",
+      "drawingInfo": {
+        "renderer": {
+          "symbol": {
+            "color": [
+              66,
+              147,
+              36,
+              255
+            ],
+            "width": 1,
+            "style": "esriSLSSolid",
+            "type": "esriSLS"
+          },
+          "type": "simple"
+        },
+        "scaleSymbols": true,
+        "transparency": 0,
+        "labelingInfo": null
+      },
+      "geometryField": {
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "name": "shape",
+        "typeName": "st_geometry",
+        "length": 2147483647,
+        "type": "esriFieldTypeGeometry"
+      },
+      "copyrightText": "",
+      "zDefault": 0,
+      "geometryType": "esriGeometryPolyline",
+      "supportsLayerOverrides": true
+    }
+  }
+}

@@ -1,0 +1,9 @@
+{
+  "source": "inta_santiago",
+  "fetchedAt": "2026-11-11T01:19:30.046Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

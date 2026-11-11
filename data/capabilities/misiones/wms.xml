@@ -1,0 +1,2342 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="3789" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://sigvial.dpvmisiones.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>SigVial WMS</Title>
+    <Abstract>GeoServicio de la Dirección Provincial de Vialidad Misiones</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization>Dirección Provincial de Vialidad Misiones</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address>Frco De Haro esq. Luchessi</Address>
+        <City>Posadas</City>
+        <StateOrProvince>Misiones</StateOrProvince>
+        <PostCode>3300</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress/>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+      <Format>JSONP</Format>
+    </Exception>
+    <Layer>
+      <Title>SigVial WMS</Title>
+      <Abstract>GeoServicio de la Dirección Provincial de Vialidad Misiones</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3785</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:32647</CRS>
+      <CRS>EPSG:32736</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-180.0</westBoundLongitude>
+        <eastBoundLongitude>180.0</eastBoundLongitude>
+        <southBoundLatitude>-90.0</southBoundLatitude>
+        <northBoundLatitude>90.0</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+      <BoundingBox CRS="EPSG:4326" minx="-90.0" miny="-180.0" maxx="90.0" maxy="180.0"/>
+      <BoundingBox CRS="EPSG:3785" minx="-2.0037508342789244E7" miny="-1.9929191766854808E7" maxx="2.0037508342789244E7" maxy="1.99291917668548E7"/>
+      <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+      <BoundingBox CRS="EPSG:900913" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+      <BoundingBox CRS="EPSG:32647" minx="-6.974587865576684E7" miny="-3.0329176356434636E7" maxx="2.74812009447262E8" maxy="3.0329176356434636E7"/>
+      <BoundingBox CRS="EPSG:32736" minx="-5.232537862576754E7" miny="-6.842164085845123E7" maxx="1.2147769988797233E8" maxy="8.842164085845123E7"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:accesos_dpv</Name>
+        <Title>accesos_dpv</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>accesos_dpv</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.45568920265882</westBoundLongitude>
+          <eastBoundLongitude>-53.875349316500014</eastBoundLongitude>
+          <southBoundLatitude>-27.934812292421196</southBoundLatitude>
+          <northBoundLatitude>-26.462450288802142</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.45568920265882" miny="-27.934812292421196" maxx="-53.875349316500014" maxy="-26.462450288802142"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.934812292421196" miny="-55.45568920265882" maxx="-26.462450288802142" maxy="-53.875349316500014"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6173299.08363002" miny="-3220740.4746304937" maxx="-5997376.4522225205" maxy="-3037431.855382961"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6173299.083630019" miny="-3240757.594292522" maxx="-5997376.4522225205" maxy="-3056471.0514099183"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6173299.083630019" miny="-3240757.594292522" maxx="-5997376.4522225205" maxy="-3056471.0514099183"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1966276.208535573" miny="-1.339693557910254E8" maxx="7645509.881913897" maxy="-1.1434020281721793E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0035492442801362E7" miny="-501066.6366081106" maxx="-9315692.167002281" maxy="86863.7077264022"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2d1213e8-aba2-4e05-9389-19ee3c7cd7ab&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/110"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:accesos_dpv</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="77" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aaccesos_dpv"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:anp</Name>
+        <Title>anp</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>anp</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.05604730907979</westBoundLongitude>
+          <eastBoundLongitude>-53.66046467016581</eastBoundLongitude>
+          <southBoundLatitude>-28.139175623529308</southBoundLatitude>
+          <northBoundLatitude>-25.49386567526728</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.05604730907979" miny="-28.139175623529308" maxx="-53.66046467016581" maxy="-25.49386567526728"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.139175623529308" miny="-56.05604730907979" maxx="-25.49386567526728" maxy="-53.66046467016581"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240130.642330415" miny="-3246380.1702407165" maxx="-5973455.602813304" maxy="-2918138.8054836933"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240130.642330415" miny="-3266532.010095586" maxx="-5973455.602813304" maxy="-2936527.8856793274"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240130.642330415" miny="-3266532.010095586" maxx="-5973455.602813304" maxy="-2936527.8856793274"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7691556.500185359" miny="-1.4507621880357802E8" maxx="9464643.50542095" maxy="-1.1176302530653949E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0489721311032157E7" miny="-702333.7433642837" maxx="-9222648.488822507" maxy="240639.1091269254"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2fed01e8-cdae-40e6-b107-4b86f8e3c0cc&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/129"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:anp</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="209" height="220">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aanp"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:buffer_10km_rp17</Name>
+        <Title>buffer_10km_rp17</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>buffer_10km_rp17</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-54.71552296851954</westBoundLongitude>
+          <eastBoundLongitude>-54.052044813173325</eastBoundLongitude>
+          <southBoundLatitude>-26.515489222204955</southBoundLatitude>
+          <northBoundLatitude>-26.236726964683523</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-54.71552296851954" miny="-26.515489222204955" maxx="-54.052044813173325" maxy="-26.236726964683523"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.515489222204955" miny="-54.71552296851954" maxx="-26.236726964683523" maxy="-54.052044813173325"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6090904.155343259" miny="-3043993.2062476277" maxx="-6017046.104937658" maxy="-3009542.0942928977"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6090904.155343259" miny="-3063067.8489809353" maxx="-6017046.104937659" maxy="-3028430.256671792"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6090904.155343259" miny="-3063067.8489809353" maxx="-6017046.104937659" maxy="-3028430.256671792"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3105304.590524067" miny="-1.3183071446480109E8" maxx="-969063.6394142881" maxy="-1.2627964953986174E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0016050993932348E7" miny="-183772.48118937013" maxx="-9825377.748205893" maxy="49680.438493870184"/>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ea913848-6cbe-4df1-ae5b-408dc387a32b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/64"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:buffer_10km_rp17</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Abuffer_10km_rp17"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:comunidades_mbya_6db58aad3698c93a02f057a09a84add7</Name>
+        <Title>comunidades_mbya_6db58aad3698c93a02f057a09a84add7</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>comunidades_mbya_6db58aad3698c93a02f057a09a84add7</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22177</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.68970084718719</westBoundLongitude>
+          <eastBoundLongitude>-53.807363944719</eastBoundLongitude>
+          <southBoundLatitude>-27.896997058058314</southBoundLatitude>
+          <northBoundLatitude>-25.58555512393162</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.68970084718719" miny="-27.896997058058314" maxx="-53.807363944719" maxy="-25.58555512393162"/>
+        <BoundingBox CRS="EPSG:22177" minx="6914932.729517806" miny="7333610.681464654" maxx="7170006.733686024" maxy="7518966.063364931"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.896997058058314" miny="-55.68970084718719" maxx="-25.58555512393162" maxy="-53.807363944719"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6199349.140738613" miny="-3215944.703165384" maxx="-5989808.355254468" maxy="-2929330.7616295675"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6199349.140738613" miny="-3235993.6709536985" maxx="-5989808.355254468" maxy="-2947840.0599962063"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6199349.140738613" miny="-3235993.6709536985" maxx="-5989808.355254468" maxy="-2947840.0599962063"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7005016.560608226" miny="-1.420421451572121E8" maxx="7666110.07569585" maxy="-1.143426735231069E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.039401634796839E7" miny="-574608.3836251943" maxx="-9320605.85890024" maxy="183129.28694280607"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=329a3cf9-dcc1-432b-84ec-6a1aefecf4a9&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/130"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:comunidades_mbya_6db58aad3698c93a02f057a09a84add7</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="146" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acomunidades_mbya_6db58aad3698c93a02f057a09a84add7"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:corredor_verde</Name>
+        <Title>corredor_verde</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>corredor_verde</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.10120397</westBoundLongitude>
+          <eastBoundLongitude>-53.64511393</eastBoundLongitude>
+          <southBoundLatitude>-27.19832673</southBoundLatitude>
+          <northBoundLatitude>-25.49751549</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.10120397" miny="-27.19832673" maxx="-53.64511393" maxy="-25.49751549"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.19832673" miny="-55.10120397" maxx="-25.49751549" maxy="-53.64511393"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6133837.968036704" miny="-3128742.435011009" maxx="-5971746.766234747" maxy="-2918586.476144329"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6133837.968036704" miny="-3148271.9792384445" maxx="-5971746.766234747" maxy="-2936978.015933495"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6133837.968036704" miny="-3148271.9792384445" maxx="-5971746.766234747" maxy="-2936978.015933495"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7678943.551991683" miny="-1.3955397230533323E8" maxx="3255260.002464616" maxy="-1.1908455225195864E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0343156714761605E7" miny="-351942.2654870059" maxx="-9537032.237730801" maxy="245118.2028181571"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4798ba71-379a-4791-b053-3d5acf4f5255&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/25"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:corredor_verde</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acorredor_verde"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:corredor_verde_6bf60ba0f99494ccd061fb852c0fb701</Name>
+        <Title>corredor_verde_6bf60ba0f99494ccd061fb852c0fb701</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>corredor_verde_6bf60ba0f99494ccd061fb852c0fb701</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22197</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.09940709425994</westBoundLongitude>
+          <eastBoundLongitude>-53.64511362542321</eastBoundLongitude>
+          <southBoundLatitude>-27.197998044274158</southBoundLatitude>
+          <northBoundLatitude>-25.494520753854086</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.09940709425994" miny="-27.197998044274158" maxx="-53.64511362542321" maxy="-25.494520753854086"/>
+        <BoundingBox CRS="EPSG:22197" minx="6992610.677823105" miny="7391098.593892149" maxx="7180901.25274809" maxy="7535198.975609422"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.197998044274158" miny="-55.09940709425994" maxx="-25.494520753854086" maxy="-53.64511362542321"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6133637.939045798" miny="-3128643.543812754" maxx="-5971746.730850396" maxy="-2918160.1221252484"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6133637.940744301" miny="-3148230.8415602306" maxx="-5971746.732329413" maxy="-2936608.675263871"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6133637.940744301" miny="-3148230.8415602306" maxx="-5971746.732329413" maxy="-2936608.675263871"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7672452.005406151" miny="-1.394761367555782E8" maxx="3227655.513313858" maxy="-1.1909053332568173E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0341568753872406E7" miny="-351102.8223559558" maxx="-9537295.786913885" maxy="243436.910864409"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cfa2c84a-b09a-48b4-9e32-4ec9c269bfe3&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/132"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:corredor_verde_6bf60ba0f99494ccd061fb852c0fb701</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acorredor_verde_6bf60ba0f99494ccd061fb852c0fb701"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:cortado</Name>
+        <Title>cortado</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>cortado</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.0585754</westBoundLongitude>
+          <eastBoundLongitude>-53.6407080377705</eastBoundLongitude>
+          <southBoundLatitude>-28.164085184234978</southBoundLatitude>
+          <northBoundLatitude>-25.4943015</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.0585754" miny="-28.164085184234978" maxx="-53.6407080377705" maxy="-25.4943015"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.164085184234978" miny="-56.0585754" maxx="-25.4943015" maxy="-53.6407080377705"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240412.068124333" miny="-3249508.72879505" maxx="-5971256.304555268" maxy="-2918192.2611581115"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240412.068124332" miny="-3269676.9722592095" maxx="-5971256.304555269" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240412.068124332" miny="-3269676.9722592095" maxx="-5971256.304555269" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7700492.615073068" miny="-1.4508761280418536E8" maxx="9600388.070840454" maxy="-1.1147871877158579E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0489936327347828E7" miny="-703893.5754938348" maxx="-9212130.809784053" maxy="246825.27425107913"/>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/75"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a29828a2-6007-4c9b-ba3d-20c36ad21d32&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:cortado</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="528" height="240">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acortado"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:escuelas_100m_rutas__provinciales_asfaltadas</Name>
+        <Title>escuelas_100m_rutas__provinciales_asfaltadas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>escuelas_100m_rutas__provinciales_asfaltadas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.9696953</westBoundLongitude>
+          <eastBoundLongitude>-53.7899247</eastBoundLongitude>
+          <southBoundLatitude>-28.059867</southBoundLatitude>
+          <northBoundLatitude>-25.6746771</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.9696953" miny="-28.059867" maxx="-53.7899247" maxy="-25.6746771"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.059867" miny="-55.9696953" maxx="-25.6746771" maxy="-53.7899247"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6230517.980650677" miny="-3236424.159490319" maxx="-5987867.027412528" maxy="-2940332.9429498133"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6230517.980650677" miny="-3256523.7475090753" maxx="-5987867.027412529" maxy="-2958843.7825809517"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6230517.980650677" miny="-3256523.7475090753" maxx="-5987867.027412529" maxy="-2958843.7825809517"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6547643.838796578" miny="-1.4314800433187923E8" maxx="8933635.718237508" maxy="-1.1296017833683832E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0406831366530318E7" miny="-671705.7860145922" maxx="-9263824.795396522" maxy="182246.71611558457"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=703f01ba-3994-4e22-b69d-52006f1de9d3&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/79"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:escuelas_100m_rutas__provinciales_asfaltadas</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aescuelas_100m_rutas__provinciales_asfaltadas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:escuelas_150m_rutas_provinciales_asfaltadas</Name>
+        <Title>escuelas_150m_rutas_provinciales_asfaltadas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>escuelas_150m_rutas_provinciales_asfaltadas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.9696953</westBoundLongitude>
+          <eastBoundLongitude>-53.7899247</eastBoundLongitude>
+          <southBoundLatitude>-28.059867</southBoundLatitude>
+          <northBoundLatitude>-25.6746771</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.9696953" miny="-28.059867" maxx="-53.7899247" maxy="-25.6746771"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.059867" miny="-55.9696953" maxx="-25.6746771" maxy="-53.7899247"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6230517.980650677" miny="-3236424.159490319" maxx="-5987867.027412528" maxy="-2940332.9429498133"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6230517.980650677" miny="-3256523.7475090753" maxx="-5987867.027412529" maxy="-2958843.7825809517"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6230517.980650677" miny="-3256523.7475090753" maxx="-5987867.027412529" maxy="-2958843.7825809517"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6547643.838796578" miny="-1.4314800433187923E8" maxx="8933635.718237508" maxy="-1.1296017833683832E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0406831366530318E7" miny="-671705.7860145922" maxx="-9263824.795396522" maxy="182246.71611558457"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=925308bb-b3f4-41ac-9aba-a38942ea99a5&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/80"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:escuelas_150m_rutas_provinciales_asfaltadas</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aescuelas_150m_rutas_provinciales_asfaltadas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:escuelas_misiones</Name>
+        <Title>escuelas_misiones</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>escuelas_misiones</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.003078</westBoundLongitude>
+          <eastBoundLongitude>-53.638352</eastBoundLongitude>
+          <southBoundLatitude>-28.116938</southBoundLatitude>
+          <northBoundLatitude>-25.554772</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.003078" miny="-28.116938" maxx="-53.638352" maxy="-25.554772"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.116938" miny="-56.003078" maxx="-25.554772" maxy="-53.638352"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6234234.125815982" miny="-3243587.8191114836" maxx="-5970994.031630367" maxy="-2925611.116052776"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6234234.125815982" miny="-3263725.011726355" maxx="-5970994.031630367" maxy="-2944041.231116384"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6234234.125815982" miny="-3263725.011726355" maxx="-5970994.031630367" maxy="-2944041.231116384"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7345415.137539531" miny="-1.4428809517311296E8" maxx="9279754.731679093" maxy="-1.1184546555727541E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0458115083991574E7" miny="-684380.695456542" maxx="-9227554.801546454" maxy="241608.16353214713"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caf2e0ac-c293-4338-a1c3-5ad1655bb296&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/48"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:escuelas_misiones</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aescuelas_misiones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:estado_de_rutas_misiones</Name>
+        <Title>Estado de Rutas de Misiones</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>red vial</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>estado_de_rutas_misiones</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-180.0</westBoundLongitude>
+          <eastBoundLongitude>180.0</eastBoundLongitude>
+          <southBoundLatitude>-90.0</southBoundLatitude>
+          <northBoundLatitude>90.0</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-90.0" miny="-180.0" maxx="90.0" maxy="180.0"/>
+        <BoundingBox CRS="EPSG:3785" minx="-2.0037508342789244E7" miny="-1.9929191766854808E7" maxx="2.0037508342789244E7" maxy="1.99291917668548E7"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+        <BoundingBox CRS="EPSG:900913" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6.974587865576684E7" miny="-3.0329176356434636E7" maxx="2.74812009447262E8" maxy="3.0329176356434636E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-5.232537862576754E7" miny="-6.842164085845123E7" maxx="1.2147769988797233E8" maxy="8.842164085845123E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7be23c2e-00a2-4493-ad3f-7ccf70167cbd&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/117"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:estado_de_rutas_misiones</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="95" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aestado_de_rutas_misiones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:geolocalizacion_de_unidades_regionales0073149418e85</Name>
+        <Title>geolocalizacion_de_unidades_regionales0073149418e85</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>geolocalizacion_de_unidades_regionales0073149418e85</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.9054757</westBoundLongitude>
+          <eastBoundLongitude>-53.64721298414288</eastBoundLongitude>
+          <southBoundLatitude>-27.91179666005644</southBoundLatitude>
+          <northBoundLatitude>-26.0157493187982</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.9054757" miny="-27.91179666005644" maxx="-53.64721298414288" maxy="-26.0157493187982"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.91179666005644" miny="-55.9054757" maxx="-26.0157493187982" maxy="-53.64721298414288"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6223369.08747973" miny="-3217855.9792519384" maxx="-5971980.431873078" maxy="-2982291.6704835603"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6223369.087479728" miny="-3237857.910811933" maxx="-5971980.431873079" maxy="-3001031.69482691"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6223369.087479728" miny="-3237857.910811933" maxx="-5971980.431873079" maxy="-3001031.69482691"/>
+        <BoundingBox CRS="EPSG:32647" minx="-4665424.611697917" miny="-1.4005209543948707E8" maxx="8059345.944822085" maxy="-1.1351693979437536E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0266567762600577E7" miny="-645753.978749914" maxx="-9297025.159778366" maxy="195680.12448747453"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=130b325d-ef54-40fe-a3fa-dfba6950a546&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/91"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:geolocalizacion_de_unidades_regionales0073149418e85</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="173" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ageolocalizacion_de_unidades_regionales0073149418e85"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:huellahumana_misiones</Name>
+        <Title>huellahumana_misiones</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>huellahumana_misiones</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.0585754</westBoundLongitude>
+          <eastBoundLongitude>-53.63769434</eastBoundLongitude>
+          <southBoundLatitude>-28.16309179</southBoundLatitude>
+          <northBoundLatitude>-25.4943015</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.0585754" miny="-28.16309179" maxx="-53.63769434" maxy="-25.4943015"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.16309179" miny="-56.0585754" maxx="-25.4943015" maxy="-53.63769434"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240412.068124333" miny="-3249383.947678184" maxx="-5970920.821254052" maxy="-2918192.2611581115"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240412.068124332" miny="-3269551.5370377027" maxx="-5970920.821254052" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240412.068124332" miny="-3269551.5370377027" maxx="-5970920.821254052" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7702247.49112051" miny="-1.4508761280418536E8" maxx="9595106.949444395" maxy="-1.114737213382967E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0489936327347828E7" miny="-703864.4945642779" maxx="-9212122.093225118" maxy="247775.00975449564"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65099310-cffa-4d94-b645-d26ae7479b14&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/70"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:huellahumana_misiones</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="93" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ahuellahumana_misiones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:miradores_dpv_2022_sig_planificacion</Name>
+        <Title>miradores_dpv_2022_sig_planificacion</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>red vial</Keyword>
+          <Keyword>miradores_dpv_2022_sig_planificacion</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.5335539</westBoundLongitude>
+          <eastBoundLongitude>0.0</eastBoundLongitude>
+          <southBoundLatitude>-27.8321227</southBoundLatitude>
+          <northBoundLatitude>0.0</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.5335539" miny="-27.8321227" maxx="0.0" maxy="0.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.8321227" miny="-55.5335539" maxx="0.0" maxy="0.0"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6181966.942088812" miny="-3207875.4127534186" maxx="0.0" maxy="-7.081154551613622E-10"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6181966.942088812" miny="-3227824.742613967" maxx="0.0" maxy="-7.081154551613622E-10"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6181966.942088812" miny="-3227824.742613967" maxx="0.0" maxy="-7.081154551613622E-10"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1.564310422952682E8" miny="-1.7534549852127394E8" maxx="7189300.376410923" maxy="0.0"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.7305592017759036E7" miny="-521985.2935212179" maxx="-2851167.3995620823" maxy="1.0E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f2422f4f-1430-4c34-b5ca-fb7d569f8f36&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/116"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:miradores_dpv_2022_sig_planificacion</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="72" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Amiradores_dpv_2022_sig_planificacion"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:modelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc</Name>
+        <Title>modelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>modelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.05864665325145</westBoundLongitude>
+          <eastBoundLongitude>-53.63723780490728</eastBoundLongitude>
+          <southBoundLatitude>-28.16434011382889</southBoundLatitude>
+          <northBoundLatitude>-25.494187763312024</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.05864665325145" miny="-28.16434011382889" maxx="-53.63723780490728" maxy="-25.494187763312024"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.16434011382889" miny="-56.05864665325145" maxx="-25.494187763312024" maxy="-53.63723780490728"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240420.000000001" miny="-3249540.750912543" maxx="-5970870.0" maxy="-2918178.3108722665"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240420.000000001" miny="-3269709.162235208" maxx="-5970870.000000001" maxy="-2936567.608124524"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240420.000000001" miny="-3269709.162235208" maxx="-5970870.000000001" maxy="-2936567.608124524"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7703184.936157925" miny="-1.4508892358821043E8" maxx="9601833.24208465" maxy="-1.1146177474403277E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0489991275155134E7" miny="-703924.2829360197" maxx="-9211655.530194802" maxy="247930.14646951848"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=54ba71c3-0d73-41e9-a977-5eacb3d22eee&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/55"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:modelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc</Name>
+          <Title>geonode:modelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc</Title>
+          <LegendURL width="46" height="272">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Amodelo_elevacion_digital_9782203a2839b0d46a1a461797777ffc"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:mojones_kilometricos_dpv</Name>
+        <Title>mojones_kilometricos_dpv</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>mojones_kilometricos_dpv</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.7805677054796</westBoundLongitude>
+          <eastBoundLongitude>-53.73694408498437</eastBoundLongitude>
+          <southBoundLatitude>-28.08899086467018</southBoundLatitude>
+          <northBoundLatitude>-25.72808738627458</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.7805677054796" miny="-28.08899086467018" maxx="-53.73694408498437" maxy="-25.72808738627458"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.08899086467018" miny="-55.7805677054796" maxx="-25.72808738627458" maxy="-53.73694408498437"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6209464.39313371" miny="-3240079.3611637144" maxx="-5981969.252327075" maxy="-2946895.4203916006"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6209464.393133709" miny="-3260198.141618014" maxx="-5981969.252327075" maxy="-2965442.1921276464"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6209464.393133709" miny="-3260198.141618014" maxx="-5981969.252327075" maxy="-2965442.1921276464"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6268274.024061724" miny="-1.416413305381624E8" maxx="8855114.969926605" maxy="-1.1249584199161188E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0358282788967824E7" miny="-611251.6501474379" maxx="-9248051.758802436" maxy="193924.5414948817"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=caea82e4-2c12-4790-bc77-019fbd776d36&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/54"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:mojones_kilometricos_dpv</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Amojones_kilometricos_dpv"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:porticos</Name>
+        <Title>porticos</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>porticos</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.51534038640727</westBoundLongitude>
+          <eastBoundLongitude>-54.04426920012449</eastBoundLongitude>
+          <southBoundLatitude>-27.97267766829015</southBoundLatitude>
+          <northBoundLatitude>-25.74467556774131</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.51534038640727" miny="-27.97267766829015" maxx="-54.04426920012449" maxy="-25.74467556774131"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.97267766829015" miny="-55.51534038640727" maxx="-25.74467556774131" maxy="-54.04426920012449"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6179939.423030113" miny="-3225487.4049909967" maxx="-6016180.5276524555" maxy="-2948934.202646684"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6179939.423030113" miny="-3245529.505227049" maxx="-6016180.527652456" maxy="-2967492.130956599"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6179939.423030113" miny="-3245529.505227049" maxx="-6016180.527652456" maxy="-2967492.130956599"/>
+        <BoundingBox CRS="EPSG:32647" minx="-5972241.523387831" miny="-1.400071378051412E8" maxx="7917155.957297336" maxy="-1.1478350560927758E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0312764604963198E7" miny="-521663.95025004994" maxx="-9322283.631038075" maxy="94922.8864520639"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/133"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6b845024-f5c4-472d-abbd-3d669904bd09&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:porticos</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aporticos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:preservacion_selva_misionerav1__red_terciada_analisis</Name>
+        <Title>preservacion_selva_misionerav1__red_terciada_analisis</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>preservacion_selva_misionerav1__red_terciada_analisis</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.003584</westBoundLongitude>
+          <eastBoundLongitude>-53.6644465</eastBoundLongitude>
+          <southBoundLatitude>-27.0473167</southBoundLatitude>
+          <northBoundLatitude>-25.5125709</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.003584" miny="-27.0473167" maxx="-53.6644465" maxy="-25.5125709"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.0473167" miny="-55.003584" maxx="-25.5125709" maxy="-53.6644465"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6122970.9626850495" miny="-3109955.4146770607" maxx="-5973898.858082871" maxy="-2920433.2536839405"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6122970.9626850495" miny="-3129384.5902620554" maxx="-5973898.858082871" maxy="-2938834.9384683454"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6122970.9626850495" miny="-3129384.5902620554" maxx="-5973898.858082871" maxy="-2938834.9384683454"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7578721.875806994" miny="-1.388915579400586E8" maxx="2315530.1451423494" maxy="-1.2033392771465768E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0322736453911848E7" miny="-311729.35068461107" maxx="-9590775.086519262" maxy="237535.00490833254"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/66"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=214472ff-97a9-41ea-bf8a-6ccda8264633&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:preservacion_selva_misionerav1__red_terciada_analisis</Name>
+          <Title>Blue Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apreservacion_selva_misionerav1__red_terciada_analisis"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:prog_ruta2_faja7</Name>
+        <Title>prog_ruta2_faja7</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>prog_ruta2_faja7</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22187</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.67601116740644</westBoundLongitude>
+          <eastBoundLongitude>-54.18838632146985</eastBoundLongitude>
+          <southBoundLatitude>-28.072370062377868</southBoundLatitude>
+          <northBoundLatitude>-27.242937090113987</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.67601116740644" miny="-28.072370062377868" maxx="-54.18838632146985" maxy="-27.242937090113987"/>
+        <BoundingBox CRS="EPSG:22187" minx="6895489.387839413" miny="7335226.081058484" maxx="6986321.477" maxy="7481343.693"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.072370062377868" miny="-55.67601116740644" maxx="-27.242937090113987" maxy="-54.18838632146985"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6197825.212556299" miny="-3237936.6224659514" maxx="-6032223.572215214" maxy="-3134239.8668436096"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6197825.212556299" miny="-3258101.0664961343" maxx="-6032223.572215214" maxy="-3153856.452867823"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6197825.212556299" miny="-3258101.0664961343" maxx="-6032223.572215214" maxy="-3153856.452867823"/>
+        <BoundingBox CRS="EPSG:32647" minx="2639303.7817845126" miny="-1.2853445295805648E8" maxx="8585439.54182054" maxy="-1.1461499623252553E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9772935.354518916" miny="-576598.3286451566" maxx="-9304884.63406308" maxy="-66699.5026769284"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=34a59769-67b4-4b82-8a17-364477b395cb&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/112"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:prog_ruta2_faja7</Name>
+          <Title>Red Square Point</Title>
+          <Abstract>A sample style that draws a red square point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprog_ruta2_faja7"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:programa100pe2</Name>
+        <Title>programa100pe2</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>programa100pe2</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.959509688996576</westBoundLongitude>
+          <eastBoundLongitude>-54.045783044179466</eastBoundLongitude>
+          <southBoundLatitude>-27.88217419801974</southBoundLatitude>
+          <northBoundLatitude>-25.674201515174992</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.959509688996576" miny="-27.88217419801974" maxx="-54.045783044179466" maxy="-25.674201515174992"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.88217419801974" miny="-55.959509688996576" maxx="-25.674201515174992" maxy="-54.045783044179466"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6229384.123620358" miny="-3214144.3779915995" maxx="-6016349.048001796" maxy="-2940274.5216005733"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6229384.123620358" miny="-3234126.756895654" maxx="-6016349.048001797" maxy="-2958785.04120783"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6229384.123620358" miny="-3234126.756895654" maxx="-6016349.048001797" maxy="-2958785.04120783"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6388462.995679369" miny="-1.430930380865845E8" maxx="7963923.67905468" maxy="-1.1552339126469992E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.040549892216588E7" miny="-662397.5110576543" maxx="-9353234.716642793" maxy="100943.74588838217"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=370bdc3b-bd5f-4cd0-b7f0-420ca6d5b8a8&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/76"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:programa100pe2</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="151" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprograma100pe2"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:progresivas_inicio_fin_correodr_verde</Name>
+        <Title>progresivas_inicio_fin_correodr_verde</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>progresivas_inicio_fin_correodr_verde</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.09935091</westBoundLongitude>
+          <eastBoundLongitude>-53.70416772</eastBoundLongitude>
+          <southBoundLatitude>-27.1682563</southBoundLatitude>
+          <northBoundLatitude>-25.62669151</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.09935091" miny="-27.1682563" maxx="-53.70416772" maxy="-25.62669151"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.1682563" miny="-55.09935091" maxx="-25.62669151" maxy="-53.70416772"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6133631.686341096" miny="-3124999.3547296175" maxx="-5978320.604066959" maxy="-2934439.528284476"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6133631.686341095" miny="-3144508.923318688" maxx="-5978320.60406696" maxy="-2952918.071797357"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6133631.686341095" miny="-3144508.923318688" maxx="-5978320.60406696" maxy="-2952918.071797357"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6882808.249709193" miny="-1.3857356530970716E8" maxx="3086129.6305024554" maxy="-1.1959360662109232E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0294941505609188E7" miny="-349653.5626314077" maxx="-9554718.01030575" maxy="213896.1547679584"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4dce54d8-2304-4631-b90d-dc5d354e468b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/78"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:progresivas_inicio_fin_correodr_verde</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprogresivas_inicio_fin_correodr_verde"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:progresivas_terradas</Name>
+        <Title>progresivas_terradas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>progresivas_terradas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.1661648</westBoundLongitude>
+          <eastBoundLongitude>-53.70416771836805</eastBoundLongitude>
+          <southBoundLatitude>-27.562635878574376</southBoundLatitude>
+          <northBoundLatitude>-25.591931480064844</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.1661648" miny="-27.562635878574376" maxx="-53.70416771836805" maxy="-25.591931480064844"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.562635878574376" miny="-55.1661648" maxx="-25.591931480064844" maxy="-53.70416771836805"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6141069.374553812" miny="-3174172.11900453" maxx="-5978320.603885292" maxy="-2930171.9234034126"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6141069.374553812" miny="-3193943.2492267797" maxx="-5978320.603885292" maxy="-2948627.064126422"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6141069.374553812" miny="-3193943.2492267797" maxx="-5978320.603885292" maxy="-2948627.064126422"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7087166.544939681" miny="-1.392109037072873E8" maxx="5321641.954145559" maxy="-1.1652656635735069E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0317890096048284E7" miny="-391899.53787717404" maxx="-9421100.052859696" maxy="217250.8714169822"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/37"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cf4ebc7-be8f-444f-90c2-954ad2ead77f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:progresivas_terradas</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprogresivas_terradas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:puentes</Name>
+        <Title>puentes</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>puentes</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.81073113602003</westBoundLongitude>
+          <eastBoundLongitude>-53.64955894564707</eastBoundLongitude>
+          <southBoundLatitude>-28.048040274544945</southBoundLatitude>
+          <northBoundLatitude>-26.085361171325793</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.81073113602003" miny="-28.048040274544945" maxx="-53.64955894564707" maxy="-26.085361171325793"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.048040274544945" miny="-55.81073113602003" maxx="-26.085361171325793" maxy="-53.64955894564707"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6212822.170862049" miny="-3234940.127571988" maxx="-5972241.583113148" maxy="-2990870.416769697"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6212822.170862049" miny="-3255031.920394456" maxx="-5972241.583113147" maxy="-3009657.136933747"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6212822.170862049" miny="-3255031.920394456" maxx="-5972241.583113147" maxy="-3009657.136933747"/>
+        <BoundingBox CRS="EPSG:32647" minx="-4266632.581622899" miny="-1.389599013887187E8" maxx="8674781.132905886" maxy="-1.1244376336173831E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.022654412857648E7" miny="-619633.4837287905" maxx="-9251788.651273547" maxy="188778.82466069047"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fe6fd4c3-eec8-41d3-abc4-9a21eb2cf9a0&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/61"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:puentes</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="151" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apuentes"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:puentes_2023</Name>
+        <Title>puentes_2023</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>puentes_2023</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.8374155</westBoundLongitude>
+          <eastBoundLongitude>-53.734528</eastBoundLongitude>
+          <southBoundLatitude>-28.09098819711962</southBoundLatitude>
+          <northBoundLatitude>-25.60211116906267</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.8374155" miny="-28.09098819711962" maxx="-53.734528" maxy="-25.60211116906267"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.09098819711962" miny="-55.8374155" maxx="-25.60211116906267" maxy="-53.734528"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6215792.66067244" miny="-3240330.073830529" maxx="-5981700.294976901" maxy="-2931421.587914662"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6215792.66067244" miny="-3260450.170326078" maxx="-5981700.294976901" maxy="-2949883.5829820186"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6215792.66067244" miny="-3260450.170326078" maxx="-5981700.294976901" maxy="-2949883.5829820186"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7008766.491489863" miny="-1.4295649892872173E8" maxx="8935853.417288728" maxy="-1.1246933587160374E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0414955753287053E7" miny="-629715.0464124511" maxx="-9247109.693313986" maxy="206684.86452692928"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/3"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=85d7f1b9-5d3f-4ae2-afb9-f0f07f86eb3a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/3"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/3"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:puentes_2023</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="124" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apuentes_2023"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:puntos_criticos_emergencia_2026</Name>
+        <Title>puntos_criticos_emergencia_2026</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>puntos_criticos_emergencia_2026</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-180.0</westBoundLongitude>
+          <eastBoundLongitude>180.0</eastBoundLongitude>
+          <southBoundLatitude>-90.0</southBoundLatitude>
+          <northBoundLatitude>90.0</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-180.0" miny="-90.0" maxx="180.0" maxy="90.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-90.0" miny="-180.0" maxx="90.0" maxy="180.0"/>
+        <BoundingBox CRS="EPSG:3785" minx="-2.0037508342789244E7" miny="-1.9929191766854808E7" maxx="2.0037508342789244E7" maxy="1.99291917668548E7"/>
+        <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+        <BoundingBox CRS="EPSG:900913" minx="-2.0037508342789244E7" miny="-1.997186888040857E7" maxx="2.0037508342789244E7" maxy="1.9971868880408563E7"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6.974587865576684E7" miny="-3.0329176356434636E7" maxx="2.74812009447262E8" maxy="3.0329176356434636E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-5.232537862576754E7" miny="-6.842164085845123E7" maxx="1.2147769988797233E8" maxy="8.842164085845123E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0d00eb90-1536-40c6-8b62-b7ca85ec8915&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/108"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:puntos_criticos_emergencia_2026</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="134" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apuntos_criticos_emergencia_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:recursos_de_unidades_regionales</Name>
+        <Title>recursos_de_unidades_regionales</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>recursos_de_unidades_regionales</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.74890405019172</westBoundLongitude>
+          <eastBoundLongitude>-53.64721298414288</eastBoundLongitude>
+          <southBoundLatitude>-27.91179666005644</southBoundLatitude>
+          <northBoundLatitude>-26.0157493187982</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.74890405019172" miny="-27.91179666005644" maxx="-53.64721298414288" maxy="-26.0157493187982"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.91179666005644" miny="-55.74890405019172" maxx="-26.0157493187982" maxy="-53.64721298414288"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6205939.611150409" miny="-3217855.9792519384" maxx="-5971980.431873078" maxy="-2982291.6704835603"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6205939.611150409" miny="-3237857.910811933" maxx="-5971980.431873079" maxy="-3001031.69482691"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6205939.611150409" miny="-3237857.910811933" maxx="-5971980.431873079" maxy="-3001031.69482691"/>
+        <BoundingBox CRS="EPSG:32647" minx="-4665424.611697917" miny="-1.391760126206746E8" maxx="7871487.229674914" maxy="-1.1351693979437536E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0244177794640979E7" miny="-594752.5144733674" maxx="-9297025.159778366" maxy="195680.12448747453"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0df158bf-6f7c-42c3-a726-13c090e84161&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/111"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:recursos_de_unidades_regionales</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="22" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Arecursos_de_unidades_regionales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_primaria_provincial</Name>
+        <Title>red_primaria_provincial</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>red_primaria_provincial</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.781077</westBoundLongitude>
+          <eastBoundLongitude>-53.6993695</eastBoundLongitude>
+          <southBoundLatitude>-28.0911769</southBoundLatitude>
+          <northBoundLatitude>-25.5918708</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.781077" miny="-28.0911769" maxx="-53.6993695" maxy="-25.5918708"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.0911769" miny="-55.781077" maxx="-25.5918708" maxy="-53.6993695"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6209521.087540384" miny="-3240353.7607681337" maxx="-5977786.468659846" maxy="-2930164.4746058835"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6209521.087540384" miny="-3260473.9815986613" maxx="-5977786.468659846" maxy="-2948619.5744691403"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6209521.087540384" miny="-3260473.9815986613" maxx="-5977786.468659846" maxy="-2948619.5744691403"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7090434.503057931" miny="-1.427117771233983E8" maxx="8867320.120421285" maxy="-1.1231532046461076E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0410414764508886E7" miny="-611489.5169920324" maxx="-9243059.215188608" maxy="218770.10227068508"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/1"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/1"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ba1375a6-0437-46ea-9eef-f44ead4c778f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/1"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_primaria_provincial</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="127" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_primaria_provincial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_secundaria_provincial</Name>
+        <Title>red_secundaria_provincial</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>red_secundaria_provincial</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.9748541</westBoundLongitude>
+          <eastBoundLongitude>-53.890762</eastBoundLongitude>
+          <southBoundLatitude>-28.1159148</southBoundLatitude>
+          <northBoundLatitude>-25.9446762</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.9748541" miny="-28.1159148" maxx="-53.890762" maxy="-25.9446762"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.1159148" miny="-55.9748541" maxx="-25.9446762" maxy="-53.890762"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6231092.255639782" miny="-3243459.35122592" maxx="-5999092.1843014965" maxy="-2973538.1456962107"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6231092.255639781" miny="-3263595.8698183824" maxx="-5999092.184301497" maxy="-2992230.465885153"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6231092.255639781" miny="-3263595.8698183824" maxx="-5999092.184301497" maxy="-2992230.465885153"/>
+        <BoundingBox CRS="EPSG:32647" minx="-4905141.347783604" miny="-1.4101737284809896E8" maxx="9239043.1164965" maxy="-1.1294784118666932E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0303746971105117E7" miny="-675153.3072457964" maxx="-9256410.639840724" maxy="125606.76128531244"/>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/2"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/2"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8490fb81-d3d0-4307-a7b6-9088797e61cf&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/2"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_secundaria_provincial</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="143" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_secundaria_provincial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_vial_nacional</Name>
+        <Title>red_vial_nacional</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>red_vial_nacional</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.07082482</westBoundLongitude>
+          <eastBoundLongitude>-53.640804</eastBoundLongitude>
+          <southBoundLatitude>-27.81581797</southBoundLatitude>
+          <northBoundLatitude>-25.588533</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.07082482" miny="-27.81581797" maxx="-53.640804" maxy="-25.588533"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.81581797" miny="-56.07082482" maxx="-25.588533" maxy="-53.640804"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6241775.667321246" miny="-3205833.871488414" maxx="-5971266.987021792" maxy="-2929754.747960391"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6241775.667321245" miny="-3225772.4320812626" maxx="-5971266.987021792" maxy="-2948207.600238916"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6241775.667321245" miny="-3225772.4320812626" maxx="-5971266.987021792" maxy="-2948207.600238916"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7145496.008351815" miny="-1.444162989212479E8" maxx="7735341.25474396" maxy="-1.1424839332386425E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0455246152135158E7" miny="-696682.8594775385" maxx="-9328403.389940478" maxy="237539.9248020667"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c52507ed-43ad-4fed-8600-b149b5dc7fae&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/56"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_vial_nacional</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="133" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_vial_nacional"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:regiones_narutales_misiones</Name>
+        <Title>regiones_narutales_misiones</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>regiones_narutales_misiones</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22197</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.04033835300252</westBoundLongitude>
+          <eastBoundLongitude>-53.669926997818635</eastBoundLongitude>
+          <southBoundLatitude>-28.18314141241539</southBoundLatitude>
+          <northBoundLatitude>-25.486499315112457</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.04033835300252" miny="-28.18314141241539" maxx="-53.669926997818635" maxy="-25.486499315112457"/>
+        <BoundingBox CRS="EPSG:22197" minx="6883440.892276614" miny="7299633.436177809" maxx="7180733.159144208" maxy="7532448.148288954"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.18314141241539" miny="-56.04033835300252" maxx="-25.486499315112457" maxy="-53.669926997818635"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6238381.9274678035" miny="-3251845.6312876167" maxx="-5974508.942799678" maxy="-2917176.285206536"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6238381.929339" miny="-3272083.4148394023" maxx="-5974508.944309336" maxy="-2935619.4369433867"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6238381.929339" miny="-3272083.4148394023" maxx="-5974508.944309336" maxy="-2935619.4369433867"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7647133.145911949" miny="-1.4476383950908393E8" maxx="9597913.825363755" maxy="-1.1145461341728249E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0482966037587475E7" miny="-698059.5894809737" maxx="-9209199.71305596" maxy="234650.79872874165"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f5c3eacb-cf5c-4967-a382-0f0b6801236a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/73"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:regiones_narutales_misiones</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="243" height="160">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aregiones_narutales_misiones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:result</Name>
+        <Title>result</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>result</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.05863753</westBoundLongitude>
+          <eastBoundLongitude>-53.64001908</eastBoundLongitude>
+          <southBoundLatitude>-28.1615847</southBoundLatitude>
+          <northBoundLatitude>-25.49729333</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.05863753" miny="-28.1615847" maxx="-53.64001908" maxy="-25.49729333"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.1615847" miny="-56.05863753" maxx="-25.49729333" maxy="-53.64001908"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240418.984404296" miny="-3249194.643022414" maxx="-5971179.610127078" maxy="-2918559.226556221"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240418.984404296" miny="-3269361.24002073" maxx="-5971179.610127079" maxy="-2936950.6166348746"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240418.984404296" miny="-3269361.24002073" maxx="-5971179.610127079" maxy="-2936950.6166348746"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7683226.381847133" miny="-1.450644792022882E8" maxx="9587172.440173566" maxy="-1.1149576385602719E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.048878514351088E7" miny="-703840.6155278123" maxx="-9212885.041011518" maxy="246745.93880054535"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=49647981-eba4-4c91-8170-d2d52d3226e1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/74"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:result</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="100" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aresult"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:terradas_dpv_corredor_verde</Name>
+        <Title>terradas_dpv_corredor_verde</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>terradas_dpv_corredor_verde</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-55.09948298601402</westBoundLongitude>
+          <eastBoundLongitude>-53.6993695</eastBoundLongitude>
+          <southBoundLatitude>-27.16788477046379</southBoundLatitude>
+          <northBoundLatitude>-25.6212717</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-55.09948298601402" miny="-27.16788477046379" maxx="-53.6993695" maxy="-25.6212717"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.16788477046379" miny="-55.09948298601402" maxx="-25.6212717" maxy="-53.6993695"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6133646.388975722" miny="-3124953.114180567" maxx="-5977786.468659846" maxy="-2933774.037554493"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6133646.388975721" miny="-3144462.435931267" maxx="-5977786.468659846" maxy="-2952248.932527359"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6133646.388975721" miny="-3144462.435931267" maxx="-5977786.468659846" maxy="-2952248.932527359"/>
+        <BoundingBox CRS="EPSG:32647" minx="-6917586.037442384" miny="-1.386151901458391E8" maxx="3084194.180119286" maxy="-1.1957386817372967E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0296970728767132E7" miny="-349675.207225386" maxx="-9554235.888750203" maxy="215930.14022980066"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f979610a-e2ce-4b76-8f47-20355263dcf7&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/67"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:terradas_dpv_corredor_verde</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="81" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aterradas_dpv_corredor_verde"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:unidades_regionales</Name>
+        <Title>unidades_regionales</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>unidades_regionales</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-56.0585754</westBoundLongitude>
+          <eastBoundLongitude>-53.6374515</eastBoundLongitude>
+          <southBoundLatitude>-28.1642311</southBoundLatitude>
+          <northBoundLatitude>-25.4943015</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-56.0585754" miny="-28.1642311" maxx="-53.6374515" maxy="-25.4943015"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.1642311" miny="-56.0585754" maxx="-25.4943015" maxy="-53.6374515"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6240412.068124333" miny="-3249527.057500224" maxx="-5970893.788428906" maxy="-2918192.2611581115"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6240412.068124332" miny="-3269695.3970427336" maxx="-5970893.788428907" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6240412.068124332" miny="-3269695.3970427336" maxx="-5970893.788428907" maxy="-2936581.6350579127"/>
+        <BoundingBox CRS="EPSG:32647" minx="-7702388.8831854435" miny="-1.4508761280418536E8" maxx="9601163.754999947" maxy="-1.1146356455034427E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0489936327347828E7" miny="-703897.8456392566" maxx="-9211715.833495392" maxy="247851.53261092486"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/7"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/7"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/showmetadata/xsl/7"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="http://sigvial.dpvmisiones.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7b05b0f8-83fa-4066-9e57-b0f8e4ad069c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:unidades_regionales</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="198" height="300">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://sigvial.dpvmisiones.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aunidades_regionales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

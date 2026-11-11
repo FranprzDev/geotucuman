@@ -8,6 +8,7 @@
     "build": "xmcp build",
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json",
     "catalog": "tsx scripts/build-catalog.ts",
+    "validate-catalog": "tsx scripts/validate-catalog.ts",
     "portal": "tsx scripts/build-portal.ts",
     "health": "tsx scripts/health-check.ts",
     "health-page": "tsx scripts/build-health-page.ts",

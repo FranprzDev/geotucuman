@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS RIDES]]></Name>
+    <Title><![CDATA[Cartografia General - Tucuman]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Tucuman]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.160407</westBoundLongitude><eastBoundLongitude>-63.683852</eastBoundLongitude><southBoundLatitude>-27.778744</southBoundLatitude><northBoundLatitude>-26.295098</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.160407" miny="-27.778744" maxx="-63.683852" maxy="-26.295098"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.778744" miny="-67.160407" maxx="-26.295098" maxy="-63.683852"/>
+<BoundingBox CRS="EPSG:22173" minx="6928043.045839" miny="3385618.355802" maxx="7090418.162255" maxy="3728360.291285"/>
+      <Layer queryable="1">
+        <Name>Límite_provincial</Name>
+        <Title><![CDATA[Límite_provincial]]></Title>
+        <Abstract><![CDATA[Límite_provincial]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015291</southBoundLatitude><northBoundLatitude>-26.051341</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015291" maxx="-64.458537" maxy="-26.051341"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015291" miny="-66.179134" maxx="-26.051341" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.448300" miny="3482382.531200" maxx="7118562.722400" maxy="3651622.191200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Límite_provincial</Title>
+          <LegendURL width="139" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Límite_provincial" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Límite_departamental</Name>
+        <Title><![CDATA[Límite_departamental]]></Title>
+        <Abstract><![CDATA[Límite_departamental]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015291</southBoundLatitude><northBoundLatitude>-26.051341</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015291" maxx="-64.458537" maxy="-26.051341"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015291" miny="-66.179134" maxx="-26.051341" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.448300" miny="3482382.531200" maxx="7118562.722400" maxy="3651622.191200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Límite_departamental</Title>
+          <LegendURL width="168" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Límite_departamental" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Municipios_y_comunas</Name>
+        <Title><![CDATA[Municipios_y_comunas]]></Title>
+        <Abstract><![CDATA[Municipios_y_comunas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179133</westBoundLongitude><eastBoundLongitude>-64.458678</eastBoundLongitude><southBoundLatitude>-28.014764</southBoundLatitude><northBoundLatitude>-26.049415</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179133" miny="-28.014764" maxx="-64.458678" maxy="-26.049415"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.014764" miny="-66.179133" maxx="-26.049415" maxy="-64.458678"/>
+<BoundingBox CRS="EPSG:22173" minx="6901887.835400" miny="3482382.531200" maxx="7118776.243000" maxy="3651609.038000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Municipios_y_comunas</Title>
+          <LegendURL width="177" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Municipios_y_comunas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Manzanero_urbano</Name>
+        <Title><![CDATA[Manzanero_urbano]]></Title>
+        <Abstract><![CDATA[Manzanero_urbano]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.036028</westBoundLongitude><eastBoundLongitude>-64.464616</eastBoundLongitude><southBoundLatitude>-27.991167</southBoundLatitude><northBoundLatitude>-26.212437</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.036028" miny="-27.991167" maxx="-64.464616" maxy="-26.212437"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.991167" miny="-66.036028" maxx="-26.212437" maxy="-64.464616"/>
+<BoundingBox CRS="EPSG:22173" minx="6904502.814500" miny="3496455.967700" maxx="7100715.136200" maxy="3651057.707900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Manzanero_urbano</Title>
+          <LegendURL width="154" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Manzanero_urbano" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_urbanas</Name>
+        <Title><![CDATA[Áreas_urbanas]]></Title>
+        <Abstract><![CDATA[Áreas_urbanas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.977617</westBoundLongitude><eastBoundLongitude>-64.464430</eastBoundLongitude><southBoundLatitude>-27.995125</southBoundLatitude><northBoundLatitude>-26.211853</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.977617" miny="-27.995125" maxx="-64.464430" maxy="-26.211853"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.995125" miny="-65.977617" maxx="-26.211853" maxy="-64.464430"/>
+<BoundingBox CRS="EPSG:22173" minx="6904064.028000" miny="3502236.750000" maxx="7100779.715200" maxy="3651070.500000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_urbanas</Title>
+          <LegendURL width="129" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_urbanas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Pueblos_ferroviarios</Name>
+        <Title><![CDATA[Pueblos_ferroviarios]]></Title>
+        <Abstract><![CDATA[Pueblos_ferroviarios]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.698893</westBoundLongitude><eastBoundLongitude>-64.481841</eastBoundLongitude><southBoundLatitude>-27.840972</southBoundLatitude><northBoundLatitude>-26.227321</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.698893" miny="-27.840972" maxx="-64.481841" maxy="-26.227321"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.840972" miny="-65.698893" maxx="-26.227321" maxy="-64.481841"/>
+<BoundingBox CRS="EPSG:22173" minx="6921109.721900" miny="3530086.066300" maxx="7099082.839500" maxy="3649568.537600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Pueblos_ferroviarios</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Pueblos_ferroviarios" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Paraje</Name>
+        <Title><![CDATA[Paraje]]></Title>
+        <Abstract><![CDATA[Paraje]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.117191</westBoundLongitude><eastBoundLongitude>-64.496532</eastBoundLongitude><southBoundLatitude>-28.004896</southBoundLatitude><northBoundLatitude>-26.090858</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.117191" miny="-28.004896" maxx="-64.496532" maxy="-26.090858"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004896" miny="-66.117191" maxx="-26.090858" maxy="-64.496532"/>
+<BoundingBox CRS="EPSG:22173" minx="6902981.395100" miny="3488473.409500" maxx="7114225.911200" maxy="3647898.024900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Paraje</Title>
+          <LegendURL width="77" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Paraje" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Localidad</Name>
+        <Title><![CDATA[Localidad]]></Title>
+        <Abstract><![CDATA[Localidad]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.958964</westBoundLongitude><eastBoundLongitude>-64.478298</eastBoundLongitude><southBoundLatitude>-27.985445</southBoundLatitude><northBoundLatitude>-26.225002</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.958964" miny="-27.985445" maxx="-64.478298" maxy="-26.225002"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.985445" miny="-65.958964" maxx="-26.225002" maxy="-64.478298"/>
+<BoundingBox CRS="EPSG:22173" minx="6905136.287000" miny="3504100.250000" maxx="7099338.164500" maxy="3649719.139200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Localidad</Title>
+          <LegendURL width="96" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Tucuman/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Localidad" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

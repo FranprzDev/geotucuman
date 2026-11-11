@@ -1,0 +1,2213 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="4321" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://geoportal.salta.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>GeoNode Local GeoServer</Title>
+    <Abstract>This is a description of your Web Map Server.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization/>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address/>
+        <City/>
+        <StateOrProvince/>
+        <PostCode/>
+        <Country/>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress/>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+      <Format>JSONP</Format>
+    </Exception>
+    <Layer>
+      <Title>GeoNode Local GeoServer</Title>
+      <Abstract>This is a description of your Web Map Server.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3785</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:32647</CRS>
+      <CRS>EPSG:32736</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-73.57162322808435</westBoundLongitude>
+        <eastBoundLongitude>118.92775072894231</eastBoundLongitude>
+        <southBoundLatitude>-55.06401539366111</southBoundLatitude>
+        <northBoundLatitude>-21.78140235014956</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-73.57162322808435" miny="-55.06401539366111" maxx="118.92775072894231" maxy="-21.78140235014956"/>
+      <BoundingBox CRS="EPSG:4326" minx="-55.06401539366111" miny="-73.57162322808435" maxx="-21.78140235014956" maxy="118.92775072894231"/>
+      <BoundingBox CRS="EPSG:3785" minx="-8189955.634584928" miny="-7339217.975438981" maxx="1.3238976652335228E7" maxy="-2469449.1552666267"/>
+      <BoundingBox CRS="EPSG:3857" minx="-8189955.634584928" miny="-7374300.120986317" maxx="1.3238976652335228E7" maxy="-2485300.1209863103"/>
+      <BoundingBox CRS="EPSG:900913" minx="-8189955.634584928" miny="-7374300.120986317" maxx="1.3238976652335228E7" maxy="-2485300.1209863103"/>
+      <BoundingBox CRS="EPSG:32647" minx="-3.8331233243854E7" miny="-3.4758604995034707E8" maxx="9.12418934527317E7" maxy="4.755228032060086E7"/>
+      <BoundingBox CRS="EPSG:32736" minx="-1.6298612734365758E7" miny="-1.0336955811886083E7" maxx="1.2278903939011835E7" maxy="7555291.596661341"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:areas_explotacion_hc_2026</Name>
+        <Title>Áreas hidrocarburiferas en explotación</Title>
+        <Abstract>Capa vectorial (poligonos) que representa las áreas hidrocarburíferas en explotación. Incluye área, operador, fuente, consorcio, instrumento de concesión y observaciones.</Abstract>
+        <KeywordList>
+          <Keyword>Consorcio</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Petróleo</Keyword>
+          <Keyword>Operador</Keyword>
+          <Keyword>Explotación</Keyword>
+          <Keyword>areas_explotacion_hc_2026</Keyword>
+          <Keyword>Áreas hidrocarburíferas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-64.86415647950555</westBoundLongitude>
+          <eastBoundLongitude>-62.6099869706</eastBoundLongitude>
+          <southBoundLatitude>-25.52947932630528</southBoundLatitude>
+          <northBoundLatitude>-21.998880741999983</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-64.86415647950555" miny="-25.52947932630528" maxx="-62.6099869706" maxy="-21.998880741999983"/>
+        <BoundingBox CRS="EPSG:4326" minx="-25.52947932630528" miny="-64.86415647950555" maxx="-21.998880741999983" maxy="-62.6099869706"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7220644.870033775" miny="-2922507.611305913" maxx="-6969711.868140684" maxy="-2495389.2965947767"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7220644.870033775" miny="-2940920.6882373067" maxx="-6969711.868140684" maxy="-2511390.8550909976"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7220644.870033775" miny="-2940920.6882373067" maxx="-6969711.868140684" maxy="-2511390.8550909976"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3367417189852014E7" miny="-2.424996355747884E8" maxx="1646823.348368999" maxy="-1.8827423303071725E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.388687350953984E7" miny="-4371780.563096718" maxx="-1.1453686236627296E7" maxy="-2990072.2358519486"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2cb4621f-9cbf-4c1f-8021-77baeadccf92&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/157"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:areas_explotacion_hc_2026</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aareas_explotacion_hc_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:areas_libres_hc_2026</Name>
+        <Title>Áreas hidrocarburíferas libres</Title>
+        <Abstract>Capa vectorial poligonal que representa áreas hidrocarburíferas libres, identificadas mediante su denominación.</Abstract>
+        <KeywordList>
+          <Keyword>areas_libres_hc_2026</Keyword>
+          <Keyword>Petróleo</Keyword>
+          <Keyword>Áreas hidrocarburíferas</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.71449538346464</westBoundLongitude>
+          <eastBoundLongitude>-62.34173434194374</eastBoundLongitude>
+          <southBoundLatitude>-26.30685327647359</southBoundLatitude>
+          <northBoundLatitude>-21.998758505741463</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.71449538346464" miny="-26.30685327647359" maxx="-62.34173434194374" maxy="-21.998758505741463"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.30685327647359" miny="-67.71449538346464" maxx="-21.998758505741463" maxy="-62.34173434194374"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7537943.1454107575" miny="-3018200.8253889875" maxx="-6939850.122114712" maxy="-2495374.7053737207"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7537943.1454107575" miny="-3037135.9409905626" maxx="-6939850.122114712" maxy="-2511376.179291015"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7537943.1454107575" miny="-3037135.9409905626" maxx="-6939850.122114712" maxy="-2511376.179291015"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.401827932560281E7" miny="-2.724477328778673E8" maxx="1.2468934961456113E7" maxy="-1.7763628038698915E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4586669582097484E7" miny="-6021279.95663697" maxx="-1.1017046245865388E7" maxy="-2854206.978745583"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=55c51876-f988-413d-94d2-24d6b0485134&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/159"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:areas_libres_hc_2026</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aareas_libres_hc_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:ciencia_y_tecnica_idesa</Name>
+        <Title>Institutos y centros de investigación científica y tecnológica</Title>
+        <Abstract>Capa vectorial puntual que reúne los institutos y centros de investigación científica y tecnológica.</Abstract>
+        <KeywordList>
+          <Keyword>ciencia_y_tecnica_idesa</Keyword>
+          <Keyword>
+            <![CDATA[Investigación tecnológica. ]]>
+          </Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Institutos</Keyword>
+          <Keyword>investigación científica</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.5810209</westBoundLongitude>
+          <eastBoundLongitude>-64.3212429</eastBoundLongitude>
+          <southBoundLatitude>-24.9840847</southBoundLatitude>
+          <northBoundLatitude>-23.1343</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.5810209" miny="-24.9840847" maxx="-64.3212429" maxy="-23.1343"/>
+        <BoundingBox CRS="EPSG:4326" minx="-24.9840847" miny="-65.5810209" maxx="-23.1343" maxy="-64.3212429"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7300445.852291032" miny="-2855745.0912637115" maxx="-7160208.006818463" maxy="-2631484.003512882"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7300445.852291032" miny="-2873789.9149165764" maxx="-7160208.006818463" maxy="-2648268.0507485513"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7300445.852291032" miny="-2873789.9149165764" maxx="-7160208.006818463" maxy="-2648268.0507485513"/>
+        <BoundingBox CRS="EPSG:32647" minx="-2.156978540439521E7" miny="-2.3919869216746747E8" maxx="-2699086.564625923" maxy="-2.0787086568237326E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.3347116319375774E7" miny="-4762640.313728844" maxx="-1.2011144816797532E7" maxy="-4013521.1961329756"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60e60c27-7978-4ca7-8cc8-d5a5c5b87116&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/160"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:ciencia_y_tecnica_idesa</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aciencia_y_tecnica_idesa"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:destinos_sanitarios_modelo_tiempos_viaje_destinos_salud_refer</Name>
+        <Title>Destinos sanitarios de referencia para  el modelo de "Tiempos teóricos de viaje a establecimientos de salud por radio censal"</Title>
+        <Abstract>Capa vectorial auxiliar del producto "Tiempos teóricos de viaje a establecimientos de salud por radio censal". Contiene 737 establecimientos sanitarios de referencia, de los cuales 731 fueron seleccionados para el escenario de atención general, incluidos 99 que también integran el escenario de internación. Los seis registros restantes corresponden a establecimientos vinculados a fuerzas de seguridad. Se conservaron para asegurar la trazabilidad del inventario, pero fueron excluidos de los cálculos por no cumplir los criterios de inclusión definidos para el modelo. El conjunto de datos se elaboró mediante la selección, depuración y conciliación de registros del Sistema Integrado de Información Sanitaria Argentino (SISA/REFES), integrando una edición histórica identificada como 2020 y registros de las ediciones 2024 y 2025. Esta capa no constituye el padrón provincial completo de establecimientos sanitarios ni acredita su funcionamiento efectivo, la disponibilidad actual de prestaciones o la capacidad de atención.</Abstract>
+        <KeywordList>
+          <Keyword>Establecimientos de salud</Keyword>
+          <Keyword>Accesibilidad geográfica</Keyword>
+          <Keyword>destinos_sanitarios_modelo_tiempos_viaje_destinos_salud_refer</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Destinos sanitarios de referencia</Keyword>
+          <Keyword>REFES</Keyword>
+          <Keyword>Atención sanitaria</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.39566475</westBoundLongitude>
+          <eastBoundLongitude>-62.34323859</eastBoundLongitude>
+          <southBoundLatitude>-26.214843</southBoundLatitude>
+          <northBoundLatitude>-22.0195676</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.39566475" miny="-26.214843" maxx="-62.34323859" maxy="-22.0195676"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.214843" miny="-67.39566475" maxx="-22.0195676" maxy="-62.34323859"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502451.0816441765" miny="-3006841.0891252058" maxx="-6940017.574242363" maxy="-2497858.8496539732"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502451.0816441765" miny="-3025714.5933387713" maxx="-6940017.574242363" maxy="-2513874.720974286"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502451.0816441765" miny="-3025714.5933387713" maxx="-6940017.574242363" maxy="-2513874.720974286"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3704009494338185E7" miny="-2.687431502391123E8" maxx="1.1131877119955491E7" maxy="-1.7869185339972043E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4492903743373588E7" miny="-5824939.965576141" maxx="-1.1063910426805148E7" maxy="-2857854.2891597743"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=90bcdaf1-bf4f-47ce-bc88-1f693285a024&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/180"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:destinos_sanitarios_modelo_tiempos_viaje_destinos_salud_refer</Name>
+          <Title>Destinos sanitarios utilizados en el modelo de tiempos de viaje</Title>
+          <LegendURL width="182" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Adestinos_sanitarios_modelo_tiempos_viaje_destinos_salud_refer"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:establecimientos_educativos</Name>
+        <Title>Establecimientos educativos</Title>
+        <Abstract>Capa vectorial de tipo punto que representa la ubicación de los establecimientos educativos públicos y privados de la provincia de Salta. Contiene información sobre su oferta educativa, ámbito y otras características. Elaborada por el Ministerio de Educación y Cultura de la Provincia de Salta.</Abstract>
+        <KeywordList>
+          <Keyword>Primaria</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Educación</Keyword>
+          <Keyword>
+            <![CDATA[Jardín de infantes ]]>
+          </Keyword>
+          <Keyword>Escuelas</Keyword>
+          <Keyword>Secundaria</Keyword>
+          <Keyword>establecimientos_educativos</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.395987</westBoundLongitude>
+          <eastBoundLongitude>-62.349756</eastBoundLongitude>
+          <southBoundLatitude>-26.214869</southBoundLatitude>
+          <northBoundLatitude>-21.999396</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.395987" miny="-26.214869" maxx="-62.349756" maxy="-21.999396"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.214869" miny="-67.395987" maxx="-21.999396" maxy="-62.349756"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502486.954350086" miny="-3006844.29784295" maxx="-6940743.089004854" maxy="-2495450.802571504"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502486.954350086" miny="-3025717.819473263" maxx="-6940743.089004854" maxy="-2511452.7175893756"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502486.954350086" miny="-3025717.819473263" maxx="-6940743.089004854" maxy="-2511452.7175893756"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.394173679806552E7" miny="-2.6893432226066214E8" maxx="1.1132587454342287E7" maxy="-1.7873740156815538E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4506889793922909E7" miny="-5825222.781249403" maxx="-1.1064748679208271E7" maxy="-2858332.619601182"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e9f6a247-296b-4bfc-9fc5-b156d580a254&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/162"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:establecimientos_educativos</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aestablecimientos_educativos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:expansion_urbana_municipios</Name>
+        <Title>Expansión urbana por municipio en Salta - 2015/2025</Title>
+        <Abstract>La capa permite consultar cuánto creció la mancha urbana en cada uno de los 60 municipios de Salta. Para cada municipio informa la "superficie urbana total" cartografiada en 2015, 2020 y 2025, las "hectáreas de expansión" detectadas en cada período y el "crecimiento porcentual" respecto de la superficie urbana inicial. El total urbano incluye la superficie que ya estaba urbanizada y mantuvo esa clasificación en el año consultado. La expansión cuenta solo las hectáreas que pasaron a clasificarse como urbanas durante el período.</Abstract>
+        <KeywordList>
+          <Keyword>expansion_urbana_municipios</Keyword>
+          <Keyword>Crecimiento urbano</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Expansión urbana</Keyword>
+          <Keyword>Mancha urbana</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56999093581298</westBoundLongitude>
+          <eastBoundLongitude>-62.33310539434956</eastBoundLongitude>
+          <southBoundLatitude>-26.377442812529626</southBoundLatitude>
+          <northBoundLatitude>-21.998895593606793</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56999093581298" miny="-26.377442812529626" maxx="-62.33310539434956" maxy="-21.998895593606793"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.377442812529626" miny="-68.56999093581298" maxx="-21.998895593606793" maxy="-62.33310539434956"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633176.474674085" miny="-3026922.1022362327" maxx="-6938889.552062447" maxy="-2495391.069417232"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633176.474674085" miny="-3045904.452991697" maxx="-6938889.552062447" maxy="-2511392.6381897205"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633176.474674085" miny="-3045904.452991697" maxx="-6938889.552062447" maxy="-2511392.6381897205"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.4197260476866655E7" miny="-2.820762460524434E8" maxx="1.446020658390229E7" maxy="-1.767708780978684E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4801106914382698E7" miny="-6572801.564068731" maxx="-1.0980217558261406E7" maxy="-2849885.351509578"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=3d18d5f3-3577-428b-9c0e-9bdef614535b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/188"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:expansion_urbana_municipios</Name>
+          <Title>geonode:expansion_urbana_municipios</Title>
+          <LegendURL width="103" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aexpansion_urbana_municipios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_linea_ribera_03fe6721a69e1846f6ac70b5b62326d7</Name>
+        <Title>Líneas de Ribera y Zonas de Inundabilidad</Title>
+        <Abstract>Digitalización de información de líneas de ribera y zonas de inundabilidad. El trabajo se realiza tomando la información presente en los planos de mensuras registrados en la Dirección General de Inmuebles.</Abstract>
+        <KeywordList>
+          <Keyword>Zonas de Inundabilidad</Keyword>
+          <Keyword>inundabili</Keyword>
+          <Keyword>fc_linea_ribera_03fe6721a69e1846f6ac70b5b62326d7</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Inundabilidad</Keyword>
+          <Keyword>Lineas de Ribera</Keyword>
+          <Keyword>ribera</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.42191085834584</westBoundLongitude>
+          <eastBoundLongitude>-57.12174686305263</eastBoundLongitude>
+          <southBoundLatitude>-26.2243749090204</southBoundLatitude>
+          <northBoundLatitude>-22.19999608095949</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.42191085834584" miny="-26.2243749090204" maxx="-57.12174686305263" maxy="-22.19999608095949"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.2243749090204" miny="-66.42191085834584" maxx="-22.19999608095949" maxy="-57.12174686305263"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7394053.294267268" miny="-3008017.4917605636" maxx="-6358763.774017289" maxy="-2519413.529744503"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7394053.294267268" miny="-3026897.380904808" maxx="-6358763.77401729" maxy="-2535554.148655741"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7394053.294267268" miny="-3026897.380904808" maxx="-6358763.77401729" maxy="-2535554.148655741"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.1453858746857446E7" miny="-2.5665952016601023E8" maxx="9841331.470893987" maxy="-1.4522958251200616E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.413419392748755E7" miny="-5241822.4947220655" maxx="-1.0355792858112972E7" maxy="-565495.299762247"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=06a126f2-4d00-4f8d-a89e-e40d63ba84b1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/146"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_linea_ribera_03fe6721a69e1846f6ac70b5b62326d7</Name>
+          <Title>geonode:fc_linea_ribera_03fe6721a69e1846f6ac70b5b62326d7</Title>
+          <LegendURL width="166" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_linea_ribera_03fe6721a69e1846f6ac70b5b62326d7"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_manzanas_019c30b98c9a99292937c6ecf2acb025</Name>
+        <Title>Delimitación Manzanas</Title>
+        <Abstract>Limite de Manzanas generado a partir de restitución fotogramétrica y planos de mensuras registrados y aprobados por la Dirección General de Inmuebles.</Abstract>
+        <KeywordList>
+          <Keyword>Catastro</Keyword>
+          <Keyword>fc_manzanas_019c30b98c9a99292937c6ecf2acb025</Keyword>
+          <Keyword>manzana</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.39787437799998</westBoundLongitude>
+          <eastBoundLongitude>-62.37520413499993</eastBoundLongitude>
+          <southBoundLatitude>-26.196693194999966</southBoundLatitude>
+          <northBoundLatitude>-22.03346162899993</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.39787437799998" miny="-26.196693194999966" maxx="-62.37520413499993" maxy="-22.03346162899993"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.196693194999966" miny="-67.39787437799998" maxx="-22.03346162899993" maxy="-62.37520413499993"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502697.056307978" miny="-3004601.3581437566" maxx="-6943575.962434685" maxy="-2499517.6939943247"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502697.056307978" miny="-3023462.7033232064" maxx="-6943575.962434685" maxy="-2515543.177163162"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502697.056307978" miny="-3023462.7033232064" maxx="-6943575.962434685" maxy="-2515543.177163162"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.354086128895458E7" miny="-2.6863767726578504E8" maxx="1.0964107853103328E7" maxy="-1.7912260232201895E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.448387383393119E7" miny="-5826312.85271616" maxx="-1.107731722441914E7" maxy="-2875864.564459018"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=176e0f66-ca77-4542-8aa3-aacb2399a7c3&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/141"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_manzanas_019c30b98c9a99292937c6ecf2acb025</Name>
+          <Title>geonode:fc_manzanas_019c30b98c9a99292937c6ecf2acb025</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_manzanas_019c30b98c9a99292937c6ecf2acb025"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_parcelas_v20</Name>
+        <Title>Catastro Urbano y Rural de la Provincia de Salta</Title>
+        <Abstract>La cartografía se confeccionó en base a diferentes fuentes de información, desde restitución fotogramétrica, puntos GPS, hasta la utilización de imágenes satelitales con diferentes resoluciones. Por las características propias del Catastro, la cartografía se actualiza a diario pudiendo consultar una versión en línea de la misma por medio del visor web de la Dirección de Inmuebles (http://www.inmuebles.gov.ar). Por el momento el servicio WMS/WFS tiene una periodicidad de actualización de 3 meses. Autor: Dirección General de Inmuebles, Programa Informática, Programa Información Territorial.</Abstract>
+        <KeywordList>
+          <Keyword>Catastro</Keyword>
+          <Keyword>Parcelario</Keyword>
+          <Keyword>subrural</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>fc_parcelas_v20</Keyword>
+          <Keyword>Rural</Keyword>
+          <Keyword>Urbano</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56998638599998</westBoundLongitude>
+          <eastBoundLongitude>-57.19503538699996</eastBoundLongitude>
+          <southBoundLatitude>-26.35822658999996</southBoundLatitude>
+          <northBoundLatitude>-21.998412624999958</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56998638599998" miny="-26.35822658999996" maxx="-57.19503538699996" maxy="-21.998412624999958"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.35822658999996" miny="-68.56998638599998" maxx="-21.998412624999958" maxy="-57.19503538699996"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633175.9681912195" miny="-3024547.4215350645" maxx="-6366922.215184097" maxy="-2495333.4180012573"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633175.9681912195" miny="-3043516.9165189494" maxx="-6366922.215184098" maxy="-2511334.6525929235"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633175.9681912195" miny="-3043516.9165189494" maxx="-6366922.215184098" maxy="-2511334.6525929235"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.420320691798704E7" miny="-2.8208094986902153E8" maxx="1.4273612422203919E7" maxy="-1.4447718089098662E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4801458020538973E7" miny="-6572766.591377594" maxx="-1.0311984836128462E7" maxy="-561677.0023386533"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/142"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=26fde5de-d2e3-4471-9a04-8ebc97034e84&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_parcelas_v20</Name>
+          <Title>geonode:fc_parcelas_v20</Title>
+          <LegendURL width="89" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_parcelas_v20"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_servidumbres</Name>
+        <Title>Servidumbres</Title>
+        <Abstract>Digitalización de las servidumbres registradas en planos aprobados en la Dirección General de Inmuebles.</Abstract>
+        <KeywordList>
+          <Keyword>fc_servidumbres</Keyword>
+          <Keyword>servidumbres</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.47211543499998</westBoundLongitude>
+          <eastBoundLongitude>-62.38885781199997</eastBoundLongitude>
+          <southBoundLatitude>-26.238279171999977</southBoundLatitude>
+          <northBoundLatitude>-22.05428365399996</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.47211543499998" miny="-26.238279171999977" maxx="-62.38885781199997" maxy="-22.05428365399996"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.238279171999977" miny="-66.47211543499998" maxx="-22.05428365399996" maxy="-62.38885781199997"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7399642.042175897" miny="-3009733.693351033" maxx="-6945095.882805784" maxy="-2502003.9981957935"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7399642.042175897" miny="-3028622.8953155857" maxx="-6945095.882805784" maxy="-2518043.8842447316"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7399642.042175897" miny="-3028622.8953155857" maxx="-6945095.882805784" maxy="-2518043.8842447316"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3112269362751238E7" miny="-2.5850523171698076E8" maxx="1.0037459440846996E7" maxy="-1.7874671446699893E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4242218738386171E7" miny="-5270975.872103197" maxx="-1.1057946935083713E7" maxy="-2885602.223899092"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=30758713-47f9-44a6-9233-1a63241406f3&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/147"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_servidumbres</Name>
+          <Title>geonode:fc_servidumbres</Title>
+          <LegendURL width="250" height="180">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_servidumbres"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_subzonas_e790e4e328b17a8b08482da392c63486</Name>
+        <Title>Sub-Zonas Agro-Ecológicas-Económicas Uniformes</Title>
+        <Abstract>Digitalización de las sub-zonas agro-ecológicas-económicas uniformes de acuerdo a lo establecido en la resolución de Junta de Catastro n° 34847/11 y su modificación por resolución n° 12475/13. (ambas pueden ser descargadas de: https://inmuebles.gov.ar/paginas.webdocumentos.aspx )</Abstract>
+        <KeywordList>
+          <Keyword>sub-zonas</Keyword>
+          <Keyword>fc_subzonas_e790e4e328b17a8b08482da392c63486</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56998638599998</westBoundLongitude>
+          <eastBoundLongitude>-62.33310123799998</eastBoundLongitude>
+          <southBoundLatitude>-26.377436175999946</southBoundLatitude>
+          <northBoundLatitude>-21.998888869999973</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56998638599998" miny="-26.377436175999946" maxx="-62.33310123799998" maxy="-21.998888869999973"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.377436175999946" miny="-68.56998638599998" maxx="-21.998888869999973" maxy="-62.33310123799998"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633175.9681912195" miny="-3026921.2820457513" maxx="-6938889.089379728" maxy="-2495390.266826534"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633175.9681912195" miny="-3045903.628361699" maxx="-6938889.089379728" maxy="-2511391.8309467603"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633175.9681912195" miny="-3045903.628361699" maxx="-6938889.089379728" maxy="-2511391.8309467603"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.419734233033238E7" miny="-2.8207626022856206E8" maxx="1.4460135010756865E7" maxy="-1.767709251068839E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4801110671711115E7" miny="-6572798.537487833" maxx="-1.0980220385686575E7" maxy="-2849882.324036145"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/151"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fb1198ff-6867-4076-9765-7a1a129a1cb7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_subzonas_e790e4e328b17a8b08482da392c63486</Name>
+          <Title>geonode:fc_subzonas_e790e4e328b17a8b08482da392c63486</Title>
+          <LegendURL width="117" height="600">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_subzonas_e790e4e328b17a8b08482da392c63486"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fc_zonas_aaad0cd8acb9b3109130b10301cb211a</Name>
+        <Title>Zonas Agro-Ecológicas-Económicas Uniformes</Title>
+        <Abstract>Digitalización de las zonas agro-ecológicas-económicas uniformes de acuerdo a lo establecido en la resolución de Junta de Catastro n° 34847/11 y su modificación por resolución n° 12475/13. (ambas pueden ser descargadas de: https://inmuebles.gov.ar/paginas.webdocumentos.aspx )</Abstract>
+        <KeywordList>
+          <Keyword>zonas agro-ecol</Keyword>
+          <Keyword>fc_zonas_aaad0cd8acb9b3109130b10301cb211a</Keyword>
+          <Keyword>zonas a</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56998638599998</westBoundLongitude>
+          <eastBoundLongitude>-62.33310123799998</eastBoundLongitude>
+          <southBoundLatitude>-26.377436175999946</southBoundLatitude>
+          <northBoundLatitude>-21.998888869999973</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56998638599998" miny="-26.377436175999946" maxx="-62.33310123799998" maxy="-21.998888869999973"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.377436175999946" miny="-68.56998638599998" maxx="-21.998888869999973" maxy="-62.33310123799998"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633175.9681912195" miny="-3026921.2820457513" maxx="-6938889.089379728" maxy="-2495390.266826534"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633175.9681912195" miny="-3045903.628361699" maxx="-6938889.089379728" maxy="-2511391.8309467603"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633175.9681912195" miny="-3045903.628361699" maxx="-6938889.089379728" maxy="-2511391.8309467603"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.419734233033238E7" miny="-2.8207626022856206E8" maxx="1.4460135010756865E7" maxy="-1.767709251068839E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4801110671711115E7" miny="-6572798.537487833" maxx="-1.0980220385686575E7" maxy="-2849882.324036145"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=89f9e767-e2e0-48de-9be1-18381e2c126d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/149"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fc_zonas_aaad0cd8acb9b3109130b10301cb211a</Name>
+          <Title>geonode:fc_zonas_aaad0cd8acb9b3109130b10301cb211a</Title>
+          <LegendURL width="128" height="180">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afc_zonas_aaad0cd8acb9b3109130b10301cb211a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:geo_salta_apn</Name>
+        <Title>Áreas protegidas nacionales de Salta</Title>
+        <Abstract>Representación de la distribución geográfica de las áreas protegidas nacionales localizadas en la provincia de Salta</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>geo_salta_apn</Keyword>
+          <Keyword>áreas protegida</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.04620687</westBoundLongitude>
+          <eastBoundLongitude>-63.92059856</eastBoundLongitude>
+          <southBoundLatitude>-25.53138917</southBoundLatitude>
+          <northBoundLatitude>-22.23275224</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.04620687" miny="-25.53138917" maxx="-63.92059856" maxy="-22.23275224"/>
+        <BoundingBox CRS="EPSG:4326" minx="-25.53138917" miny="-66.04620687" maxx="-22.23275224" maxy="-63.92059856"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7352230.117595607" miny="-2922741.9331052476" maxx="-7115608.482900456" maxy="-2523329.704956005"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7352230.117595607" miny="-2941156.2967052846" maxx="-7115608.482900456" maxy="-2539492.9545038193"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7352230.117595607" miny="-2941156.2967052846" maxx="-7115608.482900456" maxy="-2539492.9545038193"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.1035809272313055E7" miny="-2.5246137665358707E8" maxx="2964962.628085467" maxy="-1.9829986523906216E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4023259984016946E7" miny="-5024994.192495667" maxx="-1.1642952154762238E7" maxy="-3708522.247688138"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/20"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1468c0a-df37-4a7b-b20c-3175f21cb03d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:geo_salta_apn</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="183" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ageo_salta_apn"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:huella_humana_v01</Name>
+        <Title>Huella Humana en Argentina</Title>
+        <Abstract>Nivel de actividad antrópica en todo el territorio nacional  </Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>huella humana</Keyword>
+          <Keyword>huella_humana_v01</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.56681892069618</westBoundLongitude>
+          <eastBoundLongitude>-53.637694342504574</eastBoundLongitude>
+          <southBoundLatitude>-55.06401539366111</southBoundLatitude>
+          <northBoundLatitude>-21.78140235014956</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.56681892069618" miny="-55.06401539366111" maxx="-53.637694342504574" maxy="-21.78140235014956"/>
+        <BoundingBox CRS="EPSG:4326" minx="-55.06401539366111" miny="-73.56681892069618" maxx="-21.78140235014956" maxy="-53.637694342504574"/>
+        <BoundingBox CRS="EPSG:3785" minx="-8189420.821532863" miny="-7339217.975438981" maxx="-5970920.82153286" maxy="-2469449.1552666267"/>
+        <BoundingBox CRS="EPSG:3857" minx="-8189420.821532863" miny="-7374300.120986317" maxx="-5970920.82153286" maxy="-2485300.1209863103"/>
+        <BoundingBox CRS="EPSG:900913" minx="-8189420.821532863" miny="-7374300.120986317" maxx="-5970920.82153286" maxy="-2485300.1209863103"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.832994113973982E7" miny="-3.4751938887657017E8" maxx="9.122241696312332E7" maxy="4.7536783016395725E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.629728804238078E7" miny="-1.0332802247229494E7" maxx="-2570536.9977448173" maxy="758097.7470740377"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4ca70ecd-673c-473f-a3df-492d5a6ca5e4&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/26"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:huella_humana_v01</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="93" height="120">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ahuella_humana_v01"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:idt_ucasal_2026</Name>
+        <Title>Calculo relación IDT en la provincia de Salta y Actualización de Lluvias Máximas Diarias</Title>
+        <Abstract>Hasta el momento se analizaron registros de más de 100 estaciones pluviométricas disponibles en la región de estudio. A partir de estos registros se elaboraron las series de máximos diarios anuales. Se verificaron las hipótesis estadísticas básicas (presencia de datos atípicos, independencia, estacionalidad y homogeneidad) que debe cumplir una muestra para que tenga validez el análisis de estadística inferencial. Finalmente se seleccionaron 60 registros de estaciones que verificaron las hipótesis propuestas. Sobre los registros seleccionados se realizaron ajustes a 6 funciones de distribución de probabilidad para estimar los valores de máxima lámina de lluvia para los periodos de retorno entre 2 y 100 años, y los intervalos de confianza asociados a cada predicción.  Para cada una de las estaciones se han cargado en el archivo vectorial del mapa los siguientes atributos: a)	PMD5: valores de precipitación máxima diaria asociada a una recurrencia de 5 años b)	PMD10: valores de precipitación máxima diaria asociada a una recurrencia de 10 años c)	PMD25: valores de precipitación máxima diaria asociada a una recurrencia de 25 años d)	PMD50: valores de precipitación máxima diaria asociada a una recurrencia de 50 años e)	PMD100: valores de precipitación máxima diaria asociada a una recurrencia de 100 años f)	μ: valores de media de los logaritmos de la serie pluviométrica diaria g)	σ: valores de desvío de los logaritmos de la serie pluviométrica diaria Estos últimos dos parámetros son clave para la estimación de curvas IDT en cada uno de los puestos pluviométricos.</Abstract>
+        <KeywordList>
+          <Keyword>idt_ucasal_2026</Keyword>
+          <Keyword>
+            <![CDATA[Diseño Hidrológico ]]>
+          </Keyword>
+          <Keyword>Lluvias diseño</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.427052</westBoundLongitude>
+          <eastBoundLongitude>-62.5225</eastBoundLongitude>
+          <southBoundLatitude>-26.11388889</southBoundLatitude>
+          <northBoundLatitude>-22.25277778</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.427052" miny="-26.11388889" maxx="-62.5225" maxy="-22.25277778"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.11388889" miny="-68.427052" maxx="-22.25277778" maxy="-62.5225"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7617264.585124852" miny="-2994387.5726707843" maxx="-6959972.863122447" maxy="-2525724.3219787395"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7617264.585124852" miny="-3013193.421418892" maxx="-6959972.863122447" maxy="-2541901.404249868"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7617264.585124852" miny="-3013193.421418892" maxx="-6959972.863122447" maxy="-2541901.404249868"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.1072189458890278E7" miny="-2.779099642353172E8" maxx="1.1666290617055364E7" maxy="-1.8110695844780788E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4581448667326936E7" miny="-6479382.010870833" maxx="-1.1139037496910572E7" maxy="-2979367.4965526047"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a801e94-55f8-4cdc-996e-d6d90f81f614&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/111"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:idt_ucasal_2026</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aidt_ucasal_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:lneas_ssmicas_2d_sismica_2d_salta_2026_copiar</Name>
+        <Title>Lineas sísmicas</Title>
+        <Abstract>Capa vectorial lineal que reúne trazas de líneas sísmicas.</Abstract>
+        <KeywordList>
+          <Keyword>Hidrocarburos</Keyword>
+          <Keyword>Lineas sísmicas</Keyword>
+          <Keyword>lneas_ssmicas_2d_sismica_2d_salta_2026_copiar</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.36206836626206</westBoundLongitude>
+          <eastBoundLongitude>-61.657854734216095</eastBoundLongitude>
+          <southBoundLatitude>-26.5409225552317</southBoundLatitude>
+          <northBoundLatitude>-21.991879475357457</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.36206836626206" miny="-26.5409225552317" maxx="-61.657854734216095" maxy="-21.991879475357457"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.5409225552317" miny="-66.36206836626206" maxx="-21.991879475357457" maxy="-61.657854734216095"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7387391.658520701" miny="-3047140.6042551966" maxx="-6863720.992418568" maxy="-2494553.5828320915"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7387391.658520701" miny="-3066232.238751636" maxx="-6863720.992418568" maxy="-2510550.2968268576"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7387391.658520701" miny="-3066232.238751636" maxx="-6863720.992418568" maxy="-2510550.2968268576"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.379684387915222E7" miny="-2.5789899190705463E8" maxx="1.259321207551958E7" maxy="-1.7032715118618178E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4256290042090317E7" miny="-5207031.071203756" maxx="-1.0813944425623938E7" maxy="-2514745.894750004"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42d0925f-4c74-40e2-a15f-cbbd0567c38a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/158"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:lneas_ssmicas_2d_sismica_2d_salta_2026_copiar</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alneas_ssmicas_2d_sismica_2d_salta_2026_copiar"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:municipios</Name>
+        <Title>Limites Municipales</Title>
+        <Abstract>Delimitación de límites municipales de la Provincia de Salta.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>municipios</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56999093581298</westBoundLongitude>
+          <eastBoundLongitude>-62.33310539434956</eastBoundLongitude>
+          <southBoundLatitude>-26.377442812529626</southBoundLatitude>
+          <northBoundLatitude>-21.998895593606793</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56999093581298" miny="-26.377442812529626" maxx="-62.33310539434956" maxy="-21.998895593606793"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.377442812529626" miny="-68.56999093581298" maxx="-21.998895593606793" maxy="-62.33310539434956"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633176.474674085" miny="-3026922.1022362327" maxx="-6938889.552062447" maxy="-2495391.069417232"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633176.474674085" miny="-3045904.452991697" maxx="-6938889.552062447" maxy="-2511392.6381897205"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633176.474674085" miny="-3045904.452991697" maxx="-6938889.552062447" maxy="-2511392.6381897205"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.4197260476866655E7" miny="-2.820762460524434E8" maxx="1.446020658390229E7" maxy="-1.767708780978684E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4801106914382698E7" miny="-6572801.564068731" maxx="-1.0980217558261406E7" maxy="-2849885.351509578"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e603ed0a-f2fb-41b7-8a1e-0b5cd7c447ed&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/52"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:municipios</Name>
+          <Title>geonode:municipios</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Amunicipios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:otbn_2009_ll</Name>
+        <Title>OTBN 2009</Title>
+        <Abstract>Ordenamiento Territorial de Bosques Nativos (OTBN) 2009  </Abstract>
+        <KeywordList>
+          <Keyword>otbn_2009_ll</Keyword>
+          <Keyword>OTBN</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.7948964747715</westBoundLongitude>
+          <eastBoundLongitude>-62.34236145053449</eastBoundLongitude>
+          <southBoundLatitude>-26.301513324195124</southBoundLatitude>
+          <northBoundLatitude>-21.999908446896995</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.7948964747715" miny="-26.301513324195124" maxx="-62.34236145053449" maxy="-21.999908446896995"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.301513324195124" miny="-65.7948964747715" maxx="-21.999908446896995" maxy="-62.34236145053449"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7324254.3723677145" miny="-3017541.297474947" maxx="-6939919.931523707" maxy="-2495511.9732130766"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7324254.3723677145" miny="-3036472.8386820387" maxx="-6939919.931523707" maxy="-2511514.24280625"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7324254.3723677145" miny="-3036472.8386820387" maxx="-6939919.931523707" maxy="-2511514.24280625"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.35757085807354E7" miny="-2.5191899546948716E8" maxx="9666325.05049613" maxy="-1.7770146227680665E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.411215094016938E7" miny="-4879835.4615215445" maxx="-1.1019832557381477E7" maxy="-2854682.69530498"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a13cb3dd-d70e-4042-98c5-6eb1ba8b0c3e&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/48"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:otbn_2009_ll</Name>
+          <Title>otbn_2009_ll</Title>
+          <LegendURL width="364" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aotbn_2009_ll"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:output_point_layer</Name>
+        <Title>Dependencias policiales</Title>
+        <Abstract>Capa de información geográfica que representa la ubicación relativa de las dependencias policiales de la provincia de Salta.</Abstract>
+        <KeywordList>
+          <Keyword>Dependencias policiales</Keyword>
+          <Keyword>Policía</Keyword>
+          <Keyword>comisarías</Keyword>
+          <Keyword>output_point_layer</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Seguridad pública</Keyword>
+          <Keyword>Destacamentos</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.3958333333</westBoundLongitude>
+          <eastBoundLongitude>-62.4983333333</eastBoundLongitude>
+          <southBoundLatitude>-26.1261111111</southBoundLatitude>
+          <northBoundLatitude>-22.0522222222</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.3958333333" miny="-26.1261111111" maxx="-62.4983333333" maxy="-22.0522222222"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.1261111111" miny="-67.3958333333" maxx="-22.0522222222" maxy="-62.4983333333"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502469.848251292" miny="-2995894.704407042" maxx="-6957282.642091231" maxy="-2501757.8314434616"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502469.848251291" miny="-3014708.7470701407" maxx="-6957282.642091231" maxy="-2517796.291664675"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502469.848251291" miny="-3014708.7470701407" maxx="-6957282.642091231" maxy="-2517796.291664675"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.331967684566632E7" miny="-2.684398470773274E8" maxx="1.0294234721647605E7" maxy="-1.807958668921268E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4470439338316185E7" miny="-5825268.936632014" maxx="-1.1129568586304188E7" maxy="-2940636.291074326"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8d2e6d80-923c-47ec-afe6-0d3583163c68&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/165"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:output_point_layer</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="120" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aoutput_point_layer"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:pob2022_deptos</Name>
+        <Title>Población por departamento Censo 2022</Title>
+        <Abstract>La capa geográfica, presenta los resultados definitivos del Censo Nacional de Población, Hogares y Viviendas 2022 (Censo 2022), que se llevó a cabo por primera vez en la Argentina con una estrategia bimodal: un cuestionario digital y el tradicional barrido territorial con cuestionarios en papel (cédulas censales). </Abstract>
+        <KeywordList>
+          <Keyword>población</Keyword>
+          <Keyword>pob2022_deptos</Keyword>
+          <Keyword>superficie</Keyword>
+          <Keyword>densidad</Keyword>
+          <Keyword>Salta</Keyword>
+          <Keyword>departamento</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.6031825496795</westBoundLongitude>
+          <eastBoundLongitude>-62.22766480735509</eastBoundLongitude>
+          <southBoundLatitude>-26.41651202657265</southBoundLatitude>
+          <northBoundLatitude>-21.971904743515612</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.6031825496795" miny="-26.41651202657265" maxx="-62.22766480735509" maxy="-21.971904743515612"/>
+        <BoundingBox CRS="EPSG:22183" minx="7078896.931015923" miny="3240195.553334847" maxx="7566789.199895562" maxy="3876660.4379166923"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.41651202657265" miny="-68.6031825496795" maxx="-21.971904743515612" maxy="-62.22766480735509"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7636871.348228316" miny="-3031693.3589382996" maxx="-6927151.9596092785" maxy="-2492111.381757555"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7636871.348228314" miny="-3050759.8668066305" maxx="-6927151.9596092785" maxy="-2508152.397854126"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7636871.348228314" miny="-3050759.8668066305" maxx="-6927151.9596092785" maxy="-2508152.397854126"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.42567555941975E7" miny="-2.815075554954233E8" maxx="1.4669663261669725E7" maxy="-1.761529668928424E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.479151315257901E7" miny="-6554555.897506462" maxx="-1.0971790176211374E7" maxy="-2857073.684525098"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=66b111dd-267c-45c9-83a4-f4f08c92cc6f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/61"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:pob2022_deptos</Name>
+          <Title>pob2022_deptos</Title>
+          <LegendURL width="193" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apob2022_deptos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:pobfraccionyradio2022</Name>
+        <Title>Población por Radios Censales</Title>
+        <Abstract>La capa geográfica, presenta la población, hogares y viviendas por radios censales. refiriéndose a la distribución de la población dentro de unidades territoriales geográficas menores y exhaustivas, utilizadas en los censos para un mejor análisis demográfico. Un radio censal es la subdivisión de una fracción censal, la cual a su vez es parte de una división político-administrativa. Los datos se organizan por el código de los radios, que identifica la división territorial, la división político-administrativa, la fracción y finalmente el radio en sí.  El radio censal agrupa, en promedio 400 a 200 viviendas en las ciudades. Si los radios son rurales o rurales mixtos, la cantidad promedio es menor. El identificador de un radio censal es un código numérico único de 9 cifras. Este código relaciona a diferentes unidades censales que pueden ordenarse jerárquicamente de modo tal que unas contienen a las otras, aunque no en todos los casos. Si querés profundizar un poco en esta temática, te invitamos a leer nuestra guía para la identificación y uso de entidades interoperables. El código del radio censal es el resultado de una concatenación de códigos. Tomemos como ejemplo el radio censal 660070104 del Departamento Anta:  Los primeros dos dígitos (66) pertenecen a las “Jurisdicciones de primer orden” o División Político-Territorial: las 23 provincias y la Ciudad Autónoma de Buenos Aires. En nuestro ejemplo, se refiere a la Provincia de Salta. Los tres dígitos siguientes (007) son las “Jurisdicciones de segundo orden” o “Divisiones Político-Administrativas” y son los departamentos de la Provincia de Salta. En nuestro ejemplo, corresponde al Departamento de Anta. Los próximos 2 dígitos (01) corresponden a las fracciones urbanas. Es una medida geográfica que agrupa, en promedio, 5000 viviendas. Los últimos dos dígitos (04) corresponden, finalmente, al radio censal.   </Abstract>
+        <KeywordList>
+          <Keyword>población</Keyword>
+          <Keyword>pobfraccionyradio2022</Keyword>
+          <Keyword>hogares</Keyword>
+          <Keyword>radio</Keyword>
+          <Keyword>censo</Keyword>
+          <Keyword>Salta</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>fracción</Keyword>
+          <Keyword>viviendas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.6035467574494</westBoundLongitude>
+          <eastBoundLongitude>-62.219758511962624</eastBoundLongitude>
+          <southBoundLatitude>-26.377122817436533</southBoundLatitude>
+          <northBoundLatitude>-21.971911705017977</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.6035467574494" miny="-26.377122817436533" maxx="-62.219758511962624" maxy="-21.971911705017977"/>
+        <BoundingBox CRS="EPSG:22183" minx="7083261.9999999665" miny="3240070.9999999893" maxx="7566766.499999961" maxy="3877579.2499999898"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.377122817436533" miny="-68.6035467574494" maxx="-21.971911705017977" maxy="-62.219758511962624"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7636911.891651801" miny="-3026824.504597883" maxx="-6926271.834832126" maxy="-2492112.2125818864"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7636911.891651801" miny="-3045864.6916694194" maxx="-6926271.834832126" maxy="-2508153.233500159"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7636911.891651801" miny="-3045864.6916694194" maxx="-6926271.834832126" maxy="-2508153.233500159"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.425471942855005E7" miny="-2.815195251234497E8" maxx="1.428757895126309E7" maxy="-1.7654709421828422E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.479168221298173E7" miny="-6555124.76449989" maxx="-1.0990694328426909E7" maxy="-2852601.7092282246"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fa9ce448-e5ed-4567-bff1-355740cc67ac&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/62"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:pobfraccionyradio2022</Name>
+          <Title>pobfraccionyradio2022</Title>
+          <LegendURL width="169" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apobfraccionyradio2022"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:poligonos_adaf55f39328ff45c8c60e94eb13a7a0</Name>
+        <Title>Catastro Minero</Title>
+        <Abstract>Representación geográfica de los datos contenidos en los expedientes judiciales. Todos los datos deben ser verificados en el expediente judicial. Los límites mostrados son los definidos por Google Earth, y pueden no coincidir con los límites oficiales.</Abstract>
+        <KeywordList>
+          <Keyword>Mina</Keyword>
+          <Keyword>Minería</Keyword>
+          <Keyword>Catastro</Keyword>
+          <Keyword>poligonos_adaf55f39328ff45c8c60e94eb13a7a0</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56876209363976</westBoundLongitude>
+          <eastBoundLongitude>-62.60457683088971</eastBoundLongitude>
+          <southBoundLatitude>-26.1898341395883</southBoundLatitude>
+          <northBoundLatitude>-22.084787669309552</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56876209363976" miny="-26.1898341395883" maxx="-62.60457683088971" maxy="-22.084787669309552"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.1898341395883" miny="-68.56876209363976" maxx="-22.084787669309552" maxy="-62.60457683088971"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633039.680589098" miny="-3003755.0255564637" maxx="-6969109.614143015" maxy="-2505647.072552379"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633039.680589098" miny="-3022611.7751878807" maxx="-6969109.614143015" maxy="-2521708.0548838037"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633039.680589098" miny="-3022611.7751878807" maxx="-6969109.614143015" maxy="-2521708.0548838037"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3141006358409718E7" miny="-2.812102213920895E8" maxx="1.2625271511259174E7" maxy="-1.808254825745046E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4738182719913408E7" miny="-6571967.449081287" maxx="-1.111084000103919E7" maxy="-2998990.3465320873"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/54"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=72c41757-bdee-4215-ab4e-9a02fc56954e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:poligonos_adaf55f39328ff45c8c60e94eb13a7a0</Name>
+          <Title>geonode:poligonos_adaf55f39328ff45c8c60e94eb13a7a0</Title>
+          <LegendURL width="276" height="180">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apoligonos_adaf55f39328ff45c8c60e94eb13a7a0"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:pozos_totales_salta_2026</Name>
+        <Title>Pozos hidrocarburíferos</Title>
+        <Abstract>Capa vectorial de puntos que representa la ubicación georreferenciada de los pozos hidrocarburíferos de la provincia de Salta. Incluye información sobre el nombre y la sigla de cada pozo, el área, el año y la compañía responsable. A la fecha de publicación, reúne 1.094 puntos, con registros correspondientes al período 1913–2024.</Abstract>
+        <KeywordList>
+          <Keyword>pozos_totales_salta_2026</Keyword>
+          <Keyword>Pozos hidrocarburíferos</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Energía</Keyword>
+          <Keyword>Petróleo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.49602260985225</westBoundLongitude>
+          <eastBoundLongitude>-62.34783794231137</eastBoundLongitude>
+          <southBoundLatitude>-26.201221158331144</southBoundLatitude>
+          <northBoundLatitude>-22.00234736714943</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.49602260985225" miny="-26.201221158331144" maxx="-62.34783794231137" maxy="-22.00234736714943"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.201221158331144" miny="-65.49602260985225" maxx="-22.00234736714943" maxy="-62.34783794231137"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7290983.885913485" miny="-3005160.0870151017" maxx="-6940529.571799643" maxy="-2495803.109500205"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7290983.885913485" miny="-3024024.4657714698" maxx="-6940529.571799643" maxy="-2511807.0666283295"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7290983.885913485" miny="-3024024.4657714698" maxx="-6940529.571799643" maxy="-2511807.0666283295"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3479298704862565E7" miny="-2.48834881759701E8" maxx="8379788.767814896" maxy="-1.7887847501816517E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4037806008301444E7" miny="-4714890.186845808" maxx="-1.1071430919718321E7" maxy="-2857778.0655462123"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=97aed35b-2be3-4f3a-a583-cb0c54c15353&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/154"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:pozos_totales_salta_2026</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apozos_totales_salta_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:provisorios</Name>
+        <Title>Catastro Minero: Solicitudes NO Revisadas</Title>
+        <Abstract>Representación geográfica de los datos contenidos en los expedientes judiciales. Todos los datos deben ser verificados en el expediente judicial. Los límites mostrados son los definidos por Google Earth, y pueden no coincidir con los límites oficiales.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>provisorios</Keyword>
+          <Keyword>Catastro</Keyword>
+          <Keyword>Minería</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.14247861373615</westBoundLongitude>
+          <eastBoundLongitude>118.92775072894231</eastBoundLongitude>
+          <southBoundLatitude>-43.86149544986564</southBoundLatitude>
+          <northBoundLatitude>-22.69573414120302</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.14247861373615" miny="-43.86149544986564" maxx="118.92775072894231" maxy="-22.69573414120302"/>
+        <BoundingBox CRS="EPSG:4326" minx="-43.86149544986564" miny="-68.14247861373615" maxx="-22.69573414120302" maxy="118.92775072894231"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7585586.020672642" miny="-5414399.687117988" maxx="1.3238976652335228E7" maxy="-2578781.5097677424"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7585586.020672642" miny="-5444033.243359323" maxx="1.3238976652335228E7" maxy="-2595264.0658478145"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7585586.020672642" miny="-5444033.243359323" maxx="1.3238976652335228E7" maxy="-2595264.0658478145"/>
+        <BoundingBox CRS="EPSG:32647" minx="-2.577217674270829E7" miny="-2.701162838310903E8" maxx="7.117348705507417E7" maxy="1.4796923095563725E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4197554867478678E7" miny="-6270281.270068909" maxx="1.1965722869801411E7" maxy="7470025.132820224"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e1232a0a-ef36-42da-9bc6-41b4c98d39c0&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/58"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:provisorios</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aprovisorios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:radios_tiempo_viaje_salud</Name>
+        <Title>Tiempos teóricos de viaje a establecimientos de salud por radio censal</Title>
+        <Abstract>Capa vectorial de la provincia de Salta que representa, por radio censal, los tiempos teóricos medios de viaje terrestre de la población hacia establecimientos de salud, diferenciando los escenarios de atención general e internación. Para cada radio censal, incluye la población de referencia, la superficie territorial, los tiempos medios estimados y la distribución porcentual de la población según siete intervalos de tiempo de viaje. Incorpora, además, la identificación de los establecimientos sanitarios de referencia asociados a cada radio, distinguiendo el destino predominante según la población modelada y el destino correspondiente a un punto representativo del radio. Los indicadores se obtuvieron mediante un modelo geográfico que integra información censal y de distribución espacial de la población, establecimientos sanitarios seleccionados de distintas ediciones del Registro Federal de Establecimientos de Salud (REFES) y una superficie de fricción terrestre utilizada para estimar los tiempos de desplazamiento. El conjunto de datos permite analizar las diferencias territoriales en la proximidad geográfica a los establecimientos considerados y constituye un insumo para la consulta pública, los estudios territoriales y la planificación sanitaria. Los resultados representan estimaciones modeladas, no mediciones de viajes reales. Su interpretación debe considerar la resolución espacial del análisis, la vigencia de las fuentes y las limitaciones para representar las condiciones efectivas de desplazamiento y disponibilidad de servicios sanitarios.</Abstract>
+        <KeywordList>
+          <Keyword>Establecimientos de salud</Keyword>
+          <Keyword>Accesibilidad geográfica</Keyword>
+          <Keyword>radios_tiempo_viaje_salud</Keyword>
+          <Keyword>Tiempos de viaje</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Atención sanitaria</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.56875915606562</westBoundLongitude>
+          <eastBoundLongitude>-62.34123989041176</eastBoundLongitude>
+          <southBoundLatitude>-26.41679939693371</southBoundLatitude>
+          <northBoundLatitude>-21.998768249003085</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.56875915606562" miny="-26.41679939693371" maxx="-62.34123989041176" maxy="-21.998768249003085"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.41679939693371" miny="-68.56875915606562" maxx="-21.998768249003085" maxy="-62.34123989041176"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7633039.35357984" miny="-3031786.9125041133" maxx="-6939795.08002195" maxy="-2495375.8684167396"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7633039.35357984" miny="-3050795.5864900704" maxx="-6939795.08002195" maxy="-2511377.3490756913"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7633039.35357984" miny="-3050795.5864900704" maxx="-6939795.08002195" maxy="-2511377.3490756913"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.419857355727873E7" miny="-2.820634128403934E8" maxx="1.4839555733674679E7" maxy="-1.763768293476677E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4800889391072255E7" miny="-6572045.963196158" maxx="-1.096135514889342E7" maxy="-2853959.5568889077"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a3f7de78-2059-49da-b47f-f03844168bf0&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/173"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:radios_tiempo_viaje_salud</Name>
+          <Title>geonode:radios_tiempo_viaje_salud</Title>
+          <LegendURL width="197" height="160">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aradios_tiempo_viaje_salud"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:reas_hidrocarburiferas_en_exploracin_areas_exploracin_hc_2026</Name>
+        <Title>Áreas hidrocarburíferas en exploración</Title>
+        <Abstract>Capa vectorial (poligonos) que representa las áreas hidrocarburíferas en etapa de exploración. Incluye denominación del área, operador, instrumento de permiso, fuente y consorcio.</Abstract>
+        <KeywordList>
+          <Keyword>Consorcio</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Operador</Keyword>
+          <Keyword>reas_hidrocarburiferas_en_exploracin_areas_exploracin_hc_2026</Keyword>
+          <Keyword>Exploración</Keyword>
+          <Keyword>Áreas hidrocarburíferas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-64.05863319499997</westBoundLongitude>
+          <eastBoundLongitude>-63.980721002999985</eastBoundLongitude>
+          <southBoundLatitude>-22.48480854999997</southBoundLatitude>
+          <northBoundLatitude>-22.12392641899993</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-64.05863319499997" miny="-22.48480854999997" maxx="-63.980721002999985" maxy="-22.12392641899993"/>
+        <BoundingBox CRS="EPSG:4326" minx="-22.48480854999997" miny="-64.05863319499997" maxx="-22.12392641899993" maxy="-63.980721002999985"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7130974.428180488" miny="-2553495.4930811683" maxx="-7122301.282640463" maxy="-2510322.553723783"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7130974.428180488" miny="-2569832.7093614014" maxx="-7122301.282640463" maxy="-2526410.597476773"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7130974.428180488" miny="-2569832.7093614014" maxx="-7122301.282640463" maxy="-2526410.597476773"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.187489567228596E7" miny="-2.3361313728618824E8" maxx="-2.8160883362692297E7" maxy="-2.2990130044181302E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.3619928423217032E7" miny="-3811638.3675504504" maxx="-1.3390941498932343E7" maxy="-3728022.9775507944"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=39a7f7dd-021c-40e5-a29c-a2d242ad3230&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/155"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:reas_hidrocarburiferas_en_exploracin_areas_exploracin_hc_2026</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Areas_hidrocarburiferas_en_exploracin_areas_exploracin_hc_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_vial_cc2a06125d06188e13129a57caa71dff</Name>
+        <Title>Red Vial Provincial</Title>
+        <Abstract>Red Vial de la Provincia de Salta corresponde a todas las rutas con jurisdicción de la DVS, a las cuales se suman las rutas nacionales que administra la Dirección Nacional de Vialidad a fin de completar la red. La capa de rutas se encuentra actualizada a Diciembre 2025. Resulta importante aclarar que la capa vial se encuentra en permanente desarrollo y corrección, por lo tanto, la información debe ser utilizada con fines orientativos.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Terrestre</Keyword>
+          <Keyword>Rutas</Keyword>
+          <Keyword>Vialidad</Keyword>
+          <Keyword>red_vial_cc2a06125d06188e13129a57caa71dff</Keyword>
+          <Keyword>Vialidad, Rutas, Terrestre</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.353266841363</westBoundLongitude>
+          <eastBoundLongitude>-62.33984641353399</eastBoundLongitude>
+          <southBoundLatitude>-26.2959379914118</southBoundLatitude>
+          <northBoundLatitude>-22.0597958564758</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.353266841363" miny="-26.2959379914118" maxx="-62.33984641353399" maxy="-22.0597958564758"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.2959379914118" miny="-68.353266841363" maxx="-22.0597958564758" maxy="-62.33984641353399"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7609050.8588372795" miny="-3016852.7309048455" maxx="-6939639.958885485" maxy="-2502662.2580200965"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7609050.8588372795" miny="-3035780.539988347" maxx="-6939639.958885485" maxy="-2518705.956586281"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7609050.8588372795" miny="-3035780.539988347" maxx="-6939639.958885485" maxy="-2518705.956586281"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.340907750802219E7" miny="-2.7901124663609743E8" maxx="1.333272849735648E7" maxy="-1.7774735303932884E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4702615310117092E7" miny="-6430918.608856883" maxx="-1.1022333890362782E7" maxy="-2861688.0474375575"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7e8e4b27-d4ac-44a2-825b-1ecfc4ee5d33&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/95"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_vial_cc2a06125d06188e13129a57caa71dff</Name>
+          <Title>geonode:red_vial_cc2a06125d06188e13129a57caa71dff</Title>
+          <LegendURL width="96" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_vial_cc2a06125d06188e13129a57caa71dff"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:rfes</Name>
+        <Title>Establecimientos de salud</Title>
+        <Abstract>Registro Federal de establecimientos de salud (REFES) Registro Federal de establecimientos de salud (REFES) - En esta capa fue relevada por SISA (Sistema Integrado de Información sanitario argentino).</Abstract>
+        <KeywordList>
+          <Keyword>rfes</Keyword>
+          <Keyword>Salud</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.39566475</westBoundLongitude>
+          <eastBoundLongitude>-62.34323859</eastBoundLongitude>
+          <southBoundLatitude>-26.20460431</southBoundLatitude>
+          <northBoundLatitude>-22.0195676</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.39566475" miny="-26.20460431" maxx="-62.34323859" maxy="-22.0195676"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.20460431" miny="-67.39566475" maxx="-22.0195676" maxy="-62.34323859"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502451.0816441765" miny="-3005577.56597504" maxx="-6940017.574242363" maxy="-2497858.8496539732"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502451.0816441765" miny="-3024444.211248838" maxx="-6940017.574242363" maxy="-2513874.720974286"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502451.0816441765" miny="-3024444.211248838" maxx="-6940017.574242363" maxy="-2513874.720974286"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3704009494338185E7" miny="-2.687431502391123E8" maxx="1.103546924703433E7" maxy="-1.7880779508987153E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4492903743373588E7" miny="-5824983.879909157" maxx="-1.1069110188354941E7" maxy="-2857854.2891597743"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c9a2eec1-8d06-47c3-acc6-ce2f16bc33c4&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/11"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:rfes</Name>
+          <Title>rfes</Title>
+          <LegendURL width="22" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Arfes"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:sectores_expansion_urbana</Name>
+        <Title>Sectores de expansión urbana - 2015/2025</Title>
+        <Abstract>Capa vectorial que identifica 3.094 sectores de expansión urbana en la provincia de Salta durante los quinquenios 2015–2020 y 2020–2025. Para cada sector informa los municipios que intersecta, la forma de expansión, la superficie en hectáreas, los años de primera detección cartográfica y la cobertura del suelo al inicio del quinquenio. Un mismo polígono puede reunir porciones detectadas en años distintos. La superficie informada corresponde al sector completo. La capa incluye 1.877 registros de la mancha urbana de referencia de 2015, representados en gris y excluidos de los indicadores de expansión.</Abstract>
+        <KeywordList>
+          <Keyword>sectores_expansion_urbana</Keyword>
+          <Keyword>Uso del suelo</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>Urbano</Keyword>
+          <Keyword>expansión urbana</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.39709233787963</westBoundLongitude>
+          <eastBoundLongitude>-62.34245189719591</eastBoundLongitude>
+          <southBoundLatitude>-26.188675309464827</southBoundLatitude>
+          <northBoundLatitude>-21.998842992802963</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.39709233787963" miny="-26.188675309464827" maxx="-62.34245189719591" maxy="-21.998842992802963"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.188675309464827" miny="-67.39709233787963" maxx="-21.998842992802963" maxy="-62.34245189719591"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502610.0" miny="-3003612.0435392135" maxx="-6939930.000000001" maxy="-2495384.790509177"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502610.0" miny="-3022468.0167313823" maxx="-6939930.000000001" maxy="-2511386.3228856055"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502610.0" miny="-3022468.0167313823" maxx="-6939930.000000001" maxy="-2511386.3228856055"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3948495820245765E7" miny="-2.689515576276819E8" maxx="1.0887388642990006E7" maxy="-1.7898248776313207E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4507545903978707E7" miny="-5826006.679020357" maxx="-1.1077099060830615E7" maxy="-2854579.7920493516"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8fe21498-62ba-4da6-bc97-4611ee19969d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/187"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:sectores_expansion_urbana</Name>
+          <Title>geonode:sectores_expansion_urbana</Title>
+          <LegendURL width="310" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asectores_expansion_urbana"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:servidumbres_l</Name>
+        <Title>Catastro Minero: Servidumbres</Title>
+        <Abstract>Representación geográfica de los datos contenidos en los expedientes judiciales. Todos los datos deben ser verificados en el expediente judicial. Los límites mostrados son los definidos por Google Earth, y pueden no coincidir con los límites oficiales.</Abstract>
+        <KeywordList>
+          <Keyword>Minería</Keyword>
+          <Keyword>Catastro</Keyword>
+          <Keyword>Caminos mineros</Keyword>
+          <Keyword>servidumbres_l</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.35338173971849</westBoundLongitude>
+          <eastBoundLongitude>-63.84861138847938</eastBoundLongitude>
+          <southBoundLatitude>-25.475366672714888</southBoundLatitude>
+          <northBoundLatitude>-22.205570447594134</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.35338173971849" miny="-25.475366672714888" maxx="-63.84861138847938" maxy="-22.205570447594134"/>
+        <BoundingBox CRS="EPSG:4326" minx="-25.475366672714888" miny="-68.35338173971849" maxx="-22.205570447594134" maxy="-63.84861138847938"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7609063.649263708" miny="-2915870.0083198063" maxx="-7107594.907623132" maxy="-2520079.910002366"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7609063.649263706" miny="-2934246.62099184" maxx="-7107594.907623132" maxy="-2536224.3805091106"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7609063.649263706" miny="-2934246.62099184" maxx="-7107594.907623132" maxy="-2536224.3805091106"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.163707778702281E7" miny="-2.775601312172461E8" maxx="5148270.53177964" maxy="-1.9838741502822703E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4597562255497849E7" miny="-6430229.883042727" maxx="-1.1663508912450524E7" maxy="-3666385.864032789"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=daddd9ae-ef92-4c8f-bfaf-d20d8cfa67d9&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/59"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:servidumbres_l</Name>
+          <Title>Blue Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aservidumbres_l"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:unid_veg_cabral_etal_2009</Name>
+        <Title>Unidades de vegetación</Title>
+        <Abstract>Unidades de vegetación de bosques nativos</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Bosques</Keyword>
+          <Keyword>unid_veg_cabral_etal_2009</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.95546994711323</westBoundLongitude>
+          <eastBoundLongitude>-62.34191141765128</eastBoundLongitude>
+          <southBoundLatitude>-26.30519414693953</southBoundLatitude>
+          <northBoundLatitude>-21.99741606840236</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.95546994711323" miny="-26.30519414693953" maxx="-62.34191141765128" maxy="-21.99741606840236"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.30519414693953" miny="-65.95546994711323" maxx="-21.99741606840236" maxy="-62.34191141765128"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7342129.329543703" miny="-3017995.905991697" maxx="-6939869.834092309" maxy="-2495214.460795723"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7342129.329543703" miny="-3036929.911041998" maxx="-6939869.834092309" maxy="-2511215.0058357166"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7342129.329543703" miny="-3036929.911041998" maxx="-6939869.834092309" maxy="-2511215.0058357166"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.3640647888553515E7" miny="-2.536007279474337E8" maxx="9920360.78069092" maxy="-1.776564100277521E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4152977661519824E7" miny="-4971481.681355991" maxx="-1.1017909617632695E7" maxy="-2854109.006837362"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=60390948-27dc-4aa7-b787-b6a28773fa5b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/13"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:unid_veg_cabral_etal_2009</Name>
+          <Title>geonode:unid_veg_cabral_etal_2009</Title>
+          <LegendURL width="547" height="580">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aunid_veg_cabral_etal_2009"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:v_eje_vias</Name>
+        <Title>Calles Provincia de Salta</Title>
+        <Abstract>Digitalización de las redes viales urbanas correspondientes a las localidades de Salta.</Abstract>
+        <KeywordList>
+          <Keyword>red vial</Keyword>
+          <Keyword>v_eje_vias</Keyword>
+          <Keyword>calles</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-67.39761702899995</westBoundLongitude>
+          <eastBoundLongitude>-62.588925217999986</eastBoundLongitude>
+          <southBoundLatitude>-26.212436339999954</southBoundLatitude>
+          <northBoundLatitude>-22.03478580899997</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-67.39761702899995" miny="-26.212436339999954" maxx="-62.588925217999986" maxy="-22.03478580899997"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.212436339999954" miny="-67.39761702899995" maxx="-22.03478580899997" maxy="-62.588925217999986"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7502668.408348338" miny="-3006544.0810076743" maxx="-6967367.284566037" maxy="-2499675.7998894732"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7502668.408348338" miny="-3025415.9730433584" maxx="-6967367.284566037" maxy="-2515702.199073778"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7502668.408348338" miny="-3025415.9730433584" maxx="-6967367.284566037" maxy="-2515702.199073778"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.352522050955622E7" miny="-2.6862249269215643E8" maxx="1.1112041639979396E7" maxy="-1.80455227296943E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.4482897395333543E7" miny="-5826079.749099026" maxx="-1.1097186296788387E7" maxy="-2984261.908580906"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=099bccf9-0c09-4024-9221-def0ca7dca7a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/148"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:v_eje_vias</Name>
+          <Title>geonode:v_eje_vias</Title>
+          <LegendURL width="143" height="260">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Av_eje_vias"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:zona_vida_arg</Name>
+        <Title>Zonas de vida de Holdridge</Title>
+        <Abstract>Zonificación bioclimática objetiva, detallada y precisa del país que destaca la gran heterogeneidad ambiental del mismo para la vida espontánea, los cultivos y la producción agropecuaria y forestal.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Zonificación ecológica</Keyword>
+          <Keyword>zona_vida_arg</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-73.57162322808435</westBoundLongitude>
+          <eastBoundLongitude>-53.63989416485349</eastBoundLongitude>
+          <southBoundLatitude>-55.0422872675523</southBoundLatitude>
+          <northBoundLatitude>-21.784091159976235</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-73.57162322808435" miny="-55.0422872675523" maxx="-53.63989416485349" maxy="-21.784091159976235"/>
+        <BoundingBox CRS="EPSG:4326" minx="-55.0422872675523" miny="-73.57162322808435" maxx="-21.784091159976235" maxy="-53.63989416485349"/>
+        <BoundingBox CRS="EPSG:3785" minx="-8189955.634584928" miny="-7335004.731021143" maxx="-5971165.704636577" maxy="-2469769.6242575166"/>
+        <BoundingBox CRS="EPSG:3857" minx="-8189955.634584928" miny="-7370077.538548003" maxx="-5971165.704636577" maxy="-2485622.4532177374"/>
+        <BoundingBox CRS="EPSG:900913" minx="-8189955.634584928" miny="-7370077.538548003" maxx="-5971165.704636577" maxy="-2485622.4532177374"/>
+        <BoundingBox CRS="EPSG:32647" minx="-3.8291118913375676E7" miny="-3.47553466791076E8" maxx="9.124322128361641E7" maxy="4.7547789969383486E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.6296117796279632E7" miny="-1.0337037915361378E7" maxx="-2570781.4451964432" maxy="756891.1832566484"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e821c1db-1c8b-46e3-a733-f0a737115710&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/showmetadata/xsl/10"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:zona_vida_arg</Name>
+          <Title>geonode:zona_vida_arg</Title>
+          <LegendURL width="329" height="1660">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoportal.salta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Azona_vida_arg"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

@@ -1,0 +1,44 @@
+name: health
+
+on:
+  schedule:
+    - cron: '30 12 * * *'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  health:
+    runs-on: ubuntu-latest
+    timeout-minutes: 120
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Health check
+        run: npm run health
+
+      - name: Build health page
+        run: npm run health-page
+
+      - name: Commit and push
+        run: |
+          git add data/health.json data/health-history.jsonl docs/salud.html
+          if git diff --cached --quiet; then
+            echo "Sin cambios para commitear"
+          else
+            git -c user.name="github-actions[bot]" \
+                -c user.email="41898282+github-actions[bot]@users.noreply.github.com" \
+                commit -m "health: reporte diario y pagina de salud"
+            git push
+          fi

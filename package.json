@@ -9,6 +9,8 @@
     "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json",
     "catalog": "tsx scripts/build-catalog.ts",
     "portal": "tsx scripts/build-portal.ts",
+    "health": "tsx scripts/health-check.ts",
+    "health-page": "tsx scripts/build-health-page.ts",
     "smoke": "tsx scripts/smoke.ts",
     "mcp-smoke": "npm run build && tsx scripts/mcp-smoke.ts",
     "start": "node dist/stdio.js",

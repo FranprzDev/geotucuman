@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Blog de GeoArg</title>
+<meta name="description" content="Blog de GeoArg: notas sobre las capas de geodatos públicos de Argentina, los tipos de servicio WMS y WFS, y cómo usarlas con un agente. Datos del catálogo del 2026-11-08.">
+<link rel="canonical" href="https://franprzdev.github.io/geotucuman/blog/">
+<meta property="og:title" content="Blog de GeoArg">
+<meta property="og:description" content="Blog de GeoArg: notas sobre las capas de geodatos públicos de Argentina, los tipos de servicio WMS y WFS, y cómo usarlas con un agente. Datos del catálogo del 2026-11-08.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://franprzdev.github.io/geotucuman/blog/">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%233fd6ea' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%233fd6ea'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "Blog",
+  "name": "Blog de GeoArg",
+  "description": "Blog de GeoArg: notas sobre las capas de geodatos públicos de Argentina, los tipos de servicio WMS y WFS, y cómo usarlas con un agente. Datos del catálogo del 2026-11-08.",
+  "inLanguage": "es-AR",
+  "url": "https://franprzdev.github.io/geotucuman/blog/",
+  "author": {
+    "@type": "Person",
+    "name": "FranPrzDev"
+  },
+  "blogPost": [
+    "https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html",
+    "https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html",
+    "https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html"
+  ]
+}</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --cyan: #3fd6ea; --cyan-soft: #8ce9f4;
+    --maxw: 920px; --header-h: 68px;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: auto, 48px 48px, 48px 48px;
+    background-attachment: fixed, fixed, fixed;
+  }
+  a { color: var(--cyan); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--cyan-soft); }
+  a:focus-visible { outline: 2px solid var(--cyan-soft); outline-offset: 3px; border-radius: 8px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--cyan-soft); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
+  pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--cyan); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
+  .brand svg { width: 22px; height: 22px; color: var(--cyan); }
+  .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
+  .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+  .nav a[aria-current="page"] { color: var(--cyan-soft); }
+  .nav a.nav-cta { color: #04141a; background: var(--cyan); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--cyan-soft); color: #04141a; }
+  main { display: block; padding-bottom: 24px; }
+  .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin: 0 0 10px; }
+  h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p, li { color: #a6b4c0; font-size: 15px; }
+  .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--cyan); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary p { margin: 0; font-size: 14px; }
+  .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
+  .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td { color: #a6b4c0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 0; list-style: none; }
+  .links li { margin: 0; }
+  footer.site { margin-top: 34px; padding: 20px 0 38px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--faint); }
+  footer.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; padding: 10px 0; }
+    .nav { gap: 0; }
+    .nav a { padding: 8px 7px; font-size: 12.5px; }
+    .nav a.nav-cta { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    footer.site .wrap { flex-direction: column; align-items: flex-start; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 4px; }
+    td { padding-top: 0; border-bottom: 0; }
+    tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="GeoArg, inicio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>GeoArg</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../capas.html">Capas</a>
+      <a href="../salud.html">Salud de capas</a>
+      <a href="../mcp.html">Documentación MCP</a>
+      <a href="./index.html" aria-current="page">Blog</a>
+      <a class="nav-cta" href="https://github.com/FranprzDev/geotucuman">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Blog</p>
+    <h1 id="title">Blog de GeoArg</h1>
+    <p class="lede">Notas sobre geodatos públicos de Argentina: qué hay en el catálogo, en qué se diferencian los tipos de servicio y cómo usarlos desde un agente. Sin promesas de cobertura total ni de posiciones en buscadores.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="notas">
+    <h2 id="notas">Notas</h2>
+    <ul>
+      <li><time datetime="2026-11-11">11/11/2026</time> — <a href="./capas-publicas-por-provincia.html">Qué capas de datos públicos tiene cada provincia argentina</a>. Conteo de capas por jurisdicción, las más y las menos cubiertas, y quién solo ofrece WMS.</li>
+      <li><time datetime="2026-11-11">11/11/2026</time> — <a href="./wms-vs-wfs.html">WMS vs WFS: cuál usar para tu mapa</a>. La diferencia entre una imagen para mirar y features consultables, con los números del catálogo.</li>
+      <li><time datetime="2026-11-11">11/11/2026</time> — <a href="./armar-un-mapa-con-tu-agente.html">Cómo armar un mapa con tu agente usando GeoArg</a>. El flujo search_layers, describe_layer y query_layer, con un ejemplo real sobre &quot;agua&quot;.</li>
+    </ul>
+    <p>El catálogo y las herramientas están documentados en <a href="../mcp.html">la documentación del MCP</a>. El catálogo se regenera desde los servicios oficiales; los conteos de cada nota corresponden a la versión generada el 2026-11-08.</p>
+  </section>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>GeoArg · Código MIT · Los datos son de sus organismos publicadores</span>
+    <span><a href="../index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+</body>
+</html>

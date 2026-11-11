@@ -11,6 +11,7 @@
     "validate-catalog": "tsx scripts/validate-catalog.ts",
     "test:docs": "tsx scripts/docs-test.ts",
     "portal": "tsx scripts/build-portal.ts",
+    "blog": "tsx scripts/build-blog.ts",
     "health": "tsx scripts/health-check.ts",
     "health-page": "tsx scripts/build-health-page.ts",
     "smoke": "tsx scripts/smoke.ts",

@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>WMS vs WFS: cuál usar para tu mapa</title>
+<meta name="description" content="WMS entrega imágenes; WFS y ArcGIS REST entregan datos consultables. Cuántas capas de cada tipo hay en el catálogo de GeoArg y cuál usar. Datos del 2026-11-08.">
+<link rel="canonical" href="https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html">
+<meta property="og:title" content="WMS vs WFS: cuál usar para tu mapa">
+<meta property="og:description" content="WMS entrega imágenes; WFS y ArcGIS REST entregan datos consultables. Cuántas capas de cada tipo hay en el catálogo de GeoArg y cuál usar. Datos del 2026-11-08.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%233fd6ea' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%233fd6ea'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "WMS vs WFS: cuál usar para tu mapa",
+  "description": "WMS entrega imágenes; WFS y ArcGIS REST entregan datos consultables. Cuántas capas de cada tipo hay en el catálogo de GeoArg y cuál usar. Datos del 2026-11-08.",
+  "inLanguage": "es-AR",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "author": {
+    "@type": "Person",
+    "name": "FranPrzDev"
+  },
+  "mainEntityOfPage": "https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html",
+  "url": "https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html"
+}</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --cyan: #3fd6ea; --cyan-soft: #8ce9f4;
+    --maxw: 920px; --header-h: 68px;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: auto, 48px 48px, 48px 48px;
+    background-attachment: fixed, fixed, fixed;
+  }
+  a { color: var(--cyan); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--cyan-soft); }
+  a:focus-visible { outline: 2px solid var(--cyan-soft); outline-offset: 3px; border-radius: 8px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--cyan-soft); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
+  pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--cyan); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
+  .brand svg { width: 22px; height: 22px; color: var(--cyan); }
+  .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
+  .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+  .nav a[aria-current="page"] { color: var(--cyan-soft); }
+  .nav a.nav-cta { color: #04141a; background: var(--cyan); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--cyan-soft); color: #04141a; }
+  main { display: block; padding-bottom: 24px; }
+  .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin: 0 0 10px; }
+  h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p, li { color: #a6b4c0; font-size: 15px; }
+  .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--cyan); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary p { margin: 0; font-size: 14px; }
+  .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
+  .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td { color: #a6b4c0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 0; list-style: none; }
+  .links li { margin: 0; }
+  footer.site { margin-top: 34px; padding: 20px 0 38px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--faint); }
+  footer.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; padding: 10px 0; }
+    .nav { gap: 0; }
+    .nav a { padding: 8px 7px; font-size: 12.5px; }
+    .nav a.nav-cta { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    footer.site .wrap { flex-direction: column; align-items: flex-start; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 4px; }
+    td { padding-top: 0; border-bottom: 0; }
+    tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="GeoArg, inicio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>GeoArg</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../capas.html">Capas</a>
+      <a href="../salud.html">Salud de capas</a>
+      <a href="../mcp.html">Documentación MCP</a>
+      <a href="./index.html" aria-current="page">Blog</a>
+      <a class="nav-cta" href="https://github.com/FranprzDev/geotucuman">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Blog · Servicios</p>
+    <h1 id="title">WMS vs WFS: cuál usar para tu mapa</h1>
+    <div class="summary">
+      <p><strong>Resumen:</strong> WMS y WFS resuelven cosas distintas. WMS devuelve una imagen ya dibujada para poner en el mapa; WFS y ArcGIS REST devuelven features que se pueden filtrar, contar y analizar. En el catálogo de GeoArg hay 2920 capas ofrecidas como WFS + WMS, 742 solo WMS, 20 solo WFS y 9 solo ArcGIS REST.</p>
+    </div>
+    <p class="lede" style="margin:18px 0 0"><a href="./index.html">Blog de GeoArg</a> · <a href="../mcp.html">Documentación del MCP</a></p>
+  </section>
+
+  <section class="panel" aria-labelledby="wms">
+    <h2 id="wms">WMS: una imagen para mirar</h2>
+    <p>WMS (Web Map Service) recibe un pedido con un bbox y un tamaño y devuelve un PNG. El cliente no recibe entidades ni atributos: recibe píxeles ya coloreados por el servidor. Sirve para mostrar una capa de fondo o temática, y no permite preguntar "¿cuántos polígonos hay acá?" ni "¿cuál es el nombre de esta feature?".</p>
+  </section>
+
+  <section class="panel" aria-labelledby="wfs">
+    <h2 id="wfs">WFS y ArcGIS REST: datos consultables</h2>
+    <p>WFS (Web Feature Service) devuelve <em>features</em> con su geometría y sus atributos en GML, GeoJSON o similar. ArcGIS REST cumple el mismo rol a través de la API de ArcGIS (FeatureServer). Con estos servicios se puede filtrar por atributo, pedir solo ciertos campos, contar registros y leer el valor de cada campo.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="catalogo">
+    <h2 id="catalogo">Qué dice el catálogo</h2>
+    <p>Sobre 3691 capas indexadas, la distribución por tipo de servicio es:</p>
+  <table>
+    <thead><tr><th scope="col">Servicios de la capa</th><th scope="col">Capas</th><th scope="col">Qué permite</th></tr></thead>
+    <tbody>
+        <tr><td>WFS + WMS</td><td>2920</td><td>Se puede ver como imagen y consultar como features</td></tr>
+        <tr><td>Solo WMS</td><td>742</td><td>Solo imagen para visualizar; no admite GetFeature</td></tr>
+        <tr><td>Solo WFS</td><td>20</td><td>Solo features; no publica una imagen lista para mostrar</td></tr>
+        <tr><td>Solo ArcGIS REST</td><td>9</td><td>Features consultables vía la API REST de ArcGIS</td></tr>
+    </tbody>
+  </table>
+    <p>La mayoría de las capas provinciales publica las dos variantes a la vez. Las capas de solo WMS suelen ser servicios que solo exponen visualización.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="query">
+    <h2 id="query">Qué puede consultar query_layer</h2>
+    <p><code>query_layer</code> aplica a capas <strong>WFS</strong> y <strong>ArcGIS REST</strong>. Para las capas solo WMS, <code>query_layer</code> no aplica: el servicio entrega imágenes, no features. Igual se pueden buscar y describir (<code>search_layers</code> y <code>describe_layer</code>) porque sus metadatos están en el catálogo.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="regla">
+    <h2 id="regla">Una regla práctica</h2>
+    <p>Si solo necesitás <strong>ver</strong> la capa, usá WMS. Si necesitás <strong>saber</strong> algo de la capa (contar, filtrar, cruzar, leer atributos), usá WFS o ArcGIS REST. Cuando la capa ofrece las dos, WMS para el fondo y WFS para la consulta.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="validar">
+    <h2 id="validar">Validá cada capa antes de confiar en ella</h2>
+    <p>Algunas capas fallan de forma intermitente, aunque su servicio esté declarado en el catálogo. Antes de consultar, corré <code>describe_layer</code> sobre la capa elegida: si responde, seguí con <code>query_layer</code>. Si falla, probá otra capa o reintentá más tarde. El monitoreo por capa está en <a href="../salud.html">salud de capas</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="fuente">
+    <h2 id="fuente">Fuente de los datos</h2>
+    <p>Todos los números de esta nota salen de <code>data/catalog.json</code>, generado el 2026-11-08 (campo <code>generatedAt</code>). Son entradas del catálogo, no capas verificadas en vivo una por una.</p>
+    <p><a href="./index.html">Volver al blog</a> · <a href="../mcp.html">Documentación del MCP</a> · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.</p>
+  </section>
+<script type="application/json" id="blog-data">{"total":3691,"both":2920,"wmsOnly":742,"wfsOnly":20,"arcgis":9}</script>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>GeoArg · Código MIT · Los datos son de sus organismos publicadores</span>
+    <span><a href="../index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+</body>
+</html>

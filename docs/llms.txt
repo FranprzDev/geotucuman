@@ -13,6 +13,15 @@ Este archivo es un índice de conveniencia opcional. No es un estándar obligato
 - Ejemplo aplicado: https://franprzdev.github.io/geotucuman/ejemplos/focos-tucuman.html
 - Repositorio: https://github.com/FranprzDev/geotucuman
 
+## Blog
+
+- Índice: https://franprzdev.github.io/geotucuman/blog/
+- Qué capas de datos públicos tiene cada provincia argentina: https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html
+- WMS vs WFS: cuál usar para tu mapa: https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html
+- Cómo armar un mapa con tu agente usando GeoArg: https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html
+
+Los conteos de las notas se derivan de data/catalog.json (generado el 2026-11-08) y son entradas de catálogo, no capas verificadas.
+
 ## Endpoint MCP
 
 - Streamable HTTP: https://geoarg-mcp.franprzdev.workers.dev/mcp

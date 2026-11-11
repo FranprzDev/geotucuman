@@ -110,6 +110,8 @@ El deploy corre por GitHub Actions (`.github/workflows/deploy-worker.yml`) al pu
 
 Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles y la salud de cada capa, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`). La documentación de conexión y límites está en https://franprzdev.github.io/geotucuman/mcp.html.
 
+El sitio incluye un blog estático en `docs/blog/` con notas sobre las capas y el uso del MCP: https://franprzdev.github.io/geotucuman/blog/ (regenerar con `npm run blog`).
+
 ## Monitor de salud por capa
 
 `npm run health` sondea cada servicio declarado de cada capa del catálogo: WMS con un GetMap (mismo CRS y bbox que `describe_layer`), WFS con un GetFeature de 1 registro (`maxFeatures=1`, `srsName=EPSG:4326`) y ArcGIS REST con un query (`where=1=1`, `resultRecordCount=1`, `f=json`). Usa un pool global de 8 con máximo 2 pedidos simultáneos por host y un reintento a los 2 s ante fallas de red o timeout. Escribe `data/health.json` (estado por fuente y por capa, latencia y detalle) y agrega una línea a `data/health-history.jsonl` (evolución diaria). Flags: `--sample N`, `--source <id>` y `--out <path>`.

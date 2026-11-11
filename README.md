@@ -59,6 +59,23 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 - **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS y ArcGIS REST: las WMS-only (por ejemplo las RIDES y las 7 fuentes INTA de suelos/cobertura/productividad) son imágenes para display y no admiten GetFeature.
 - **Geocodificar texto libre** — `geocode`: "Yerba Buena, Tucumán" devuelve coordenadas vía la API nacional Georef (gratis, sin key).
 
+## Servidor público HTTP
+
+Además del modo local por stdio, el MCP corre como Cloudflare Worker público (MCP Streamable HTTP):
+
+- Endpoint MCP: https://geoarg-mcp.franprzdev.workers.dev/mcp
+- Info del servicio: https://geoarg-mcp.franprzdev.workers.dev/
+
+Para conectarte desde un cliente MCP, apuntá el transporte HTTP a la URL del endpoint:
+
+```json
+{ "mcpServers": { "geoarg": { "url": "https://geoarg-mcp.franprzdev.workers.dev/mcp" } } }
+```
+
+Es **stateless** (cada request es independiente: sin sesiones ni SSE) y de **solo lectura**. Expone las mismas tools que el servidor stdio: `search_layers`, `suggest_layers`, `describe_layer`, `query_layer`, `geocode` y sus alias legacy en español (`buscar_capas`, `describir_capa`, `consultar_capa`, `geocodificar`). El catálogo se embebe en el bundle del Worker, así que no hay acceso a disco en runtime.
+
+El deploy corre por GitHub Actions (`.github/workflows/deploy-worker.yml`) al pushear a `main` cambios en `worker/`, `src/`, `data/catalog.json` o `wrangler.toml`, usando el secret `CLOUDFLARE_API_TOKEN` (el token no se versiona). Para desarrollo local: `npm run worker:dev`; para publicar manualmente: `npm run worker:deploy`.
+
 ## Web pública
 
 Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles y la salud de cada capa, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).

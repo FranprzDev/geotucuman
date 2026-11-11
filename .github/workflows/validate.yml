@@ -31,3 +31,6 @@ jobs:
 
       - name: Build
         run: npm run build
+
+      - name: Worker smoke test
+        run: npm run worker:smoke

@@ -6,7 +6,7 @@
   "private": true,
   "scripts": {
     "build": "xmcp build",
-    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json",
+    "typecheck": "tsc -p tsconfig.json --noEmit && tsc -p tsconfig.scripts.json && tsc -p tsconfig.worker.json",
     "catalog": "tsx scripts/build-catalog.ts",
     "validate-catalog": "tsx scripts/validate-catalog.ts",
     "portal": "tsx scripts/build-portal.ts",
@@ -15,7 +15,10 @@
     "smoke": "tsx scripts/smoke.ts",
     "mcp-smoke": "npm run build && tsx scripts/mcp-smoke.ts",
     "start": "node dist/stdio.js",
-    "start:http": "node dist/http.js"
+    "start:http": "node dist/http.js",
+    "worker:dev": "wrangler dev",
+    "worker:deploy": "wrangler deploy",
+    "worker:smoke": "wrangler deploy --dry-run --outdir .wrangler-dry && node scripts/worker-smoke.mjs"
   },
   "license": "MIT",
   "dependencies": {
@@ -27,6 +30,7 @@
     "@types/node": "^26.6.6",
     "@xmcp-dev/compiler": "^1.9.0",
     "tsx": "^4.23.15",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "wrangler": "^4.160.0"
   }
 }

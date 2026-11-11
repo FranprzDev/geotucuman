@@ -34,16 +34,32 @@ export interface Catalog {
   layers: CatalogEntry[];
 }
 
-const here = dirname(fileURLToPath(import.meta.url));
-const CATALOG_PATH = join(here, '..', 'data', 'catalog.json');
-
 let cache: Catalog | null = null;
+
+/**
+ * Resolves data/catalog.json lazily. The Cloudflare Worker imports the JSON
+ * directly and seeds the cache with primeCatalog(), so this never evaluates
+ * `import.meta.url` (undefined in workerd) there.
+ */
+function catalogPath(): string {
+  const here = dirname(fileURLToPath(import.meta.url));
+  return join(here, '..', 'data', 'catalog.json');
+}
 
 export function loadCatalog(): Catalog {
   if (!cache) {
-    cache = JSON.parse(readFileSync(CATALOG_PATH, 'utf-8')) as Catalog;
+    cache = JSON.parse(readFileSync(catalogPath(), 'utf-8')) as Catalog;
   }
   return cache;
+}
+
+/**
+ * Sets the in-memory catalog cache.
+ * Used by the Cloudflare Worker, which imports data/catalog.json directly
+ * (Wrangler bundles JSON imports) so loadCatalog() never touches `node:fs`.
+ */
+export function primeCatalog(catalog: Catalog): void {
+  cache = catalog;
 }
 
 /** Normalizes for search: lowercase and accent-free. */

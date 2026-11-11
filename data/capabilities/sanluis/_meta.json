@@ -1,0 +1,10 @@
+{
+  "source": "sanluis",
+  "fetchedAt": "2026-11-11T01:19:14.256Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wfs.xml",
+    "wms.xml"
+  ]
+}

@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[Recursos_Hidricos_WMS]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Capas]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.271457</westBoundLongitude><eastBoundLongitude>-64.353976</eastBoundLongitude><southBoundLatitude>-28.113732</southBoundLatitude><northBoundLatitude>-25.952085</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.271457" miny="-28.113732" maxx="-64.353976" maxy="-25.952085"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.113732" miny="-66.271457" maxx="-25.952085" maxy="-64.353976"/>
+<BoundingBox CRS="EPSG:0" minx="3473326.914110" miny="6890920.198845" maxx="3661762.952890" maxy="7129441.689855"/>
+      <Layer queryable="1">
+        <Name>Distritos</Name>
+        <Title><![CDATA[Distritos]]></Title>
+        <Abstract><![CDATA[Distritos]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179132</westBoundLongitude><eastBoundLongitude>-64.458535</eastBoundLongitude><southBoundLatitude>-28.015287</southBoundLatitude><northBoundLatitude>-26.051337</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179132" miny="-28.015287" maxx="-64.458535" maxy="-26.051337"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015287" miny="-66.179132" maxx="-26.051337" maxy="-64.458535"/>
+<BoundingBox CRS="EPSG:0" minx="3482382.692800" miny="6901829.923200" maxx="3651622.331800" maxy="7118563.171700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Distritos</Title>
+          <LegendURL width="55" height="152">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Distritos" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cuencas_hídricas</Name>
+        <Title><![CDATA[Cuencas_hídricas]]></Title>
+        <Abstract><![CDATA[Cuencas_hídricas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.184120</westBoundLongitude><eastBoundLongitude>-64.442516</eastBoundLongitude><southBoundLatitude>-28.015899</southBoundLatitude><northBoundLatitude>-26.051623</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.184120" miny="-28.015899" maxx="-64.442516" maxy="-26.051623"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015899" miny="-66.184120" maxx="-26.051623" maxy="-64.442516"/>
+<BoundingBox CRS="EPSG:0" minx="3481892.188600" miny="6901762.084800" maxx="3653197.678400" maxy="7118513.072200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cuencas_hídricas</Title>
+          <LegendURL width="558" height="834">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cuencas_hídricas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cuerpos_de_agua</Name>
+        <Title><![CDATA[Cuerpos_de_agua]]></Title>
+        <Abstract><![CDATA[Cuerpos_de_agua]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.872270</westBoundLongitude><eastBoundLongitude>-64.867447</eastBoundLongitude><southBoundLatitude>-27.828136</southBoundLatitude><northBoundLatitude>-26.556158</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.872270" miny="-27.828136" maxx="-64.867447" maxy="-26.556158"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.828136" miny="-65.872270" maxx="-26.556158" maxy="-64.867447"/>
+<BoundingBox CRS="EPSG:0" minx="3512726.767900" miny="6922562.952900" maxx="3611585.131300" maxy="7063025.575500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cuerpos_de_agua</Title>
+          <LegendURL width="148" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cuerpos_de_agua" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Ríos</Name>
+        <Title><![CDATA[Ríos]]></Title>
+        <Abstract><![CDATA[Ríos]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.047144</westBoundLongitude><eastBoundLongitude>-64.577238</eastBoundLongitude><southBoundLatitude>-28.015081</southBoundLatitude><northBoundLatitude>-26.052183</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.047144" miny="-28.015081" maxx="-64.577238" maxy="-26.052183"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015081" miny="-66.047144" maxx="-26.052183" maxy="-64.577238"/>
+<BoundingBox CRS="EPSG:0" minx="3495363.499600" miny="6901852.760600" maxx="3639943.687400" maxy="7118599.803900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Ríos</Title>
+          <LegendURL width="66" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Ríos" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Canales</Name>
+        <Title><![CDATA[Canales]]></Title>
+        <Abstract><![CDATA[Canales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.036086</westBoundLongitude><eastBoundLongitude>-64.703456</eastBoundLongitude><southBoundLatitude>-27.843181</southBoundLatitude><northBoundLatitude>-26.056522</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.036086" miny="-27.843181" maxx="-64.703456" maxy="-26.056522"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.843181" miny="-66.036086" maxx="-26.056522" maxy="-64.703456"/>
+<BoundingBox CRS="EPSG:0" minx="3496445.377800" miny="6920902.366600" maxx="3627727.924500" maxy="7118244.235600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Canales</Title>
+          <LegendURL width="88" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Canales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Pozos_de_agua</Name>
+        <Title><![CDATA[Pozos_de_agua]]></Title>
+        <Abstract><![CDATA[Pozos_de_agua]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.026716</westBoundLongitude><eastBoundLongitude>-64.542831</eastBoundLongitude><southBoundLatitude>-27.979013</southBoundLatitude><northBoundLatitude>-26.182436</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.026716" miny="-27.979013" maxx="-64.542831" maxy="-26.182436"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979013" miny="-66.026716" maxx="-26.182436" maxy="-64.542831"/>
+<BoundingBox CRS="EPSG:0" minx="3497371.617600" miny="6905849.704500" maxx="3643376.589100" maxy="7104127.337200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Pozos_de_agua</Title>
+          <LegendURL width="135" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Pozos_de_agua" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Diques</Name>
+        <Title><![CDATA[Diques]]></Title>
+        <Abstract><![CDATA[Diques]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.054486</westBoundLongitude><eastBoundLongitude>-64.509217</eastBoundLongitude><southBoundLatitude>-28.000615</southBoundLatitude><northBoundLatitude>-26.059433</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.054486" miny="-28.000615" maxx="-64.509217" maxy="-26.059433"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000615" miny="-66.054486" maxx="-26.059433" maxy="-64.509217"/>
+<BoundingBox CRS="EPSG:0" minx="3494640.703800" miny="6903455.880200" maxx="3646655.583500" maxy="7117722.617100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Diques</Title>
+          <LegendURL width="80" height="17">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Diques" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Comparticiones</Name>
+        <Title><![CDATA[Comparticiones]]></Title>
+        <Abstract><![CDATA[Comparticiones]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:0</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.956357</westBoundLongitude><eastBoundLongitude>-64.786057</eastBoundLongitude><southBoundLatitude>-27.750294</southBoundLatitude><northBoundLatitude>-26.228647</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.956357" miny="-27.750294" maxx="-64.786057" maxy="-26.228647"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.750294" miny="-65.956357" maxx="-26.228647" maxy="-64.786057"/>
+<BoundingBox CRS="EPSG:0" minx="3504360.782800" miny="6931195.027900" maxx="3619690.773100" maxy="7099246.454200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Comparticiones</Title>
+          <LegendURL width="131" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Recursos_Hidricos_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Comparticiones" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

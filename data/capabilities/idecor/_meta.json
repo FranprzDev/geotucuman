@@ -1,0 +1,10 @@
+{
+  "source": "idecor",
+  "fetchedAt": "2026-11-11T01:18:51.986Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wfs.xml",
+    "wms.xml"
+  ]
+}

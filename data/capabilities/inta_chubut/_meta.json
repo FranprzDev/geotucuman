@@ -1,0 +1,9 @@
+{
+  "source": "inta_chubut",
+  "fetchedAt": "2026-11-11T01:19:37.455Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

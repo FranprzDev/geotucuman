@@ -1,0 +1,9 @@
+{
+  "source": "inta_santafe",
+  "fetchedAt": "2026-11-11T01:19:36.532Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

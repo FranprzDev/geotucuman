@@ -7,6 +7,34 @@ const USER_AGENT = 'GeoArg/0.2 (+https://franprzdev.github.io/geotucuman/)';
 const TIMEOUT_MS = 20_000;
 const MAX_CONCURRENCY = 4;
 
+const CACHE_MISS_PREFIX = 'capability cache file missing';
+
+/** Raw cache target for the folder-listing discovery response. */
+export interface ArcGisListCache {
+  file: string | null;
+  fromCache: boolean;
+}
+
+/** Raw cache target for one FeatureServer service (service body + per-layer bodies). */
+export interface ArcGisLayerCache {
+  file: string | null;
+  fromCache: boolean;
+}
+
+async function readCachedText(file: string | null): Promise<string> {
+  const fs = await import('node:fs');
+  if (!file || !fs.existsSync(file)) throw new Error(`${CACHE_MISS_PREFIX}: ${file ?? '(unspecified)'}`);
+  return fs.readFileSync(file, 'utf-8');
+}
+
+async function writeCachedText(file: string | null, text: string): Promise<void> {
+  if (!file) return;
+  const fs = await import('node:fs');
+  const path = await import('node:path');
+  fs.mkdirSync(path.dirname(file), { recursive: true });
+  fs.writeFileSync(file, text);
+}
+
 interface ArcGisErrorBody {
   error: { code: number; message: string; details?: string[] };
 }
@@ -83,11 +111,32 @@ export interface ArcGisFolderContent {
  * Skips raster-only MapServer services (only FeatureServer entries are returned).
  * Returns names like 'Hosted/Bomberos'.
  */
-export async function listArcgisServices(root: string, folders: string[]): Promise<string[]> {
+export async function listArcgisServices(
+  root: string,
+  folders: string[],
+  cache?: ArcGisListCache,
+): Promise<string[]> {
+  const bodies = new Map<string, ArcGisFolderContent>();
+  if (cache?.fromCache) {
+    const bundle = JSON.parse(await readCachedText(cache.file)) as Record<string, ArcGisFolderContent>;
+    for (const folder of folders) {
+      const body = bundle[folder];
+      if (!body) throw new Error(`${CACHE_MISS_PREFIX}: folder '${folder}' not in ${cache.file ?? '(unspecified)'}`);
+      bodies.set(folder, body);
+    }
+  } else {
+    const bundle: Record<string, ArcGisFolderContent> = {};
+    for (const folder of folders) {
+      const url = `${joinUrl(root, folder)}?f=json`;
+      const body = (await fetchJson(url)) as ArcGisFolderContent;
+      bodies.set(folder, body);
+      bundle[folder] = body;
+    }
+    await writeCachedText(cache?.file ?? null, JSON.stringify(bundle, null, 2));
+  }
   const out: string[] = [];
   for (const folder of folders) {
-    const url = `${joinUrl(root, folder)}?f=json`;
-    const body = (await fetchJson(url)) as ArcGisFolderContent;
+    const body = bodies.get(folder)!;
     for (const svc of body.services ?? []) {
       if (svc.type !== 'FeatureServer') continue;
       out.push(svc.name.startsWith(`${folder}/`) ? svc.name : `${folder}/${svc.name}`);
@@ -132,18 +181,52 @@ function pickWkid(sr?: { wkid?: number; latestWkid?: number }): number | undefin
   return undefined;
 }
 
+interface ArcGisRawBundle {
+  service: unknown;
+  layers: Record<string, unknown>;
+}
+
 /**
  * Fetches the layer list of a FeatureServer plus per-layer metadata.
  * Only layers that expose the `Query` capability are returned (raster-only tiles skipped).
+ * When `cache` is provided the raw service + layer JSON is read from / written to disk so
+ * offline (`fromCache`) builds are byte-reproducible.
  */
-export async function getArcgisLayers(root: string, serviceName: string): Promise<ArcGisLayerMeta[]> {
-  const svcUrl = `${joinUrl(root, serviceName)}/FeatureServer?f=json`;
-  const svcBody = (await fetchJson(svcUrl)) as ArcGisServiceBody;
-  const layers = svcBody.layers ?? [];
-  const layerIds = layers.map((l) => l.id);
-  const metas = await mapPool(layerIds, MAX_CONCURRENCY, async (id) => {
-    const url = `${joinUrl(root, serviceName)}/FeatureServer/${id}?f=json`;
-    const body = (await fetchJson(url)) as ArcGisLayerBody;
+export async function getArcgisLayers(
+  root: string,
+  serviceName: string,
+  cache?: ArcGisLayerCache,
+): Promise<ArcGisLayerMeta[]> {
+  const base = `${joinUrl(root, serviceName)}/FeatureServer`;
+  let svcBody: ArcGisServiceBody;
+  const layerBodies = new Map<number, ArcGisLayerBody>();
+
+  if (cache?.fromCache) {
+    const bundle = JSON.parse(await readCachedText(cache.file)) as ArcGisRawBundle;
+    svcBody = (bundle.service ?? {}) as ArcGisServiceBody;
+    for (const [key, body] of Object.entries(bundle.layers ?? {})) {
+      layerBodies.set(Number(key), body as ArcGisLayerBody);
+    }
+  } else {
+    svcBody = (await fetchJson(`${base}?f=json`)) as ArcGisServiceBody;
+    const layerIds = (svcBody.layers ?? []).map((l) => l.id);
+    const fetched = await mapPool(layerIds, MAX_CONCURRENCY, async (id) => ({
+      id,
+      body: (await fetchJson(`${base}/${id}?f=json`)) as ArcGisLayerBody,
+    }));
+    for (const f of fetched) layerBodies.set(f.id, f.body);
+    if (cache?.file) {
+      const bundle: ArcGisRawBundle = {
+        service: svcBody,
+        layers: Object.fromEntries([...layerBodies].map(([id, body]) => [String(id), body])),
+      };
+      await writeCachedText(cache.file, JSON.stringify(bundle, null, 2));
+    }
+  }
+
+  const metas = (svcBody.layers ?? []).map((layer): ArcGisLayerMeta | null => {
+    const id = layer.id;
+    const body = layerBodies.get(id) ?? {};
     const caps = (body.capabilities ?? '').toLowerCase();
     const capList = caps.split(',').map((c) => c.trim()).filter(Boolean);
     // Require explicit Query capability.
@@ -153,7 +236,7 @@ export async function getArcgisLayers(root: string, serviceName: string): Promis
     if (typeof geom !== 'string' || !geom.startsWith('esriGeometry')) return null;
     const meta: ArcGisLayerMeta = {
       id,
-      name: body.name ?? layers.find((l) => l.id === id)?.name ?? `Layer ${id}`,
+      name: body.name ?? layer.name ?? `Layer ${id}`,
       geometryType: geom,
       description: body.description || svcBody.description,
       copyrightText: body.copyrightText || svcBody.copyrightText,

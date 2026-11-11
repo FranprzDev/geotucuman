@@ -5,12 +5,18 @@ import type { EndpointConfig } from '../src/endpoints.js';
 import { getCapabilities } from '../src/wfs.js';
 import { getWmsCapabilities, selectWmsLayers } from '../src/wms.js';
 import type { WmsLayer } from '../src/wms.js';
-import { listArcgisServices, getArcgisLayersCached, mapPool } from '../src/arcgis.js';
+import { listArcgisServices, getArcgisLayers, mapPool } from '../src/arcgis.js';
 import type { ArcGisLayerMeta } from '../src/arcgis.js';
+import { isCacheMiss } from '../src/capability-cache.js';
 import { ServiceType } from '../src/service-type.js';
 import type { Catalog, CatalogEntry } from '../src/catalog.js';
 
 const STOP = new Set(['de', 'la', 'el', 'del', 'y', 'en', 'los', 'las', 'para', 'con']);
+
+/** When set, the build is fully offline and byte-reproducible: it only reads data/capabilities/. */
+const FROM_CACHE = process.env.GEOARG_FROM_CACHE === '1';
+/** Per-source raw GetCapabilities cache (WFS/WMS XML, ArcGIS REST JSON) plus a _meta.json. */
+const CACHE_ROOT = 'data/capabilities';
 
 function keywordsOf(typeName: string, title: string): string[] {
   const raw = `${typeName} ${title}`
@@ -35,6 +41,11 @@ function cleanText(value: string): string {
   return (value || '').replace(/<!\[CDATA\[/g, '').replace(/\]\]>/g, '').trim();
 }
 
+const today = new Date().toISOString().slice(0, 10);
+
+/** verifiedAt stamped on the layers of the source being processed (cache-aware). */
+let currentVerifiedAt = today;
+
 function wmsEntry(ep: EndpointConfig, wmsUrl: string, w: WmsLayer): CatalogEntry {
   return {
     id: `${ep.id}:${w.name}`,
@@ -46,14 +57,12 @@ function wmsEntry(ep: EndpointConfig, wmsUrl: string, w: WmsLayer): CatalogEntry
     endpoint: wmsUrl,
     defaultCrs: w.crs[0] || 'unknown',
     keywords: keywordsOf(w.name, w.title),
-    verifiedAt: today,
+    verifiedAt: currentVerifiedAt,
     services: [
       { type: ServiceType.Wms, endpoint: wmsUrl, typeName: w.name, crs: w.crs, queryable: w.queryable },
     ],
   };
 }
-
-const today = new Date().toISOString().slice(0, 10);
 
 /** One retry with a short pause: several provincial servers answer intermittently. */
 async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
@@ -64,6 +73,12 @@ async function withRetry<T>(fn: () => Promise<T>): Promise<T> {
     return fn();
   }
 }
+
+/** Offline mode never retries (there is nothing to recover from a cache read). */
+function attempt<T>(fn: () => Promise<T>): Promise<T> {
+  return FROM_CACHE ? fn() : withRetry(fn);
+}
+
 const layers: CatalogEntry[] = [];
 const previous: Catalog | null = existsSync('data/catalog.json')
   ? (JSON.parse(readFileSync('data/catalog.json', 'utf-8')) as Catalog)
@@ -178,12 +193,84 @@ function arcgisEntry(
     endpoint,
     defaultCrs: arcgisCrs(layer.wkid),
     keywords: keywordsOf(typeName, title),
-    verifiedAt: today,
+    verifiedAt: currentVerifiedAt,
     services: [
       { type: ServiceType.ArcGis, endpoint, typeName, queryable: true },
     ],
   };
 }
+
+// ---------------------------------------------------------------------------
+// Capability cache plumbing
+// ---------------------------------------------------------------------------
+
+interface SourceMeta {
+  source: string;
+  fetchedAt: string;
+  status: 'live' | 'preserved';
+  wmsStatus?: 'live' | 'failed';
+  ridesFailedThemes?: string[];
+  failedServices?: string[];
+  /** Files (relative to the source cache dir) needed to rebuild this source offline. */
+  files: string[];
+}
+
+/** fetchedAt values read from cache metadata; used to derive a deterministic generatedAt. */
+const cacheFetchedAts: string[] = [];
+
+function sanitizeSegment(name: string): string {
+  return name.replace(/[^A-Za-z0-9._-]+/g, '_').replace(/^_+|_+$/g, '') || 'uncached';
+}
+
+function cachePath(sourceId: string, file: string): string {
+  return `${CACHE_ROOT}/${sourceId}/${file}`;
+}
+
+function readSourceMeta(id: string): SourceMeta | null {
+  const p = cachePath(id, '_meta.json');
+  if (!existsSync(p)) return null;
+  return JSON.parse(readFileSync(p, 'utf-8')) as SourceMeta;
+}
+
+/** In offline mode every file listed by _meta.json must be present; otherwise fail loudly. */
+function assertCacheFilesExist(meta: SourceMeta): void {
+  const missing = meta.files.filter((f) => !existsSync(cachePath(meta.source, f)));
+  if (missing.length > 0) {
+    throw new Error(
+      `GEOARG_FROM_CACHE=1: missing capability cache file(s) for ${meta.source}: ` +
+        missing.map((f) => cachePath(meta.source, f)).join(', '),
+    );
+  }
+}
+
+function writeSourceMeta(id: string, meta: SourceMeta): void {
+  mkdirSync(`${CACHE_ROOT}/${id}`, { recursive: true });
+  writeFileSync(cachePath(id, '_meta.json'), JSON.stringify(meta, null, 2));
+}
+
+/**
+ * Prepares a source: in offline mode reads/validates its cache metadata and stamps the
+ * cached date on its layers. Returns the metadata (or null when the flag is off).
+ */
+function beginSource(ep: EndpointConfig): SourceMeta | null {
+  if (!FROM_CACHE) {
+    currentVerifiedAt = today;
+    return null;
+  }
+  const meta = readSourceMeta(ep.id);
+  if (!meta) {
+    currentVerifiedAt = today;
+    return null;
+  }
+  assertCacheFilesExist(meta);
+  cacheFetchedAts.push(meta.fetchedAt);
+  currentVerifiedAt = meta.fetchedAt.slice(0, 10);
+  return meta;
+}
+
+// ---------------------------------------------------------------------------
+// Source flows
+// ---------------------------------------------------------------------------
 
 for (const ep of ENDPOINTS) {
   if (isOnlySkipped(ep.id)) {
@@ -194,19 +281,43 @@ for (const ep of ENDPOINTS) {
   // ArcGIS REST flow: root + folders of FeatureServer services.
   if (ep.arcgis) {
     const { root, folders } = ep.arcgis;
+    const meta = beginSource(ep);
+    if (FROM_CACHE && !meta) {
+      preserveFromSnapshot(ep, 'no capabilities cache for source (GEOARG_FROM_CACHE=1)');
+      continue;
+    }
+    const discoveryFile = cachePath(ep.id, 'arcgis-discovery.json');
+    const files: string[] = [];
     try {
-      const services = ep.arcgis.services
-        ? [...ep.arcgis.services].sort()
-        : (await withRetry(() => listArcgisServices(root, folders))).sort();
+      let services: string[];
+      if (ep.arcgis.services) {
+        services = [...ep.arcgis.services].sort();
+      } else {
+        services = (
+          await attempt(() => listArcgisServices(root, folders, { file: discoveryFile, fromCache: FROM_CACHE }))
+        ).sort();
+        if (!FROM_CACHE) files.push('arcgis-discovery.json');
+      }
       if (services.length === 0) {
         throw new Error('no FeatureServer services to index (empty discovery/allowlist)');
       }
       const entries: CatalogEntry[] = [];
       const failedServices: string[] = [];
       const results = await mapPool(services, 3, async (svc): Promise<ArcGisLayerMeta[] | null> => {
+        const bundle = `arcgis-${sanitizeSegment(svc)}.json`;
+        if (FROM_CACHE && !meta!.files.includes(bundle)) {
+          // Service was already marked failed when the cache was written: replay the failure.
+          failedServices.push(svc);
+          return null;
+        }
         try {
-          return await getArcgisLayersCached(root, svc);
+          const svcLayers = await attempt(() =>
+            getArcgisLayers(root, svc, { file: cachePath(ep.id, bundle), fromCache: FROM_CACHE }),
+          );
+          if (!FROM_CACHE) files.push(bundle);
+          return svcLayers;
         } catch (err) {
+          if (isCacheMiss(err)) throw err;
           failedServices.push(svc);
           console.error(`${ep.id}: ${svc} FeatureServer metadata FAILED (${err})`);
           return null;
@@ -220,6 +331,7 @@ for (const ep of ENDPOINTS) {
       if (entries.length === 0 && failedServices.length > 0) {
         throw new Error(`all ${services.length} FeatureServer services failed`);
       }
+      const fetchedAt = FROM_CACHE ? meta!.fetchedAt : new Date().toISOString();
       if (failedServices.length > 0) {
         // Partial failure: keep live entries and preserve previous layers for failed service identities only.
         layers.push(...entries);
@@ -239,23 +351,26 @@ for (const ep of ENDPOINTS) {
         }
         layers.push(...preservedForFailed);
         preserved += preservedForFailed.length;
-        const prevFetched = previous?.sources?.[ep.id]?.fetchedAt;
         sources[ep.id] = {
           status: 'live',
-          fetchedAt: new Date().toISOString(),
+          fetchedAt,
           failedServices,
-          ...(prevFetched ? {} : {}),
         };
         console.log(
           `${ep.id}: ${services.length} FeatureServer services, ${entries.length} live ArcGIS layers, ` +
             `${preservedForFailed.length} preserved from ${failedServices.length} failed services (${failedServices.join(', ')})`,
         );
+        if (!FROM_CACHE) {
+          writeSourceMeta(ep.id, { source: ep.id, fetchedAt, status: 'live', failedServices, files });
+        }
         continue;
       }
       layers.push(...entries);
-      sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString() };
+      sources[ep.id] = { status: 'live', fetchedAt };
       console.log(`${ep.id}: ${services.length} FeatureServer services, ${entries.length} ArcGIS layers`);
+      if (!FROM_CACHE) writeSourceMeta(ep.id, { source: ep.id, fetchedAt, status: 'live', files });
     } catch (err) {
+      if (isCacheMiss(err)) throw err;
       preserveFromSnapshot(ep, String(err));
     }
     continue;
@@ -264,13 +379,29 @@ for (const ep of ENDPOINTS) {
   // WMS-only flow: themed ArcGIS services (wmsServices) or a single WMS base (wmsOnly).
   const wmsServices = ep.wmsServices ?? (ep.wmsOnly ? [ep.url] : null);
   if (wmsServices) {
+    const meta = beginSource(ep);
+    if (FROM_CACHE && !meta) {
+      preserveFromSnapshot(ep, 'no capabilities cache for source (GEOARG_FROM_CACHE=1)');
+      continue;
+    }
+    const themed = ep.wmsServices !== undefined;
+    const fetchedAt = FROM_CACHE ? meta!.fetchedAt : new Date().toISOString();
     const entries: CatalogEntry[] = [];
     const failedThemes: string[] = [];
+    const files: string[] = [];
     let answered = 0;
     for (const wmsUrl of wmsServices) {
       const theme = themeOf(wmsUrl);
+      const fileName = themed ? `wms-${sanitizeSegment(theme)}.xml` : 'wms.xml';
+      if (FROM_CACHE && !meta!.files.includes(fileName)) {
+        failedThemes.push(theme);
+        console.error(`${ep.id}: ${theme} not present in capabilities cache`);
+        continue;
+      }
       try {
-        const wmsCaps = await withRetry(() => getWmsCapabilities(wmsUrl));
+        const wmsCaps = await attempt(() =>
+          getWmsCapabilities(wmsUrl, { file: cachePath(ep.id, fileName), fromCache: FROM_CACHE }),
+        );
         const selected = selectWmsLayers(wmsCaps, ep.wmsLayerAllowlist);
         for (const w of selected) {
           const entry = wmsEntry(ep, wmsUrl, w);
@@ -280,11 +411,13 @@ for (const ep of ENDPOINTS) {
           entries.push(entry);
         }
         answered += 1;
+        if (!FROM_CACHE) files.push(fileName);
         console.log(
           `${ep.id}: ${theme} ${wmsCaps.length} WMS layers` +
             (selected !== wmsCaps ? `, ${selected.length} allowlisted` : ''),
         );
       } catch (err) {
+        if (isCacheMiss(err)) throw err;
         failedThemes.push(theme);
         console.error(`${ep.id}: ${theme} WMS GetCapabilities FAILED on ${today} (${err})`);
       }
@@ -294,11 +427,21 @@ for (const ep of ENDPOINTS) {
       layers.push(...entries);
       sources[ep.id] = {
         status: 'live',
-        fetchedAt: new Date().toISOString(),
+        fetchedAt,
         wmsStatus: 'live',
         ...failedField,
       };
       console.log(`${ep.id}: ${entries.length} WMS layers from ${answered}/${wmsServices.length} theme services`);
+      if (!FROM_CACHE) {
+        writeSourceMeta(ep.id, {
+          source: ep.id,
+          fetchedAt,
+          status: 'live',
+          wmsStatus: 'live',
+          ...(failedThemes.length > 0 ? { ridesFailedThemes: failedThemes } : {}),
+          files,
+        });
+      }
     } else {
       preserveFromSnapshot(ep, failedThemes.join(', '), failedThemes);
       if (sources[ep.id]) sources[ep.id].wmsStatus = 'failed';
@@ -307,8 +450,18 @@ for (const ep of ENDPOINTS) {
   }
 
   // WFS flow, with WMS merge for every endpoint that exposes one.
+  const meta = beginSource(ep);
+  if (FROM_CACHE && !meta) {
+    preserveFromSnapshot(ep, 'no capabilities cache for source (GEOARG_FROM_CACHE=1)');
+    continue;
+  }
+  const fetchedAt = FROM_CACHE ? meta!.fetchedAt : new Date().toISOString();
+  const files: string[] = [];
   try {
-    const caps = await withRetry(() => getCapabilities(ep));
+    const caps = await attempt(() =>
+      getCapabilities(ep, { file: cachePath(ep.id, 'wfs.xml'), fromCache: FROM_CACHE }),
+    );
+    if (!FROM_CACHE) files.push('wfs.xml');
     const entries: CatalogEntry[] = caps.map((c) => ({
       id: `${ep.id}:${c.typeName}`,
       source: ep.id,
@@ -319,46 +472,76 @@ for (const ep of ENDPOINTS) {
       endpoint: ep.url,
       defaultCrs: c.defaultCrs || 'unknown',
       keywords: keywordsOf(c.typeName, c.title),
-      verifiedAt: today,
+      verifiedAt: currentVerifiedAt,
       services: [{ type: ServiceType.Wfs, endpoint: ep.url, typeName: c.typeName }],
     }));
     const wmsUrl = wmsUrlFor(ep);
     if (wmsUrl) {
-      try {
-        const wmsCaps = await withRetry(() => getWmsCapabilities(wmsUrl));
-        for (const w of wmsCaps) {
-          const match = entries.find(
-            (e) => w.name === e.typeName || w.name === stripWorkspace(e.typeName),
+      const wmsCached = !FROM_CACHE || meta!.files.includes('wms.xml');
+      if (!wmsCached) {
+        sources[ep.id] = { status: 'live', fetchedAt, wmsStatus: 'failed' };
+        console.error(`${ep.id}: WMS not present in capabilities cache — keeping WFS layers WFS-only`);
+      } else {
+        try {
+          const wmsCaps = await attempt(() =>
+            getWmsCapabilities(wmsUrl, { file: cachePath(ep.id, 'wms.xml'), fromCache: FROM_CACHE }),
           );
-          if (match) {
-            match.services.push({
-              type: ServiceType.Wms,
-              endpoint: wmsUrl,
-              typeName: w.name,
-              crs: w.crs,
-              queryable: w.queryable,
-            });
-          } else {
-            entries.push(wmsEntry(ep, wmsUrl, w));
+          for (const w of wmsCaps) {
+            const match = entries.find(
+              (e) => w.name === e.typeName || w.name === stripWorkspace(e.typeName),
+            );
+            if (match) {
+              match.services.push({
+                type: ServiceType.Wms,
+                endpoint: wmsUrl,
+                typeName: w.name,
+                crs: w.crs,
+                queryable: w.queryable,
+              });
+            } else {
+              entries.push(wmsEntry(ep, wmsUrl, w));
+            }
           }
+          if (!FROM_CACHE) files.push('wms.xml');
+          sources[ep.id] = { status: 'live', fetchedAt, wmsStatus: 'live' };
+          console.log(`${ep.id}: ${caps.length} WFS layers, ${wmsCaps.length} WMS layers`);
+        } catch (err) {
+          if (isCacheMiss(err)) throw err;
+          sources[ep.id] = { status: 'live', fetchedAt, wmsStatus: 'failed' };
+          console.error(`${ep.id}: WMS GetCapabilities FAILED on ${today} — keeping WFS layers WFS-only (${err})`);
         }
-        sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString(), wmsStatus: 'live' };
-        console.log(`${ep.id}: ${caps.length} WFS layers, ${wmsCaps.length} WMS layers`);
-      } catch (err) {
-        sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString(), wmsStatus: 'failed' };
-        console.error(`${ep.id}: WMS GetCapabilities FAILED on ${today} — keeping WFS layers WFS-only (${err})`);
       }
     } else {
-      sources[ep.id] = { status: 'live', fetchedAt: new Date().toISOString() };
+      sources[ep.id] = { status: 'live', fetchedAt };
       console.log(`${ep.id}: ${caps.length} layers`);
     }
     layers.push(...entries);
+    if (!FROM_CACHE) {
+      const source = sources[ep.id];
+      writeSourceMeta(ep.id, {
+        source: ep.id,
+        fetchedAt,
+        status: 'live',
+        ...(source.wmsStatus ? { wmsStatus: source.wmsStatus } : {}),
+        files,
+      });
+    }
   } catch (err) {
+    if (isCacheMiss(err)) throw err;
     preserveFromSnapshot(ep, String(err));
   }
 }
 
 mkdirSync('data', { recursive: true });
-const catalog: Catalog = { generatedAt: new Date().toISOString(), sources, layers };
+
+// In offline mode generatedAt is derived from the cache so repeated builds are byte-identical.
+const generatedAt = FROM_CACHE
+  ? cacheFetchedAts.length > 0
+    ? cacheFetchedAts.reduce((a, b) => (a > b ? a : b))
+    : (previous?.generatedAt ?? new Date(0).toISOString())
+  : new Date().toISOString();
+
+const catalog: Catalog = { generatedAt, sources, layers };
 writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2));
 console.log(`data/catalog.json: ${layers.length} total layers${preserved ? ` (${preserved} preserved from previous snapshot)` : ''}`);
+if (FROM_CACHE) console.log(`GEOARG_FROM_CACHE=1: rebuilt offline from ${CACHE_ROOT}/ (generatedAt ${generatedAt})`);

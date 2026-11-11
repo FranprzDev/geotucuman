@@ -113,6 +113,12 @@ Pendientes de incorporar (relevadas el 7/11/2026, actualizado el 8/11/2026; qued
 
 `search_layers` acepta un filtro opcional `province` (ej: "Córdoba") para acotar por provincia.
 
+### Catálogo reproducible (caché de capacidades)
+
+`npm run catalog` regenera `data/catalog.json` desde los GetCapabilities en vivo y, además, guarda cada respuesta cruda (WFS/WMS XML y JSON de ArcGIS REST) en `data/capabilities/<fuente>/`, junto con un `_meta.json` por fuente (fecha de captura y archivos usados). Esa caché se versiona para poder reconstruir el catálogo sin red.
+
+`GEOARG_FROM_CACHE=1 npm run catalog` reconstruye el catálogo únicamente desde `data/capabilities/` (no toca la red) y de forma byte-idéntica: `generatedAt` y `verifiedAt` se derivan de la `fetchedAt` más reciente de la caché en lugar de la hora actual. Si falta un archivo de caché requerido el build falla con un mensaje claro; si una fuente no tiene caché, conserva su snapshot previo. `npm run validate-catalog` revisa el catálogo (ids únicos iguales a `source:typeName`, campos y URLs obligatorios, `verifiedAt` en `YYYY-MM-DD`, servicios válidos y fuentes declaradas) y corre en CI.
+
 ### Resumen de fuentes y cobertura
 
 | Fuente | Jurisdicción | Tipo | Capas indexadas | Cobertura |

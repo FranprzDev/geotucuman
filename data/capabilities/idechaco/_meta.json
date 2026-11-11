@@ -1,0 +1,10 @@
+{
+  "source": "idechaco",
+  "fetchedAt": "2026-11-11T01:18:56.642Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wfs.xml",
+    "wms.xml"
+  ]
+}

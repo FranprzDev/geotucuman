@@ -1,0 +1,2279 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="11112" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://geoservicios.entrerios.gov.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>Servicio WMS de IDEER</Title>
+    <Abstract>Servicio WMS perteneciente al Infraestrectura de Datos Espaciales de Entre Ríos.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="ideer@entrerios.gov.ar"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>IDEER</ContactPerson>
+        <ContactOrganization>Gobierno de Entre Ríos</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address/>
+        <City/>
+        <StateOrProvince/>
+        <PostCode/>
+        <Country/>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>ideer@entrerios.gov.ar</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=geojson</Format>
+        <Format>application/json;type=topojson</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>application/vnd.mapbox-vector-tile</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+      <Format>JSONP</Format>
+    </Exception>
+    <Layer>
+      <Title>Servicio WMS de IDEER</Title>
+      <Abstract>Servicio WMS perteneciente al Infraestrectura de Datos Espaciales de Entre Ríos.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:5347</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3785</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:32647</CRS>
+      <CRS>EPSG:32736</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-60.9375495911</westBoundLongitude>
+        <eastBoundLongitude>-1.6672523338286631</eastBoundLongitude>
+        <southBoundLatitude>-35.11042161287326</southBoundLatitude>
+        <northBoundLatitude>6.396482496811275E-6</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-60.9375495911" miny="-35.11042161287326" maxx="-1.6672523338286631" maxy="6.396482496811275E-6"/>
+      <BoundingBox CRS="EPSG:5347" minx="4080700.4655777086" miny="5395627.767668986" maxx="1.0001967064284654E7" maxy="1.3506622627823364E7"/>
+      <BoundingBox CRS="EPSG:4326" minx="-35.11042161287326" miny="-60.9375495911" maxx="6.396482496811275E-6" maxy="-1.6672523338286631"/>
+      <BoundingBox CRS="EPSG:3785" minx="-6783536.990671108" miny="-4154312.2126351334" maxx="-185597.68082570378" maxy="0.7072864195167632"/>
+      <BoundingBox CRS="EPSG:3857" minx="-6783536.990671108" miny="-4178897.143467546" maxx="-185597.68082570375" maxy="0.7120531746492732"/>
+      <BoundingBox CRS="EPSG:900913" minx="-6783536.990671108" miny="-4178897.143467546" maxx="-185597.68082570375" maxy="0.7120531746492732"/>
+      <BoundingBox CRS="EPSG:32647" minx="-1.8834897735036668E8" miny="-2.2232864053427446E8" maxx="4.593666106701545E7" maxy="132.1085843863375"/>
+      <BoundingBox CRS="EPSG:32736" minx="-2.033091975638259E7" miny="-2496679.4102413836" maxx="-2717903.897128227" maxy="1.0000005230686316E7"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:30_loc_f</Name>
+        <Title>30_loc_f</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>30_loc_f</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.683942756817075</westBoundLongitude>
+          <eastBoundLongitude>-57.822257379252086</eastBoundLongitude>
+          <southBoundLatitude>-33.86447813112508</southBoundLatitude>
+          <northBoundLatitude>-30.33442343087659</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.683942756817075" miny="-33.86447813112508" maxx="-57.822257379252086" maxy="-30.33442343087659"/>
+        <BoundingBox CRS="EPSG:5347" minx="6253336.083729501" miny="5436711.957204203" maxx="6642917.143857539" maxy="5701572.977963356"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.86447813112508" miny="-60.683942756817075" maxx="-30.33442343087659" maxy="-57.822257379252086"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6755305.607017038" miny="-3986756.36684259" maxx="-6436744.247975947" maxy="-3524973.5326660173"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6755305.607017038" miny="-4010619.2340056244" maxx="-6436744.247975947" maxy="-3546609.695984204"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6755305.607017038" miny="-4010619.2340056244" maxx="-6436744.247975947" maxy="-3546609.695984204"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.314908246233053E7" miny="-1.2040139622678185E8" maxx="4.221011875866288E7" maxy="-7.319387445560463E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8999526.055982474" miny="-2246858.998050654" maxx="-7602371.54965189" maxy="-1110508.1758016476"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=75b91209-13ee-4b2f-8cd1-16cdc2a12ce1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/24"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:30_loc_f</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3A30_loc_f"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:alcantarillas</Name>
+        <Title>alcantarillas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>alcantarillas</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.65154998529905</westBoundLongitude>
+          <eastBoundLongitude>-1.6672523338286631</eastBoundLongitude>
+          <southBoundLatitude>-35.11042161287326</southBoundLatitude>
+          <northBoundLatitude>6.396476802214952E-6</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.65154998529905" miny="-35.11042161287326" maxx="-1.6672523338286631" maxy="6.396476802214952E-6"/>
+        <BoundingBox CRS="EPSG:5347" minx="6251095.688253896" miny="5439723.768174017" maxx="1.0001966436548961E7" maxy="1.3923098543992614E7"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.11042161287326" miny="-60.65154998529905" maxx="6.396476802214952E-6" maxy="-1.6672523338286631"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6751699.660186268" miny="-4154270.0617810697" maxx="-185597.6808257037" maxy="0.7072617218686568"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6751699.660186268" miny="-4178897.143467546" maxx="-185597.68082570375" maxy="0.7120525401778962"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6751699.660186268" miny="-4178897.143467546" maxx="-185597.68082570375" maxy="0.7120525401778962"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1.8581363892235887E8" miny="-2.1869783888997447E8" maxx="4.218905124292987E7" maxy="129.80058175778686"/>
+        <BoundingBox CRS="EPSG:32736" minx="-2.0088816599697E7" miny="-2340900.2620178345" maxx="-3618797.619894766" maxy="1.0000005131835079E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/430"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=c440dc5a-5023-420d-bb94-eb3e7b91ba10&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:alcantarillas</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aalcantarillas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:bat_c_uruguay</Name>
+        <Title>Batimetria Concepción del Uruguay</Title>
+        <Abstract>Linea que une puntos de igual profundidad en rios o espejos de agua.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>bat_c_uruguay</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-58.22211752667981</westBoundLongitude>
+          <eastBoundLongitude>-58.210291346934596</eastBoundLongitude>
+          <southBoundLatitude>-32.49041048155372</southBoundLatitude>
+          <northBoundLatitude>-32.47196879622057</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-58.22211752667981" miny="-32.49041048155372" maxx="-58.210291346934596" maxy="-32.47196879622057"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.49041048155372" miny="-58.22211752667981" maxx="-32.47196879622057" maxy="-58.210291346934596"/>
+        <BoundingBox CRS="EPSG:5347" minx="6404319.573567119" miny="5667108.7932437025" maxx="6406383.68715154" maxy="5668254.850921337"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6481256.475976124" miny="-3804900.6214907654" maxx="-6479939.991668858" maxy="-3802478.6335126134"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6481256.475976124" miny="-3827858.1810708316" maxx="-6479939.991668858" maxy="-3825424.5663177595"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6481256.475976124" miny="-3827858.1810708316" maxx="-6479939.991668858" maxy="-3825424.5663177595"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.2254226583853874E7" miny="-8.808953799233212E7" maxx="3.2341707830849107E7" maxy="-8.78644598071419E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8077440.352821659" miny="-1309475.1950178964" maxx="-8070559.147714136" maxy="-1304887.0531615817"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2e262214-2d5c-4f02-81a8-665b73878c53&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/425"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:bat_c_uruguay</Name>
+          <Title>Blue Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Abat_c_uruguay"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:bat_diamante</Name>
+        <Title>Batimetría Diamante</Title>
+        <Abstract>Linea que une puntos de igual profundidad en rios o espejos de agua.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>bat_diamante</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.65907903844142</westBoundLongitude>
+          <eastBoundLongitude>-60.64276083914682</eastBoundLongitude>
+          <southBoundLatitude>-32.082333218683274</southBoundLatitude>
+          <northBoundLatitude>-32.053557480368184</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.65907903844142" miny="-32.082333218683274" maxx="-60.64276083914682" maxy="-32.053557480368184"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.082333218683274" miny="-60.65907903844142" maxx="-32.053557480368184" maxy="-60.64276083914682"/>
+        <BoundingBox CRS="EPSG:5347" minx="6450793.47541911" miny="5437757.175336232" maxx="6453993.744413409" maxy="5439317.2864966"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6752537.790548233" miny="-3751423.264694736" maxx="-6750721.256912095" maxy="-3747661.421705007"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6752537.790548233" miny="-3774123.0003240244" maxx="-6750721.256912095" maxy="-3770342.9337020987"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6752537.790548233" miny="-3774123.0003240244" maxx="-6750721.256912095" maxy="-3770342.9337020987"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.597447164947281E7" miny="-1.0029607944663468E8" maxx="3.612439776525171E7" maxy="-9.990438328417075E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8313680.637798848" miny="-2104017.058238031" maxx="-8302032.398759555" maxy="-2095890.0872085239"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd8d1f04-d363-44d2-84cd-664cf7c9ba03&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/426"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:bat_diamante</Name>
+          <Title>Blue Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Abat_diamante"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:bat_ibicuy</Name>
+        <Title>Batimetría_ Ibicuy</Title>
+        <Abstract>Linea que une puntos de igual profundidad en rios o espejos de agua.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>bat_ibicuy</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-59.186034324305055</westBoundLongitude>
+          <eastBoundLongitude>-59.17071932264065</eastBoundLongitude>
+          <southBoundLatitude>-33.80763597181378</southBoundLatitude>
+          <northBoundLatitude>-33.75458977341516</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-59.186034324305055" miny="-33.80763597181378" maxx="-59.17071932264065" maxy="-33.75458977341516"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.80763597181378" miny="-59.186034324305055" maxx="-33.75458977341516" maxy="-59.17071932264065"/>
+        <BoundingBox CRS="EPSG:5347" minx="6259332.224384847" miny="5575368.100742591" maxx="6265227.570132161" maxy="5576833.567410227"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6588559.20305485" miny="-3979219.520438827" maxx="-6586854.3448680695" maxy="-3972147.92572374"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6588559.20305485" miny="-4003001.39143349" maxx="-6586854.3448680695" maxy="-3995896.8378478065"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6588559.20305485" miny="-4003001.39143349" maxx="-6586854.3448680695" maxy="-3995896.8378478065"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.83333867618201E7" miny="-7.719096441396028E7" maxx="3.85153901055929E7" maxy="-7.659820782660338E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-7660137.642802035" miny="-1496611.404025832" maxx="-7641790.240205918" maxy="-1487696.0249831302"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=cd3f247b-d0cb-46c2-ba01-78ab2a5d62f1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/427"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:bat_ibicuy</Name>
+          <Title>Blue Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Abat_ibicuy"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:bomberos_voluntarios_er</Name>
+        <Title>090103 - Cuartel de bomberos</Title>
+        <Abstract>Estructura con equipamiento para extinción de incendios.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>bomberos_voluntarios_er</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.63726</westBoundLongitude>
+          <eastBoundLongitude>-57.9137048</eastBoundLongitude>
+          <southBoundLatitude>-33.74574</southBoundLatitude>
+          <northBoundLatitude>-30.339352</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.63726" miny="-33.74574" maxx="-57.9137048" maxy="-30.339352"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.74574" miny="-60.63726" maxx="-30.339352" maxy="-57.9137048"/>
+        <BoundingBox CRS="EPSG:5347" minx="6264551.0000717165" miny="5438722.805980583" maxx="6644233.357525813" maxy="5700632.322896787"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6750108.906299336" miny="-3970968.5914164083" maxx="-6446924.128287963" maxy="-3525659.5071823117"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6750108.906299336" miny="-3994712.003006171" maxx="-6446924.128287963" maxy="-3547245.3865485396"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6750108.906299336" miny="-3994712.003006171" maxx="-6446924.128287963" maxy="-3547245.3865485396"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.3188618625607528E7" miny="-1.2043146133638413E8" maxx="4.1760437760619484E7" maxy="-7.437817247824742E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9002603.826493498" miny="-2240022.6286832797" maxx="-7637023.35557468" maxy="-1141899.348916724"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4821571f-5a91-4d2a-8a01-3180bb222e2a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/395"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:bomberos_voluntarios_er</Name>
+          <Title>Cuartel de bomberos</Title>
+          <Abstract>A sample style that draws a red square point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Abomberos_voluntarios_er"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:cfi___santi___bianchi</Name>
+        <Title>cfi___santi___bianchi</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>cfi___santi___bianchi</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.570228</westBoundLongitude>
+          <eastBoundLongitude>-57.89652100000001</eastBoundLongitude>
+          <southBoundLatitude>-33.371228</southBoundLatitude>
+          <northBoundLatitude>-30.227321</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.570228" miny="-33.371228" maxx="-57.89652100000001" maxy="-30.227321"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.371228" miny="-60.570228" maxx="-30.227321" maxy="-57.89652100000001"/>
+        <BoundingBox CRS="EPSG:5347" minx="6306068.397587198" miny="5445106.198996261" maxx="6656652.804051261" maxy="5702515.305027486"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6742646.93819248" miny="-3921172.4492002227" maxx="-6445011.23642207" maxy="-3511289.832311993"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6742646.93819248" miny="-3944682.5732678426" maxx="-6445011.23642207" maxy="-3532803.4327783515"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6742646.93819248" miny="-3944682.5732678426" maxx="-6445011.23642207" maxy="-3532803.4327783515"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.264599692827726E7" miny="-1.2146018785828914E8" maxx="4.0467747259954154E7" maxy="-7.806570303356233E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9045416.36349833" miny="-2223625.36955367" maxx="-7760153.043599457" maxy="-1161129.9876367038"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/340"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=e3abb967-2442-413c-a8ea-27250030161b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:cfi___santi___bianchi</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acfi___santi___bianchi"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:cuencas_hidrograficas_df5ce376d880ad79179e95fc49e65a8d</Name>
+        <Title>cuencas_hidrograficas_df5ce376d880ad79179e95fc49e65a8d</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>cuencas_hidrograficas_df5ce376d880ad79179e95fc49e65a8d</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.77922581579999</westBoundLongitude>
+          <eastBoundLongitude>-57.7988395689</eastBoundLongitude>
+          <southBoundLatitude>-34.0393620074</southBoundLatitude>
+          <northBoundLatitude>-30.1590360624</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.77922581579999" miny="-34.0393620074" maxx="-57.7988395689" maxy="-30.1590360624"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.0393620074" miny="-60.77922581579999" maxx="-30.1590360624" maxy="-57.7988395689"/>
+        <BoundingBox CRS="EPSG:5347" minx="6231751.776862931" miny="5424934.415829641" maxx="6664222.57893696" maxy="5712068.345814796"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765912.468624242" miny="-4010162.996050383" maxx="-6434137.389252059" maxy="-3502539.365131982"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765912.468624242" miny="-4034088.6074002576" maxx="-6434137.389252059" maxy="-3524008.870465408"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765912.468624242" miny="-4034088.6074002576" maxx="-6434137.389252059" maxy="-3524008.870465408"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2160687490949463E7" miny="-1.2318864561360545E8" maxx="4.2937473948365375E7" maxy="-7.124249096604922E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9086205.376991378" miny="-2304356.696554906" maxx="-7539046.906341047" maxy="-1091487.8382974805"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=38f55387-d48a-45d7-8c3e-3167cd7e9bb7&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/137"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:cuencas_hidrograficas_df5ce376d880ad79179e95fc49e65a8d</Name>
+          <Title>Generic</Title>
+          <LegendURL width="255" height="240">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acuencas_hidrograficas_df5ce376d880ad79179e95fc49e65a8d"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:curvas_nivel</Name>
+        <Title>050101 - Curva de nivel</Title>
+        <Abstract>Linea que une puntos de igual altitud respecto al nivel medio del mar.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>curvas_nivel</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.74606583641845</westBoundLongitude>
+          <eastBoundLongitude>-57.81295387571086</eastBoundLongitude>
+          <southBoundLatitude>-34.03393247766448</southBoundLatitude>
+          <northBoundLatitude>-30.159309411639548</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.74606583641845" miny="-34.03393247766448" maxx="-57.81295387571086" maxy="-30.159309411639548"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.03393247766448" miny="-60.74606583641845" maxx="-30.159309411639548" maxy="-57.81295387571086"/>
+        <BoundingBox CRS="EPSG:5347" minx="6232382.161668344" miny="5428129.124487893" maxx="6664192.276771587" maxy="5710707.606565208"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6762221.116604774" miny="-4009436.991582277" maxx="-6435708.586699145" maxy="-3502574.3816351425"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6762221.116604774" miny="-4033359.2393941944" maxx="-6435708.586699145" maxy="-3524044.0635444005"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6762221.116604774" miny="-4033359.2393941944" maxx="-6435708.586699145" maxy="-3524044.0635444005"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.218644414173864E7" miny="-1.2303810843381506E8" maxx="4.28410874378E7" maxy="-7.132510194926378E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9084152.554714814" miny="-2292218.983712794" maxx="-7541102.486965042" maxy="-1095629.8895626643"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=42233f2c-82c7-4431-b9e6-2901e5c8f35e&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/414"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:curvas_nivel</Name>
+          <Title>CURVAS DE NIVEL</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acurvas_nivel"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:elementos_complementarios</Name>
+        <Title>elementos_complementarios</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>elementos_complementarios</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.64506623778623</westBoundLongitude>
+          <eastBoundLongitude>-1.6672523338286631</eastBoundLongitude>
+          <southBoundLatitude>-35.11029406562976</southBoundLatitude>
+          <northBoundLatitude>6.396482496811275E-6</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.64506623778623" miny="-35.11029406562976" maxx="-1.6672523338286631" maxy="6.396482496811275E-6"/>
+        <BoundingBox CRS="EPSG:5347" minx="6251100.809764386" miny="5440323.594341495" maxx="1.0001966436548961E7" maxy="1.3923098543992614E7"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.11029406562976" miny="-60.64506623778623" maxx="6.396482496811275E-6" maxy="-1.6672523338286631"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6750977.89271471" miny="-4154252.782808889" maxx="-185597.6808257037" maxy="0.707262352091342"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6750977.89271471" miny="-4178879.786866033" maxx="-185597.68082570375" maxy="0.7120531746492732"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6750977.89271471" miny="-4178879.786866033" maxx="-185597.68082570375" maxy="0.7120531746492732"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1.8577937393520766E8" miny="-2.1864483072346926E8" maxx="4.21732358339959E7" maxy="129.76955561282466"/>
+        <BoundingBox CRS="EPSG:32736" minx="-2.0085546921072066E7" miny="-2338489.7249842877" maxx="-3618797.619894766" maxy="1.0000005130509827E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=48b3c231-a93b-45b3-8318-0dbd1d4d8c95&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/433"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:elementos_complementarios</Name>
+          <Title>Red Square Point</Title>
+          <Abstract>A sample style that draws a red square point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aelementos_complementarios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:entreriosmediatensionlineas</Name>
+        <Title>entreriosmediatensionlineas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>entreriosmediatensionlineas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.687450377375</westBoundLongitude>
+          <eastBoundLongitude>-57.88183150800389</eastBoundLongitude>
+          <southBoundLatitude>-33.933855151488665</southBoundLatitude>
+          <northBoundLatitude>-30.08788357147638</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.687450377375" miny="-33.933855151488665" maxx="-57.88183150800389" maxy="-30.08788357147638"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.933855151488665" miny="-60.687450377375" maxx="-30.08788357147638" maxy="-57.88183150800389"/>
+        <BoundingBox CRS="EPSG:5347" minx="6243619.665169628" miny="5433728.195693178" maxx="6672110.15459607" maxy="5704217.186692553"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6755696.0735514425" miny="-3996063.630321797" maxx="-6443376.009653051" maxy="-3493427.9401013036"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6755696.0735514425" miny="-4019923.843268662" maxx="-6443376.009653051" maxy="-3514851.4665653836"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6755696.0735514425" miny="-4019923.843268662" maxx="-6443376.009653051" maxy="-3514851.4665653836"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.197365411059121E7" miny="-1.2362238662269576E8" maxx="4.2419910233962834E7" maxy="-7.245204232262579E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9110727.744897006" miny="-2275728.153271412" maxx="-7574975.049637533" maxy="-1120810.1514490766"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=46d90a7e-3565-4444-82d9-cbaa2ed17221&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/53"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:entreriosmediatensionlineas</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aentreriosmediatensionlineas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:er_gobiernos_locales_censo_2022_departamentos_dgeyc</Name>
+        <Title>er_gobiernos_locales_censo_2022_departamentos_dgeyc</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>er_gobiernos_locales_censo_2022_departamentos_dgeyc</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.776158934713365</westBoundLongitude>
+          <eastBoundLongitude>-57.73286608756036</eastBoundLongitude>
+          <southBoundLatitude>-34.04301359260961</southBoundLatitude>
+          <northBoundLatitude>-30.148561243037445</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.776158934713365" miny="-34.04301359260961" maxx="-57.73286608756036" maxy="-30.148561243037445"/>
+        <BoundingBox CRS="EPSG:5347" minx="6233533.0" miny="5428328.0" maxx="6663388.32467446" maxy="5709415.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.04301359260961" miny="-60.776158934713365" maxx="-30.148561243037445" maxy="-57.73286608756036"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765571.064983356" miny="-4010606.072710924" maxx="-6426793.254903471" maxy="-3501143.821661862"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765571.064983356" miny="-4034579.1640652246" maxx="-6426793.254903471" maxy="-3522660.335316018"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765571.064983356" miny="-4034579.1640652246" maxx="-6426793.254903471" maxy="-3522660.335316018"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2160377477577828E7" miny="-1.2296814709811233E8" maxx="4.2933234758106746E7" maxy="-7.12721969347099E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9081871.148545176" miny="-2291118.739153705" maxx="-7543143.745746955" maxy="-1074950.0180257203"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ef76ea05-e231-4744-be68-510b5e7d5d38&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/317"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:er_gobiernos_locales_censo_2022_departamentos_dgeyc</Name>
+          <Title>ER_Gobiernos locales_Censo 2022_Departamentos_DGEYC</Title>
+          <LegendURL width="117" height="100">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aer_gobiernos_locales_censo_2022_departamentos_dgeyc"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:er_vial_nacional</Name>
+        <Title>er_vial_nacional</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>er_vial_nacional</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.68038582367474</westBoundLongitude>
+          <eastBoundLongitude>-57.938133456799626</eastBoundLongitude>
+          <southBoundLatitude>-33.910868427610694</southBoundLatitude>
+          <northBoundLatitude>-30.27229646770014</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.68038582367474" miny="-33.910868427610694" maxx="-57.938133456799626" maxy="-30.27229646770014"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.910868427610694" miny="-60.68038582367474" maxx="-30.27229646770014" maxy="-57.938133456799626"/>
+        <BoundingBox CRS="EPSG:5347" minx="6246276.076883166" miny="5434531.302472578" maxx="6651666.973764474" maxy="5698417.685270228"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6754909.651030849" miny="-3992994.149480737" maxx="-6449643.51392366" maxy="-3517056.627555732"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6754909.651030849" miny="-4016840.1034964356" maxx="-6449643.513923662" maxy="-3538599.2545540403"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6754909.651030849" miny="-4016840.1034964356" maxx="-6449643.513923662" maxy="-3538599.2545540403"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.29257381592396E7" miny="-1.2141106856510785E8" maxx="4.2338102298082545E7" maxy="-7.279988382122779E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9032996.138341479" miny="-2260368.264727525" maxx="-7583701.499110215" maxy="-1137587.9775169191"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=6f32b8e9-1fc7-4852-8ef2-cc5301a8009a&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/58"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:er_vial_nacional</Name>
+          <Title>vial_nacional</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aer_vial_nacional"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:er_vial_provincial</Name>
+        <Title>er_vial_provincial</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>er_vial_provincial</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.5970119</westBoundLongitude>
+          <eastBoundLongitude>-57.8815256</eastBoundLongitude>
+          <southBoundLatitude>-33.8825314</southBoundLatitude>
+          <northBoundLatitude>-30.21644675354728</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.5970119" miny="-33.8825314" maxx="-57.8815256" maxy="-30.21644675354728"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.8825314" miny="-60.5970119" maxx="-30.21644675354728" maxy="-57.8815256"/>
+        <BoundingBox CRS="EPSG:5347" minx="6249313.430048389" miny="5442521.440928429" maxx="6657858.281588228" maxy="5703981.786387899"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6745628.508301939" miny="-3989211.377332912" maxx="-6443341.9561298285" maxy="-3509895.926612707"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6745628.508301939" miny="-4013039.7483424386" maxx="-6443341.9561298285" maxy="-3531402.507029748"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6745628.508301939" miny="-4013039.7483424386" maxx="-6443341.9561298285" maxy="-3531402.507029748"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2569669761580948E7" miny="-1.2170543708680387E8" maxx="4.2055225227186486E7" maxy="-7.295631810690898E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9051510.806859158" miny="-2234058.6212559915" maxx="-7591634.493326262" maxy="-1124130.1765420733"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=887a004c-99d3-40b1-a7be-336509068920&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/59"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:er_vial_provincial</Name>
+          <Title>vial_provincial</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aer_vial_provincial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:er_vial_terciaria</Name>
+        <Title>er_vial_terciaria</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>er_vial_terciaria</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.65426636</westBoundLongitude>
+          <eastBoundLongitude>-57.82640839</eastBoundLongitude>
+          <southBoundLatitude>-33.83277893</southBoundLatitude>
+          <northBoundLatitude>-30.16453934</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.65426636" miny="-33.83277893" maxx="-57.82640839" maxy="-30.16453934"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.83277893" miny="-60.65426636" maxx="-30.16453934" maxy="-57.82640839"/>
+        <BoundingBox CRS="EPSG:5347" minx="6254726.931761202" miny="5436975.989506983" maxx="6663612.512142118" maxy="5709399.980682657"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6752002.045634783" miny="-3982572.876463772" maxx="-6437206.3363786815" maxy="-3503244.363250346"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6752002.045634783" miny="-4006370.3623443246" maxx="-6437206.3363786815" maxy="-3524717.423451659"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6752002.045634783" miny="-4006370.3623443246" maxx="-6437206.3363786815" maxy="-3524717.423451659"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.223399885185888E7" miny="-1.2256949977462617E8" maxx="4.205288858590253E7" maxy="-7.332551339181869E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9076569.026549244" miny="-2258395.3146332963" maxx="-7606521.743272143" maxy="-1112443.1577405145"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=163f6b35-f707-42c6-bad6-b429429b43a2&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/60"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:er_vial_terciaria</Name>
+          <Title>vial_terciaria</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aer_vial_terciaria"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:features_634034ce5c805a35b1cb402e9beac050</Name>
+        <Title>features_634034ce5c805a35b1cb402e9beac050</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>features_634034ce5c805a35b1cb402e9beac050</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.9375495911</westBoundLongitude>
+          <eastBoundLongitude>-57.6047019958</eastBoundLongitude>
+          <southBoundLatitude>-34.3878440857</southBoundLatitude>
+          <northBoundLatitude>-29.9999972037</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.9375495911" miny="-34.3878440857" maxx="-57.6047019958" maxy="-29.9999972037"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.3878440857" miny="-60.9375495911" maxx="-29.9999972037" maxy="-57.6047019958"/>
+        <BoundingBox CRS="EPSG:5347" minx="6192680.589456325" miny="5409537.291148763" maxx="6681852.63826404" maxy="5731147.313390013"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6783536.990671108" miny="-4056858.6173945153" maxx="-6412526.093470725" maxy="-3482182.7949226187"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6783536.990671108" miny="-4080999.6643262547" maxx="-6412526.093470725" maxy="-3503549.4840660896"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6783536.990671108" miny="-4080999.6643262547" maxx="-6412526.093470725" maxy="-3503549.4840660896"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.108830702909299E7" miny="-1.2579622718009599E8" maxx="4.425235166274647E7" maxy="-6.748784158391394E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9162991.904596763" miny="-2373897.4937463175" maxx="-7424095.420787765" maxy="-1017247.5340454129"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/56"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5861afce-98e9-4da6-bac5-cf7bd0edacda&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:features_634034ce5c805a35b1cb402e9beac050</Name>
+          <Title>Generic</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afeatures_634034ce5c805a35b1cb402e9beac050"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:fracciones_30_cf263baba119298a17b066744313043f</Name>
+        <Title>fracciones_30_cf263baba119298a17b066744313043f</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>fracciones_30_cf263baba119298a17b066744313043f</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.77618489446103</westBoundLongitude>
+          <eastBoundLongitude>-57.79739503859678</eastBoundLongitude>
+          <southBoundLatitude>-34.039773168229935</southBoundLatitude>
+          <northBoundLatitude>-30.159038231023505</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.77618489446103" miny="-34.039773168229935" maxx="-57.79739503859678" maxy="-30.159038231023505"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.039773168229935" miny="-60.77618489446103" maxx="-30.159038231023505" maxy="-57.79739503859678"/>
+        <BoundingBox CRS="EPSG:5347" minx="6231703.285250565" miny="5425227.369153248" maxx="6664222.338533927" maxy="5712207.547014061"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765573.954809247" miny="-4010217.975944753" maxx="-6433976.58487427" maxy="-3502539.6429359606"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.215819166420203E7" miny="-1.2317510506244706E8" maxx="4.2931126080938205E7" maxy="-7.123545148437902E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9086026.97578292" miny="-2303244.5511789895" maxx="-7538883.106810908" maxy="-1091073.6710269393"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=d07a0c6a-1c68-42ac-a173-f7c8ae750714&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/302"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:fracciones_30_cf263baba119298a17b066744313043f</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="153" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Afracciones_30_cf263baba119298a17b066744313043f"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:gobiernos_locales_puntos_30</Name>
+        <Title>gobiernos_locales_puntos_30</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>gobiernos_locales_puntos_30</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.669842626436036</westBoundLongitude>
+          <eastBoundLongitude>-57.914552709939585</eastBoundLongitude>
+          <southBoundLatitude>-33.742476857121225</southBoundLatitude>
+          <northBoundLatitude>-30.272906980472737</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.669842626436036" miny="-33.742476857121225" maxx="-57.914552709939585" maxy="-30.272906980472737"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.742476857121225" miny="-60.669842626436036" maxx="-30.272906980472737" maxy="-57.914552709939585"/>
+        <BoundingBox CRS="EPSG:5347" minx="6264914.62314623" miny="5435546.221482169" maxx="6651599.294119764" maxy="5700686.160149721"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6753735.987682902" miny="-3970533.771012134" maxx="-6447018.517190676" maxy="-3517134.9264062135"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6753735.987682902" miny="-3994275.15426981" maxx="-6447018.517190676" maxy="-3538677.9473307873"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6753735.987682902" miny="-3994275.15426981" maxx="-6447018.517190676" maxy="-3538677.9473307873"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.288697640946676E7" miny="-1.2135784217688271E8" maxx="4.182987363314523E7" maxy="-7.441239182849576E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9032140.44789222" miny="-2256505.92152328" maxx="-7638112.439129536" maxy="-1142345.2381616717"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=21b2afa2-7a26-4c38-9bd7-83328b308eb1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/303"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:gobiernos_locales_puntos_30</Name>
+          <Title>Red Square Point</Title>
+          <Abstract>A sample style that draws a red square point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Agobiernos_locales_puntos_30"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:hitos_escuelas_policias_varios</Name>
+        <Title>hitos_escuelas_policias_varios</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>hitos_escuelas_policias_varios</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.69359978369377</westBoundLongitude>
+          <eastBoundLongitude>-57.760104809559685</eastBoundLongitude>
+          <southBoundLatitude>-34.00863572698468</southBoundLatitude>
+          <northBoundLatitude>-30.20576884539547</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.69359978369377" miny="-34.00863572698468" maxx="-57.760104809559685" maxy="-30.20576884539547"/>
+        <BoundingBox CRS="EPSG:5347" minx="6237345.6752193505" miny="5435926.36274627" maxx="6657088.202481945" maxy="5706980.665512065"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.00863572698468" miny="-60.69359978369377" maxx="-30.20576884539547" maxy="-57.760104809559685"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6756380.62233153" miny="-4006009.766590967" maxx="-6429825.455566295" maxy="-3508473.6600164534"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6756380.62233153" miny="-4029961.6522297864" maxx="-6429825.455566295" maxy="-3530027.0261564446"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6756380.62233153" miny="-4029961.6522297864" maxx="-6429825.455566295" maxy="-3530027.0261564446"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2466462208752844E7" miny="-1.2194413739366795E8" maxx="4.2637455906626694E7" maxy="-7.165960993169244E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9053294.529521836" miny="-2258541.339192392" maxx="-7554654.586936394" maxy="-1084449.3415551481"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=25ea4485-002b-4726-b963-2182459aa83e&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/314"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:hitos_escuelas_policias_varios</Name>
+          <Title>HITOS_ESCUELAS_POLICIAS_VARIOS</Title>
+          <LegendURL width="103" height="160">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ahitos_escuelas_policias_varios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:limites_depto_pais</Name>
+        <Title>limites_depto_pais</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>limites_depto_pais</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.776158934713365</westBoundLongitude>
+          <eastBoundLongitude>-57.73286608756036</eastBoundLongitude>
+          <southBoundLatitude>-34.04301359260961</southBoundLatitude>
+          <northBoundLatitude>-30.148561243037445</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.776158934713365" miny="-34.04301359260961" maxx="-57.73286608756036" maxy="-30.148561243037445"/>
+        <BoundingBox CRS="EPSG:5347" minx="6233533.0" miny="5428328.0" maxx="6663388.32467446" maxy="5709415.0"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.04301359260961" miny="-60.776158934713365" maxx="-30.148561243037445" maxy="-57.73286608756036"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765571.064983356" miny="-4010606.072710924" maxx="-6426793.254903471" maxy="-3501143.821661862"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765571.064983356" miny="-4034579.1640652246" maxx="-6426793.254903471" maxy="-3522660.335316018"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765571.064983356" miny="-4034579.1640652246" maxx="-6426793.254903471" maxy="-3522660.335316018"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2160377477577828E7" miny="-1.2296814709811233E8" maxx="4.2933234758106746E7" maxy="-7.12721969347099E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9081871.148545176" miny="-2291118.739153705" maxx="-7543143.745746955" maxy="-1074950.0180257203"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9a4152f1-edbd-48b4-84be-168e3aaea714&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/26"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:limites_depto_pais</Name>
+          <Title>limites_depto_pais</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alimites_depto_pais"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:localidades_censales_30</Name>
+        <Title>localidades_censales_30</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>localidades_censales_30</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.68764993197271</westBoundLongitude>
+          <eastBoundLongitude>-57.88307333076191</eastBoundLongitude>
+          <southBoundLatitude>-33.86813006718755</southBoundLatitude>
+          <northBoundLatitude>-30.325779996941684</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.68764993197271" miny="-33.86813006718755" maxx="-57.88307333076191" maxy="-30.325779996941684"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.86813006718755" miny="-60.68764993197271" maxx="-30.325779996941684" maxy="-57.88307333076191"/>
+        <BoundingBox CRS="EPSG:5347" minx="6250914.196468443" miny="5433868.216036934" maxx="6645737.923541684" maxy="5703606.805785861"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6755718.287867645" miny="-3987289.3977060188" maxx="-6443514.24873013" maxy="-3523917.809147122"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6755718.287867645" miny="-4011108.8305415804" maxx="-6443514.24873013" maxy="-3545494.9366105925"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6755718.287867645" miny="-4011108.8305415804" maxx="-6443514.24873013" maxy="-3545494.9366105925"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.3072712514094133E7" miny="-1.2080995082694176E8" maxx="4.223491771012787E7" maxy="-7.310152591466829E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9011081.324603358" miny="-2259184.6100738603" maxx="-7596353.588961232" maxy="-1125501.430777259"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/305"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=58d0a6f1-ead8-4f8b-9ed2-ddb9261851f8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:localidades_censales_30</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Alocalidades_censales_30"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:obras_construcciones_viales</Name>
+        <Title>obras_construcciones_viales</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>obras_construcciones_viales</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.60918102369461</westBoundLongitude>
+          <eastBoundLongitude>-57.95476012170842</eastBoundLongitude>
+          <southBoundLatitude>-33.88750688935652</southBoundLatitude>
+          <northBoundLatitude>-30.951662620958878</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.60918102369461" miny="-33.88750688935652" maxx="-57.95476012170842" maxy="-30.951662620958878"/>
+        <BoundingBox CRS="EPSG:5347" minx="6250780.841104276" miny="5443645.475346949" maxx="6574667.947257454" maxy="5689250.547372144"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.88750688935652" miny="-60.60918102369461" maxx="-30.951662620958878" maxy="-57.95476012170842"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6746983.168955023" miny="-3989829.8352462505" maxx="-6451494.3857948985" maxy="-3604441.374164451"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6746983.168955023" miny="-4013706.9332439206" maxx="-6451494.3857948985" maxy="-3626473.2043807535"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6746983.168955023" miny="-4013706.9332439206" maxx="-6451494.3857948985" maxy="-3626473.2043807535"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.6067297189562067E7" miny="-1.1284636398943312E8" maxx="4.2094630584920935E7" maxy="-7.323423212365311E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8743017.98276355" miny="-2175902.2260003104" maxx="-7597209.166724027" maxy="-1144810.61344186"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=017833f3-cf55-4ea8-988d-5784e83fff91&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/428"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:obras_construcciones_viales</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aobras_construcciones_viales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:pluviometroser</Name>
+        <Title>pluviometroser</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>pluviometroser</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.575083</westBoundLongitude>
+          <eastBoundLongitude>-57.912222</eastBoundLongitude>
+          <southBoundLatitude>-33.859194</southBoundLatitude>
+          <northBoundLatitude>-30.231789</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.575083" miny="-33.859194" maxx="-57.912222" maxy="-30.231789"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.859194" miny="-60.575083" maxx="-30.231789" maxy="-57.912222"/>
+        <BoundingBox CRS="EPSG:5347" minx="6251960.825239611" miny="5444641.320915957" maxx="6656157.498011563" maxy="5700994.242541952"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6743187.394320282" miny="-3986096.968505005" maxx="-6446759.063747016" maxy="-3511862.6040770775"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6743187.394320282" miny="-4009910.854431009" maxx="-6446759.063747016" maxy="-3533379.0887129894"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6743187.394320282" miny="-4009910.854431009" maxx="-6446759.063747016" maxy="-3533379.0887129894"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2694096948048048E7" miny="-1.2142886367448775E8" maxx="4.193591164273414E7" maxy="-7.325331368485339E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9043837.205030844" miny="-2225075.5191668994" maxx="-7599935.511562459" maxy="-1134006.7053901793"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=65835dbe-1393-4adf-a7c2-2cb65cd48e09&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/422"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:pluviometroser</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apluviometroser"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:puentes</Name>
+        <Title>puentes</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>puentes</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.658009375686085</westBoundLongitude>
+          <eastBoundLongitude>-1.6672523338286631</eastBoundLongitude>
+          <southBoundLatitude>-35.04494555303906</southBoundLatitude>
+          <northBoundLatitude>6.396470909660922E-6</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.658009375686085" miny="-35.04494555303906" maxx="-1.6672523338286631" maxy="6.396470909660922E-6"/>
+        <BoundingBox CRS="EPSG:5347" minx="6253728.5299931215" miny="5439109.309872668" maxx="1.0001966436548961E7" maxy="1.3923098543992614E7"/>
+        <BoundingBox CRS="EPSG:4326" minx="-35.04494555303906" miny="-60.658009375686085" maxx="6.396470909660922E-6" maxy="-1.6672523338286631"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6752418.7162349885" miny="-4145403.5294389133" maxx="-185597.6808257037" maxy="0.7072610704025102"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6752418.7162349885" miny="-4169990.743901127" maxx="-185597.68082570375" maxy="0.7120518844630579"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6752418.7162349885" miny="-4169990.743901127" maxx="-185597.68082570375" maxy="0.7120518844630579"/>
+        <BoundingBox CRS="EPSG:32647" minx="-1.8584874594676998E8" miny="-2.1874367514001718E8" maxx="4.213732536221263E7" maxy="129.83237048215358"/>
+        <BoundingBox CRS="EPSG:32736" minx="-2.0092166692474294E7" miny="-2343949.9977498404" maxx="-3618797.619894766" maxy="1.0000005133193018E7"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/431"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0e544b3f-01ec-410c-b82e-5c967e7ad46c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:puentes</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Apuentes"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:radios30_informacion</Name>
+        <Title>radios30_informacion</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>radios30_informacion</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.77618489446103</westBoundLongitude>
+          <eastBoundLongitude>-57.79739503859678</eastBoundLongitude>
+          <southBoundLatitude>-34.039773168229935</southBoundLatitude>
+          <northBoundLatitude>-30.159038231023505</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.77618489446103" miny="-34.039773168229935" maxx="-57.79739503859678" maxy="-30.159038231023505"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.039773168229935" miny="-60.77618489446103" maxx="-30.159038231023505" maxy="-57.79739503859678"/>
+        <BoundingBox CRS="EPSG:5347" minx="6231703.285250565" miny="5425227.369153248" maxx="6664222.338533927" maxy="5712207.547014061"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765573.954809247" miny="-4010217.975944753" maxx="-6433976.58487427" maxy="-3502539.6429359606"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.215819166420203E7" miny="-1.2317510506244706E8" maxx="4.2931126080938205E7" maxy="-7.123545148437902E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9086026.97578292" miny="-2303244.5511789895" maxx="-7538883.106810908" maxy="-1091073.6710269393"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=2577fca4-4843-467a-a14c-47527902d8ae&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/198"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:radios30_informacion</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aradios30_informacion"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:radios_30</Name>
+        <Title>radios_30</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>radios_30</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.77618489446103</westBoundLongitude>
+          <eastBoundLongitude>-57.79739503859678</eastBoundLongitude>
+          <southBoundLatitude>-34.039773168229935</southBoundLatitude>
+          <northBoundLatitude>-30.159038231023505</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.77618489446103" miny="-34.039773168229935" maxx="-57.79739503859678" maxy="-30.159038231023505"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.039773168229935" miny="-60.77618489446103" maxx="-30.159038231023505" maxy="-57.79739503859678"/>
+        <BoundingBox CRS="EPSG:5347" minx="6231703.285250565" miny="5425227.369153248" maxx="6664222.338533927" maxy="5712207.547014061"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765573.954809247" miny="-4010217.975944753" maxx="-6433976.58487427" maxy="-3502539.6429359606"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765573.954809247" miny="-4034143.841995894" maxx="-6433976.58487427" maxy="-3524009.1496702577"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.215819166420203E7" miny="-1.2317510506244706E8" maxx="4.2931126080938205E7" maxy="-7.123545148437902E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9086026.97578292" miny="-2303244.5511789895" maxx="-7538883.106810908" maxy="-1091073.6710269393"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=4cd867e1-b880-472a-a31b-1767fef58004&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/176"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:radios_30</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="22" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aradios_30"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:radios_censales_nbi</Name>
+        <Title>radios_censales_nbi</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>radios_censales_nbi</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.77618489</westBoundLongitude>
+          <eastBoundLongitude>-57.79739504</eastBoundLongitude>
+          <southBoundLatitude>-34.03977317</southBoundLatitude>
+          <northBoundLatitude>-30.15903823</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.77618489" miny="-34.03977317" maxx="-57.79739504" maxy="-30.15903823"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.03977317" miny="-60.77618489" maxx="-30.15903823" maxy="-57.79739504"/>
+        <BoundingBox CRS="EPSG:5347" minx="6231703.285056961" miny="5425227.369582234" maxx="6664222.338647386" maxy="5712207.546881029"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6765573.954312649" miny="-4010217.976181444" maxx="-6433976.585030476" maxy="-3502539.6428048476"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6765573.954312649" miny="-4034143.84223368" maxx="-6433976.585030476" maxy="-3524009.1495384844"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6765573.954312649" miny="-4034143.84223368" maxx="-6433976.585030476" maxy="-3524009.1495384844"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2158191661904734E7" miny="-1.2317510505477422E8" maxx="4.293112607482995E7" maxy="-7.123545147004975E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9086026.97595355" miny="-2303244.5496200467" maxx="-7538883.106271587" maxy="-1091073.6712861562"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/415"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=7bf2394f-1ca7-42b5-a800-755a7cd51b6c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:radios_censales_nbi</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="22" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aradios_censales_nbi"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_hidro_2026</Name>
+        <Title>red_hidro_2026</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>Hidrografía</Keyword>
+          <Keyword>red_hidro_2026</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.92319557999999</westBoundLongitude>
+          <eastBoundLongitude>-57.82793496</eastBoundLongitude>
+          <southBoundLatitude>-34.03430391</southBoundLatitude>
+          <northBoundLatitude>-30.15903606</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.92319557999999" miny="-34.03430391" maxx="-57.82793496" maxy="-30.15903606"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.03430391" miny="-60.92319557999999" maxx="-30.15903606" maxy="-57.82793496"/>
+        <BoundingBox CRS="EPSG:5347" minx="6232370.42750717" miny="5411064.746112027" maxx="6664222.579203012" maxy="5709264.508515103"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6781939.109464614" miny="-4009486.6558137937" maxx="-6437376.273373743" maxy="-3502539.3648245367"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6781939.109464614" miny="-4033409.1337309987" maxx="-6437376.273373743" maxy="-3524008.8701564143"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6781939.109464614" miny="-4033409.1337309987" maxx="-6437376.273373743" maxy="-3524008.8701564143"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.2211192230747674E7" miny="-1.2383012544681524E8" maxx="4.327850522093585E7" maxy="-7.135293145234069E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9094557.105569195" miny="-2357157.094237478" maxx="-7541307.639452407" maxy="-1099623.4819354971"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=5bd85c7a-2f85-4f5b-9b58-1cc82981179c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/369"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_hidro_2026</Name>
+          <Title>Blue Line</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_hidro_2026"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:red_vial</Name>
+        <Title>030201 - Red vial</Title>
+        <Abstract>Trayecto diseñado con superficie preparada para uso de vehículos. Incluye rutas nacionales, provinciales y caminos.</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>red_vial</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5347</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.702488159487714</westBoundLongitude>
+          <eastBoundLongitude>-57.809821544811534</eastBoundLongitude>
+          <southBoundLatitude>-33.887448047772686</southBoundLatitude>
+          <northBoundLatitude>-30.16795067973205</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.702488159487714" miny="-33.887448047772686" maxx="-57.809821544811534" maxy="-30.16795067973205"/>
+        <BoundingBox CRS="EPSG:5347" minx="6250788.512072385" miny="5435013.173480524" maxx="6661363.935610928" maxy="5702670.499719608"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.887448047772686" miny="-60.702488159487714" maxx="-30.16795067973205" maxy="-57.809821544811534"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6757370.07179889" miny="-3989821.9810529114" maxx="-6435359.897218435" maxy="-3503627.6504392503"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6757370.07179889" miny="-4013699.0426939097" maxx="-6435359.897218435" maxy="-3525156.6570165637"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6757370.07179889" miny="-4013699.0426939097" maxx="-6435359.897218435" maxy="-3525156.6570165637"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.237121599202841E7" miny="-1.2244102312770978E8" maxx="4.2320224938621335E7" maxy="-7.294333571532953E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9069999.234637257" miny="-2264575.4011759176" maxx="-7594692.536265918" maxy="-1105663.1535996904"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=95db3d8b-73bd-48cd-b72b-b83ecb25d120&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/432"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:red_vial</Name>
+          <Title>RED VIAL</Title>
+          <LegendURL width="132" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ared_vial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:registro_de_corufa</Name>
+        <Title>registro_de_corufa</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>registro_de_corufa</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.650833</westBoundLongitude>
+          <eastBoundLongitude>-57.904274</eastBoundLongitude>
+          <southBoundLatitude>-33.828322</southBoundLatitude>
+          <northBoundLatitude>-30.706158</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.650833" miny="-33.828322" maxx="-57.904274" maxy="-30.706158"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.828322" miny="-60.650833" maxx="-30.706158" maxy="-57.904274"/>
+        <BoundingBox CRS="EPSG:5347" minx="6255371.040119176" miny="5437652.251200491" maxx="6603568.767097849" maxy="5700783.443265952"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6751619.845747873" miny="-3981978.3761093873" maxx="-6445874.29643419" maxy="-3572824.716055712"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6751619.845747873" miny="-4005773.0943699814" maxx="-6445874.29643419" maxy="-3594646.6759437122"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6751619.845747873" miny="-4005773.0943699814" maxx="-6445874.29643419" maxy="-3594646.6759437122"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.4801777954265106E7" miny="-1.1615428361635554E8" maxx="4.203179110937424E7" maxy="-7.354060328534625E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8851739.337503474" miny="-2217688.9047382097" maxx="-7609813.3582313415" maxy="-1133890.6272021008"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=019689ac-660f-45a2-afea-783ba20c97f6&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/339"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:registro_de_corufa</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aregistro_de_corufa"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:registro_de_laboratorios</Name>
+        <Title>registro_de_laboratorios</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>registro_de_laboratorios</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.542854</westBoundLongitude>
+          <eastBoundLongitude>-58.012363</eastBoundLongitude>
+          <southBoundLatitude>-33.028052</southBoundLatitude>
+          <northBoundLatitude>-31.381405</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.542854" miny="-33.028052" maxx="-58.012363" maxy="-31.381405"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.028052" miny="-60.542854" maxx="-31.381405" maxy="-58.012363"/>
+        <BoundingBox CRS="EPSG:5347" minx="6344350.45748896" miny="5448362.267448625" maxx="6528703.981398476" maxy="5689085.562652986"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6739599.6784515055" miny="-3875732.5049063475" maxx="-6457906.708874544" maxy="-3660127.2942867167"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6739599.6784515055" miny="-3899027.989419788" maxx="-6457906.708874544" maxy="-3682381.5358240483"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6739599.6784515055" miny="-3899027.989419788" maxx="-6457906.708874544" maxy="-3682381.5358240483"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.781918452625086E7" miny="-1.0777295115027738E8" maxx="3.929294620737576E7" maxy="-8.181267238710752E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8573942.248311937" miny="-2125461.967829048" maxx="-7878852.382439851" maxy="-1215026.140393417"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=14fd717e-f9cf-4c21-a5bc-5bc21280d770&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/342"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:registro_de_laboratorios</Name>
+          <Title>Registro de Laboratorios</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aregistro_de_laboratorios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:registro_de_perforistas</Name>
+        <Title>registro_de_perforistas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>registro_de_perforistas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.638162</westBoundLongitude>
+          <eastBoundLongitude>-57.983202</eastBoundLongitude>
+          <southBoundLatitude>-34.803528</southBoundLatitude>
+          <northBoundLatitude>-30.760356</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.638162" miny="-34.803528" maxx="-57.983202" maxy="-30.760356"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.803528" miny="-60.638162" maxx="-30.760356" maxy="-57.983202"/>
+        <BoundingBox CRS="EPSG:5347" minx="6147314.735853537" miny="5438900.321193879" maxx="6597560.111705083" maxy="5693111.955964535"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6750209.316480031" miny="-4112816.4623106383" maxx="-6454660.521203521" maxy="-3579808.992083105"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6750209.316480031" miny="-4137213.334663201" maxx="-6454660.521203521" maxy="-3601665.7598129096"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6750209.316480031" miny="-4137213.334663201" maxx="-6454660.521203521" maxy="-3601665.7598129096"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.518156022234663E7" miny="-1.1546169441387914E8" maxx="4.450729495187259E7" maxy="-6.420961189363953E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8828892.77932239" miny="-2209013.721072539" maxx="-7299654.960719667" maxy="-1086605.8128631094"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a14bcbc7-2dc9-4f5d-ae2a-b1c67bdb19a9&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/341"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:registro_de_perforistas</Name>
+          <Title>Red Square Point</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aregistro_de_perforistas"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:renabap_er_dic_2024</Name>
+        <Title>renabap_er_dic_2024</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>renabap_er_dic_2024</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.65527467790968</westBoundLongitude>
+          <eastBoundLongitude>-57.886616751446674</eastBoundLongitude>
+          <southBoundLatitude>-33.74984401908695</southBoundLatitude>
+          <northBoundLatitude>-30.72832782251262</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.65527467790968" miny="-33.74984401908695" maxx="-57.886616751446674" maxy="-30.72832782251262"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.74984401908695" miny="-60.65527467790968" maxx="-30.72832782251262" maxy="-57.886616751446674"/>
+        <BoundingBox CRS="EPSG:5347" minx="6264044.535413217" miny="5437241.103107987" maxx="6601110.91819986" maxy="5702429.139391298"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6752114.291071046" miny="-3971515.483986999" maxx="-6443908.700516424" maxy="-3575681.171591497"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6752114.291071046" miny="-3995261.4464797857" maxx="-6443908.700516424" maxy="-3597517.372041835"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6752114.291071046" miny="-3995261.4464797857" maxx="-6443908.700516424" maxy="-3597517.372041835"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.4865624918846052E7" miny="-1.1591034986707897E8" maxx="4.181602586594482E7" maxy="-7.427689001127784E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8842863.950711202" miny="-2217549.7028304352" maxx="-7635020.961367374" maxy="-1134228.7265875076"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=b59a7df2-1c63-40b5-8a70-d40cad375e7c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/38"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:renabap_er_dic_2024</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Arenabap_er_dic_2024"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:sper_servicio_penitenciario</Name>
+        <Title>sper_servicio_penitenciario</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>sper_servicio_penitenciario</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.5303</westBoundLongitude>
+          <eastBoundLongitude>-58.0169</eastBoundLongitude>
+          <southBoundLatitude>-33.1491</southBoundLatitude>
+          <northBoundLatitude>-30.9546</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.5303" miny="-33.1491" maxx="-58.0169" maxy="-30.9546"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.1491" miny="-60.5303" maxx="-30.9546" maxy="-58.0169"/>
+        <BoundingBox CRS="EPSG:5347" minx="6330930.240707373" miny="5449329.768118685" maxx="6576024.858518857" maxy="5689502.121832784"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6738202.173564088" miny="-3891739.9696636647" maxx="-6458411.765404273" maxy="-3604873.1324619474"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6738202.173564088" miny="-3915111.2583314683" maxx="-6458411.765404273" maxy="-3626854.491684834"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6738202.173564088" miny="-3915111.2583314683" maxx="-6458411.765404273" maxy="-3626854.491684834"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.60746666949573E7" miny="-1.1273892221887937E8" maxx="3.966291492831828E7" maxy="-8.059819514004104E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8744659.806738049" miny="-2155995.100592626" maxx="-7838086.502543729" maxy="-1208836.4944622682"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bec628bd-48d5-4882-84f9-ed46abaf37d8&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/396"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:sper_servicio_penitenciario</Name>
+          <Title>Red Square Point</Title>
+          <Abstract>A sample style that draws a red square point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asper_servicio_penitenciario"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:vias_de_circulacion_30</Name>
+        <Title>030202 - Calle</Title>
+        <Abstract>Vía de transporte en interior de planta urbana que delimita manzanas. Fuente: Nomenclador Nacional de Vías de Comunicación - Dirección General de Estadística y Censos</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vias_de_circulacion_30</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.68765000285807</westBoundLongitude>
+          <eastBoundLongitude>-57.883073243550214</eastBoundLongitude>
+          <southBoundLatitude>-33.86813007203877</southBoundLatitude>
+          <northBoundLatitude>-30.32577969037092</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.68765000285807" miny="-33.86813007203877" maxx="-57.883073243550214" maxy="-30.32577969037092"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.86813007203877" miny="-60.68765000285807" maxx="-30.32577969037092" maxy="-57.883073243550214"/>
+        <BoundingBox CRS="EPSG:5347" minx="6250914.1957639335" miny="5433868.209013709" maxx="6645737.957527489" maxy="5703606.814810321"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6755718.295758568" miny="-3987289.3983533992" maxx="-6443514.239021768" maxy="-3523917.7698075827"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6755718.295758568" miny="-4011108.8311919733" maxx="-6443514.239021768" maxy="-3545494.897073349"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6755718.295758568" miny="-4011108.8311919733" maxx="-6443514.239021768" maxy="-3545494.897073349"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.307271096603786E7" miny="-1.208099547621354E8" maxx="4.223491789662486E7" maxy="-7.31015256766112E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9011081.45643506" miny="-2259184.657704433" maxx="-7596353.585366817" maxy="-1125501.406797474"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=9f237670-b167-4e79-ba5b-1c88041b6dfb&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/showmetadata/xsl/306"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:vias_de_circulacion_30</Name>
+          <Title>CALLE</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geoservicios.entrerios.gov.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Avias_de_circulacion_30"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

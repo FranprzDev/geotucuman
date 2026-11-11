@@ -1,0 +1,480 @@
+{
+  "service": {
+    "allowGeometryUpdates": true,
+    "supportsApplyEditsWithGlobalIds": false,
+    "maxRecordCount": 2000,
+    "description": "",
+    "infoInEstimates": [
+      "extent",
+      "count"
+    ],
+    "units": "esriMeters",
+    "supportsAdminApi": true,
+    "maxViewsCount": 20,
+    "syncEnabled": false,
+    "tables": [],
+    "hasVersionedData": false,
+    "supportedAppendSourceFilterFormats": "featureService",
+    "hasViews": false,
+    "layerOverridesEnabled": true,
+    "supportsRelationshipsResource": true,
+    "layers": [
+      {
+        "serviceItemId": "8c3c229aa2154dc5ae944414cbe63839",
+        "name": "aridez_pasado",
+        "id": 0,
+        "type": "Feature Layer",
+        "geometryType": "esriGeometryPolygon"
+      }
+    ],
+    "GUIDFormat": "O",
+    "spatialReference": {
+      "falseM": -100000,
+      "xyTolerance": 0.001,
+      "mUnits": 10000,
+      "zUnits": 10000,
+      "latestWkid": 3857,
+      "zTolerance": 0.001,
+      "wkid": 102100,
+      "xyUnits": 148923141.92838538,
+      "mTolerance": 0.001,
+      "falseX": -20037700,
+      "falseY": -30241100,
+      "falseZ": -100000
+    },
+    "supportedGUIDFormats": "B,O",
+    "fullExtent": {
+      "ymin": -4516181.871791188,
+      "xmin": -7852712.74843731,
+      "ymax": -3764309.041171409,
+      "xmax": -7401145.855499556,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "enableZDefaults": true,
+    "serviceItemId": "8c3c229aa2154dc5ae944414cbe63839",
+    "allowUpdateWithoutMValues": true,
+    "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+    "capabilities": "Query",
+    "supportsAppend": true,
+    "supportsDisconnectedEditing": false,
+    "supportsSyncModelNone": true,
+    "supportedAppendFormats": "featureCollection,featureService,shapefile",
+    "supportsReturnDeleteResults": true,
+    "currentVersion": 12,
+    "advancedEditingCapabilities": {
+      "supportsAsyncApplyEdits": true,
+      "supportsApplyEditsbyUploadID": true,
+      "supportsReturnEditResults": true,
+      "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+    },
+    "supportedQueryFormats": "JSON",
+    "initialExtent": {
+      "ymin": -4553775.513313802,
+      "xmin": -7875291.093096163,
+      "ymax": -3726715.3996398845,
+      "xmax": -7378567.510860141,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      }
+    },
+    "serviceDescription": "",
+    "editorTrackingInfo": {
+      "allowOthersToUpdate": true,
+      "enableEditorTracking": false,
+      "allowOthersToDelete": false,
+      "allowOthersToQuery": true,
+      "enableOwnershipAccessControl": false
+    },
+    "hasSyncEnabledViews": false,
+    "copyrightText": "",
+    "zDefault": 0,
+    "supportsLayerOverrides": true
+  },
+  "layers": {
+    "0": {
+      "isCoGoEnabled": false,
+      "extent": {
+        "ymin": -4516181.871791188,
+        "xmin": -7852712.74843731,
+        "ymax": -3764309.041171409,
+        "xmax": -7401145.855499556,
+        "spatialReference": {
+          "falseM": -100000,
+          "xyTolerance": 0.001,
+          "mUnits": 10000,
+          "zUnits": 10000,
+          "latestWkid": 3857,
+          "zTolerance": 0.001,
+          "wkid": 102100,
+          "xyUnits": 148923141.92838538,
+          "mTolerance": 0.001,
+          "falseX": -20037700,
+          "falseY": -30241100,
+          "falseZ": -100000
+        }
+      },
+      "isDataBranchVersioned": false,
+      "supportsApplyEditsWithGlobalIds": false,
+      "maxRecordCount": 2000,
+      "infoInEstimates": [
+        "extent",
+        "count"
+      ],
+      "datesInUnknownTimezone": false,
+      "type": "Feature Layer",
+      "onlyAllowTrueCurveUpdatesByTrueCurveClients": true,
+      "supportsAttachmentsByUploadId": true,
+      "editingInfo": {
+        "lastEditDate": 1787670389755
+      },
+      "relationships": [],
+      "supportedAppendCapabilities": "Features,Attachments",
+      "supportsAttachmentsResizing": true,
+      "cimVersion": "3.6.0",
+      "isDataArchived": false,
+      "id": 0,
+      "spatialReference": {
+        "falseM": -100000,
+        "xyTolerance": 0.001,
+        "mUnits": 10000,
+        "zUnits": 10000,
+        "latestWkid": 3857,
+        "zTolerance": 0.001,
+        "wkid": 102100,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": -100000
+      },
+      "supportsSubtypeEditing": true,
+      "supportsStatistics": true,
+      "supportedExportFormats": "sqlite,filegdb,shapefile,csv,geojson,kml",
+      "standardMaxRecordCount": 2000,
+      "isDataVersioned": false,
+      "templates": [
+        {
+          "name": "aridez_pasado",
+          "description": "",
+          "drawingTool": "esriFeatureEditToolPolygon",
+          "prototype": {
+            "attributes": {
+              "dn": null,
+              "fid_1": null
+            }
+          }
+        }
+      ],
+      "hasGeometryProperties": true,
+      "supportsAdvancedQueries": true,
+      "parentLayer": null,
+      "currentVersion": 12,
+      "canScaleSymbols": false,
+      "hasZ": false,
+      "advancedEditingCapabilities": {
+        "supportsAsyncApplyEdits": true,
+        "supportsApplyEditsbyUploadID": true,
+        "supportsReturnEditResults": true,
+        "supportedSqlFormatsInCalculate": [
+          "standard"
+        ],
+        "supportedApplyEditsUploadIDFormats": "JSON,PBF"
+      },
+      "objectIdField": "fid",
+      "supportsQuantizationEditMode": true,
+      "hasContingentValuesDefinition": false,
+      "name": "aridez_pasado",
+      "allowTrueCurvesUpdates": false,
+      "displayField": "fid_1",
+      "supportsCalculate": true,
+      "fields": [
+        {
+          "modelName": "fid",
+          "nullable": false,
+          "defaultValue": null,
+          "editable": false,
+          "domain": null,
+          "length": 4,
+          "name": "fid",
+          "alias": "fid",
+          "type": "esriFieldTypeOID"
+        },
+        {
+          "modelName": "fid_1",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "fid_1",
+          "alias": "fid_1",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "modelName": "dn",
+          "nullable": true,
+          "editable": true,
+          "defaultValue": null,
+          "domain": null,
+          "name": "dn",
+          "alias": "DN",
+          "type": "esriFieldTypeInteger"
+        },
+        {
+          "virtual": true,
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "SHAPE__Length",
+          "alias": "SHAPE__Length",
+          "type": "esriFieldTypeDouble"
+        },
+        {
+          "virtual": true,
+          "nullable": true,
+          "editable": false,
+          "defaultValue": null,
+          "domain": null,
+          "name": "SHAPE__Area",
+          "alias": "SHAPE__Area",
+          "type": "esriFieldTypeDouble"
+        }
+      ],
+      "maxRecordCountFactor": 1,
+      "dateFieldsTimeReference": {
+        "timeZoneIANA": "Etc/UTC",
+        "respectsDaylightSaving": false,
+        "timeZone": "UTC"
+      },
+      "supportsFieldDescriptionProperty": true,
+      "hasM": false,
+      "allowGeometryUpdates": true,
+      "useStandardizedQueries": true,
+      "globalIdField": null,
+      "sourceSpatialReference": {
+        "wkt": "PROJCS[\"WGS_1984_Web_Mercator_Auxiliary_Sphere\",GEOGCS[\"GCS_WGS_1984\",DATUM[\"D_WGS_1984\",SPHEROID[\"WGS_1984\",6378137.0,298.257223563]],PRIMEM[\"Greenwich\",0.0],UNIT[\"Degree\",0.0174532925199433]],PROJECTION[\"Mercator_Auxiliary_Sphere\"],PARAMETER[\"False_Easting\",0.0],PARAMETER[\"False_Northing\",0.0],PARAMETER[\"Central_Meridian\",0.0],PARAMETER[\"Standard_Parallel_1\",0.0],PARAMETER[\"Auxiliary_Sphere_Type\",0.0],UNIT[\"Meter\",1.0]]",
+        "falseM": 0,
+        "mUnits": 1,
+        "zUnits": 1,
+        "zTolerance": 0.001,
+        "wkid": 3857,
+        "xyUnits": 148923141.92838538,
+        "mTolerance": 0.001,
+        "falseX": -20037700,
+        "falseY": -30241100,
+        "falseZ": 0
+      },
+      "description": "aridez_pasado",
+      "syncCanReturnChanges": true,
+      "supportsAsyncDelete": true,
+      "supportsAdminApi": true,
+      "supportedSpatialRelationships": [
+        "esriSpatialRelIntersects",
+        "esriSpatialRelContains",
+        "esriSpatialRelCrosses",
+        "esriSpatialRelEnvelopeIntersects",
+        "esriSpatialRelOverlaps",
+        "esriSpatialRelTouches",
+        "esriSpatialRelWithin"
+      ],
+      "geometryProperties": {
+        "shapeAreaFieldName": "SHAPE__Area",
+        "shapeLengthFieldName": "SHAPE__Length",
+        "units": "esriMeters"
+      },
+      "supportsRollbackOnFailureParameter": true,
+      "isDataReplicaTracked": false,
+      "standardMaxRecordCountNoGeometry": 16000,
+      "supportsTruncate": true,
+      "indexes": [
+        {
+          "name": "r895_sde_rowid_uk",
+          "isUnique": true,
+          "description": "",
+          "fields": "fid",
+          "isAscending": true
+        },
+        {
+          "name": "a811_ix1",
+          "isUnique": false,
+          "description": "",
+          "fields": "shape",
+          "isAscending": true
+        }
+      ],
+      "supportedAppendSourceFilterFormats": "featureService",
+      "editFieldsInfo": null,
+      "htmlPopupType": "esriServerHTMLPopupTypeAsHTMLText",
+      "GUIDFormat": "O",
+      "minScale": 0,
+      "hasAttachments": false,
+      "queryBinsCapabilities": {
+        "supportsFirstDayOfWeek": true,
+        "supportedNormalizationTypes": [
+          "boxCox",
+          "field",
+          "inverse",
+          "log",
+          "naturalLog",
+          "percentOfTotal",
+          "squareRoot"
+        ],
+        "supportedStatisticTypes": [
+          "count",
+          "sum",
+          "min",
+          "max",
+          "avg",
+          "stddev",
+          "var",
+          "percentile_cont",
+          "percentile_disc"
+        ],
+        "supportsNormalization": true,
+        "supportsSnapToData": true,
+        "supportsFixedIntervalBin": true,
+        "supportsStackBy": true,
+        "supportsAutoIntervalBin": true,
+        "supportsFixedBoundariesBin": true,
+        "supportsDateBin": true,
+        "supportsSplitBy": true,
+        "supportsReturnFullIntervalBin": true
+      },
+      "advancedQueryCapabilities": {
+        "supportsSqlExpression": true,
+        "supportsQueryWithResultType": true,
+        "supportsQueryRelatedPagination": true,
+        "supportsQueryWithCacheHint": false,
+        "supportsQueryWithDatumTransformation": true,
+        "supportsCurrentUserQueries": true,
+        "supportsQueryAttachmentsWithReturnUrl": true,
+        "fullTextSearchCapabilities": {
+          "supportsOperator": true,
+          "supportsSearchOperator": true
+        },
+        "supportsDefaultSR": true,
+        "supportsQueryDateBins": true,
+        "supportsQueryBins": true,
+        "supportsQueryWithLodSR": true,
+        "supportsPaginationOnAggregatedQueries": true,
+        "supportsPagination": true,
+        "supportsMaxRecordCountFactor": true,
+        "supportsDegeneratedQuantizedGeometry": true,
+        "fullTextSearchableFields": [],
+        "supportsStatistics": true,
+        "supportsOrderBy": true,
+        "supportsReturningGeometryProperties": true,
+        "supportsFullTextSearch": true,
+        "supportsQueryWithDistance": true,
+        "supportsLod": true,
+        "supportsQueryAttachmentOrderByFields": true,
+        "supportsCountDistinct": true,
+        "supportsAdvancedQueryRelated": true,
+        "supportsQueryAttachments": true,
+        "supportsReturningQueryExtent": true,
+        "supportsQueryAttachmentsCountOnly": true,
+        "supportsISODOW": true,
+        "supportsOrderByOnlyOnLayerFields": false,
+        "supportsOutFieldSqlExpression": true,
+        "supportsTopFeaturesQuery": true,
+        "supportsReturningGeometryEnvelope": true,
+        "supportsDistinct": true,
+        "supportsReturningGeometryCentroid": true,
+        "supportsQueryAnalytic": true,
+        "supportsPercentileStatistics": true,
+        "supportsISOWeek": true,
+        "supportsHavingClause": true
+      },
+      "subtypeField": "",
+      "supportsValidateSQL": true,
+      "enableZDefaults": true,
+      "serviceItemId": "8c3c229aa2154dc5ae944414cbe63839",
+      "allowUpdateWithoutMValues": true,
+      "supportsCoordinatesQuantization": true,
+      "types": [],
+      "capabilities": "Query",
+      "maxScale": 0,
+      "supportsAppend": true,
+      "supportsExceedsLimitStatistics": true,
+      "defaultVisibility": true,
+      "advancedQueryAnalyticCapabilities": {
+        "supportsAsync": true,
+        "supportsLinearRegression": true,
+        "supportsPercentileAnalytic": false
+      },
+      "hasMetadata": true,
+      "supportedAppendFormats": "csv,excel,featureCollection,featureService,geojson,imageCollection,jsonl,pbf,shapefile",
+      "tileMaxRecordCount": 2000,
+      "typeIdField": "",
+      "supportsASyncCalculate": true,
+      "supportedQueryFormats": "JSON, geoJSON, PBF",
+      "sqlParserVersion": "PG_11.4.0",
+      "drawingInfo": {
+        "renderer": {
+          "symbol": {
+            "outline": {
+              "color": [
+                110,
+                110,
+                110,
+                255
+              ],
+              "width": 0.7,
+              "style": "esriSLSSolid",
+              "type": "esriSLS"
+            },
+            "color": [
+              212,
+              252,
+              184,
+              255
+            ],
+            "style": "esriSFSSolid",
+            "type": "esriSFS"
+          },
+          "type": "simple"
+        },
+        "scaleSymbols": true,
+        "transparency": 0,
+        "labelingInfo": null
+      },
+      "geometryField": {
+        "sqlType": "sqlTypeOther",
+        "nullable": true,
+        "editable": true,
+        "name": "shape",
+        "typeName": "st_geometry",
+        "length": 2147483647,
+        "type": "esriFieldTypeGeometry"
+      },
+      "copyrightText": "",
+      "zDefault": 0,
+      "geometryType": "esriGeometryPolygon",
+      "supportsLayerOverrides": true
+    }
+  }
+}

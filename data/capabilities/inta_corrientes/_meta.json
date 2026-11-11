@@ -1,0 +1,9 @@
+{
+  "source": "inta_corrientes",
+  "fetchedAt": "2026-11-11T01:19:35.586Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

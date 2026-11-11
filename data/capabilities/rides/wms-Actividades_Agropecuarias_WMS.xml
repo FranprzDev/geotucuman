@@ -1,0 +1,2596 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[Actividades_Agropecuarias_WMS]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[Actividades Agropecuarias]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.232801</westBoundLongitude><eastBoundLongitude>-63.434302</eastBoundLongitude><southBoundLatitude>-29.141394</southBoundLatitude><northBoundLatitude>-21.696911</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.232801" miny="-29.141394" maxx="-63.434302" maxy="-21.696911"/>
+<BoundingBox CRS="EPSG:4326" minx="-29.141394" miny="-66.232801" maxx="-21.696911" maxy="-63.434302"/>
+<BoundingBox CRS="EPSG:22173" minx="6777024.727140" miny="3477346.983625" maxx="7599780.548060" maxy="3749761.423227"/>
+      <Layer queryable="1">
+        <Name>Vid_2019</Name>
+        <Title><![CDATA[Vid_2019]]></Title>
+        <Abstract><![CDATA[Vid_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.047300</westBoundLongitude><eastBoundLongitude>-65.847418</eastBoundLongitude><southBoundLatitude>-26.627742</southBoundLatitude><northBoundLatitude>-26.301288</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.047300" miny="-26.627742" maxx="-65.847418" maxy="-26.301288"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.627742" miny="-66.047300" maxx="-26.301288" maxy="-65.847418"/>
+<BoundingBox CRS="EPSG:22173" minx="7055581.808700" miny="3495289.906600" maxx="7091742.463700" maxy="3515194.038400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Vid_2019</Title>
+          <LegendURL width="95" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Vid_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2018</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2018]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2018]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815741</westBoundLongitude><eastBoundLongitude>-64.728857</eastBoundLongitude><southBoundLatitude>-27.979967</southBoundLatitude><northBoundLatitude>-26.442322</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815741" miny="-27.979967" maxx="-64.728857" maxy="-26.442322"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979967" miny="-65.815741" maxx="-26.442322" maxy="-64.728857"/>
+<BoundingBox CRS="EPSG:22173" minx="6905729.918700" miny="3518377.155600" maxx="7075516.273800" maxy="3625067.551300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2018</Title>
+          <LegendURL width="189" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2018" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2015</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2015]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2015]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815723</westBoundLongitude><eastBoundLongitude>-64.736283</eastBoundLongitude><southBoundLatitude>-27.782633</southBoundLatitude><northBoundLatitude>-26.453261</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815723" miny="-27.782633" maxx="-64.736283" maxy="-26.453261"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.782633" miny="-65.815723" maxx="-26.453261" maxy="-64.736283"/>
+<BoundingBox CRS="EPSG:22173" minx="6927598.180800" miny="3518377.155600" maxx="7074308.917600" maxy="3624562.339200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2015</Title>
+          <LegendURL width="189" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2015" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2014</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2014]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2014]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.812152</westBoundLongitude><eastBoundLongitude>-64.736285</eastBoundLongitude><southBoundLatitude>-27.782408</southBoundLatitude><northBoundLatitude>-26.470201</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.812152" miny="-27.782408" maxx="-64.736285" maxy="-26.470201"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.782408" miny="-65.812152" maxx="-26.470201" maxy="-64.736285"/>
+<BoundingBox CRS="EPSG:22173" minx="6927622.509100" miny="3518730.579700" maxx="7072431.503600" maxy="3624562.339200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2014</Title>
+          <LegendURL width="189" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2014" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2013</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2013]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2013]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.806479</westBoundLongitude><eastBoundLongitude>-64.736155</eastBoundLongitude><southBoundLatitude>-27.793675</southBoundLatitude><northBoundLatitude>-26.470201</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.806479" miny="-27.793675" maxx="-64.736155" maxy="-26.470201"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.793675" miny="-65.806479" maxx="-26.470201" maxy="-64.736155"/>
+<BoundingBox CRS="EPSG:22173" minx="6926373.062300" miny="3519296.189700" maxx="7072431.503600" maxy="3624562.339200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2013</Title>
+          <LegendURL width="189" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2013" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2012</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2012]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2012]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.806479</westBoundLongitude><eastBoundLongitude>-64.736155</eastBoundLongitude><southBoundLatitude>-27.793675</southBoundLatitude><northBoundLatitude>-26.470201</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.806479" miny="-27.793675" maxx="-64.736155" maxy="-26.470201"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.793675" miny="-65.806479" maxx="-26.470201" maxy="-64.736155"/>
+<BoundingBox CRS="EPSG:22173" minx="6926373.062300" miny="3519296.189700" maxx="7072431.503600" maxy="3624562.339200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2012</Title>
+          <LegendURL width="189" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2012" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>UP_Citrus_Senasa_2011</Name>
+        <Title><![CDATA[UP_Citrus_Senasa_2011]]></Title>
+        <Abstract><![CDATA[UP_Citrus_Senasa_2011]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.806479</westBoundLongitude><eastBoundLongitude>-64.736155</eastBoundLongitude><southBoundLatitude>-27.793675</southBoundLatitude><northBoundLatitude>-26.470201</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.806479" miny="-27.793675" maxx="-64.736155" maxy="-26.470201"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.793675" miny="-65.806479" maxx="-26.470201" maxy="-64.736155"/>
+<BoundingBox CRS="EPSG:22173" minx="6926373.062300" miny="3519296.189700" maxx="7072431.503600" maxy="3624562.339200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>UP_Citrus_Senasa_2011</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=UP_Citrus_Senasa_2011" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2020_EEAOC</Name>
+        <Title><![CDATA[Trigo_2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.747071</westBoundLongitude><eastBoundLongitude>-64.484242</eastBoundLongitude><southBoundLatitude>-28.002756</southBoundLatitude><northBoundLatitude>-26.237211</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.747071" miny="-28.002756" maxx="-64.484242" maxy="-26.237211"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.002756" miny="-65.747071" maxx="-26.237211" maxy="-64.484242"/>
+<BoundingBox CRS="EPSG:22173" minx="6903192.000000" miny="3525270.000000" maxx="7097992.000000" maxy="3649110.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2020_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2018_EEAOC</Name>
+        <Title><![CDATA[Trigo_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.744424</westBoundLongitude><eastBoundLongitude>-64.483770</eastBoundLongitude><southBoundLatitude>-28.003788</southBoundLatitude><northBoundLatitude>-26.237522</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.744424" miny="-28.003788" maxx="-64.483770" maxy="-26.237522"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003788" miny="-65.744424" maxx="-26.237522" maxy="-64.483770"/>
+<BoundingBox CRS="EPSG:22173" minx="6903077.000000" miny="3525534.415500" maxx="7097957.000000" maxy="3649155.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2018_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2016_EEAOC</Name>
+        <Title><![CDATA[Trigo_2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.671583</westBoundLongitude><eastBoundLongitude>-64.487150</eastBoundLongitude><southBoundLatitude>-28.004621</southBoundLatitude><northBoundLatitude>-26.241256</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.671583" miny="-28.004621" maxx="-64.487150" maxy="-26.241256"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004621" miny="-65.671583" maxx="-26.241256" maxy="-64.487150"/>
+<BoundingBox CRS="EPSG:22173" minx="6902967.000000" miny="3532811.000000" maxx="7097547.000000" maxy="3648821.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2016_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2015_EEAOC</Name>
+        <Title><![CDATA[Trigo_2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.670755</westBoundLongitude><eastBoundLongitude>-64.480915</eastBoundLongitude><southBoundLatitude>-27.995862</southBoundLatitude><northBoundLatitude>-26.230811</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.670755" miny="-27.995862" maxx="-64.480915" maxy="-26.230811"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.995862" miny="-65.670755" maxx="-26.230811" maxy="-64.480915"/>
+<BoundingBox CRS="EPSG:22173" minx="6903937.454400" miny="3532896.611700" maxx="7098697.454400" maxy="3649446.611700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2015_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2014_EEAOC</Name>
+        <Title><![CDATA[Trigo_2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.671760</westBoundLongitude><eastBoundLongitude>-64.486978</eastBoundLongitude><southBoundLatitude>-28.002303</southBoundLatitude><northBoundLatitude>-26.276585</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.671760" miny="-28.002303" maxx="-64.486978" maxy="-26.276585"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.002303" miny="-65.671760" maxx="-26.276585" maxy="-64.486978"/>
+<BoundingBox CRS="EPSG:22173" minx="6903223.940300" miny="3532783.302600" maxx="7093631.319300" maxy="3648841.133600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2014_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2013_EEAOC</Name>
+        <Title><![CDATA[Trigo_2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.698724</westBoundLongitude><eastBoundLongitude>-64.761204</eastBoundLongitude><southBoundLatitude>-28.009158</southBoundLatitude><northBoundLatitude>-26.510672</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.698724" miny="-28.009158" maxx="-64.761204" maxy="-26.510672"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.009158" miny="-65.698724" maxx="-26.510672" maxy="-64.761204"/>
+<BoundingBox CRS="EPSG:22173" minx="6902471.554900" miny="3530030.242700" maxx="7067972.586100" maxy="3621851.219500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2013_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2012_EEAOC</Name>
+        <Title><![CDATA[Trigo_2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.644735</westBoundLongitude><eastBoundLongitude>-64.487123</eastBoundLongitude><southBoundLatitude>-28.005754</southBoundLatitude><northBoundLatitude>-26.372677</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.644735" miny="-28.005754" maxx="-64.487123" maxy="-26.372677"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.005754" miny="-65.644735" maxx="-26.372677" maxy="-64.487123"/>
+<BoundingBox CRS="EPSG:22173" minx="6902833.907000" miny="3535453.284000" maxx="7082981.563700" maxy="3648822.067900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2012_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2011_EEAOC</Name>
+        <Title><![CDATA[Trigo_2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.670631</westBoundLongitude><eastBoundLongitude>-64.486084</eastBoundLongitude><southBoundLatitude>-28.000526</southBoundLatitude><northBoundLatitude>-26.254382</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.670631" miny="-28.000526" maxx="-64.486084" maxy="-26.254382"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000526" miny="-65.670631" maxx="-26.254382" maxy="-64.486084"/>
+<BoundingBox CRS="EPSG:22173" minx="6903420.602000" miny="3532902.409400" maxx="7096091.086200" maxy="3648931.563000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2011_EEAOC</Title>
+          <LegendURL width="159" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2010_EEAOC</Name>
+        <Title><![CDATA[Trigo_2010_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2010_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.670100</westBoundLongitude><eastBoundLongitude>-64.478934</eastBoundLongitude><southBoundLatitude>-28.005987</southBoundLatitude><northBoundLatitude>-26.227602</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.670100" miny="-28.005987" maxx="-64.478934" maxy="-26.227602"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.005987" miny="-65.670100" maxx="-26.227602" maxy="-64.478934"/>
+<BoundingBox CRS="EPSG:22173" minx="6902815.203400" miny="3532962.996700" maxx="7099050.969600" maxy="3649627.552800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2010_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2010_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2009_EEAOC</Name>
+        <Title><![CDATA[Trigo_2009_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2009_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.693317</westBoundLongitude><eastBoundLongitude>-64.477230</eastBoundLongitude><southBoundLatitude>-28.004701</southBoundLatitude><northBoundLatitude>-26.247587</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.693317" miny="-28.004701" maxx="-64.477230" maxy="-26.247587"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004701" miny="-65.693317" maxx="-26.247587" maxy="-64.477230"/>
+<BoundingBox CRS="EPSG:22173" minx="6902963.958900" miny="3530637.895900" maxx="7096834.185400" maxy="3649797.157100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2009_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2009_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Trigo_2008_EEAOC</Name>
+        <Title><![CDATA[Trigo_2008_EEAOC]]></Title>
+        <Abstract><![CDATA[Trigo_2008_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.706631</westBoundLongitude><eastBoundLongitude>-64.487306</eastBoundLongitude><southBoundLatitude>-27.984382</southBoundLatitude><northBoundLatitude>-26.228159</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.706631" miny="-27.984382" maxx="-64.487306" maxy="-26.228159"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.984382" miny="-65.706631" maxx="-26.228159" maxy="-64.487306"/>
+<BoundingBox CRS="EPSG:22173" minx="6905219.025300" miny="3529312.717000" maxx="7098998.487900" maxy="3648833.626400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Trigo_2008_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Trigo_2008_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2025_2026</Name>
+        <Title><![CDATA[Tabaco_2025_2026]]></Title>
+        <Abstract><![CDATA[Tabaco_2025_2026]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771306</westBoundLongitude><eastBoundLongitude>-65.439806</eastBoundLongitude><southBoundLatitude>-27.987358</southBoundLatitude><northBoundLatitude>-27.503741</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771306" miny="-27.987358" maxx="-65.439806" maxy="-27.503741"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.987358" miny="-65.771306" maxx="-27.503741" maxy="-65.439806"/>
+<BoundingBox CRS="EPSG:22173" minx="6904903.725400" miny="3522596.849200" maxx="6958393.330400" maxy="3555109.125500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2025_2026</Title>
+          <LegendURL width="156" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2025_2026" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2024_2025</Name>
+        <Title><![CDATA[Tabaco_2024_2025]]></Title>
+        <Abstract><![CDATA[Tabaco_2024_2025]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.751263</westBoundLongitude><eastBoundLongitude>-65.440069</eastBoundLongitude><southBoundLatitude>-27.987269</southBoundLatitude><northBoundLatitude>-27.487966</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.751263" miny="-27.987269" maxx="-65.440069" maxy="-27.487966"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.987269" miny="-65.751263" maxx="-27.487966" maxy="-65.440069"/>
+<BoundingBox CRS="EPSG:22173" minx="6904909.675200" miny="3524580.726100" maxx="6960141.584600" maxy="3555083.298000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2024_2025</Title>
+          <LegendURL width="156" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2024_2025" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2023-2024</Name>
+        <Title><![CDATA[Tabaco_2023-2024]]></Title>
+        <Abstract><![CDATA[Tabaco_2023-2024]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771344</westBoundLongitude><eastBoundLongitude>-65.439661</eastBoundLongitude><southBoundLatitude>-27.987334</southBoundLatitude><northBoundLatitude>-27.504815</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771344" miny="-27.987334" maxx="-65.439661" maxy="-27.504815"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.987334" miny="-65.771344" maxx="-27.504815" maxy="-65.439661"/>
+<BoundingBox CRS="EPSG:22173" minx="6904906.343500" miny="3522592.828700" maxx="6958274.175700" maxy="3555123.446800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2023-2024</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2023-2024" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2022-2023</Name>
+        <Title><![CDATA[Tabaco_2022-2023]]></Title>
+        <Abstract><![CDATA[Tabaco_2022-2023]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771247</westBoundLongitude><eastBoundLongitude>-65.440726</eastBoundLongitude><southBoundLatitude>-27.987272</southBoundLatitude><northBoundLatitude>-27.504993</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771247" miny="-27.987272" maxx="-65.440726" maxy="-27.504993"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.987272" miny="-65.771247" maxx="-27.504993" maxy="-65.440726"/>
+<BoundingBox CRS="EPSG:22173" minx="6904913.196900" miny="3522602.407100" maxx="6958254.977500" maxy="3555018.701000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2022-2023</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2022-2023" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2020-2021</Name>
+        <Title><![CDATA[Tabaco_2020-2021]]></Title>
+        <Abstract><![CDATA[Tabaco_2020-2021]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771324</westBoundLongitude><eastBoundLongitude>-65.439625</eastBoundLongitude><southBoundLatitude>-27.996454</southBoundLatitude><northBoundLatitude>-27.503401</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771324" miny="-27.996454" maxx="-65.439625" maxy="-27.503401"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996454" miny="-65.771324" maxx="-27.503401" maxy="-65.439625"/>
+<BoundingBox CRS="EPSG:22173" minx="6903895.703600" miny="3522595.065400" maxx="6958430.861600" maxy="3555122.314900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2020-2021</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2020-2021" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2019-2020</Name>
+        <Title><![CDATA[Tabaco_2019-2020]]></Title>
+        <Abstract><![CDATA[Tabaco_2019-2020]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771341</westBoundLongitude><eastBoundLongitude>-65.439708</eastBoundLongitude><southBoundLatitude>-27.996465</southBoundLatitude><northBoundLatitude>-27.503130</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771341" miny="-27.996465" maxx="-65.439708" maxy="-27.503130"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996465" miny="-65.771341" maxx="-27.503130" maxy="-65.439708"/>
+<BoundingBox CRS="EPSG:22173" minx="6903894.435500" miny="3522593.518400" maxx="6958461.006700" maxy="3555114.136200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2019-2020</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2019-2020" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2018-2019</Name>
+        <Title><![CDATA[Tabaco_2018-2019]]></Title>
+        <Abstract><![CDATA[Tabaco_2018-2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771341</westBoundLongitude><eastBoundLongitude>-65.439708</eastBoundLongitude><southBoundLatitude>-27.996465</southBoundLatitude><northBoundLatitude>-27.503130</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771341" miny="-27.996465" maxx="-65.439708" maxy="-27.503130"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996465" miny="-65.771341" maxx="-27.503130" maxy="-65.439708"/>
+<BoundingBox CRS="EPSG:22173" minx="6903894.435500" miny="3522593.518400" maxx="6958461.006700" maxy="3555114.136200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2018-2019</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2018-2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2017-2018</Name>
+        <Title><![CDATA[Tabaco_2017-2018]]></Title>
+        <Abstract><![CDATA[Tabaco_2017-2018]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771293</westBoundLongitude><eastBoundLongitude>-65.439716</eastBoundLongitude><southBoundLatitude>-27.996428</southBoundLatitude><northBoundLatitude>-27.503080</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771293" miny="-27.996428" maxx="-65.439716" maxy="-27.503080"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996428" miny="-65.771293" maxx="-27.503080" maxy="-65.439716"/>
+<BoundingBox CRS="EPSG:22173" minx="6903898.527700" miny="3522598.274600" maxx="6958466.566800" maxy="3555113.377700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2017-2018</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2017-2018" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2015-2016</Name>
+        <Title><![CDATA[Tabaco_2015-2016]]></Title>
+        <Abstract><![CDATA[Tabaco_2015-2016]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771119</westBoundLongitude><eastBoundLongitude>-65.440200</eastBoundLongitude><southBoundLatitude>-27.996514</southBoundLatitude><northBoundLatitude>-27.503032</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771119" miny="-27.996514" maxx="-65.440200" maxy="-27.503032"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996514" miny="-65.771119" maxx="-27.503032" maxy="-65.440200"/>
+<BoundingBox CRS="EPSG:22173" minx="6903888.982800" miny="3522615.477700" maxx="6958472.043800" maxy="3555065.762900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2015-2016</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2015-2016" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2014-2015</Name>
+        <Title><![CDATA[Tabaco_2014-2015]]></Title>
+        <Abstract><![CDATA[Tabaco_2014-2015]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.771084</westBoundLongitude><eastBoundLongitude>-65.440186</eastBoundLongitude><southBoundLatitude>-27.996421</southBoundLatitude><northBoundLatitude>-27.506259</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.771084" miny="-27.996421" maxx="-65.440186" maxy="-27.506259"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996421" miny="-65.771084" maxx="-27.506259" maxy="-65.440186"/>
+<BoundingBox CRS="EPSG:22173" minx="6903899.257500" miny="3522618.241300" maxx="6958114.431200" maxy="3555067.125400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2014-2015</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2014-2015" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2013-2014</Name>
+        <Title><![CDATA[Tabaco_2013-2014]]></Title>
+        <Abstract><![CDATA[Tabaco_2013-2014]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.768747</westBoundLongitude><eastBoundLongitude>-65.440483</eastBoundLongitude><southBoundLatitude>-27.987688</southBoundLatitude><northBoundLatitude>-27.506038</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.768747" miny="-27.987688" maxx="-65.440483" maxy="-27.506038"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.987688" miny="-65.768747" maxx="-27.506038" maxy="-65.440483"/>
+<BoundingBox CRS="EPSG:22173" minx="6904866.699100" miny="3522849.173900" maxx="6958139.015300" maxy="3555042.393200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2013-2014</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2013-2014" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2012-2013</Name>
+        <Title><![CDATA[Tabaco_2012-2013]]></Title>
+        <Abstract><![CDATA[Tabaco_2012-2013]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.770538</westBoundLongitude><eastBoundLongitude>-65.430330</eastBoundLongitude><southBoundLatitude>-27.996446</southBoundLatitude><northBoundLatitude>-27.505983</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.770538" miny="-27.996446" maxx="-65.430330" maxy="-27.505983"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996446" miny="-65.770538" maxx="-27.505983" maxy="-65.430330"/>
+<BoundingBox CRS="EPSG:22173" minx="6903896.477300" miny="3522672.239600" maxx="6958140.660000" maxy="3556036.700400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2012-2013</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2012-2013" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2011-2012</Name>
+        <Title><![CDATA[Tabaco_2011-2012]]></Title>
+        <Abstract><![CDATA[Tabaco_2011-2012]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.758688</westBoundLongitude><eastBoundLongitude>-65.440281</eastBoundLongitude><southBoundLatitude>-27.998593</southBoundLatitude><northBoundLatitude>-27.513815</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.758688" miny="-27.998593" maxx="-65.440281" maxy="-27.513815"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.998593" miny="-65.758688" maxx="-27.513815" maxy="-65.440281"/>
+<BoundingBox CRS="EPSG:22173" minx="6903656.230000" miny="3523841.405100" maxx="6957277.157600" maxy="3555056.715600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2011-2012</Title>
+          <LegendURL width="152" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2011-2012" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tabaco_2008-2009</Name>
+        <Title><![CDATA[Tabaco_2008-2009]]></Title>
+        <Abstract><![CDATA[Tabaco_2008-2009]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.714606</westBoundLongitude><eastBoundLongitude>-65.445763</eastBoundLongitude><southBoundLatitude>-27.787494</southBoundLatitude><northBoundLatitude>-27.527698</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.714606" miny="-27.787494" maxx="-65.445763" maxy="-27.527698"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.787494" miny="-65.714606" maxx="-27.527698" maxy="-65.445763"/>
+<BoundingBox CRS="EPSG:22173" minx="6927040.594700" miny="3528193.203600" maxx="6955740.657200" maxy="3554623.204700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tabaco_2008-2009</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tabaco_2008-2009" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2025_EEAOC</Name>
+        <Title><![CDATA[Soja_2025_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2025_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.826313</westBoundLongitude><eastBoundLongitude>-64.480229</eastBoundLongitude><southBoundLatitude>-28.009871</southBoundLatitude><northBoundLatitude>-26.222143</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.826313" miny="-28.009871" maxx="-64.480229" maxy="-26.222143"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.009871" miny="-65.826313" maxx="-26.222143" maxy="-64.480229"/>
+<BoundingBox CRS="EPSG:22173" minx="6902417.584700" miny="3517355.186500" maxx="7099657.573500" maxy="3649495.178800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2025_EEAOC</Title>
+          <LegendURL width="157" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2025_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2024_EEAOC</Name>
+        <Title><![CDATA[Soja_2024_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2024_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.752256</westBoundLongitude><eastBoundLongitude>-64.466509</eastBoundLongitude><southBoundLatitude>-28.009753</southBoundLatitude><northBoundLatitude>-26.222092</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.752256" miny="-28.009753" maxx="-64.466509" maxy="-26.222092"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.009753" miny="-65.752256" maxx="-26.222092" maxy="-64.466509"/>
+<BoundingBox CRS="EPSG:22173" minx="6902417.584700" miny="3524755.186100" maxx="7099647.573600" maxy="3650845.178700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2024_EEAOC</Title>
+          <LegendURL width="157" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2024_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2022-2023_EEAOC</Name>
+        <Title><![CDATA[Soja_2022-2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2022-2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.795339</westBoundLongitude><eastBoundLongitude>-64.479852</eastBoundLongitude><southBoundLatitude>-28.004097</southBoundLatitude><northBoundLatitude>-26.222183</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.795339" miny="-28.004097" maxx="-64.479852" maxy="-26.222183"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004097" miny="-65.795339" maxx="-26.222183" maxy="-64.479852"/>
+<BoundingBox CRS="EPSG:22173" minx="6903052.584700" miny="3520450.186300" maxx="7099652.573500" maxy="3649540.178800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2022-2023_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2022-2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2021-2022_EEAOC</Name>
+        <Title><![CDATA[Soja_2021-2022_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2021-2022_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.795541</westBoundLongitude><eastBoundLongitude>-64.480968</eastBoundLongitude><southBoundLatitude>-28.004373</southBoundLatitude><northBoundLatitude>-26.222290</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.795541" miny="-28.004373" maxx="-64.480968" maxy="-26.222290"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004373" miny="-65.795541" maxx="-26.222290" maxy="-64.480968"/>
+<BoundingBox CRS="EPSG:22173" minx="6903022.000000" miny="3520430.000000" maxx="7099642.000000" maxy="3649430.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2021-2022_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2021-2022_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2019-2020_EEAOC</Name>
+        <Title><![CDATA[Soja_2019-2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2019-2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.774425</westBoundLongitude><eastBoundLongitude>-64.466554</eastBoundLongitude><southBoundLatitude>-28.003166</southBoundLatitude><northBoundLatitude>-26.222142</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.774425" miny="-28.003166" maxx="-64.466554" maxy="-26.222142"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003166" miny="-65.774425" maxx="-26.222142" maxy="-64.466554"/>
+<BoundingBox CRS="EPSG:22173" minx="6903152.000000" miny="3522540.000000" maxx="7099642.000000" maxy="3650850.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2019-2020_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2019-2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2017-2018_EEAOC</Name>
+        <Title><![CDATA[Soja_2017-2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2017-2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.796161</westBoundLongitude><eastBoundLongitude>-64.479842</eastBoundLongitude><southBoundLatitude>-28.000659</southBoundLatitude><northBoundLatitude>-26.223882</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.796161" miny="-28.000659" maxx="-64.479842" maxy="-26.223882"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000659" miny="-65.796161" maxx="-26.223882" maxy="-64.479842"/>
+<BoundingBox CRS="EPSG:22173" minx="6903433.621800" miny="3520367.729100" maxx="7099464.212600" maxy="3649545.912700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2017-2018_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2017-2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2016-2017_EEAOC</Name>
+        <Title><![CDATA[Soja_2016-2017_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2016-2017_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.754281</westBoundLongitude><eastBoundLongitude>-64.479635</eastBoundLongitude><southBoundLatitude>-28.003204</southBoundLatitude><northBoundLatitude>-26.222531</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.754281" miny="-28.003204" maxx="-64.479635" maxy="-26.222531"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003204" miny="-65.754281" maxx="-26.222531" maxy="-64.479635"/>
+<BoundingBox CRS="EPSG:22173" minx="6903143.751000" miny="3524552.729100" maxx="7099613.751000" maxy="3649562.729100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2016-2017_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2016-2017_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2015-2016_EEAOC</Name>
+        <Title><![CDATA[Soja_2015-2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2015-2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.741739</westBoundLongitude><eastBoundLongitude>-64.481587</eastBoundLongitude><southBoundLatitude>-28.000148</southBoundLatitude><northBoundLatitude>-26.227639</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.741739" miny="-28.000148" maxx="-64.481587" maxy="-26.227639"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000148" miny="-65.741739" maxx="-26.227639" maxy="-64.481587"/>
+<BoundingBox CRS="EPSG:22173" minx="6903479.817700" miny="3525804.820700" maxx="7099049.817700" maxy="3649374.820700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2015-2016_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2015-2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2014-2015_EEAOC</Name>
+        <Title><![CDATA[Soja_2014-2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2014-2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.745287</westBoundLongitude><eastBoundLongitude>-64.472715</eastBoundLongitude><southBoundLatitude>-28.000156</southBoundLatitude><northBoundLatitude>-26.216701</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.745287" miny="-28.000156" maxx="-64.472715" maxy="-26.216701"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000156" miny="-65.745287" maxx="-26.216701" maxy="-64.472715"/>
+<BoundingBox CRS="EPSG:22173" minx="6903479.666400" miny="3525452.683800" maxx="7100252.008400" maxy="3650247.854300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2014-2015_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2014-2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2013-2014_EEAOC</Name>
+        <Title><![CDATA[Soja_2013-2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2013-2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.781005</westBoundLongitude><eastBoundLongitude>-64.471255</eastBoundLongitude><southBoundLatitude>-27.984892</southBoundLatitude><northBoundLatitude>-26.260235</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.781005" miny="-27.984892" maxx="-64.471255" maxy="-26.260235"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.984892" miny="-65.781005" maxx="-26.260235" maxy="-64.471255"/>
+<BoundingBox CRS="EPSG:22173" minx="6905178.369400" miny="3521875.290800" maxx="7095425.181500" maxy="3650412.748300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2013-2014_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2013-2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2012-2013_EEAOC</Name>
+        <Title><![CDATA[Soja_2012-2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2012-2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.801953</westBoundLongitude><eastBoundLongitude>-64.477914</eastBoundLongitude><southBoundLatitude>-28.005821</southBoundLatitude><northBoundLatitude>-26.233757</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.801953" miny="-28.005821" maxx="-64.477914" maxy="-26.233757"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.005821" miny="-65.801953" maxx="-26.233757" maxy="-64.477914"/>
+<BoundingBox CRS="EPSG:22173" minx="6902862.627000" miny="3519787.283100" maxx="7098367.669600" maxy="3649728.532200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2012-2013_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2012-2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2011-2012_EEAOC</Name>
+        <Title><![CDATA[Soja_2011-2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2011-2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.825530</westBoundLongitude><eastBoundLongitude>-64.469974</eastBoundLongitude><southBoundLatitude>-28.008813</southBoundLatitude><northBoundLatitude>-26.225021</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.825530" miny="-28.008813" maxx="-64.469974" maxy="-26.225021"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.008813" miny="-65.825530" maxx="-26.225021" maxy="-64.469974"/>
+<BoundingBox CRS="EPSG:22173" minx="6902534.646400" miny="3517432.947700" maxx="7099326.916900" maxy="3650505.707100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2011-2012_EEAOC</Title>
+          <LegendURL width="190" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2011-2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2010-2011_EEAOC</Name>
+        <Title><![CDATA[Soja_2010-2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2010-2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.691833</westBoundLongitude><eastBoundLongitude>-64.480104</eastBoundLongitude><southBoundLatitude>-28.003167</southBoundLatitude><northBoundLatitude>-26.229198</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.691833" miny="-28.003167" maxx="-64.480104" maxy="-26.229198"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003167" miny="-65.691833" maxx="-26.229198" maxy="-64.480104"/>
+<BoundingBox CRS="EPSG:22173" minx="6903133.566400" miny="3530790.988500" maxx="7098875.372000" maxy="3649516.444400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2010-2011_EEAOC</Title>
+          <LegendURL width="190" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2010-2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2009-2010_EEAOC</Name>
+        <Title><![CDATA[Soja_2009-2010_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2009-2010_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.752812</westBoundLongitude><eastBoundLongitude>-64.479917</eastBoundLongitude><southBoundLatitude>-28.000754</southBoundLatitude><northBoundLatitude>-26.238447</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.752812" miny="-28.000754" maxx="-64.479917" maxy="-26.238447"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000754" miny="-65.752812" maxx="-26.238447" maxy="-64.479917"/>
+<BoundingBox CRS="EPSG:22173" minx="6903415.071700" miny="3524696.177600" maxx="7097850.057300" maxy="3649538.313100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2009-2010_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2009-2010_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2008-2009_EEAOC</Name>
+        <Title><![CDATA[Soja_2008-2009_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2008-2009_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.741511</westBoundLongitude><eastBoundLongitude>-64.461819</eastBoundLongitude><southBoundLatitude>-28.014997</southBoundLatitude><northBoundLatitude>-26.235706</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.741511" miny="-28.014997" maxx="-64.461819" maxy="-26.235706"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.014997" miny="-65.741511" maxx="-26.235706" maxy="-64.461819"/>
+<BoundingBox CRS="EPSG:22173" minx="6901834.252100" miny="3525825.758500" maxx="7098133.401600" maxy="3651299.337900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2008-2009_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2008-2009_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Soja_2007-2008_EEAOC</Name>
+        <Title><![CDATA[Soja_2007-2008_EEAOC]]></Title>
+        <Abstract><![CDATA[Soja_2007-2008_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.781304</westBoundLongitude><eastBoundLongitude>-64.481304</eastBoundLongitude><southBoundLatitude>-28.004737</southBoundLatitude><northBoundLatitude>-26.231532</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.781304" miny="-28.004737" maxx="-64.481304" maxy="-26.231532"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004737" miny="-65.781304" maxx="-26.231532" maxy="-64.481304"/>
+<BoundingBox CRS="EPSG:22173" minx="6902979.186700" miny="3521850.895000" maxx="7098618.154200" maxy="3649396.441000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Soja_2007-2008_EEAOC</Title>
+          <LegendURL width="191" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Soja_2007-2008_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Producción_vitivinícola</Name>
+        <Title><![CDATA[Producción_vitivinícola]]></Title>
+        <Abstract><![CDATA[Producción_vitivinícola]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.048494</westBoundLongitude><eastBoundLongitude>-65.837897</eastBoundLongitude><southBoundLatitude>-26.687042</southBoundLatitude><northBoundLatitude>-26.304076</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.048494" miny="-26.687042" maxx="-65.837897" maxy="-26.304076"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.687042" miny="-66.048494" maxx="-26.304076" maxy="-65.837897"/>
+<BoundingBox CRS="EPSG:22173" minx="7049011.525303" miny="3495173.506232" maxx="7091432.431702" maxy="3516133.815368"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Producción_vitivinícola</Title>
+          <LegendURL width="174" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Producción_vitivinícola" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Producción_porcina_por_localidades</Name>
+        <Title><![CDATA[Producción_porcina_por_localidades]]></Title>
+        <Abstract><![CDATA[Producción_porcina_por_localidades]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.625986</westBoundLongitude><eastBoundLongitude>-64.536168</eastBoundLongitude><southBoundLatitude>-27.842083</southBoundLatitude><northBoundLatitude>-26.154350</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.625986" miny="-27.842083" maxx="-64.536168" maxy="-26.154350"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.842083" miny="-65.625986" maxx="-26.154350" maxy="-64.536168"/>
+<BoundingBox CRS="EPSG:22173" minx="6920966.199059" miny="3537394.359069" maxx="7107230.729748" maxy="3644213.056408"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Producción_porcina_por_localidades</Title>
+          <LegendURL width="257" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Producción_porcina_por_localidades" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Producción_caprina_por_establecimientos</Name>
+        <Title><![CDATA[Producción_caprina_por_establecimientos]]></Title>
+        <Abstract><![CDATA[Producción_caprina_por_establecimientos]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.104350</westBoundLongitude><eastBoundLongitude>-64.584007</eastBoundLongitude><southBoundLatitude>-27.931656</southBoundLatitude><northBoundLatitude>-26.109521</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.104350" miny="-27.931656" maxx="-64.584007" maxy="-26.109521"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.931656" miny="-66.104350" maxx="-26.109521" maxy="-64.584007"/>
+<BoundingBox CRS="EPSG:22173" minx="6911097.799364" miny="3489729.458153" maxx="7112251.477111" maxy="3639384.860919"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Producción_caprina_por_establecimientos</Title>
+          <LegendURL width="290" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Producción_caprina_por_establecimientos" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2025_EEAOC</Name>
+        <Title><![CDATA[Poroto_2025_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2025_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.504971</westBoundLongitude><eastBoundLongitude>-64.467528</eastBoundLongitude><southBoundLatitude>-27.944186</southBoundLatitude><northBoundLatitude>-26.221642</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.504971" miny="-27.944186" maxx="-64.467528" maxy="-26.221642"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.944186" miny="-65.504971" maxx="-26.221642" maxy="-64.467528"/>
+<BoundingBox CRS="EPSG:22173" minx="6909607.584300" miny="3549465.184700" maxx="7099697.573500" maxy="3650835.178700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2025_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2025_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2024_EEAOC</Name>
+        <Title><![CDATA[Poroto_2024_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2024_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.609378</westBoundLongitude><eastBoundLongitude>-64.478942</eastBoundLongitude><southBoundLatitude>-27.965737</southBoundLatitude><northBoundLatitude>-26.221763</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.609378" miny="-27.965737" maxx="-64.478942" maxy="-26.221763"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.965737" miny="-65.609378" maxx="-26.221763" maxy="-64.478942"/>
+<BoundingBox CRS="EPSG:22173" minx="6907257.584400" miny="3539032.185300" maxx="7099697.573500" maxy="3649682.178700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2024_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2024_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2023_EEAOC</Name>
+        <Title><![CDATA[Poroto_2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.580638</westBoundLongitude><eastBoundLongitude>-64.508015</eastBoundLongitude><southBoundLatitude>-27.965786</southBoundLatitude><northBoundLatitude>-26.233021</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.580638" miny="-27.965786" maxx="-64.508015" maxy="-26.233021"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.965786" miny="-65.580638" maxx="-26.233021" maxy="-64.508015"/>
+<BoundingBox CRS="EPSG:22173" minx="6907242.584400" miny="3541900.185100" maxx="7098482.573600" maxy="3646820.178900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2023_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2022_EEAOC</Name>
+        <Title><![CDATA[Poroto_2022_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2022_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.558121</westBoundLongitude><eastBoundLongitude>-64.477734</eastBoundLongitude><southBoundLatitude>-27.937384</southBoundLatitude><northBoundLatitude>-26.232714</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.558121" miny="-27.937384" maxx="-64.477734" maxy="-26.232714"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.937384" miny="-65.558121" maxx="-26.232714" maxy="-64.477734"/>
+<BoundingBox CRS="EPSG:22173" minx="6910382.000000" miny="3544150.000000" maxx="7098482.000000" maxy="3649840.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2022_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2022_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2020_EEAOC</Name>
+        <Title><![CDATA[Poroto_2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.587245</westBoundLongitude><eastBoundLongitude>-64.483624</eastBoundLongitude><southBoundLatitude>-27.937478</southBoundLatitude><northBoundLatitude>-26.232684</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.587245" miny="-27.937478" maxx="-64.483624" maxy="-26.232684"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.937478" miny="-65.587245" maxx="-26.232684" maxy="-64.483624"/>
+<BoundingBox CRS="EPSG:22173" minx="6910382.000000" miny="3541240.000000" maxx="7098492.000000" maxy="3649260.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2020_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Poroto_2018_EEAOC</Name>
+        <Title><![CDATA[Poroto_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Poroto_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.625827</westBoundLongitude><eastBoundLongitude>-64.483028</eastBoundLongitude><southBoundLatitude>-28.003102</southBoundLatitude><northBoundLatitude>-26.221950</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.625827" miny="-28.003102" maxx="-64.483028" maxy="-26.221950"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003102" miny="-65.625827" maxx="-26.221950" maxy="-64.483028"/>
+<BoundingBox CRS="EPSG:22173" minx="6903121.992500" miny="3537388.535300" maxx="7099681.992500" maxy="3649228.535300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Poroto_2018_EEAOC</Title>
+          <LegendURL width="169" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Poroto_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2025_EEAOC</Name>
+        <Title><![CDATA[Papa_2025_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2025_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.809422</westBoundLongitude><eastBoundLongitude>-65.424141</eastBoundLongitude><southBoundLatitude>-27.766749</southBoundLatitude><northBoundLatitude>-27.240854</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.809422" miny="-27.766749" maxx="-65.424141" maxy="-27.240854"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.766749" miny="-65.809422" maxx="-27.240854" maxy="-65.424141"/>
+<BoundingBox CRS="EPSG:22173" minx="6929357.583200" miny="3518875.186400" maxx="6987517.579900" maxy="3556765.184300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2025_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2025_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2023_EEAOC</Name>
+        <Title><![CDATA[Papa_2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.807842</westBoundLongitude><eastBoundLongitude>-65.435202</eastBoundLongitude><southBoundLatitude>-27.736381</southBoundLatitude><northBoundLatitude>-27.249787</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.807842" miny="-27.736381" maxx="-65.435202" maxy="-27.249787"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.736381" miny="-65.807842" maxx="-27.249787" maxy="-65.435202"/>
+<BoundingBox CRS="EPSG:22173" minx="6932722.583000" miny="3519030.186400" maxx="6986532.579900" maxy="3555690.184300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2023_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2018_EEAOC</Name>
+        <Title><![CDATA[Papa_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.807490</westBoundLongitude><eastBoundLongitude>-65.435459</eastBoundLongitude><southBoundLatitude>-27.736251</southBoundLatitude><northBoundLatitude>-27.250109</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.807490" miny="-27.736251" maxx="-65.435459" maxy="-27.250109"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.736251" miny="-65.807490" maxx="-27.250109" maxy="-65.435459"/>
+<BoundingBox CRS="EPSG:22173" minx="6932737.000000" miny="3519065.000000" maxx="6986497.000000" maxy="3555665.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2018_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2015_EEAOC</Name>
+        <Title><![CDATA[Papa_2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.817856</westBoundLongitude><eastBoundLongitude>-65.349648</eastBoundLongitude><southBoundLatitude>-27.736135</southBoundLatitude><northBoundLatitude>-27.198714</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.817856" miny="-27.736135" maxx="-65.349648" maxy="-27.198714"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.736135" miny="-65.817856" maxx="-27.198714" maxy="-65.349648"/>
+<BoundingBox CRS="EPSG:22173" minx="6932751.371700" miny="3518046.611700" maxx="6992151.371700" maxy="3564126.611700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2015_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2014_EEAOC</Name>
+        <Title><![CDATA[Papa_2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.893522</westBoundLongitude><eastBoundLongitude>-65.437143</eastBoundLongitude><southBoundLatitude>-27.743396</southBoundLatitude><northBoundLatitude>-27.179841</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.893522" miny="-27.743396" maxx="-65.437143" maxy="-27.179841"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.743396" miny="-65.893522" maxx="-27.179841" maxy="-65.437143"/>
+<BoundingBox CRS="EPSG:22173" minx="6931955.632300" miny="3510551.463300" maxx="6994284.281900" maxy="3555495.280800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2014_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2013_EEAOC</Name>
+        <Title><![CDATA[Papa_2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.802936</westBoundLongitude><eastBoundLongitude>-65.457226</eastBoundLongitude><southBoundLatitude>-27.738524</southBoundLatitude><northBoundLatitude>-27.310577</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.802936" miny="-27.738524" maxx="-65.457226" maxy="-27.310577"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.738524" miny="-65.802936" maxx="-27.310577" maxy="-65.457226"/>
+<BoundingBox CRS="EPSG:22173" minx="6932484.395800" miny="3519505.442600" maxx="6979805.841700" maxy="3553517.515100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2013_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2012_EEAOC</Name>
+        <Title><![CDATA[Papa_2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.805776</westBoundLongitude><eastBoundLongitude>-65.466391</eastBoundLongitude><southBoundLatitude>-27.733866</southBoundLatitude><northBoundLatitude>-27.004679</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.805776" miny="-27.733866" maxx="-65.466391" maxy="-27.004679"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.733866" miny="-65.805776" maxx="-27.004679" maxy="-65.466391"/>
+<BoundingBox CRS="EPSG:22173" minx="6933000.913900" miny="3519276.795000" maxx="7013706.481200" maxy="3552615.994700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2012_EEAOC</Title>
+          <LegendURL width="161" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Papa_2011_EEAOC</Name>
+        <Title><![CDATA[Papa_2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Papa_2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.802763</westBoundLongitude><eastBoundLongitude>-65.466266</eastBoundLongitude><southBoundLatitude>-27.737198</southBoundLatitude><northBoundLatitude>-27.006951</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.802763" miny="-27.737198" maxx="-65.466266" maxy="-27.006951"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.737198" miny="-65.802763" maxx="-27.006951" maxy="-65.466266"/>
+<BoundingBox CRS="EPSG:22173" minx="6932631.202100" miny="3519575.456200" maxx="7013454.677300" maxy="3552626.737200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Papa_2011_EEAOC</Title>
+          <LegendURL width="160" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Papa_2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Nogal_2019</Name>
+        <Title><![CDATA[Nogal_2019]]></Title>
+        <Abstract><![CDATA[Nogal_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.038926</westBoundLongitude><eastBoundLongitude>-65.830945</eastBoundLongitude><southBoundLatitude>-26.621530</southBoundLatitude><northBoundLatitude>-26.333443</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.038926" miny="-26.621530" maxx="-65.830945" maxy="-26.333443"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.621530" miny="-66.038926" maxx="-26.333443" maxy="-65.830945"/>
+<BoundingBox CRS="EPSG:22173" minx="7056270.114400" miny="3496123.515200" maxx="7088177.809700" maxy="3516835.376400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Nogal_2019</Title>
+          <LegendURL width="111" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Nogal_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maiz_2025_EEAOC</Name>
+        <Title><![CDATA[Maiz_2025_EEAOC]]></Title>
+        <Abstract><![CDATA[Maiz_2025_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.681280</westBoundLongitude><eastBoundLongitude>-64.484534</eastBoundLongitude><southBoundLatitude>-27.999767</southBoundLatitude><northBoundLatitude>-26.230036</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.681280" miny="-27.999767" maxx="-64.484534" maxy="-26.230036"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.999767" miny="-65.681280" maxx="-26.230036" maxy="-64.484534"/>
+<BoundingBox CRS="EPSG:22173" minx="6903507.584600" miny="3531845.185700" maxx="7098787.573600" maxy="3649085.178900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maiz_2025_EEAOC</Title>
+          <LegendURL width="158" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maiz_2025_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maiz_2024_EEAOC</Name>
+        <Title><![CDATA[Maiz_2024_EEAOC]]></Title>
+        <Abstract><![CDATA[Maiz_2024_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.653681</westBoundLongitude><eastBoundLongitude>-64.480255</eastBoundLongitude><southBoundLatitude>-28.007729</southBoundLatitude><northBoundLatitude>-26.222053</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.653681" miny="-28.007729" maxx="-64.480255" maxy="-26.222053"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.007729" miny="-65.653681" maxx="-26.222053" maxy="-64.480255"/>
+<BoundingBox CRS="EPSG:22173" minx="6902617.584700" miny="3534605.185500" maxx="7099667.573500" maxy="3649495.178800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maiz_2024_EEAOC</Title>
+          <LegendURL width="158" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maiz_2024_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2022-2023_EEAOC</Name>
+        <Title><![CDATA[Maíz_2022-2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2022-2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.644923</westBoundLongitude><eastBoundLongitude>-64.466541</eastBoundLongitude><southBoundLatitude>-27.996471</southBoundLatitude><northBoundLatitude>-26.222406</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.644923" miny="-27.996471" maxx="-64.466541" maxy="-26.222406"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996471" miny="-65.644923" maxx="-26.222406" maxy="-64.466541"/>
+<BoundingBox CRS="EPSG:22173" minx="6903862.584600" miny="3535480.185500" maxx="7099612.573600" maxy="3650860.178700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2022-2023_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2022-2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2021-2022_EEAOC</Name>
+        <Title><![CDATA[Maíz_2021-2022_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2021-2022_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.738497</westBoundLongitude><eastBoundLongitude>-64.479808</eastBoundLongitude><southBoundLatitude>-28.000032</southBoundLatitude><northBoundLatitude>-26.222097</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.738497" miny="-28.000032" maxx="-64.479808" maxy="-26.222097"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.000032" miny="-65.738497" maxx="-26.222097" maxy="-64.479808"/>
+<BoundingBox CRS="EPSG:22173" minx="6903492.000000" miny="3526130.000000" maxx="7099662.000000" maxy="3649550.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2021-2022_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2021-2022_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2019-2020_EEAOC</Name>
+        <Title><![CDATA[Maíz_2019-2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2019-2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.727170</westBoundLongitude><eastBoundLongitude>-64.480161</eastBoundLongitude><southBoundLatitude>-27.996580</southBoundLatitude><northBoundLatitude>-26.229950</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.727170" miny="-27.996580" maxx="-64.480161" maxy="-26.229950"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.996580" miny="-65.727170" maxx="-26.229950" maxy="-64.480161"/>
+<BoundingBox CRS="EPSG:22173" minx="6903872.000000" miny="3527260.000000" maxx="7098792.000000" maxy="3649520.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2019-2020_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2019-2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2017-2018_EEAOC</Name>
+        <Title><![CDATA[Maíz_2017-2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2017-2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.730114</westBoundLongitude><eastBoundLongitude>-64.481261</eastBoundLongitude><southBoundLatitude>-27.985016</southBoundLatitude><northBoundLatitude>-26.222000</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.730114" miny="-27.985016" maxx="-64.481261" maxy="-26.222000"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.985016" miny="-65.730114" maxx="-26.222000" maxy="-64.481261"/>
+<BoundingBox CRS="EPSG:22173" minx="6905154.212600" miny="3526967.729100" maxx="7099674.212600" maxy="3649427.729100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2017-2018_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2017-2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2016-2017_EEAOC</Name>
+        <Title><![CDATA[Maíz_2016-2017_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2016-2017_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.611039</westBoundLongitude><eastBoundLongitude>-64.483339</eastBoundLongitude><southBoundLatitude>-27.999615</southBoundLatitude><northBoundLatitude>-26.232314</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.611039" miny="-27.999615" maxx="-64.483339" maxy="-26.232314"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.999615" miny="-65.611039" maxx="-26.232314" maxy="-64.483339"/>
+<BoundingBox CRS="EPSG:22173" minx="6903503.751000" miny="3538862.729100" maxx="7098533.751000" maxy="3649202.729100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2016-2017_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2016-2017_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2015-2016_EEAOC</Name>
+        <Title><![CDATA[Maíz_2015-2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2015-2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.634871</westBoundLongitude><eastBoundLongitude>-64.479300</eastBoundLongitude><southBoundLatitude>-27.989070</southBoundLatitude><northBoundLatitude>-26.221659</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.634871" miny="-27.989070" maxx="-64.479300" maxy="-26.221659"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.989070" miny="-65.634871" maxx="-26.221659" maxy="-64.479300"/>
+<BoundingBox CRS="EPSG:22173" minx="6904679.817700" miny="3536484.820700" maxx="7099709.817700" maxy="3649614.820700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2015-2016_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2015-2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2014-2015_EEAOC</Name>
+        <Title><![CDATA[Maíz_2014-2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2014-2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.632457</westBoundLongitude><eastBoundLongitude>-64.474132</eastBoundLongitude><southBoundLatitude>-27.989129</southBoundLatitude><northBoundLatitude>-26.230605</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.632457" miny="-27.989129" maxx="-64.474132" maxy="-26.230605"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.989129" miny="-65.632457" maxx="-26.230605" maxy="-64.474132"/>
+<BoundingBox CRS="EPSG:22173" minx="6904672.507000" miny="3536723.307600" maxx="7098712.507000" maxy="3650123.307600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2014-2015_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2014-2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2013-2014_EEAOC</Name>
+        <Title><![CDATA[Maíz_2013-2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2013-2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.635928</westBoundLongitude><eastBoundLongitude>-64.480247</eastBoundLongitude><southBoundLatitude>-27.961480</southBoundLatitude><northBoundLatitude>-26.224402</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.635928" miny="-27.961480" maxx="-64.480247" maxy="-26.224402"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.961480" miny="-65.635928" maxx="-26.224402" maxy="-64.480247"/>
+<BoundingBox CRS="EPSG:22173" minx="6907737.743500" miny="3536378.411000" maxx="7099406.430200" maxy="3649559.623600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2013-2014_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2013-2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2012-2013_EEAOC</Name>
+        <Title><![CDATA[Maíz_2012-2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2012-2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.619183</westBoundLongitude><eastBoundLongitude>-64.482571</eastBoundLongitude><southBoundLatitude>-27.954720</southBoundLatitude><northBoundLatitude>-26.244287</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.619183" miny="-27.954720" maxx="-64.482571" maxy="-26.244287"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.954720" miny="-65.619183" maxx="-26.244287" maxy="-64.482571"/>
+<BoundingBox CRS="EPSG:22173" minx="6908481.701600" miny="3538045.096900" maxx="7097205.102400" maxy="3649340.068100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2012-2013_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2012-2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2011-2012_EEAOC</Name>
+        <Title><![CDATA[Maíz_2011-2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2011-2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.623299</westBoundLongitude><eastBoundLongitude>-64.488330</eastBoundLongitude><southBoundLatitude>-27.966324</southBoundLatitude><northBoundLatitude>-26.235720</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.623299" miny="-27.966324" maxx="-64.488330" maxy="-26.235720"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.966324" miny="-65.623299" maxx="-26.235720" maxy="-64.488330"/>
+<BoundingBox CRS="EPSG:22173" minx="6907197.049700" miny="3537636.695100" maxx="7098161.316000" maxy="3648757.305800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2011-2012_EEAOC</Title>
+          <LegendURL width="192" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2011-2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2010-2011_EEAOC</Name>
+        <Title><![CDATA[Maíz_2010-2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2010-2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.639379</westBoundLongitude><eastBoundLongitude>-64.459478</eastBoundLongitude><southBoundLatitude>-27.982029</southBoundLatitude><northBoundLatitude>-26.239485</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.639379" miny="-27.982029" maxx="-64.459478" maxy="-26.239485"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.982029" miny="-65.639379" maxx="-26.239485" maxy="-64.459478"/>
+<BoundingBox CRS="EPSG:22173" minx="6905461.516500" miny="3536028.876200" maxx="7097711.396900" maxy="3651575.446600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2010-2011_EEAOC</Title>
+          <LegendURL width="192" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2010-2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2009-2010_EEAOC</Name>
+        <Title><![CDATA[Maíz_2009-2010_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2009-2010_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.587928</westBoundLongitude><eastBoundLongitude>-64.485718</eastBoundLongitude><southBoundLatitude>-27.971584</southBoundLatitude><northBoundLatitude>-26.252883</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.587928" miny="-27.971584" maxx="-64.485718" maxy="-26.252883"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.971584" miny="-65.587928" maxx="-26.252883" maxy="-64.485718"/>
+<BoundingBox CRS="EPSG:22173" minx="6906602.530500" miny="3541164.714600" maxx="7096256.327900" maxy="3649007.070000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2009-2010_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2009-2010_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2008-2009_EEAOC</Name>
+        <Title><![CDATA[Maíz_2008-2009_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2008-2009_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.596005</westBoundLongitude><eastBoundLongitude>-64.485519</eastBoundLongitude><southBoundLatitude>-27.905721</southBoundLatitude><northBoundLatitude>-26.271098</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.596005" miny="-27.905721" maxx="-64.485519" maxy="-26.271098"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.905721" miny="-65.596005" maxx="-26.271098" maxy="-64.485519"/>
+<BoundingBox CRS="EPSG:22173" minx="6913904.315300" miny="3540351.457900" maxx="7094236.262700" maxy="3649117.061000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2008-2009_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2008-2009_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Maíz_2007-2008_EEAOC</Name>
+        <Title><![CDATA[Maíz_2007-2008_EEAOC]]></Title>
+        <Abstract><![CDATA[Maíz_2007-2008_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.604788</westBoundLongitude><eastBoundLongitude>-64.492882</eastBoundLongitude><southBoundLatitude>-27.929474</southBoundLatitude><northBoundLatitude>-26.256590</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.604788" miny="-27.929474" maxx="-64.492882" maxy="-26.256590"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.929474" miny="-65.604788" maxx="-26.256590" maxy="-64.492882"/>
+<BoundingBox CRS="EPSG:22173" minx="6911274.832000" miny="3539479.141200" maxx="7095852.939100" maxy="3648359.485300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Maíz_2007-2008_EEAOC</Title>
+          <LegendURL width="193" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Maíz_2007-2008_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2020_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.571211</westBoundLongitude><eastBoundLongitude>-64.480957</eastBoundLongitude><southBoundLatitude>-27.888430</southBoundLatitude><northBoundLatitude>-26.292832</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.571211" miny="-27.888430" maxx="-64.480957" maxy="-26.292832"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.888430" miny="-65.571211" maxx="-26.292832" maxy="-64.480957"/>
+<BoundingBox CRS="EPSG:22173" minx="6915812.000000" miny="3542820.000000" maxx="7091822.000000" maxy="3649590.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2020_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2018_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.609363</westBoundLongitude><eastBoundLongitude>-64.491392</eastBoundLongitude><southBoundLatitude>-27.952298</southBoundLatitude><northBoundLatitude>-26.293084</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.609363" miny="-27.952298" maxx="-64.491392" maxy="-26.293084"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.952298" miny="-65.609363" maxx="-26.293084" maxy="-64.491392"/>
+<BoundingBox CRS="EPSG:22173" minx="6908747.000100" miny="3539009.950100" maxx="7091807.000100" maxy="3648475.000100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2018_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2016_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.630034</westBoundLongitude><eastBoundLongitude>-64.508594</eastBoundLongitude><southBoundLatitude>-27.884320</southBoundLatitude><northBoundLatitude>-26.457464</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.630034" miny="-27.884320" maxx="-64.508594" maxy="-26.457464"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.884320" miny="-65.630034" maxx="-26.457464" maxy="-64.508594"/>
+<BoundingBox CRS="EPSG:22173" minx="6916287.000000" miny="3536893.394300" maxx="7073607.000000" maxy="3646873.394300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2016_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2015_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.689525</westBoundLongitude><eastBoundLongitude>-64.501638</eastBoundLongitude><southBoundLatitude>-27.952324</southBoundLatitude><northBoundLatitude>-26.285695</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.689525" miny="-27.952324" maxx="-64.501638" maxy="-26.285695"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.952324" miny="-65.689525" maxx="-26.285695" maxy="-64.501638"/>
+<BoundingBox CRS="EPSG:22173" minx="6908767.454400" miny="3531006.611700" maxx="7092637.454400" maxy="3647466.611700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2015_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2014_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.656162</westBoundLongitude><eastBoundLongitude>-64.506196</eastBoundLongitude><southBoundLatitude>-27.944994</southBoundLatitude><northBoundLatitude>-26.434938</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.656162" miny="-27.944994" maxx="-64.506196" maxy="-26.434938"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.944994" miny="-65.656162" maxx="-26.434938" maxy="-64.506196"/>
+<BoundingBox CRS="EPSG:22173" minx="6909570.852900" miny="3534294.472300" maxx="7076101.751100" maxy="3647027.730000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2014_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2013_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.724152</westBoundLongitude><eastBoundLongitude>-64.731265</eastBoundLongitude><southBoundLatitude>-27.900920</southBoundLatitude><northBoundLatitude>-26.414706</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.724152" miny="-27.900920" maxx="-64.731265" maxy="-26.414706"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.900920" miny="-65.724152" maxx="-26.414706" maxy="-64.731265"/>
+<BoundingBox CRS="EPSG:22173" minx="6914472.472800" miny="3527518.422600" maxx="7078578.048400" maxy="3624921.221800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2013_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2012_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.697438</westBoundLongitude><eastBoundLongitude>-64.483300</eastBoundLongitude><southBoundLatitude>-27.997125</southBoundLatitude><northBoundLatitude>-26.302575</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.697438" miny="-27.997125" maxx="-64.483300" maxy="-26.302575"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.997125" miny="-65.697438" maxx="-26.302575" maxy="-64.483300"/>
+<BoundingBox CRS="EPSG:22173" minx="6903804.530200" miny="3530211.919000" maxx="7090746.548900" maxy="3649210.317100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2012_EEAOC</Title>
+          <LegendURL width="188" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Garbanzo_2011_EEAOC</Name>
+        <Title><![CDATA[Garbanzo_2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Garbanzo_2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.608897</westBoundLongitude><eastBoundLongitude>-64.504754</eastBoundLongitude><southBoundLatitude>-27.958531</southBoundLatitude><northBoundLatitude>-26.225241</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.608897" miny="-27.958531" maxx="-64.504754" maxy="-26.225241"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.958531" miny="-65.608897" maxx="-26.225241" maxy="-64.504754"/>
+<BoundingBox CRS="EPSG:22173" minx="6908056.080200" miny="3539079.196200" maxx="7099341.099400" maxy="3647151.170600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Garbanzo_2011_EEAOC</Title>
+          <LegendURL width="187" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Garbanzo_2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Frutilla_2024_INTA</Name>
+        <Title><![CDATA[Frutilla_2024_INTA]]></Title>
+        <Abstract><![CDATA[Frutilla_2024_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.732647</westBoundLongitude><eastBoundLongitude>-65.266036</eastBoundLongitude><southBoundLatitude>-27.380012</southBoundLatitude><northBoundLatitude>-26.777615</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.732647" miny="-27.380012" maxx="-65.266036" maxy="-26.777615"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.380012" miny="-65.732647" maxx="-26.777615" maxy="-65.266036"/>
+<BoundingBox CRS="EPSG:22173" minx="6972198.940400" miny="3526587.756900" maxx="7038767.722700" maxy="3572605.327600"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Frutilla_2024_INTA</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Frutilla_2024_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Frutilla_2023_INTA</Name>
+        <Title><![CDATA[Frutilla_2023_INTA]]></Title>
+        <Abstract><![CDATA[Frutilla_2023_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.735563</westBoundLongitude><eastBoundLongitude>-65.290570</eastBoundLongitude><southBoundLatitude>-27.379928</southBoundLatitude><northBoundLatitude>-26.777758</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.735563" miny="-27.379928" maxx="-65.290570" maxy="-26.777758"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.379928" miny="-65.735563" maxx="-26.777758" maxy="-65.290570"/>
+<BoundingBox CRS="EPSG:22173" minx="6972208.862600" miny="3526297.775400" maxx="7038765.554200" maxy="3570178.259200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Frutilla_2023_INTA</Title>
+          <LegendURL width="153" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Frutilla_2023_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Frutales_de_carozo_2019</Name>
+        <Title><![CDATA[Frutales_de_carozo_2019]]></Title>
+        <Abstract><![CDATA[Frutales_de_carozo_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.024087</westBoundLongitude><eastBoundLongitude>-65.826991</eastBoundLongitude><southBoundLatitude>-26.630045</southBoundLatitude><northBoundLatitude>-26.355960</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.024087" miny="-26.630045" maxx="-65.826991" maxy="-26.355960"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.630045" miny="-66.024087" maxx="-26.355960" maxy="-65.826991"/>
+<BoundingBox CRS="EPSG:22173" minx="7055326.693500" miny="3497601.484200" maxx="7085682.613900" maxy="3517227.843700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Frutales_de_carozo_2019</Title>
+          <LegendURL width="194" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Frutales_de_carozo_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cooperativas_cañeras</Name>
+        <Title><![CDATA[Cooperativas_cañeras]]></Title>
+        <Abstract><![CDATA[Cooperativas_cañeras]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.687931</westBoundLongitude><eastBoundLongitude>-64.981535</eastBoundLongitude><southBoundLatitude>-27.593057</southBoundLatitude><northBoundLatitude>-26.830463</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.687931" miny="-27.593057" maxx="-64.981535" maxy="-26.830463"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.593057" miny="-65.687931" maxx="-26.830463" maxy="-64.981535"/>
+<BoundingBox CRS="EPSG:22173" minx="6948580.510429" miny="3531019.924469" maxx="7032719.776934" maxy="3600558.070296"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cooperativas_cañeras</Title>
+          <LegendURL width="172" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cooperativas_cañeras" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2025_INTA</Name>
+        <Title><![CDATA[Cítricos_2025_INTA]]></Title>
+        <Abstract><![CDATA[Cítricos_2025_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815653</westBoundLongitude><eastBoundLongitude>-64.703709</eastBoundLongitude><southBoundLatitude>-27.979818</southBoundLatitude><northBoundLatitude>-26.404722</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815653" miny="-27.979818" maxx="-64.703709" maxy="-26.404722"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979818" miny="-65.815653" maxx="-26.404722" maxy="-64.703709"/>
+<BoundingBox CRS="EPSG:22173" minx="6905746.512100" miny="3518391.806600" maxx="7079658.737700" maxy="3627542.508800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2025_INTA</Title>
+          <LegendURL width="158" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2025_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Citricos_2024_EEAOC</Name>
+        <Title><![CDATA[Citricos_2024_EEAOC]]></Title>
+        <Abstract><![CDATA[Citricos_2024_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.839174</westBoundLongitude><eastBoundLongitude>-64.668930</eastBoundLongitude><southBoundLatitude>-27.979838</southBoundLatitude><northBoundLatitude>-26.404422</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.839174" miny="-27.979838" maxx="-64.668930" maxy="-26.404422"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979838" miny="-65.839174" maxx="-26.404422" maxy="-64.668930"/>
+<BoundingBox CRS="EPSG:22173" minx="6905747.584500" miny="3516045.186500" maxx="7079657.574700" maxy="3630965.179900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Citricos_2024_EEAOC</Title>
+          <LegendURL width="174" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Citricos_2024_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2023_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.839224</westBoundLongitude><eastBoundLongitude>-64.668980</eastBoundLongitude><southBoundLatitude>-27.979883</southBoundLatitude><northBoundLatitude>-26.404378</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.839224" miny="-27.979883" maxx="-64.668980" maxy="-26.404378"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979883" miny="-65.839224" maxx="-26.404378" maxy="-64.668980"/>
+<BoundingBox CRS="EPSG:22173" minx="6905742.584500" miny="3516040.186500" maxx="7079662.574700" maxy="3630960.179900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2023_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2020_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2020_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2020_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.839226</westBoundLongitude><eastBoundLongitude>-64.717859</eastBoundLongitude><southBoundLatitude>-27.979889</southBoundLatitude><northBoundLatitude>-26.404817</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.839226" miny="-27.979889" maxx="-64.717859" maxy="-26.404817"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979889" miny="-65.839226" maxx="-26.404817" maxy="-64.717859"/>
+<BoundingBox CRS="EPSG:22173" minx="6905742.000000" miny="3516040.000000" maxx="7079662.000000" maxy="3626150.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2020_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2020_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2019_INTA</Name>
+        <Title><![CDATA[Cítricos_2019_INTA]]></Title>
+        <Abstract><![CDATA[Cítricos_2019_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815847</westBoundLongitude><eastBoundLongitude>-64.703463</eastBoundLongitude><southBoundLatitude>-27.979990</southBoundLatitude><northBoundLatitude>-26.404797</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815847" miny="-27.979990" maxx="-64.703463" maxy="-26.404797"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979990" miny="-65.815847" maxx="-26.404797" maxy="-64.703463"/>
+<BoundingBox CRS="EPSG:22173" minx="6905727.474700" miny="3518372.443900" maxx="7079650.194500" maxy="3627566.522400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2019_INTA</Title>
+          <LegendURL width="158" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2019_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2018_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815875</westBoundLongitude><eastBoundLongitude>-64.728927</eastBoundLongitude><southBoundLatitude>-27.979814</southBoundLatitude><northBoundLatitude>-26.440962</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815875" miny="-27.979814" maxx="-64.728927" maxy="-26.440962"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979814" miny="-65.815875" maxx="-26.440962" maxy="-64.728927"/>
+<BoundingBox CRS="EPSG:22173" minx="6905747.000100" miny="3518364.000100" maxx="7075667.000100" maxy="3625060.845700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2018_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2016_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815207</westBoundLongitude><eastBoundLongitude>-64.732874</eastBoundLongitude><southBoundLatitude>-27.782074</southBoundLatitude><northBoundLatitude>-26.451146</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815207" miny="-27.782074" maxx="-64.732874" maxy="-26.451146"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.782074" miny="-65.815207" maxx="-26.451146" maxy="-64.732874"/>
+<BoundingBox CRS="EPSG:22173" minx="6927660.000000" miny="3518429.000000" maxx="7074540.000000" maxy="3624899.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2016_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2014_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.815255</westBoundLongitude><eastBoundLongitude>-64.733836</eastBoundLongitude><southBoundLatitude>-27.782264</southBoundLatitude><northBoundLatitude>-26.452156</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.815255" miny="-27.782264" maxx="-64.733836" maxy="-26.452156"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.782264" miny="-65.815255" maxx="-26.452156" maxy="-64.733836"/>
+<BoundingBox CRS="EPSG:22173" minx="6927638.952100" miny="3518424.000000" maxx="7074428.952100" maxy="3624804.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2014_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2012_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.805974</westBoundLongitude><eastBoundLongitude>-64.735153</eastBoundLongitude><southBoundLatitude>-27.779494</southBoundLatitude><northBoundLatitude>-26.473045</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.805974" miny="-27.779494" maxx="-64.735153" maxy="-26.473045"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.779494" miny="-65.805974" maxx="-26.473045" maxy="-64.735153"/>
+<BoundingBox CRS="EPSG:22173" minx="6927944.518900" miny="3519346.102500" maxx="7072115.254200" maxy="3624677.283900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2012_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2010_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2010_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2010_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.824912</westBoundLongitude><eastBoundLongitude>-64.738258</eastBoundLongitude><southBoundLatitude>-27.777151</southBoundLatitude><northBoundLatitude>-26.471042</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.824912" miny="-27.777151" maxx="-64.738258" maxy="-26.471042"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.777151" miny="-65.824912" maxx="-26.471042" maxy="-64.738258"/>
+<BoundingBox CRS="EPSG:22173" minx="6928206.991000" miny="3517458.102700" maxx="7072340.158600" maxy="3624373.785700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2010_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2010_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cítricos_2008_EEAOC</Name>
+        <Title><![CDATA[Cítricos_2008_EEAOC]]></Title>
+        <Abstract><![CDATA[Cítricos_2008_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.833557</westBoundLongitude><eastBoundLongitude>-64.707560</eastBoundLongitude><southBoundLatitude>-27.781543</southBoundLatitude><northBoundLatitude>-26.462890</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.833557" miny="-27.781543" maxx="-64.707560" maxy="-26.462890"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.781543" miny="-65.833557" maxx="-26.462890" maxy="-64.707560"/>
+<BoundingBox CRS="EPSG:22173" minx="6927721.563900" miny="3516597.289200" maxx="7073213.924600" maxy="3627395.317700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cítricos_2008_EEAOC</Title>
+          <LegendURL width="175" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cítricos_2008_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2025_INTA_RIDES</Name>
+        <Title><![CDATA[Caña_de_azúcar_2025_INTA_RIDES]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2025_INTA_RIDES]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.795628</westBoundLongitude><eastBoundLongitude>-64.590764</eastBoundLongitude><southBoundLatitude>-27.989003</southBoundLatitude><northBoundLatitude>-26.383626</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.795628" miny="-27.989003" maxx="-64.590764" maxy="-26.383626"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.989003" miny="-65.795628" maxx="-26.383626" maxy="-64.590764"/>
+<BoundingBox CRS="EPSG:22173" minx="6904725.301500" miny="3520393.242700" maxx="7081881.790200" maxy="3638646.096800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2025_INTA_RIDES</Title>
+          <LegendURL width="262" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2025_INTA_RIDES" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2024_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2024_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2024_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.799116</westBoundLongitude><eastBoundLongitude>-64.627915</eastBoundLongitude><southBoundLatitude>-27.976896</southBoundLatitude><northBoundLatitude>-26.384104</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.799116" miny="-27.976896" maxx="-64.627915" maxy="-26.384104"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.976896" miny="-65.799116" maxx="-26.384104" maxy="-64.627915"/>
+<BoundingBox CRS="EPSG:22173" minx="6906067.584500" miny="3520045.186300" maxx="7081867.574600" maxy="3635005.179700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2024_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2024_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2023_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2023_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2023_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.799065</westBoundLongitude><eastBoundLongitude>-64.620047</eastBoundLongitude><southBoundLatitude>-27.896450</southBoundLatitude><northBoundLatitude>-26.384066</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.799065" miny="-27.896450" maxx="-64.620047" maxy="-26.384066"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.896450" miny="-65.799065" maxx="-26.384066" maxy="-64.620047"/>
+<BoundingBox CRS="EPSG:22173" minx="6914982.584000" miny="3520050.186300" maxx="7081862.574600" maxy="3635880.179700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2023_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2023_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2022_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2022_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2022_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.798927</westBoundLongitude><eastBoundLongitude>-64.619308</eastBoundLongitude><southBoundLatitude>-27.948971</southBoundLatitude><northBoundLatitude>-26.422958</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.798927" miny="-27.948971" maxx="-64.619308" maxy="-26.422958"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.948971" miny="-65.798927" maxx="-26.422958" maxy="-64.619308"/>
+<BoundingBox CRS="EPSG:22173" minx="6909162.200900" miny="3520057.234000" maxx="7077552.200900" maxy="3635887.234000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2022_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2022_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2021_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2021_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2021_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.798995</westBoundLongitude><eastBoundLongitude>-64.619259</eastBoundLongitude><southBoundLatitude>-27.958629</southBoundLatitude><northBoundLatitude>-26.425578</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.798995" miny="-27.958629" maxx="-64.619259" maxy="-26.425578"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.958629" miny="-65.798995" maxx="-26.425578" maxy="-64.619259"/>
+<BoundingBox CRS="EPSG:22173" minx="6908092.000000" miny="3520050.000000" maxx="7077262.000000" maxy="3635880.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2021_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2021_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2019_INTA</Name>
+        <Title><![CDATA[Caña_de_azúcar_2019_INTA]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2019_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.794719</westBoundLongitude><eastBoundLongitude>-64.639504</eastBoundLongitude><southBoundLatitude>-27.962561</southBoundLatitude><northBoundLatitude>-26.425530</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.794719" miny="-27.962561" maxx="-64.639504" maxy="-26.425530"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.962561" miny="-65.794719" maxx="-26.425530" maxy="-64.639504"/>
+<BoundingBox CRS="EPSG:22173" minx="6907655.489700" miny="3520476.558600" maxx="7077288.315200" maxy="3633882.330400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2019_INTA</Title>
+          <LegendURL width="214" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2019_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2018_INTA</Name>
+        <Title><![CDATA[Caña_de_azúcar_2018_INTA]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2018_INTA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.794838</westBoundLongitude><eastBoundLongitude>-64.639220</eastBoundLongitude><southBoundLatitude>-27.977200</southBoundLatitude><northBoundLatitude>-26.439470</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.794838" miny="-27.977200" maxx="-64.639220" maxy="-26.439470"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.977200" miny="-65.794838" maxx="-26.439470" maxy="-64.639220"/>
+<BoundingBox CRS="EPSG:22173" minx="6906033.248900" miny="3520462.265500" maxx="7075743.248900" maxy="3633892.265500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2018_INTA</Title>
+          <LegendURL width="214" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2018_INTA" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2018_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2018_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2018_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.847398</westBoundLongitude><eastBoundLongitude>-64.639010</eastBoundLongitude><southBoundLatitude>-27.977433</southBoundLatitude><northBoundLatitude>-26.427840</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.847398" miny="-27.977433" maxx="-64.639010" maxy="-26.427840"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.977433" miny="-65.847398" maxx="-26.427840" maxy="-64.639010"/>
+<BoundingBox CRS="EPSG:22173" minx="6906015.146900" miny="3515221.581300" maxx="7077031.992700" maxy="3633912.680700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2018_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2018_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2017_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2017_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2017_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.804414</westBoundLongitude><eastBoundLongitude>-64.639140</eastBoundLongitude><southBoundLatitude>-27.978112</southBoundLatitude><northBoundLatitude>-26.428727</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.804414" miny="-27.978112" maxx="-64.639140" maxy="-26.428727"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.978112" miny="-65.804414" maxx="-26.428727" maxy="-64.639140"/>
+<BoundingBox CRS="EPSG:22173" minx="6905933.751000" miny="3519509.000000" maxx="7076933.751000" maxy="3633899.000000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2017_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2017_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2016_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2016_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2016_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.849042</westBoundLongitude><eastBoundLongitude>-64.639318</eastBoundLongitude><southBoundLatitude>-27.978180</southBoundLatitude><northBoundLatitude>-26.427205</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.849042" miny="-27.978180" maxx="-64.639318" maxy="-26.427205"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.978180" miny="-65.849042" maxx="-26.427205" maxy="-64.639318"/>
+<BoundingBox CRS="EPSG:22173" minx="6905932.600800" miny="3515057.730100" maxx="7077102.640600" maxy="3633881.450900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2016_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2016_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2015_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2015_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2015_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.804798</westBoundLongitude><eastBoundLongitude>-64.660549</eastBoundLongitude><southBoundLatitude>-27.979039</southBoundLatitude><northBoundLatitude>-26.427414</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.804798" miny="-27.979039" maxx="-64.660549" maxy="-26.427414"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.979039" miny="-65.804798" maxx="-26.427414" maxy="-64.660549"/>
+<BoundingBox CRS="EPSG:22173" minx="6905831.106900" miny="3519470.938500" maxx="7077101.106900" maxy="3631790.938500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2015_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2015_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2014_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2014_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2014_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.793955</westBoundLongitude><eastBoundLongitude>-64.663741</eastBoundLongitude><southBoundLatitude>-27.976005</southBoundLatitude><northBoundLatitude>-26.418077</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.793955" miny="-27.976005" maxx="-64.663741" maxy="-26.418077"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.976005" miny="-65.793955" maxx="-26.418077" maxy="-64.663741"/>
+<BoundingBox CRS="EPSG:22173" minx="6906165.506500" miny="3520554.191000" maxx="7078139.012700" maxy="3631480.387400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2014_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2014_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2013_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2013_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2013_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.794885</westBoundLongitude><eastBoundLongitude>-64.661314</eastBoundLongitude><southBoundLatitude>-27.976376</southBoundLatitude><northBoundLatitude>-26.418255</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.794885" miny="-27.976376" maxx="-64.661314" maxy="-26.418255"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.976376" miny="-65.794885" maxx="-26.418255" maxy="-64.661314"/>
+<BoundingBox CRS="EPSG:22173" minx="6906124.584300" miny="3520461.354200" maxx="7078116.848000" maxy="3631718.849700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2013_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2013_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2012_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2012_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2012_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.793573</westBoundLongitude><eastBoundLongitude>-64.661918</eastBoundLongitude><southBoundLatitude>-27.887184</southBoundLatitude><northBoundLatitude>-26.430666</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.793573" miny="-27.887184" maxx="-64.661918" maxy="-26.430666"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.887184" miny="-65.793573" maxx="-26.430666" maxy="-64.661918"/>
+<BoundingBox CRS="EPSG:22173" minx="6916008.495400" miny="3520589.998400" maxx="7076740.934600" maxy="3631767.548200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2012_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2012_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2011_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2011_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2011_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.848835</westBoundLongitude><eastBoundLongitude>-64.678020</eastBoundLongitude><southBoundLatitude>-27.823984</southBoundLatitude><northBoundLatitude>-26.435290</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.848835" miny="-27.823984" maxx="-64.678020" maxy="-26.435290"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.823984" miny="-65.848835" maxx="-26.435290" maxy="-64.678020"/>
+<BoundingBox CRS="EPSG:22173" minx="6923020.343900" miny="3515077.308000" maxx="7076243.888500" maxy="3630257.079100"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2011_EEAOC</Title>
+          <LegendURL width="230" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2011_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2010_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2010_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2010_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.844237</westBoundLongitude><eastBoundLongitude>-64.765905</eastBoundLongitude><southBoundLatitude>-27.823757</southBoundLatitude><northBoundLatitude>-26.499761</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.844237" miny="-27.823757" maxx="-64.765905" maxy="-26.499761"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.823757" miny="-65.844237" maxx="-26.499761" maxy="-64.765905"/>
+<BoundingBox CRS="EPSG:22173" minx="6923044.942600" miny="3515527.378400" maxx="7069184.185900" maxy="3621596.184000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2010_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2010_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2009_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2009_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2009_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.796730</westBoundLongitude><eastBoundLongitude>-64.768204</eastBoundLongitude><southBoundLatitude>-27.820995</southBoundLatitude><northBoundLatitude>-26.498588</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.796730" miny="-27.820995" maxx="-64.768204" maxy="-26.498588"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.820995" miny="-65.796730" maxx="-26.498588" maxy="-64.768204"/>
+<BoundingBox CRS="EPSG:22173" minx="6923344.036700" miny="3520263.357800" maxx="7069316.324400" maxy="3621372.603000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2009_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2009_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caña_de_azúcar_2008_EEAOC</Name>
+        <Title><![CDATA[Caña_de_azúcar_2008_EEAOC]]></Title>
+        <Abstract><![CDATA[Caña_de_azúcar_2008_EEAOC]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.846334</westBoundLongitude><eastBoundLongitude>-64.753514</eastBoundLongitude><southBoundLatitude>-27.821001</southBoundLatitude><northBoundLatitude>-26.466013</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.846334" miny="-27.821001" maxx="-64.753514" maxy="-26.466013"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.821001" miny="-65.846334" maxx="-26.466013" maxy="-64.753514"/>
+<BoundingBox CRS="EPSG:22173" minx="6923350.588500" miny="3515322.787200" maxx="7072912.528100" maxy="3622820.431200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caña_de_azúcar_2008_EEAOC</Title>
+          <LegendURL width="231" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caña_de_azúcar_2008_EEAOC" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Arándano_2016</Name>
+        <Title><![CDATA[Arándano_2016]]></Title>
+        <Abstract><![CDATA[Arándano_2016]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.747631</westBoundLongitude><eastBoundLongitude>-65.070253</eastBoundLongitude><southBoundLatitude>-27.773599</southBoundLatitude><northBoundLatitude>-26.626231</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.747631" miny="-27.773599" maxx="-65.070253" maxy="-26.626231"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.773599" miny="-65.747631" maxx="-26.626231" maxy="-65.070253"/>
+<BoundingBox CRS="EPSG:22173" minx="6928587.204000" miny="3525130.575600" maxx="7055419.374200" maxy="3591646.770400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Arándano_2016</Title>
+          <LegendURL width="134" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Arándano_2016" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Apiarios</Name>
+        <Title><![CDATA[Apiarios]]></Title>
+        <Abstract><![CDATA[Apiarios]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.988792</westBoundLongitude><eastBoundLongitude>-63.569293</eastBoundLongitude><southBoundLatitude>-28.803974</southBoundLatitude><northBoundLatitude>-22.036081</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.988792" miny="-28.803974" maxx="-63.569293" maxy="-22.036081"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.803974" miny="-65.988792" maxx="-22.036081" maxy="-63.569293"/>
+<BoundingBox CRS="EPSG:22173" minx="6814422.719000" miny="3501156.940100" maxx="7562382.556200" maxy="3737378.948700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Apiarios</Title>
+          <LegendURL width="87" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/Actividades_Agropecuarias_WMS/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Apiarios" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>47247.023810</MinScaleDenominator>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

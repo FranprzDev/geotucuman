@@ -1,0 +1,1418 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0"
+  xmlns="http://www.opengis.net/wms"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xmlns:esri_wms="http://www.esri.com/wms"
+  xsi:schemaLocation="http://www.opengis.net/wms http://schemas.opengis.net/wms/1.3.0/capabilities_1_3_0.xsd http://www.esri.com/wms https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?version=1.3.0&amp;service=WMS&amp;request=GetSchemaExtension">
+  <Service>
+    <Name><![CDATA[WMS]]></Name>
+    <Title><![CDATA[MST]]></Title>
+    <Abstract>WMS</Abstract>
+    <KeywordList><Keyword><![CDATA[]]></Keyword></KeywordList>
+    <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson><![CDATA[]]></ContactPerson>
+        <ContactOrganization><![CDATA[]]></ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition><![CDATA[]]></ContactPosition>
+      <ContactAddress>
+        <AddressType><![CDATA[]]></AddressType>
+        <Address><![CDATA[]]></Address>
+        <City><![CDATA[]]></City>
+        <StateOrProvince><![CDATA[]]></StateOrProvince>
+        <PostCode><![CDATA[]]></PostCode>
+        <Country><![CDATA[]]></Country>
+      </ContactAddress>
+      <ContactVoiceTelephone><![CDATA[]]></ContactVoiceTelephone>
+      <ContactFacsimileTelephone><![CDATA[]]></ContactFacsimileTelephone>
+      <ContactElectronicMailAddress><![CDATA[]]></ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees><![CDATA[]]></Fees>
+    <AccessConstraints><![CDATA[]]></AccessConstraints>
+    <MaxWidth>2048</MaxWidth>
+    <MaxHeight>2048</MaxHeight>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/bmp</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/tiff</Format>
+        <Format>image/png</Format>
+        <Format>image/png8</Format>
+        <Format>image/png24</Format>
+        <Format>image/png32</Format>
+        <Format>image/gif</Format>
+        <Format>image/svg+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>application/vnd.esri.wms_raw_xml</Format>
+        <Format>application/vnd.esri.wms_featureinfo_xml</Format>
+        <Format>application/vnd.ogc.wms_xml</Format>
+        <Format>text/xml</Format>
+        <Format>text/html</Format>
+        <Format>text/plain</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+      <esri_wms:GetStyles>
+        <Format>application/vnd.ogc.sld+xml</Format>
+        <DCPType>
+          <HTTP><Get><OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer"/></Get></HTTP>
+        </DCPType>
+      </esri_wms:GetStyles>
+    </Request>
+    <Exception>
+      <Format>application/vnd.ogc.se_xml</Format>
+      <Format>application/vnd.ogc.se_inimage</Format>
+      <Format>application/vnd.ogc.se_blank</Format>
+      <Format>text/xml</Format>
+      <Format>XML</Format>
+    </Exception>
+    <Layer>
+      <Title><![CDATA[]]></Title>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-71.622912</westBoundLongitude><eastBoundLongitude>-62.915342</eastBoundLongitude><southBoundLatitude>-32.023592</southBoundLatitude><northBoundLatitude>-19.971816</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-71.622912" miny="-32.023592" maxx="-62.915342" maxy="-19.971816"/>
+<BoundingBox CRS="EPSG:4326" minx="-32.023592" miny="-71.622912" maxx="-19.971816" maxy="-62.915342"/>
+<BoundingBox CRS="EPSG:22173" minx="6457497.211624" miny="2967711.462501" maxx="7784644.262476" maxy="3791585.358451"/>
+      <Layer>
+        <Title><![CDATA[Indicadores de población según hogares por radio - Censo 2010]]></Title>
+        <Abstract><![CDATA[Indicadores de población según hogares por radio - Censo 2010]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179349</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179349" miny="-28.004086" maxx="-64.458821" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.179349" maxx="-26.053029" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3482359.553200" maxx="7118375.777800" maxy="3651609.889200"/>
+      <Layer queryable="1">
+        <Name>Tasa_de_analfabetismo</Name>
+        <Title><![CDATA[Tasa_de_analfabetismo]]></Title>
+        <Abstract><![CDATA[Tasa_de_analfabetismo]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164427</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.067041</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164427" miny="-28.004086" maxx="-64.458821" maxy="-26.067041"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.164427" maxx="-26.067041" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3483827.232100" maxx="7116822.853800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tasa_de_analfabetismo</Title>
+          <LegendURL width="102" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tasa_de_analfabetismo" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Población_rural_dispersa</Name>
+        <Title><![CDATA[Población_rural_dispersa]]></Title>
+        <Abstract><![CDATA[Población_rural_dispersa]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164427</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.067041</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164427" miny="-28.004086" maxx="-64.458821" maxy="-26.067041"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.164427" maxx="-26.067041" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3483827.232100" maxx="7116822.853800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Población_rural_dispersa</Title>
+          <LegendURL width="117" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Población_rural_dispersa" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Hogares_con_NBI</Name>
+        <Title><![CDATA[Hogares_con_NBI]]></Title>
+        <Abstract><![CDATA[Hogares_con_NBI]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.178354</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.178354" miny="-28.004086" maxx="-64.458821" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.178354" maxx="-26.053029" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3482457.379000" maxx="7118375.777800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Hogares_con_NBI</Title>
+          <LegendURL width="102" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Hogares_con_NBI" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Procedencia_del_agua_para_consumo_por_red_pública</Name>
+        <Title><![CDATA[Procedencia_del_agua_para_consumo_por_red_pública]]></Title>
+        <Abstract><![CDATA[Procedencia_del_agua_para_consumo_por_red_pública]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.178354</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.178354" miny="-28.004086" maxx="-64.458821" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.178354" maxx="-26.053029" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3482457.379000" maxx="7118375.777800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Procedencia_del_agua_para_consumo_por_red_pública</Title>
+          <LegendURL width="106" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Procedencia_del_agua_para_consumo_por_red_pública" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Combustible_usado_para_cocinar</Name>
+        <Title><![CDATA[Combustible_usado_para_cocinar]]></Title>
+        <Abstract><![CDATA[Combustible_usado_para_cocinar]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.178354</westBoundLongitude><eastBoundLongitude>-64.458821</eastBoundLongitude><southBoundLatitude>-28.004086</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.178354" miny="-28.004086" maxx="-64.458821" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.004086" miny="-66.178354" maxx="-26.053029" maxy="-64.458821"/>
+<BoundingBox CRS="EPSG:22173" minx="6903071.180500" miny="3482457.379000" maxx="7118375.777800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Combustible_usado_para_cocinar</Title>
+          <LegendURL width="112" height="131">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Combustible_usado_para_cocinar" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Régimen de tenencia]]></Title>
+        <Abstract><![CDATA[Régimen de tenencia]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179348</westBoundLongitude><eastBoundLongitude>-64.458827</eastBoundLongitude><southBoundLatitude>-28.003652</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179348" miny="-28.003652" maxx="-64.458827" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003652" miny="-66.179348" maxx="-26.053029" maxy="-64.458827"/>
+<BoundingBox CRS="EPSG:22173" minx="6903119.252000" miny="3482359.553200" maxx="7118375.777800" maxy="3651609.889200"/>
+      <Layer queryable="1">
+        <Name>Propietario_de_la_vivienda_y_el_terreno</Name>
+        <Title><![CDATA[Propietario_de_la_vivienda_y_el_terreno]]></Title>
+        <Abstract><![CDATA[Propietario_de_la_vivienda_y_el_terreno]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179348</westBoundLongitude><eastBoundLongitude>-64.458827</eastBoundLongitude><southBoundLatitude>-28.003652</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179348" miny="-28.003652" maxx="-64.458827" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003652" miny="-66.179348" maxx="-26.053029" maxy="-64.458827"/>
+<BoundingBox CRS="EPSG:22173" minx="6903119.252000" miny="3482359.553200" maxx="7118375.777800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Propietario_de_la_vivienda_y_el_terreno</Title>
+          <LegendURL width="106" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Propietario_de_la_vivienda_y_el_terreno" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Propietario_sólo_de_la_vivienda</Name>
+        <Title><![CDATA[Propietario_sólo_de_la_vivienda]]></Title>
+        <Abstract><![CDATA[Propietario_sólo_de_la_vivienda]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179348</westBoundLongitude><eastBoundLongitude>-64.458827</eastBoundLongitude><southBoundLatitude>-28.003652</southBoundLatitude><northBoundLatitude>-26.053029</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179348" miny="-28.003652" maxx="-64.458827" maxy="-26.053029"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.003652" miny="-66.179348" maxx="-26.053029" maxy="-64.458827"/>
+<BoundingBox CRS="EPSG:22173" minx="6903119.252000" miny="3482359.553200" maxx="7118375.777800" maxy="3651609.889200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Propietario_sólo_de_la_vivienda</Title>
+          <LegendURL width="104" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Propietario_sólo_de_la_vivienda" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Organismos_que_intervienen_en_el_territorio</Name>
+        <Title><![CDATA[Organismos_que_intervienen_en_el_territorio]]></Title>
+        <Abstract><![CDATA[Organismos_que_intervienen_en_el_territorio]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.059474</westBoundLongitude><eastBoundLongitude>-65.770010</eastBoundLongitude><southBoundLatitude>-26.748006</southBoundLatitude><northBoundLatitude>-26.349732</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.059474" miny="-26.748006" maxx="-65.770010" maxy="-26.349732"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.748006" miny="-66.059474" maxx="-26.349732" maxy="-65.770010"/>
+<BoundingBox CRS="EPSG:22173" minx="7042256.782100" miny="3494083.763100" maxx="7086363.795900" maxy="3522878.336300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Organismos_que_intervienen_en_el_territorio</Title>
+          <LegendURL width="177" height="61">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Organismos_que_intervienen_en_el_territorio" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tierras_Húmedas_y_Secas</Name>
+        <Title><![CDATA[Tierras_Húmedas_y_Secas]]></Title>
+        <Abstract><![CDATA[Tierras_Húmedas_y_Secas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.338500" miny="3482382.504300" maxx="7118562.599400" maxy="3651622.153200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tierras_Húmedas_y_Secas</Title>
+          <LegendURL width="140" height="63">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tierras_Húmedas_y_Secas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Tasa_de_Degradación_de_Tierras</Name>
+        <Title><![CDATA[Tasa_de_Degradación_de_Tierras]]></Title>
+        <Abstract><![CDATA[Tasa_de_Degradación_de_Tierras]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-65.545695</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.096040</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-65.545695" maxy="-26.096040"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.096040" maxy="-65.545695"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.338500" miny="3482382.504300" maxx="7114414.359300" maxy="3544680.596900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Tasa_de_Degradación_de_Tierras</Title>
+          <LegendURL width="46" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Tasa_de_Degradación_de_Tierras" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Parcelario_rural_Tafí_del_Valle</Name>
+        <Title><![CDATA[Parcelario_rural_Tafí_del_Valle]]></Title>
+        <Abstract><![CDATA[Parcelario_rural_Tafí_del_Valle]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.177566</westBoundLongitude><eastBoundLongitude>-65.622154</eastBoundLongitude><southBoundLatitude>-27.100925</southBoundLatitude><northBoundLatitude>-26.230038</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.177566" miny="-27.100925" maxx="-65.622154" maxy="-26.230038"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.100925" miny="-66.177566" maxx="-26.230038" maxy="-65.622154"/>
+<BoundingBox CRS="EPSG:22173" minx="7003152.507300" miny="3482391.386800" maxx="7099591.098800" maxy="3537469.896500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Parcelario_rural_Tafí_del_Valle</Title>
+          <LegendURL width="223" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Parcelario_rural_Tafí_del_Valle" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Parcelas_con_cultivos_frutales</Name>
+        <Title><![CDATA[Parcelas_con_cultivos_frutales]]></Title>
+        <Abstract><![CDATA[Parcelas_con_cultivos_frutales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.038926</westBoundLongitude><eastBoundLongitude>-65.869939</eastBoundLongitude><southBoundLatitude>-26.621408</southBoundLatitude><northBoundLatitude>-26.333484</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.038926" miny="-26.621408" maxx="-65.869939" maxy="-26.333484"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.621408" miny="-66.038926" maxx="-26.333484" maxy="-65.869939"/>
+<BoundingBox CRS="EPSG:22173" minx="7056283.624700" miny="3496123.515200" maxx="7088177.809700" maxy="3512952.122400"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Parcelas_con_cultivos_frutales</Title>
+          <LegendURL width="87" height="39">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Parcelas_con_cultivos_frutales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Parcelas_con_cultivos_de_vid</Name>
+        <Title><![CDATA[Parcelas_con_cultivos_de_vid]]></Title>
+        <Abstract><![CDATA[Parcelas_con_cultivos_de_vid]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.047297</westBoundLongitude><eastBoundLongitude>-65.847272</eastBoundLongitude><southBoundLatitude>-26.621563</southBoundLatitude><northBoundLatitude>-26.301288</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.047297" miny="-26.621563" maxx="-65.847272" maxy="-26.301288"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.621563" miny="-66.047297" maxx="-26.301288" maxy="-65.847272"/>
+<BoundingBox CRS="EPSG:22173" minx="7056266.440800" miny="3495289.906600" maxx="7091742.463700" maxy="3515209.389900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Parcelas_con_cultivos_de_vid</Title>
+          <LegendURL width="218" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Parcelas_con_cultivos_de_vid" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Mapa Hidrogeológico]]></Title>
+        <Abstract><![CDATA[Mapa Hidrogeológico]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.139147</westBoundLongitude><eastBoundLongitude>-65.711382</eastBoundLongitude><southBoundLatitude>-26.671534</southBoundLatitude><northBoundLatitude>-26.270413</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.139147" miny="-26.671534" maxx="-65.711382" maxy="-26.270413"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.671534" miny="-66.139147" maxx="-26.270413" maxy="-65.711382"/>
+<BoundingBox CRS="EPSG:22173" minx="7050729.774300" miny="3486149.013300" maxx="7095140.121500" maxy="3528729.647000"/>
+      <Layer queryable="1">
+        <Name>Mapa_Hidrogeológico</Name>
+        <Title><![CDATA[Mapa_Hidrogeológico]]></Title>
+        <Abstract><![CDATA[Mapa_Hidrogeológico]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.139147</westBoundLongitude><eastBoundLongitude>-65.711382</eastBoundLongitude><southBoundLatitude>-26.671534</southBoundLatitude><northBoundLatitude>-26.270413</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.139147" miny="-26.671534" maxx="-65.711382" maxy="-26.270413"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.671534" miny="-66.139147" maxx="-26.270413" maxy="-65.711382"/>
+<BoundingBox CRS="EPSG:22173" minx="7050729.774300" miny="3486149.013300" maxx="7095140.121500" maxy="3528729.647000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Mapa_Hidrogeológico</Title>
+          <LegendURL width="327" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Mapa_Hidrogeológico" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Estructura</Name>
+        <Title><![CDATA[Estructura]]></Title>
+        <Abstract><![CDATA[Estructura]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.089500</westBoundLongitude><eastBoundLongitude>-65.762480</eastBoundLongitude><southBoundLatitude>-26.670484</southBoundLatitude><northBoundLatitude>-26.298978</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.089500" miny="-26.670484" maxx="-65.762480" maxy="-26.298978"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.670484" miny="-66.089500" maxx="-26.298978" maxy="-65.762480"/>
+<BoundingBox CRS="EPSG:22173" minx="7050846.148900" miny="3491090.937900" maxx="7091985.662200" maxy="3523643.456000"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Estructura</Title>
+          <LegendURL width="99" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Estructura" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Manzanero</Name>
+        <Title><![CDATA[Manzanero]]></Title>
+        <Abstract><![CDATA[Manzanero]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.036177</westBoundLongitude><eastBoundLongitude>-65.684798</eastBoundLongitude><southBoundLatitude>-26.952577</southBoundLatitude><northBoundLatitude>-26.343091</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.036177" miny="-26.952577" maxx="-65.684798" maxy="-26.343091"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.952577" miny="-66.036177" maxx="-26.343091" maxy="-65.684798"/>
+<BoundingBox CRS="EPSG:22173" minx="7019590.102700" miny="3496407.755000" maxx="7087081.939300" maxy="3531298.599300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Manzanero</Title>
+          <LegendURL width="105" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Manzanero" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Índice_de_Aridez</Name>
+        <Title><![CDATA[Índice_de_Aridez]]></Title>
+        <Abstract><![CDATA[Índice_de_Aridez]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-64.458537</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.051342</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-64.458537" maxy="-26.051342"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.051342" maxy="-64.458537"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.338500" miny="3482382.504300" maxx="7118562.599400" maxy="3651622.153200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Índice_de_Aridez</Title>
+          <LegendURL width="162" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Índice_de_Aridez" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Imágenes Satelitáles e Índices espectrales PMST-NOA]]></Title>
+        <Abstract><![CDATA[Imágenes Satelitáles e Índices espectrales PMST-NOA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-71.198458</westBoundLongitude><eastBoundLongitude>-63.326764</eastBoundLongitude><southBoundLatitude>-31.479549</southBoundLatitude><northBoundLatitude>-20.524728</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-71.198458" miny="-31.479549" maxx="-63.326764" maxy="-20.524728"/>
+<BoundingBox CRS="EPSG:4326" minx="-31.479549" miny="-71.198458" maxx="-20.524728" maxy="-63.326764"/>
+<BoundingBox CRS="EPSG:22173" minx="6517822.077572" miny="3005160.275953" maxx="7724319.396529" maxy="3754136.544998"/>
+      <Layer>
+        <Title><![CDATA[Índices espectrales Tafí del Valle]]></Title>
+        <Abstract><![CDATA[Índices espectrales Tafí del Valle]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007575</westBoundLongitude><eastBoundLongitude>-64.561538</eastBoundLongitude><southBoundLatitude>-27.201968</southBoundLatitude><northBoundLatitude>-24.923302</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007575" miny="-27.201968" maxx="-64.561538" maxy="-24.923302"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201968" miny="-67.007575" maxx="-24.923302" maxy="-64.561538"/>
+<BoundingBox CRS="EPSG:22173" minx="6991956.298495" miny="3400166.295194" maxx="7243667.841092" maxy="3642536.610672"/>
+      <Layer>
+        <Title><![CDATA[Índice de diferencia normalizada del agua]]></Title>
+        <Abstract><![CDATA[Índice de diferencia normalizada del agua]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+      <Layer queryable="1">
+        <Name>NDWI_Enero_2019</Name>
+        <Title><![CDATA[NDWI_Enero_2019]]></Title>
+        <Abstract><![CDATA[NDWI_Enero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDWI_Enero_2019</Title>
+          <LegendURL width="315" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDWI_Enero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDWI_Febrero_2019</Name>
+        <Title><![CDATA[NDWI_Febrero_2019]]></Title>
+        <Abstract><![CDATA[NDWI_Febrero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDWI_Febrero_2019</Title>
+          <LegendURL width="315" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDWI_Febrero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDWI_Marzo_2019</Name>
+        <Title><![CDATA[NDWI_Marzo_2019]]></Title>
+        <Abstract><![CDATA[NDWI_Marzo_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDWI_Marzo_2019</Title>
+          <LegendURL width="315" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDWI_Marzo_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDWI_Agosto_2019</Name>
+        <Title><![CDATA[NDWI_Agosto_2019]]></Title>
+        <Abstract><![CDATA[NDWI_Agosto_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDWI_Agosto_2019</Title>
+          <LegendURL width="315" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDWI_Agosto_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDWI_Septiembre_2019</Name>
+        <Title><![CDATA[NDWI_Septiembre_2019]]></Title>
+        <Abstract><![CDATA[NDWI_Septiembre_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDWI_Septiembre_2019</Title>
+          <LegendURL width="315" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDWI_Septiembre_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Índice diferencial de vegetación normalizado]]></Title>
+        <Abstract><![CDATA[Índice diferencial de vegetación normalizado]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007574</westBoundLongitude><eastBoundLongitude>-64.894081</eastBoundLongitude><southBoundLatitude>-27.201899</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007574" miny="-27.201899" maxx="-64.894081" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201899" miny="-67.007574" maxx="-26.181805" maxy="-64.894081"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.035416" miny="3400166.295194" maxx="7104526.522514" maxy="3609579.442514"/>
+      <Layer queryable="1">
+        <Name>NDVI_Enero_2019</Name>
+        <Title><![CDATA[NDVI_Enero_2019]]></Title>
+        <Abstract><![CDATA[NDVI_Enero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDVI_Enero_2019</Title>
+          <LegendURL width="215" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDVI_Enero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDVI_Febrero_2019</Name>
+        <Title><![CDATA[NDVI_Febrero_2019]]></Title>
+        <Abstract><![CDATA[NDVI_Febrero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007571</westBoundLongitude><eastBoundLongitude>-64.894166</eastBoundLongitude><southBoundLatitude>-27.201892</southBoundLatitude><northBoundLatitude>-26.181811</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007571" miny="-27.201892" maxx="-64.894166" maxy="-26.181811"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201892" miny="-67.007571" maxx="-26.181811" maxy="-64.894166"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.769878" miny="3400166.599363" maxx="7104525.968713" maxy="3609571.035549"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDVI_Febrero_2019</Title>
+          <LegendURL width="215" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDVI_Febrero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDVI_Marzo_2019</Name>
+        <Title><![CDATA[NDVI_Marzo_2019]]></Title>
+        <Abstract><![CDATA[NDVI_Marzo_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDVI_Marzo_2019</Title>
+          <LegendURL width="215" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDVI_Marzo_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDVI_Agosto_2019</Name>
+        <Title><![CDATA[NDVI_Agosto_2019]]></Title>
+        <Abstract><![CDATA[NDVI_Agosto_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDVI_Agosto_2019</Title>
+          <LegendURL width="215" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDVI_Agosto_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>NDVI_Septiembre_2019</Name>
+        <Title><![CDATA[NDVI_Septiembre_2019]]></Title>
+        <Abstract><![CDATA[NDVI_Septiembre_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007574</westBoundLongitude><eastBoundLongitude>-64.894081</eastBoundLongitude><southBoundLatitude>-27.201899</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007574" miny="-27.201899" maxx="-64.894081" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201899" miny="-67.007574" maxx="-26.181805" maxy="-64.894081"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.035416" miny="3400166.295194" maxx="7104526.522514" maxy="3609579.442514"/>
+        <Style>
+          <Name>default</Name>
+          <Title>NDVI_Septiembre_2019</Title>
+          <LegendURL width="215" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=NDVI_Septiembre_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Índice de vegetación ajustado al suelo]]></Title>
+        <Abstract><![CDATA[Índice de vegetación ajustado al suelo]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007574</westBoundLongitude><eastBoundLongitude>-64.894081</eastBoundLongitude><southBoundLatitude>-27.201899</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007574" miny="-27.201899" maxx="-64.894081" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201899" miny="-67.007574" maxx="-26.181805" maxy="-64.894081"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.035416" miny="3400166.295194" maxx="7104526.522514" maxy="3609579.442514"/>
+      <Layer queryable="1">
+        <Name>SAVI_Enero_2019</Name>
+        <Title><![CDATA[SAVI_Enero_2019]]></Title>
+        <Abstract><![CDATA[SAVI_Enero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>SAVI_Enero_2019</Title>
+          <LegendURL width="207" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=SAVI_Enero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>SAVI_Febrero_2019</Name>
+        <Title><![CDATA[SAVI_Febrero_2019]]></Title>
+        <Abstract><![CDATA[SAVI_Febrero_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007574</westBoundLongitude><eastBoundLongitude>-64.894081</eastBoundLongitude><southBoundLatitude>-27.201899</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007574" miny="-27.201899" maxx="-64.894081" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201899" miny="-67.007574" maxx="-26.181805" maxy="-64.894081"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.035416" miny="3400166.295194" maxx="7104526.522514" maxy="3609579.442514"/>
+        <Style>
+          <Name>default</Name>
+          <Title>SAVI_Febrero_2019</Title>
+          <LegendURL width="207" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=SAVI_Febrero_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>SAVI_Marzo_2019</Name>
+        <Title><![CDATA[SAVI_Marzo_2019]]></Title>
+        <Abstract><![CDATA[SAVI_Marzo_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>SAVI_Marzo_2019</Title>
+          <LegendURL width="207" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=SAVI_Marzo_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>SAVI_Agosto_2019</Name>
+        <Title><![CDATA[SAVI_Agosto_2019]]></Title>
+        <Abstract><![CDATA[SAVI_Agosto_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773420" miny="3400183.172290" maxx="7104522.251790" maxy="3609554.062720"/>
+        <Style>
+          <Name>default</Name>
+          <Title>SAVI_Agosto_2019</Title>
+          <LegendURL width="207" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=SAVI_Agosto_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>SAVI_Septiembre_2019</Name>
+        <Title><![CDATA[SAVI_Septiembre_2019]]></Title>
+        <Abstract><![CDATA[SAVI_Septiembre_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007574</westBoundLongitude><eastBoundLongitude>-64.894081</eastBoundLongitude><southBoundLatitude>-27.201899</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007574" miny="-27.201899" maxx="-64.894081" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201899" miny="-67.007574" maxx="-26.181805" maxy="-64.894081"/>
+<BoundingBox CRS="EPSG:22173" minx="6991964.035416" miny="3400166.295194" maxx="7104526.522514" maxy="3609579.442514"/>
+        <Style>
+          <Name>default</Name>
+          <Title>SAVI_Septiembre_2019</Title>
+          <LegendURL width="207" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=SAVI_Septiembre_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Índice de Suelo Desnudo - BSI ]]></Title>
+        <Abstract><![CDATA[Índice de Suelo Desnudo - BSI ]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007575</westBoundLongitude><eastBoundLongitude>-64.561538</eastBoundLongitude><southBoundLatitude>-27.201968</southBoundLatitude><northBoundLatitude>-24.923302</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007575" miny="-27.201968" maxx="-64.561538" maxy="-24.923302"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201968" miny="-67.007575" maxx="-24.923302" maxy="-64.561538"/>
+<BoundingBox CRS="EPSG:22173" minx="6991956.298495" miny="3400166.295195" maxx="7243667.841092" maxy="3642536.610672"/>
+      <Layer queryable="1">
+        <Name>BSI_Invierno_2019</Name>
+        <Title><![CDATA[BSI_Invierno_2019]]></Title>
+        <Abstract><![CDATA[BSI_Invierno_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.065335</westBoundLongitude><eastBoundLongitude>-65.822580</eastBoundLongitude><southBoundLatitude>-26.700310</southBoundLatitude><northBoundLatitude>-26.283271</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.065335" miny="-26.700310" maxx="-65.822580" maxy="-26.283271"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.700310" miny="-66.065335" maxx="-26.283271" maxy="-65.822580"/>
+<BoundingBox CRS="EPSG:22173" minx="7047541.430006" miny="3493498.052763" maxx="7093735.438656" maxy="3517656.282132"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_Invierno_2019</Title>
+          <LegendURL width="171" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_Invierno_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_Invierno_2014</Name>
+        <Title><![CDATA[BSI_Invierno_2014]]></Title>
+        <Abstract><![CDATA[BSI_Invierno_2014]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.926785</westBoundLongitude><eastBoundLongitude>-64.563375</eastBoundLongitude><southBoundLatitude>-27.058268</southBoundLatitude><northBoundLatitude>-24.923302</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.926785" miny="-27.058268" maxx="-64.563375" maxy="-24.923302"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.058268" miny="-66.926785" maxx="-24.923302" maxy="-64.563375"/>
+<BoundingBox CRS="EPSG:22173" minx="7007879.135310" miny="3408054.651225" maxx="7243667.841092" maxy="3642536.610672"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_Invierno_2014</Title>
+          <LegendURL width="171" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_Invierno_2014" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_Verano_2020</Name>
+        <Title><![CDATA[BSI_Verano_2020]]></Title>
+        <Abstract><![CDATA[BSI_Verano_2020]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007575</westBoundLongitude><eastBoundLongitude>-64.894117</eastBoundLongitude><southBoundLatitude>-27.201968</southBoundLatitude><northBoundLatitude>-26.181805</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007575" miny="-27.201968" maxx="-64.894117" maxy="-26.181805"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201968" miny="-67.007575" maxx="-26.181805" maxy="-64.894117"/>
+<BoundingBox CRS="EPSG:22173" minx="6991956.298495" miny="3400166.295195" maxx="7104526.540359" maxy="3609575.764020"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_Verano_2020</Title>
+          <LegendURL width="169" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_Verano_2020" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_Verano_2015</Name>
+        <Title><![CDATA[BSI_Verano_2015]]></Title>
+        <Abstract><![CDATA[BSI_Verano_2015]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.065104</westBoundLongitude><eastBoundLongitude>-65.823414</eastBoundLongitude><southBoundLatitude>-26.700217</southBoundLatitude><northBoundLatitude>-26.283262</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.065104" miny="-26.700217" maxx="-65.823414" maxy="-26.283262"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.700217" miny="-66.065104" maxx="-26.283262" maxy="-65.823414"/>
+<BoundingBox CRS="EPSG:22173" minx="7047551.720666" miny="3493521.023763" maxx="7093736.546573" maxy="3517573.251374"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_Verano_2015</Title>
+          <LegendURL width="171" height="107">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_Verano_2015" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Imágenes satelitáles sentinel Tafí del Valle 2019]]></Title>
+        <Abstract><![CDATA[Imágenes satelitáles sentinel Tafí del Valle 2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007572</westBoundLongitude><eastBoundLongitude>-64.894079</eastBoundLongitude><southBoundLatitude>-27.201903</southBoundLatitude><northBoundLatitude>-26.181810</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007572" miny="-27.201903" maxx="-64.894079" maxy="-26.181810"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201903" miny="-67.007572" maxx="-26.181810" maxy="-64.894079"/>
+<BoundingBox CRS="EPSG:22173" minx="6991963.599221" miny="3400166.567161" maxx="7104526.019165" maxy="3609579.589546"/>
+      <Layer queryable="1">
+        <Name>Imágen_color_verdadero_enero</Name>
+        <Title><![CDATA[Imágen_color_verdadero_enero]]></Title>
+        <Abstract><![CDATA[Imágen_color_verdadero_enero]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773415" miny="3400183.172289" maxx="7104522.251787" maxy="3609554.062722"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Imágen_color_verdadero_enero</Title>
+          <LegendURL width="129" height="86">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Imágen_color_verdadero_enero" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Imágen_color_verdadero_febrero</Name>
+        <Title><![CDATA[Imágen_color_verdadero_febrero]]></Title>
+        <Abstract><![CDATA[Imágen_color_verdadero_febrero]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007572</westBoundLongitude><eastBoundLongitude>-64.894079</eastBoundLongitude><southBoundLatitude>-27.201903</southBoundLatitude><northBoundLatitude>-26.181810</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007572" miny="-27.201903" maxx="-64.894079" maxy="-26.181810"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201903" miny="-67.007572" maxx="-26.181810" maxy="-64.894079"/>
+<BoundingBox CRS="EPSG:22173" minx="6991963.599221" miny="3400166.567161" maxx="7104526.019165" maxy="3609579.589546"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Imágen_color_verdadero_febrero</Title>
+          <LegendURL width="129" height="86">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Imágen_color_verdadero_febrero" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Imágen_color_verdadero_marzo</Name>
+        <Title><![CDATA[Imágen_color_verdadero_marzo]]></Title>
+        <Abstract><![CDATA[Imágen_color_verdadero_marzo]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773415" miny="3400183.172289" maxx="7104522.251787" maxy="3609554.062722"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Imágen_color_verdadero_marzo</Title>
+          <LegendURL width="129" height="86">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Imágen_color_verdadero_marzo" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Imágen_color_verdadero_agosto</Name>
+        <Title><![CDATA[Imágen_color_verdadero_agosto]]></Title>
+        <Abstract><![CDATA[Imágen_color_verdadero_agosto]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007402</westBoundLongitude><eastBoundLongitude>-64.894339</eastBoundLongitude><southBoundLatitude>-27.201711</southBoundLatitude><northBoundLatitude>-26.181846</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007402" miny="-27.201711" maxx="-64.894339" maxy="-26.181846"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201711" miny="-67.007402" maxx="-26.181846" maxy="-64.894339"/>
+<BoundingBox CRS="EPSG:22173" minx="6991984.773415" miny="3400183.172289" maxx="7104522.251787" maxy="3609554.062722"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Imágen_color_verdadero_agosto</Title>
+          <LegendURL width="129" height="86">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Imágen_color_verdadero_agosto" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Imágen_color_verdadero_septiembre</Name>
+        <Title><![CDATA[Imágen_color_verdadero_septiembre]]></Title>
+        <Abstract><![CDATA[Imágen_color_verdadero_septiembre]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.007572</westBoundLongitude><eastBoundLongitude>-64.894079</eastBoundLongitude><southBoundLatitude>-27.201903</southBoundLatitude><northBoundLatitude>-26.181810</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.007572" miny="-27.201903" maxx="-64.894079" maxy="-26.181810"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.201903" miny="-67.007572" maxx="-26.181810" maxy="-64.894079"/>
+<BoundingBox CRS="EPSG:22173" minx="6991963.599221" miny="3400166.567161" maxx="7104526.019165" maxy="3609579.589546"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Imágen_color_verdadero_septiembre</Title>
+          <LegendURL width="129" height="86">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Imágen_color_verdadero_septiembre" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Índice de Suelo Desnudo - BSI - Ecorregión NOA]]></Title>
+        <Abstract><![CDATA[Índice de Suelo Desnudo - BSI - Ecorregión NOA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-71.198458</westBoundLongitude><eastBoundLongitude>-63.326764</eastBoundLongitude><southBoundLatitude>-31.479549</southBoundLatitude><northBoundLatitude>-20.524728</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-71.198458" miny="-31.479549" maxx="-63.326764" maxy="-20.524728"/>
+<BoundingBox CRS="EPSG:4326" minx="-31.479549" miny="-71.198458" maxx="-20.524728" maxy="-63.326764"/>
+<BoundingBox CRS="EPSG:22173" minx="6517822.077572" miny="3005160.275953" maxx="7724319.396529" maxy="3754136.544998"/>
+      <Layer queryable="1">
+        <Name>BSI_NOA_Invierno_2019</Name>
+        <Title><![CDATA[BSI_NOA_Invierno_2019]]></Title>
+        <Abstract><![CDATA[BSI_NOA_Invierno_2019]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-69.951321</westBoundLongitude><eastBoundLongitude>-63.327812</eastBoundLongitude><southBoundLatitude>-31.442610</southBoundLatitude><northBoundLatitude>-20.552189</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-69.951321" miny="-31.442610" maxx="-63.327812" maxy="-20.552189"/>
+<BoundingBox CRS="EPSG:4326" minx="-31.442610" miny="-69.951321" maxx="-20.552189" maxy="-63.327812"/>
+<BoundingBox CRS="EPSG:22173" minx="6521917.787802" miny="3124005.949500" maxx="7724312.754311" maxy="3754136.544998"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_NOA_Invierno_2019</Title>
+          <LegendURL width="111" height="197">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_NOA_Invierno_2019" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_NOA_Invierno_2014</Name>
+        <Title><![CDATA[BSI_NOA_Invierno_2014]]></Title>
+        <Abstract><![CDATA[BSI_NOA_Invierno_2014]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-71.198458</westBoundLongitude><eastBoundLongitude>-63.355100</eastBoundLongitude><southBoundLatitude>-31.479549</southBoundLatitude><northBoundLatitude>-20.524728</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-71.198458" miny="-31.479549" maxx="-63.355100" maxy="-20.524728"/>
+<BoundingBox CRS="EPSG:4326" minx="-31.479549" miny="-71.198458" maxx="-20.524728" maxy="-63.355100"/>
+<BoundingBox CRS="EPSG:22173" minx="6517822.077572" miny="3005160.275953" maxx="7724319.396529" maxy="3751440.326624"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_NOA_Invierno_2014</Title>
+          <LegendURL width="111" height="197">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_NOA_Invierno_2014" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_NOA_Verano_2020</Name>
+        <Title><![CDATA[BSI_NOA_Verano_2020]]></Title>
+        <Abstract><![CDATA[BSI_NOA_Verano_2020]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-69.930515</westBoundLongitude><eastBoundLongitude>-63.344029</eastBoundLongitude><southBoundLatitude>-31.442267</southBoundLatitude><northBoundLatitude>-20.555028</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-69.930515" miny="-31.442267" maxx="-63.344029" maxy="-20.555028"/>
+<BoundingBox CRS="EPSG:4326" minx="-31.442267" miny="-69.930515" maxx="-20.555028" maxy="-63.344029"/>
+<BoundingBox CRS="EPSG:22173" minx="6521955.817204" miny="3125988.371263" maxx="7724041.510470" maxy="3752593.743394"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_NOA_Verano_2020</Title>
+          <LegendURL width="111" height="197">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_NOA_Verano_2020" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>BSI_NOA_Verano_2015</Name>
+        <Title><![CDATA[BSI_NOA_Verano_2015]]></Title>
+        <Abstract><![CDATA[BSI_NOA_Verano_2015]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-69.459917</westBoundLongitude><eastBoundLongitude>-64.741341</eastBoundLongitude><southBoundLatitude>-30.387882</southBoundLatitude><northBoundLatitude>-21.747307</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-69.459917" miny="-30.387882" maxx="-64.741341" maxy="-21.747307"/>
+<BoundingBox CRS="EPSG:4326" minx="-30.387882" miny="-69.459917" maxx="-21.747307" maxy="-64.741341"/>
+<BoundingBox CRS="EPSG:22173" minx="6638853.385530" miny="3167216.618278" maxx="7592682.818474" maxy="3620980.541151"/>
+        <Style>
+          <Name>default</Name>
+          <Title>BSI_NOA_Verano_2015</Title>
+          <LegendURL width="111" height="197">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=BSI_NOA_Verano_2015" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      </Layer>
+      <Layer>
+        <Title><![CDATA[Relevamiento de sup. intervenida con prácticas MST-NOA]]></Title>
+        <Abstract><![CDATA[Relevamiento de sup. intervenida con prácticas MST-NOA]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.904560</westBoundLongitude><eastBoundLongitude>-65.142911</eastBoundLongitude><southBoundLatitude>-29.929625</southBoundLatitude><northBoundLatitude>-22.000871</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.904560" miny="-29.929625" maxx="-65.142911" maxy="-22.000871"/>
+<BoundingBox CRS="EPSG:4326" minx="-29.929625" miny="-67.904560" maxx="-22.000871" maxy="-65.142911"/>
+<BoundingBox CRS="EPSG:22173" minx="6689653.497709" miny="3316064.106178" maxx="7566997.577766" maxy="3582759.507823"/>
+      <Layer>
+        <Title><![CDATA[Cantidad de productores relevados periodo 2020-2021]]></Title>
+        <Abstract><![CDATA[Cantidad de productores relevados periodo 2020-2021]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.904560</westBoundLongitude><eastBoundLongitude>-65.142911</eastBoundLongitude><southBoundLatitude>-29.929625</southBoundLatitude><northBoundLatitude>-22.000871</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.904560" miny="-29.929625" maxx="-65.142911" maxy="-22.000871"/>
+<BoundingBox CRS="EPSG:4326" minx="-29.929625" miny="-67.904560" maxx="-22.000871" maxy="-65.142911"/>
+<BoundingBox CRS="EPSG:22173" minx="6689653.497709" miny="3316064.106178" maxx="7566997.577766" maxy="3582759.507823"/>
+      <Layer queryable="1">
+        <Name>Prov._de_La_Rioja</Name>
+        <Title><![CDATA[Prov._de_La_Rioja]]></Title>
+        <Abstract><![CDATA[Prov._de_La_Rioja]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.549609</westBoundLongitude><eastBoundLongitude>-67.114556</eastBoundLongitude><southBoundLatitude>-29.924870</southBoundLatitude><northBoundLatitude>-29.452746</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.549609" miny="-29.924870" maxx="-67.114556" maxy="-29.452746"/>
+<BoundingBox CRS="EPSG:4326" minx="-29.924870" miny="-67.549609" maxx="-29.452746" maxy="-67.114556"/>
+<BoundingBox CRS="EPSG:22173" minx="6689653.497709" miny="3350355.708233" maxx="6741523.647687" maxy="3391876.457764"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Prov._de_La_Rioja</Title>
+          <LegendURL width="95" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Prov._de_La_Rioja" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Prov._de_Catamarca</Name>
+        <Title><![CDATA[Prov._de_Catamarca]]></Title>
+        <Abstract><![CDATA[Prov._de_Catamarca]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-67.870024</westBoundLongitude><eastBoundLongitude>-66.209849</eastBoundLongitude><southBoundLatitude>-28.025222</southBoundLatitude><northBoundLatitude>-26.453302</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-67.870024" miny="-28.025222" maxx="-66.209849" maxy="-26.453302"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.025222" miny="-67.870024" maxx="-26.453302" maxy="-66.209849"/>
+<BoundingBox CRS="EPSG:22173" minx="6900710.581707" miny="3316064.106178" maxx="7073590.273092" maxy="3479073.733200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Prov._de_Catamarca</Title>
+          <LegendURL width="95" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Prov._de_Catamarca" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Prov._de_Tucumán</Name>
+        <Title><![CDATA[Prov._de_Tucumán]]></Title>
+        <Abstract><![CDATA[Prov._de_Tucumán]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.054807</westBoundLongitude><eastBoundLongitude>-65.838370</eastBoundLongitude><southBoundLatitude>-26.641970</southBoundLatitude><northBoundLatitude>-26.339856</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.054807" miny="-26.641970" maxx="-65.838370" maxy="-26.339856"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.641970" miny="-66.054807" maxx="-26.339856" maxy="-65.838370"/>
+<BoundingBox CRS="EPSG:22173" minx="7054005.458257" miny="3494543.053795" maxx="7087468.214034" maxy="3516093.068516"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Prov._de_Tucumán</Title>
+          <LegendURL width="95" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Prov._de_Tucumán" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Prov._de_Jujuy</Name>
+        <Title><![CDATA[Prov._de_Jujuy]]></Title>
+        <Abstract><![CDATA[Prov._de_Jujuy]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.232098</westBoundLongitude><eastBoundLongitude>-65.187182</eastBoundLongitude><southBoundLatitude>-23.920693</southBoundLatitude><northBoundLatitude>-22.008586</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.232098" miny="-23.920693" maxx="-65.187182" maxy="-22.008586"/>
+<BoundingBox CRS="EPSG:4326" minx="-23.920693" miny="-66.232098" maxx="-22.008586" maxy="-65.187182"/>
+<BoundingBox CRS="EPSG:22173" minx="7355460.886520" miny="3476369.044113" maxx="7566997.577766" maxy="3582759.507823"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Prov._de_Jujuy</Title>
+          <LegendURL width="95" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Prov._de_Jujuy" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      </Layer>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Grado_de_Degradación_de_tierras</Name>
+        <Title><![CDATA[Grado_de_Degradación_de_tierras]]></Title>
+        <Abstract><![CDATA[Grado_de_Degradación_de_tierras]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-65.545695</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.096040</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-65.545695" maxy="-26.096040"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.096040" maxy="-65.545695"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.338500" miny="3482382.504300" maxx="7114414.359300" maxy="3544680.596900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Grado_de_Degradación_de_tierras</Title>
+          <LegendURL width="123" height="84">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Grado_de_Degradación_de_tierras" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Extensión_de_Grado_de_Degradación_de_Tierras</Name>
+        <Title><![CDATA[Extensión_de_Grado_de_Degradación_de_Tierras]]></Title>
+        <Abstract><![CDATA[Extensión_de_Grado_de_Degradación_de_Tierras]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.179134</westBoundLongitude><eastBoundLongitude>-65.545695</eastBoundLongitude><southBoundLatitude>-28.015292</southBoundLatitude><northBoundLatitude>-26.096040</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.179134" miny="-28.015292" maxx="-65.545695" maxy="-26.096040"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.015292" miny="-66.179134" maxx="-26.096040" maxy="-65.545695"/>
+<BoundingBox CRS="EPSG:22173" minx="6901829.338500" miny="3482382.504300" maxx="7114414.359300" maxy="3544680.596900"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Extensión_de_Grado_de_Degradación_de_Tierras</Title>
+          <LegendURL width="54" height="129">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Extensión_de_Grado_de_Degradación_de_Tierras" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Cursos_de_agua</Name>
+        <Title><![CDATA[Cursos_de_agua]]></Title>
+        <Abstract><![CDATA[Cursos_de_agua]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.164778</westBoundLongitude><eastBoundLongitude>-64.461558</eastBoundLongitude><southBoundLatitude>-28.014294</southBoundLatitude><northBoundLatitude>-26.052808</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.164778" miny="-28.014294" maxx="-64.461558" maxy="-26.052808"/>
+<BoundingBox CRS="EPSG:4326" minx="-28.014294" miny="-66.164778" maxx="-26.052808" maxy="-64.461558"/>
+<BoundingBox CRS="EPSG:22173" minx="6901939.957300" miny="3483794.210300" maxx="7118403.532200" maxy="3651326.323800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Cursos_de_agua</Title>
+          <LegendURL width="140" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Cursos_de_agua" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Hábitat_rural</Name>
+        <Title><![CDATA[Hábitat_rural]]></Title>
+        <Abstract><![CDATA[Hábitat_rural]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.051245</westBoundLongitude><eastBoundLongitude>-65.728015</eastBoundLongitude><southBoundLatitude>-26.681510</southBoundLatitude><northBoundLatitude>-26.302314</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.051245" miny="-26.681510" maxx="-65.728015" maxy="-26.302314"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.681510" miny="-66.051245" maxx="-26.302314" maxy="-65.728015"/>
+<BoundingBox CRS="EPSG:22173" minx="7049624.444800" miny="3494899.387500" maxx="7091609.306500" maxy="3527071.599200"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Hábitat_rural</Title>
+          <LegendURL width="85" height="63">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Hábitat_rural" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Comunidades_indígenas</Name>
+        <Title><![CDATA[Comunidades_indígenas]]></Title>
+        <Abstract><![CDATA[Comunidades_indígenas]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.011868</westBoundLongitude><eastBoundLongitude>-65.274302</eastBoundLongitude><southBoundLatitude>-27.210695</southBoundLatitude><northBoundLatitude>-26.146196</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.011868" miny="-27.210695" maxx="-65.274302" maxy="-26.146196"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.210695" miny="-66.011868" maxx="-26.146196" maxy="-65.274302"/>
+<BoundingBox CRS="EPSG:22173" minx="6990989.347000" miny="3498824.290100" maxx="7108735.455900" maxy="3571896.659300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Comunidades_indígenas</Title>
+          <LegendURL width="186" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Comunidades_indígenas" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Caminos_rurales</Name>
+        <Title><![CDATA[Caminos_rurales]]></Title>
+        <Abstract><![CDATA[Caminos_rurales]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.051787</westBoundLongitude><eastBoundLongitude>-65.718156</eastBoundLongitude><southBoundLatitude>-26.682429</southBoundLatitude><northBoundLatitude>-26.319021</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.051787" miny="-26.682429" maxx="-65.718156" maxy="-26.319021"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.682429" miny="-66.051787" maxx="-26.319021" maxy="-65.718156"/>
+<BoundingBox CRS="EPSG:22173" minx="7049522.605500" miny="3494845.479300" maxx="7089756.223100" maxy="3528052.697500"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Caminos_rurales</Title>
+          <LegendURL width="139" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Caminos_rurales" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Canales_de_riego</Name>
+        <Title><![CDATA[Canales_de_riego]]></Title>
+        <Abstract><![CDATA[Canales_de_riego]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.031400</westBoundLongitude><eastBoundLongitude>-65.839545</eastBoundLongitude><southBoundLatitude>-26.659210</southBoundLatitude><northBoundLatitude>-26.337393</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.031400" miny="-26.659210" maxx="-65.839545" maxy="-26.337393"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.659210" miny="-66.031400" maxx="-26.337393" maxy="-65.839545"/>
+<BoundingBox CRS="EPSG:22173" minx="7052095.240000" miny="3496874.016400" maxx="7087741.279400" maxy="3515973.678300"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Canales_de_riego</Title>
+          <LegendURL width="147" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Canales_de_riego" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Bosque_nativo</Name>
+        <Title><![CDATA[Bosque_nativo]]></Title>
+        <Abstract><![CDATA[Bosque_nativo]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.006184</westBoundLongitude><eastBoundLongitude>-64.483332</eastBoundLongitude><southBoundLatitude>-27.812756</southBoundLatitude><northBoundLatitude>-26.174844</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.006184" miny="-27.812756" maxx="-64.483332" maxy="-26.174844"/>
+<BoundingBox CRS="EPSG:4326" minx="-27.812756" miny="-66.006184" maxx="-26.174844" maxy="-64.483332"/>
+<BoundingBox CRS="EPSG:22173" minx="6924273.951800" miny="3499390.685800" maxx="7104900.051800" maxy="3649460.689700"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Bosque_nativo</Title>
+          <LegendURL width="127" height="46">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Bosque_nativo" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Áreas_con_déficit_hídrico</Name>
+        <Title><![CDATA[Áreas_con_déficit_hídrico]]></Title>
+        <Abstract><![CDATA[Áreas_con_déficit_hídrico]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-65.964839</westBoundLongitude><eastBoundLongitude>-65.874362</eastBoundLongitude><southBoundLatitude>-26.596745</southBoundLatitude><northBoundLatitude>-26.359069</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-65.964839" miny="-26.596745" maxx="-65.874362" maxy="-26.359069"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.596745" miny="-65.964839" maxx="-26.359069" maxy="-65.874362"/>
+<BoundingBox CRS="EPSG:22173" minx="7059015.710600" miny="3503509.498400" maxx="7085343.514200" maxy="3512514.410800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Áreas_con_déficit_hídrico</Title>
+          <LegendURL width="192" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Áreas_con_déficit_hídrico" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1">
+        <Name>Área_de_Estudio</Name>
+        <Title><![CDATA[Área_de_Estudio]]></Title>
+        <Abstract><![CDATA[Área_de_Estudio]]></Abstract>
+<CRS>CRS:84</CRS>
+<CRS>EPSG:4326</CRS>
+<CRS>EPSG:22173</CRS>
+<EX_GeographicBoundingBox><westBoundLongitude>-66.142321</westBoundLongitude><eastBoundLongitude>-65.719336</eastBoundLongitude><southBoundLatitude>-26.869475</southBoundLatitude><northBoundLatitude>-26.230154</northBoundLatitude></EX_GeographicBoundingBox>
+<BoundingBox CRS="CRS:84" minx="-66.142321" miny="-26.869475" maxx="-65.719336" maxy="-26.230154"/>
+<BoundingBox CRS="EPSG:4326" minx="-26.869475" miny="-66.142321" maxx="-26.230154" maxy="-65.719336"/>
+<BoundingBox CRS="EPSG:22173" minx="7028797.906400" miny="3485857.677500" maxx="7099602.394800" maxy="3527889.536800"/>
+        <Style>
+          <Name>default</Name>
+          <Title>Área_de_Estudio</Title>
+          <LegendURL width="141" height="16">
+            <Format>image/png</Format>
+            <OnlineResource xlink:href="https://gis.producciontucuman.gob.ar/ArcGIS/services/MST/MapServer/WMSServer?request=GetLegendGraphic%26version=1.3.0%26format=image/png%26layer=Área_de_Estudio" xlink:type="simple" xmlns:xlink="http://www.w3.org/1999/xlink" />
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

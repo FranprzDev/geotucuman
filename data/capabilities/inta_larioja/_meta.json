@@ -1,0 +1,9 @@
+{
+  "source": "inta_larioja",
+  "fetchedAt": "2026-11-11T01:19:35.328Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

@@ -1,0 +1,16 @@
+{
+  "source": "mendoza",
+  "fetchedAt": "2026-11-11T01:19:30.046Z",
+  "status": "live",
+  "files": [
+    "arcgis-Hosted_Bosques_Nativos.json",
+    "arcgis-Hosted_Bomberos.json",
+    "arcgis-Hosted_Cuencas_Hidrogr_ficas.json",
+    "arcgis-Hosted_Departamentos_2024.json",
+    "arcgis-Hosted_Rutas_de_Mendoza_IGN.json",
+    "arcgis-Hosted_Inventario_Nacional_Glaciares_IANIGLA.json",
+    "arcgis-Hosted_aridez_futuro_vect.json",
+    "arcgis-Hosted_Suelos.json",
+    "arcgis-Hosted_aridez_pasado_vect.json"
+  ]
+}

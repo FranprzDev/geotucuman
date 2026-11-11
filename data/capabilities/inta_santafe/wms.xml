@@ -1,0 +1,1191 @@
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="3553" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://geo-nodo10.inta.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>GeoNode Local GeoServer</Title>
+    <Abstract>This is a description of your Web Map Server.</Abstract>
+    <KeywordList>
+      <Keyword>WFS</Keyword>
+      <Keyword>WMS</Keyword>
+      <Keyword>GEOSERVER</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://geoserver.sourceforge.net/html/index.php"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson/>
+        <ContactOrganization/>
+      </ContactPersonPrimary>
+      <ContactPosition/>
+      <ContactAddress>
+        <AddressType/>
+        <Address/>
+        <City/>
+        <StateOrProvince/>
+        <PostCode/>
+        <Country/>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress/>
+    </ContactInformation>
+    <Fees>NONE</Fees>
+    <AccessConstraints>NONE</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/json;type=utfgrid</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>image/vnd.jpeg-png</Format>
+        <Format>image/vnd.jpeg-png8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <Format>text/html; subtype=openlayers2</Format>
+        <Format>text/html; subtype=openlayers3</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>text/xml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/xml; subtype=gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>text/javascript</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+      <Format>JSON</Format>
+      <Format>JSONP</Format>
+    </Exception>
+    <Layer>
+      <Title>GeoNode Local GeoServer</Title>
+      <Abstract>This is a description of your Web Map Server.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:3785</CRS>
+      <CRS>EPSG:3857</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>EPSG:32647</CRS>
+      <CRS>EPSG:32736</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-62.884061294</westBoundLongitude>
+        <eastBoundLongitude>-58.83213753999993</eastBoundLongitude>
+        <southBoundLatitude>-34.387637</southBoundLatitude>
+        <northBoundLatitude>-27.99688666</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-62.884061294" miny="-34.387637" maxx="-58.83213753999993" maxy="-27.99688666"/>
+      <BoundingBox CRS="EPSG:4326" minx="-34.387637" miny="-62.884061294" maxx="-27.99688666" maxy="-58.83213753999993"/>
+      <BoundingBox CRS="EPSG:3785" minx="-7000221.682261084" miny="-4056830.8104555863" maxx="-6549163.593232626" maxy="-3228523.20748736"/>
+      <BoundingBox CRS="EPSG:3857" minx="-7000221.682261084" miny="-4080971.7296259142" maxx="-6549163.593232626" maxy="-3248581.274376116"/>
+      <BoundingBox CRS="EPSG:900913" minx="-7000221.682261084" miny="-4080971.7296259142" maxx="-6549163.593232626" maxy="-3248581.274376116"/>
+      <BoundingBox CRS="EPSG:32647" minx="1.2340324633395594E7" miny="-1.6085671032329288E8" maxx="4.930308118760171E7" maxy="-6.989225312118137E7"/>
+      <BoundingBox CRS="EPSG:32736" minx="-1.0229028282022653E7" miny="-3297342.379827927" maxx="-7435436.639806604" maxy="-1344183.7046865465"/>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:case_inv2025_cd30c00b9cd7a4895799b6c665c1311a</Name>
+        <Title>Caseros - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento Caseros, provincia de Santa Fe, corresopondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>caseros</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.884061294</westBoundLongitude>
+          <eastBoundLongitude>-61.061918134</eastBoundLongitude>
+          <southBoundLatitude>-34.386619036</southBoundLatitude>
+          <northBoundLatitude>-32.902601829</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.884061294" miny="-34.386619036" maxx="-61.061918134" maxy="-32.902601829"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.386619036" miny="-62.884061294" maxx="-32.902601829" maxy="-61.061918134"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7000221.682261084" miny="-4056694.121858621" maxx="-6797381.633537438" maxy="-3859166.2944099084"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7000221.682261084" miny="-4080834.412992065" maxx="-6797381.633537438" maxy="-3882383.1096090632"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7000221.682261084" miny="-4080834.412992065" maxx="-6797381.633537438" maxy="-3882383.1096090632"/>
+        <BoundingBox CRS="EPSG:32647" minx="4.009239640237386E7" miny="-9.705725822982925E7" maxx="4.9300346625393346E7" maxy="-7.448026903593315E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8013485.573991632" miny="-2749153.2552845622" maxx="-7435817.261199385" maxy="-1972647.0821599863"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=1bdf3fcd-6516-4a80-a3da-9ed86650c7a0&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/81"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:case_inv2025_cd30c00b9cd7a4895799b6c665c1311a</Name>
+          <Title>geonode:case_inv2025_cd30c00b9cd7a4895799b6c665c1311a</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acase_inv2025_cd30c00b9cd7a4895799b6c665c1311a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_belg_inv25_urb_bajos_filtr109b5c296bbf43</Name>
+        <Title>Belgrano - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento Belgrano, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>clas_belg_inv25_urb_bajos_filtr109b5c296bbf43</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>belgrano</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.012335933</westBoundLongitude>
+          <eastBoundLongitude>-61.437593676</eastBoundLongitude>
+          <southBoundLatitude>-33.090529421</southBoundLatitude>
+          <northBoundLatitude>-32.307198305</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.012335933" miny="-33.090529421" maxx="-61.437593676" maxy="-32.307198305"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.090529421" miny="-62.012335933" maxx="-32.307198305" maxy="-61.437593676"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6903181.658962981" miny="-3883991.781256067" maxx="-6839201.643576364" maxy="-3780861.1262855246"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6903181.658962981" miny="-3907326.4039888848" maxx="-6839201.643576364" maxy="-3803703.0735671357"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6903181.658962981" miny="-3907326.4039888848" maxx="-6839201.643576364" maxy="-3803703.0735671357"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.879096853030026E7" miny="-1.017711043610717E8" maxx="4.305689012195737E7" maxy="-9.044123167150994E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8245194.034386868" miny="-2531819.026144355" maxx="-7930076.5768569" maxy="-2245763.450175814"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bf9584ce-e8e2-4ddf-9b29-17e840cf47f6&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/82"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_belg_inv25_urb_bajos_filtr109b5c296bbf43</Name>
+          <Title>geonode:clas_belg_inv25_urb_bajos_filtr109b5c296bbf43</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_belg_inv25_urb_bajos_filtr109b5c296bbf43"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_cast_inv25_filtr20_urb_9e675f1d052ef9d6ed724a4781d6d817</Name>
+        <Title>Castellanos - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento Castellanos, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>clas_cast_inv25_filtr20_urb_9e675f1d052ef9d6ed724a4781d6d817</Keyword>
+          <Keyword>castellanos</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.139717025</westBoundLongitude>
+          <eastBoundLongitude>-61.209601157</eastBoundLongitude>
+          <southBoundLatitude>-31.767849655</southBoundLatitude>
+          <northBoundLatitude>-30.711430628</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.139717025" miny="-31.767849655" maxx="-61.209601157" maxy="-30.711430628"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.767849655" miny="-62.139717025" maxx="-30.711430628" maxy="-61.209601157"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6917361.657261113" miny="-3710375.447645178" maxx="-6813821.632456609" maxy="-3573504.004081581"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6917361.657261113" miny="-3732875.7155565857" maxx="-6813821.632456609" maxy="-3595329.351081405"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6917361.657261113" miny="-3732875.7155565857" maxx="-6813821.632456609" maxy="-3595329.351081405"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.1299456691378646E7" miny="-1.2236967429339673E8" maxx="3.822133448189005E7" maxy="-1.0560333770940247E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8918075.203576673" miny="-2760391.791165601" maxx="-8443035.690180434" maxy="-2317458.5006149258"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=bbc04f74-7560-4056-a6dc-6dd18387cdf3&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/92"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_cast_inv25_filtr20_urb_9e675f1d052ef9d6ed724a4781d6d817</Name>
+          <Title>geonode:clas_cast_inv25_filtr20_urb_9e675f1d052ef9d6ed724a4781d6d817</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_cast_inv25_filtr20_urb_9e675f1d052ef9d6ed724a4781d6d817"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_cons_inv25_urb_filtr10_125b10bec590b5c882da2abc901c658c</Name>
+        <Title>Constitución - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento Constitución, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>constitución</Keyword>
+          <Keyword>clas_cons_inv25_urb_filtr10_125b10bec590b5c882da2abc901c658c</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.416558334</westBoundLongitude>
+          <eastBoundLongitude>-60.252341446</eastBoundLongitude>
+          <southBoundLatitude>-33.833967198</southBoundLatitude>
+          <northBoundLatitude>-33.176759578</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.416558334" miny="-33.833967198" maxx="-60.252341446" maxy="-33.176759578"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.833967198" miny="-61.416558334" maxx="-33.176759578" maxy="-60.252341446"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6836860.000016263" miny="-3982731.3822711944" maxx="-6707259.9688711725" maxy="-3895400.816516586"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6836860.000016263" miny="-4006529.60600654" maxx="-6707259.9688711725" maxy="-3918789.412050788"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6836860.000016263" miny="-4006529.60600654" maxx="-6707259.9688711725" maxy="-3918789.412050788"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.91007340083275E7" miny="-8.935550964962326E7" maxx="4.393662643972474E7" maxy="-7.882910218828337E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-7897103.20459366" miny="-2228650.435370836" maxx="-7646201.9096501805" maxy="-1798077.406912099"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a85914a2-15f9-4488-b913-bde54443486d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/85"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_cons_inv25_urb_filtr10_125b10bec590b5c882da2abc901c658c</Name>
+          <Title>geonode:clas_cons_inv25_urb_filtr10_125b10bec590b5c882da2abc901c658c</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_cons_inv25_urb_filtr10_125b10bec590b5c882da2abc901c658c"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_iri_inv25_urb_filtr10_a6935b3553bf72b35bec6629c5173e7a</Name>
+        <Title>Iriondo - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento Iriondo, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>clas_iri_inv25_urb_filtr10_a6935b3553bf72b35bec6629c5173e7a</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>iriondo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.713002378</westBoundLongitude>
+          <eastBoundLongitude>-60.812171594</eastBoundLongitude>
+          <southBoundLatitude>-33.09411473</southBoundLatitude>
+          <northBoundLatitude>-32.393608303</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.713002378" miny="-33.09411473" maxx="-60.812171594" maxy="-32.393608303"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.09411473" miny="-61.713002378" maxx="-32.393608303" maxy="-60.812171594"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6869860.00004304" miny="-3884465.925032731" maxx="-6769579.975877256" maxy="-3792192.952965451"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6869860.00004304" miny="-3907802.7929075737" maxx="-6769579.975877256" maxy="-3815089.4563200246"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6869860.00004304" miny="-3907802.7929075737" maxx="-6769579.975877256" maxy="-3815089.4563200246"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.7668741381834894E7" miny="-9.971180529370594E7" maxx="4.232811026608959E7" maxy="-8.863506283991577E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8205243.855945079" miny="-2419641.325864035" maxx="-7920977.191684818" maxy="-2047104.1407366502"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=57ca7b60-821a-49dd-b7b0-2dce0819ab83&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/83"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_iri_inv25_urb_filtr10_a6935b3553bf72b35bec6629c5173e7a</Name>
+          <Title>geonode:clas_iri_inv25_urb_filtr10_a6935b3553bf72b35bec6629c5173e7a</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_iri_inv25_urb_filtr10_a6935b3553bf72b35bec6629c5173e7a"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_lcap_inv25_6e91366de3878a99df6d2ee3f2b4ce45</Name>
+        <Title>La Capital - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento La Capital, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>clas_lcap_inv25_6e91366de3878a99df6d2ee3f2b4ce45</Keyword>
+          <Keyword>la capital</Keyword>
+          <Keyword>WCS</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.97836013826041</westBoundLongitude>
+          <eastBoundLongitude>-60.30174906626159</eastBoundLongitude>
+          <southBoundLatitude>-31.97247826626836</southBoundLatitude>
+          <northBoundLatitude>-31.015053836453774</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.97836013826041" miny="-31.97247826626836" maxx="-60.30174906626159" maxy="-31.015053836453774"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.97247826626836" miny="-60.97836013826041" maxx="-31.015053836453774" maxy="-60.30174906626159"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6788080.000000001" miny="-3737068.3795636403" maxx="-6712760.000000001" maxy="-3612684.2404085067"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6788080.000000001" miny="-3759698.5138476174" maxx="-6712760.000000001" maxy="-3634704.3249669233"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6788080.000000001" miny="-3759698.5138476174" maxx="-6712760.000000001" maxy="-3634704.3249669233"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.0836535281443417E7" miny="-1.1379898996512097E8" maxx="3.640637338239714E7" maxy="-1.0003954091596876E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8740215.254121061" miny="-2308215.666520869" maxx="-8333872.282301454" maxy="-1993802.2504240084"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=08e1c004-f687-4b44-a7a0-89558d3187aa&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/91"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_lcap_inv25_6e91366de3878a99df6d2ee3f2b4ce45</Name>
+          <Title>geonode:clas_lcap_inv25_6e91366de3878a99df6d2ee3f2b4ce45</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_lcap_inv25_6e91366de3878a99df6d2ee3f2b4ce45"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_lcol_inv25_urb_filtr10_49590228723d4c6e3c2a3ca99b62615d</Name>
+        <Title>Las Colonias - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento Las  Colonias, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>clas_lcol_inv25_urb_filtr10_49590228723d4c6e3c2a3ca99b62615d</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>las colonias</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.558941306</westBoundLongitude>
+          <eastBoundLongitude>-60.756745566</eastBoundLongitude>
+          <southBoundLatitude>-31.882557211</southBoundLatitude>
+          <northBoundLatitude>-30.609464486</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.558941306" miny="-31.882557211" maxx="-60.756745566" maxy="-30.609464486"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.882557211" miny="-61.558941306" maxx="-30.609464486" maxy="-60.756745566"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6852709.999956936" miny="-3725331.188280614" maxx="-6763409.978663602" maxy="-3560374.0470920755"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6852709.999956936" miny="-3747904.289688874" maxx="-6763409.978663602" maxy="-3582133.859204534"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6852709.999956936" miny="-3747904.289688874" maxx="-6763409.978663602" maxy="-3582133.859204534"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.986858343735165E7" miny="-1.211422822582372E8" maxx="3.736158040337055E7" maxy="-1.0264028072696765E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8936220.611993728" miny="-2554233.474180653" maxx="-8383456.643230578" maxy="-2152759.9496662277"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=f991e401-2abc-449c-a0bd-30b4118ee332&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/93"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_lcol_inv25_urb_filtr10_49590228723d4c6e3c2a3ca99b62615d</Name>
+          <Title>geonode:clas_lcol_inv25_urb_filtr10_49590228723d4c6e3c2a3ca99b62615d</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_lcol_inv25_urb_filtr10_49590228723d4c6e3c2a3ca99b62615d"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_rosa_inv25_urb_filtr10_b5b5476988be3c0ec6fd983aa4455c53</Name>
+        <Title>Rosario - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento Caseros, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>clas_rosa_inv25_urb_filtr10_b5b5476988be3c0ec6fd983aa4455c53</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>rosario</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.008902858</westBoundLongitude>
+          <eastBoundLongitude>-60.333010276</eastBoundLongitude>
+          <southBoundLatitude>-33.362172011</southBoundLatitude>
+          <northBoundLatitude>-32.819948775</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.008902858" miny="-33.362172011" maxx="-60.333010276" maxy="-32.819948775"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.362172011" miny="-61.008902858" maxx="-32.819948775" maxy="-60.333010276"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6791480.000008852" miny="-3919971.0298949294" maxx="-6716239.981949662" maxy="-3848264.564438414"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6791480.000008852" miny="-3943475.500561387" maxx="-6716239.981949662" maxy="-3871429.4881264856"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6791480.000008852" miny="-3943475.500561387" maxx="-6716239.981949662" maxy="-3871429.4881264856"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.809967745972346E7" miny="-9.239921625338523E7" maxx="4.149273242247196E7" maxy="-8.428428993752281E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8027220.588437092" miny="-2139421.926065195" maxx="-7815719.748830153" maxy="-1871020.0384839843"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/84"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=563d70d1-3cd7-41ba-8051-598720ea063b&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_rosa_inv25_urb_filtr10_b5b5476988be3c0ec6fd983aa4455c53</Name>
+          <Title>geonode:clas_rosa_inv25_urb_filtr10_b5b5476988be3c0ec6fd983aa4455c53</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_rosa_inv25_urb_filtr10_b5b5476988be3c0ec6fd983aa4455c53"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_sjer_inv25_urb_filtr10_0f44c5ab11d235bd79af7d4c2b666c52</Name>
+        <Title>San Jerónimo - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento San Jerónimo, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>clas_sjer_inv25_urb_filtr10_0f44c5ab11d235bd79af7d4c2b666c52</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>WCS</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.495340584</westBoundLongitude>
+          <eastBoundLongitude>-60.655774919</eastBoundLongitude>
+          <southBoundLatitude>-32.499160688</southBoundLatitude>
+          <northBoundLatitude>-31.786077845</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.495340584" miny="-32.499160688" maxx="-60.655774919" maxy="-31.786077845"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.499160688" miny="-61.495340584" maxx="-31.786077845" maxy="-60.655774919"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6845629.999969811" miny="-3806049.9810739746" maxx="-6752169.977654494" maxy="-3712750.812919154"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6845629.999969811" miny="-3829013.0565018407" maxx="-6752169.977654494" maxy="-3735262.6607671813"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6845629.999969811" miny="-3829013.0565018407" maxx="-6752169.977654494" maxy="-3735262.6607671813"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.492592578721491E7" miny="-1.0640734698999533E8" maxx="3.9662456961767875E7" maxy="-9.508024868467161E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8444112.4818187" miny="-2413955.231701856" maxx="-8142185.605796274" maxy="-2059455.9927271004"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=332ae7b2-fecf-4c2c-96c6-7f0c413123de&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/94"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_sjer_inv25_urb_filtr10_0f44c5ab11d235bd79af7d4c2b666c52</Name>
+          <Title>geonode:clas_sjer_inv25_urb_filtr10_0f44c5ab11d235bd79af7d4c2b666c52</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_sjer_inv25_urb_filtr10_0f44c5ab11d235bd79af7d4c2b666c52"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_slor_inv25_urb_filtr10_bbafd16714dbdd3b6773f6d2b0562e18</Name>
+        <Title>San Lorenzo - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento San Lorenzo, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>clas_slor_inv25_urb_filtr10_bbafd16714dbdd3b6773f6d2b0562e18</Keyword>
+          <Keyword>san lorenzo</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.207250873</westBoundLongitude>
+          <eastBoundLongitude>-60.658739428</eastBoundLongitude>
+          <southBoundLatitude>-33.429365994</southBoundLatitude>
+          <northBoundLatitude>-32.441757933</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.207250873" miny="-33.429365994" maxx="-60.658739428" maxy="-32.441757933"/>
+        <BoundingBox CRS="EPSG:4326" minx="-33.429365994" miny="-61.207250873" maxx="-32.441757933" maxy="-60.658739428"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6813560.000038509" miny="-3928888.3773909835" maxx="-6752499.985286826" maxy="-3798512.0548802014"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6813560.000038509" miny="-3952434.781559185" maxx="-6752499.985286826" maxy="-3821438.9358228254"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6813560.000038509" miny="-3952434.781559185" maxx="-6752499.985286826" maxy="-3821438.9358228254"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.749632936139919E7" miny="-9.749399576867518E7" maxx="4.2188447620725386E7" maxy="-8.43722415216542E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8176454.712700715" miny="-2245427.1297026123" maxx="-7795415.6236170605" maxy="-1963157.243221072"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=35c38e28-dcc4-484e-893e-3be6e1179571&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/87"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_slor_inv25_urb_filtr10_bbafd16714dbdd3b6773f6d2b0562e18</Name>
+          <Title>geonode:clas_slor_inv25_urb_filtr10_bbafd16714dbdd3b6773f6d2b0562e18</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_slor_inv25_urb_filtr10_bbafd16714dbdd3b6773f6d2b0562e18"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:clas_smar_inv25_urb_filtr10_64941034df2622b6542e83947ef6ad57</Name>
+        <Title>San Martin - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento San Martín, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>santa fe</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>clas_smar_inv25_urb_filtr10_64941034df2622b6542e83947ef6ad57</Keyword>
+          <Keyword>WCS</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.241840585</westBoundLongitude>
+          <eastBoundLongitude>-61.347657337</eastBoundLongitude>
+          <southBoundLatitude>-32.383457692</southBoundLatitude>
+          <northBoundLatitude>-31.618092887</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.241840585" miny="-32.383457692" maxx="-61.347657337" maxy="-31.618092887"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.383457692" miny="-62.241840585" maxx="-31.618092887" maxy="-61.347657337"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6928729.999958309" miny="-3790861.232756048" maxx="-6829189.976115074" maxy="-3690878.0802411945"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6928729.999958309" miny="-3813751.330054201" maxx="-6829189.976115074" maxy="-3713283.1262209555"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6928729.999958309" miny="-3813751.330054201" maxx="-6829189.976115074" maxy="-3713283.1262209555"/>
+        <BoundingBox CRS="EPSG:32647" minx="3.575903754647008E7" miny="-1.112605708380906E8" maxx="4.10097411332827E7" maxy="-9.864542780644202E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-8533960.9152625" miny="-2696172.6332103214" maxx="-8202157.021869531" maxy="-2298415.152038438"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=a0548922-1322-49cc-9a68-fb699bdad59c&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/97"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:clas_smar_inv25_urb_filtr10_64941034df2622b6542e83947ef6ad57</Name>
+          <Title>geonode:clas_smar_inv25_urb_filtr10_64941034df2622b6542e83947ef6ad57</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aclas_smar_inv25_urb_filtr10_64941034df2622b6542e83947ef6ad57"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:cpa_santa_fe</Name>
+        <Title>Santa Fe - Capacidad productiva de las tierras - 1:250.000</Title>
+        <Abstract>Capacidad productiva de las tierras para uso agrícola y pasturas de alfalfa. Provincia de Santa Fe 1:250.000</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>cpa_santa_fe</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>suelos</Keyword>
+          <Keyword>capacidad productiva</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.883519</westBoundLongitude>
+          <eastBoundLongitude>-58.83293191</eastBoundLongitude>
+          <southBoundLatitude>-34.387637</southBoundLatitude>
+          <northBoundLatitude>-27.99688666</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.883519" miny="-34.387637" maxx="-58.83293191" maxy="-27.99688666"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.387637" miny="-62.883519" maxx="-27.99688666" maxy="-58.83293191"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7000161.314369144" miny="-4056830.8104555863" maxx="-6549252.022096536" maxy="-3228523.20748736"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7000161.314369144" miny="-4080971.7296259142" maxx="-6549252.022096536" maxy="-3248581.274376116"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7000161.314369144" miny="-4080971.7296259142" maxx="-6549252.022096536" maxy="-3248581.274376116"/>
+        <BoundingBox CRS="EPSG:32647" minx="1.2341432128217695E7" miny="-1.6085339134167075E8" maxx="4.930162117769026E7" maxy="-6.989383430612804E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0228979446560223E7" miny="-3297104.4516552007" maxx="-7435445.67724699" maxy="-1344399.541645359"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/8"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=8003225d-276c-48d1-bf84-af3f0c02320d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:cpa_santa_fe</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="191" height="200">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Acpa_santa_fe"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:glop_inv2025_770596402c9aa9a4cfb06c68767eab9d</Name>
+        <Title>General López - Invierno 2025</Title>
+        <Abstract>Mapa de ocupación de la tierra del departamento General López, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>WCS</Keyword>
+          <Keyword>glop_inv2025_770596402c9aa9a4cfb06c68767eab9d</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>general lopez</Keyword>
+          <Keyword>santa fe</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.884061294</westBoundLongitude>
+          <eastBoundLongitude>-61.124979882</eastBoundLongitude>
+          <southBoundLatitude>-34.386619025</southBoundLatitude>
+          <northBoundLatitude>-33.286721526</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.884061294" miny="-34.386619025" maxx="-61.124979882" maxy="-33.286721526"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.386619025" miny="-62.884061294" maxx="-33.286721526" maxy="-61.124979882"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7000221.682261084" miny="-4056694.1203815877" maxx="-6804401.63521333" maxy="-3909966.2371173156"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7000221.682261084" miny="-4080834.411508247" maxx="-6804401.63521333" maxy="-3933423.583614251"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7000221.682261084" miny="-4080834.411508247" maxx="-6804401.63521333" maxy="-3933423.583614251"/>
+        <BoundingBox CRS="EPSG:32647" minx="4.1532003674784675E7" miny="-9.215766390434273E7" maxx="4.930034659584025E7" maxy="-7.46138316036035E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-7860025.472975568" miny="-2691787.4422512087" maxx="-7435817.265312453" maxy="-1991088.5081354487"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=be1c8d6d-8024-4e7d-9168-9a1d38e2752d&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/86"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:glop_inv2025_770596402c9aa9a4cfb06c68767eab9d</Name>
+          <Title>geonode:glop_inv2025_770596402c9aa9a4cfb06c68767eab9d</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Aglop_inv2025_770596402c9aa9a4cfb06c68767eab9d"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:scris_inv_urb_filtr20_b2c0fb0f0b0661c446eb596427a340ac</Name>
+        <Title>San Cristobal - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento San Cristóbal, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>santa fe</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>scris_inv_urb_filtr20_b2c0fb0f0b0661c446eb596427a340ac</Keyword>
+          <Keyword>WCS</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.130808816</westBoundLongitude>
+          <eastBoundLongitude>-60.590557063</eastBoundLongitude>
+          <southBoundLatitude>-30.80853146</southBoundLatitude>
+          <northBoundLatitude>-29.516214785</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.130808816" miny="-30.80853146" maxx="-60.590557063" maxy="-29.516214785"/>
+        <BoundingBox CRS="EPSG:4326" minx="-30.80853146" miny="-62.130808816" maxx="-29.516214785" maxy="-60.590557063"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6916369.999971352" miny="-3586020.502131796" maxx="-6744909.959133946" maxy="-3420461.18032131"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6916369.999971352" miny="-3607908.193616833" maxx="-6744909.959133946" maxy="-3441514.1163874906"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6916369.999971352" miny="-3607908.193616833" maxx="-6744909.959133946" maxy="-3441514.1163874906"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.389696949048038E7" miny="-1.374615404179471E8" maxx="3.374842919653589E7" maxy="-1.1469958346069294E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9449779.915234348" miny="-2869537.450573589" maxx="-8806874.587612433" maxy="-2188493.9762388687"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=0362e5ee-0fab-420e-8770-096489c8fda6&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/96"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:scris_inv_urb_filtr20_b2c0fb0f0b0661c446eb596427a340ac</Name>
+          <Title>geonode:scris_inv_urb_filtr20_b2c0fb0f0b0661c446eb596427a340ac</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Ascris_inv_urb_filtr20_b2c0fb0f0b0661c446eb596427a340ac"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:sjus_inv25_urb_filtr20_0eeaa20238971b452ae8a70fd78790d0</Name>
+        <Title>San Justo - Invierno 2025</Title>
+        <Abstract>Ocupación de la tierra del departamento San Justo, provincia de Santa Fe, correspondiente a la campaña agrícola del invierno del año 2025.</Abstract>
+        <KeywordList>
+          <Keyword>santa fe</Keyword>
+          <Keyword>GeoTIFF</Keyword>
+          <Keyword>sjus_inv25_urb_filtr20_0eeaa20238971b452ae8a70fd78790d0</Keyword>
+          <Keyword>WCS</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-60.859692689</westBoundLongitude>
+          <eastBoundLongitude>-60.11840274</eastBoundLongitude>
+          <southBoundLatitude>-31.213132668</southBoundLatitude>
+          <northBoundLatitude>-29.910036205</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-60.859692689" miny="-31.213132668" maxx="-60.11840274" maxy="-29.910036205"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.213132668" miny="-60.859692689" maxx="-29.910036205" maxy="-60.11840274"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6774869.9999745935" miny="-3638312.721427249" maxx="-6692349.9803217435" maxy="-3470682.6113961483"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6774869.9999745935" miny="-3660459.5209796657" maxx="-6692349.9803217435" maxy="-3491991.0701597305"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6774869.9999745935" miny="-3660459.5209796657" maxx="-6692349.9803217435" maxy="-3491991.0701597305"/>
+        <BoundingBox CRS="EPSG:32647" minx="2.511956258969662E7" miny="-1.2651237116097109E8" maxx="3.2904651421379868E7" maxy="-1.0814284586503279E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-9196581.969226591" miny="-2351246.44440221" maxx="-8622528.98680971" maxy="-1994650.7739780783"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/95"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=ddd2fdc5-49d5-48cf-b688-784b352786d1&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:sjus_inv25_urb_filtr20_0eeaa20238971b452ae8a70fd78790d0</Name>
+          <Title>geonode:sjus_inv25_urb_filtr20_0eeaa20238971b452ae8a70fd78790d0</Title>
+          <LegendURL width="176" height="231">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asjus_inv25_urb_filtr20_0eeaa20238971b452ae8a70fd78790d0"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:suelos_santa_fe_25</Name>
+        <Title>Santa Fe - Suelos - 1:50.000</Title>
+        <Abstract>Mapa de suelos en escala de semidetalle de la Provincia de Santa Fe</Abstract>
+        <KeywordList>
+          <Keyword>suelos_santa_fe_25</Keyword>
+          <Keyword>santa fe</Keyword>
+          <Keyword>features</Keyword>
+          <Keyword>suelos</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-62.88394703003684</westBoundLongitude>
+          <eastBoundLongitude>-58.83213753999993</eastBoundLongitude>
+          <southBoundLatitude>-34.38746959999263</southBoundLatitude>
+          <northBoundLatitude>-27.997064289991982</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-62.88394703003684" miny="-34.38746959999263" maxx="-58.83213753999993" maxy="-27.997064289991982"/>
+        <BoundingBox CRS="EPSG:4326" minx="-34.38746959999263" miny="-62.88394703003684" maxx="-27.997064289991982" maxy="-58.83213753999993"/>
+        <BoundingBox CRS="EPSG:3785" minx="-7000208.962454889" miny="-4056808.3324608477" maxx="-6549163.593232626" maxy="-3228545.484796903"/>
+        <BoundingBox CRS="EPSG:3857" minx="-7000208.962454889" miny="-4080949.1483536" maxx="-6549163.593232626" maxy="-3248603.6688256343"/>
+        <BoundingBox CRS="EPSG:900913" minx="-7000208.962454889" miny="-4080949.1483536" maxx="-6549163.593232626" maxy="-3248603.6688256343"/>
+        <BoundingBox CRS="EPSG:32647" minx="1.2341385517828805E7" miny="-1.6085377067320642E8" maxx="4.9302323914312735E7" maxy="-6.989394805151127E7"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0228930085539423E7" miny="-3297280.924911068" maxx="-7435501.1341466885" maxy="-1344197.8247019125"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=81022d76-4964-4727-85ec-1854f2e6818f&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/73"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:suelos_santa_fe_25</Name>
+          <Title>Mapa de suelos de la Provincia de Santa Fe</Title>
+          <LegendURL width="66" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asuelos_santa_fe_25"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>geonode:suelos_santa_fe_250_base_completa</Name>
+        <Title>Santa Fe - Suelos - 1:250.000</Title>
+        <Abstract>Mapa de suelos en escala de reconocimiento del Norte de la Provincia de Santa Fe</Abstract>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>suelos_santa_fe_250_base_completa</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-61.73210383828943</westBoundLongitude>
+          <eastBoundLongitude>-59.30313740249498</eastBoundLongitude>
+          <southBoundLatitude>-30.2328470821997</southBoundLatitude>
+          <northBoundLatitude>-27.9970642878737</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-61.73210383828943" miny="-30.2328470821997" maxx="-59.30313740249498" maxy="-27.9970642878737"/>
+        <BoundingBox CRS="EPSG:4326" minx="-30.2328470821997" miny="-61.73210383828943" maxx="-27.9970642878737" maxy="-59.30313740249498"/>
+        <BoundingBox CRS="EPSG:3785" minx="-6871986.364875868" miny="-3511998.247946878" maxx="-6601595.058089278" maxy="-3228545.4845312405"/>
+        <BoundingBox CRS="EPSG:3857" minx="-6871986.364875868" miny="-3533515.4155738377" maxx="-6601595.058089278" maxy="-3248603.668558575"/>
+        <BoundingBox CRS="EPSG:900913" minx="-6871986.364875868" miny="-3533515.4155738377" maxx="-6601595.058089278" maxy="-3248603.668558575"/>
+        <BoundingBox CRS="EPSG:32647" minx="1.300496642150287E7" miny="-1.5394852552380058E8" maxx="2.9963171503624078E7" maxy="-1.1597723645369828E8"/>
+        <BoundingBox CRS="EPSG:32736" minx="-1.0122788942401115E7" miny="-2804115.9745381693" maxx="-8965679.204170061" maxy="-1776608.0758994664"/>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=http%3A%2F%2Fwww.w3.org%2F2005%2FAtom&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=http%3A%2F%2Fgcmd.gsfc.nasa.gov%2FAboutus%2Fxml%2Fdif%2F&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2F2.0.2&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=urn%3Aoasis%3Anames%3Atc%3Aebxml-regrep%3Axsd%3Arim%3A3.0&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="FGDC">
+          <Format>text/xml</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=http%3A%2F%2Fwww.opengis.net%2Fcat%2Fcsw%2Fcsdgm&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/catalogue/csw?request=GetRecordById&amp;service=CSW&amp;version=2.0.2&amp;id=fd6eaf35-98b7-41ad-a25f-5b7617828564&amp;outputschema=http%3A%2F%2Fwww.isotc211.org%2F2005%2Fgmd&amp;elementsetname=full"/>
+        </MetadataURL>
+        <MetadataURL type="other">
+          <Format>other</Format>
+          <OnlineResource xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/showmetadata/xsl/58"/>
+        </MetadataURL>
+        <Style>
+          <Name>geonode:suelos_santa_fe_250_base_completa</Name>
+          <Title>Default Polygon</Title>
+          <LegendURL width="220" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://geo-nodo10.inta.gob.ar/geoserver/ows?service=WMS&amp;version=1.3.0&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=geonode%3Asuelos_santa_fe_250_base_completa"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

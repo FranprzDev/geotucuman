@@ -1,0 +1,10 @@
+{
+  "source": "misiones",
+  "fetchedAt": "2026-11-11T01:19:00.762Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wfs.xml",
+    "wms.xml"
+  ]
+}

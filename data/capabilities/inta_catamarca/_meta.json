@@ -1,0 +1,9 @@
+{
+  "source": "inta_catamarca",
+  "fetchedAt": "2026-11-11T01:19:33.378Z",
+  "status": "live",
+  "wmsStatus": "live",
+  "files": [
+    "wms.xml"
+  ]
+}

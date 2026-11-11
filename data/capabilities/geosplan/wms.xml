@@ -1,0 +1,677 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<WMS_Capabilities version="1.3.0" updateSequence="16532" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms http://g.geosplan.tucuman.gob.ar:80/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+  <Service>
+    <Name>WMS</Name>
+    <Title>Servicio WMS de la Secretaria de Estado de Gestión Pública y Planeamiento</Title>
+    <Abstract>GeoSPlan - Servicio WMS de la Secretaría de Estado de Gestión Pública y Planeamiento de la provincia de Tucumán. Versiones WMS soportadas 1.1.1 y 1.3.0.</Abstract>
+    <KeywordList>
+      <Keyword>WMS</Keyword>
+      <Keyword>Planeamiento</Keyword>
+      <Keyword>Gestión Pública</Keyword>
+      <Keyword>Tucumán</Keyword>
+    </KeywordList>
+    <OnlineResource xlink:type="simple" xlink:href="http://geosplan.tucuman.gob.ar/"/>
+    <ContactInformation>
+      <ContactPersonPrimary>
+        <ContactPerson>Octavio Medici</ContactPerson>
+        <ContactOrganization>Secretaría de Estado de Gestión Pública y Planeamiento</ContactOrganization>
+      </ContactPersonPrimary>
+      <ContactPosition>Subsecretaría de Planeamiento y Tecnologías de Gestiòn</ContactPosition>
+      <ContactAddress>
+        <AddressType>Trabajo</AddressType>
+        <Address>25 de Mayo 90</Address>
+        <City>San MIguel de Tucumán</City>
+        <StateOrProvince>Tucumán</StateOrProvince>
+        <PostCode>4000</PostCode>
+        <Country>Argentina</Country>
+      </ContactAddress>
+      <ContactVoiceTelephone/>
+      <ContactFacsimileTelephone/>
+      <ContactElectronicMailAddress>omedici@tucuman.gov.ar</ContactElectronicMailAddress>
+    </ContactInformation>
+    <Fees>sin tasas</Fees>
+    <AccessConstraints>sin restricciones</AccessConstraints>
+  </Service>
+  <Capability>
+    <Request>
+      <GetCapabilities>
+        <Format>text/xml</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?SERVICE=WMS&amp;"/>
+            </Get>
+            <Post>
+              <OnlineResource xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?SERVICE=WMS&amp;"/>
+            </Post>
+          </HTTP>
+        </DCPType>
+      </GetCapabilities>
+      <GetMap>
+        <Format>image/png</Format>
+        <Format>application/atom+xml</Format>
+        <Format>application/pdf</Format>
+        <Format>application/rss+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml</Format>
+        <Format>application/vnd.google-earth.kml+xml;mode=networklink</Format>
+        <Format>application/vnd.google-earth.kmz</Format>
+        <Format>image/geotiff</Format>
+        <Format>image/geotiff8</Format>
+        <Format>image/gif</Format>
+        <Format>image/jpeg</Format>
+        <Format>image/png; mode=8bit</Format>
+        <Format>image/svg+xml</Format>
+        <Format>image/tiff</Format>
+        <Format>image/tiff8</Format>
+        <Format>text/html; subtype=openlayers</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetMap>
+      <GetFeatureInfo>
+        <Format>text/plain</Format>
+        <Format>application/vnd.ogc.gml</Format>
+        <Format>application/vnd.ogc.gml/3.1.1</Format>
+        <Format>text/html</Format>
+        <Format>application/json</Format>
+        <DCPType>
+          <HTTP>
+            <Get>
+              <OnlineResource xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?SERVICE=WMS&amp;"/>
+            </Get>
+          </HTTP>
+        </DCPType>
+      </GetFeatureInfo>
+    </Request>
+    <Exception>
+      <Format>XML</Format>
+      <Format>INIMAGE</Format>
+      <Format>BLANK</Format>
+    </Exception>
+    <Layer>
+      <Title>Servicio WMS de la Secretaria de Estado de Gestión Pública y Planeamiento</Title>
+      <Abstract>GeoSPlan - Servicio WMS de la Secretaría de Estado de Gestión Pública y Planeamiento de la provincia de Tucumán. Versiones WMS soportadas 1.1.1 y 1.3.0.</Abstract>
+      <!--Limited list of EPSG projections:-->
+      <CRS>EPSG:22173</CRS>
+      <CRS>EPSG:22183</CRS>
+      <CRS>EPSG:4326</CRS>
+      <CRS>EPSG:5345</CRS>
+      <CRS>EPSG:900913</CRS>
+      <CRS>CRS:84</CRS>
+      <EX_GeographicBoundingBox>
+        <westBoundLongitude>-66.19359070790054</westBoundLongitude>
+        <eastBoundLongitude>-64.19359070790054</eastBoundLongitude>
+        <southBoundLatitude>-28.022085253542983</southBoundLatitude>
+        <northBoundLatitude>-25.836038752909307</northBoundLatitude>
+      </EX_GeographicBoundingBox>
+      <BoundingBox CRS="CRS:84" minx="-66.19359070790054" miny="-28.022085253542983" maxx="-64.19359070790054" maxy="-25.836038752909307"/>
+      <Layer queryable="1" opaque="0">
+        <Name>GeoSPlan-PAD</Name>
+        <Title>Puntos de Acceso Digital (PAD)</Title>
+        <Abstract>Ubicación de los puntos de acceso digital (PAD) de la Provincia de Tucumán.</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.71373224506655</westBoundLongitude>
+          <eastBoundLongitude>-64.99431344398594</eastBoundLongitude>
+          <southBoundLatitude>-27.776567841618053</southBoundLatitude>
+          <northBoundLatitude>-26.510152332213547</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.71373224506655" miny="-27.776567841618053" maxx="-64.99431344398594" maxy="-26.510152332213547"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.776567841618053" miny="-65.71373224506655" maxx="-26.510152332213547" maxy="-64.99431344398594"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=GeoSPlan-PAD"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>IEG_radios_censales</Name>
+        <Title>Radios censales - Comuna El Mollar</Title>
+        <Abstract>Radios censales de la Provincia de Tucumán. Fuente: Instituto de Estudios Geográficos "Guillermo Rohmeder" (UNT)</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.17679965</westBoundLongitude>
+          <eastBoundLongitude>-64.48181554</eastBoundLongitude>
+          <southBoundLatitude>-28.01445071</southBoundLatitude>
+          <northBoundLatitude>-26.05783788</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.17679965" miny="-28.01445071" maxx="-64.48181554" maxy="-26.05783788"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.01445071" miny="-66.17679965" maxx="-26.05783788" maxy="-64.48181554"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=IEG_radios_censales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_Citricos_2014</Name>
+        <Title>Citrus 2014</Title>
+        <Abstract>Áreas de cultivo de citrus de la Provincia de Tucumán. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.94935143272217</westBoundLongitude>
+          <eastBoundLongitude>-64.59048749222094</eastBoundLongitude>
+          <southBoundLatitude>-27.7939889313291</southBoundLatitude>
+          <northBoundLatitude>-26.435124990827873</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.94935143272217" miny="-27.7939889313291" maxx="-64.59048749222094" maxy="-26.435124990827873"/>
+        <BoundingBox CRS="EPSG:22183" minx="6927815.286678159" miny="3518873.404447692" maxx="7074835.410323158" maxy="3625274.276327692"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_Citricos_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_Ingenios</Name>
+        <Title>Ingenios</Title>
+        <Abstract>Ubicación de ingenios azucareros de la Provincia de Tucumán. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.6193328417361</westBoundLongitude>
+          <eastBoundLongitude>-65.07781670535167</eastBoundLongitude>
+          <southBoundLatitude>-27.59144027556523</southBoundLatitude>
+          <northBoundLatitude>-26.815311111145498</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.6193328417361" miny="-27.59144027556523" maxx="-65.07781670535167" maxy="-26.815311111145498"/>
+        <BoundingBox CRS="EPSG:22183" minx="6948740.3738" miny="3537843.9584999997" maxx="7034471.0482" maxy="3591051.836"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_Ingenios"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_area_granera_2001_2011</Name>
+        <Title>Área granera 2001-2011</Title>
+        <Abstract>Áreas de cultivo de granos 2001-2011. Fuente:RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.74223529818907</westBoundLongitude>
+          <eastBoundLongitude>-64.53392106159902</eastBoundLongitude>
+          <southBoundLatitude>-27.85449990880478</southBoundLatitude>
+          <northBoundLatitude>-26.307228642361846</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.74223529818907" miny="-27.85449990880478" maxx="-64.53392106159902" maxy="-26.307228642361846"/>
+        <BoundingBox CRS="EPSG:22183" minx="6919620.6288" miny="3525737.8091" maxx="7090285.3272" maxy="3644418.4327"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_area_granera_2001_2011"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_garbanzo_2012</Name>
+        <Title>Garbanzo 2012</Title>
+        <Abstract>Áreas de cultivo de garbanzo de la Provincia de Tucumán. Fuente: RIDES</Abstract>
+        <KeywordList>
+          <Keyword>garbanzo_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.69743826831495</westBoundLongitude>
+          <eastBoundLongitude>-64.48329951948664</eastBoundLongitude>
+          <southBoundLatitude>-27.997125399605338</southBoundLatitude>
+          <northBoundLatitude>-26.30257535796851</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.69743826831495" miny="-27.997125399605338" maxx="-64.48329951948664" maxy="-26.30257535796851"/>
+        <BoundingBox CRS="EPSG:22183" minx="6903804.5302" miny="3530211.9189999998" maxx="7090746.5489" maxy="3649210.3170999996"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_garbanzo_2012"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_maiz_2012</Name>
+        <Title>Maíz 2012</Title>
+        <Abstract>Áreas de cultivo de maíz de la Provincia de Tucumán. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.61918333906662</westBoundLongitude>
+          <eastBoundLongitude>-64.48257147240484</eastBoundLongitude>
+          <southBoundLatitude>-27.954719959297027</southBoundLatitude>
+          <northBoundLatitude>-26.24428745215666</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.61918333906662" miny="-27.954719959297027" maxx="-64.48257147240484" maxy="-26.24428745215666"/>
+        <BoundingBox CRS="EPSG:22183" minx="6908481.701562815" miny="3538045.096901752" maxx="7097205.102402748" maxy="3649340.068056195"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_maiz_2012"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_papa_2012</Name>
+        <Title>Papa  2012</Title>
+        <Abstract>Áreas de cultivo de papa de la Provincia de Tucumán. Fuente: RIDES</Abstract>
+        <KeywordList>
+          <Keyword>papa_2012</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.00796902980055</westBoundLongitude>
+          <eastBoundLongitude>-65.26419791271395</eastBoundLongitude>
+          <southBoundLatitude>-27.741158028879774</southBoundLatitude>
+          <northBoundLatitude>-26.99738691179318</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.00796902980055" miny="-27.741158028879774" maxx="-65.26419791271395" maxy="-26.99738691179318"/>
+        <BoundingBox CRS="EPSG:22183" minx="6933000.9139" miny="3519276.795" maxx="7013706.4812" maxy="3552615.9946999997"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_papa_2012"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_soja_2012_2013</Name>
+        <Title>Soja 2012-2013</Title>
+        <Abstract>Áreas de cultivo de soja 2012-2013. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.80195348384608</westBoundLongitude>
+          <eastBoundLongitude>-64.47791407973219</eastBoundLongitude>
+          <southBoundLatitude>-28.00582066212374</southBoundLatitude>
+          <northBoundLatitude>-26.233757289500254</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.80195348384608" miny="-28.00582066212374" maxx="-64.47791407973219" maxy="-26.233757289500254"/>
+        <BoundingBox CRS="EPSG:22183" minx="6902862.62699982" miny="3519787.2831347054" maxx="7098367.669553712" maxy="3649728.5321788983"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_soja_2012_2013"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_tabaco_2008_2009</Name>
+        <Title>Tabaco 2008-2009</Title>
+        <Abstract>Áreas de cultivo de tabaco 2008-2009. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.71460586515968</westBoundLongitude>
+          <eastBoundLongitude>-65.44576347415769</eastBoundLongitude>
+          <southBoundLatitude>-27.787494092181696</southBoundLatitude>
+          <northBoundLatitude>-27.52769766172442</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.71460586515968" miny="-27.787494092181696" maxx="-65.44576347415769" maxy="-27.52769766172442"/>
+        <BoundingBox CRS="EPSG:22183" minx="6927040.5947" miny="3528193.2035999997" maxx="6955740.6572" maxy="3554623.2046999997"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_tabaco_2008_2009"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_trigo_2012</Name>
+        <Title>Trigo 2012</Title>
+        <Abstract>Áreas de cultivo de trigo 2012. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.89879794126894</westBoundLongitude>
+          <eastBoundLongitude>-64.23305928984956</eastBoundLongitude>
+          <southBoundLatitude>-28.022085253542983</southBoundLatitude>
+          <northBoundLatitude>-26.356346602123605</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.89879794126894" miny="-28.022085253542983" maxx="-64.23305928984956" maxy="-26.356346602123605"/>
+        <BoundingBox CRS="EPSG:22183" minx="6902833.907" miny="3535453.284" maxx="7082981.5637" maxy="3648822.0679"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_trigo_2012"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>RIDES_zafra_2014</Name>
+        <Title>Área cañera 2014</Title>
+        <Abstract>Áreas de cultivo de caña de azúcar 2014. Fuente: RIDES</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.79395474232577</westBoundLongitude>
+          <eastBoundLongitude>-64.66374146861892</eastBoundLongitude>
+          <southBoundLatitude>-27.97600504107534</southBoundLatitude>
+          <northBoundLatitude>-26.418077367014817</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.79395474232577" miny="-27.97600504107534" maxx="-64.66374146861892" maxy="-26.418077367014817"/>
+        <BoundingBox CRS="EPSG:22183" minx="6906165.5065" miny="3520554.1909999996" maxx="7078139.0127" maxy="3631480.3874000004"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=RIDES_zafra_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>aeropuerto</Name>
+        <Title>Aeropuerto Benjamín Matienzo</Title>
+        <Abstract>Ubicación del Aeropuerto Benjamín Matienzo de la Provincia de Tucumán.</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.10813515539394</westBoundLongitude>
+          <eastBoundLongitude>-65.10811449013988</eastBoundLongitude>
+          <southBoundLatitude>-26.836442491034557</southBoundLatitude>
+          <northBoundLatitude>-26.83642182578051</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.10813515539394" miny="-26.836442491034557" maxx="-65.10811449013988" maxy="-26.83642182578051"/>
+        <BoundingBox CRS="EPSG:22183" minx="7032146.6072" miny="3588651.8279999997" maxx="7032148.6072" maxy="3588653.8279999997"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=aeropuerto"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>circuitos_turisticos</Name>
+        <Title>Circuitos turísticos</Title>
+        <Abstract>Principales circuitos turísticos de la Provincia de Tucumán.</Abstract>
+        <KeywordList>
+          <Keyword>circuitos_turisticos</Keyword>
+          <Keyword>features</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.03144244056881</westBoundLongitude>
+          <eastBoundLongitude>-64.92099467020418</eastBoundLongitude>
+          <southBoundLatitude>-27.84075956056919</southBoundLatitude>
+          <northBoundLatitude>-26.216763822830504</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.03144244056881" miny="-27.84075956056919" maxx="-64.92099467020418" maxy="-26.216763822830504"/>
+        <BoundingBox CRS="EPSG:22183" minx="6921170.318864389" miny="3496902.7282158537" maxx="7100680.068617083" maxy="3606296.2656699475"/>
+        <Style>
+          <Name>line</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=circuitos_turisticos"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>comisasrias_2014</Name>
+        <Title>Comisarías GMST 2014</Title>
+        <Abstract>Ubicación de las comisarías del Gran San Miguel de Tucumán actualizadas al año 2014.</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.33550507996252</westBoundLongitude>
+          <eastBoundLongitude>-65.1476481665688</eastBoundLongitude>
+          <southBoundLatitude>-26.86657813121031</southBoundLatitude>
+          <northBoundLatitude>-26.795855421005264</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.33550507996252" miny="-26.86657813121031" maxx="-65.1476481665688" maxy="-26.795855421005264"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.86657813121031" miny="-65.33550507996252" maxx="-26.795855421005264" maxy="-65.1476481665688"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=comisasrias_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>fibra_optica_nacional_2014</Name>
+        <Title>Red de fibra óptica troncal (objetivo) 2014</Title>
+        <Abstract>Trazado de la red de fibra óptica troncal (objetivo) 2014</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.04307392866878</westBoundLongitude>
+          <eastBoundLongitude>-64.95144952573521</eastBoundLongitude>
+          <southBoundLatitude>-28.0074369</southBoundLatitude>
+          <northBoundLatitude>-26.12211009999993</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.04307392866878" miny="-28.0074369" maxx="-64.95144952573521" maxy="-26.12211009999993"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.0074369" miny="-66.04307392866878" maxx="-26.12211009999993" maxy="-64.95144952573521"/>
+        <Style>
+          <Name>line</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=fibra_optica_nacional_2014"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>fibra_optica_pcial</Name>
+        <Title>Red de fibra óptica provincial (objetivo) 2014</Title>
+        <Abstract>Trazado de la red de fibra óptica provincial (objetivo) 2014</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.96458172824697</westBoundLongitude>
+          <eastBoundLongitude>-64.5164149</eastBoundLongitude>
+          <southBoundLatitude>-27.930151666997897</southBoundLatitude>
+          <northBoundLatitude>-26.220600549202207</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.96458172824697" miny="-27.930151666997897" maxx="-64.5164149" maxy="-26.220600549202207"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.930151666997897" miny="-65.96458172824697" maxx="-26.220600549202207" maxy="-64.5164149"/>
+        <Style>
+          <Name>line</Name>
+          <Title>Default Line</Title>
+          <Abstract>A sample style that draws a line</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=fibra_optica_pcial"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>jurisdicciones</Name>
+        <Title>Jurisdicciones policiales</Title>
+        <Abstract>Jurisdicciones policiales del departamento Capital, de la Provincia de Tucumán.</Abstract>
+        <KeywordList>
+          <Keyword>Jurisdiccion</Keyword>
+        </KeywordList>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.27518018077947</westBoundLongitude>
+          <eastBoundLongitude>-65.15866273410303</eastBoundLongitude>
+          <southBoundLatitude>-26.91525844324853</southBoundLatitude>
+          <northBoundLatitude>-26.784464925170436</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.27518018077947" miny="-26.91525844324853" maxx="-65.15866273410303" maxy="-26.784464925170436"/>
+        <BoundingBox CRS="EPSG:22183" minx="7023518.415519184" miny="3572079.3089339267" maxx="7037940.913900001" maxy="3583571.6005286705"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=jurisdicciones"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>microrregiones_2017</Name>
+        <Title>Microrregiones 2017</Title>
+        <Abstract>Microrregiones de la Provincia de Tucumán.</Abstract>
+        <KeywordList>
+          <Keyword>GeoSPlan-MicrorregionesActual</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.178021323</westBoundLongitude>
+          <eastBoundLongitude>-64.48198842199997</eastBoundLongitude>
+          <southBoundLatitude>-28.01391713700002</southBoundLatitude>
+          <northBoundLatitude>-26.058287946000007</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.178021323" miny="-28.01391713700002" maxx="-64.48198842199997" maxy="-26.058287946000007"/>
+        <BoundingBox CRS="EPSG:4326" minx="-28.01391713700002" miny="-66.178021323" maxx="-26.058287946000007" maxy="-64.48198842199997"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=microrregiones_2017"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>organismos_2016</Name>
+        <Title>Entidades gubernamentales 2016</Title>
+        <Abstract>Organismos estatales dependientes y Entes autárquicos del Poder Ejecutivo, ciudad de Yerba Buena y San Miguel de Tucumán.</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-65.2698319146</westBoundLongitude>
+          <eastBoundLongitude>-65.190764228456</eastBoundLongitude>
+          <southBoundLatitude>-26.8433288134</southBoundLatitude>
+          <northBoundLatitude>-26.787909710237</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-65.2698319146" miny="-26.8433288134" maxx="-65.190764228456" maxy="-26.787909710237"/>
+        <BoundingBox CRS="EPSG:4326" minx="-26.8433288134" miny="-65.2698319146" maxx="-26.787909710237" maxy="-65.190764228456"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=organismos_2016"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>terminal_omnibus</Name>
+        <Title>Terminal de ómnibus San Miguel de Tucumán</Title>
+        <Abstract>Ubicación de la Terminal de ómnibus San Miguel de Tucumán</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.19359070790054</westBoundLongitude>
+          <eastBoundLongitude>-64.19359070790054</eastBoundLongitude>
+          <southBoundLatitude>-27.836038752909307</southBoundLatitude>
+          <northBoundLatitude>-25.836038752909307</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.19359070790054" miny="-27.836038752909307" maxx="-64.19359070790054" maxy="-25.836038752909307"/>
+        <BoundingBox CRS="EPSG:4326" minx="-27.836038752909307" miny="-66.19359070790054" maxx="-25.836038752909307" maxy="-64.19359070790054"/>
+        <Style>
+          <Name>point</Name>
+          <Title>Default Point</Title>
+          <Abstract>A sample style that draws a point</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=terminal_omnibus"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>unidades_reg_policiales</Name>
+        <Title>Unidades regionales</Title>
+        <Abstract>Áreas de las unidades regionales policiales de la Provincia de Tucumán.</Abstract>
+        <KeywordList/>
+        <CRS>EPSG:22183</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-66.18771148649087</westBoundLongitude>
+          <eastBoundLongitude>-64.45868311346752</eastBoundLongitude>
+          <southBoundLatitude>-28.0143952471155</southBoundLatitude>
+          <northBoundLatitude>-26.052122426348113</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-66.18771148649087" miny="-28.0143952471155" maxx="-64.45868311346752" maxy="-26.052122426348113"/>
+        <BoundingBox CRS="EPSG:22183" minx="6901924.635500001" miny="3481538.7676" maxx="7118476.22744158" maxy="3651609.000000001"/>
+        <Style>
+          <Name>polygon</Name>
+          <Title>Default Polygon</Title>
+          <Abstract>A sample style that draws a polygon</Abstract>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="http://g.geosplan.tucuman.gob.ar:80/geoserver/WFS_GEOSPLAN/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unidades_reg_policiales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

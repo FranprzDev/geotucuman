@@ -143,7 +143,7 @@ const HEALTH_CSS = `
   .table-wrap { overflow-x: auto; border: 1px solid var(--line); border-radius: var(--radius-sm); background: rgba(11,16,26,.6); }
   table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
   th, td { text-align: left; padding: 9px 12px; border-bottom: 1px solid var(--line); vertical-align: top; }
-  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; font-weight: 700; background: rgba(16,22,35,.9); position: sticky; top: var(--header-h); z-index: 5; }
+  th { color: var(--muted); font-size: 11px; text-transform: uppercase; letter-spacing: .09em; font-weight: 700; background: #101623; position: sticky; top: var(--header-h); z-index: 5; }
   tbody tr:hover { background: rgba(255,255,255,.025); }
   tbody tr:last-child td { border-bottom: 0; }
   td.mono { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12px; color: var(--muted); white-space: nowrap; }

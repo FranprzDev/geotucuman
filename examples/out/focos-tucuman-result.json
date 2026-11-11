@@ -1,0 +1,206 @@
+{
+  "generatedAt": "2026-11-11T01:44:37.469Z",
+  "bbox": [
+    -66.4,
+    -28.7,
+    -64.4,
+    -25.9
+  ],
+  "provenance": [
+    {
+      "id": "conae-viirs",
+      "label": "CONAE · Focos de calor VIIRS",
+      "kind": "fixture",
+      "url": "https://geoservicios.conae.gov.ar/geoserver/GeoServiciosCONAE/wfs?service=WFS&request=GetFeature&version=1.1.0&typeName=GeoServiciosCONAE%3AFocosDeCalorVIIRS&maxFeatures=500&outputFormat=application%2Fjson&bbox=-66.4%2C-28.7%2C-64.4%2C-25.9%2CEPSG%3A4326",
+      "fetchedAt": null,
+      "dataDate": "2026-11-10",
+      "features": 6,
+      "note": "sin acceso en vivo (fetch failed); se usó el fixture versionado"
+    },
+    {
+      "id": "conae-modis",
+      "label": "CONAE · Focos de calor MODIS",
+      "kind": "fixture",
+      "url": "https://geoservicios.conae.gov.ar/geoserver/GeoServiciosCONAE/wfs?service=WFS&request=GetFeature&version=1.1.0&typeName=GeoServiciosCONAE%3AFocosDeCalor&maxFeatures=500&outputFormat=application%2Fjson&bbox=-66.4%2C-28.7%2C-64.4%2C-25.9%2CEPSG%3A4326",
+      "fetchedAt": null,
+      "dataDate": null,
+      "features": 0,
+      "note": "sin acceso en vivo (fetch failed); se usó el fixture versionado"
+    },
+    {
+      "id": "rides-pozos",
+      "label": "RIDES · Pozos de agua",
+      "kind": "live",
+      "url": "https://gis.producciontucuman.gob.ar/ArcGIS/rest/services/Recursos_Hidricos_WFS/MapServer/2/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json",
+      "fetchedAt": "2026-11-11T01:44:36.053Z",
+      "dataDate": null,
+      "features": 730
+    },
+    {
+      "id": "rides-canales",
+      "label": "RIDES · Canales",
+      "kind": "live",
+      "url": "https://gis.producciontucuman.gob.ar/ArcGIS/rest/services/Recursos_Hidricos_WFS/MapServer/3/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json&maxAllowableOffset=0.0005",
+      "fetchedAt": "2026-11-11T01:44:36.210Z",
+      "dataDate": null,
+      "features": 1000
+    },
+    {
+      "id": "rides-rios",
+      "label": "RIDES · Ríos",
+      "kind": "live",
+      "url": "https://gis.producciontucuman.gob.ar/ArcGIS/rest/services/Recursos_Hidricos_WFS/MapServer/4/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json&maxAllowableOffset=0.0005",
+      "fetchedAt": "2026-11-11T01:44:37.424Z",
+      "dataDate": null,
+      "features": 205
+    },
+    {
+      "id": "rides-cuerpos",
+      "label": "RIDES · Cuerpos de agua",
+      "kind": "live",
+      "url": "https://gis.producciontucuman.gob.ar/ArcGIS/rest/services/Recursos_Hidricos_WFS/MapServer/5/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json&maxAllowableOffset=0.0005",
+      "fetchedAt": "2026-11-11T01:44:35.528Z",
+      "dataDate": null,
+      "features": 92
+    },
+    {
+      "id": "rides-cuencas",
+      "label": "RIDES · Cuencas hídricas",
+      "kind": "live",
+      "url": "https://gis.producciontucuman.gob.ar/ArcGIS/rest/services/Recursos_Hidricos_WFS/MapServer/6/query?where=1%3D1&outFields=*&returnGeometry=true&outSR=4326&f=json&maxAllowableOffset=0.0005",
+      "fetchedAt": "2026-11-11T01:44:35.617Z",
+      "dataDate": null,
+      "features": 65
+    }
+  ],
+  "focos": [
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -64.48414,
+      "lat": -26.10961,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 28.6,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 45.48,
+      "nearestWaterName": "RÍO EL RODEO",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    },
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -65.31693,
+      "lat": -27.85467,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 2.09,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 6.15,
+      "nearestWaterName": "RÍO DEL ABRA",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    },
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -65.31764,
+      "lat": -27.85801,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 1.88,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 6.31,
+      "nearestWaterName": "RÍO DEL ABRA",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    },
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -65.31834,
+      "lat": -27.86134,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 1.72,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 6.47,
+      "nearestWaterName": "RÍO DEL ABRA",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    },
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -65.31904,
+      "lat": -27.86468,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 1.63,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 6.63,
+      "nearestWaterName": "RÍO DEL ABRA",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    },
+    {
+      "sensor": "VIIRS",
+      "instrument": "VIIRS",
+      "satellite": "NOAA20",
+      "date": "2026-11-10",
+      "time": "05:29:00",
+      "lon": -65.22722,
+      "lat": -28.46799,
+      "confidence": 55,
+      "distanceToNearestPozoKm": 63.31,
+      "nearestPozoName": null,
+      "distanceToNearestWaterKm": 60.55,
+      "nearestWaterName": "RÍO HUACRA",
+      "nearestWaterKind": "Río",
+      "insideCuenca": false,
+      "cuencaName": null
+    }
+  ],
+  "summary": {
+    "totalFocos": 6,
+    "perSensor": {
+      "VIIRS": 6,
+      "MODIS": 0
+    },
+    "insideCuenca": 0,
+    "insideCuencaPct": 0,
+    "distanceToNearestPozoKm": {
+      "min": 1.63,
+      "median": 1.99,
+      "max": 63.31
+    },
+    "distanceToNearestWaterKm": {
+      "min": 6.15,
+      "median": 6.55,
+      "max": 60.55
+    },
+    "rides": {
+      "pozos": 730,
+      "canales": 1000,
+      "rios": 205,
+      "cuerpos": 92,
+      "cuencas": 65
+    }
+  }
+}

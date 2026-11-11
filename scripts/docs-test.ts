@@ -154,6 +154,8 @@ function testStaleHostingClaims(): void {
 
 function testGeneratorIdempotence(): void {
   const beforeMcp = read('docs/mcp.html');
+  assert.match(beforeMcp, /\n$/, 'docs/mcp.html must end with a newline');
+  assert.doesNotMatch(beforeMcp, /\n\n$/, 'docs/mcp.html must end with exactly one newline');
   const beforeLanding = read('docs/index.html');
   const result = spawnSync(join(ROOT, 'node_modules', '.bin', 'tsx'), ['scripts/build-portal.ts'], {
     cwd: ROOT,

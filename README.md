@@ -61,7 +61,15 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 
 ## Web pública
 
-Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
+Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles y la salud de cada capa, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
+
+## Monitor de salud por capa
+
+`npm run health` sondea cada servicio declarado de cada capa del catálogo: WMS con un GetMap (mismo CRS y bbox que `describe_layer`), WFS con un GetFeature de 1 registro (`maxFeatures=1`, `srsName=EPSG:4326`) y ArcGIS REST con un query (`where=1=1`, `resultRecordCount=1`, `f=json`). Usa un pool global de 8 con máximo 2 pedidos simultáneos por host y un reintento a los 2 s ante fallas de red o timeout. Escribe `data/health.json` (estado por fuente y por capa, latencia y detalle) y agrega una línea a `data/health-history.jsonl` (evolución diaria). Flags: `--sample N`, `--source <id>` y `--out <path>`.
+
+Corre automáticamente todos los días vía GitHub Actions (`.github/workflows/health.yml`) y commitea los resultados; `npm run health-page` genera la página. Se publica en https://franprzdev.github.io/geotucuman/salud.html (fuente: `docs/salud.html`).
+
+Ojo: que una capa falle no significa que su servidor esté caído. Puede ser una capa puntual despublicada, un GetMap que solo falla con cierto CRS/bbox o un endpoint lento; mirá el detalle por capa. El monitor tampoco prueba el contenido ni la licencia de cada capa, solo si el servicio responde.
 
 ## Fuentes (catálogo regenerado desde los GetCapabilities en vivo el 9/11/2026)
 

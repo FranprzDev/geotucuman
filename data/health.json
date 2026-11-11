@@ -1,0 +1,185 @@
+{
+  "checkedAt": "2026-11-11T01:09:28.999Z",
+  "durationMs": 2428,
+  "totals": {
+    "layers": 12,
+    "layersOk": 12,
+    "layersFailed": 0,
+    "probes": 23,
+    "probesOk": 23,
+    "avgMs": 697
+  },
+  "sources": {
+    "tdf": {
+      "ok": 2,
+      "total": 2,
+      "avgMs": 1923,
+      "failedLayerIds": []
+    },
+    "idechaco": {
+      "ok": 6,
+      "total": 6,
+      "avgMs": 782,
+      "failedLayerIds": []
+    },
+    "caba": {
+      "ok": 2,
+      "total": 2,
+      "avgMs": 1901,
+      "failedLayerIds": []
+    },
+    "idecor": {
+      "ok": 1,
+      "total": 1,
+      "avgMs": 1244,
+      "failedLayerIds": []
+    },
+    "idern": {
+      "ok": 1,
+      "total": 1,
+      "avgMs": 2455,
+      "failedLayerIds": []
+    }
+  },
+  "layers": {
+    "tdf:geonode:estancias": {
+      "wms": {
+        "ok": true,
+        "ms": 1444,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 1433,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idechaco:idechaco:matiasg_modelo_actual_hermosocampo": {
+      "wms": {
+        "ok": true,
+        "ms": 658,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 655,
+        "detail": "FeatureCollection"
+      }
+    },
+    "caba:geonube:pob_ing_ct_2023": {
+      "wms": {
+        "ok": true,
+        "ms": 1447,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 1401,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idechaco:idechaco:policia_y_seguridad": {
+      "wms": {
+        "ok": true,
+        "ms": 500,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 281,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idechaco:idechaco:matiasg_la_clotilde_agua_potable": {
+      "wms": {
+        "ok": true,
+        "ms": 261,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 468,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idechaco:idechaco:fer_rodriguez_algodon_por_departamento": {
+      "wms": {
+        "ok": true,
+        "ms": 268,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 328,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idechaco:idechaco:enriqueadmin_pq_fig17_municipios": {
+      "wms": {
+        "ok": true,
+        "ms": 283,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 273,
+        "detail": "FeatureCollection"
+      }
+    },
+    "tdf:geonode:omnibus_tdf": {
+      "wms": {
+        "ok": true,
+        "ms": 510,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 458,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idecor:ina_pmd_5": {
+      "wms": {
+        "ok": true,
+        "ms": 1244,
+        "detail": "HTTP 200, content-type image/png"
+      }
+    },
+    "idechaco:idechaco:aostojic_electrica_charadai": {
+      "wms": {
+        "ok": true,
+        "ms": 333,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 383,
+        "detail": "FeatureCollection"
+      }
+    },
+    "idern:geonode:Renova_RN_PAH_Proyecto_Idea": {
+      "wms": {
+        "ok": true,
+        "ms": 773,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 1682,
+        "detail": "FeatureCollection"
+      }
+    },
+    "caba:geonube:total_pob_vivp_radio_censal2022": {
+      "wms": {
+        "ok": true,
+        "ms": 721,
+        "detail": "HTTP 200, content-type image/png"
+      },
+      "wfs": {
+        "ok": true,
+        "ms": 233,
+        "detail": "FeatureCollection"
+      }
+    }
+  }
+}

@@ -69,7 +69,7 @@ Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las
 
 Corre automáticamente todos los días vía GitHub Actions (`.github/workflows/health.yml`) y commitea los resultados; `npm run health-page` genera la página. Se publica en https://franprzdev.github.io/geotucuman/salud.html (fuente: `docs/salud.html`).
 
-Ojo: que una capa falle no significa que su servidor esté caído. Puede ser una capa puntual despublicada, un GetMap que solo falla con cierto CRS/bbox o un endpoint lento; mirá el detalle por capa. El monitor tampoco prueba el contenido ni la licencia de cada capa, solo si el servicio responde.
+Ojo: que una capa falle no significa que su servidor esté caído. Puede ser una capa puntual despublicada, un GetMap que solo falla con cierto CRS/bbox o un endpoint lento; mirá el detalle por capa. El monitor tampoco prueba el contenido ni la licencia de cada capa, solo si el servicio responde. Las mediciones se hacen desde GitHub Actions (fuera de Argentina): un servicio con bloqueo geográfico puede figurar caído ahí y andar bien desde dentro del país.
 
 ## Fuentes (catálogo regenerado desde los GetCapabilities en vivo el 9/11/2026)
 

@@ -288,7 +288,7 @@ function buildBody(): string {
   <div class="wrap">
     <p class="eyebrow">Monitor de salud</p>
     <h1 id="health-title">Salud de capas</h1>
-    <p>Chequeo generado el ${esc(checked)} (${health.durationMs} ms): cada servicio declarado se sondeó en vivo. Una capa puede fallar aunque su servidor siga en pie (por ejemplo, una capa puntual caída o un servicio WMS que dejó de responder GetMap).</p>
+    <p>Chequeo generado el ${esc(checked)} (${health.durationMs} ms): cada servicio declarado se sondeó en vivo. Una capa puede fallar aunque su servidor siga en pie (por ejemplo, una capa puntual caída o un servicio WMS que dejó de responder GetMap). Las mediciones se hacen desde GitHub Actions (fuera de Argentina): un servicio con bloqueo geográfico puede figurar caído acá y andar bien desde dentro del país.</p>
   </div>
 </section>
 <main id="main" class="wrap">

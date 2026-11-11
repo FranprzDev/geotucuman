@@ -629,7 +629,7 @@ function syncLandingMetadata(): void {
 
 mkdirSync('docs', { recursive: true });
 writeFileSync('docs/capas.html', catalogHtml);
-writeFileSync('docs/mcp.html', mcpDocHtml);
+writeFileSync('docs/mcp.html', `${mcpDocHtml.replace(/\n+$/, '')}\n`);
 syncLandingMetadata();
 console.log(`docs/capas.html generated (${catalog.layers.length} layers)`);
 console.log('docs/mcp.html generated');

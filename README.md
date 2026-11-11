@@ -1,11 +1,29 @@
 # GeoArg
 
-MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos**. Corre local por stdio con tu cliente (Claude Code, etc.). El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 23 jurisdicciones subnacionales, incluidas 7 fuentes INTA WMS-only integradas y probadas en vivo (detalle abajo; 26 fuentes configuradas de capas (25 subnacionales + IGN; 25 URLs de servicio distintas, porque Catamarca y La Rioja comparten nodo11), más la API Georef; 23 jurisdicciones subnacionales, con 3 fuentes de Tucumán).
+MCP (Model Context Protocol) de **descubrimiento y consulta de geodatos públicos de Argentina**. Se puede usar local por stdio con tu cliente (Claude Code, etc.) o contra el endpoint público Streamable HTTP https://geoarg-mcp.franprzdev.workers.dev/mcp. El catálogo cubre el IGN nacional, la API Georef y fuentes oficiales de 23 de las 24 jurisdicciones argentinas: 22 provincias + CABA, con Formosa sin fuente operativa. Incluye 7 fuentes INTA WMS-only integradas y probadas en vivo (detalle abajo; 26 fuentes configuradas de capas (25 subnacionales + IGN; 25 URLs de servicio distintas, porque Catamarca y La Rioja comparten nodo11), más la API Georef; 3 fuentes de Tucumán).
 
 > Antes **GeoTucumán**; renombrado a **GeoMCP** el 4/11/2026 y a **GeoArg** el 7/11/2026. El repositorio y la URL pública no cambian.
 
 **Qué es:** una capa de descubrimiento y consulta sobre servicios oficiales WFS, WMS y ArcGIS REST (FeatureServer), más la API Georef.
 **Qué NO es:** un SIG completo, ni un visor, ni una copia de los datos. Consulta en vivo y cita la fuente.
+
+## Conexión rápida (remota)
+
+El MCP público ya está disponible por Streamable HTTP en https://geoarg-mcp.franprzdev.workers.dev/mcp. Es **stateless**, de **solo lectura** y **no requiere API key**. El endpoint depende de Cloudflare Workers y de servicios oficiales de terceros: puede fallar, demorar o cambiar sin aviso. Más detalle en [Servidor público HTTP](#servidor-público-http).
+
+JSON genérico para un cliente MCP:
+
+```json
+{ "mcpServers": { "geoarg": { "url": "https://geoarg-mcp.franprzdev.workers.dev/mcp" } } }
+```
+
+Claude Code, en una línea (comando documentado por Claude Code; no se verificó su ejecución en Claude desde este repositorio):
+
+```bash
+claude mcp add --transport http geoarg https://geoarg-mcp.franprzdev.workers.dev/mcp
+```
+
+Para instalación local por stdio, ver [Cómo usarlo](#cómo-usarlo).
 
 ## Herramientas
 
@@ -47,10 +65,10 @@ Requisitos: Node.js y npm.
 
    ```bash
    npm run catalog   # genera data/catalog.json desde los GetCapabilities en vivo
-   npm run portal    # genera docs/index.html (miniweb) y docs/capas.html (catalogo)
+   npm run portal    # genera docs/capas.html y docs/mcp.html; mantiene enlaces y canonical en docs/index.html
    ```
 
-Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm start` (server compilado por stdio) y `npm run start:http` (transporte http). Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/tools/, transportes stdio y http (http disponible para hosting futuro, sin hosting configurado hoy).
+Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm start` (server compilado por stdio) y `npm run start:http` (transporte HTTP local). Servidor armado con xmcp (https://xmcp.dev): tools auto-registradas desde src/tools/, transportes stdio y HTTP. El transporte HTTP público corre como Cloudflare Worker en el endpoint de arriba (ver [Servidor público HTTP](#servidor-público-http)).
 
 ### Ejemplos reales de uso
 
@@ -90,7 +108,7 @@ El deploy corre por GitHub Actions (`.github/workflows/deploy-worker.yml`) al pu
 
 ## Web pública
 
-Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles y la salud de cada capa, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`).
+Sitio público que explica qué es el MCP y cómo usarlo, más un índice de las capas descubribles y la salud de cada capa, publicados con GitHub Pages desde `docs/`: https://franprzdev.github.io/geotucuman/ (regenerar con `npm run portal`). La documentación de conexión y límites está en https://franprzdev.github.io/geotucuman/mcp.html.
 
 ## Monitor de salud por capa
 
@@ -183,8 +201,8 @@ La tabla refleja lo configurado e indexado, no una inspección capa por capa de 
 
 ### Cobertura por jurisdicción
 
-23 de las 24 jurisdicciones argentinas (23 provincias + CABA) tienen al menos una fuente oficial verificada en GeoArg, además del IGN nacional (WFS+WMS) y la API Georef. La única sin fuente operativa es **Formosa**: su IDE (IDEF) responde la portada pero cierra las conexiones WMS/WFS desde fuera de Argentina, así que la integración está bloqueada del lado del servidor, no de GeoArg (evidencia: [diagnostics/2026-11-11-formosa-idef.md](diagnostics/2026-11-11-formosa-idef.md)).
-Las **Islas Malvinas** quedan cubiertas por la fuente de Tierra del Fuego, Antártida e Islas del Atlántico Sur (ya integrada; p. ej. sus capas geonode) más las capas antárticas y del Atlántico Sur del IGN nacional.
+23 de las 24 jurisdicciones argentinas están representadas: 22 provincias + CABA tienen al menos una fuente oficial verificada en GeoArg, además del IGN nacional (WFS+WMS) y la API Georef. La única sin fuente operativa es **Formosa**: su IDE (IDEF) responde la portada pero cierra las conexiones WMS/WFS desde fuera de Argentina, así que la integración está bloqueada del lado del servidor, no de GeoArg (evidencia: [diagnostics/2026-11-11-formosa-idef.md](diagnostics/2026-11-11-formosa-idef.md)).
+Las **Islas Malvinas** no tienen una capa dedicada ni cobertura completa: solo pueden aparecer en capas específicas del catálogo, como las de Tierra del Fuego o del IGN nacional, con sus propios límites de cobertura. No se afirma cobertura territorial completa.
 
 ## Estado verificado (8/11/2026)
 
@@ -220,6 +238,5 @@ Que un servicio sea público no significa reutilizable. Lo siguiente son los té
 2. Encadenamiento espacial (feature_ref): contar/intersectar entre capas, sujeto a prueba de soporte por endpoint.
 3. Reproyección para CRS nativos fuera de EPSG:22183/5345/4326 si aparecen capas con otros CRS.
 4. Reintentar la provincia pendiente (Formosa) desde una red que el servicio acepte; se toma el monitor IDERA como orientación, no como prueba de disponibilidad actual. Evaluar la ampliación de las 7 fuentes INTA ya integradas (una capa por fuente) hacia más capas por nodo, con validación de territorio y licencia capa por capa. La representación INTA actual no es exhaustiva: Corrientes solo cubre Lomas Arenosas, Chubut aporta una capa regional sin recorte provincial, La Rioja es cobertura histórica 2006-2007 y La Pampa es modelada 2001-2011 / series 2000-2013.
-5. Hosting público del MCP (el transporte HTTP ya corre en local con npm run start:http).
 
 Licencia del código: MIT. Los datos son de sus organismos publicadores.

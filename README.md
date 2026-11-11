@@ -59,6 +59,18 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 - **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS y ArcGIS REST: las WMS-only (por ejemplo las RIDES y las 7 fuentes INTA de suelos/cobertura/productividad) son imágenes para display y no admiten GetFeature.
 - **Geocodificar texto libre** — `geocode`: "Yerba Buena, Tucumán" devuelve coordenadas vía la API nacional Georef (gratis, sin key).
 
+## Ejemplos aplicados
+
+### Focos de calor vs agua en Tucumán
+
+Caso de punta a punta que cruza los focos de calor de las últimas 24 h (CONAE, satélites VIIRS y MODIS) con la infraestructura hídrica de Tucumán (RIDES): distancia de cada foco al pozo de agua y al cuerpo/curso de agua más cercanos, y si el foco cae dentro de una cuenca hídrica. El MCP es el que descubre las capas; el análisis consulta los servicios públicos directamente (WFS de CONAE y ArcGIS REST de RIDES) y calcula las proximidades en TypeScript puro, sin dependencias.
+
+```bash
+npm run example:focos
+```
+
+Genera `examples/out/focos-tucuman-result.json` y la página publicada en https://franprzdev.github.io/geotucuman/ejemplos/focos-tucuman.html. Con `--offline` usa los fixtures versionados en `examples/fixtures/`; también cae a ellos cuando una consulta en vivo falla (CONAE geo-bloquea accesos desde fuera de Argentina).
+
 ## Servidor público HTTP
 
 Además del modo local por stdio, el MCP corre como Cloudflare Worker público (MCP Streamable HTTP):

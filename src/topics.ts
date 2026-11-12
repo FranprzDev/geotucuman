@@ -51,6 +51,10 @@ export const TOPICS: Record<string, string[]> = {
     'mineria', 'minero', 'extraccion', 'cantera', 'manufactura', 'industry', 'factory', 'manufacturing',
     'processing', 'mining', 'extraction', 'quarry',
   ],
+  fires: [
+    'foco', 'focos', 'calor', 'incendio', 'incendios', 'quema', 'quemas', 'fuego', 'fuegos', 'modis',
+    'viirs', 'hotspot', 'hotspots', 'fire', 'fires', 'wildfire', 'wildfires', 'burn', 'burned',
+  ],
   protected_areas: [
     'protegida', 'protegido', 'parque', 'parques', 'reserva', 'reservas', 'conservacion', 'patrimonio',
     'natural', 'protected', 'park', 'reserve', 'conservation', 'heritage', 'nature',

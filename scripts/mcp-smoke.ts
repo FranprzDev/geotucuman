@@ -105,6 +105,23 @@ await check('suggest_layers suggests riego/pozos layers with rationale, services
   if (!Array.isArray(parsed.noCoverage)) throw new Error('missing noCoverage array');
 });
 
+await check('suggest_layers understands "focos de calor" (fires/hotspots synonyms)', async () => {
+  const result = await client.callTool({
+    name: 'suggest_layers',
+    arguments: { goal: 'focos de calor en Tucumán', limit: 10 },
+  });
+  const parsed = JSON.parse(textOf(result)) as {
+    candidates?: Array<{ typeName: string }>;
+    noCoverage?: string[];
+  };
+  if (!(parsed.candidates ?? []).some((c) => /fires|hotspot|modis|viirs|foco/i.test(c.typeName))) {
+    throw new Error('no fires/hotspots candidate for a focos de calor goal');
+  }
+  if ((parsed.noCoverage ?? []).some((t) => /^(focos|calor)$/i.test(t))) {
+    throw new Error('focos/calor still reported as uncovered');
+  }
+});
+
 await check('serviceType filter returns only layers exposing that service', async () => {
   const { findLayer } = await import('../src/catalog.js');
   for (const serviceType of ['wms', 'wfs'] as const) {

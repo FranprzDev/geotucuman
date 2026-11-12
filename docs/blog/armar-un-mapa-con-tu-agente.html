@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cómo armar un mapa con tu agente usando GeoArg</title>
+<meta name="description" content="Cómo pasar de un objetivo en texto libre a un mapa con el agente y las herramientas de GeoArg: search_layers, describe_layer y query_layer. Ejemplo real con el objetivo &quot;agua&quot;.">
+<link rel="canonical" href="https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html">
+<meta property="og:title" content="Cómo armar un mapa con tu agente usando GeoArg">
+<meta property="og:description" content="Cómo pasar de un objetivo en texto libre a un mapa con el agente y las herramientas de GeoArg: search_layers, describe_layer y query_layer. Ejemplo real con el objetivo &quot;agua&quot;.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%234ade80' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%234ade80'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Cómo armar un mapa con tu agente usando GeoArg",
+  "description": "Cómo pasar de un objetivo en texto libre a un mapa con el agente y las herramientas de GeoArg: search_layers, describe_layer y query_layer. Ejemplo real con el objetivo \"agua\".",
+  "inLanguage": "es-AR",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "author": {
+    "@type": "Person",
+    "name": "FranPrzDev"
+  },
+  "mainEntityOfPage": "https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html",
+  "url": "https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html"
+}</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --accent: #4ade80; --accent-soft: #a7f3c7;
+    --maxw: 920px; --header-h: 68px;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px 540px at 50% -220px, rgba(74,222,128,.17), transparent 70%),
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: auto, 48px 48px, 48px 48px;
+    background-attachment: fixed, fixed, fixed;
+  }
+  a { color: var(--accent); text-decoration-color: rgba(74,222,128,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-soft); }
+  a:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; border-radius: 8px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-size: 12.5px; background: rgba(74,222,128,.09); color: var(--accent-soft); border: 1px solid rgba(74,222,128,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
+  pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--accent); color: #04160c; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
+  .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
+  .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+  .nav a[aria-current="page"] { color: var(--accent-soft); }
+  .nav a.nav-cta { color: #04160c; background: var(--accent); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--accent-soft); color: #04160c; }
+  main { display: block; padding-bottom: 24px; }
+  .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 10px; }
+  h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p, li { color: #a6b4c0; font-size: 15px; }
+  .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--accent); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary p { margin: 0; font-size: 14px; }
+  .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
+  .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td { color: #a6b4c0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 0; list-style: none; }
+  .links li { margin: 0; }
+  footer.site { margin-top: 34px; padding: 20px 0 38px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--faint); }
+  footer.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; padding: 10px 0; }
+    .nav { gap: 0; }
+    .nav a { padding: 8px 7px; font-size: 12.5px; }
+    .nav a.nav-cta { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    footer.site .wrap { flex-direction: column; align-items: flex-start; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 4px; }
+    td { padding-top: 0; border-bottom: 0; }
+    tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="GeoArg, inicio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>GeoArg</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../capas.html">Capas</a>
+      <a href="../salud.html">Salud de capas</a>
+      <a href="../mcp.html">Documentación MCP</a>
+      <a href="./index.html" aria-current="page">Blog</a>
+      <a class="nav-cta" href="https://github.com/FranprzDev/geotucuman">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Blog · Uso</p>
+    <h1 id="title">Cómo armar un mapa con tu agente usando GeoArg</h1>
+    <div class="summary">
+      <p><strong>Resumen:</strong> el agente no dibuja el mapa. Lo que hace es encontrar las capas correctas en el catálogo, mostrar sus campos y dejar listos los pedidos de datos. Con esas piezas, el mapa lo arma tu código. El flujo es <code>search_layers</code> → <code>describe_layer</code> → <code>query_layer</code>, con <code>suggest_layers</code> y <code>geocode</code> como apoyo.</p>
+    </div>
+    <p class="lede" style="margin:18px 0 0"><a href="./index.html">Blog de GeoArg</a> · <a href="../mcp.html">Documentación del MCP</a></p>
+  </section>
+
+  <section class="panel" aria-labelledby="flujo">
+    <h2 id="flujo">El flujo en pasos</h2>
+    <ol>
+      <li><code>search_layers</code> (o <code>suggest_layers</code>) encuentra capas candidatas por palabra clave o por objetivo.</li>
+      <li><code>describe_layer</code> muestra los campos reales y los servicios de la capa elegida. Es obligatorio antes de consultar.</li>
+      <li><code>query_layer</code> pide los features con bbox, filtros y paginación.</li>
+      <li><code>geocode</code> convierte un texto en coordenadas cuando necesitás centrar el mapa sin conocer el bbox.</li>
+    </ol>
+    <p><code>suggest_layers</code> ordena candidatas a partir de un objetivo en texto libre, de forma determinista y sin LLM. <code>geocode</code> usa la API Georef, sin key.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="conexion">
+    <h2 id="conexion">Conexión</h2>
+    <p>Endpoint público Streamable HTTP de GeoArg:</p>
+    <pre><code>https://geoarg-mcp.franprzdev.workers.dev/mcp</code></pre>
+    <p>Configuración genérica para un cliente MCP:</p>
+    <pre><code>{
+  "mcpServers": {
+    "geoarg": {
+      "url": "https://geoarg-mcp.franprzdev.workers.dev/mcp"
+    }
+  }
+}</code></pre>
+    <p>El endpoint es de solo lectura y no requiere API key. Depende de Cloudflare Workers y de servicios oficiales de terceros, así que puede fallar o demorar. Más detalle en <a href="../mcp.html">la documentación del MCP</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="agua">
+    <h2 id="agua">Ejemplo real: objetivo "agua"</h2>
+    <p>Buscando en el catálogo las capas cuyo título o resumen menciona "agua", aparecen <strong>145 capas</strong> en <strong>12 jurisdicciones</strong>. El script elige 3 ejemplos por perfil de servicio y jurisdicción distinta, sin intervención manual:</p>
+  <table>
+    <thead><tr><th scope="col">Capa</th><th scope="col">Jurisdicción</th><th scope="col">Servicios</th></tr></thead>
+    <tbody>
+        <tr><td>Acequia, zanja, zanjón</td><td>Argentina (nacional)</td><td>WFS + WMS</td></tr>
+        <tr><td>Corriente de agua intermitente</td><td>Buenos Aires</td><td>WFS + WMS</td></tr>
+        <tr><td>Batimetria Concepción del Uruguay</td><td>Entre Ríos</td><td>WMS</td></tr>
+    </tbody>
+  </table>
+    <p>Con esos tres candidatos el paso siguiente es <code>describe_layer</code> sobre cada uno para ver los campos reales, y recién después <code>query_layer</code>. Las capas solo WMS quedan para el fondo del mapa; las que incluyen WFS o ArcGIS REST se pueden consultar.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="limites">
+    <h2 id="limites">Qué hace el agente y qué no</h2>
+    <p>El agente <strong>sugiere capas</strong>, las describe y arma las consultas. <strong>No construye el mapa por vos</strong>: el render, los estilos y la composición final son de tu código o de tu SIG. GeoArg tampoco aloja los datos: consulta los servicios oficiales en vivo y cita la fuente.</p>
+    <p>Un caso aplicado completo está en <a href="../ejemplos/focos-tucuman.html">Focos de calor vs agua en Tucumán</a>, donde el MCP descubre las capas y luego el análisis consulta los servicios directamente.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="fuente">
+    <h2 id="fuente">Fuente de los datos</h2>
+    <p>Todos los números de esta nota salen de <code>data/catalog.json</code>, generado el 2026-11-08 (campo <code>generatedAt</code>). Son entradas del catálogo, no capas verificadas en vivo una por una.</p>
+    <p><a href="./index.html">Volver al blog</a> · <a href="../mcp.html">Documentación del MCP</a> · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.</p>
+  </section>
+<script type="application/json" id="blog-data">{"aguaTotal":145,"aguaJurisdictions":12,"examples":[{"id":"ign:ign:lineas_de_aguas_continentales_BH030","title":"Acequia, zanja, zanjón","province":"Argentina (nacional)","services":["wfs","wms"]},{"id":"ideba:IDEBA:corriente_de_agua_intermitente","title":"Corriente de agua intermitente","province":"Buenos Aires","services":["wfs","wms"]},{"id":"entrerios:geonode:bat_c_uruguay","title":"Batimetria Concepción del Uruguay","province":"Entre Ríos","services":["wms"]}]}</script>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>GeoArg · Código MIT · Los datos son de sus organismos publicadores</span>
+    <span><a href="../index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+</body>
+</html>

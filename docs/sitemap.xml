@@ -15,4 +15,16 @@
   <url>
     <loc>https://franprzdev.github.io/geotucuman/ejemplos/focos-tucuman.html</loc>
   </url>
+  <url>
+    <loc>https://franprzdev.github.io/geotucuman/blog/</loc>
+  </url>
+  <url>
+    <loc>https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html</loc>
+  </url>
+  <url>
+    <loc>https://franprzdev.github.io/geotucuman/blog/wms-vs-wfs.html</loc>
+  </url>
+  <url>
+    <loc>https://franprzdev.github.io/geotucuman/blog/armar-un-mapa-con-tu-agente.html</loc>
+  </url>
 </urlset>

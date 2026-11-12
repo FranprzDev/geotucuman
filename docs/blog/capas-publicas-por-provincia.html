@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qué capas de datos públicos tiene cada provincia argentina</title>
+<meta name="description" content="Conteo de capas del catálogo de GeoArg por jurisdicción argentina: las más y las menos cubiertas, y cuáles solo ofrecen WMS. Datos del catálogo del 2026-11-08.">
+<link rel="canonical" href="https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html">
+<meta property="og:title" content="Qué capas de datos públicos tiene cada provincia argentina">
+<meta property="og:description" content="Conteo de capas del catálogo de GeoArg por jurisdicción argentina: las más y las menos cubiertas, y cuáles solo ofrecen WMS. Datos del catálogo del 2026-11-08.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%234ade80' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%234ade80'/%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{
+  "@context": "https://schema.org",
+  "@type": "BlogPosting",
+  "headline": "Qué capas de datos públicos tiene cada provincia argentina",
+  "description": "Conteo de capas del catálogo de GeoArg por jurisdicción argentina: las más y las menos cubiertas, y cuáles solo ofrecen WMS. Datos del catálogo del 2026-11-08.",
+  "inLanguage": "es-AR",
+  "datePublished": "2026-11-11",
+  "dateModified": "2026-11-11",
+  "author": {
+    "@type": "Person",
+    "name": "FranPrzDev"
+  },
+  "mainEntityOfPage": "https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html",
+  "url": "https://franprzdev.github.io/geotucuman/blog/capas-publicas-por-provincia.html"
+}</script>
+<style>
+  *, *::before, *::after { box-sizing: border-box; }
+  :root {
+    --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
+    --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
+    --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
+    --accent: #4ade80; --accent-soft: #a7f3c7;
+    --maxw: 920px; --header-h: 68px;
+    color-scheme: dark;
+  }
+  html { -webkit-text-size-adjust: 100%; scroll-padding-top: calc(var(--header-h) + 16px); }
+  body {
+    font-family: "Inter", ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
+    background-color: var(--bg);
+    background-image:
+      radial-gradient(900px 540px at 50% -220px, rgba(74,222,128,.17), transparent 70%),
+      linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
+    background-repeat: no-repeat, repeat, repeat;
+    background-size: auto, 48px 48px, 48px 48px;
+    background-attachment: fixed, fixed, fixed;
+  }
+  a { color: var(--accent); text-decoration-color: rgba(74,222,128,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-soft); }
+  a:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; border-radius: 8px; }
+  code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+  code { font-size: 12.5px; background: rgba(74,222,128,.09); color: var(--accent-soft); border: 1px solid rgba(74,222,128,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
+  pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
+  .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--accent); color: #04160c; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip:focus { top: 12px; }
+  .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
+  .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
+  .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
+  .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+  .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
+  .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
+  .nav a[aria-current="page"] { color: var(--accent-soft); }
+  .nav a.nav-cta { color: #04160c; background: var(--accent); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--accent-soft); color: #04160c; }
+  main { display: block; padding-bottom: 24px; }
+  .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 10px; }
+  h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
+  h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
+  h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
+  h3 { font-size: 18px; margin: 24px 0 8px; }
+  p, li { color: #a6b4c0; font-size: 15px; }
+  .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--accent); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary p { margin: 0; font-size: 14px; }
+  .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
+  .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }
+  ul { padding-left: 22px; }
+  li { margin: 6px 0; }
+  table { width: 100%; border-collapse: collapse; margin: 14px 0 4px; font-size: 14px; }
+  th, td { text-align: left; vertical-align: top; padding: 10px 12px; border-bottom: 1px solid var(--line); }
+  th { color: var(--ink); font-size: 12px; letter-spacing: .08em; text-transform: uppercase; }
+  td { color: #a6b4c0; }
+  .links { display: flex; flex-wrap: wrap; gap: 8px 14px; padding: 0; list-style: none; }
+  .links li { margin: 0; }
+  footer.site { margin-top: 34px; padding: 20px 0 38px; border-top: 1px solid var(--line); font-size: 12.5px; color: var(--faint); }
+  footer.site .wrap { display: flex; justify-content: space-between; align-items: baseline; gap: 10px 18px; flex-wrap: wrap; }
+  @media (max-width: 640px) {
+    .header-inner { align-items: flex-start; flex-direction: column; gap: 6px; padding: 10px 0; }
+    .nav { gap: 0; }
+    .nav a { padding: 8px 7px; font-size: 12.5px; }
+    .nav a.nav-cta { margin-left: 0; }
+    .wrap { padding: 0 16px; }
+    footer.site .wrap { flex-direction: column; align-items: flex-start; }
+    table, thead, tbody, th, td, tr { display: block; }
+    th { padding-bottom: 4px; }
+    td { padding-top: 0; border-bottom: 0; }
+    tr { padding: 10px 0; border-bottom: 1px solid var(--line); }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="brand" href="../index.html" aria-label="GeoArg, inicio">
+      <svg viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z" stroke="currentColor" stroke-width="1.7" stroke-linejoin="round"/><circle cx="12" cy="10" r="2.6" fill="currentColor"/></svg>
+      <span>GeoArg</span>
+    </a>
+    <nav class="nav" aria-label="Principal">
+      <a href="../capas.html">Capas</a>
+      <a href="../salud.html">Salud de capas</a>
+      <a href="../mcp.html">Documentación MCP</a>
+      <a href="./index.html" aria-current="page">Blog</a>
+      <a class="nav-cta" href="https://github.com/FranprzDev/geotucuman">GitHub</a>
+    </nav>
+  </div>
+</header>
+<main id="main" class="wrap">
+  <section class="hero" aria-labelledby="title">
+    <p class="eyebrow">Blog · Catálogo</p>
+    <h1 id="title">Qué capas de datos públicos tiene cada provincia argentina</h1>
+    <div class="summary">
+      <p><strong>Resumen:</strong> el catálogo de GeoArg reúne 3691 capas de servicios oficiales declaradas en fuentes nacionales y provinciales. Esta nota cuenta cuántas entradas hay por jurisdicción, cuáles son las más y las menos cubiertas, y en qué casos la única opción es una imagen WMS. Los números son entradas de catálogo, no capas verificadas una por una en vivo.</p>
+    </div>
+    <p class="lede" style="margin:18px 0 0"><a href="./index.html">Blog de GeoArg</a> · <a href="../mcp.html">Documentación del MCP</a></p>
+  </section>
+
+  <section class="panel" aria-labelledby="tabla">
+    <h2 id="tabla">Capas por jurisdicción</h2>
+    <p>La tabla ordena las 24 entradas por jurisdicción presentes en el catálogo (23 jurisdicciones subnacionales más el IGN nacional) por cantidad de entradas. La columna <em>Servicios</em> indica qué tipos de servicio declara la jurisdicción en conjunto; <em>Fuentes</em> lista los organismos de origen.</p>
+  <table>
+    <thead><tr><th scope="col">Jurisdicción</th><th scope="col">Capas</th><th scope="col">Servicios</th><th scope="col">Fuentes</th></tr></thead>
+    <tbody>
+        <tr><td>Chaco</td><td>1089</td><td>WFS + WMS</td><td>IDEChaco</td></tr>
+        <tr><td>Córdoba</td><td>705</td><td>WFS + WMS</td><td>IDECOR</td></tr>
+        <tr><td>Ciudad Autónoma de Buenos Aires</td><td>539</td><td>WFS + WMS</td><td>CABA</td></tr>
+        <tr><td>Tucumán</td><td>351</td><td>WFS + WMS</td><td>Catastro Tucumán, Geosplan, RIDES</td></tr>
+        <tr><td>Argentina (nacional)</td><td>192</td><td>WFS + WMS</td><td>IGN</td></tr>
+        <tr><td>Tierra del Fuego</td><td>192</td><td>WFS + WMS</td><td>IDE TDF</td></tr>
+        <tr><td>Río Negro</td><td>139</td><td>WFS + WMS</td><td>IDERN</td></tr>
+        <tr><td>Santa Cruz</td><td>121</td><td>WFS + WMS</td><td>SIT Santa Cruz</td></tr>
+        <tr><td>Buenos Aires</td><td>92</td><td>WFS + WMS</td><td>IDEBA</td></tr>
+        <tr><td>San Juan</td><td>68</td><td>WMS</td><td>UNIDE</td></tr>
+        <tr><td>San Luis</td><td>44</td><td>WFS + WMS</td><td>Catastro San Luis</td></tr>
+        <tr><td>Jujuy</td><td>37</td><td>WFS + WMS</td><td>IDEJuy</td></tr>
+        <tr><td>Entre Ríos</td><td>35</td><td>WFS + WMS</td><td>IDE Entre Ríos</td></tr>
+        <tr><td>Misiones</td><td>33</td><td>WFS + WMS</td><td>Vialidad Misiones</td></tr>
+        <tr><td>Salta</td><td>31</td><td>WFS + WMS</td><td>IDE Salta</td></tr>
+        <tr><td>Mendoza</td><td>9</td><td>ArcGIS REST</td><td>IDE Mendoza</td></tr>
+        <tr><td>Neuquén</td><td>7</td><td>WMS</td><td>Catastro Neuquén</td></tr>
+        <tr><td>Catamarca</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Chubut</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Corrientes</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>La Pampa</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>La Rioja</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Santa Fe</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Santiago del Estero</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+    </tbody>
+  </table>
+    <p>La fila <strong>Argentina (nacional)</strong> corresponde al <strong>IGN</strong>, la fuente nacional; no es una provincia. Las jurisdicciones subnacionales representadas son 23 (22 provincias + CABA).</p>
+  </section>
+
+  <section class="panel" aria-labelledby="top">
+    <h2 id="top">Las 5 jurisdicciones con más capas</h2>
+    <p>El grueso del catálogo se concentra en pocas fuentes que publican todas sus capas vía GetCapabilities. Esto describe el tamaño del catálogo, no la calidad ni la vigencia de cada capa.</p>
+  <table>
+    <thead><tr><th scope="col">Jurisdicción</th><th scope="col">Capas</th><th scope="col">Servicios</th></tr></thead>
+    <tbody>
+        <tr><td>Chaco</td><td>1089</td><td>WFS + WMS</td></tr>
+        <tr><td>Córdoba</td><td>705</td><td>WFS + WMS</td></tr>
+        <tr><td>Ciudad Autónoma de Buenos Aires</td><td>539</td><td>WFS + WMS</td></tr>
+        <tr><td>Tucumán</td><td>351</td><td>WFS + WMS</td></tr>
+        <tr><td>Argentina (nacional)</td><td>192</td><td>WFS + WMS</td></tr>
+    </tbody>
+  </table>
+  </section>
+
+  <section class="panel" aria-labelledby="flacas">
+    <h2 id="flacas">Las jurisdicciones flacas (1 a 9 capas)</h2>
+    <p>Hay 9 jurisdicciones con entre 1 y 9 capas. 7 de ellas son fuentes del <strong>INTA</strong>, que se indexan como WMS-only con una sola capa por nodo; el resto son fuentes chicas.</p>
+  <table>
+    <thead><tr><th scope="col">Jurisdicción</th><th scope="col">Capas</th><th scope="col">Servicios</th><th scope="col">Fuentes</th></tr></thead>
+    <tbody>
+        <tr><td>Catamarca</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Chubut</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Corrientes</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>La Pampa</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>La Rioja</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Santa Fe</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Santiago del Estero</td><td>1</td><td>WMS</td><td>INTA</td></tr>
+        <tr><td>Neuquén</td><td>7</td><td>WMS</td><td>Catastro Neuquén</td></tr>
+        <tr><td>Mendoza</td><td>9</td><td>ArcGIS REST</td><td>IDE Mendoza</td></tr>
+    </tbody>
+  </table>
+    <p>Estas cifras bajas no significan que la provincia no publique datos: significan que GeoArg solo tiene indexada una parte, a veces un área cartografiada y no la provincia completa.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="wfs">
+    <h2 id="wfs">WFS y WMS: quién se puede consultar</h2>
+    <p>De las 24 entradas por jurisdicción, 14 ofrecen al menos una capa <strong>WFS</strong> (features consultables). 9 son <strong>solo WMS</strong>: entregan imágenes para visualizar, no datos. 1 jurisdicción (Mendoza) ofrece solo <strong>ArcGIS REST</strong>, que también es consultable.</p>
+    <p>La diferencia importa para <code>query_layer</code>: solo las capas WFS y ArcGIS REST admiten consultas de atributos y filtros. Se detalla en <a href="./wms-vs-wfs.html">WMS vs WFS</a>.</p>
+  </section>
+
+  <section class="panel" aria-labelledby="faltan">
+    <h2 id="faltan">Lo que falta y advertencias</h2>
+    <ul>
+      <li><strong>Formosa</strong> no tiene una fuente operativa integrada: su IDE cierra las conexiones WMS/WFS desde fuera de Argentina. La integración está bloqueada del lado del servidor.</li>
+      <li>Las <strong>Islas Malvinas</strong> no tienen una capa dedicada ni cobertura completa; solo pueden aparecer en capas específicas del catálogo, con sus propios límites.</li>
+      <li>Los conteos son <strong>entradas del catálogo</strong>, no capas verificadas. Que una capa esté indexada no garantiza que el servicio responda hoy. El estado se sigue en <a href="../salud.html">salud de capas</a>.</li>
+    </ul>
+  </section>
+
+  <section class="panel" aria-labelledby="fuente">
+    <h2 id="fuente">Fuente de los datos</h2>
+    <p>Todos los números de esta nota salen de <code>data/catalog.json</code>, generado el 2026-11-08 (campo <code>generatedAt</code>). Son entradas del catálogo, no capas verificadas en vivo una por una.</p>
+    <p><a href="./index.html">Volver al blog</a> · <a href="../mcp.html">Documentación del MCP</a> · <a href="https://github.com/FranprzDev/geotucuman">Repositorio en GitHub</a>.</p>
+  </section>
+<script type="application/json" id="blog-data">{"total":3691,"jurisdictions":[{"province":"Chaco","count":1089},{"province":"Córdoba","count":705},{"province":"Ciudad Autónoma de Buenos Aires","count":539},{"province":"Tucumán","count":351},{"province":"Argentina (nacional)","count":192},{"province":"Tierra del Fuego","count":192},{"province":"Río Negro","count":139},{"province":"Santa Cruz","count":121},{"province":"Buenos Aires","count":92},{"province":"San Juan","count":68},{"province":"San Luis","count":44},{"province":"Jujuy","count":37},{"province":"Entre Ríos","count":35},{"province":"Misiones","count":33},{"province":"Salta","count":31},{"province":"Mendoza","count":9},{"province":"Neuquén","count":7},{"province":"Catamarca","count":1},{"province":"Chubut","count":1},{"province":"Corrientes","count":1},{"province":"La Pampa","count":1},{"province":"La Rioja","count":1},{"province":"Santa Fe","count":1},{"province":"Santiago del Estero","count":1}],"top":["Chaco","Córdoba","Ciudad Autónoma de Buenos Aires","Tucumán","Argentina (nacional)"],"thin":["Catamarca","Chubut","Corrientes","La Pampa","La Rioja","Santa Fe","Santiago del Estero","Neuquén","Mendoza"],"wfsJurisdictions":14,"wmsOnlyJurisdictions":9,"arcgisOnlyJurisdictions":1}</script>
+</main>
+<footer class="site">
+  <div class="wrap">
+    <span>GeoArg · Código MIT · Los datos son de sus organismos publicadores</span>
+    <span><a href="../index.html">Volver al inicio</a></span>
+  </div>
+</footer>
+</body>
+</html>

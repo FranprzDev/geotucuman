@@ -10,7 +10,7 @@
 <meta property="og:description" content="Endpoint público Streamable HTTP, instalación local por stdio, herramientas y límites de GeoArg.">
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://franprzdev.github.io/geotucuman/mcp.html">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%233fd6ea' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%233fd6ea'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%234ade80' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%234ade80'/%3E%3C/svg%3E">
 <script type="application/ld+json">{
   "@context": "https://schema.org",
   "@type": "SoftwareApplication",
@@ -27,7 +27,7 @@
     --bg: #05070c; --surface: #0b101a; --surface-2: #101623;
     --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
     --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
-    --cyan: #3fd6ea; --cyan-soft: #8ce9f4;
+    --accent: #4ade80; --accent-soft: #a7f3c7;
     --maxw: 920px; --header-h: 68px;
     color-scheme: dark;
   }
@@ -37,43 +37,43 @@
     margin: 0; color: var(--ink); line-height: 1.65; min-height: 100vh;
     background-color: var(--bg);
     background-image:
-      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
+      radial-gradient(900px 540px at 50% -220px, rgba(74,222,128,.17), transparent 70%),
       linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
     background-repeat: no-repeat, repeat, repeat;
     background-size: auto, 48px 48px, 48px 48px;
     background-attachment: fixed, fixed, fixed;
   }
-  a { color: var(--cyan); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
-  a:hover { color: var(--cyan-soft); }
-  a:focus-visible { outline: 2px solid var(--cyan-soft); outline-offset: 3px; border-radius: 8px; }
+  a { color: var(--accent); text-decoration-color: rgba(74,222,128,.45); text-underline-offset: 3px; }
+  a:hover { color: var(--accent-soft); }
+  a:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; border-radius: 8px; }
   code, pre { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
-  code { font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--cyan-soft); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
+  code { font-size: 12.5px; background: rgba(74,222,128,.09); color: var(--accent-soft); border: 1px solid rgba(74,222,128,.16); padding: 1px 6px; border-radius: 6px; overflow-wrap: anywhere; }
   pre { margin: 12px 0 18px; padding: 14px 16px; overflow-x: auto; background: var(--surface-2); border: 1px solid var(--line-strong); border-radius: 12px; }
   pre code { display: block; padding: 0; border: 0; background: none; color: var(--ink); overflow-wrap: normal; white-space: pre; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 20px; width: 100%; }
-  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--cyan); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--accent); color: #04160c; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
   .skip:focus { top: 12px; }
   .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.78); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
   .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
   .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 700; letter-spacing: -.025em; }
-  .brand svg { width: 22px; height: 22px; color: var(--cyan); }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); }
   .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
   .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
   .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
-  .nav a[aria-current="page"] { color: var(--cyan-soft); }
-  .nav a.nav-cta { color: #04141a; background: var(--cyan); font-weight: 600; margin-left: 6px; }
-  .nav a.nav-cta:hover { background: var(--cyan-soft); color: #04141a; }
+  .nav a[aria-current="page"] { color: var(--accent-soft); }
+  .nav a.nav-cta { color: #04160c; background: var(--accent); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--accent-soft); color: #04160c; }
   main { display: block; padding-bottom: 24px; }
   .hero { padding: clamp(36px, 6vw, 64px) 0 26px; border-bottom: 1px solid var(--line); }
-  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--cyan); font-weight: 700; margin: 0 0 10px; }
+  .eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--accent); font-weight: 700; margin: 0 0 10px; }
   h1, h2, h3 { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.025em; line-height: 1.15; }
   h1 { font-size: clamp(30px, 5vw, 46px); margin: 0 0 14px; }
   h2 { font-size: clamp(22px, 3vw, 30px); margin: 36px 0 12px; }
   h3 { font-size: 18px; margin: 24px 0 8px; }
   p, li { color: #a6b4c0; font-size: 15px; }
   .lede { font-size: clamp(16px, 2vw, 18px); color: var(--muted); max-width: 72ch; }
-  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--cyan); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
+  .summary { margin-top: 20px; padding: 16px 18px; border-left: 3px solid var(--accent); background: rgba(11,16,26,.75); border-radius: 0 12px 12px 0; }
   .summary p { margin: 0; font-size: 14px; }
   .panel { margin: 22px 0; padding: 18px 20px; background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: 16px; }
   .panel p:last-child, .panel ul:last-child { margin-bottom: 0; }

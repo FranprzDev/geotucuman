@@ -14,7 +14,7 @@
     --bg: #05070c; --bg-soft: #080c14; --surface: #0b101a; --surface-2: #101623;
     --ink: #e9f1f6; --muted: #93a3b4; --muted-2: #66778a;
     --line: rgba(148,178,203,.14); --line-strong: rgba(148,178,203,.26);
-    --brand: #3fd6ea; --brand-bright: #8ce9f4; --brand-deep: #0e7d95;
+    --brand: #4ade80; --brand-bright: #a7f3c7; --brand-deep: #15803d;
     --radius: 16px; --radius-sm: 12px;
     --shadow: 0 2px 10px rgba(0,0,0,.3);
     --header-h: 68px;
@@ -26,31 +26,31 @@
     margin: 0; color: var(--ink); line-height: 1.6; min-height: 100vh;
     background-color: var(--bg);
     background-image:
-      radial-gradient(900px 540px at 50% -220px, rgba(63,214,234,.17), transparent 70%),
+      radial-gradient(900px 540px at 50% -220px, rgba(74,222,128,.17), transparent 70%),
       linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px),
       linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px);
     background-repeat: no-repeat, repeat, repeat;
     background-size: auto, 48px 48px, 48px 48px;
     background-attachment: fixed, fixed, fixed;
   }
-  a { color: var(--brand); text-decoration-color: rgba(63,214,234,.45); text-underline-offset: 3px; }
+  a { color: var(--brand); text-decoration-color: rgba(74,222,128,.45); text-underline-offset: 3px; }
   a:hover { color: var(--brand-bright); }
   a:focus-visible, button:focus-visible, input:focus-visible, select:focus-visible, summary:focus-visible { outline: 2px solid var(--brand-bright); outline-offset: 3px; border-radius: 8px; }
-  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(63,214,234,.09); color: var(--brand-bright); border: 1px solid rgba(63,214,234,.16); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
+  code { font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; font-size: 12.5px; background: rgba(74,222,128,.09); color: var(--brand-bright); border: 1px solid rgba(74,222,128,.16); padding: 1px 6px; border-radius: 6px; word-break: break-word; }
   .wrap { max-width: 1120px; margin: 0 auto; padding: 0 20px; width: 100%; }
-  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--brand); color: #041016; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--brand); color: #04160c; padding: 10px 14px; border-radius: 10px; font-weight: 700; text-decoration: none; }
   .skip:focus { top: 12px; }
   .site-header { position: sticky; top: 0; z-index: 50; background: rgba(5,7,12,.68); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); border-bottom: 1px solid var(--line); }
   .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
   .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-size: 18px; font-weight: 750; letter-spacing: -.025em; }
   .brand:hover { color: var(--ink); }
-  .brand svg { width: 22px; height: 22px; color: var(--brand); filter: drop-shadow(0 0 10px rgba(63,214,234,.55)); }
+  .brand svg { width: 22px; height: 22px; color: var(--brand); filter: drop-shadow(0 0 10px rgba(74,222,128,.55)); }
   .nav { display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
   .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 600; padding: 8px 11px; border-radius: 999px; }
   .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
   .nav a[aria-current="page"] { color: var(--brand-bright); }
-  .nav a.nav-cta { color: #04141a; background: var(--brand); font-weight: 600; margin-left: 6px; }
-  .nav a.nav-cta:hover { background: var(--brand-bright); color: #04141a; }
+  .nav a.nav-cta { color: #04160c; background: var(--brand); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--brand-bright); color: #04160c; }
   .panel { background: linear-gradient(180deg, rgba(20,24,36,.94), rgba(13,15,24,.94)); border: 1px solid var(--line); border-radius: var(--radius); box-shadow: var(--shadow); padding: clamp(20px, 4vw, 36px); margin: 20px 0; }
   .panel > h2, .section-head h2 { font-size: clamp(22px, 3vw, 30px); line-height: 1.15; letter-spacing: -.025em; font-weight: 750; color: var(--ink); margin: 0 0 16px; }
   .panel p, .panel li { font-size: 14.5px; color: #a6b4c0; }
@@ -63,7 +63,7 @@
   h1, h2, h3, .brand { font-family: "Space Grotesk", "Inter", ui-sans-serif, sans-serif; letter-spacing: -.02em; }
   @media (max-width: 520px) { .nav a { padding: 8px 7px; font-size: 12.5px; } .brand { font-size: 16px; } .wrap { padding: 0 16px; } }
   .hero-slim { position: relative; overflow: hidden; padding: clamp(34px, 6vw, 58px) 20px clamp(30px, 5vw, 48px); border-bottom: 1px solid var(--line); }
-  .hero-slim::before { content: ""; position: absolute; inset: -40% -10% auto; height: 150%; background: radial-gradient(ellipse at 50% 0%, rgba(63,214,234,.2), transparent 64%); pointer-events: none; }
+  .hero-slim::before { content: ""; position: absolute; inset: -40% -10% auto; height: 150%; background: radial-gradient(ellipse at 50% 0%, rgba(74,222,128,.2), transparent 64%); pointer-events: none; }
   .hero-slim .wrap { position: relative; }
   .hero-slim h1 { font-size: clamp(28px, 4.4vw, 44px); line-height: 1.08; letter-spacing: -.035em; margin: 0 0 8px; color: var(--ink); }
   .hero-slim p { margin: 0; font-size: 14.5px; color: var(--muted); max-width: 780px; }
@@ -98,7 +98,7 @@
   .controls { margin: 6px 0 16px; }
   #q { width: 100%; min-height: 48px; font-size: 15px; padding: 11px 18px; border: 1px solid var(--line-strong); border-radius: 999px; background: rgba(17,20,31,.9); color: var(--ink); }
   #q::placeholder { color: var(--muted-2); }
-  #q:focus { border-color: rgba(63,214,234,.6); box-shadow: 0 0 0 4px rgba(63,214,234,.12); outline: none; }
+  #q:focus { border-color: rgba(74,222,128,.6); box-shadow: 0 0 0 4px rgba(74,222,128,.12); outline: none; }
   #count { font-size: 13.5px; font-weight: 650; color: var(--brand-bright); margin-top: 8px; }
 </style>
 </head>

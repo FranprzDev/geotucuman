@@ -14,14 +14,16 @@
  *  - Field boosting (title > identifier tokens > keywords > abstract), plus
  *    province/source fields so geographic intent narrows results.
  *  - Term normalization: lowercase + NFD diacritic stripping (same as
- *    GeoContext's processTerm), extended with light Spanish plural reduction
- *    ("canales" -> "canal", "pozos" -> "pozo") applied to index and query.
+ *    GeoContext's processTerm), extended with the Spanish Snowball stemmer
+ *    ("zonas inundables" and "Zonas de Inundabilidad" share stems) applied to
+ *    index and query.
  *  - Fuzzy matching limited to longer terms, so short Spanish words do not
  *    collide ("calor" must not match "color"/"valor").
  *  - No per-topic synonym lists anywhere: cross-language/semantic bridging of
  *    the bilingual catalog metadata is the client assistant's job, via the
  *    `relatedTerms` parameter of search_layers/suggest_layers.
  */
+import { newStemmer } from 'snowball-stemmers';
 import MiniSearch from 'minisearch';
 import type { SearchResult as MiniSearchResult } from 'minisearch';
 import { loadCatalog, normalize } from './catalog.js';
@@ -49,27 +51,14 @@ export const STOPWORDS = new Set([
   'i', 'we', 'you', 'it', 'this', 'that', 'these', 'those', 'there', 'here',
 ]);
 
-/**
- * Light Spanish plural reduction applied symmetrically to index and query
- * terms, so "pozos" matches "pozo" and "canales" matches "canal". Only
- * handles the two dominant regular patterns; anything else is left to
- * prefix/fuzzy matching.
- */
-function singularize(term: string): string {
-  if (term.length >= 4 && term.endsWith('es')) {
-    const stem = term.slice(0, -2);
-    if (/[^aeiou]$/.test(stem)) return stem; // canales -> canal
-  }
-  if (term.length >= 4 && /[aeiou]s$/.test(term)) return term.slice(0, -1); // pozos -> pozo
-  return term;
-}
+const spanishStemmer = newStemmer('spanish');
 
-/** MiniSearch processTerm: normalize, drop stopwords, reduce plurals. */
 function processTerm(term: string): string | false {
   const cleaned = normalize(term).trim();
   if (cleaned.length === 0 || STOPWORDS.has(cleaned)) return false;
-  const singular = singularize(cleaned);
-  return singular.length > 0 ? singular : false;
+  const accented = term.toLowerCase().trim().replace(/([cs])ion$/, '$1ión');
+  const stem = normalize(spanishStemmer.stem(accented));
+  return stem.length > 0 ? stem : false;
 }
 
 /** Splits identifiers like "dgct:fires_modis_24" into searchable tokens. */
@@ -108,7 +97,7 @@ const FIELD_BOOST = { title: 4, typeName: 3.5, keywords: 3, abstract: 1, provinc
  * variation on long words, strict enough that short terms stay precise.
  */
 const SEARCH_OPTIONS = {
-  prefix: true,
+  prefix: (term: string) => term.length >= 4,
   fuzzy: (term: string) => (term.length >= 7 ? 0.15 : false),
   boost: FIELD_BOOST,
 };
@@ -191,8 +180,7 @@ export function searchCatalog(query: string, options: CatalogSearchOptions = {})
 export function meaningfulTerms(text: string): string[] {
   const seen = new Set<string>();
   for (const raw of text.split(/[^A-Za-zÀ-ÿ0-9]+/)) {
-    const term = processTerm(raw);
-    if (term) seen.add(term);
+    if (processTerm(raw)) seen.add(normalize(raw).trim());
   }
   return Array.from(seen);
 }

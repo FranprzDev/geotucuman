@@ -24,7 +24,7 @@ export const schema = {
 export const metadata: ToolMetadata = {
   name: 'suggest_layers',
   description:
-    'Suggests catalog layers from a free-text goal in Spanish or English (no LLM, no invented layers). Ranking is a MiniSearch full-text engine over each layer\'s title, identifier, keywords and abstract - same pattern as IGN France\'s GeoContext - with prefix and bounded fuzzy matching, so word forms and plurals are handled generally. Lexical search cannot bridge languages or concepts by itself: pass synonyms and English/technical equivalents in relatedTerms. Returns scored candidates with the matched terms as rationale, service capabilities and source evidence, plus goal terms no layer covers (noCoverage).',
+    'Suggests catalog layers from a free-text goal in Spanish or English (no LLM, no invented layers). Ranking is a MiniSearch full-text engine over each layer\'s title, identifier, keywords and abstract - same pattern as IGN France\'s GeoContext - with prefix and bounded fuzzy matching, with Spanish stemming, so word forms and derivations are handled generally. Lexical search cannot bridge languages or concepts by itself: pass synonyms and English/technical equivalents in relatedTerms. Returns scored candidates with the matched terms as rationale, service capabilities and source evidence, plus goal terms no layer covers (noCoverage).',
 };
 
 const CAPABILITY_SEMANTICS: Record<ServiceType, string> = {

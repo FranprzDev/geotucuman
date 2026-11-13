@@ -1,0 +1,133 @@
+{
+  "note": "Layers removed from the catalog because their only service(s) fail with a definite, permanent server error. Verified by repeated live probes (daily health run 2026-11-12 plus manual probes 2026-11-12). Applied by scripts/build-catalog.ts on every rebuild.",
+  "layers": [
+    {
+      "id": "caba:geonube:Hog_con_al_menos_un_migrante_internacional",
+      "reason": "WFS GetFeature fails with \"Schema '...' does not exist\"; the layer has no other service."
+    },
+    {
+      "id": "caba:geonube:barrio_ent",
+      "reason": "WFS GetFeature fails with \"Schema '...' does not exist\"; the layer has no other service."
+    },
+    {
+      "id": "caba:geonube:itf_xzona",
+      "reason": "WFS GetFeature fails with \"Schema '...' does not exist\"; the layer has no other service."
+    },
+    {
+      "id": "caba:geonube:selec_econ_prueba_103_vetyalim",
+      "reason": "WFS GetFeature fails with \"Schema '...' does not exist\"; the layer has no other service."
+    },
+    {
+      "id": "caba:geonube:ue_xcom",
+      "reason": "WFS GetFeature fails: relation ideec.ue_xcom does not exist in the server database; the layer has no other service."
+    },
+    {
+      "id": "caba:geonube:uecon_rubro_xcom",
+      "reason": "WFS GetFeature fails with \"Schema '...' does not exist\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:enriquejosegomez_pet-figuraa_lineas",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:enriquejosegomez_pet-figuraa_puntos",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:enriquejosegomez_pet_figura14_autoviares-fsa",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:enriquejosegomez_pet_figura14_autoviares-rq",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:ln263_rcia-spenia",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:ln263_rcia-spenia_track",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:matiasg_pet_-_figura7_poligonos",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:matiasg_pet_-_figura_1_lineas",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idechaco:idechaco:matiasg_pet_-_figura_1_poligonos",
+      "reason": "WFS GetFeature fails with \"Not available\"; the layer has no other service."
+    },
+    {
+      "id": "idecor:bolsa de cereales - precipitaciones",
+      "reason": "GetMap fails with \"Could not find layer\"; the layer has no other service."
+    },
+    {
+      "id": "idecor:hidrografia",
+      "reason": "Server database error: column \"nombre\" does not exist; the layer has no working service."
+    },
+    {
+      "id": "idecor:idecor:canales_riego",
+      "reason": "Server database error: column \"nombre\" does not exist; the layer has no working service."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:1b - Zona de Proyecto",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:Cuencas Andinas SJ",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:Red de drenaje CJ",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:SJ_2015_OTBN",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:Vegas Altoandinas San Juan",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    },
+    {
+      "id": "sanjuan:unide_observ_ambiental_old:glaciares_jachal",
+      "reason": "Published in GetCapabilities but GetMap fails with \"Schema 'unide_observ_ambiental_old:...' does not exist\" (GeoServer store removed)."
+    }
+  ]
+}

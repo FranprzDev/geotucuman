@@ -148,6 +148,13 @@ layers.forEach((entry, i) => {
   });
 });
 
+const denylistedIds = (JSON.parse(readFileSync('data/layer-denylist.json', 'utf-8')) as { layers: Array<{ id: string }> }).layers.map(
+  (l) => l.id,
+);
+for (const id of denylistedIds) {
+  if (seenIds.has(id)) errors.push(`layer ${JSON.stringify(id)} is in data/layer-denylist.json but still in the catalog`);
+}
+
 console.log('Per-source layer counts:');
 for (const id of Object.keys(sourceRecord as Record<string, unknown>)) {
   console.log(`  ${id}: ${layerCountBySource.get(id) ?? 0}`);

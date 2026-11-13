@@ -541,7 +541,15 @@ const generatedAt = FROM_CACHE
     : (previous?.generatedAt ?? new Date(0).toISOString())
   : new Date().toISOString();
 
-const catalog: Catalog = { generatedAt, sources, layers };
+const denylist = new Set(
+  (JSON.parse(readFileSync('data/layer-denylist.json', 'utf-8')) as { layers: Array<{ id: string }> }).layers.map((l) => l.id),
+);
+const filteredLayers = layers.filter((l) => !denylist.has(l.id));
+if (filteredLayers.length !== layers.length) {
+  console.log(`layer-denylist: removed ${layers.length - filteredLayers.length} known-broken layers`);
+}
+
+const catalog: Catalog = { generatedAt, sources, layers: filteredLayers };
 writeFileSync('data/catalog.json', JSON.stringify(catalog, null, 2));
-console.log(`data/catalog.json: ${layers.length} total layers${preserved ? ` (${preserved} preserved from previous snapshot)` : ''}`);
+console.log(`data/catalog.json: ${filteredLayers.length} total layers${preserved ? ` (${preserved} preserved from previous snapshot)` : ''}`);
 if (FROM_CACHE) console.log(`GEOARG_FROM_CACHE=1: rebuilt offline from ${CACHE_ROOT}/ (generatedAt ${generatedAt})`);

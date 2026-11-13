@@ -155,6 +155,44 @@ for (const id of denylistedIds) {
   if (seenIds.has(id)) errors.push(`layer ${JSON.stringify(id)} is in data/layer-denylist.json but still in the catalog`);
 }
 
+// data/layer-aliases.json: extra search terms merged into keywords at load
+// (src/catalog.ts). Terms must already be normalized (lowercase, no accents)
+// because the auto-fix workflow writes this file deterministically.
+const TERM_RE = /^[a-z0-9][a-z0-9 _-]{0,58}[a-z0-9]$|^[a-z0-9]$/;
+const aliasFile = JSON.parse(readFileSync('data/layer-aliases.json', 'utf-8')) as { aliases?: Record<string, unknown> };
+const aliasMap = aliasFile.aliases ?? {};
+if (!isPlainObject(aliasMap)) {
+  errors.push('data/layer-aliases.json: "aliases" must be an object');
+} else {
+  const sortedIds = Object.keys(aliasMap).sort();
+  if (Object.keys(aliasMap).join('\n') !== sortedIds.join('\n')) {
+    errors.push('data/layer-aliases.json: layer ids must be sorted (the auto-fix workflow writes them sorted)');
+  }
+  for (const [id, value] of Object.entries(aliasMap)) {
+    const at = `layer-aliases ${JSON.stringify(id)}`;
+    if (!seenIds.has(id)) {
+      errors.push(`${at}: id is not in the catalog`);
+      continue;
+    }
+    if (!Array.isArray(value) || value.length === 0) {
+      errors.push(`${at}: must be a non-empty array of terms`);
+      continue;
+    }
+    const seenTerms = new Set<string>();
+    for (const term of value) {
+      if (typeof term !== 'string' || !TERM_RE.test(term)) {
+        errors.push(`${at}: invalid term ${JSON.stringify(term)} (expected normalized lowercase, 1-60 chars)`);
+        continue;
+      }
+      if (seenTerms.has(term)) errors.push(`${at}: duplicate term ${JSON.stringify(term)}`);
+      seenTerms.add(term);
+    }
+    if ([...seenTerms].join('\n') !== [...seenTerms].sort().join('\n')) {
+      errors.push(`${at}: terms must be sorted`);
+    }
+  }
+}
+
 console.log('Per-source layer counts:');
 for (const id of Object.keys(sourceRecord as Record<string, unknown>)) {
   console.log(`  ${id}: ${layerCountBySource.get(id) ?? 0}`);

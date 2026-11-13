@@ -2,6 +2,7 @@ import { readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { ServiceType } from './service-type.js';
+import { searchCatalog } from './search.js';
 
 export interface CatalogService {
   type: ServiceType;
@@ -71,44 +72,12 @@ export function normalize(s: string): string {
 }
 
 /**
- * Simple substring search over title, abstract, typeName and keywords.
- * Scoring: title weighs 3, typeName 2, keywords 2, abstract 1.
+ * Keyword search over the catalog. Delegates ranking to the MiniSearch engine
+ * in search.ts (field boosts, prefix and bounded fuzzy matching, plural and
+ * diacritic normalization); this wrapper keeps the historical signature.
  */
 export function searchLayers(query: string, limit = 10, serviceType?: ServiceType, province?: string): CatalogEntry[] {
-  const q = normalize(query).split(/\s+/).filter(Boolean);
-  if (q.length === 0) return [];
-  const wantedProvince = province ? normalize(province) : null;
-  const scored: Array<{ e: CatalogEntry; score: number }> = [];
-  for (const e of loadCatalog().layers) {
-    if (serviceType && !(e.services ?? []).some((s) => s.type === serviceType)) continue;
-    if (wantedProvince && normalize(e.province ?? '') !== wantedProvince) continue;
-    const hay = {
-      title: normalize(e.title),
-      typeName: normalize(e.typeName),
-      abstract: normalize(e.abstract),
-      keywords: normalize(e.keywords.join(' ')),
-    };
-    let score = 0;
-    for (const term of q) {
-      const variants = [term];
-      if (term.endsWith('s') && term.length - 1 >= 3) {
-        variants.push(term.slice(0, -1));
-      }
-      if (term.endsWith('es') && term.length - 2 >= 3) {
-        variants.push(term.slice(0, -2));
-      }
-      const hit = (field: string) => variants.some((v) => field.includes(v));
-      if (hit(hay.title)) score += 3;
-      if (hit(hay.typeName)) score += 2;
-      if (hit(hay.keywords)) score += 2;
-      if (hit(hay.abstract)) score += 1;
-    }
-    if (score > 0) scored.push({ e, score });
-  }
-  return scored
-    .sort((a, b) => b.score - a.score)
-    .slice(0, limit)
-    .map((s) => s.e);
+  return searchCatalog(query, { limit, serviceType, province }).map((hit) => hit.entry);
 }
 
 export function findLayer(typeName: string): CatalogEntry | undefined {

@@ -105,20 +105,49 @@ await check('suggest_layers suggests riego/pozos layers with rationale, services
   if (!Array.isArray(parsed.noCoverage)) throw new Error('missing noCoverage array');
 });
 
-await check('suggest_layers understands "focos de calor" (fires/hotspots synonyms)', async () => {
-  const result = await client.callTool({
-    name: 'suggest_layers',
-    arguments: { goal: 'focos de calor en Tucumán', limit: 10 },
-  });
-  const parsed = JSON.parse(textOf(result)) as {
-    candidates?: Array<{ typeName: string }>;
-    noCoverage?: string[];
-  };
-  if (!(parsed.candidates ?? []).some((c) => /fires|hotspot|modis|viirs|foco/i.test(c.typeName))) {
-    throw new Error('no fires/hotspots candidate for a focos de calor goal');
+await check('suggest_layers finds MODIS for "focos de calor" via relatedTerms (no hardcoded synonyms)', async () => {
+  const lexical = JSON.parse(
+    textOf(await client.callTool({ name: 'suggest_layers', arguments: { goal: 'focos de calor en Tucumán', limit: 10 } })),
+  ) as { candidates?: Array<{ typeName: string }>; noCoverage?: string[]; hint?: string };
+  // Lexical-only: the English-only MODIS metadata cannot match Spanish terms,
+  // so the engine must report the gap honestly instead of guessing.
+  if (!(lexical.noCoverage ?? []).includes('foco') || !(lexical.noCoverage ?? []).includes('calor')) {
+    throw new Error('expected foco/calor reported as uncovered without relatedTerms');
   }
-  if ((parsed.noCoverage ?? []).some((t) => /^(focos|calor)$/i.test(t))) {
-    throw new Error('focos/calor still reported as uncovered');
+  if (!lexical.hint) throw new Error('expected a hint pointing to relatedTerms');
+
+  const expanded = JSON.parse(
+    textOf(
+      await client.callTool({
+        name: 'suggest_layers',
+        arguments: {
+          goal: 'focos de calor en Tucumán',
+          relatedTerms: ['incendio', 'fire', 'hotspot', 'MODIS', 'VIIRS'],
+          limit: 10,
+        },
+      }),
+    ),
+  ) as { candidates?: Array<{ typeName: string; rationale?: string }> };
+  const candidates = expanded.candidates ?? [];
+  if (!candidates.some((c) => /fires_modis/i.test(c.typeName))) {
+    throw new Error('no MODIS fires candidate once relatedTerms are provided');
+  }
+  if (!candidates.some((c) => /incendio|quemada/i.test(c.typeName))) {
+    throw new Error('no Spanish incendio/quemada candidate once relatedTerms are provided');
+  }
+});
+
+await check('suggest_layers lexical word forms: "quemas" finds area_quemada, "incendios" finds incendio layers', async () => {
+  for (const [goal, pattern] of [
+    ['quemas', /quemada/i],
+    ['incendios', /incendio/i],
+  ] as const) {
+    const parsed = JSON.parse(textOf(await client.callTool({ name: 'suggest_layers', arguments: { goal, limit: 10 } }))) as {
+      candidates?: Array<{ typeName: string }>;
+    };
+    if (!(parsed.candidates ?? []).some((c) => pattern.test(c.typeName))) {
+      throw new Error(`no ${pattern} candidate for goal "${goal}"`);
+    }
   }
 });
 

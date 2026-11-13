@@ -171,7 +171,7 @@ npm run build</code></pre>
       <thead><tr><th>Tool</th><th>Qué hace y ejemplo real</th></tr></thead>
       <tbody>
         <tr><td><code>search_layers</code></td><td>Busca capas por palabra clave. Ejemplo: <code>query: "aeropuerto"</code> con <code>province: "Tucumán"</code> devuelve <code>WFS_GEOSPLAN:aeropuerto</code>.</td></tr>
-        <tr><td><code>suggest_layers</code></td><td>Sugiere capas desde un objetivo en texto libre, sin LLM. Ejemplo: <code>goal: "quiero armar un mapa de riego y pozos"</code>.</td></tr>
+        <tr><td><code>suggest_layers</code></td><td>Sugiere capas desde un objetivo en texto libre, rankeado con un motor de búsqueda full-text (MiniSearch) sobre título, identificador, keywords y resumen, sin LLM en el servidor. Ejemplo: <code>goal: "quiero armar un mapa de riego y pozos"</code>. El catálogo mezcla metadatos en español e inglés: el agente puede pasar <code>relatedTerms</code> con sinónimos y equivalentes técnicos (ej. para "focos de calor": "fire", "hotspot", "MODIS").</td></tr>
         <tr><td><code>describe_layer</code></td><td>Muestra los campos reales de una capa y es obligatorio antes de consultar. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code>.</td></tr>
         <tr><td><code>query_layer</code></td><td>Consulta features de capas WFS o ArcGIS REST. El bbox va en EPSG:4326, se reproyecta al CRS nativo y acepta hasta 50 features con paginación. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code> después de <code>describe_layer</code>.</td></tr>
         <tr><td><code>geocode</code></td><td>Convierte texto libre en coordenadas con la API Georef, gratis y sin key. Ejemplo: <code>text: "Yerba Buena, Tucumán"</code>.</td></tr>

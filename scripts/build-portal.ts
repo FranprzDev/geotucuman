@@ -92,44 +92,22 @@ function cardHtml(l: CatalogEntry): string {
 
 const cards = catalog.layers.map(cardHtml).join('\n');
 
-const SEARCH_CORE = `const TOPICS = {
-  agua: ['agua', 'hidro', 'rio', 'acequia', 'zanja', 'acueducto', 'canal', 'dique', 'embalse', 'espejo', 'corriente', 'cuenca', 'catarata'],
-  transporte: ['calle', 'camino', 'vial', 'ferro', 'aero', 'transporte', 'puente'],
-  poblacion: ['radio', 'censo', 'localidad', 'departamento', 'comuna'],
-  rural: ['cultivo', 'agro', 'suelo', 'edafo', 'parcela', 'rural', 'soja', 'maiz', 'trigo', 'papa', 'garbanzo', 'citrus', 'tabaco', 'canera', 'ingenio'],
-  ambiente: ['vegetacion', 'bosque', 'protegida', 'geomorfo', 'glacio'],
-  servicios: ['salud', 'educacion', 'comunicacion', 'energia', 'equipamiento'],
-};
-const TOPIC_OF = {};
-for (const topic of Object.keys(TOPICS)) {
-  for (const word of [topic, ...TOPICS[topic]]) {
-    TOPIC_OF[word] = (TOPIC_OF[word] || []).concat(TOPICS[topic]);
-  }
-}
+const SEARCH_CORE = `// Generic matching only: normalized substring + regular Spanish plural
+// variants. No per-topic synonym lists (same principle as the MCP server,
+// which ranks with a MiniSearch engine instead of hardcoded topics).
 const STOPWORDS = new Set(['quiero', 'quisiera', 'hacer', 'armar', 'necesito', 'saber', 'cuanto', 'cuanta', 'cuantos', 'cuantas', 'cual', 'cuales', 'un', 'una', 'unos', 'unas', 'el', 'la', 'los', 'las', 'de', 'del', 'en', 'y', 'o', 'a', 'por', 'para', 'con', 'sobre', 'que', 'me', 'te', 'se', 'lo', 'es', 'hay', 'mapa', 'mapas', 'capa', 'capas', 'dato', 'datos', 'dataset', 'datasets', 'tucuman']);
 const norm = s => s.toLowerCase().normalize('NFD').replace(/[\\u0300-\\u036f]/g, '');
-function variantsFor(term) {
+function basesFor(term) {
   const bases = [term];
-  if (term.endsWith('es') && term.length - 2 >= 3) bases.push(term.slice(0, -2));
+  if (term.endsWith('es') && term.length - 2 >= 3 && /[^aeiou]$/.test(term.slice(0, -2))) bases.push(term.slice(0, -2));
   if (term.endsWith('s') && term.length - 1 >= 3) bases.push(term.slice(0, -1));
-  const out = [];
-  for (const b of bases) {
-    out.push(b);
-    if (TOPIC_OF[b]) out.push(...TOPIC_OF[b]);
-  }
-  return out;
+  return bases;
 }
 function tierScore(card, term) {
   const tiers = [norm(card.dataset.t), norm(card.dataset.d), norm(card.dataset.k)];
-  const bases = [term];
-  if (term.endsWith('es') && term.length - 2 >= 3) bases.push(term.slice(0, -2));
-  if (term.endsWith('s') && term.length - 1 >= 3) bases.push(term.slice(0, -1));
+  const bases = basesFor(term);
   for (let i = 0; i < tiers.length; i++) {
     if (bases.some(b => tiers[i].includes(b))) return i;
-  }
-  const generic = variantsFor(term);
-  for (let i = 0; i < tiers.length; i++) {
-    if (generic.some(v => tiers[i].includes(v))) return 2;
   }
   return -1;
 }
@@ -467,7 +445,7 @@ npm run build</code></pre>
       <thead><tr><th>Tool</th><th>Qué hace y ejemplo real</th></tr></thead>
       <tbody>
         <tr><td><code>search_layers</code></td><td>Busca capas por palabra clave. Ejemplo: <code>query: "aeropuerto"</code> con <code>province: "Tucumán"</code> devuelve <code>WFS_GEOSPLAN:aeropuerto</code>.</td></tr>
-        <tr><td><code>suggest_layers</code></td><td>Sugiere capas desde un objetivo en texto libre, sin LLM. Ejemplo: <code>goal: "quiero armar un mapa de riego y pozos"</code>.</td></tr>
+        <tr><td><code>suggest_layers</code></td><td>Sugiere capas desde un objetivo en texto libre, rankeado con un motor de búsqueda full-text (MiniSearch) sobre título, identificador, keywords y resumen, sin LLM en el servidor. Ejemplo: <code>goal: "quiero armar un mapa de riego y pozos"</code>. El catálogo mezcla metadatos en español e inglés: el agente puede pasar <code>relatedTerms</code> con sinónimos y equivalentes técnicos (ej. para "focos de calor": "fire", "hotspot", "MODIS").</td></tr>
         <tr><td><code>describe_layer</code></td><td>Muestra los campos reales de una capa y es obligatorio antes de consultar. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code>.</td></tr>
         <tr><td><code>query_layer</code></td><td>Consulta features de capas WFS o ArcGIS REST. El bbox va en EPSG:4326, se reproyecta al CRS nativo y acepta hasta 50 features con paginación. Ejemplo: <code>typeName: "dgct:PARCELASR1"</code> después de <code>describe_layer</code>.</td></tr>
         <tr><td><code>geocode</code></td><td>Convierte texto libre en coordenadas con la API Georef, gratis y sin key. Ejemplo: <code>text: "Yerba Buena, Tucumán"</code>.</td></tr>

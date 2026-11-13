@@ -30,7 +30,7 @@ Para instalación local por stdio, ver [Cómo usarlo](#cómo-usarlo).
 | Tool | Qué hace |
 | --- | --- |
 | `search_layers` | Busca capas por palabra clave en el catálogo embebido (filtro opcional por tipo de servicio WFS/WMS/ArcGIS) |
-| `suggest_layers` | Sugiere capas a partir de un objetivo en texto libre (determinista, sin LLM) |
+| `suggest_layers` | Sugiere capas a partir de un objetivo en texto libre (motor full-text MiniSearch sobre los metadatos, determinista, sin LLM en el servidor) |
 | `describe_layer` | Campos reales de una capa (obligatorio antes de consultar) |
 | `query_layer` | GetFeature con filtros, paginación y bbox en EPSG:4326 (se reproyecta al CRS nativo de la capa en el cliente) |
 | `geocode` | Texto libre a coordenadas vía API Georef (gratis, sin key) |
@@ -73,7 +73,7 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 ### Ejemplos reales de uso
 
 - **Buscar capas por palabra clave** — `search_layers`: pedile "capas de aeropuerto en Tucumán" y devuelve coincidencias del catálogo embebido, por ejemplo `WFS_GEOSPLAN:aeropuerto` (título "Aeropuerto Benjamín Matienzo"), con `typeName`, fuente, endpoint y CRS por defecto.
-- **Sugerir capas desde un objetivo** — `suggest_layers`: "quiero armar un mapa de riego y pozos" devuelve candidatas puntuadas con su justificación, capacidades por servicio y evidencia de la fuente (determinista, sin LLM).
+- **Sugerir capas desde un objetivo** — `suggest_layers`: "quiero armar un mapa de riego y pozos" devuelve candidatas puntuadas con su justificación, capacidades por servicio y evidencia de la fuente (determinista, sin LLM en el servidor). El ranking es un índice full-text MiniSearch sobre título, identificador, keywords y resumen de cada capa, con normalización de acentos y plurales y fuzzy acotado (mismo enfoque que GeoContext del IGN de Francia); no hay listas de sinónimos por tema. Como el catálogo mezcla metadatos en español e inglés (ej. MODIS "fires/hotspots"), el agente puede pasar `relatedTerms` con sinónimos y equivalentes técnicos para puentear idiomas.
 - **Describir y consultar una capa WFS** — `describe_layer` y después `query_layer`: `describe_layer("dgct:PARCELASR1")` trae los campos reales (DescribeFeatureType) y es obligatorio antes de consultar; recién entonces `query_layer` con ese `typeName` corre GetFeature. El bbox se pasa en EPSG:4326 (se reproyecta al CRS nativo de la capa, acá EPSG:5345), `maxFeatures` admite hasta 50 y se pagina con `startIndex` usando el `nextStartIndex` que devuelve la tool. `query_layer` aplica solo a capas WFS y ArcGIS REST: las WMS-only (por ejemplo las RIDES y las 7 fuentes INTA de suelos/cobertura/productividad) son imágenes para display y no admiten GetFeature.
 - **Geocodificar texto libre** — `geocode`: "Yerba Buena, Tucumán" devuelve coordenadas vía la API nacional Georef (gratis, sin key).
 

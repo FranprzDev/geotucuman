@@ -32,6 +32,9 @@ jobs:
       - name: ArcGIS offline tests
         run: npx tsx scripts/arcgis-test.ts
 
+      - name: Search relevance tests
+        run: npx tsx scripts/search-test.ts
+
       - name: Build
         run: npm run build
 

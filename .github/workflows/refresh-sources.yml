@@ -1,0 +1,96 @@
+name: refresh-sources
+
+on:
+  schedule:
+    - cron: '0 14 * * 1'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: write
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: 'npm'
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Select degraded sources
+        id: select
+        run: npx tsx scripts/degraded-sources.ts
+
+      - name: Regenerate degraded sources from live GetCapabilities
+        if: steps.select.outputs.sources != ''
+        env:
+          GEOARG_ONLY: ${{ steps.select.outputs.sources }}
+        run: npm run catalog
+
+      - name: Rebuild pages and validate
+        if: steps.select.outputs.sources != ''
+        run: |
+          npm run validate-catalog
+          npm run portal
+          npm run blog
+          npm run typecheck
+          npm run test:docs
+          npx tsx scripts/search-test.ts
+
+      - name: Detect real catalog changes
+        id: changes
+        if: steps.select.outputs.sources != ''
+        run: |
+          normalize() {
+            jq -S 'del(.generatedAt) | .sources |= with_entries(.value |= del(.fetchedAt)) | .layers |= map(del(.verifiedAt))'
+          }
+          git show HEAD:data/catalog.json | normalize > /tmp/before.json
+          normalize < data/catalog.json > /tmp/after.json
+          if cmp -s /tmp/before.json /tmp/after.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "Regeneration produced no layer changes"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "before=$(jq '.layers | length' /tmp/before.json)" >> "$GITHUB_OUTPUT"
+            echo "after=$(jq '.layers | length' /tmp/after.json)" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Open pull request
+        if: steps.changes.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+          SUMMARY: ${{ steps.select.outputs.summary }}
+          SOURCES: ${{ steps.select.outputs.sources }}
+          BEFORE: ${{ steps.changes.outputs.before }}
+          AFTER: ${{ steps.changes.outputs.after }}
+        run: |
+          branch="agent/refresh-sources-$(date -u +%Y%m%d)"
+          git config user.name "Francisco Miguel Perez"
+          git config user.email "112534083+FranprzDev@users.noreply.github.com"
+          git checkout -b "$branch"
+          git add -A
+          git commit -m "chore(catalog): refresh degraded sources ($SOURCES)"
+          git push --force-with-lease origin "$branch"
+          cat > /tmp/body.md <<BODY
+          ## What changes
+          Regenerates the sources whose health fell below 90% in the latest daily health report, from live GetCapabilities: $SUMMARY.
+          Catalog layers: $BEFORE -> $AFTER. Pages (capas, blog) rebuilt.
+
+          ## Why
+          Weekly automated refresh (\`refresh-sources\` workflow).
+
+          ## Validation
+          The workflow ran \`validate-catalog\`, \`typecheck\`, \`test:docs\` and \`search-test\` before opening this PR. PRs opened with the workflow token do not start checks by themselves, so the workflow dispatches the \`validate\` workflow on this branch right after opening the PR.
+          BODY
+          gh pr create --base main --head "$branch" --title "chore(catalog): refresh degraded sources ($SOURCES)" --body-file /tmp/body.md
+          gh workflow run validate.yml --ref "$branch"

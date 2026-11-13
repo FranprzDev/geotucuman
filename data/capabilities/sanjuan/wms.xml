@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="17393" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://unide.sanjuan.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
+<?xml version="1.0" encoding="UTF-8"?><WMS_Capabilities version="1.3.0" updateSequence="17527" xmlns="http://www.opengis.net/wms" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/wms https://unide.sanjuan.gob.ar/geoserver/schemas/wms/1.3.0/capabilities_1_3_0.xsd">
   <Service>
     <Name>WMS</Name>
     <Title>GeoServer Web Map Service</Title>
@@ -11,7 +11,7 @@
     <OnlineResource xlink:type="simple" xlink:href="http://geoserver.org"/>
     <ContactInformation>
       <ContactPersonPrimary>
-        <ContactPerson>Alfredo Gómez</ContactPerson>
+        <ContactPerson>Jose Maraz</ContactPerson>
         <ContactOrganization>UNIDE</ContactOrganization>
       </ContactPersonPrimary>
       <ContactPosition>Director</ContactPosition>
@@ -5954,11 +5954,11 @@
       <CRS>CRS:84</CRS>
       <EX_GeographicBoundingBox>
         <westBoundLongitude>-180.00000000000003</westBoundLongitude>
-        <eastBoundLongitude>2715824.824</eastBoundLongitude>
+        <eastBoundLongitude>2682012.3999496703</eastBoundLongitude>
         <southBoundLatitude>-85.05999999999999</southBoundLatitude>
         <northBoundLatitude>6859999.438572832</northBoundLatitude>
       </EX_GeographicBoundingBox>
-      <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.05999999999999" maxx="2715824.824" maxy="6859999.438572832"/>
+      <BoundingBox CRS="CRS:84" minx="-180.00000000000003" miny="-85.05999999999999" maxx="2682012.3999496703" maxy="6859999.438572832"/>
       <Layer queryable="0">
         <Name>unide_iiee:DGC_CroquisUbicacion</Name>
         <Title>CroquisUbicacion</Title>
@@ -5972,7 +5972,7 @@
         </EX_GeographicBoundingBox>
         <BoundingBox CRS="EPSG:4326" minx="-32.2691541241566" miny="-70.4693927230286" maxx="-29.368423685685" maxy="-66.9157553801701"/>
       </Layer>
-      <Layer queryable="1">
+      <Layer queryable="0">
         <Name>DPDU_GeoservicioZonificacion</Name>
         <Title>Zonificación</Title>
         <Abstract>Layer-Group type layer: DPDU_GeoservicioZonificacion</Abstract>
@@ -6010,10 +6010,6 @@
           <northBoundLatitude>85.05999999999999</northBoundLatitude>
         </EX_GeographicBoundingBox>
         <BoundingBox CRS="EPSG:3857" minx="-2.0037508342789244E7" miny="-2.00489661040146E7" maxx="2.0037508342789244E7" maxy="2.0048966104014594E7"/>
-        <MetadataURL type="ISO19115:2003">
-          <Format>text/plain</Format>
-          <OnlineResource xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geonetwork/srv/api/records/9bf314fb62fe5975db7a2a342db3424855906d6c/formatters/xml"/>
-        </MetadataURL>
       </Layer>
       <Layer queryable="0">
         <Name>unide_educacion:MapaEducacion</Name>
@@ -6056,7 +6052,7 @@
         <MaxScaleDenominator>50000.0</MaxScaleDenominator>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:1b - Zona de Proyecto</Name>
+        <Name>unide_observ_ambiental_old:1b - Zona de Proyecto</Name>
         <Title>1b - Zona de Proyecto</Title>
         <Abstract/>
         <KeywordList>
@@ -6077,19 +6073,19 @@
           <Name>unide_observ_ambiental:Zona de Proyecto Jachal</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A1b%20-%20Zona%20de%20Proyecto"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A1b%20-%20Zona%20de%20Proyecto"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Zona de Proyecto Jachal</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A1b%20-%20Zona%20de%20Proyecto&amp;style=Zona%20de%20Proyecto%20Jachal"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A1b%20-%20Zona%20de%20Proyecto&amp;style=Zona%20de%20Proyecto%20Jachal"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2a - Cuencas Tributarias Río San Juan</Name>
+        <Name>unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan</Name>
         <Title>2a - Cuencas Tributarias Río San Juan</Title>
         <Abstract/>
         <KeywordList>
@@ -6110,19 +6106,19 @@
           <Name>unide_observ_ambiental_old:Cuencas Tributarias Rìo San Juan</Name>
           <LegendURL width="177" height="100">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2a%20-%20Cuencas%20Tributarias%20R%C3%ADo%20San%20Juan"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2a%20-%20Cuencas%20Tributarias%20R%C3%ADo%20San%20Juan"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental_old:Cuencas Tributarias Rìo San Juan</Name>
           <LegendURL width="177" height="100">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2a%20-%20Cuencas%20Tributarias%20R%C3%ADo%20San%20Juan&amp;style=Cuencas%20Tributarias%20R%C3%ACo%20San%20Juan"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2a%20-%20Cuencas%20Tributarias%20R%C3%ADo%20San%20Juan&amp;style=Cuencas%20Tributarias%20R%C3%ACo%20San%20Juan"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2b - Glaciares C. Río Calingasta</Name>
+        <Name>unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta</Name>
         <Title>2b - Glaciares C. Río Calingasta</Title>
         <Abstract/>
         <KeywordList>
@@ -6143,19 +6139,19 @@
           <Name>unide_observ_ambiental:Rio Calingasta</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Calingasta"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Calingasta"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Rio Calingasta</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Calingasta&amp;style=Rio%20Calingasta"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Calingasta&amp;style=Rio%20Calingasta"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2b - Glaciares C. Río Castaño</Name>
+        <Name>unide_observ_ambiental_old:2b - Glaciares C. Río Castaño</Name>
         <Title>2b - Glaciares C. Río Castaño</Title>
         <Abstract/>
         <KeywordList>
@@ -6176,19 +6172,19 @@
           <Name>unide_observ_ambiental:Rio Castaño</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Casta%C3%B1o"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Casta%C3%B1o"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Rio Castaño</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Casta%C3%B1o&amp;style=Rio%20Casta%C3%B1o"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Casta%C3%B1o&amp;style=Rio%20Casta%C3%B1o"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2b - Glaciares C. Río Los Patos Inf.</Name>
+        <Name>unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.</Name>
         <Title>2b - Glaciares C. Río Los Patos Inf.</Title>
         <Abstract/>
         <KeywordList>
@@ -6209,19 +6205,19 @@
           <Name>unide_observ_ambiental:Rio Los Patos</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Inf."/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Inf."/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Rio Los Patos</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Inf.&amp;style=Rio%20Los%20Patos"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Inf.&amp;style=Rio%20Los%20Patos"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2b - Glaciares C. Río Los Patos Sup.</Name>
+        <Name>unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.</Name>
         <Title>2b - Glaciares C. Río Los Patos Sup.</Title>
         <Abstract/>
         <KeywordList>
@@ -6244,19 +6240,19 @@
           <Abstract>A sample style that draws a polygon</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Sup."/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Sup."/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Glaciares_Jachal_Posgar</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Sup.&amp;style=Glaciares_Jachal_Posgar"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.%20R%C3%ADo%20Los%20Patos%20Sup.&amp;style=Glaciares_Jachal_Posgar"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:2b - Glaciares C.Río Blanco</Name>
+        <Name>unide_observ_ambiental_old:2b - Glaciares C.Río Blanco</Name>
         <Title>2b - Glaciares C.Río Blanco</Title>
         <Abstract/>
         <KeywordList>
@@ -6277,503 +6273,19 @@
           <Name>unide_observ_ambiental:Rio Blanco</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.R%C3%ADo%20Blanco"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.R%C3%ADo%20Blanco"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Rio Blanco</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3A2b%20-%20Glaciares%20C.R%C3%ADo%20Blanco&amp;style=Rio%20Blanco"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3A2b%20-%20Glaciares%20C.R%C3%ADo%20Blanco&amp;style=Rio%20Blanco"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide:Aguas_transicion</Name>
-        <Title>Aguas_transicion_1984-2021 Fuente_EC JRC/Google</Title>
-        <Abstract>All data here is produced under the Copernicus Programme and is provided free of charge, without restriction of use.</Abstract>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>Aguas_transicion_1984-2021 Fuente_EC JRC/Google</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.78725</westBoundLongitude>
-          <eastBoundLongitude>-66.403</eastBoundLongitude>
-          <southBoundLatitude>-32.75225</southBoundLatitude>
-          <northBoundLatitude>-28.20375</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.78725" miny="-32.75225" maxx="-66.403" maxy="-28.20375"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.75225" miny="-70.78725" maxx="-28.20375" maxy="-66.403"/>
-        <Style>
-          <Name>unide:Aguas_Transitions</Name>
-          <LegendURL width="154" height="260">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide%3AAguas_transicion"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide:Aguas_Transitions</Name>
-          <LegendURL width="154" height="260">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide%3AAguas_transicion&amp;style=Aguas_Transitions"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:CNA1988</Name>
-        <Title>CNA1988</Title>
-        <Abstract>Censo Nacional Agropecuario</Abstract>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNA1988</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.56959945531344</westBoundLongitude>
-          <eastBoundLongitude>-66.71708924663557</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363044</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.56959945531344" miny="-32.639263723363044" maxx="-66.71708924663557" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363044" miny="-70.56959945531344" maxx="-28.3912631456504" maxy="-66.71708924663557"/>
-        <Style>
-          <Name>polygon</Name>
-          <Title>Default Polygon</Title>
-          <Abstract>A sample style that draws a polygon</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNA1988"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:CNA2002</Name>
-        <Title>CNA2002</Title>
-        <Abstract>Censo Nacional Agropecuario 2002</Abstract>
-        <KeywordList>
-          <Keyword>CNA2002</Keyword>
-          <Keyword>features</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.56959945531344</westBoundLongitude>
-          <eastBoundLongitude>-66.71708924663557</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363044</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.56959945531344" miny="-32.639263723363044" maxx="-66.71708924663557" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363044" miny="-70.56959945531344" maxx="-28.3912631456504" maxy="-66.71708924663557"/>
-        <Style>
-          <Name>polygon</Name>
-          <Title>Default Polygon</Title>
-          <Abstract>A sample style that draws a polygon</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNA2002"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:CNA2008</Name>
-        <Title>CNA2008</Title>
-        <Abstract>Censo Nacional Agropecuario 2008</Abstract>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNA2008</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.56959945531344</westBoundLongitude>
-          <eastBoundLongitude>-66.71708924663557</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363044</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.56959945531344" miny="-32.639263723363044" maxx="-66.71708924663557" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363044" miny="-70.56959945531344" maxx="-28.3912631456504" maxy="-66.71708924663557"/>
-        <Style>
-          <Name>polygon</Name>
-          <Title>Default Polygon</Title>
-          <Abstract>A sample style that draws a polygon</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNA2008"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:CNA2018</Name>
-        <Title>CNA2018</Title>
-        <Abstract>Censo Nacional Agropecuario 20018</Abstract>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNA2018</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.56959945531344</westBoundLongitude>
-          <eastBoundLongitude>-66.71708924663557</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363044</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.56959945531344" miny="-32.639263723363044" maxx="-66.71708924663557" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363044" miny="-70.56959945531344" maxx="-28.3912631456504" maxy="-66.71708924663557"/>
-        <Style>
-          <Name>polygon</Name>
-          <Title>Default Polygon</Title>
-          <Abstract>A sample style that draws a polygon</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNA2018"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:CNPHyV2022 Definitivo</Name>
-        <Title>CNPHyV2022 Definitivo</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV2022 Definitivo</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5696029663086</westBoundLongitude>
-          <eastBoundLongitude>-66.71708679199219</eastBoundLongitude>
-          <southBoundLatitude>-32.63926696777344</southBoundLatitude>
-          <northBoundLatitude>-28.39126205444336</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5696029663086" miny="-32.63926696777344" maxx="-66.71708679199219" maxy="-28.39126205444336"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.63926696777344" miny="-70.5696029663086" maxx="-28.39126205444336" maxy="-66.71708679199219"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_2022_definitivo</Name>
-          <LegendURL width="125" height="100">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNPHyV2022%20Definitivo"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_2022_definitivo</Name>
-          <LegendURL width="125" height="100">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACNPHyV2022%20Definitivo&amp;style=stl_censo_2022_definitivo"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>UNIDE_Hidraulica:Canales_Hidraulica</Name>
-        <Title>Canales Hidraulica</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>vw_hid_canales_geo</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.5903942711631</westBoundLongitude>
-          <eastBoundLongitude>-67.4124480134453</eastBoundLongitude>
-          <southBoundLatitude>-32.1130455677088</southBoundLatitude>
-          <northBoundLatitude>-30.0740421288627</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.5903942711631" miny="-32.1130455677088" maxx="-67.4124480134453" maxy="-30.0740421288627"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.1130455677088" miny="-69.5903942711631" maxx="-30.0740421288627" maxy="-67.4124480134453"/>
-        <Style>
-          <Name>UNIDE_Hidraulica:stl_dh_canales_n01</Name>
-          <LegendURL width="142" height="340">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=UNIDE_Hidraulica%3ACanales_Hidraulica"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>line</Name>
-          <Title>Default Line</Title>
-          <Abstract>A sample style that draws a line</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=UNIDE_Hidraulica%3ACanales_Hidraulica&amp;style=line"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>UNIDE_Hidraulica:stl_dh_canales_n01</Name>
-          <LegendURL width="142" height="340">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=UNIDE_Hidraulica%3ACanales_Hidraulica&amp;style=stl_dh_canales_n01"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1914</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1914</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1914</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1914</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201914"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1914</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201914&amp;style=stl_censo_1914"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1947</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1947</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1947</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1947</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201947"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1947</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201947&amp;style=stl_censo_1947"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1960</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1960</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1960</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1960</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201960"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1960</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201960&amp;style=stl_censo_1960"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1970</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1970</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1970</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5696029663086</westBoundLongitude>
-          <eastBoundLongitude>-66.71708679199219</eastBoundLongitude>
-          <southBoundLatitude>-32.63926696777344</southBoundLatitude>
-          <northBoundLatitude>-28.39126205444336</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5696029663086" miny="-32.63926696777344" maxx="-66.71708679199219" maxy="-28.39126205444336"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.63926696777344" miny="-70.5696029663086" maxx="-28.39126205444336" maxy="-66.71708679199219"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1970</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201970"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1970</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201970&amp;style=stl_censo_1970"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1980</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1980</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1980</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1980</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201980"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1980</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201980&amp;style=stl_censo_1980"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 1991</Name>
-        <Title>Censo Nac Poblacion y Vivienda 1991</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV1991</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_1991</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201991"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_1991</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%201991&amp;style=stl_censo_1991"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 2001</Name>
-        <Title>Censo Nac Poblacion y Vivienda 2001</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV2001</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_2001</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%202001"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_2001</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%202001&amp;style=stl_censo_2001"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:Censo Nac Poblacion y Vivienda 2010</Name>
-        <Title>Censo Nac Poblacion y Vivienda 2010</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>CNPHyV2010</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5695994553134</westBoundLongitude>
-          <eastBoundLongitude>-66.7170892466356</eastBoundLongitude>
-          <southBoundLatitude>-32.639263723363</southBoundLatitude>
-          <northBoundLatitude>-28.3912631456504</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5695994553134" miny="-32.639263723363" maxx="-66.7170892466356" maxy="-28.3912631456504"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.639263723363" miny="-70.5695994553134" maxx="-28.3912631456504" maxy="-66.7170892466356"/>
-        <Style>
-          <Name>unide_iiee:stl_censo_2010</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%202010"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide_iiee:stl_censo_2010</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3ACenso%20Nac%20Poblacion%20y%20Vivienda%202010&amp;style=stl_censo_2010"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:Cuenca_Jachal_POSGAR</Name>
+        <Name>unide_observ_ambiental_old:Cuenca_Jachal_POSGAR</Name>
         <Title>Cuenca_Jachal_POSGAR</Title>
         <Abstract/>
         <KeywordList>
@@ -6794,19 +6306,19 @@
           <Name>unide_observ_ambiental:Cuenca Jachal Posgar</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ACuenca_Jachal_POSGAR"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ACuenca_Jachal_POSGAR"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Cuenca Jachal Posgar</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ACuenca_Jachal_POSGAR&amp;style=Cuenca%20Jachal%20Posgar"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ACuenca_Jachal_POSGAR&amp;style=Cuenca%20Jachal%20Posgar"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:Cuencas Andinas SJ</Name>
+        <Name>unide_observ_ambiental_old:Cuencas Andinas SJ</Name>
         <Title>Cuencas Andinas SJ</Title>
         <Abstract/>
         <KeywordList>
@@ -6827,40 +6339,7 @@
           <Name>unide_observ_ambiental_old:stl_Cuenca_Andina_SJ</Name>
           <LegendURL width="423" height="440">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ACuencas%20Andinas%20SJ"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide-dre:Cuerpos_de_Agua_Diques_4326</Name>
-        <Title>Cuerpos_de_Agua_Diques_4326</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>Cuerpos_de_Agua_Diques_4326</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.1048957450136</westBoundLongitude>
-          <eastBoundLongitude>-68.6472059461706</eastBoundLongitude>
-          <southBoundLatitude>-31.5367069747159</southBoundLatitude>
-          <northBoundLatitude>-30.1628900548755</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.1048957450136" miny="-31.5367069747159" maxx="-68.6472059461706" maxy="-30.1628900548755"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.5367069747159" miny="-69.1048957450136" maxx="-30.1628900548755" maxy="-68.6472059461706"/>
-        <Style>
-          <Name>unide-dre:Estilo_cuerpos_de_agua</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3ACuerpos_de_Agua_Diques_4326"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>unide-dre:Estilo_cuerpos_de_agua</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3ACuerpos_de_Agua_Diques_4326&amp;style=Estilo_cuerpos_de_agua"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ACuencas%20Andinas%20SJ"/>
           </LegendURL>
         </Style>
       </Layer>
@@ -6920,41 +6399,7 @@
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide:Extencion_max_Agua</Name>
-        <Title>Extencion_Maxima_Agua_1984-2021 Fuente_EC JRC/Google</Title>
-        <Abstract>Nivel máximo de aguas superficiales registrado por sensores satelitales, procesado y publicado en el programa Copernucus, Comisión Europea.</Abstract>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>Extencion_max_Agua</Keyword>
-          <Keyword>Nivel maximo Agua superficial</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.7875</westBoundLongitude>
-          <eastBoundLongitude>-66.403</eastBoundLongitude>
-          <southBoundLatitude>-32.75225</southBoundLatitude>
-          <northBoundLatitude>-28.2035</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.7875" miny="-32.75225" maxx="-66.403" maxy="-28.2035"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.75225" miny="-70.7875" maxx="-28.2035" maxy="-66.403"/>
-        <Style>
-          <Name>UNIDE_Externo:Estilo_extent</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide%3AExtencion_max_Agua"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>UNIDE_Externo:Estilo_extent</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide%3AExtencion_max_Agua&amp;style=Estilo_extent"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:Glaciares_Jachal2015-POSGAR</Name>
+        <Name>unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR</Name>
         <Title>Glaciares_Jachal2015-POSGAR</Title>
         <Abstract/>
         <KeywordList>
@@ -6977,7 +6422,7 @@
           <Abstract>A sample style that draws a polygon</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3AGlaciares_Jachal2015-POSGAR"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3AGlaciares_Jachal2015-POSGAR"/>
           </LegendURL>
         </Style>
       </Layer>
@@ -7225,44 +6670,7 @@
         <MaxScaleDenominator>500000.0</MaxScaleDenominator>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide-dre:Presas Administradas por la DRE</Name>
-        <Title>Presas_4326</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>Presas_4326</Keyword>
-          <Keyword>features</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.0633555600467</westBoundLongitude>
-          <eastBoundLongitude>-68.649799986351</eastBoundLongitude>
-          <southBoundLatitude>-31.5196518092271</southBoundLatitude>
-          <northBoundLatitude>-30.1924156641417</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.0633555600467" miny="-31.5196518092271" maxx="-68.649799986351" maxy="-30.1924156641417"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.5196518092271" miny="-69.0633555600467" maxx="-30.1924156641417" maxy="-68.649799986351"/>
-        <Style>
-          <Name>point</Name>
-          <Title>Default Point</Title>
-          <Abstract>A sample style that draws a point</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3APresas%20Administradas%20por%20la%20DRE"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>point</Name>
-          <Title>Default Point</Title>
-          <Abstract>A sample style that draws a point</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3APresas%20Administradas%20por%20la%20DRE&amp;style=point"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:Red de drenaje CJ</Name>
+        <Name>unide_observ_ambiental_old:Red de drenaje CJ</Name>
         <Title>Red de drenaje CJ</Title>
         <Abstract/>
         <KeywordList>
@@ -7283,46 +6691,19 @@
           <Name>unide_observ_ambiental:Red de Drenaje Jachal</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ARed%20de%20drenaje%20CJ"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ARed%20de%20drenaje%20CJ"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Red de Drenaje Jachal</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ARed%20de%20drenaje%20CJ&amp;style=Red%20de%20Drenaje%20Jachal"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ARed%20de%20drenaje%20CJ&amp;style=Red%20de%20Drenaje%20Jachal"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide:Rios_San_Juan</Name>
-        <Title>Rios_San_Juan</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>sjuan_rios</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-70.5561218261719</westBoundLongitude>
-          <eastBoundLongitude>-66.7578735351562</eastBoundLongitude>
-          <southBoundLatitude>-32.601375579834</southBoundLatitude>
-          <northBoundLatitude>-28.3848075866699</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-70.5561218261719" miny="-32.601375579834" maxx="-66.7578735351562" maxy="-28.3848075866699"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.601375579834" miny="-70.5561218261719" maxx="-28.3848075866699" maxy="-66.7578735351562"/>
-        <Style>
-          <Name>unide:stl_sjuanrios</Name>
-          <LegendURL width="92" height="100">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide%3ARios_San_Juan"/>
-          </LegendURL>
-        </Style>
-        <MaxScaleDenominator>4000000.0</MaxScaleDenominator>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:SJ_2015_OTBN</Name>
+        <Name>unide_observ_ambiental_old:SJ_2015_OTBN</Name>
         <Title>SJ_2015_OTBN</Title>
         <Abstract/>
         <KeywordList>
@@ -7343,7 +6724,7 @@
           <Name>unide_observ_ambiental:stl_SJ_2015_OTBN</Name>
           <LegendURL width="70" height="60">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3ASJ_2015_OTBN"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3ASJ_2015_OTBN"/>
           </LegendURL>
         </Style>
       </Layer>
@@ -7434,7 +6815,7 @@
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:Vegas Altoandinas San Juan</Name>
+        <Name>unide_observ_ambiental_old:Vegas Altoandinas San Juan</Name>
         <Title>Vegas Altoandinas San Juan</Title>
         <Abstract/>
         <KeywordList>
@@ -7455,14 +6836,14 @@
           <Name>unide_observ_ambiental:estilo_vegas_observ</Name>
           <LegendURL width="201" height="100">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3AVegas%20Altoandinas%20San%20Juan"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3AVegas%20Altoandinas%20San%20Juan"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:estilo_vegas_observ</Name>
           <LegendURL width="201" height="100">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3AVegas%20Altoandinas%20San%20Juan&amp;style=estilo_vegas_observ"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3AVegas%20Altoandinas%20San%20Juan&amp;style=estilo_vegas_observ"/>
           </LegendURL>
         </Style>
       </Layer>
@@ -7499,79 +6880,7 @@
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>UNIDE_Hidraulica:dh_obras_de_arte</Name>
-        <Title>dh_obras_de_arte</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>dh_obras_de_arte</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.5193786621094</westBoundLongitude>
-          <eastBoundLongitude>-68.2146530151367</eastBoundLongitude>
-          <southBoundLatitude>-32.1136245727539</southBoundLatitude>
-          <northBoundLatitude>-29.9065170288086</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.5193786621094" miny="-32.1136245727539" maxx="-68.2146530151367" maxy="-29.9065170288086"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.1136245727539" miny="-69.5193786621094" maxx="-29.9065170288086" maxy="-68.2146530151367"/>
-        <Style>
-          <Name>UNIDE_Hidraulica:stl_obras_de_arte</Name>
-          <Title>Estilo de punto personalizado</Title>
-          <LegendURL width="71" height="40">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=UNIDE_Hidraulica%3Adh_obras_de_arte"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>UNIDE_Hidraulica:stl_obras_de_arte</Name>
-          <Title>Estilo de punto personalizado</Title>
-          <LegendURL width="71" height="40">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=UNIDE_Hidraulica%3Adh_obras_de_arte&amp;style=stl_obras_de_arte"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_iiee:ejes_indec151</Name>
-        <Title>ejes_calles_iiee</Title>
-        <Abstract/>
-        <KeywordList>
-          <Keyword>features</Keyword>
-          <Keyword>ejes_indec151</Keyword>
-        </KeywordList>
-        <CRS>EPSG:4326</CRS>
-        <CRS>CRS:84</CRS>
-        <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.8152542114258</westBoundLongitude>
-          <eastBoundLongitude>-67.2924728393555</eastBoundLongitude>
-          <southBoundLatitude>-32.3322639465332</southBoundLatitude>
-          <northBoundLatitude>-29.6684818267822</northBoundLatitude>
-        </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.8152542114258" miny="-32.3322639465332" maxx="-67.2924728393555" maxy="-29.6684818267822"/>
-        <BoundingBox CRS="EPSG:4326" minx="-32.3322639465332" miny="-69.8152542114258" maxx="-29.6684818267822" maxy="-67.2924728393555"/>
-        <Style>
-          <Name>line</Name>
-          <Title>Default Line</Title>
-          <Abstract>A sample style that draws a line</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3Aejes_indec151"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>line</Name>
-          <Title>Default Line</Title>
-          <Abstract>A sample style that draws a line</Abstract>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_iiee%3Aejes_indec151&amp;style=line"/>
-          </LegendURL>
-        </Style>
-      </Layer>
-      <Layer queryable="1" opaque="0">
-        <Name>unide_observ_ambiental:glaciares_jachal</Name>
+        <Name>unide_observ_ambiental_old:glaciares_jachal</Name>
         <Title>glaciares_jachal</Title>
         <Abstract/>
         <KeywordList>
@@ -7594,14 +6903,14 @@
           <Abstract>A sample style that draws a polygon</Abstract>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3Aglaciares_jachal"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3Aglaciares_jachal"/>
           </LegendURL>
         </Style>
         <Style>
           <Name>unide_observ_ambiental:Glaciares_Jachal_Posgar</Name>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental%3Aglaciares_jachal&amp;style=Glaciares_Jachal_Posgar"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_observ_ambiental_old%3Aglaciares_jachal&amp;style=Glaciares_Jachal_Posgar"/>
           </LegendURL>
         </Style>
       </Layer>
@@ -7840,172 +7149,435 @@
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>curso:gra_arbolado</Name>
-        <Title>gra_arbolado</Title>
+        <Name>unide_catastro:vw_GraBarrios_Geo</Name>
+        <Title>vw_GraBarrios_Geo</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_arbolado</Keyword>
+          <Keyword>vw_GraBarrios_Geo</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-68.60401916503906</westBoundLongitude>
-          <eastBoundLongitude>-68.59303283691406</eastBoundLongitude>
-          <southBoundLatitude>-31.511491775512695</southBoundLatitude>
-          <northBoundLatitude>-31.502349853515625</northBoundLatitude>
+          <westBoundLongitude>-69.49189201959747</westBoundLongitude>
+          <eastBoundLongitude>-67.27778655531192</eastBoundLongitude>
+          <southBoundLatitude>-32.223200559064885</southBoundLatitude>
+          <northBoundLatitude>-30.05664518258128</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-68.60401916503906" miny="-31.511491775512695" maxx="-68.59303283691406" maxy="-31.502349853515625"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.511491775512695" miny="-68.60401916503906" maxx="-31.502349853515625" maxy="-68.59303283691406"/>
+        <BoundingBox CRS="CRS:84" minx="-69.49189201959747" miny="-32.223200559064885" maxx="-67.27778655531192" maxy="-30.05664518258128"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.223200559064885" miny="-69.49189201959747" maxx="-30.05664518258128" maxy="-67.27778655531192"/>
         <Style>
-          <Name>curso:arbolado_curso</Name>
-          <LegendURL width="20" height="20">
+          <Name>unide_catastro:stl_sjuanbarriosdgc</Name>
+          <LegendURL width="137" height="280">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=curso%3Agra_arbolado"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraBarrios_Geo"/>
           </LegendURL>
         </Style>
         <Style>
-          <Name>curso:arbolado_curso</Name>
+          <Name>unide_catastro:stl_sjuanbarriosdgc</Name>
+          <LegendURL width="137" height="280">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraBarrios_Geo&amp;style=stl_sjuanbarriosdgc"/>
+          </LegendURL>
+        </Style>
+        <MinScaleDenominator>1000.0</MinScaleDenominator>
+        <MaxScaleDenominator>100000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>unide_catastro:vw_GraCultivos_Geo</Name>
+        <Title>vw_GraCultivos_Geo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_GraCultivos_Geo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.6556574692074</westBoundLongitude>
+          <eastBoundLongitude>-67.21741836936147</eastBoundLongitude>
+          <southBoundLatitude>-32.33640104928952</southBoundLatitude>
+          <northBoundLatitude>-29.74087662737232</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.6556574692074" miny="-32.33640104928952" maxx="-67.21741836936147" maxy="-29.74087662737232"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.33640104928952" miny="-69.6556574692074" maxx="-29.74087662737232" maxy="-67.21741836936147"/>
+        <Style>
+          <Name>unide_catastro:stl_sjuantipocultivosdgc</Name>
+          <LegendURL width="115" height="460">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraCultivos_Geo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>unide_catastro:stl_sjuantipocultivosdgc</Name>
+          <LegendURL width="115" height="460">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraCultivos_Geo&amp;style=stl_sjuantipocultivosdgc"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="0" opaque="0">
+        <Name>unide_catastro:vw_GraEdificaciones_Geo</Name>
+        <Title>vw_GraEdificaciones_Geo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_GraEdificaciones_Geo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>2450980.8778</westBoundLongitude>
+          <eastBoundLongitude>2674759.248115409</eastBoundLongitude>
+          <southBoundLatitude>6428805.507310571</southBoundLatitude>
+          <northBoundLatitude>6715340.529657361</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="2450980.8778" miny="6428805.507310571" maxx="2674759.248115409" maxy="6715340.529657361"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.2823123844615" miny="-69.5203501465869" maxx="-29.685592010935423" maxy="-67.14527189825553"/>
+        <Style>
+          <Name>unide_catastro:stl_dgcedificaciones</Name>
+          <Title>A teal polygon style</Title>
           <LegendURL width="20" height="20">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=curso%3Agra_arbolado&amp;style=arbolado_curso"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraEdificaciones_Geo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>unide_catastro:stl_dgcedificaciones</Name>
+          <Title>A teal polygon style</Title>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraEdificaciones_Geo&amp;style=stl_dgcedificaciones"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>5000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="1">
+        <Name>unide_catastro:vw_GraEjes_Geo</Name>
+        <Title>Calles Catastro</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_GraEjes_Geo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.9682779793373</westBoundLongitude>
+          <eastBoundLongitude>-66.92820100376213</eastBoundLongitude>
+          <southBoundLatitude>-32.27175194255987</southBoundLatitude>
+          <northBoundLatitude>-29.35657213452744</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.9682779793373" miny="-32.27175194255987" maxx="-66.92820100376213" maxy="-29.35657213452744"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.27175194255987" miny="-69.9682779793373" maxx="-29.35657213452744" maxy="-66.92820100376213"/>
+        <Style>
+          <Name>unide_catastro:stl_ejes_catastro</Name>
+          <LegendURL width="22" height="60">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraEjes_Geo"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>75000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>unide_catastro:vw_GraEnsanches_Geo</Name>
+        <Title>vw_GraEnsanches_Geo</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_GraEnsanches_Geo</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5344</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.49371726104812</westBoundLongitude>
+          <eastBoundLongitude>-67.23988103317939</eastBoundLongitude>
+          <southBoundLatitude>-32.14410949698325</southBoundLatitude>
+          <northBoundLatitude>-30.041719399219502</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.49371726104812" miny="-32.14410949698325" maxx="-67.23988103317939" maxy="-30.041719399219502"/>
+        <BoundingBox CRS="EPSG:5344" minx="6444131.135179822" miny="2453419.489511511" maxx="6675977.854110631" maxy="2666092.0837484966"/>
+        <Style>
+          <Name>unide_catastro:estilo_ensanche</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraEnsanches_Geo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>unide_catastro:estilo_ensanche</Name>
+          <LegendURL width="20" height="20">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraEnsanches_Geo&amp;style=estilo_ensanche"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>curso:gra_manzanero</Name>
-        <Title>gra_manzanero</Title>
+        <Name>unide_catastro:vw_GraReservas_Geo</Name>
+        <Title>Zonas Protegidas</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_manzanero</Keyword>
+          <Keyword>vw_GraReservas_Geo</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-68.60344696044922</westBoundLongitude>
-          <eastBoundLongitude>-68.5899429321289</eastBoundLongitude>
-          <southBoundLatitude>-31.51105499267578</southBoundLatitude>
-          <northBoundLatitude>-31.503021240234375</northBoundLatitude>
+          <westBoundLongitude>2400727.858182645</westBoundLongitude>
+          <eastBoundLongitude>2682012.3999496703</eastBoundLongitude>
+          <southBoundLatitude>6418636.438572831</southBoundLatitude>
+          <northBoundLatitude>6859999.438572832</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-68.60344696044922" miny="-31.51105499267578" maxx="-68.5899429321289" maxy="-31.503021240234375"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.51105499267578" miny="-68.60344696044922" maxx="-31.503021240234375" maxy="-68.5899429321289"/>
+        <BoundingBox CRS="CRS:84" minx="2400727.858182645" miny="6418636.438572831" maxx="2682012.3999496703" maxy="6859999.438572832"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.37402217265986" miny="-70.05480304626141" maxx="-28.38008861906304" maxy="-67.06638397130159"/>
         <Style>
-          <Name>polygon</Name>
-          <Title>Default Polygon</Title>
-          <Abstract>A sample style that draws a polygon</Abstract>
-          <LegendURL width="20" height="20">
+          <Name>unide_catastro:stl_zonas_protegidas</Name>
+          <LegendURL width="103" height="40">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=curso%3Agra_manzanero"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraReservas_Geo"/>
+          </LegendURL>
+        </Style>
+        <Style>
+          <Name>unide_catastro:stl_zonas_protegidas</Name>
+          <LegendURL width="103" height="40">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_catastro%3Avw_GraReservas_Geo&amp;style=stl_zonas_protegidas"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>curso:gra_mirador</Name>
-        <Title>gra_mirador</Title>
+        <Name>unide_transporte:vw_circuito</Name>
+        <Title>vw_circuito</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_mirador</Keyword>
+          <Keyword>vw_circuito</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-69.45971729885446</westBoundLongitude>
-          <eastBoundLongitude>-67.8769574965548</eastBoundLongitude>
-          <southBoundLatitude>-31.818520360677482</southBoundLatitude>
-          <northBoundLatitude>-30.074680898064663</northBoundLatitude>
+          <westBoundLongitude>-69.50005</westBoundLongitude>
+          <eastBoundLongitude>-67.21061</eastBoundLongitude>
+          <southBoundLatitude>-32.21723</southBoundLatitude>
+          <northBoundLatitude>-30.05514</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-69.45971729885446" miny="-31.818520360677482" maxx="-67.8769574965548" maxy="-30.074680898064663"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.818520360677482" miny="-69.45971729885446" maxx="-30.074680898064663" maxy="-67.8769574965548"/>
+        <BoundingBox CRS="CRS:84" minx="-69.50005" miny="-32.21723" maxx="-67.21061" maxy="-30.05514"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.21723" miny="-69.50005" maxx="-30.05514" maxy="-67.21061"/>
         <Style>
-          <Name>curso:miradores_curso</Name>
-          <LegendURL width="20" height="20">
+          <Name>unide_transporte:stl_RedTulumCircuito</Name>
+          <LegendURL width="269" height="120">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=curso%3Agra_mirador"/>
-          </LegendURL>
-        </Style>
-        <Style>
-          <Name>curso:miradores_curso</Name>
-          <LegendURL width="20" height="20">
-            <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=curso%3Agra_mirador&amp;style=miradores_curso"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_circuito"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide-dre:gra_oe_rna014_avcirc</Name>
-        <Title>gra_oe_rna014_avcirc</Title>
+        <Name>unide_transporte:vw_corredores</Name>
+        <Title>vw_corredores</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_oe_rna014_avcirc</Keyword>
+          <Keyword>vw_corredores</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-68.5587615966797</westBoundLongitude>
-          <eastBoundLongitude>-68.468017578125</eastBoundLongitude>
-          <southBoundLatitude>-31.5961780548096</southBoundLatitude>
-          <northBoundLatitude>-31.5140151977539</northBoundLatitude>
+          <westBoundLongitude>-68.63151</westBoundLongitude>
+          <eastBoundLongitude>-68.41714</eastBoundLongitude>
+          <southBoundLatitude>-31.56914</southBoundLatitude>
+          <northBoundLatitude>-31.50769</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-68.5587615966797" miny="-31.5961780548096" maxx="-68.468017578125" maxy="-31.5140151977539"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.5961780548096" miny="-68.5587615966797" maxx="-31.5140151977539" maxy="-68.468017578125"/>
+        <BoundingBox CRS="CRS:84" minx="-68.63151" miny="-31.56914" maxx="-68.41714" maxy="-31.50769"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.56914" miny="-68.63151" maxx="-31.50769" maxy="-68.41714"/>
         <Style>
-          <Name>point</Name>
-          <Title>Default Point</Title>
-          <Abstract>A sample style that draws a point</Abstract>
-          <LegendURL width="20" height="20">
+          <Name>unide_transporte:stl_RedTulumCorredor</Name>
+          <LegendURL width="68" height="100">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3Agra_oe_rna014_avcirc"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_corredores"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>unide-dre:gra_oe_rp_270_caucete_r</Name>
-        <Title>gra_oe_rp_270_caucete_r</Title>
+        <Name>unide_transporte:vw_interurbano</Name>
+        <Title>vw_interurbano</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_oe_rp_270_caucete_r</Keyword>
+          <Keyword>vw_interurbano</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-68.3006210327148</westBoundLongitude>
-          <eastBoundLongitude>-68.2927627563477</eastBoundLongitude>
-          <southBoundLatitude>-31.7027149200439</southBoundLatitude>
-          <northBoundLatitude>-31.669454574585</northBoundLatitude>
+          <westBoundLongitude>-68.58199</westBoundLongitude>
+          <eastBoundLongitude>-68.26381</eastBoundLongitude>
+          <southBoundLatitude>-31.67004</southBoundLatitude>
+          <northBoundLatitude>-31.41477</northBoundLatitude>
         </EX_GeographicBoundingBox>
-        <BoundingBox CRS="CRS:84" minx="-68.3006210327148" miny="-31.7027149200439" maxx="-68.2927627563477" maxy="-31.669454574585"/>
-        <BoundingBox CRS="EPSG:4326" minx="-31.7027149200439" miny="-68.3006210327148" maxx="-31.669454574585" maxy="-68.2927627563477"/>
+        <BoundingBox CRS="CRS:84" minx="-68.58199" miny="-31.67004" maxx="-68.26381" maxy="-31.41477"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.67004" miny="-68.58199" maxx="-31.41477" maxy="-68.26381"/>
         <Style>
-          <Name>point</Name>
-          <Title>Default Point</Title>
-          <Abstract>A sample style that draws a point</Abstract>
-          <LegendURL width="20" height="20">
+          <Name>unide_transporte:stl_RedTulumInterurbano</Name>
+          <LegendURL width="66" height="60">
             <Format>image/png</Format>
-            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide-dre%3Agra_oe_rp_270_caucete_r"/>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_interurbano"/>
           </LegendURL>
         </Style>
       </Layer>
       <Layer queryable="1" opaque="0">
-        <Name>UNIDE_Hidraulica:gra_pozos_RUPH_2023_IDIH</Name>
-        <Title>gra_pozos_RUPH_2023_IDIH</Title>
+        <Name>unide_transporte:vw_perimetral</Name>
+        <Title>vw_perimetral</Title>
         <Abstract/>
         <KeywordList>
           <Keyword>features</Keyword>
-          <Keyword>gra_pozos_RUPH_2023_IDIH</Keyword>
+          <Keyword>vw_perimetral</Keyword>
         </KeywordList>
         <CRS>EPSG:4326</CRS>
         <CRS>CRS:84</CRS>
         <EX_GeographicBoundingBox>
-          <westBoundLongitude>-68.85818481445312</westBoundLongitude>
-          <eastBoundLongitude>-68.0710220336914</eastBoundLongitude>
-          <<?xml version="1.0" encoding="UTF-8"?><ServiceExceptionReport version="1.3.0" xmlns="http://www.opengis.net/ogc" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.opengis.net/ogc https://unide.sanjuan.gob.ar/geoserver/schemas/wms/1.3.0/exceptions_1_3_0.xsd">   <ServiceException>
-      javax.xml.transform.TransformerException: org.geoserver.platform.ServiceException: Error occurred trying to write out metadata for layer: vw_GraPosesiones_Geo
-org.geoserver.platform.ServiceException: Error occurred trying to write out metadata for layer: vw_GraPosesiones_Geo
-Error occurred trying to write out metadata for layer: vw_GraPosesiones_Geo
-org.xml.sax.SAXParseException; lineNumber: 1; columnNumber: 1; Premature end of file.
-Premature end of file.
-</ServiceException></ServiceExceptionReport>
+          <westBoundLongitude>-68.62009</westBoundLongitude>
+          <eastBoundLongitude>-68.50408</eastBoundLongitude>
+          <southBoundLatitude>-31.58791</southBoundLatitude>
+          <northBoundLatitude>-31.49172</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.62009" miny="-31.58791" maxx="-68.50408" maxy="-31.49172"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.58791" miny="-68.62009" maxx="-31.49172" maxy="-68.50408"/>
+        <Style>
+          <Name>unide_transporte:stl_RedTulumPerimetral</Name>
+          <LegendURL width="73" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_perimetral"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0" cascaded="1">
+        <Name>UNIDE_Mineria:vw_proyectosmineros</Name>
+        <Title>vw_proyectosmineros</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_proyectosmineros</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5344</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.58117786052267</westBoundLongitude>
+          <eastBoundLongitude>-66.83144310730334</eastBoundLongitude>
+          <southBoundLatitude>-32.45817903222178</southBoundLatitude>
+          <northBoundLatitude>-28.376323845664192</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.58117786052267" miny="-32.45817903222178" maxx="-66.83144310730334" maxy="-28.376323845664192"/>
+        <BoundingBox CRS="EPSG:5344" minx="6409267.412089545" miny="2351313.488812658" maxx="6860058.514582534" maxy="2703950.325631081"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>unide_transporte:vw_redtulumparadas</Name>
+        <Title>vw_redtulumparadas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_redtulumparadas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-69.50009</westBoundLongitude>
+          <eastBoundLongitude>-67.216324</eastBoundLongitude>
+          <southBoundLatitude>-32.217081</southBoundLatitude>
+          <northBoundLatitude>-30.055129</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-69.50009" miny="-32.217081" maxx="-67.216324" maxy="-30.055129"/>
+        <BoundingBox CRS="EPSG:4326" minx="-32.217081" miny="-69.50009" maxx="-30.055129" maxy="-67.216324"/>
+        <Style>
+          <Name>unide_transporte:stl_RedTulumParadas</Name>
+          <LegendURL width="72" height="1760">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_redtulumparadas"/>
+          </LegendURL>
+        </Style>
+        <MaxScaleDenominator>50000.0</MaxScaleDenominator>
+      </Layer>
+      <Layer queryable="1" opaque="0" cascaded="1">
+        <Name>UNIDE_Mineria:vw_servidumbres_lineas</Name>
+        <Title>vw_servidumbres_lineas</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_servidumbres_lineas</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5344</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.57011273094905</westBoundLongitude>
+          <eastBoundLongitude>-67.21676117498208</eastBoundLongitude>
+          <southBoundLatitude>-32.067720212632544</southBoundLatitude>
+          <northBoundLatitude>-28.401080561113393</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.57011273094905" miny="-32.067720212632544" maxx="-67.21676117498208" maxy="-28.401080561113393"/>
+        <BoundingBox CRS="EPSG:5344" minx="6452599.006542361" miny="2351720.483624323" maxx="6857873.64008848" maxy="2668414.7389967926"/>
+      </Layer>
+      <Layer queryable="0" opaque="0" cascaded="1">
+        <Name>UNIDE_Mineria:vw_servidumbres_poligono</Name>
+        <Title>vw_servidumbres_poligono</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_servidumbres_poligono</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5344</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.5507724864963</westBoundLongitude>
+          <eastBoundLongitude>-67.28956795325288</eastBoundLongitude>
+          <southBoundLatitude>-31.955195466868304</southBoundLatitude>
+          <northBoundLatitude>-28.39803685523032</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.5507724864963" miny="-31.955195466868304" maxx="-67.28956795325288" maxy="-28.39803685523032"/>
+        <BoundingBox CRS="EPSG:5344" minx="6465078.726984873" miny="2353368.4806497092" maxx="6858304.553074465" maxy="2661733.435589959"/>
+      </Layer>
+      <Layer queryable="1" opaque="0">
+        <Name>unide_transporte:vw_troncales</Name>
+        <Title>vw_troncales</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_troncales</Keyword>
+        </KeywordList>
+        <CRS>EPSG:4326</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-68.63255</westBoundLongitude>
+          <eastBoundLongitude>-68.4837</eastBoundLongitude>
+          <southBoundLatitude>-31.58189</southBoundLatitude>
+          <northBoundLatitude>-31.49271</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-68.63255" miny="-31.58189" maxx="-68.4837" maxy="-31.49271"/>
+        <BoundingBox CRS="EPSG:4326" minx="-31.58189" miny="-68.63255" maxx="-31.49271" maxy="-68.4837"/>
+        <Style>
+          <Name>unide_transporte:stl_RedTulumTroncal</Name>
+          <LegendURL width="108" height="80">
+            <Format>image/png</Format>
+            <OnlineResource xmlns:xlink="http://www.w3.org/1999/xlink" xlink:type="simple" xlink:href="https://unide.sanjuan.gob.ar/geoserver/ows?service=WMS&amp;request=GetLegendGraphic&amp;format=image%2Fpng&amp;width=20&amp;height=20&amp;layer=unide_transporte%3Avw_troncales"/>
+          </LegendURL>
+        </Style>
+      </Layer>
+      <Layer queryable="1" opaque="0" cascaded="1">
+        <Name>UNIDE_Mineria:vw_zonas_temporada</Name>
+        <Title>vw_zonas_temporada</Title>
+        <Abstract/>
+        <KeywordList>
+          <Keyword>features</Keyword>
+          <Keyword>vw_zonas_temporada</Keyword>
+        </KeywordList>
+        <CRS>EPSG:5344</CRS>
+        <CRS>CRS:84</CRS>
+        <EX_GeographicBoundingBox>
+          <westBoundLongitude>-70.58897371637589</westBoundLongitude>
+          <eastBoundLongitude>-66.70088257372308</eastBoundLongitude>
+          <southBoundLatitude>-32.630596318225436</southBoundLatitude>
+          <northBoundLatitude>-28.372454581863906</northBoundLatitude>
+        </EX_GeographicBoundingBox>
+        <BoundingBox CRS="CRS:84" minx="-70.58897371637589" miny="-32.630596318225436" maxx="-66.70088257372308" maxy="-28.372454581863906"/>
+        <BoundingBox CRS="EPSG:5344" minx="6390147.122157017" miny="2350865.413889563" maxx="6860276.657378744" maxy="2715824.9388563875"/>
+      </Layer>
+    </Layer>
+  </Capability>
+</WMS_Capabilities>

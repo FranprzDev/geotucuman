@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-08T18:17:12.461Z",
+  "generatedAt": "2026-11-13T00:24:24.652Z",
   "sources": {
     "geosplan": {
       "status": "preserved",
@@ -71,8 +71,8 @@
       "wmsStatus": "live"
     },
     "sanjuan": {
-      "status": "preserved",
-      "fetchedAt": "2026-11-08T14:15:33.070Z",
+      "status": "live",
+      "fetchedAt": "2026-11-13T00:24:23.220Z",
       "wmsStatus": "live"
     },
     "sanluis": {
@@ -95,37 +95,37 @@
       "fetchedAt": "2026-11-08T17:42:50.353Z"
     },
     "inta_santiago": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:08.503Z",
       "wmsStatus": "live"
     },
     "inta_catamarca": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:09.206Z",
       "wmsStatus": "live"
     },
     "inta_larioja": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:09.440Z",
       "wmsStatus": "live"
     },
     "inta_corrientes": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:10.270Z",
       "wmsStatus": "live"
     },
     "inta_santafe": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:10.942Z",
       "wmsStatus": "live"
     },
     "inta_chubut": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:11.620Z",
       "wmsStatus": "live"
     },
     "inta_lapampa": {
-      "status": "live",
+      "status": "preserved",
       "fetchedAt": "2026-11-08T18:17:12.461Z",
       "wmsStatus": "live"
     }
@@ -109087,7 +109087,7 @@
         "dgc",
         "croquisubicacion"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109114,7 +109114,7 @@
         "geoserviciozonificacion",
         "zonificación"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109123,7 +109123,7 @@
           "crs": [
             "EPSG:4326"
           ],
-          "queryable": true
+          "queryable": false
         }
       ]
     },
@@ -109148,7 +109148,7 @@
         "san",
         "juan"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109178,7 +109178,7 @@
         "san",
         "juan"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109209,7 +109209,7 @@
         "san",
         "juan"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109238,7 +109238,7 @@
         "potable",
         "cloaca"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109264,7 +109264,7 @@
         "redtulum",
         "tulum"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -109278,10 +109278,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:1b - Zona de Proyecto",
+      "id": "sanjuan:unide_observ_ambiental_old:1b - Zona de Proyecto",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:1b - Zona de Proyecto",
+      "typeName": "unide_observ_ambiental_old:1b - Zona de Proyecto",
       "title": "1b - Zona de Proyecto",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109290,15 +109290,16 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "zona",
         "proyecto"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:1b - Zona de Proyecto",
+          "typeName": "unide_observ_ambiental_old:1b - Zona de Proyecto",
           "crs": [
             "EPSG:22182",
             "CRS:84"
@@ -109308,10 +109309,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2a - Cuencas Tributarias Río San Juan",
+      "id": "sanjuan:unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2a - Cuencas Tributarias Río San Juan",
+      "typeName": "unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
       "title": "2a - Cuencas Tributarias Río San Juan",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109320,18 +109321,19 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "cuencas",
         "tributarias",
         "río",
         "san",
         "juan"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2a - Cuencas Tributarias Río San Juan",
+          "typeName": "unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109341,10 +109343,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2b - Glaciares C. Río Calingasta",
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Calingasta",
+      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
       "title": "2b - Glaciares C. Río Calingasta",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109353,16 +109355,17 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "río",
         "calingasta"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Calingasta",
+          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109372,10 +109375,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2b - Glaciares C. Río Castaño",
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Castaño",
+      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
       "title": "2b - Glaciares C. Río Castaño",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109384,16 +109387,17 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "río",
         "castaño"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Castaño",
+          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109403,10 +109407,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2b - Glaciares C. Río Los Patos Inf.",
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Los Patos Inf.",
+      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
       "title": "2b - Glaciares C. Río Los Patos Inf.",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109415,17 +109419,18 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "río",
         "patos",
         "inf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Los Patos Inf.",
+          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109435,10 +109440,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2b - Glaciares C. Río Los Patos Sup.",
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Los Patos Sup.",
+      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
       "title": "2b - Glaciares C. Río Los Patos Sup.",
       "abstract": "A sample style that draws a polygon",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109447,17 +109452,18 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "río",
         "patos",
         "sup"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2b - Glaciares C. Río Los Patos Sup.",
+          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109467,10 +109473,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:2b - Glaciares C.Río Blanco",
+      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:2b - Glaciares C.Río Blanco",
+      "typeName": "unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
       "title": "2b - Glaciares C.Río Blanco",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109479,16 +109485,17 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "río",
         "blanco"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:2b - Glaciares C.Río Blanco",
+          "typeName": "unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
           "crs": [
             "EPSG:32719",
             "CRS:84"
@@ -109498,468 +109505,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide:Aguas_transicion",
+      "id": "sanjuan:unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide:Aguas_transicion",
-      "title": "Aguas_transicion_1984-2021 Fuente_EC JRC/Google",
-      "abstract": "All data here is produced under the Copernicus Programme and is provided free of charge, without restriction of use.",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "aguas",
-        "transicion",
-        "1984",
-        "2021",
-        "fuente",
-        "jrc",
-        "google"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide:Aguas_transicion",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:CNA1988",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:CNA1988",
-      "title": "CNA1988",
-      "abstract": "Censo Nacional Agropecuario",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "cna1988"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:CNA1988",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:CNA2002",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:CNA2002",
-      "title": "CNA2002",
-      "abstract": "Censo Nacional Agropecuario 2002",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "cna2002"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:CNA2002",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:CNA2008",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:CNA2008",
-      "title": "CNA2008",
-      "abstract": "Censo Nacional Agropecuario 2008",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "cna2008"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:CNA2008",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:CNA2018",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:CNA2018",
-      "title": "CNA2018",
-      "abstract": "Censo Nacional Agropecuario 20018",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "cna2018"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:CNA2018",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:CNPHyV2022 Definitivo",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:CNPHyV2022 Definitivo",
-      "title": "CNPHyV2022 Definitivo",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "cnphyv2022",
-        "definitivo"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:CNPHyV2022 Definitivo",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:UNIDE_Hidraulica:Canales_Hidraulica",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "UNIDE_Hidraulica:Canales_Hidraulica",
-      "title": "Canales Hidraulica",
-      "abstract": "A sample style that draws a line",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "hidraulica",
-        "canales"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "UNIDE_Hidraulica:Canales_Hidraulica",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1914",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1914",
-      "title": "Censo Nac Poblacion y Vivienda 1914",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1914"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1914",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1947",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1947",
-      "title": "Censo Nac Poblacion y Vivienda 1947",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1947"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1947",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1960",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1960",
-      "title": "Censo Nac Poblacion y Vivienda 1960",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1960"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1960",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1970",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1970",
-      "title": "Censo Nac Poblacion y Vivienda 1970",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1970"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1970",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1980",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1980",
-      "title": "Censo Nac Poblacion y Vivienda 1980",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1980"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1980",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 1991",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1991",
-      "title": "Censo Nac Poblacion y Vivienda 1991",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "1991"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 1991",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 2001",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 2001",
-      "title": "Censo Nac Poblacion y Vivienda 2001",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "2001"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 2001",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:Censo Nac Poblacion y Vivienda 2010",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 2010",
-      "title": "Censo Nac Poblacion y Vivienda 2010",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "censo",
-        "nac",
-        "poblacion",
-        "vivienda",
-        "2010"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:Censo Nac Poblacion y Vivienda 2010",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental:Cuenca_Jachal_POSGAR",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental:Cuenca_Jachal_POSGAR",
+      "typeName": "unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
       "title": "Cuenca_Jachal_POSGAR",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109968,16 +109517,17 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "cuenca",
         "jachal",
         "posgar"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:Cuenca_Jachal_POSGAR",
+          "typeName": "unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
           "crs": [
             "EPSG:5344",
             "CRS:84"
@@ -109987,10 +109537,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:Cuencas Andinas SJ",
+      "id": "sanjuan:unide_observ_ambiental_old:Cuencas Andinas SJ",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:Cuencas Andinas SJ",
+      "typeName": "unide_observ_ambiental_old:Cuencas Andinas SJ",
       "title": "Cuencas Andinas SJ",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -109999,46 +109549,16 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "cuencas",
         "andinas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:Cuencas Andinas SJ",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide-dre:Cuerpos_de_Agua_Diques_4326",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide-dre:Cuerpos_de_Agua_Diques_4326",
-      "title": "Cuerpos_de_Agua_Diques_4326",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "dre",
-        "cuerpos",
-        "agua",
-        "diques",
-        "4326"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide-dre:Cuerpos_de_Agua_Diques_4326",
+          "typeName": "unide_observ_ambiental_old:Cuencas Andinas SJ",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -110062,7 +109582,7 @@
         "espacios",
         "verdes"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110091,7 +109611,7 @@
         "establecimientos",
         "educativos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110106,45 +109626,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide:Extencion_max_Agua",
+      "id": "sanjuan:unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide:Extencion_max_Agua",
-      "title": "Extencion_Maxima_Agua_1984-2021 Fuente_EC JRC/Google",
-      "abstract": "Nivel máximo de aguas superficiales registrado por sensores satelitales, procesado y publicado en el programa Copernucus, Comisión Europea.",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "extencion",
-        "max",
-        "agua",
-        "maxima",
-        "1984",
-        "2021",
-        "fuente",
-        "jrc",
-        "google"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide:Extencion_max_Agua",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental:Glaciares_Jachal2015-POSGAR",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental:Glaciares_Jachal2015-POSGAR",
+      "typeName": "unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
       "title": "Glaciares_Jachal2015-POSGAR",
       "abstract": "A sample style that draws a polygon",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -110153,16 +109638,17 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "jachal2015",
         "posgar"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:Glaciares_Jachal2015-POSGAR",
+          "typeName": "unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
           "crs": [
             "EPSG:5344",
             "CRS:84"
@@ -110186,7 +109672,7 @@
         "limites",
         "depatamentales"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110216,7 +109702,7 @@
         "areas",
         "criticassocioeconomico"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110247,7 +109733,7 @@
         "vacante",
         "amsj22"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110276,7 +109762,7 @@
         "plamsj23",
         "unidadesterritorialesperiurb"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110305,7 +109791,7 @@
         "potcal",
         "zonificacion"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110336,7 +109822,7 @@
         "deformaciones",
         "cuaternarias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110365,7 +109851,7 @@
         "parcelas",
         "geoportal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110380,41 +109866,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide-dre:Presas Administradas por la DRE",
+      "id": "sanjuan:unide_observ_ambiental_old:Red de drenaje CJ",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide-dre:Presas Administradas por la DRE",
-      "title": "Presas_4326",
-      "abstract": "A sample style that draws a point",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "dre",
-        "presas",
-        "administradas",
-        "por",
-        "4326"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide-dre:Presas Administradas por la DRE",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental:Red de drenaje CJ",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental:Red de drenaje CJ",
+      "typeName": "unide_observ_ambiental_old:Red de drenaje CJ",
       "title": "Red de drenaje CJ",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -110423,15 +109878,16 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "red",
         "drenaje"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:Red de drenaje CJ",
+          "typeName": "unide_observ_ambiental_old:Red de drenaje CJ",
           "crs": [
             "EPSG:5344",
             "CRS:84"
@@ -110441,39 +109897,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide:Rios_San_Juan",
+      "id": "sanjuan:unide_observ_ambiental_old:SJ_2015_OTBN",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide:Rios_San_Juan",
-      "title": "Rios_San_Juan",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "rios",
-        "san",
-        "juan"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide:Rios_San_Juan",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental:SJ_2015_OTBN",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental:SJ_2015_OTBN",
+      "typeName": "unide_observ_ambiental_old:SJ_2015_OTBN",
       "title": "SJ_2015_OTBN",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -110482,15 +109909,16 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "2015",
         "otbn"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:SJ_2015_OTBN",
+          "typeName": "unide_observ_ambiental_old:SJ_2015_OTBN",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -110515,7 +109943,7 @@
         "redaguaosse",
         "redaguapotableosse"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110544,7 +109972,7 @@
         "sanjuan",
         "redcloacaosse"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110573,7 +110001,7 @@
         "sintesisestructural",
         "areametropolitana"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110588,10 +110016,10 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental:Vegas Altoandinas San Juan",
+      "id": "sanjuan:unide_observ_ambiental_old:Vegas Altoandinas San Juan",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide_observ_ambiental:Vegas Altoandinas San Juan",
+      "typeName": "unide_observ_ambiental_old:Vegas Altoandinas San Juan",
       "title": "Vegas Altoandinas San Juan",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -110600,17 +110028,18 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "vegas",
         "altoandinas",
         "san",
         "juan"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:Vegas Altoandinas San Juan",
+          "typeName": "unide_observ_ambiental_old:Vegas Altoandinas San Juan",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -110635,7 +110064,7 @@
         "residuos",
         "sólidos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110650,69 +110079,10 @@
       ]
     },
     {
-      "id": "sanjuan:UNIDE_Hidraulica:dh_obras_de_arte",
+      "id": "sanjuan:unide_observ_ambiental_old:glaciares_jachal",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "UNIDE_Hidraulica:dh_obras_de_arte",
-      "title": "dh_obras_de_arte",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "hidraulica",
-        "obras",
-        "arte"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "UNIDE_Hidraulica:dh_obras_de_arte",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_iiee:ejes_indec151",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_iiee:ejes_indec151",
-      "title": "ejes_calles_iiee",
-      "abstract": "A sample style that draws a line",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "iiee",
-        "ejes",
-        "indec151",
-        "calles"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_iiee:ejes_indec151",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental:glaciares_jachal",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental:glaciares_jachal",
+      "typeName": "unide_observ_ambiental_old:glaciares_jachal",
       "title": "glaciares_jachal",
       "abstract": "A sample style that draws a polygon",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
@@ -110721,15 +110091,16 @@
         "unide",
         "observ",
         "ambiental",
+        "old",
         "glaciares",
         "jachal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental:glaciares_jachal",
+          "typeName": "unide_observ_ambiental_old:glaciares_jachal",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -110754,7 +110125,7 @@
         "estudio",
         "suelo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110785,7 +110156,7 @@
         "red",
         "gas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110816,7 +110187,7 @@
         "extracciones",
         "canteras"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110847,7 +110218,7 @@
         "bicitour",
         "propuesto"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110878,7 +110249,7 @@
         "servicio",
         "rural"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110907,7 +110278,7 @@
         "gra",
         "limiteurbano"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110937,7 +110308,7 @@
         "radios",
         "censales"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110966,7 +110337,7 @@
         "gra",
         "zonficacion"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -110981,25 +110352,26 @@
       ]
     },
     {
-      "id": "sanjuan:curso:gra_arbolado",
+      "id": "sanjuan:unide_catastro:vw_GraBarrios_Geo",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "curso:gra_arbolado",
-      "title": "gra_arbolado",
+      "typeName": "unide_catastro:vw_GraBarrios_Geo",
+      "title": "vw_GraBarrios_Geo",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
-        "curso",
-        "gra",
-        "arbolado"
+        "unide",
+        "catastro",
+        "grabarrios",
+        "geo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "curso:gra_arbolado",
+          "typeName": "unide_catastro:vw_GraBarrios_Geo",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -111009,53 +110381,26 @@
       ]
     },
     {
-      "id": "sanjuan:curso:gra_manzanero",
+      "id": "sanjuan:unide_catastro:vw_GraCultivos_Geo",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "curso:gra_manzanero",
-      "title": "gra_manzanero",
-      "abstract": "A sample style that draws a polygon",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "curso",
-        "gra",
-        "manzanero"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "curso:gra_manzanero",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:curso:gra_mirador",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "curso:gra_mirador",
-      "title": "gra_mirador",
+      "typeName": "unide_catastro:vw_GraCultivos_Geo",
+      "title": "vw_GraCultivos_Geo",
       "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
-        "curso",
-        "gra",
-        "mirador"
+        "unide",
+        "catastro",
+        "gracultivos",
+        "geo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "curso:gra_mirador",
+          "typeName": "unide_catastro:vw_GraCultivos_Geo",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -111065,27 +110410,56 @@
       ]
     },
     {
-      "id": "sanjuan:unide-dre:gra_oe_rna014_avcirc",
+      "id": "sanjuan:unide_catastro:vw_GraEdificaciones_Geo",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide-dre:gra_oe_rna014_avcirc",
-      "title": "gra_oe_rna014_avcirc",
-      "abstract": "A sample style that draws a point",
+      "typeName": "unide_catastro:vw_GraEdificaciones_Geo",
+      "title": "vw_GraEdificaciones_Geo",
+      "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
       "defaultCrs": "EPSG:4326",
       "keywords": [
         "unide",
-        "dre",
-        "gra",
-        "rna014",
-        "avcirc"
+        "catastro",
+        "graedificaciones",
+        "geo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide-dre:gra_oe_rna014_avcirc",
+          "typeName": "unide_catastro:vw_GraEdificaciones_Geo",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": false
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_catastro:vw_GraEjes_Geo",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_catastro:vw_GraEjes_Geo",
+      "title": "Calles Catastro",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "catastro",
+        "graejes",
+        "geo",
+        "calles"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_catastro:vw_GraEjes_Geo",
           "crs": [
             "EPSG:4326",
             "CRS:84"
@@ -111095,29 +110469,342 @@
       ]
     },
     {
-      "id": "sanjuan:unide-dre:gra_oe_rp_270_caucete_r",
+      "id": "sanjuan:unide_catastro:vw_GraEnsanches_Geo",
       "source": "sanjuan",
       "province": "San Juan",
-      "typeName": "unide-dre:gra_oe_rp_270_caucete_r",
-      "title": "gra_oe_rp_270_caucete_r",
-      "abstract": "A sample style that draws a point",
+      "typeName": "unide_catastro:vw_GraEnsanches_Geo",
+      "title": "vw_GraEnsanches_Geo",
+      "abstract": "",
       "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
+      "defaultCrs": "EPSG:5344",
       "keywords": [
         "unide",
-        "dre",
-        "gra",
-        "270",
-        "caucete"
+        "catastro",
+        "graensanches",
+        "geo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide-dre:gra_oe_rp_270_caucete_r",
+          "typeName": "unide_catastro:vw_GraEnsanches_Geo",
+          "crs": [
+            "EPSG:5344",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_catastro:vw_GraReservas_Geo",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_catastro:vw_GraReservas_Geo",
+      "title": "Zonas Protegidas",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "catastro",
+        "grareservas",
+        "geo",
+        "zonas",
+        "protegidas"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_catastro:vw_GraReservas_Geo",
           "crs": [
             "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_circuito",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_circuito",
+      "title": "vw_circuito",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "circuito"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_circuito",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_corredores",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_corredores",
+      "title": "vw_corredores",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "corredores"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_corredores",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_interurbano",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_interurbano",
+      "title": "vw_interurbano",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "interurbano"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_interurbano",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_perimetral",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_perimetral",
+      "title": "vw_perimetral",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "perimetral"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_perimetral",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:UNIDE_Mineria:vw_proyectosmineros",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "UNIDE_Mineria:vw_proyectosmineros",
+      "title": "vw_proyectosmineros",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:5344",
+      "keywords": [
+        "unide",
+        "mineria",
+        "proyectosmineros"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "UNIDE_Mineria:vw_proyectosmineros",
+          "crs": [
+            "EPSG:5344",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_redtulumparadas",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_redtulumparadas",
+      "title": "vw_redtulumparadas",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "redtulumparadas"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_redtulumparadas",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:UNIDE_Mineria:vw_servidumbres_lineas",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "UNIDE_Mineria:vw_servidumbres_lineas",
+      "title": "vw_servidumbres_lineas",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:5344",
+      "keywords": [
+        "unide",
+        "mineria",
+        "servidumbres",
+        "lineas"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "UNIDE_Mineria:vw_servidumbres_lineas",
+          "crs": [
+            "EPSG:5344",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:UNIDE_Mineria:vw_servidumbres_poligono",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "UNIDE_Mineria:vw_servidumbres_poligono",
+      "title": "vw_servidumbres_poligono",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:5344",
+      "keywords": [
+        "unide",
+        "mineria",
+        "servidumbres",
+        "poligono"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "UNIDE_Mineria:vw_servidumbres_poligono",
+          "crs": [
+            "EPSG:5344",
+            "CRS:84"
+          ],
+          "queryable": false
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:unide_transporte:vw_troncales",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "unide_transporte:vw_troncales",
+      "title": "vw_troncales",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:4326",
+      "keywords": [
+        "unide",
+        "transporte",
+        "troncales"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "unide_transporte:vw_troncales",
+          "crs": [
+            "EPSG:4326",
+            "CRS:84"
+          ],
+          "queryable": true
+        }
+      ]
+    },
+    {
+      "id": "sanjuan:UNIDE_Mineria:vw_zonas_temporada",
+      "source": "sanjuan",
+      "province": "San Juan",
+      "typeName": "UNIDE_Mineria:vw_zonas_temporada",
+      "title": "vw_zonas_temporada",
+      "abstract": "",
+      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+      "defaultCrs": "EPSG:5344",
+      "keywords": [
+        "unide",
+        "mineria",
+        "zonas",
+        "temporada"
+      ],
+      "verifiedAt": "2026-11-13",
+      "services": [
+        {
+          "type": "wms",
+          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
+          "typeName": "UNIDE_Mineria:vw_zonas_temporada",
+          "crs": [
+            "EPSG:5344",
             "CRS:84"
           ],
           "queryable": true

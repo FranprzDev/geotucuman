@@ -9,8 +9,11 @@
 import { z } from 'zod';
 import packageJson from '../package.json' with { type: 'json' };
 import catalogJson from '../data/catalog.json' with { type: 'json' };
+import layerAliasesJson from '../data/layer-aliases.json' with { type: 'json' };
 import { primeCatalog } from '../src/catalog.js';
-import type { Catalog } from '../src/catalog.js';
+import type { Catalog, LayerAliases } from '../src/catalog.js';
+import { schema as reportMissSchema, metadata as reportMissMetadata, handleReportMiss } from './report.js';
+import type { ReportEnv } from './report.js';
 import { toLegacyPayload } from '../src/lib/legacy.js';
 import { searchLayersHandler, schema as searchLayersSchema, metadata as searchLayersMetadata } from '../src/tools/search_layers.js';
 import { suggestLayersHandler, schema as suggestLayersSchema, metadata as suggestLayersMetadata } from '../src/tools/suggest_layers.js';
@@ -27,9 +30,10 @@ const VERSION = packageJson.version;
 const REPO_URL = 'https://github.com/franprzdev/geotucuman';
 const WEB_URL = 'https://franprzdev.github.io/geotucuman/';
 
-// The Worker imports the catalog JSON directly, so seed the in-memory cache at
-// module init. loadCatalog() (called by the handlers) then never reads from fs.
-primeCatalog(catalogJson as unknown as Catalog);
+// The Worker imports the catalog and aliases JSON directly, so seed the
+// in-memory cache at module init. loadCatalog() (called by the handlers) then
+// never reads from fs.
+primeCatalog(catalogJson as unknown as Catalog, (layerAliasesJson as { aliases?: LayerAliases }).aliases ?? {});
 
 const PROTOCOL_VERSION = '2025-03-26';
 
@@ -68,10 +72,11 @@ interface ToolDefinition {
   description: string;
   inputSchema: Record<string, unknown>;
   /** Validates the (unknown) call arguments and runs the handler. */
-  run: (args: ToolArgs) => Promise<unknown>;
+  run: (args: ToolArgs, env: ReportEnv) => Promise<unknown>;
 }
 
 const argsSchemaByTool = {
+  report_miss: z.object(reportMissSchema),
   search_layers: z.object(searchLayersSchema),
   suggest_layers: z.object(suggestLayersSchema),
   describe_layer: z.object(describeLayerSchema),
@@ -84,6 +89,12 @@ const argsSchemaByTool = {
 };
 
 const TOOLS: ToolDefinition[] = [
+  {
+    name: reportMissMetadata.name,
+    description: reportMissMetadata.description,
+    inputSchema: toInputSchema(reportMissSchema),
+    run: (args, env) => handleReportMiss(argsSchemaByTool.report_miss.parse(args), env, VERSION),
+  },
   {
     name: searchLayersMetadata.name,
     description: searchLayersMetadata.description,
@@ -174,7 +185,7 @@ function emptyResponse(status: number): Response {
   return new Response(null, { status, headers: CORS_HEADERS });
 }
 
-async function handleToolsCall(id: JsonRpcId, params: Record<string, unknown> | undefined) {
+async function handleToolsCall(id: JsonRpcId, params: Record<string, unknown> | undefined, env: ReportEnv) {
   const name = typeof params?.name === 'string' ? params.name : undefined;
   if (!name) {
     return rpcError(id, -32602, 'Invalid params: "name" is required.');
@@ -186,7 +197,7 @@ async function handleToolsCall(id: JsonRpcId, params: Record<string, unknown> | 
   const rawArgs = params?.arguments;
   const args: ToolArgs = rawArgs && typeof rawArgs === 'object' && !Array.isArray(rawArgs) ? (rawArgs as ToolArgs) : {};
   try {
-    const payload = await tool.run(args);
+    const payload = await tool.run(args, env);
     return rpcResult(id, asToolResult(payload));
   } catch (err) {
     if (err instanceof z.ZodError) {
@@ -198,7 +209,7 @@ async function handleToolsCall(id: JsonRpcId, params: Record<string, unknown> | 
 }
 
 /** Handles a single JSON-RPC message. Returns null for notifications (no response). */
-async function handleMessage(message: unknown): Promise<object | null> {
+async function handleMessage(message: unknown, env: ReportEnv): Promise<object | null> {
   if (!message || typeof message !== 'object' || Array.isArray(message)) {
     return rpcError(null, -32600, 'Invalid Request');
   }
@@ -230,13 +241,13 @@ async function handleMessage(message: unknown): Promise<object | null> {
         })),
       });
     case 'tools/call':
-      return handleToolsCall(id, msg.params);
+      return handleToolsCall(id, msg.params, env);
     default:
       return hasId ? rpcError(id, -32601, `Method not found: ${msg.method}`) : null;
   }
 }
 
-async function handleMcpPost(request: Request): Promise<Response> {
+async function handleMcpPost(request: Request, env: ReportEnv): Promise<Response> {
   let body: unknown;
   try {
     body = await request.json();
@@ -248,14 +259,14 @@ async function handleMcpPost(request: Request): Promise<Response> {
     if (body.length === 0) {
       return jsonResponse(rpcError(null, -32600, 'Invalid Request: empty batch.'), 400);
     }
-    const responses = (await Promise.all(body.map((message) => handleMessage(message)))).filter(
+    const responses = (await Promise.all(body.map((message) => handleMessage(message, env)))).filter(
       (response): response is object => response !== null,
     );
     if (responses.length === 0) return emptyResponse(202);
     return jsonResponse(responses);
   }
 
-  const response = await handleMessage(body);
+  const response = await handleMessage(body, env);
   if (response === null) return emptyResponse(202);
   return jsonResponse(response);
 }
@@ -266,7 +277,7 @@ function endpointInfo(): Response {
       name: SERVER_INFO.name,
       version: VERSION,
       description:
-        'Public MCP server to discover and query Argentine public geodata (national IGN + provincial WFS/WMS/ArcGIS REST + Georef geocoding). Stateless and read-only.',
+        'Public MCP server to discover and query Argentine public geodata (national IGN + provincial WFS/WMS/ArcGIS REST + Georef geocoding). Stateless; read-only over the geodata sources (report_miss only files GitHub issues).',
       protocol: PROTOCOL_VERSION,
       transport: 'streamable-http',
       endpoint: '/mcp',
@@ -280,7 +291,7 @@ function endpointInfo(): Response {
 }
 
 export default {
-  async fetch(request: Request): Promise<Response> {
+  async fetch(request: Request, env: ReportEnv = {}): Promise<Response> {
     const url = new URL(request.url);
 
     if (request.method === 'OPTIONS') {
@@ -290,7 +301,7 @@ export default {
     const isMcpPath = url.pathname === '/mcp' || url.pathname === '/';
 
     if (request.method === 'POST') {
-      if (isMcpPath) return handleMcpPost(request);
+      if (isMcpPath) return handleMcpPost(request, env);
       return jsonResponse(rpcError(null, -32600, 'Invalid Request'), 405, { Allow: 'GET, POST, OPTIONS' });
     }
 

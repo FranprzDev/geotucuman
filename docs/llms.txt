@@ -34,6 +34,7 @@ Los conteos de las notas se derivan de data/catalog.json (generado el 2026-11-08
 - describe_layer: muestra los campos reales de una capa y es obligatorio antes de consultar.
 - query_layer: consulta features de capas WFS o ArcGIS REST, con bbox en EPSG:4326 y paginación.
 - geocode: convierte texto libre en coordenadas con la API Georef, gratis y sin key.
+- report_miss (solo despliegue público): reporta búsquedas que no encontraron una capa existente; cada reporte abre un issue y un workflow intenta resolverlo con alias curados (automejora del catálogo).
 
 ## Hechos y límites
 

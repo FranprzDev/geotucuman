@@ -17401,31 +17401,6 @@
       ]
     },
     {
-      "id": "caba:geonube:Hog_con_al_menos_un_migrante_internacional",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:Hog_con_al_menos_un_migrante_internacional",
-      "title": "Hog_con_al_menos_un_migrante_internacional",
-      "abstract": "",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "hog",
-        "menos",
-        "migrante",
-        "internacional"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:Hog_con_al_menos_un_migrante_internacional"
-        }
-      ]
-    },
-    {
       "id": "caba:geonube:mc_cnphyv2022",
       "source": "caba",
       "province": "Ciudad Autónoma de Buenos Aires",
@@ -17609,32 +17584,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "caba:geonube:ue_xcom",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:ue_xcom",
-      "title": "Unidades Económicas por comuna",
-      "abstract": "Información geoestadística referida a las unidades económicas, resultado del operativo Listado de Domicilios que se lleva a cabo, anualmente y de manera continua en la Dirección General de Estadística y Censos (DGESyC) de la Ciudad de Buenos Aires con el fin de actualizar la base del Marco Muestral General de la Ciudad.",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "xcom",
-        "unidades",
-        "económicas",
-        "por",
-        "comuna"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:ue_xcom"
         }
       ]
     },
@@ -18137,29 +18086,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "caba:geonube:barrio_ent",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:barrio_ent",
-      "title": "barrio_ent",
-      "abstract": "",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "barrio",
-        "ent"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:barrio_ent"
         }
       ]
     },
@@ -23064,29 +22990,6 @@
       ]
     },
     {
-      "id": "caba:geonube:itf_xzona",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:itf_xzona",
-      "title": "itf_xzona",
-      "abstract": "",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "itf",
-        "xzona"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:itf_xzona"
-        }
-      ]
-    },
-    {
       "id": "caba:geonube:llcc_supermercados",
       "source": "caba",
       "province": "Ciudad Autónoma de Buenos Aires",
@@ -27706,32 +27609,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "caba:geonube:selec_econ_prueba_103_vetyalim",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:selec_econ_prueba_103_vetyalim",
-      "title": "selec_econ_prueba_103_vetyalim",
-      "abstract": "",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "selec",
-        "econ",
-        "prueba",
-        "103",
-        "vetyalim"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:selec_econ_prueba_103_vetyalim"
         }
       ]
     },
@@ -34886,30 +34763,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "caba:geonube:uecon_rubro_xcom",
-      "source": "caba",
-      "province": "Ciudad Autónoma de Buenos Aires",
-      "typeName": "geonube:uecon_rubro_xcom",
-      "title": "uecon_rubro_xcom",
-      "abstract": "",
-      "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "geonube",
-        "uecon",
-        "rubro",
-        "xcom"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://ideec.estadisticaciudad.gob.ar/geoserver/ows",
-          "typeName": "geonube:uecon_rubro_xcom"
         }
       ]
     },
@@ -46948,30 +46801,6 @@
       ]
     },
     {
-      "id": "idecor:idecor:canales_riego",
-      "source": "idecor",
-      "province": "Córdoba",
-      "typeName": "idecor:canales_riego",
-      "title": "Hidrografía: Canales de Riego",
-      "abstract": "",
-      "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:22174",
-      "keywords": [
-        "idecor",
-        "canales",
-        "riego",
-        "hidrografía"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wfs",
-          "typeName": "idecor:canales_riego"
-        }
-      ]
-    },
-    {
       "id": "idecor:idecor:consorcios_canaleros",
       "source": "idecor",
       "province": "Córdoba",
@@ -58444,33 +58273,6 @@
       ]
     },
     {
-      "id": "idecor:bolsa de cereales - precipitaciones",
-      "source": "idecor",
-      "province": "Córdoba",
-      "typeName": "bolsa de cereales - precipitaciones",
-      "title": "Bolsa de Cereales - Precipitaciones",
-      "abstract": "Default style for bolsa de cereales - precipitaciones layer",
-      "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
-      "defaultCrs": "EPSG:32720",
-      "keywords": [
-        "bolsa",
-        "cereales",
-        "precipitaciones"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
-          "typeName": "bolsa de cereales - precipitaciones",
-          "crs": [
-            "EPSG:32720"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
       "id": "idecor:bolsa de cereales",
       "source": "idecor",
       "province": "Córdoba",
@@ -62287,32 +62089,6 @@
           "typeName": "geografia social",
           "crs": [
             "EPSG:4326"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "idecor:hidrografia",
-      "source": "idecor",
-      "province": "Córdoba",
-      "typeName": "hidrografia",
-      "title": "Hidrografía",
-      "abstract": "Default style for hidrografia layer",
-      "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
-      "defaultCrs": "EPSG:22174",
-      "keywords": [
-        "hidrografia",
-        "hidrografía"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://idecor-ws.mapascordoba.gob.ar/geoserver/idecor/wms",
-          "typeName": "hidrografia",
-          "crs": [
-            "EPSG:22174"
           ],
           "queryable": true
         }
@@ -81098,56 +80874,6 @@
       ]
     },
     {
-      "id": "idechaco:idechaco:enriquejosegomez_pet-figuraa_lineas",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:enriquejosegomez_pet-figuraa_lineas",
-      "title": "enriquejosegomez_pet-figuraa_lineas",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "idechaco",
-        "enriquejosegomez",
-        "pet",
-        "figuraa",
-        "lineas"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:enriquejosegomez_pet-figuraa_lineas"
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:enriquejosegomez_pet-figuraa_puntos",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:enriquejosegomez_pet-figuraa_puntos",
-      "title": "enriquejosegomez_pet-figuraa_puntos",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:4326",
-      "keywords": [
-        "idechaco",
-        "enriquejosegomez",
-        "pet",
-        "figuraa",
-        "puntos"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:enriquejosegomez_pet-figuraa_puntos"
-        }
-      ]
-    },
-    {
       "id": "idechaco:idechaco:enriquejosegomez_pet_2025_asur_c2_f4",
       "source": "idechaco",
       "province": "Chaco",
@@ -82156,57 +81882,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:enriquejosegomez_pet_figura14_autoviares-fsa",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:enriquejosegomez_pet_figura14_autoviares-fsa",
-      "title": "enriquejosegomez_pet_figura14_autoviares-fsa",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:5347",
-      "keywords": [
-        "idechaco",
-        "enriquejosegomez",
-        "pet",
-        "figura14",
-        "autoviares",
-        "fsa"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:enriquejosegomez_pet_figura14_autoviares-fsa"
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:enriquejosegomez_pet_figura14_autoviares-rq",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:enriquejosegomez_pet_figura14_autoviares-rq",
-      "title": "enriquejosegomez_pet_figura14_autoviares-rq",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:5347",
-      "keywords": [
-        "idechaco",
-        "enriquejosegomez",
-        "pet",
-        "figura14",
-        "autoviares"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:enriquejosegomez_pet_figura14_autoviares-rq"
         }
       ]
     },
@@ -87337,55 +87012,6 @@
       ]
     },
     {
-      "id": "idechaco:idechaco:ln263_rcia-spenia",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:ln263_rcia-spenia",
-      "title": "ln263_rcia-spenia",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:22175",
-      "keywords": [
-        "idechaco",
-        "ln263",
-        "rcia",
-        "spenia"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:ln263_rcia-spenia"
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:ln263_rcia-spenia_track",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:ln263_rcia-spenia_track",
-      "title": "ln263_rcia-spenia_track",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:22175",
-      "keywords": [
-        "idechaco",
-        "ln263",
-        "rcia",
-        "spenia",
-        "track"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:ln263_rcia-spenia_track"
-        }
-      ]
-    },
-    {
       "id": "idechaco:idechaco:ln264_rcia-pperon",
       "source": "idechaco",
       "province": "Chaco",
@@ -92196,81 +91822,6 @@
             "CRS:84"
           ],
           "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:matiasg_pet_-_figura7_poligonos",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:matiasg_pet_-_figura7_poligonos",
-      "title": "matiasg_pet_-_figura7_poligonos",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:5347",
-      "keywords": [
-        "idechaco",
-        "matiasg",
-        "pet",
-        "figura7",
-        "poligonos"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:matiasg_pet_-_figura7_poligonos"
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:matiasg_pet_-_figura_1_lineas",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:matiasg_pet_-_figura_1_lineas",
-      "title": "matiasg_pet_-_figura_1_lineas",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:5347",
-      "keywords": [
-        "idechaco",
-        "matiasg",
-        "pet",
-        "figura",
-        "lineas"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:matiasg_pet_-_figura_1_lineas"
-        }
-      ]
-    },
-    {
-      "id": "idechaco:idechaco:matiasg_pet_-_figura_1_poligonos",
-      "source": "idechaco",
-      "province": "Chaco",
-      "typeName": "idechaco:matiasg_pet_-_figura_1_poligonos",
-      "title": "matiasg_pet_-_figura_1_poligonos",
-      "abstract": "",
-      "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-      "defaultCrs": "urn:x-ogc:def:crs:EPSG:5347",
-      "keywords": [
-        "idechaco",
-        "matiasg",
-        "pet",
-        "figura",
-        "poligonos"
-      ],
-      "verifiedAt": "2026-11-08",
-      "services": [
-        {
-          "type": "wfs",
-          "endpoint": "http://idechaco.gob.ar/geoserver/idechaco/wfs",
-          "typeName": "idechaco:matiasg_pet_-_figura_1_poligonos"
         }
       ]
     },
@@ -109278,296 +108829,6 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental_old:1b - Zona de Proyecto",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:1b - Zona de Proyecto",
-      "title": "1b - Zona de Proyecto",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:22182",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "zona",
-        "proyecto"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:1b - Zona de Proyecto",
-          "crs": [
-            "EPSG:22182",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
-      "title": "2a - Cuencas Tributarias Río San Juan",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "cuencas",
-        "tributarias",
-        "río",
-        "san",
-        "juan"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2a - Cuencas Tributarias Río San Juan",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
-      "title": "2b - Glaciares C. Río Calingasta",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "río",
-        "calingasta"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Calingasta",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
-      "title": "2b - Glaciares C. Río Castaño",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "río",
-        "castaño"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Castaño",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
-      "title": "2b - Glaciares C. Río Los Patos Inf.",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "río",
-        "patos",
-        "inf"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Inf.",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
-      "title": "2b - Glaciares C. Río Los Patos Sup.",
-      "abstract": "A sample style that draws a polygon",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "río",
-        "patos",
-        "sup"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2b - Glaciares C. Río Los Patos Sup.",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
-      "title": "2b - Glaciares C.Río Blanco",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:32719",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "río",
-        "blanco"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:2b - Glaciares C.Río Blanco",
-          "crs": [
-            "EPSG:32719",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
-      "title": "Cuenca_Jachal_POSGAR",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:5344",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "cuenca",
-        "jachal",
-        "posgar"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:Cuenca_Jachal_POSGAR",
-          "crs": [
-            "EPSG:5344",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:Cuencas Andinas SJ",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:Cuencas Andinas SJ",
-      "title": "Cuencas Andinas SJ",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "cuencas",
-        "andinas"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:Cuencas Andinas SJ",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
       "id": "sanjuan:unide_catastro:Espacios_Verdes",
       "source": "sanjuan",
       "province": "San Juan",
@@ -109619,38 +108880,6 @@
           "typeName": "unide_educacion:Establecimientos_Educativos",
           "crs": [
             "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
-      "title": "Glaciares_Jachal2015-POSGAR",
-      "abstract": "A sample style that draws a polygon",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:5344",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "jachal2015",
-        "posgar"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:Glaciares_Jachal2015-POSGAR",
-          "crs": [
-            "EPSG:5344",
             "CRS:84"
           ],
           "queryable": true
@@ -109866,68 +109095,6 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental_old:Red de drenaje CJ",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:Red de drenaje CJ",
-      "title": "Red de drenaje CJ",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:5344",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "red",
-        "drenaje"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:Red de drenaje CJ",
-          "crs": [
-            "EPSG:5344",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:SJ_2015_OTBN",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:SJ_2015_OTBN",
-      "title": "SJ_2015_OTBN",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "2015",
-        "otbn"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:SJ_2015_OTBN",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
       "id": "sanjuan:UNIDE_OSSE:SanJuan_RedAguaOsse",
       "source": "sanjuan",
       "province": "San Juan",
@@ -110016,39 +109183,6 @@
       ]
     },
     {
-      "id": "sanjuan:unide_observ_ambiental_old:Vegas Altoandinas San Juan",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:Vegas Altoandinas San Juan",
-      "title": "Vegas Altoandinas San Juan",
-      "abstract": "",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "vegas",
-        "altoandinas",
-        "san",
-        "juan"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:Vegas Altoandinas San Juan",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
       "id": "sanjuan:unide_drsu:contenedores",
       "source": "sanjuan",
       "province": "San Juan",
@@ -110070,37 +109204,6 @@
           "type": "wms",
           "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
           "typeName": "unide_drsu:contenedores",
-          "crs": [
-            "EPSG:4326",
-            "CRS:84"
-          ],
-          "queryable": true
-        }
-      ]
-    },
-    {
-      "id": "sanjuan:unide_observ_ambiental_old:glaciares_jachal",
-      "source": "sanjuan",
-      "province": "San Juan",
-      "typeName": "unide_observ_ambiental_old:glaciares_jachal",
-      "title": "glaciares_jachal",
-      "abstract": "A sample style that draws a polygon",
-      "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-      "defaultCrs": "EPSG:4326",
-      "keywords": [
-        "unide",
-        "observ",
-        "ambiental",
-        "old",
-        "glaciares",
-        "jachal"
-      ],
-      "verifiedAt": "2026-11-13",
-      "services": [
-        {
-          "type": "wms",
-          "endpoint": "https://unide.sanjuan.gob.ar/geoserver/wms",
-          "typeName": "unide_observ_ambiental_old:glaciares_jachal",
           "crs": [
             "EPSG:4326",
             "CRS:84"

@@ -70,11 +70,31 @@ async function suggest(goal: string, relatedTerms?: string[], limit = 10) {
   assert.ok(r.candidates.some((c) => /incendio/i.test(c.typeName)), '"incendios" should reach incendio layers');
 }
 
+// --- Spanish morphology: real stemming bridges inflection and derivation ---
+
+{
+  const r = (await suggestLayersHandler({ goal: 'zonas inundables', limit: 20 })) as {
+    candidates: Array<{ title: string }>;
+  };
+  assert.ok(
+    r.candidates.some((c) => /Zonas de Inundabilidad/i.test(c.title)),
+    '"zonas inundables" must reach the layer titled "Zonas de Inundabilidad"',
+  );
+  const hits = searchCatalog('zonas inundables', { limit: 20 });
+  assert.ok(
+    hits.some((h) => /Zonas de Inundabilidad/i.test(h.entry.title)),
+    '"zonas inundables" must find a layer titled "Zonas de Inundabilidad"',
+  );
+  const plural = searchCatalog('inundaciones', { limit: 20 });
+  const singular = searchCatalog('inundacion', { limit: 20 });
+  assert.ok(plural.length > 0 && singular.length > 0, 'inundación/inundaciones must both match');
+}
+
 // --- The fires contract: honest gap, bridged by relatedTerms ---
 
 {
   const lexical = await suggest('focos de calor en Tucumán');
-  assert.ok(lexical.noCoverage.includes('foco'), 'foco must be reported uncovered (English-only MODIS metadata)');
+  assert.ok(lexical.noCoverage.includes('focos'), 'focos must be reported uncovered (English-only MODIS metadata)');
   assert.ok(lexical.noCoverage.includes('calor'), 'calor must be reported uncovered');
   assert.ok(lexical.hint && /relatedTerms/.test(lexical.hint), 'uncovered terms must come with a relatedTerms hint');
   assert.ok(

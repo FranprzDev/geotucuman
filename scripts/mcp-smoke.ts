@@ -111,7 +111,7 @@ await check('suggest_layers finds MODIS for "focos de calor" via relatedTerms (n
   ) as { candidates?: Array<{ typeName: string }>; noCoverage?: string[]; hint?: string };
   // Lexical-only: the English-only MODIS metadata cannot match Spanish terms,
   // so the engine must report the gap honestly instead of guessing.
-  if (!(lexical.noCoverage ?? []).includes('foco') || !(lexical.noCoverage ?? []).includes('calor')) {
+  if (!(lexical.noCoverage ?? []).includes('focos') || !(lexical.noCoverage ?? []).includes('calor')) {
     throw new Error('expected foco/calor reported as uncovered without relatedTerms');
   }
   if (!lexical.hint) throw new Error('expected a hint pointing to relatedTerms');

@@ -20,7 +20,7 @@ export const schema = {
 export const metadata: ToolMetadata = {
   name: 'search_layers',
   description:
-    'Search public geographic layers of Argentina (national IGN + provincial sources, WFS/WMS/ArcGIS REST) by keyword in the embedded catalog, ranked by a MiniSearch full-text engine over title, identifier, keywords and abstract (prefix + bounded fuzzy matching; plurals and accents normalized). Returns typeName, title, abstract, source, province and default CRS. Use serviceType to filter by WFS, WMS or ArcGIS availability and province to narrow to one province. The search is lexical: add synonyms and English/technical equivalents in relatedTerms when the concept may be described differently.',
+    'Search public geographic layers of Argentina (national IGN + provincial sources, WFS/WMS/ArcGIS REST) by keyword in the embedded catalog, ranked by a MiniSearch full-text engine over title, identifier, keywords and abstract (prefix + bounded fuzzy matching; Spanish stemming and accents normalized). Returns typeName, title, abstract, source, province and default CRS. Use serviceType to filter by WFS, WMS or ArcGIS availability and province to narrow to one province. The search is lexical: add synonyms and English/technical equivalents in relatedTerms when the concept may be described differently.',
 };
 
 export async function searchLayersHandler({

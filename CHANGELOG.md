@@ -2,6 +2,21 @@
 
 All notable changes to GeoArg are documented here. Format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), versioning follows [SemVer](https://semver.org/) (pre-1.0: minor bumps for feature batches).
 
+## [0.3.1] - 2026-11-12
+
+### Added
+
+- Weekly `refresh-sources` workflow: regenerates sources whose health fell below 90% from live GetCapabilities and opens a PR when the catalog really changed; never merges by itself (#52).
+- `data/layer-denylist.json`: catalog builds exclude layers known to fail permanently; `validate-catalog` fails if one is still present (#51).
+
+### Changed
+
+- Search uses the Spanish Snowball stemmer instead of the two-rule plural reducer, so derivations match ("zonas inundables" finds "Zonas de Inundabilidad", "inundacion" finds "inundaciones"). Prefix matching needs 4+ characters; `noCoverage` reports the words the user wrote (#50).
+
+### Removed
+
+- 32 layers whose only services fail with a definite server error: 14 San Juan `unide_observ_ambiental_old`, 6 CABA `geonube`, 3 IDECOR and 9 IDEChaco. Catalog total 3,681 -> 3,649 (#51).
+
 ## [0.3.0] - 2026-11-12
 
 ### Added

@@ -13,6 +13,10 @@ All notable changes to GeoArg are documented here. Format follows [Keep a Change
 
 - Search uses the Spanish Snowball stemmer instead of the two-rule plural reducer, so derivations match ("zonas inundables" finds "Zonas de Inundabilidad", "inundacion" finds "inundaciones"). Prefix matching needs 4+ characters; `noCoverage` reports the words the user wrote (#50).
 
+### Fixed
+
+- Cached term processing so the Spanish stemmer does not add cold-start CPU on the public Worker (the first request after the stemmer deploy hit Cloudflare error 1102).
+
 ### Removed
 
 - 32 layers whose only services fail with a definite server error: 14 San Juan `unide_observ_ambiental_old`, 6 CABA `geonube`, 3 IDECOR and 9 IDEChaco. Catalog total 3,681 -> 3,649 (#51).

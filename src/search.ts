@@ -53,7 +53,17 @@ export const STOPWORDS = new Set([
 
 const spanishStemmer = newStemmer('spanish');
 
+const termCache = new Map<string, string | false>();
+
 function processTerm(term: string): string | false {
+  const cached = termCache.get(term);
+  if (cached !== undefined) return cached;
+  const result = computeTerm(term);
+  termCache.set(term, result);
+  return result;
+}
+
+function computeTerm(term: string): string | false {
   const cleaned = normalize(term).trim();
   if (cleaned.length === 0 || STOPWORDS.has(cleaned)) return false;
   const accented = term.toLowerCase().trim().replace(/([cs])ion$/, '$1ión');

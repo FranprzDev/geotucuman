@@ -45,6 +45,15 @@ results.batch = await post([
 results.unknownMethod = await post({ jsonrpc: '2.0', id: 7, method: 'nope' });
 results.badTool = await post({ jsonrpc: '2.0', id: 8, method: 'tools/call', params: { name: 'nope', arguments: {} } });
 results.invalidArgs = await post({ jsonrpc: '2.0', id: 9, method: 'tools/call', params: { name: 'search_layers', arguments: {} } });
+results.reportMiss = await post({
+  jsonrpc: '2.0',
+  id: 10,
+  method: 'tools/call',
+  params: {
+    name: 'report_miss',
+    arguments: { query: 'focos de calor', expectation: 'a layer of active fire hotspots for Tucumán' },
+  },
+});
 
 const infoRes = await mf.dispatchFetch('http://localhost/');
 results.getRoot = { status: infoRes.status, text: await infoRes.text() };
@@ -63,9 +72,28 @@ for (const [name, value] of Object.entries(results)) {
     console.log(`${name}:`, JSON.stringify(value));
   }
 }
+let failed = false;
 if (results.toolsList.status === 200) {
   const parsed = JSON.parse(results.toolsList.text);
   console.log('\nTOOL NAMES:', parsed.result.tools.map((t) => t.name).join(', '));
+  if (!parsed.result.tools.some((t) => t.name === 'report_miss')) {
+    console.error('FAIL: tools/list must include report_miss');
+    failed = true;
+  }
+} else {
+  console.error('FAIL: tools/list status', results.toolsList.status);
+  failed = true;
 }
+// Without the GITHUB_TOKEN secret (CI), report_miss must fail gracefully with
+// a clear tool error, not crash the worker.
+{
+  const parsed = JSON.parse(results.reportMiss.text);
+  const content = parsed.result?.content?.[0]?.text ?? '';
+  if (parsed.result?.isError !== true || !/not configured/i.test(content)) {
+    console.error('FAIL: report_miss without secret must be a graceful tool error, got:', results.reportMiss.text.slice(0, 300));
+    failed = true;
+  }
+}
+if (failed) process.exit(1);
 
 await mf.dispose();

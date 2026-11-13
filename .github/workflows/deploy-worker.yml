@@ -7,6 +7,7 @@ on:
     paths:
       - 'worker/**'
       - 'data/catalog.json'
+      - 'data/layer-aliases.json'
       - 'src/**'
       - 'wrangler.toml'
       - 'package.json'
@@ -33,3 +34,17 @@ jobs:
         run: npx wrangler deploy
         env:
           CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+
+      # report_miss stays disabled until the repo secret GITHUB_REPORT_TOKEN
+      # (a fine-grained PAT with only Issues: read/write on this repo) exists.
+      - name: Configure report_miss GitHub token (if provided)
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          GITHUB_REPORT_TOKEN: ${{ secrets.GITHUB_REPORT_TOKEN }}
+        run: |
+          if [ -n "$GITHUB_REPORT_TOKEN" ]; then
+            printf '%s' "$GITHUB_REPORT_TOKEN" | npx wrangler secret put GITHUB_TOKEN --name geoarg-mcp
+            echo "Worker secret GITHUB_TOKEN updated; report_miss is enabled."
+          else
+            echo "GITHUB_REPORT_TOKEN repo secret not set; report_miss stays disabled."
+          fi

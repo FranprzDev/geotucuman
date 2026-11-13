@@ -90,13 +90,19 @@ async function suggest(goal: string, relatedTerms?: string[], limit = 10) {
   assert.ok(plural.length > 0 && singular.length > 0, 'inundación/inundaciones must both match');
 }
 
-// --- The fires contract: honest gap, bridged by relatedTerms ---
+// --- The fires contract: the canonical miss, fixed by report-driven aliases ---
 
 {
+  // "focos de calor" only existed as English MODIS metadata ("fires/hotspots");
+  // the miss-report loop (report_miss -> issue -> auto-fix) added "calor" and
+  // "focos" to data/layer-aliases.json, so the lexical query now finds it.
   const lexical = await suggest('focos de calor en Tucumán');
-  assert.ok(lexical.noCoverage.includes('focos'), 'focos must be reported uncovered (English-only MODIS metadata)');
-  assert.ok(lexical.noCoverage.includes('calor'), 'calor must be reported uncovered');
-  assert.ok(lexical.hint && /relatedTerms/.test(lexical.hint), 'uncovered terms must come with a relatedTerms hint');
+  assert.ok(!lexical.noCoverage.includes('focos'), 'focos is now covered by layer aliases');
+  assert.ok(!lexical.noCoverage.includes('calor'), 'calor is now covered by layer aliases');
+  assert.ok(
+    lexical.candidates.some((c) => /fires_modis/i.test(c.typeName)),
+    'MODIS fires must appear via aliases without relatedTerms',
+  );
   assert.ok(
     !lexical.candidates.some((c) => /color|valor/i.test(c.typeName)),
     'short-term fuzzy collisions (calor->color/valor) must not leak into candidates',
@@ -130,10 +136,22 @@ async function suggest(goal: string, relatedTerms?: string[], limit = 10) {
 }
 
 {
-  // Precision guard: a term absent from the catalog must return nothing,
-  // not fuzzy junk.
-  assert.equal(searchCatalog('foco', { limit: 5 }).length, 0, '"foco" has no exact/prefix match and must return empty');
-  assert.equal(searchCatalog('calor', { limit: 5 }).length, 0, '"calor" must not fuzzy-match color/valor');
+  // Layer aliases (data/layer-aliases.json) merge into each layer's keywords
+  // at load time: the reported miss "focos de calor" must now find the MODIS
+  // fires layers, which the catalog metadata only describes in English.
+  const hits = searchCatalog('focos de calor', { limit: 5 });
+  assert.ok(hits.some((h) => /fires_modis/.test(h.entry.id)), 'alias: "focos de calor" must find the MODIS fires layers');
+}
+
+{
+  // Precision guard: aliased terms match only their layers, never fuzzy junk
+  // ("calor" must still not fuzzy-match color/valor).
+  const foco = searchCatalog('foco', { limit: 5 });
+  assert.ok(foco.length > 0, '"foco" must prefix-match the aliased "focos"');
+  assert.ok(foco.every((h) => h.entry.id.startsWith('dgct:fires_modis')), '"foco" must match only the aliased MODIS fires layers');
+  const calor = searchCatalog('calor', { limit: 5 });
+  assert.ok(calor.length > 0, '"calor" must match the aliased MODIS fires layers');
+  assert.ok(calor.every((h) => h.entry.id.startsWith('dgct:fires_modis')), '"calor" must match only fires layers, not color/valor fuzzy junk');
 }
 
 console.log('SEARCH TESTS OK');

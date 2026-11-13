@@ -1,4 +1,4 @@
-import { readFileSync } from 'node:fs';
+import { existsSync, readFileSync } from 'node:fs';
 import { fileURLToPath } from 'node:url';
 import { dirname, join } from 'node:path';
 import { ServiceType } from './service-type.js';
@@ -38,29 +38,61 @@ export interface Catalog {
 let cache: Catalog | null = null;
 
 /**
- * Resolves data/catalog.json lazily. The Cloudflare Worker imports the JSON
- * directly and seeds the cache with primeCatalog(), so this never evaluates
- * `import.meta.url` (undefined in workerd) there.
+ * Extra search terms per layer id (`source:typeName`), curated from user miss
+ * reports. They merge into each entry's keywords when the catalog loads, so
+ * they are searchable without regenerating data/catalog.json.
  */
-function catalogPath(): string {
+export type LayerAliases = Record<string, string[]>;
+
+/** Merges alias terms into each layer's keywords (deduped, in place). */
+function applyAliases(catalog: Catalog, aliases: LayerAliases): Catalog {
+  for (const entry of catalog.layers) {
+    const extra = aliases[entry.id];
+    if (!extra || extra.length === 0) continue;
+    const seen = new Set(entry.keywords.map((k) => normalize(k)));
+    for (const term of extra) {
+      const key = normalize(term);
+      if (key.length === 0 || seen.has(key)) continue;
+      seen.add(key);
+      entry.keywords.push(term);
+    }
+  }
+  return catalog;
+}
+
+function dataPath(file: string): string {
   const here = dirname(fileURLToPath(import.meta.url));
-  return join(here, '..', 'data', 'catalog.json');
+  return join(here, '..', 'data', file);
+}
+
+/**
+ * Resolves data/layer-aliases.json lazily. Missing file means no aliases; the
+ * Cloudflare Worker imports the JSON directly and passes it to primeCatalog(),
+ * so this never evaluates `import.meta.url` (undefined in workerd) there.
+ */
+export function loadLayerAliases(): LayerAliases {
+  const path = dataPath('layer-aliases.json');
+  if (!existsSync(path)) return {};
+  const parsed = JSON.parse(readFileSync(path, 'utf-8')) as { aliases?: LayerAliases };
+  return parsed.aliases ?? {};
 }
 
 export function loadCatalog(): Catalog {
   if (!cache) {
-    cache = JSON.parse(readFileSync(catalogPath(), 'utf-8')) as Catalog;
+    const catalog = JSON.parse(readFileSync(dataPath('catalog.json'), 'utf-8')) as Catalog;
+    cache = applyAliases(catalog, loadLayerAliases());
   }
   return cache;
 }
 
 /**
  * Sets the in-memory catalog cache.
- * Used by the Cloudflare Worker, which imports data/catalog.json directly
- * (Wrangler bundles JSON imports) so loadCatalog() never touches `node:fs`.
+ * Used by the Cloudflare Worker, which imports data/catalog.json (and
+ * data/layer-aliases.json) directly (Wrangler bundles JSON imports) so
+ * loadCatalog() never touches `node:fs`.
  */
-export function primeCatalog(catalog: Catalog): void {
-  cache = catalog;
+export function primeCatalog(catalog: Catalog, aliases: LayerAliases = {}): void {
+  cache = applyAliases(catalog, aliases);
 }
 
 /** Normalizes for search: lowercase and accent-free. */

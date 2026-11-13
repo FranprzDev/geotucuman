@@ -1,0 +1,9 @@
+{
+  "note": "Extra search terms per layer, curated from user miss reports (the public MCP's report_miss tool) and manual review. Merged into each layer's keywords when the catalog loads (src/catalog.ts), so the terms become searchable without regenerating data/catalog.json and survive catalog rebuilds. Keys are layer ids (`source:typeName`); terms are normalized (lowercase, no accents) meaningful tokens. Validated by scripts/validate-catalog.ts.",
+  "aliases": {
+    "dgct:fires_modis_24": ["calor", "focos"],
+    "dgct:fires_modis_48": ["calor", "focos"],
+    "dgct:fires_modis_7": ["calor", "focos"],
+    "dgct:fires_modis_72": ["calor", "focos"]
+  }
+}

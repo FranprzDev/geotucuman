@@ -34,6 +34,7 @@ Para instalación local por stdio, ver [Cómo usarlo](#cómo-usarlo).
 | `describe_layer` | Campos reales de una capa (obligatorio antes de consultar) |
 | `query_layer` | GetFeature con filtros, paginación y bbox en EPSG:4326 (se reproyecta al CRS nativo de la capa en el cliente) |
 | `geocode` | Texto libre a coordenadas vía API Georef (gratis, sin key) |
+| `report_miss` | Reporta una búsqueda que no encontró una capa que sí existe: abre un issue público en el repo y un workflow determinista intenta resolverlo agregando alias de búsqueda (automejora). Solo en el despliegue público (Worker) |
 
 Las capas WMS-only se buscan y describen igual (metadatos vía GetCapabilities); `query_layer` aplica a capas WFS y ArcGIS REST (`serviceType: arcgis`, con describe/query/paginación/bbox/filtro por servicio).
 
@@ -103,9 +104,9 @@ Para conectarte desde un cliente MCP, apuntá el transporte HTTP a la URL del en
 { "mcpServers": { "geoarg": { "url": "https://geoarg-mcp.franprzdev.workers.dev/mcp" } } }
 ```
 
-Es **stateless** (cada request es independiente: sin sesiones ni SSE) y de **solo lectura**. Expone las mismas tools que el servidor stdio: `search_layers`, `suggest_layers`, `describe_layer`, `query_layer`, `geocode` y sus alias legacy en español (`buscar_capas`, `describir_capa`, `consultar_capa`, `geocodificar`). El catálogo se embebe en el bundle del Worker, así que no hay acceso a disco en runtime.
+Es **stateless** (cada request es independiente: sin sesiones ni SSE) y de **solo lectura sobre las fuentes de geodatos**. Expone las mismas tools que el servidor stdio (`search_layers`, `suggest_layers`, `describe_layer`, `query_layer`, `geocode` y sus alias legacy en español: `buscar_capas`, `describir_capa`, `consultar_capa`, `geocodificar`) más una exclusiva del despliegue público: **`report_miss`**, para reportar misses de búsqueda (sinónimos faltantes, brecha español/inglés, nombres alternativos). Cada reporte abre un issue público en el repo (label `miss-report`, deduplicado por query y con tope diario) y un workflow intenta resolverlo automáticamente con alias curados en `data/layer-aliases.json`. El catálogo y los alias se embeben en el bundle del Worker, así que no hay acceso a disco en runtime.
 
-El deploy corre por GitHub Actions (`.github/workflows/deploy-worker.yml`) al pushear a `main` cambios en `worker/`, `src/`, `data/catalog.json` o `wrangler.toml`, usando el secret `CLOUDFLARE_API_TOKEN` (el token no se versiona). Para desarrollo local: `npm run worker:dev`; para publicar manualmente: `npm run worker:deploy`.
+El deploy corre por GitHub Actions (`.github/workflows/deploy-worker.yml`) al pushear a `main` cambios en `worker/`, `src/`, `data/catalog.json`, `data/layer-aliases.json` o `wrangler.toml`, usando el secret `CLOUDFLARE_API_TOKEN` (el token no se versiona). Si además existe el secret de repo `GITHUB_REPORT_TOKEN` (PAT fine-grained con solo `Issues: read/write` sobre este repo), el deploy lo publica como secret `GITHUB_TOKEN` del Worker y `report_miss` queda habilitado; sin ese secret, la tool responde que el reporte no está configurado. Para desarrollo local: `npm run worker:dev`; para publicar manualmente: `npm run worker:deploy`.
 
 ## Web pública
 

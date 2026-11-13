@@ -36,6 +36,9 @@ jobs:
       - name: Search relevance tests
         run: npx tsx scripts/search-test.ts
 
+      - name: Auto-fix gate tests
+        run: npx tsx scripts/autofix-test.ts
+
       - name: Build
         run: npm run build
 

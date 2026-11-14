@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-13T00:24:24.652Z",
+  "generatedAt": "2026-11-13T00:48:22.912Z",
   "sources": {
     "geosplan": {
       "status": "preserved",
@@ -72,7 +72,7 @@
     },
     "sanjuan": {
       "status": "live",
-      "fetchedAt": "2026-11-13T00:24:23.220Z",
+      "fetchedAt": "2026-11-13T00:48:11.322Z",
       "wmsStatus": "live"
     },
     "sanluis": {
@@ -86,8 +86,8 @@
       "wmsStatus": "live"
     },
     "tdf": {
-      "status": "preserved",
-      "fetchedAt": "2026-11-08T14:15:41.262Z",
+      "status": "live",
+      "fetchedAt": "2026-11-13T00:48:15.114Z",
       "wmsStatus": "live"
     },
     "mendoza": {
@@ -115827,7 +115827,7 @@
         "tdf",
         "5e5336d84bb38108d94845bd83c5ef58"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -115859,7 +115859,7 @@
         "geonode",
         "aerodromo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -115891,7 +115891,7 @@
         "geonode",
         "aeropuertos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -115924,7 +115924,7 @@
         "alojamiento",
         "tur"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -115958,7 +115958,7 @@
         "apn",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -115991,7 +115991,7 @@
         "anillo",
         "abierto"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116023,7 +116023,7 @@
         "geonode",
         "antenas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116056,7 +116056,7 @@
         "apn",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116090,7 +116090,7 @@
         "estudio",
         "garibaldi"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116124,7 +116124,7 @@
         "produccion",
         "bivalvos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116158,7 +116158,7 @@
         "tdf",
         "202508"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116192,7 +116192,7 @@
         "tdf",
         "202607"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116224,7 +116224,7 @@
         "geonode",
         "areasprotegidas4326"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116257,7 +116257,7 @@
         "asentamiento",
         "humano"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116290,7 +116290,7 @@
         "barrios",
         "sspe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116323,7 +116323,7 @@
         "bases",
         "antarticas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116357,7 +116357,7 @@
         "tdf",
         "202508"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116390,7 +116390,7 @@
         "bosques",
         "nativos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116423,7 +116423,7 @@
         "buffer",
         "fibraoptica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116456,7 +116456,7 @@
         "buffer",
         "gasoducto"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116488,7 +116488,7 @@
         "geonode",
         "calles"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116521,7 +116521,7 @@
         "calles",
         "tolh"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116555,7 +116555,7 @@
         "tolh",
         "48d4103ec97bf641e1baa31369f864a4"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116588,7 +116588,7 @@
         "calles",
         "ush"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116621,7 +116621,7 @@
         "canal",
         "beagle"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116653,7 +116653,7 @@
         "geonode",
         "carbonoazul"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116686,7 +116686,7 @@
         "casa",
         "gobierno"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116719,7 +116719,7 @@
         "cascos",
         "estancia"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116752,7 +116752,7 @@
         "catastro",
         "minero"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116785,7 +116785,7 @@
         "central",
         "electrica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116818,7 +116818,7 @@
         "centro",
         "cientifico"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116851,7 +116851,7 @@
         "centro",
         "montana"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116886,7 +116886,7 @@
         "salud",
         "publica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116918,7 +116918,7 @@
         "geonode",
         "cerros"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116952,7 +116952,7 @@
         "polar",
         "antartico"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -116984,7 +116984,7 @@
         "geonode",
         "cisternas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117017,7 +117017,7 @@
         "coastal",
         "exposure"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117051,7 +117051,7 @@
         "suelo",
         "isla"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117086,7 +117086,7 @@
         "rafaela",
         "ishton"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117119,7 +117119,7 @@
         "conflictos",
         "ambientales"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117153,7 +117153,7 @@
         "agua",
         "dgrh"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117186,7 +117186,7 @@
         "cuartel",
         "bomberos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117221,7 +117221,7 @@
         "garibaldi",
         "recortegaribaldi"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117255,7 +117255,7 @@
         "batimetricas",
         "shn"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117289,7 +117289,7 @@
         "nivel",
         "sspe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117322,7 +117322,7 @@
         "curvas",
         "nivel"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117356,7 +117356,7 @@
         "castoreras",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117390,7 +117390,7 @@
         "castoreras",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117425,7 +117425,7 @@
         "tdf",
         "tol"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117460,7 +117460,7 @@
         "tdf",
         "ush"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117493,7 +117493,7 @@
         "departamentos",
         "mercator"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117526,7 +117526,7 @@
         "dgc",
         "macizos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117560,7 +117560,7 @@
         "macizos",
         "260b7baba310d771e178dff94862ee79"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117595,7 +117595,7 @@
         "rural",
         "3addddca2871062569c0b8a0473ef1ef"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117629,7 +117629,7 @@
         "parcelario",
         "urbano"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117664,7 +117664,7 @@
         "urbano",
         "919e33a200c4210e3f3deedcc41b1a69"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117697,7 +117697,7 @@
         "dgc",
         "secciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117730,7 +117730,7 @@
         "ductos",
         "a8047db8c37c144fc6d48e89098945cb"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117764,7 +117764,7 @@
         "tdf",
         "202509"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117796,7 +117796,7 @@
         "geonode",
         "ecorregiones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117830,7 +117830,7 @@
         "tdfaias",
         "nacion"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117866,7 +117866,7 @@
         "dgot",
         "sspe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117900,7 +117900,7 @@
         "utn",
         "institucionesfinal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117934,7 +117934,7 @@
         "utn",
         "institucionesfinal8d04a15578d3"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -117969,7 +117969,7 @@
         "oferta",
         "academicafinal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118005,7 +118005,7 @@
         "oferta",
         "academicain"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118038,7 +118038,7 @@
         "ejido",
         "propuesto"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118071,7 +118071,7 @@
         "ejido",
         "urbano"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118104,7 +118104,7 @@
         "envolvente",
         "urbana"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118138,7 +118138,7 @@
         "agua",
         "dgrh"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118172,7 +118172,7 @@
         "ferroviaria",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118206,7 +118206,7 @@
         "meteo",
         "cadic"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118239,7 +118239,7 @@
         "estaciones",
         "terrenas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118271,7 +118271,7 @@
         "geonode",
         "estancias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118306,7 +118306,7 @@
         "tdf",
         "pos07"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118339,7 +118339,7 @@
         "fibra",
         "ptica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118372,7 +118372,7 @@
         "fraccion",
         "censal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118405,7 +118405,7 @@
         "gasoducto",
         "recortegaribaldi"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118439,7 +118439,7 @@
         "continentales",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118471,7 +118471,7 @@
         "geonode",
         "helipuertos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118503,7 +118503,7 @@
         "geonode",
         "hitos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118536,7 +118536,7 @@
         "humedaldes",
         "sspe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118569,7 +118569,7 @@
         "igngobiernoslocales",
         "2022"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118603,7 +118603,7 @@
         "limite",
         "maritimos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118638,7 +118638,7 @@
         "educacion",
         "020602"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118673,7 +118673,7 @@
         "residuos",
         "ab030"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118705,7 +118705,7 @@
         "geonode",
         "ignramsac"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118739,7 +118739,7 @@
         "forestales",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118772,7 +118772,7 @@
         "inst",
         "educativas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118807,7 +118807,7 @@
         "tdf",
         "202508"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118841,7 +118841,7 @@
         "militar",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118874,7 +118874,7 @@
         "instalaciones",
         "deportivas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118906,7 +118906,7 @@
         "geonode",
         "instituciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118939,7 +118939,7 @@
         "islas",
         "islotes"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -118971,7 +118971,7 @@
         "geonode",
         "jurisdicciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119003,7 +119003,7 @@
         "geonode",
         "jurisdicciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119036,7 +119036,7 @@
         "ley597",
         "sspe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119070,7 +119070,7 @@
         "agua",
         "tierra"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119104,7 +119104,7 @@
         "gobierno",
         "local"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119138,7 +119138,7 @@
         "interdepartamental",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119171,7 +119171,7 @@
         "limite",
         "maritimo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119206,7 +119206,7 @@
         "antartida",
         "20250723"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119239,7 +119239,7 @@
         "linea",
         "costa"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119273,7 +119273,7 @@
         "limite",
         "internacional"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119307,7 +119307,7 @@
         "plataforma",
         "continental"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119340,7 +119340,7 @@
         "localidad",
         "censal"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119373,7 +119373,7 @@
         "mar",
         "territorial"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119406,7 +119406,7 @@
         "mina",
         "extraccion"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119439,7 +119439,7 @@
         "miradores",
         "0fa48929916ad15b8a5b91c5692b5bfe"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119474,7 +119474,7 @@
         "mantenimiento",
         "vialidad"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119507,7 +119507,7 @@
         "municipios",
         "tdfgpkg"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119540,7 +119540,7 @@
         "museos",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119575,7 +119575,7 @@
         "cabotaje",
         "2017view"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119610,7 +119610,7 @@
         "utn",
         "convenidas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119642,7 +119642,7 @@
         "geonode",
         "ofertaacademica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119675,7 +119675,7 @@
         "omnibus",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119710,7 +119710,7 @@
         "2019",
         "criterios"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119742,7 +119742,7 @@
         "geonode",
         "pais"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119774,7 +119774,7 @@
         "geonode",
         "pais9401"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119806,7 +119806,7 @@
         "geonode",
         "pais9410"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119838,7 +119838,7 @@
         "geonode",
         "pais9491"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119872,7 +119872,7 @@
         "industrial",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119906,7 +119906,7 @@
         "fronteras",
         "internacionales"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119938,7 +119938,7 @@
         "geonode",
         "pertenencia"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -119972,7 +119972,7 @@
         "tectonicas",
         "dbfd2816328eabeca3c2cb5e99f19559"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120007,7 +120007,7 @@
         "tdf",
         "202508"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120042,7 +120042,7 @@
         "tdf",
         "202607"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120076,7 +120076,7 @@
         "urbana",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120109,7 +120109,7 @@
         "plantas",
         "potabilizadoras"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120142,7 +120142,7 @@
         "plataforma",
         "continental"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120174,7 +120174,7 @@
         "geonode",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120207,7 +120207,7 @@
         "poder",
         "legislativo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120241,7 +120241,7 @@
         "centros",
         "operaciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120273,7 +120273,7 @@
         "geonode",
         "posiciontempanos"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120307,7 +120307,7 @@
         "tdf",
         "202607"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120339,7 +120339,7 @@
         "geonode",
         "provincias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120372,7 +120372,7 @@
         "puentes",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120406,7 +120406,7 @@
         "muelles",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120441,7 +120441,7 @@
         "ciudades",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120475,7 +120475,7 @@
         "ruta",
         "bb6c1e13e8854993049307dabc48729f"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120510,7 +120510,7 @@
         "datos",
         "pob"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120545,7 +120545,7 @@
         "2022",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120579,7 +120579,7 @@
         "agua",
         "tolhuin"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120613,7 +120613,7 @@
         "altimetrica",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120647,7 +120647,7 @@
         "cloacal",
         "tolhuin"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120680,7 +120680,7 @@
         "red",
         "geodesica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120713,7 +120713,7 @@
         "redvial",
         "recortegaribaldi"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120746,7 +120746,7 @@
         "regiones",
         "fitoclimaticas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120779,7 +120779,7 @@
         "rellenos",
         "sanitarios"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120813,7 +120813,7 @@
         "hidrico",
         "anual"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120848,7 +120848,7 @@
         "natural",
         "paisajistica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120882,7 +120882,7 @@
         "forestales",
         "e3957037bd334adca3aacbe01c8c17d0"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120916,7 +120916,7 @@
         "401",
         "2011"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120951,7 +120951,7 @@
         "antartida",
         "20250723"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -120984,7 +120984,7 @@
         "rndlp",
         "tdf"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121016,7 +121016,7 @@
         "geonode",
         "rutas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121049,7 +121049,7 @@
         "rutas",
         "validadas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121082,7 +121082,7 @@
         "senderos",
         "db4d774c4f9ab136ca4cef346383812f"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121117,7 +121117,7 @@
         "2025",
         "fa0c4ed98a713029171cdda3693e36d6"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121156,7 +121156,7 @@
         "tdf",
         "marzo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121191,7 +121191,7 @@
         "hacer",
         "fuego0dfa57015543"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121224,7 +121224,7 @@
         "sitios",
         "ramsar"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121258,7 +121258,7 @@
         "ley597",
         "6c5fdc487a982ae113fecd310955b7f0"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121292,7 +121292,7 @@
         "red",
         "gravimetrica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121326,7 +121326,7 @@
         "rio",
         "valdez"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121360,7 +121360,7 @@
         "fiscales",
         "provinciales"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121393,7 +121393,7 @@
         "unidad",
         "geologica"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121426,7 +121426,7 @@
         "unidades",
         "geologicas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121459,7 +121459,7 @@
         "utn",
         "instituciones"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121493,7 +121493,7 @@
         "oferta",
         "acad"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121528,7 +121528,7 @@
         "acad",
         "161f3788f6373cca3dba31816f609893"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121561,7 +121561,7 @@
         "utn",
         "convenidas"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121595,7 +121595,7 @@
         "canal",
         "beagle"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121629,7 +121629,7 @@
         "ewan",
         "fuego"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121664,7 +121664,7 @@
         "fin",
         "mundo"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121698,7 +121698,7 @@
         "circulacion",
         "2023"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121733,7 +121733,7 @@
         "por",
         "viento"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121766,7 +121766,7 @@
         "zona",
         "contigua"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121800,7 +121800,7 @@
         "frontera",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121834,7 +121834,7 @@
         "economica",
         "exclusiva"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121868,7 +121868,7 @@
         "inpres",
         "tdfaias"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wfs",
@@ -121901,7 +121901,7 @@
         "argenmap",
         "oscuro"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -121930,7 +121930,7 @@
         "habitat",
         "643e6702abc7cf67a63aa3d2fc43ad9c"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -121960,7 +121960,7 @@
         "base",
         "argenmap"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -121991,7 +121991,7 @@
         "30m",
         "ac3a9b831f428723d70d291a8763cc96"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122022,7 +122022,7 @@
         "30m",
         "429c0009a9506f1dfc8aee0174d8e443"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122052,7 +122052,7 @@
         "beagle",
         "152a4dc99df1bce1a1c3fd95ebc43a70"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122080,7 +122080,7 @@
         "mapabase",
         "gris"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122109,7 +122109,7 @@
         "topo",
         "argenmap"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122138,7 +122138,7 @@
         "tdf",
         "a509f680a9bf25a9f69f93a23949f6c2"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122167,7 +122167,7 @@
         "habitat",
         "610f0ad40403d20b486034f4b442b0f7"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",
@@ -122196,7 +122196,7 @@
         "cur",
         "2885be682fc9828abd2339b21a18e854"
       ],
-      "verifiedAt": "2026-11-08",
+      "verifiedAt": "2026-11-13",
       "services": [
         {
           "type": "wms",

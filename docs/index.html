@@ -10,7 +10,7 @@
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://franprzdev.github.io/geotucuman/">
 <meta property="og:image" content="https://franprzdev.github.io/geotucuman/assets/mapa-geomcp.png">
-<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%234ade80' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%234ade80'/%3E%3C/svg%3E">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M12 21s7-5.686 7-11a7 7 0 1 0-14 0c0 5.314 7 11 7 11Z' fill='none' stroke='%234a83de' stroke-width='1.7'/%3E%3Ccircle cx='12' cy='10' r='2.6' fill='%234a83de'/%3E%3C/svg%3E">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -21,7 +21,7 @@
     --bg: #05070c; --bg-2: #080c14; --surface: #0b101a;
     --ink: #e9f1f6; --muted: #93a3b4; --faint: #66778a;
     --line: rgba(148,178,203,.14); --line-2: rgba(148,178,203,.26);
-    --accent: #4ade80; --accent-soft: #a7f3c7; --accent-deep: #15803d;
+    --accent: #4a83de; --accent-soft: #a7c4f3; --accent-deep: #153e80;
     --amber: #f5a83c;
     --maxw: 1180px;
     --header-h: 66px;
@@ -34,11 +34,11 @@
     background: var(--bg);
   }
   h1, h2, h3, .display { font-family: "Space Grotesk", "Inter", ui-sans-serif, system-ui, sans-serif; }
-  a { color: var(--accent); text-decoration-color: rgba(74,222,128,.4); text-underline-offset: 3px; }
+  a { color: var(--accent); text-decoration-color: rgba(74,131,222,.4); text-underline-offset: 3px; }
   a:hover { color: var(--accent-soft); }
   a:focus-visible, button:focus-visible { outline: 2px solid var(--accent-soft); outline-offset: 3px; border-radius: 8px; }
   .wrap { max-width: var(--maxw); margin: 0 auto; padding: 0 24px; width: 100%; }
-  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--accent); color: #04160c; padding: 10px 14px; border-radius: 10px; font-weight: 600; text-decoration: none; }
+  .skip { position: absolute; left: 16px; top: -64px; z-index: 100; background: var(--accent); color: #040b16; padding: 10px 14px; border-radius: 10px; font-weight: 600; text-decoration: none; }
   .skip:focus { top: 12px; }
   .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0; }
 
@@ -52,12 +52,12 @@
   .header-inner { display: flex; align-items: center; justify-content: space-between; gap: 18px; min-height: var(--header-h); }
   .brand { display: inline-flex; align-items: center; gap: 9px; color: var(--ink); text-decoration: none; font-family: "Space Grotesk", sans-serif; font-size: 19px; font-weight: 700; letter-spacing: -.02em; }
   .brand:hover { color: var(--ink); }
-  .brand svg { width: 22px; height: 22px; color: var(--accent); filter: drop-shadow(0 0 10px rgba(74,222,128,.55)); }
+  .brand svg { width: 22px; height: 22px; color: var(--accent); filter: drop-shadow(0 0 10px rgba(74,131,222,.55)); }
   .nav { display: flex; align-items: center; gap: 4px; }
   .nav a { color: var(--muted); text-decoration: none; font-size: 13.5px; font-weight: 500; padding: 8px 12px; border-radius: 999px; }
   .nav a:hover { color: var(--ink); background: rgba(255,255,255,.05); }
-  .nav a.nav-cta { color: #04160c; background: var(--accent); font-weight: 600; margin-left: 6px; }
-  .nav a.nav-cta:hover { background: var(--accent-soft); color: #04160c; }
+  .nav a.nav-cta { color: #040b16; background: var(--accent); font-weight: 600; margin-left: 6px; }
+  .nav a.nav-cta:hover { background: var(--accent-soft); color: #040b16; }
 
   main { position: relative; z-index: 1; }
 
@@ -69,12 +69,12 @@
   .kicker::before { content: ""; width: 22px; height: 1px; background: var(--accent); }
   .hero h1 { font-size: clamp(42px, 7.2vw, 84px); line-height: 1.0; letter-spacing: -.04em; margin: 0 0 24px; font-weight: 700; }
   .hero h1 span { display: block; }
-  .hero h1 .grad { padding-bottom: .1em; background: linear-gradient(92deg, #fff 0%, #b9f5cd 45%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero h1 .grad { padding-bottom: .1em; background: linear-gradient(92deg, #fff 0%, #b9d0f5 45%, var(--accent) 100%); -webkit-background-clip: text; background-clip: text; color: transparent; }
   .hero-lede { color: var(--muted); max-width: 44ch; font-size: clamp(15.5px, 1.5vw, 18px); margin: 0 0 30px; }
   .hero-cta { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; }
   .btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 48px; text-decoration: none; padding: 12px 24px; border-radius: 999px; font-size: 14.5px; font-weight: 600; border: 1px solid transparent; cursor: pointer; transition: transform .2s ease, box-shadow .2s ease, background .2s ease, border-color .2s ease; }
-  .btn.primary { background: var(--accent); color: #04160c; box-shadow: 0 10px 40px rgba(74,222,128,.25); }
-  .btn.primary:hover { background: var(--accent-soft); color: #04160c; transform: translateY(-1px); box-shadow: 0 16px 50px rgba(74,222,128,.35); }
+  .btn.primary { background: var(--accent); color: #040b16; box-shadow: 0 10px 40px rgba(74,131,222,.25); }
+  .btn.primary:hover { background: var(--accent-soft); color: #040b16; transform: translateY(-1px); box-shadow: 0 16px 50px rgba(74,131,222,.35); }
   .btn.ghost { background: rgba(9,13,20,.55); color: var(--ink); border-color: var(--line-2); }
   .btn.ghost:hover { border-color: rgba(148,178,203,.5); color: #fff; transform: translateY(-1px); }
   .scroll-cue { position: absolute; left: 24px; bottom: 26px; display: flex; align-items: center; gap: 10px; color: var(--faint); font-size: 12px; letter-spacing: .12em; text-transform: uppercase; }
@@ -422,8 +422,8 @@
 
     /* soft glow behind the map */
     var glow = ctx.createRadialGradient(r.cx, r.cy, 10, r.cx, r.cy, gh * 0.78);
-    glow.addColorStop(0, 'rgba(74,222,128,' + (0.045 + formation * 0.05).toFixed(3) + ')');
-    glow.addColorStop(1, 'rgba(74,222,128,0)');
+    glow.addColorStop(0, 'rgba(74,131,222,' + (0.045 + formation * 0.05).toFixed(3) + ')');
+    glow.addColorStop(1, 'rgba(74,131,222,0)');
     ctx.fillStyle = glow;
     ctx.fillRect(r.cx - gh, r.cy - gh, gh * 2, gh * 2);
 
@@ -437,7 +437,7 @@
 
     /* outline */
     if (formation > 0.02) {
-      ctx.strokeStyle = 'rgba(74,222,128,' + (formation * 0.30).toFixed(3) + ')';
+      ctx.strokeStyle = 'rgba(74,131,222,' + (formation * 0.30).toFixed(3) + ')';
       ctx.lineWidth = 1;
       ctx.beginPath();
       OUTLINE.forEach(function (ring) {
@@ -474,7 +474,7 @@
       var color = 'rgba(122,152,178,';
       if (scanOn && lf > 0.95) {
         var prox = Math.max(0, 1 - Math.abs(cyp - scanY) / 46);
-        if (prox > 0.02) { alpha += prox * 0.55; color = 'rgba(110,231,150,'; }
+        if (prox > 0.02) { alpha += prox * 0.55; color = 'rgba(110,156,231,'; }
       }
       if (d.tuc && lf > 0.9) {
         var pulse = 0.5 + 0.5 * Math.sin(time * 0.002 + n);

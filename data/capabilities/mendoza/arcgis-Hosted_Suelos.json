@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "7274cec627134e3ba516300a819a11bc",
         "name": "suelos_INTA",
         "id": 0,
         "type": "Feature Layer",

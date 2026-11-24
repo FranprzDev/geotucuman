@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "8c3c229aa2154dc5ae944414cbe63839",
         "name": "aridez_pasado",
         "id": 0,
         "type": "Feature Layer",

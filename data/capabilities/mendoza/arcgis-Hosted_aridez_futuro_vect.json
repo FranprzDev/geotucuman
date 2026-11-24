@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "74211ce6669e47259e5f666d10209de4",
         "name": "aridez_futuro",
         "id": 0,
         "type": "Feature Layer",

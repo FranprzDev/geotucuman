@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "8fb8e013178242d8b73e564508bef77e",
         "name": "Departamentos_2024",
         "id": 0,
         "type": "Feature Layer",

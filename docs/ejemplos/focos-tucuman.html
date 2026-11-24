@@ -124,12 +124,13 @@
   <div class="wrap">
     <p class="eyebrow">Ejemplo aplicado</p>
     <h1 id="focos-title">Focos de calor vs agua en Tucumán</h1>
-    <p>Cruza los focos de calor de las últimas 24&nbsp;h (CONAE, satélites VIIRS/MODIS) con la infraestructura hídrica de Tucumán (RIDES): distancia al pozo de agua y al cuerpo/curso de agua más cercanos, y si el foco cae dentro de una cuenca hídrica. Análisis generado el 2026-11-11 01:44 UTC.</p>
+    <p>Análisis guardado que cruza los focos de calor (CONAE, satélites VIIRS/MODIS) con la infraestructura hídrica de Tucumán (RIDES): distancia al pozo de agua y al cuerpo/curso de agua más cercanos, y si el foco cae dentro de una cuenca hídrica. Es un análisis guardado generado el 2026-11-11 01:44 UTC; no representa focos actuales.</p>
+    <p style="margin:14px 0 0;padding:11px 15px;border:1px solid rgba(245,168,60,.5);border-radius:12px;background:rgba(245,168,60,.12);color:#fcd34d;font-weight:600;max-width:800px">Caso reproducible con datos de respaldo (fixtures). No representa focos actuales. Consultá las fechas y la procedencia antes de usarlo.</p>
   </div>
 </section>
 <main id="main" class="wrap">
   <div class="cards">
-    <div class="stat"><p class="k">Focos (24 h)</p><p class="v">6</p></div>
+    <div class="stat"><p class="k">Focos del análisis</p><p class="v">6</p></div>
     <div class="stat"><p class="k">VIIRS / MODIS</p><p class="v">6 <small>/ 0</small></p></div>
     <div class="stat"><p class="k">Dentro de cuenca</p><p class="v">0% <small>0/6</small></p></div>
     <div class="stat"><p class="k">Pozo más cercano</p><p class="v">1.6 km</p></div>
@@ -262,7 +263,7 @@
 
   <section class="panel" aria-labelledby="how-title">
     <h2 id="how-title">Cómo se hizo</h2>
-    <p>Este ejemplo nace de <a href="https://github.com/FranprzDev/geotucuman">GeoArg</a>, un MCP de descubrimiento y consulta de geodatos públicos. El MCP es el que <em>descubre</em> las capas: <code>search_layers</code> y <code>suggest_layers</code> ubican los focos de calor de CONAE y las capas hídricas de RIDES (en el catálogo, RIDES figura como WMS-only), y <code>describe_layer</code> muestra sus campos reales. Con eso a la vista, este caso consulta los servicios públicos directamente —WFS de CONAE y ArcGIS REST de RIDES— y calcula proximidades con TypeScript puro, sin dependencias: haversine, distancia punto–segmento y punto-en-polígono (incluye MultiPolygon).</p>
+    <p>Este ejemplo nace de <a href="https://github.com/FranprzDev/geotucuman">GeoArg</a>, un MCP de descubrimiento y consulta de geodatos públicos. El MCP es el que <em>descubre</em> las capas del catálogo: <code>search_layers</code> y <code>suggest_layers</code> ubican capas como los focos MODIS de DGCT y las capas hídricas de RIDES (en el catálogo, RIDES figura como WMS-only), y <code>describe_layer</code> muestra sus campos reales. En este ejemplo, en cambio, CONAE es una fuente WFS externa directa, no una capa del catálogo. Con eso a la vista, el caso consulta los servicios públicos directamente —WFS de CONAE y ArcGIS REST de RIDES— y los cálculos espaciales viven en <code>examples/focos-tucuman.ts</code>, no en operadores del MCP: TypeScript puro, sin dependencias, con haversine, distancia punto–segmento y punto-en-polígono (incluye MultiPolygon).</p>
     <p>Reproducilo con <code>npm run example:focos</code>. El script escribe <code>examples/out/focos-tucuman-result.json</code> y esta página; el mismo resultado alimenta el mapa, la tabla y los números de arriba.</p>
   </section>
   <footer class="site">

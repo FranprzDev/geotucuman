@@ -1,6 +1,6 @@
 import { z } from 'zod';
 import type { InferSchema, ToolMetadata } from 'xmcp';
-import { loadCatalog } from '../catalog.js';
+import { loadCatalog, normalize } from '../catalog.js';
 import { discoveryMetadata } from '../lib/discovery.js';
 import { layerFlags } from '../lib/flags.js';
 import type { CatalogEntry } from '../catalog.js';
@@ -19,7 +19,12 @@ export const schema = {
       'Related terms you (the assistant) consider equivalent for this goal: synonyms, word forms, and English/technical equivalents. The catalog metadata is bilingual and uneven - some layers are described only in Spanish (e.g. "área quemada"), others only in English (e.g. MODIS "fires/hotspots"). For "focos de calor" pass e.g. ["incendio", "fire", "hotspot", "MODIS", "VIIRS"]. Always fill this when the goal uses informal or domain vocabulary.',
     ),
   serviceType: z.enum([ServiceType.Wfs, ServiceType.Wms, ServiceType.ArcGis]).optional().describe('Filter by service type'),
-  province: z.string().optional().describe('Filter by province, e.g. "Córdoba"'),
+  province: z
+    .string()
+    .optional()
+    .describe(
+      'Filter by province, e.g. "Córdoba". When omitted, a province is inferred only if the goal names exactly one literal catalog province; an explicit province overrides inference.',
+    ),
   limit: z.number().int().min(1).max(20).default(5),
   minScore: z.number().finite().nonnegative().default(0),
 };
@@ -27,7 +32,7 @@ export const schema = {
 export const metadata: ToolMetadata = {
   name: 'suggest_layers',
   description:
-    'Suggests catalog layers from a free-text goal in Spanish or English (no LLM, no invented layers). Ranking is a MiniSearch full-text engine over each layer\'s title, identifier, keywords and abstract - same pattern as IGN France\'s GeoContext - with prefix and bounded fuzzy matching, with Spanish stemming, so word forms and derivations are handled generally. Lexical search cannot bridge languages or concepts by itself: pass synonyms and English/technical equivalents in relatedTerms. Returns ranked, scored candidates with the matched terms as rationale, service capabilities and source evidence, plus goal terms no layer covers (noCoverage). Optional serviceType/province filters apply to both candidates and noCoverage. Use limit (1-20, default 5) to cap candidates and minScore to drop weak lexical matches. noCoverage means literal goal terms unmatched within those filters, not proof that the topic does not exist; relatedTerms are client expansions, not semantic proof. Discovery does not execute spatial or temporal analysis or verify current observations: never infer proximity or current fires from layer names, scores or cached catalog metadata.',
+    'Suggests catalog layers from a free-text goal in Spanish or English (no LLM, no invented layers). Ranking is a MiniSearch full-text engine over each layer\'s title, identifier, keywords and abstract - same pattern as IGN France\'s GeoContext - with prefix and bounded fuzzy matching, with Spanish stemming, so word forms and derivations are handled generally. Lexical search cannot bridge languages or concepts by itself: pass synonyms and English/technical equivalents in relatedTerms. Returns ranked, scored candidates with the matched terms as rationale, service capabilities and source evidence, plus goal terms no layer covers (noCoverage). Optional serviceType/province filters apply to both candidates and noCoverage. When province is omitted, it is inferred only if the goal names exactly one literal catalog province; an explicit province overrides inference. Use limit (1-20, default 5) to cap candidates and minScore to drop weak lexical matches. noCoverage means literal goal terms unmatched within those filters, not proof that the topic does not exist; relatedTerms are client expansions, not semantic proof. Discovery does not execute spatial or temporal analysis or verify current observations: never infer proximity or current fires from layer names, scores or cached catalog metadata.',
 };
 
 const CAPABILITY_SEMANTICS: Record<ServiceType, string> = {
@@ -60,10 +65,18 @@ export async function suggestLayersHandler({
   minScore?: number;
 }) {
   const catalog = loadCatalog();
+  const normalizedGoal = ` ${normalize(goal).replace(/[^a-z0-9]+/g, ' ').trim()} `;
+  const provinces = new Set(catalog.layers.map((entry) => entry.province));
+  const matchedProvinces = [...provinces].filter(
+    (name) =>
+      !name.includes('Argentina') &&
+      normalizedGoal.includes(` ${normalize(name).replace(/[^a-z0-9]+/g, ' ').trim()} `),
+  );
+  const resolvedProvince = province ?? (matchedProvinces.length === 1 ? matchedProvinces[0] : undefined);
   const query = [goal, ...(relatedTerms ?? [])].join(' ');
-  const hits = searchCatalog(query, { serviceType, province });
+  const hits = searchCatalog(query, { serviceType, province: resolvedProvince });
   const goalTerms = meaningfulTerms(goal);
-  const noCoverage = goalTerms.filter((term) => !termCovered(term, { serviceType, province }));
+  const noCoverage = goalTerms.filter((term) => !termCovered(term, { serviceType, province: resolvedProvince }));
   const thematicHits = hits.filter((hit) =>
     Object.values(hit.match).some((fields) =>
       fields.some((field) => field !== 'province' && field !== 'source'),
@@ -81,7 +94,8 @@ export async function suggestLayersHandler({
     goal,
     relatedTerms: relatedTerms ?? [],
     serviceType: serviceType ?? null,
-    province: province ?? null,
+    province: resolvedProvince ?? null,
+    provinceInferred: !province && Boolean(resolvedProvince),
     minScore,
     total: selected.length,
     discoveryStatus,

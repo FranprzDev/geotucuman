@@ -79,7 +79,7 @@ Extras: `npm run smoke` (prueba end-to-end contra los servicios reales), `npm st
 
 ### Contrato de descubrimiento (`suggest_layers`)
 
-`suggest_layers` devuelve `discoveryStatus` (`candidates`, `partial` o `no_match`) según los resultados seleccionados y `noCoverage`; `noCoverage` son términos literales del objetivo sin coincidencia dentro de los filtros (`serviceType`, `province`), no prueba de que el tema no exista, y `relatedTerms` son expansiones del cliente, no prueba semántica. La respuesta siempre incluye `answerability` con `canAnswerQuestion: false`: el catálogo no ejecuta análisis espacial ni temporal ni verifica observaciones actuales. No inferir proximidad ni focos/incendios actuales desde nombres de capas, scores o metadatos cacheados; para eso hay que consultar las fuentes y analizar los datos.
+`suggest_layers` devuelve `discoveryStatus` (`candidates`, `partial` o `no_match`) según los resultados seleccionados y `noCoverage`; `noCoverage` son términos literales del objetivo sin coincidencia dentro de los filtros (`serviceType`, `province`), no prueba de que el tema no exista, y `relatedTerms` son expansiones del cliente, no prueba semántica. Si se omite `province`, se infiere solo cuando el objetivo nombra exactamente una provincia literal del catálogo; un `province` explícito tiene prioridad. La respuesta siempre incluye `answerability` con `canAnswerQuestion: false`: el catálogo no ejecuta análisis espacial ni temporal ni verifica observaciones actuales. No inferir proximidad ni focos/incendios actuales desde nombres de capas, scores o metadatos cacheados; para eso hay que consultar las fuentes y analizar los datos.
 
 ### Automejora: reporte de misses
 

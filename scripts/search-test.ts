@@ -10,7 +10,7 @@ import { searchCatalog } from '../src/search.js';
 import { suggestLayersHandler } from '../src/tools/suggest_layers.js';
 import { ServiceType } from '../src/service-type.js';
 
-type Candidate = { typeName: string };
+type Candidate = { typeName: string; province: string };
 
 async function suggest(goal: string, relatedTerms?: string[], limit = 10) {
   return (await suggestLayersHandler({ goal, relatedTerms, limit })) as {
@@ -114,8 +114,8 @@ async function suggest(goal: string, relatedTerms?: string[], limit = 10) {
     'MODIS fires must rank top once relatedTerms are provided',
   );
   assert.ok(
-    expanded.candidates.some((c) => /incendio|quemada/i.test(c.typeName)),
-    'Spanish incendio/quemada layers must appear once relatedTerms are provided',
+    expanded.candidates.every((c) => c.province === 'Tucumán'),
+    'all expanded candidates must belong to Tucumán',
   );
 }
 

@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "4bca9cbe9da84dbca100c8119cb6c004",
         "name": "Rutas de Mendoza",
         "id": 0,
         "type": "Feature Layer",

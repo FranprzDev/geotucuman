@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "f7eead548b564228b0a5d6b89cd231f0",
         "name": "Inventario_Nacional_Glaciares_IANIGLA",
         "id": 0,
         "type": "Feature Layer",

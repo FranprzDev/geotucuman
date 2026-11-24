@@ -20,7 +20,6 @@
     "supportsRelationshipsResource": true,
     "layers": [
       {
-        "serviceItemId": "ffefc83903a14ab09a306cf1e83569b5",
         "name": "BosqueNativo2023",
         "id": 0,
         "type": "Feature Layer",

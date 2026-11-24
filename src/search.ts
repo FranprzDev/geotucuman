@@ -196,6 +196,9 @@ export function meaningfulTerms(text: string): string[] {
 }
 
 /** True when at least one catalog layer matches the term (exact/prefix/fuzzy). */
-export function termCovered(term: string): boolean {
-  return searchCatalog(term, { limit: 1 }).length > 0;
+export function termCovered(
+  term: string,
+  options: { serviceType?: ServiceType; province?: string } = {},
+): boolean {
+  return searchCatalog(term, { limit: 1, ...options }).length > 0;
 }

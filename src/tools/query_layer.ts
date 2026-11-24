@@ -73,6 +73,15 @@ export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbo
       totalFeatures: fc.totalFeatures ?? null,
       nextStartIndex,
       features,
+      emptyResult:
+        features.length === 0
+          ? {
+              code: 'NO_FEATURES_RETURNED',
+              hint: 'The service returned no features for this request. Check bbox, CRS, paging and actual layer coverage; an empty response alone does not prove there are no phenomena in the area.',
+            }
+          : null,
+      bboxUsed: bbox ?? null,
+      bboxCrs: bboxCrs ?? 'EPSG:4326',
       note: 'Geometries requested in EPSG:4326 (lon,lat) via ArcGIS FeatureServer query with f=geojson and outSR=4326. The bbox was passed as an EPSG:4326 envelope (inSR=4326, esriSpatialRelIntersects). nextStartIndex indicates how to keep paginating (null if there is no obvious next page).',
       sources: [entry.endpoint],
     };
@@ -123,6 +132,15 @@ export async function queryLayerHandler({ typeName, maxFeatures, startIndex, bbo
     totalFeatures: fc.totalFeatures ?? null,
     nextStartIndex,
     features,
+    emptyResult:
+      features.length === 0
+        ? {
+            code: 'NO_FEATURES_RETURNED',
+            hint: 'The service returned no features for this request. Check bbox, CRS, paging and actual layer coverage; an empty response alone does not prove there are no phenomena in the area.',
+          }
+        : null,
+    bboxUsed: bbox ?? null,
+    bboxCrs: bboxCrs ?? 'EPSG:4326',
     note: 'Geometries requested in EPSG:4326 (lon,lat). The bbox was reprojected on the client to the layer native CRS. nextStartIndex indicates how to keep paginating (null if there is no obvious next page).',
     sources: [entry.endpoint],
   };
